@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[北极熊不不]]></title>
-  <link href="http://github.chuxiangyuan.io/atom.xml" rel="self"/>
-  <link href="http://github.chuxiangyuan.io/"/>
-  <updated>2016-05-07T23:55:59+08:00</updated>
-  <id>http://github.chuxiangyuan.io/</id>
+  <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
+  <link href="http://chuxiangyuan.github.io/"/>
+  <updated>2016-05-08T00:37:50+08:00</updated>
+  <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[说说Apple“我的照片流”和“iCloud照片图库”那些事]]></title>
-    <link href="http://github.chuxiangyuan.io/14625508580709.html"/>
+    <link href="http://chuxiangyuan.github.io/14625508580709.html"/>
     <updated>2016-05-07T00:07:38+08:00</updated>
-    <id>http://github.chuxiangyuan.io/14625508580709.html</id>
+    <id>http://chuxiangyuan.github.io/14625508580709.html</id>
     <content type="html"><![CDATA[
 <p>关于“我的照片流”和“iCloud照片图库”的Apple的官方解释：</p>
 
@@ -176,9 +176,9 @@ iCloud照片图库”功能既可以备份，又可以同步。</p>
   
   <entry>
     <title type="html"><![CDATA[About Me]]></title>
-    <link href="http://github.chuxiangyuan.io/about.html"/>
+    <link href="http://chuxiangyuan.github.io/about.html"/>
     <updated>2016-05-07T00:29:34+08:00</updated>
-    <id>http://github.chuxiangyuan.io/about.html</id>
+    <id>http://chuxiangyuan.github.io/about.html</id>
     <content type="html"><![CDATA[
 <p><img src="media/14625521742746/%E5%A4%B4%E5%83%8F.png" alt="头像" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
