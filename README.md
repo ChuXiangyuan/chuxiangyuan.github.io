@@ -18,7 +18,7 @@
 
 - 通过Github提供的[PAGES服务](https://pages.github.com)发布了网站,根据实际情况暂时没有申请独立域名；
 
-- 建站过程中除上述工具外还使用了：[Sketch](http://www.sketchapp.com)（经常用此软件画原型，所以直接拿来进行简单的图片处理）、[草料二维码](http://cli.im/)（二维码生成）、[Jietu](https://itunes.apple.com/cn/app/jie-tu-jietu/id1059334054?mt=12)（截图和截图处理）、[Paste（剪贴板管理）](http://pasteapp.me)等工具。
+- 建站过程中除上述工具外还使用了：[Sketch](http://www.sketchapp.com)（经常用此软件画原型，所以直接拿来进行简单的图片处理）、[草料二维码](http://cli.im/)（二维码生成）、[Jietu](https://itunes.apple.com/cn/app/jie-tu-jietu/id1059334054?mt=12)（截图和截图处理）、[Paste](http://pasteapp.me)（剪贴板管理）等工具。
 
 ##建站目的
 - 在这个各种信息共享的年代，希望能将自己每天所听、所见、所想的事情记录下来、沉淀下来，与大家共享，如果我的文字能够帮助你，那是再好不过了；
