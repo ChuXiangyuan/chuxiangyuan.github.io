@@ -4,13 +4,241 @@
   <title><![CDATA[北极熊不不]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2016-08-12T01:05:45+08:00</updated>
+  <updated>2016-08-14T14:09:26+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Study iOS 9 Programming with Swift（2）]]></title>
+    <link href="http://chuxiangyuan.github.io/14710858606215.html"/>
+    <updated>2016-08-13T18:57:40+08:00</updated>
+    <id>http://chuxiangyuan.github.io/14710858606215.html</id>
+    <content type="html"><![CDATA[
+<p>使用Swift进行iOS编程知识点总结第二篇，主要包括Table View和Table View Controller的区分使用，对Table View的Cells进行自定义，为每个cell添加分享动作，自定义tableview，图片圆角处理、模糊化处理等。</p>
+
+<span id="more"></span><!-- more -->
+
+<blockquote>
+<p>关联阅读：<br/>
+<a href="http://chuxiangyuan.github.io/14709182567699.html">Study iOS 9 Programming with Swift（1）</a></p>
+</blockquote>
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">更新记录</a>
+</li>
+<li>
+<a href="#toc_2">Table View &amp; Table View Controller</a>
+</li>
+<li>
+<a href="#toc_3">实例：自定义Table View Cells</a>
+</li>
+<li>
+<a href="#toc_4">实例：将图片四个角设置为圆角/将正方形图片设置为圆形图片</a>
+</li>
+<li>
+<a href="#toc_5">实例：对table view中的cell添加Swipe动作——分享</a>
+</li>
+<li>
+<a href="#toc_6">实例：取消row点击后被选中的状态</a>
+</li>
+<li>
+<a href="#toc_7">实例：对table view的分隔线、背景色等进行自定义</a>
+</li>
+<li>
+<a href="#toc_8">实例：对图片采用系统自带的模糊化处理</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">更新记录</h2>
+
+<ul>
+<li>2016/08/15 第一次发布</li>
+</ul>
+
+<h2 id="toc_2">Table View &amp; Table View Controller</h2>
+
+<ul>
+<li>相对于View Controller + Table View, Table View Controller已经提供了DataSource和Delegate，而且针对Table View提前配置好了一些参数，但在某些方面也失去了灵活性。</li>
+</ul>
+
+<h2 id="toc_3">实例：自定义Table View Cells</h2>
+
+<ul>
+<li>对cell的Identifier定义为Cell→在Cell中加入需要的View，如Label、Image View等，并根据设计图添加constraints→因为cell是与UITableViewCell class关联的，所以创建一个新的class，定义为UITableViewCell的subclass</li>
+<li>Coding：
+
+<ul>
+<li>思路：对cell中自定义的views创建outlet变量→声明要展示的数据变量并赋值→告知table view有几个cell、几个section→在每个cell中显示具体的值。</li>
+<li>Class MovieTableViewCell代码片段及Class MovieTableViewController代码片段：</li>
+</ul></li>
+</ul>
+
+<pre><code>@IBOutlet weak var nameLabel: UILabel!
+@IBOutlet weak var yearLabel: UILabel!
+@IBOutlet weak var typeLabel: UILabel!
+@IBOutlet weak var actorLabel: UILabel!
+@IBOutlet weak var thumbnailImageView: UIImageView!
+</code></pre>
+
+<pre><code>      // 告知tableview中有几个section
+    override func numberOfSectionsInTableView(tableView: UITableView) -&gt; Int {
+        
+        return 1
+        
+    }
+    
+    // 告知tableview中有几个cell
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        
+        // 根据数组的数量返回table view中cell的数量
+        return movieNames.count
+        
+    }
+    
+    // 在每个cell中显示具体的内容,这个方法会在table view每个row要展示的时候被调起
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+        
+        // 为节省资源，使每个cell可以重复利用
+        let cellIdentifier = &quot;Cell&quot;
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MovieTableViewCell //downcasting: covert the returned object of dequeueReusableCellWithIdentifier to MovieTableViewCell (对于downcast以及as! &amp; as?的区分与使用还没完全搞懂)
+        
+        // 定义cell要显示的内容
+        cell.nameLabel.text = movieNames[indexPath.row]
+        cell.thumbnailImageView.image = UIImage(named: movieImages[indexPath.row])
+        cell.yearLabel.text = movieYear[indexPath.row]
+        cell.typeLabel.text = movieType[indexPath.row]
+        cell.actorLabel.text = movieActor[indexPath.row]
+        
+        return cell
+        
+    }
+</code></pre>
+
+<h2 id="toc_4">实例：将图片四个角设置为圆角/将正方形图片设置为圆形图片</h2>
+
+<ul>
+<li>方法一：通过代码实现
+
+<ul>
+<li>代码片段：</li>
+</ul></li>
+</ul>
+
+<pre><code>// 将图片设置为圆角，圆角半径设置为3
+        cell.thumbnailImageView.layer.cornerRadius = 3.0
+        cell.thumbnailImageView.clipsToBounds = true
+</code></pre>
+
+<ul>
+<li>方法二：通过Xcode配置实现
+
+<ul>
+<li>配置步骤：在storyboard中选择imageview后，在右侧的Identity inspector中的“Use Defined Runtime Attributes”中添加一个值→Key Path定义为“layer.cornerRadius&quot;,Type定义为”Number“，Value定义为你要设置的圆角半径值。加入一张60*60的正方形图片，设置半径为30，就可以将其变为圆形→切换到Attributes Inspector，将Clip Subviews打钩。</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_5">实例：对table view中的cell添加Swipe动作——分享</h2>
+
+<ul>
+<li>思路：定义分享button的title和style→定义点击分享button后的动作，包括定义分享的文本和图片信息→展示ActivityView。其中share button的颜色可以通过backgroudColor属性来进行自定义。</li>
+<li>代码片段：</li>
+</ul>
+
+<pre><code>// 对每一个Row添加Swipe Action，如分享、删除等
+override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -&gt; [UITableViewRowAction]? {
+    
+    // Social Sharing Button
+    let shareAction = UITableViewRowAction(style: .Default, title: &quot;分享&quot;, handler: {(action, indexPath) -&gt; Void in
+        
+        // 定义Share的文本和图片信息，并显示ActivityView
+        let defaultText = &quot;Just checking in at&quot; + self.movieNames[indexPath.row]
+        if let imageToShare = UIImage(named: self.movieImages[indexPath.row]){
+            let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+            self.presentViewController(activityController, animated: true, completion: nil)
+        }
+    })
+    
+    // 自定义share action的背景色
+    shareAction.backgroundColor = UIColor(red: 25.0/255.0, green: 118.0/255.0, blue: 210.0/255.0, alpha: 1.0)
+    
+    return [shareAction]
+    
+}
+</code></pre>
+
+<h2 id="toc_6">实例：取消row点击后被选中的状态</h2>
+
+<ul>
+<li>代码片段：</li>
+</ul>
+
+<pre><code>// 定义Row被选择之后的动作
+override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    // Row点击后取消被选中状态
+    tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        
+}
+</code></pre>
+
+<h2 id="toc_7">实例：对table view的分隔线、背景色等进行自定义</h2>
+
+<ul>
+<li>代码片段：</li>
+</ul>
+
+<pre><code>//View被加载到内存后，以下方法被调起，且只被调起一次，加载好就不再调起
+override func viewDidLoad() {
+    super.viewDidLoad()
+                
+    // 自定义tableview的背景色，注意每个cell也有自己的背景色，cell没有内容时才能看到tableview的背景色
+    tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
+    
+    // 通过设置FooterView，移除空的row的分隔线
+    tableView.tableFooterView = UIView(frame: CGRectZero)
+    
+    // 自定义分隔线的颜色
+    tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
+    
+}
+</code></pre>
+
+<ul>
+<li>若想调整cell的背景色或者设置为透明，可在tableView(_:cellForRowAtIndexPath:)方法中添加以下代码片段：</li>
+</ul>
+
+<pre><code>// 清除cell的背景色，也即变成透明
+cell.backgroundColor = UIColor.clearColor()
+
+</code></pre>
+
+<h2 id="toc_8">实例：对图片采用系统自带的模糊化处理</h2>
+
+<ul>
+<li>在viewDidLoad()中添加以下代码片段：</li>
+</ul>
+
+<pre><code>// 对背景图进行模糊化处理,style有三种：Dark，ExtraLight，Light
+let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+let blurEffectView = UIVisualEffectView(effect: blurEffect)
+blurEffectView.frame = view.bounds
+movieBackgroudImageView.addSubview(blurEffectView)
+
+</code></pre>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Study iOS 9 Programming with Swift（1）]]></title>
@@ -170,7 +398,7 @@
 </ul>
 
 <pre><code> // 声明tableview中展示的数据变量
-    var movieNames = [&quot;小男孩&quot;, &quot;火星救援&quot;, &quot;老炮儿&quot;, &quot;心迷宫&quot;, &quot;房间&quot;, &quot;十二公民&quot;, &quot;独立日&quot;, &quot;寒战2&quot;,&quot;完美陌生人&quot;, &quot;大鱼海棠&quot;, &quot;熔炉&quot;, &quot;头脑特工队&quot;, &quot;破风&quot;, &quot;捉妖记&quot;, &quot;歌曲改编人生&quot;, &quot;速度与激情5&quot;, &quot;肖申克的救赎&quot;, &quot;机器人总动员&quot;, &quot;盗梦空间&quot;, &quot;忠犬八公的故事&quot;]
+    var movieNames = [&quot;小男孩&quot;, &quot;火星救援&quot;, &quot;老炮儿&quot;, &quot;心迷宫&quot;, &quot;房间&quot;, &quot;十二公民&quot;, &quot;独立日&quot;, &quot;寒战2&quot;,&quot;完美陌生人&quot;, &quot;大鱼海棠&quot;, &quot;熔炉&quot;, &quot;头脑特工队&quot;, &quot;破风&quot;, &quot;捉妖记&quot;, &quot;歌曲改变人生&quot;, &quot;速度与激情5&quot;, &quot;肖申克的救赎&quot;, &quot;机器人总动员&quot;, &quot;盗梦空间&quot;, &quot;忠犬八公的故事&quot;]
 
  // 告知tableview中有几个cell
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {

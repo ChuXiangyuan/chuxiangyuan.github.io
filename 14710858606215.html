@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  利器分享-Zeplin - 北极熊不不
+  Study iOS 9 Programming with Swift（2） - 北极熊不不
   
   </title>
   
@@ -103,16 +103,14 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-              <div class="f-img"><img src="media/14641807710350/ssTypeface.png" /></div>
-          
-          <h1>利器分享-Zeplin</h1>
+          <h1>Study iOS 9 Programming with Swift（2）</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2016/5/25</span>
+          <span class="date">2016/8/13</span>
 
           <span>posted in&nbsp;</span> 
           
-              <span class="posted-in"><a href='tools.html'>利器</a></span>
+              <span class="posted-in"><a href='Teconology.html'>科技</a></span>
            
          
           <span class="comments">
@@ -125,56 +123,224 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <p>作为一个产品汪或者设计师或者程序猿，你是否遇到过下面这些问题：</p>
-
-<blockquote>
-<ul>
-<li>程序猿拿到设计师给出的设计图，只看到花花绿绿的一片，但是不知道开发时各个元素的间距到底是多少？该用啥字体？该用多大字号？这个文字是灰色还是黑色？具体的色值是多少？是半透明还是80%透明度？</li>
-<li>为了让程序猿看得懂设计图，设计师辛苦的为每个图做出精细的标注，花费的时间比设计图本身还长？</li>
-<li>产品经理针对设计图需要沟通的地方总是沟通不到位、理解不一致？花费了很多时间，最后还是没改对地方？</li>
-<li>设计师update了设计图，程序猿拿到设计图时感到顿时懵逼？不知道哪张图改了？不知道哪些地方改了？到底要改成啥样？</li>
-<li>对于设计图通用的一些样式、形状，程序猿每个都需要机械的去写css代码？</li>
-<li>设计图中某个元素需要切图时，@1x、@2x、@3x傻傻分不清楚？</li>
-</ul>
-</blockquote>
-
-<p>So，安利大家一个利器：Zeplin，上面的问题解决起来so easy，程序猿、产品汪、设计师又可以在一起愉快的玩耍了。</p>
+      <p>使用Swift进行iOS编程知识点总结第二篇，主要包括Table View和Table View Controller的区分使用，对Table View的Cells进行自定义，为每个cell添加分享动作，自定义tableview，图片圆角处理、模糊化处理等。</p>
 
 <span id="more"></span><!-- more -->
 
-<p>利用Zeplin可以基本实现：</p>
+<blockquote>
+<p>关联阅读：<br/>
+<a href="http://chuxiangyuan.github.io/14709182567699.html">Study iOS 9 Programming with Swift（1）</a></p>
+</blockquote>
+
+<h2 id="toc_0">目录</h2>
 
 <ul>
-<li><p>快速直接从Sketch文件中导出所有图层到Zeplin中，无需修改，无缝衔接；</p></li>
-<li><p>查看所有元素的长度、宽度、边距、字体、字号、字体颜色等，甚至可以生成CSS代码，无需再刻意生成标注图；</p></li>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">更新记录</a>
+</li>
+<li>
+<a href="#toc_2">Table View &amp; Table View Controller</a>
+</li>
+<li>
+<a href="#toc_3">实例：自定义Table View Cells</a>
+</li>
+<li>
+<a href="#toc_4">实例：将图片四个角设置为圆角/将正方形图片设置为圆形图片</a>
+</li>
+<li>
+<a href="#toc_5">实例：对table view中的cell添加Swipe动作——分享</a>
+</li>
+<li>
+<a href="#toc_6">实例：取消row点击后被选中的状态</a>
+</li>
+<li>
+<a href="#toc_7">实例：对table view的分隔线、背景色等进行自定义</a>
+</li>
+<li>
+<a href="#toc_8">实例：对图片采用系统自带的模糊化处理</a>
+</li>
 </ul>
 
-<p><img src="http://o6lwrrweh.bkt.clouddn.com/2016-05-25-%E6%88%AA%E5%9B%BE%202016-05-25%2018%E6%97%B636%E5%88%8650%E7%A7%92.jpg" alt="查看标注"/></p>
+
+<h2 id="toc_1">更新记录</h2>
 
 <ul>
-<li>给具体某个元素添加注释说明NOTE，例如某次更改的地方的注释、希望让开发同学特别注意的地方；</li>
+<li>2016/08/15 第一次发布</li>
 </ul>
 
-<p><img src="http://o6lwrrweh.bkt.clouddn.com/2016-05-25-%E6%88%AA%E5%9B%BE%202016-05-25%2018%E6%97%B639%E5%88%8605%E7%A7%92.jpg" alt="添加NOTE"/></p>
+<h2 id="toc_2">Table View &amp; Table View Controller</h2>
 
 <ul>
-<li><p>可邀请项目成员加入协作，所有成员都能同步看到所有更改、NOTE；</p></li>
-<li><p>可以自由选择导出想导出的元素、切图；</p></li>
+<li>相对于View Controller + Table View, Table View Controller已经提供了DataSource和Delegate，而且针对Table View提前配置好了一些参数，但在某些方面也失去了灵活性。</li>
 </ul>
 
-<p><img src="http://o6lwrrweh.bkt.clouddn.com/2016-05-25-%E6%88%AA%E5%9B%BE%202016-05-25%2018%E6%97%B638%E5%88%8624%E7%A7%92.jpg" alt="导出元素"/></p>
+<h2 id="toc_3">实例：自定义Table View Cells</h2>
 
 <ul>
-<li>可以定义、查看整个产品的颜色样式和文字样式。</li>
+<li>对cell的Identifier定义为Cell→在Cell中加入需要的View，如Label、Image View等，并根据设计图添加constraints→因为cell是与UITableViewCell class关联的，所以创建一个新的class，定义为UITableViewCell的subclass</li>
+<li>Coding：
+
+<ul>
+<li>思路：对cell中自定义的views创建outlet变量→声明要展示的数据变量并赋值→告知table view有几个cell、几个section→在每个cell中显示具体的值。</li>
+<li>Class MovieTableViewCell代码片段及Class MovieTableViewController代码片段：</li>
+</ul></li>
 </ul>
 
-<p><img src="http://o6lwrrweh.bkt.clouddn.com/2016-05-25-%E6%88%AA%E5%9B%BE%202016-05-25%2018%E6%97%B637%E5%88%8641%E7%A7%92.jpg" alt="查看颜色和文字样式"/></p>
+<pre><code>@IBOutlet weak var nameLabel: UILabel!
+@IBOutlet weak var yearLabel: UILabel!
+@IBOutlet weak var typeLabel: UILabel!
+@IBOutlet weak var actorLabel: UILabel!
+@IBOutlet weak var thumbnailImageView: UIImageView!
+</code></pre>
 
-<p>作为一个细分领域的团队协作工具，Zeplin确实是抓住了设计者和开发者的痛点。对于整体使用Mac的团队，如果可以根据自己团队的实际情况加以利用，一定会提升不少效率。</p>
+<pre><code>      // 告知tableview中有几个section
+    override func numberOfSectionsInTableView(tableView: UITableView) -&gt; Int {
+        
+        return 1
+        
+    }
+    
+    // 告知tableview中有几个cell
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        
+        // 根据数组的数量返回table view中cell的数量
+        return movieNames.count
+        
+    }
+    
+    // 在每个cell中显示具体的内容,这个方法会在table view每个row要展示的时候被调起
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+        
+        // 为节省资源，使每个cell可以重复利用
+        let cellIdentifier = &quot;Cell&quot;
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MovieTableViewCell //downcasting: covert the returned object of dequeueReusableCellWithIdentifier to MovieTableViewCell (对于downcast以及as! &amp; as?的区分与使用还没完全搞懂)
+        
+        // 定义cell要显示的内容
+        cell.nameLabel.text = movieNames[indexPath.row]
+        cell.thumbnailImageView.image = UIImage(named: movieImages[indexPath.row])
+        cell.yearLabel.text = movieYear[indexPath.row]
+        cell.typeLabel.text = movieType[indexPath.row]
+        cell.actorLabel.text = movieActor[indexPath.row]
+        
+        return cell
+        
+    }
+</code></pre>
 
-<p>目前Zeplin仅支持与<a href="https://slack.com">Slack</a>连接，提供项目或页面更新提醒，如果之后能够支持更多服务（如Trello、Teambition、Worktile）就更好了。还有个小细节，目前在项目中添加的NOTE不支持导出、归档，所以在项目结束后，如果有重要的NOTE就会丢失了。这个地方如果能够稍加完善就更好了。</p>
+<h2 id="toc_4">实例：将图片四个角设置为圆角/将正方形图片设置为圆形图片</h2>
 
-<p>大家可以到<a href="https://zeplin.io">Zeplin的官网</a>了解它的更多细节。这个工具免费版只能创建一个项目，若需创建更多项目需要付费订阅。最便宜的15刀/月可以创建3个项目，不需要项目中每个成员都付费，只需一人订阅，即可全体受益。</p>
+<ul>
+<li>方法一：通过代码实现
+
+<ul>
+<li>代码片段：</li>
+</ul></li>
+</ul>
+
+<pre><code>// 将图片设置为圆角，圆角半径设置为3
+        cell.thumbnailImageView.layer.cornerRadius = 3.0
+        cell.thumbnailImageView.clipsToBounds = true
+</code></pre>
+
+<ul>
+<li>方法二：通过Xcode配置实现
+
+<ul>
+<li>配置步骤：在storyboard中选择imageview后，在右侧的Identity inspector中的“Use Defined Runtime Attributes”中添加一个值→Key Path定义为“layer.cornerRadius&quot;,Type定义为”Number“，Value定义为你要设置的圆角半径值。加入一张60*60的正方形图片，设置半径为30，就可以将其变为圆形→切换到Attributes Inspector，将Clip Subviews打钩。</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_5">实例：对table view中的cell添加Swipe动作——分享</h2>
+
+<ul>
+<li>思路：定义分享button的title和style→定义点击分享button后的动作，包括定义分享的文本和图片信息→展示ActivityView。其中share button的颜色可以通过backgroudColor属性来进行自定义。</li>
+<li>代码片段：</li>
+</ul>
+
+<pre><code>// 对每一个Row添加Swipe Action，如分享、删除等
+override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -&gt; [UITableViewRowAction]? {
+    
+    // Social Sharing Button
+    let shareAction = UITableViewRowAction(style: .Default, title: &quot;分享&quot;, handler: {(action, indexPath) -&gt; Void in
+        
+        // 定义Share的文本和图片信息，并显示ActivityView
+        let defaultText = &quot;Just checking in at&quot; + self.movieNames[indexPath.row]
+        if let imageToShare = UIImage(named: self.movieImages[indexPath.row]){
+            let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+            self.presentViewController(activityController, animated: true, completion: nil)
+        }
+    })
+    
+    // 自定义share action的背景色
+    shareAction.backgroundColor = UIColor(red: 25.0/255.0, green: 118.0/255.0, blue: 210.0/255.0, alpha: 1.0)
+    
+    return [shareAction]
+    
+}
+</code></pre>
+
+<h2 id="toc_6">实例：取消row点击后被选中的状态</h2>
+
+<ul>
+<li>代码片段：</li>
+</ul>
+
+<pre><code>// 定义Row被选择之后的动作
+override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    // Row点击后取消被选中状态
+    tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        
+}
+</code></pre>
+
+<h2 id="toc_7">实例：对table view的分隔线、背景色等进行自定义</h2>
+
+<ul>
+<li>代码片段：</li>
+</ul>
+
+<pre><code>//View被加载到内存后，以下方法被调起，且只被调起一次，加载好就不再调起
+override func viewDidLoad() {
+    super.viewDidLoad()
+                
+    // 自定义tableview的背景色，注意每个cell也有自己的背景色，cell没有内容时才能看到tableview的背景色
+    tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
+    
+    // 通过设置FooterView，移除空的row的分隔线
+    tableView.tableFooterView = UIView(frame: CGRectZero)
+    
+    // 自定义分隔线的颜色
+    tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
+    
+}
+</code></pre>
+
+<ul>
+<li>若想调整cell的背景色或者设置为透明，可在tableView(_:cellForRowAtIndexPath:)方法中添加以下代码片段：</li>
+</ul>
+
+<pre><code>// 清除cell的背景色，也即变成透明
+cell.backgroundColor = UIColor.clearColor()
+
+</code></pre>
+
+<h2 id="toc_8">实例：对图片采用系统自带的模糊化处理</h2>
+
+<ul>
+<li>在viewDidLoad()中添加以下代码片段：</li>
+</ul>
+
+<pre><code>// 对背景图进行模糊化处理,style有三种：Dark，ExtraLight，Light
+let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+let blurEffectView = UIVisualEffectView(effect: blurEffect)
+blurEffectView.frame = view.bounds
+movieBackgroudImageView.addSubview(blurEffectView)
+
+</code></pre>
 
 
     
@@ -185,16 +351,13 @@
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="14672077197053.html" 
-          title="Previous Post: 学习使用Swift语言编写iOS程序小记">&laquo; 学习使用Swift语言编写iOS程序小记</a>
-      
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="14631313149355.html" 
-          title="Next Post: 怎么获取手机上的App图标">怎么获取手机上的App图标 &raquo;</a>
+          <a  href="14709182567699.html" 
+          title="Next Post: Study iOS 9 Programming with Swift（1）">Study iOS 9 Programming with Swift（1） &raquo;</a>
       
       </p>
         </div>
