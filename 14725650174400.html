@@ -125,7 +125,7 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <p>使用Swift进行iOS编程知识点总结第二篇，主要包括Navigation Bar的导入和Appearance的自定义、状态栏的样式自定义、Segue的基本使用和通过Segues在两个View Controller间传递数据。</p>
+      <p>使用Swift进行iOS编程知识点总结第三篇，主要包括Navigation Bar的导入和Appearance的自定义、状态栏的样式自定义、Segue的基本使用和通过Segues在两个View Controller间传递数据。</p>
 
 <span id="more"></span><!-- more -->
 
@@ -168,6 +168,9 @@
 </li>
 <li>
 <a href="#toc_9">Content Hugging Priority</a>
+</li>
+<li>
+<a href="#toc_10">Self Sizing Cells</a>
 </li>
 </ul>
 
@@ -339,6 +342,16 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 <li>对于一个Stack View中的多个view，为了满足指定的constraints，会把某些view拉伸，而拉伸的优先级由Content Hugging Priority定义。Content Hugging Priority的数值越大，级别越高，不会被拉伸。</li>
 </ul>
 
+<h2 id="toc_10">Self Sizing Cells</h2>
+
+<ul>
+<li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
+</ul>
+
+<pre><code>tableView.estimatedRowHeight = 36.0 
+tableView.rowHeight = UITableViewAutomaticDimension
+</code></pre>
+
 
     
 
@@ -347,6 +360,9 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
       <div class="row">
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="14727151264192.html" 
+          title="Previous Post: Study iOS 9 Programming with Swift（4）">&laquo; Study iOS 9 Programming with Swift（4）</a>
       
         </p>
         </div>
@@ -463,6 +479,18 @@ var duoshuoQuery = {short_name:"chuxiangyuan"};
 	      
 		      
 			      <li class="post">
+			        <a href="14774965258076.html">使用 Alfred 提高你的工作效率</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14727151264192.html">Study iOS 9 Programming with Swift（4）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="14725650174400.html">Study iOS 9 Programming with Swift（3）</a>
 			      </li>
 		     
@@ -480,16 +508,8 @@ var duoshuoQuery = {short_name:"chuxiangyuan"};
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="14672077197053.html">学习使用Swift语言编写iOS程序小记</a>
-			      </li>
-		     
 		  
 		      
-			      <li class="post">
-			        <a href="14641807710350.html">利器分享-Zeplin</a>
-			      </li>
-		     
 		  
 		      
 		  
