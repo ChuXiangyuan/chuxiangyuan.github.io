@@ -4,7 +4,7 @@
   <title><![CDATA[北极熊不不]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2016-10-27T12:40:24+08:00</updated>
+  <updated>2016-10-27T13:00:48+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -213,7 +213,7 @@
     <updated>2016-09-01T15:32:06+08:00</updated>
     <id>http://chuxiangyuan.github.io/14727151264192.html</id>
     <content type="html"><![CDATA[
-<p>使用Swift进行iOS编程知识点总结第四篇，主要包括。</p>
+<p>使用Swift进行iOS编程知识点总结第四篇。</p>
 
 <span id="more"></span><!-- more -->
 
@@ -302,6 +302,8 @@ tableView.rowHeight = UITableViewAutomaticDimension
     
 }
 </code></pre>
+
+<p>未完待续</p>
 
 ]]></content>
   </entry>
