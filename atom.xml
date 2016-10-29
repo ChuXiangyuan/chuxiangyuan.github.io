@@ -4,7 +4,7 @@
   <title><![CDATA[北极熊不不]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2016-10-27T13:00:48+08:00</updated>
+  <updated>2016-10-29T23:14:01+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -79,7 +79,7 @@
 
 <ul>
 <li>百度搜索的 URL 是：<code>http://www.baidu.com/s?wd={query}</code> </li>
-<li>淘宝搜索的 URL 是：<code>http://appshopper.com/search?search={query}</code> </li>
+<li>Appshopper 搜索的 URL 是：<code>http://appshopper.com/search?search={query}</code> </li>
 </ul>
 
 <p>添加的时候可以设置一个快捷键，比如百度搜索设置为<code>bd</code>就可以在呼出 Alfred 时，输入『 bd 』加空格，并输入要搜索的关键词，敲击回车，即可打开网页搜索到对应的内容了。</p>
