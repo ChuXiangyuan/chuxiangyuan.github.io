@@ -40,9 +40,11 @@
       <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
         <ul id="main-menu" class="left">
         
-        <li id=""><a target="self" href="index.html">Home</a></li>
+        <li id=""><a target="_self" href="index.html">Home</a></li>
         
         <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="about.html">About</a></li>
         
         </ul>
 
@@ -68,21 +70,24 @@
 
 <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
-       
-       <li><a href="index.html">HOME</a></li>
-    <li><a href="archives.html">Archives</a></li>
-    <li><a href="about.html">ABOUT</a></li>
+        
+        <li><a target="_self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="about.html">About</a></li>
+        
 
     <li><label>Categories</label></li>
 
         
-            <li><a href="Teconology.html">科技</a></li>
-        
             <li><a href="tools.html">利器</a></li>
         
-            <li><a href="other.html">其他</a></li>
-        
             <li><a href="Coding.html">Coding</a></li>
+        
+            <li><a href="Teconology.html">科技</a></li>
+        
+            <li><a href="other.html">其他</a></li>
          
 
       </ul>
@@ -96,36 +101,19 @@
        
 
  <script type="text/javascript">
-  $(function(){
-    $('#menu_item_index').addClass('is_active');
-  });
+	$(function(){
+		var currentURL = 'about.html';
+		currentURL = currentURL.substr(0,currentURL.length-5);
+		$('#menu_item_'+currentURL).addClass('is_active');
+	});
 </script>
 <div class="row">
-  <div class="large-8 medium-8 columns">
-      <div class="markdown-body article-wrap">
-       <div class="article">
-          
-          <h1>About Me</h1>
-     
-        <div class="read-more clearfix">
-          <span class="date">2016/5/7</span>
 
-          <span>posted in&nbsp;</span> 
-          
-              <span class="posted-in"><a href='other.html'>其他</a></span>
-           
-         
-          <span class="comments">
-            
+    <div id="single-page-wrap">
+        <h1>About Me</h1>
 
-            
-          </span>
-
-        </div>
-      </div><!-- article -->
-
-      <div class="article-content">
-      <p><img src="media/14625521742746/%E5%A4%B4%E5%83%8F.png" alt="头像" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+        <div class="markdown-body post-page">
+        <p><img src="media/14625521742746/%E5%A4%B4%E5%83%8F.png" alt="头像" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
 <h2 id="toc_0">欢迎光临北极熊不不的博客</h2>
 
@@ -148,182 +136,12 @@
 <img src="media/14625521742746/IMG_0833.png" alt="IMG_0833"/></p></li>
 </ul>
 
-
-    
-
-      </div>
-
-      <div class="row">
-        <div class="large-6 columns">
-        <p class="text-left" style="padding:15px 0px;">
-      
-          <a href="14631451597072.html" 
-          title="Previous Post: 建立个人网站目标已达成√">&laquo; 建立个人网站目标已达成√</a>
-      
-        </p>
         </div>
-        <div class="large-6 columns">
-      <p class="text-right" style="padding:15px 0px;">
-      
-      </p>
-        </div>
-      </div>
-      <div class="comments-wrap">
-        <div class="share-comments">
-          <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style_24x24">
-	<a class="jiathis_button_tsina"></a>
-	<a class="jiathis_button_tqq"></a>
-	<a class="jiathis_button_weixin"></a>
-	<a class="jiathis_button_douban"></a>
-	<a class="jiathis_button_qzone"></a>
-	<a class="jiathis_button_fb"></a>
-	<a class="jiathis_button_twitter"></a>
-	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	<a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-
-<!-- 多说评论框 start -->
-	<div class="ds-thread"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"chuxiangyuan"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-
-          
-
-          
-        </div>
-      </div>
-    </div><!-- article-wrap -->
-  </div><!-- large 8 -->
-
-
-
-
- <div class="large-4 medium-4 columns">
-  <div class="hide-for-small">
-    <div id="sidebar" class="sidebar">
-          <div id="site-info" class="site-info">
-            
-                <div class="site-a-logo"><img src="media/14625521742746/%E5%A4%B4%E5%83%8F.png" /></div>
-            
-                <h1>北极熊不不</h1>
-                <div class="site-des">不懂得 coding 的 PM 不是好 Geek！ | 爱科技，爱折腾 | 正在不断升级打怪中的产品汪</div>
-                <div class="social">
-
-
-
-
-
-
-
-<a target="_blank" class="weibo" href="http://weibo.com/chuxiangyuan1104/" title="weibo">Weibo</a>
-<a target="_blank" class="twitter" target="_blank" href="https://twitter.com/chuxiangyuan/" title="Twitter">Twitter</a>
-<a target="_blank" class="github" target="_blank" href="https://github.com/ChuXiangyuan/" title="GitHub">GitHub</a>
-
-  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
-                
-              	 </div>
-          	</div>
-
-             
-
-              <div id="site-categories" class="side-item ">
-                <div class="side-header">
-                  <h2>Categories</h2>
-                </div>
-                <div class="side-content">
-
-      	<p class="cat-list">
-        
-            <a href="Teconology.html"><strong>科技</strong></a>
-        
-            <a href="tools.html"><strong>利器</strong></a>
-        
-            <a href="other.html"><strong>其他</strong></a>
-        
-            <a href="Coding.html"><strong>Coding</strong></a>
-         
-        </p>
-
-
-                </div>
-              </div>
-
-              <div id="site-categories" class="side-item">
-                <div class="side-header">
-                  <h2>Recent Posts</h2>
-                </div>
-                <div class="side-content">
-                <ul class="posts-list">
-	      
-		      
-			      <li class="post">
-			        <a href="14774965258076.html">使用 Alfred 提高你的工作效率</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="14727151264192.html">Study iOS 9 Programming with Swift（4）</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="14725650174400.html">Study iOS 9 Programming with Swift（3）</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="14710858606215.html">Study iOS 9 Programming with Swift（2）</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="14709182567699.html">Study iOS 9 Programming with Swift（1）</a>
-			      </li>
-		     
-		  
-		      
-		  
-		      
-		  
-		      
-		  
-		      
-		  
-		      
-		  
-		      
-		   
-		  		</ul>
-                </div>
-              </div>
-        </div><!-- sidebar -->
-      </div><!-- hide for small -->
-</div><!-- large 4 -->
-
-</div><!-- row -->
-
+    </div>
+</div>              
  <div class="page-bottom clearfix">
   <div class="row">
-   <p class="copyright">Copyright &copy; 2015
+   <p class="copyright">Copyright &copy; 2017
 Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
 Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
   </div>
@@ -334,6 +152,19 @@ Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
     </div>
 
   
+
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name:'chuxiangyuan'};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
     
 
     <script src="asset/js/foundation.min.js"></script>
