@@ -202,7 +202,7 @@
 <li>「.destructive」：从名字上就可以看出，用在那些具有破坏性、不可恢复的操作上，比如删除、注销、清除等，视觉上是正常字重、红色的文字；</li>
 <li>「.cancel」：iOS 开发中特意择出来的一种样式，特别用在取消、不操作、仅关闭 Alert 的这种操作上，视觉上是半加粗（Semibold）的字重、蓝色的文字。 无论在 Alert Controller 中添加取消样式的动作排在第几个，在显示上都会放到所有操作的最后一个，只有两个操作时会放在左边，这是系统定义好的。<strong>注意一个 alertController 里只能有一个样式为「.cancel」的 action，如果代码中写了大于等于两个，app 会直接 crash。</strong></li>
 </ul></li>
-<li>action 中的 handler 属性是用来描述点击这个操作后会发生的动作，一般情况下会写作一个闭包函数。而对于像取消这种操作，自然就是什么也不执行，即可写成「nil」。文章仅针对 UIAlertController 进行讨论，这部分就展开详述了。</li>
+<li>action 中的 handler 属性是用来描述点击这个操作后会发生的动作，一般情况下会写作一个闭包函数。而对于像取消这种操作，自然就是什么也不执行，即可写成「nil」。文章仅针对 UIAlertController 进行讨论，这部分就不展开详述了。</li>
 </ul>
 
 <p>上面这段代码的运行效果如下图，这种只有一个操作按钮的 Alert 多用于提示/告知用户某些信息，起到一个通知的作用。</p>
@@ -222,7 +222,7 @@
     alertController.addAction(exitAction)
     alertController.addAction(cancelAciton)
     
-    // 定义 alertController 中的哪几个动作需要 highlight
+    // 定义 alertController 中的哪个动作需要 highlight
     alertController.preferredAction = alertController.actions[0]
     
     self.present(alertController, animated: true, completion: nil)
@@ -230,7 +230,7 @@
   }
 </code></pre>
 
-<p>下图是这段代码的运行效果。但这里有个问题，「取消」按钮并没有如期显示为半粗体字重，反而「退出」按钮显示为了半粗体字重。这个的原因是在代码里对创建的 alertController 的「preferredAction」属性进行了定义，将 alertController 里的第一个动作设置为了「preferredAction」，在显示效果上使这个 action highlight，也即应用了半粗体字重。因此原本使用了「.cancel」样式的操作按钮恢复成了正常字重。这个逻辑也是系统内置的。</p>
+<p>下图是这段代码的运行效果。但这里有个问题，「取消」按钮并没有如期显示为半粗体字重，反而「退出」按钮显示为了半粗体字重。这个的原因是在代码里对创建的 alertController 的「preferredAction」属性进行了定义，将 alertController 里的第一个动作设置为了「preferredAction」，在显示效果上使这个 action highlight，也即应用了半粗体字重。因此原本使用了「.cancel」样式的操作按钮恢复成了正常字重。只能有一个动作可以被设置为设置为了「preferredAction」，且当设备有外接键盘时，按回车键等于直接点击这个操作。这个逻辑也是系统内置的。</p>
 
 <p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%888.59.34.png" alt="Simulator Screen Shot 2017年7月9日 下午8.59.34 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
@@ -258,7 +258,7 @@
 
 <p>以上运行结果为下图，可以看到这个 Alert 只有标题，没有具体的描述信息，这个是被允许的。如果你代码写成只有描述，没有标题，系统会自动把描述作为标题；<strong>但如果你代码中标题和描述都没有，app 会 crash。</strong>如果只有标题和描述，但没有添加任何动作的 alertController 也是可以创建并显示的，但你无法关闭这个 alert。不过这个在实际中也不可能出现这种情况。</p>
 
-<p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%889.01.25.png" alt="Simulator Screen Shot 2017年7月9日 下午9.01.25 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+<p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%8810%E6%97%A5%20%E4%B8%8A%E5%8D%8812.56.33.png" alt="Simulator Screen Shot 2017年7月10日 上午12.56.33 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
 <p>当一个 Alert 中有 n 个操作按钮时又会怎样呢？这个 Alert 会自动可上下滚动，并且打开时默认显示最下面的几个按钮操作。Alert 本身就是希望用户对某些操作做出判断并反馈的一个模态窗口，如果有太多的操作，会让用户感觉十分困惑，无法选择，而且交互体验也是非常差的，所以应极力避免这种情况。然而在 iOS 系统中，Airdrop 接收文件选择用什么 app 打开时就会出现这种情况，看上去十分糟糕🙃。</p>
 
@@ -314,7 +314,7 @@
 <li>Alert 必须要有标题，可以没有描述；只有描述没有标题时，描述会自动变为标题的样式；</li>
 <li>Alert 可以有一个或多个操作按钮，当大于两个按钮时会由上至下排列，过多时可以滚动；</li>
 <li>Alert 的每个操作有「默认」、「破坏」、「取消」三种样式，显示效果不同。一个 Alert 中只能有一个「取消」样式的操作，且会显示在所有操作之后；</li>
-<li>Alert 中有操作被 highlight 时，「取消」样式的操作会恢复为与「默认」样式相同；</li>
+<li>Alert 中有操作（只能有一个）被 highlight 时，「取消」样式的操作会恢复为与「默认」样式相同；</li>
 <li>Alert 中的操作可以被控制是否可点击；</li>
 <li>Alert 中可以添加文本输入框。</li>
 </ul>
