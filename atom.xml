@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[北极熊不不]]></title>
+  <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-07-10T01:08:51+08:00</updated>
+  <updated>2017-07-15T22:04:22+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -110,7 +110,7 @@
   }
 </code></pre>
 
-<p>下图是这段代码的运行效果。但这里有个问题，「取消」按钮并没有如期显示为半粗体字重，反而「退出」按钮显示为了半粗体字重。这个的原因是在代码里对创建的 alertController 的「preferredAction」属性进行了定义，将 alertController 里的第一个动作设置为了「preferredAction」，在显示效果上使这个 action highlight，也即应用了半粗体字重。因此原本使用了「.cancel」样式的操作按钮恢复成了正常字重。只能有一个动作可以被设置为设置为了「preferredAction」，且当设备有外接键盘时，按回车键等于直接点击这个操作。这个逻辑也是系统内置的。</p>
+<p>下图是这段代码的运行效果。但这里有个问题，「取消」按钮并没有如期显示为半粗体字重，反而「退出」按钮显示为了半粗体字重。这个的原因是在代码里对创建的 alertController 的「preferredAction」属性进行了定义，将 alertController 里的第一个动作设置为了「preferredAction」，在显示效果上使这个 action highlight，也即应用了半粗体字重。因此原本使用了「.cancel」样式的操作按钮恢复成了正常字重。只能有一个动作可以被设置为「preferredAction」，且当设备有外接键盘时，按回车键等于直接点击这个操作。这个逻辑也是系统内置的。</p>
 
 <p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%888.59.34.png" alt="Simulator Screen Shot 2017年7月9日 下午8.59.34 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
@@ -229,7 +229,7 @@
 <p>说下与之前创建 Alert 时明显的几点不同：</p>
 
 <ul>
-<li>Alert 不管在 iPhone 上还是 iPad 上都会显示在屏幕中央，这个位置是系统已经确定好的，无需自己定义；但对于 Action Sheet 来说，在 iPhone 上会从屏幕底部滑出，但对于 iPad 来说要以 Popover 形式展现，就需要定义显示的位置。故上述代码中定义了在 iPad 显示的位置。</li>
+<li>Alert 不管在 iPhone 上还是 iPad 上都会显示在屏幕中央，这个位置是系统已经确定好的，无需自己定义；但对于 Action Sheet 来说，在 iPhone 上会从屏幕底部滑出，但对于 iPad 来说要以 Popover 形式展现，就需要定义显示的位置。故上述代码中定义了在 iPad 显示的位置。还有一点，在 iPad 上取消样式的操作按钮是被自动隐藏的。</li>
 <li>创建 Action Sheet 后，其中的操作是不可以自定义 highlight 的。</li>
 <li>Action Sheet 中是不能有文本输入框的。</li>
 </ul>
@@ -310,7 +310,7 @@
 
 <ul>
 <li>Action Sheet 可以既没有标题，又没有描述；只有描述没有标题时，描述会自动变为标题的样式；</li>
-<li>Action Sheet  可以有一个或多个操作按钮，过多时可以滚动，适配 iPad 时要定义在 iPad 上显示的位置，并以 Popover 的形式展现；</li>
+<li>Action Sheet  可以有一个或多个操作按钮，过多时可以滚动，适配 iPad 时要定义在 iPad 上显示的位置，并以 Popover 的形式展现，且取消样式的操作按钮在 iPad 上是被自动隐藏的；</li>
 <li>Action Sheet  的每个操作有「默认」、「破坏」、「取消」三种样式，显示效果不同。一个 Alert 中只能有一个「取消」样式的操作，且会显示在所有操作之后；</li>
 <li>Action Sheet 有「取消」样式的操作按钮时，可以点击空白处关闭 Action Sheet；但当没有「取消」样式的操作按钮时，不可以点击空白处关闭；</li>
 <li>Action Sheet 中的操作不能被自定义 highlight ；</li>
