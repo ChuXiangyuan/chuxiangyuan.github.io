@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  Study iOS 9 Programming with Swift（4） - Allen Chu
+  iOS 11 设计上的改变 What’s New in iOS 11 - WWDC 2017 Session 810 - Allen Chu
   
   </title>
   
@@ -112,19 +112,21 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>Study iOS 9 Programming with Swift（4）</h1>
+              <div class="f-img"><img src="media/15028131788266/810_whats_new_in_ios_11.jpg" /></div>
+          
+          <h1>iOS 11 设计上的改变 What’s New in iOS 11 - WWDC 2017 Session 810</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2016/9/1</span>
+          <span class="date">2017/8/15</span>
 
           <span>posted in&nbsp;</span> 
           
-              <span class="posted-in"><a href='Develop.html'>Develop</a></span>
+              <span class="posted-in"><a href='Design.html'>Design</a></span>
            
          
           <span class="comments">
             
-              <a href="http://chuxiangyuan.github.io/14727151264192.html#disqus_thread">comments</a>
+              <a href="http://chuxiangyuan.github.io/15028131788266.html#disqus_thread">comments</a>
             
 
             
@@ -134,97 +136,140 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <p>使用Swift进行iOS编程知识点总结第四篇。</p>
+      <p>从寻路、排版层级、对比度三个方面介绍 iOS 11 设计上的一些变化，从而帮助你设计一个具有丰富的视觉层级、清晰的导航、易于使用和简单的交互的 app。</p>
 
 <span id="more"></span><!-- more -->
 
+<h2 id="toc_0">概述</h2>
+
+<ul>
+<li><strong>Wayfinding：</strong>在 iOS 11 中提供更加清晰的导航、贯彻整个系统的寻路；</li>
+<li><strong>Typographic Hierarchy：</strong>通过排版的调整，聚焦整体的层级；</li>
+<li><strong>Contrast：</strong>对于有用的信息，在 UI 上增加对比度。</li>
+</ul>
+
+<h2 id="toc_1">Wayfinding 寻路</h2>
+
+<ul>
+<li>通常意义下，寻路就是指导人们通过某个环境、在物理空间自我定位；</li>
+<li><p>生活中常见的标识和信息系统：街道标识、机场、停车场。</p></li>
+<li><p>在 UI 中寻路，可以增强使用体验，理解你所处的空间：</p>
+
+<ul>
+<li>首要目标：高亮/强调内容；</li>
+<li>app 需要清晰的视觉层级；</li>
+<li>UI 元素不应该与内容发生竞争，而应该帮助你更好的理解潜在的功能和交互。</li>
+</ul></li>
+<li><p>大标题导航栏：一种可选的方案，并没有替换掉标准的导航栏样式，页面往下滚动时可以切换为标准的导航栏样式；</p></li>
+<li><p>在哪里应该使用大标题导航栏：</p>
+
+<ul>
+<li>app 每个 tab 的第一层级：让你理解你在 tab 的第一层级、你已经滚动到了页面顶部；</li>
+<li>如果内容和层级众多，在某些二级页面也可以使用大标题导航栏，例如「音乐」app 中「浏览」tab 中的「最新音乐」、「歌单」、「排行榜」；</li>
+</ul>
+
+<p><img src="media/15028131788266/1.jpg" alt="1"/></p>
+
+<ul>
+<li>在布局相似的页面里也可使用大标题导航栏，例如「电话」app，每个 tab （个人收藏、最近通话、语音信箱）都是行式的文本内容，使用大标题导航栏可以让用户立即知道自己在哪里；</li>
+</ul>
+
+<p><img src="media/15028131788266/2.jpg" alt="2"/></p>
+
+<ul>
+<li>非常重要：在导航栏中使用大标题并不总是必要的，在某些场景下会阻碍其可用性，例如「时钟」app，虽然它有多个 tab，但是它没有复杂多样的内容，每一个 tab 的布局也十分容易区分，如果使用大标题导航栏，反而会使其与内容发生竞争。</li>
+</ul>
+
+<p><img src="media/15028131788266/3.jpg" alt="3"/></p></li>
+</ul>
+
+<h2 id="toc_2">Typographic Hierarchy 排版层级</h2>
+
+<ul>
+<li>通过排版上的层级变化，可以强调更加重要的内容，帮助内容成组；</li>
+<li>减少认知负担，减少在寻找某些东西时所付出的精神努力。</li>
+<li>建立排版层级的几个基本的方法：
+
+<ul>
+<li><strong>Position 位置：</strong>上面的会比下面的重要一些；</li>
+<li><strong>Size 尺寸/字号：</strong>大尺寸的会比小尺寸的重要一些；</li>
+<li><strong>Weight 字重：</strong>粗字重可以强调效果，细字重可以减弱效果；</li>
+<li><strong>Color 颜色：</strong>如白色对比灰色，白色会有强调效果。</li>
+<li>一次可能会用到多种方法。</li>
+</ul></li>
+</ul>
+
+<p><img src="media/15028131788266/3EEAB629-094D-4391-9677-DC2CCC4C35A9.png" alt="3EEAB629-094D-4391-9677-DC2CCC4C35A9"/></p>
+
+<ul>
+<li><p>iOS 11 中的几个实例：</p>
+
+<ul>
+<li><strong>「照片」app：</strong>内容——你的照片是这个 app 中最重要的。导航照片的每部分的标题，在 iOS 10 中采用了两种字号来区分两种信息，但仍然显得有点小、有点轻，而在 iOS 11 中，让每部分的标题字号更大，地点信息增加了字重，日期信息采用了灰色文本。这些改变可以使你分离内容中的重点更简单了，让你更快地找到某张特别的照片。</li>
+</ul>
+
+<p><img src="media/15028131788266/1%201.jpg" alt="1 1"/></p>
+
+<ul>
+<li><strong>「日历」app：</strong>在 iOS 11 中为了强调增加了字重，有意地使用颜色指示当前的年月日。</li>
+</ul>
+
+<p><img src="media/15028131788266/2%201.jpg" alt="2 1"/></p>
+
+<ul>
+<li><strong>「天气」app：</strong>在 iOS 11 中，增加了文本字重，整体上增大了字号，使得内容更加容易阅读。</li>
+</ul>
+
+<p><img src="media/15028131788266/3%201.jpg" alt="3 1"/></p></li>
+</ul>
+
+<h2 id="toc_3">Contrast 对比度</h2>
+
+<ul>
+<li>在 UI 中，为了与更大、更粗的文本样式保持平衡，需要更新其他 UI 元素，增强其对比度，同时还要保持其功能性，保证最小化粒度的改变。</li>
+<li><p>在 iOS 11 中由此带来的一些改变：</p>
+
+<ul>
+<li>填充按钮的形状，如数字键盘；</li>
+</ul>
+
+<p><img src="media/15028131788266/1%202.jpg" alt="1 2"/></p>
+
+<ul>
+<li>增加形状的尺寸，如搜索输入框；</li>
+</ul>
+
+<p><img src="media/15028131788266/A4F66E32-2ECC-49B6-873F-476C6599D916.png" alt="A4F66E32-2ECC-49B6-873F-476C6599D916"/></p>
+
+<ul>
+<li>Tab Bar：增加文本标签的字重（从 regular 到 medium），填充 icon 的形状、增加笔画的权重；</li>
+</ul>
+
+<p><img src="media/15028131788266/F913F827-1261-49A1-9990-864B983EC401.png" alt="F913F827-1261-49A1-9990-864B983EC401"/></p>
+
+<ul>
+<li>IPhone 横屏下的 Tab Bar：第一点，为了对空间更好地利用，把文本标签放在了 icon 的右边（iOS 10 中是一上一下），这样使得横屏下的 Tab Bar 更矮了，从而与导航栏、工具栏高度一致。第二点，相对于竖屏，横屏下的 icon 会稍小一些，文本会稍大一些，设计自己的 app 时需要考虑这些因素。</li>
+</ul>
+
+<p><img src="media/15028131788266/iPhone%20Tab%20Bar.png" alt="iPhone Tab Ba"/></p>
+
+<ul>
+<li>iPad 横屏下的 Tab Bar：更大的文本尺寸、icon 与竖屏时的大小一致。</li>
+</ul>
+
+<p><img src="media/15028131788266/6280686D-473F-41F3-AE7A-C9AD96D0EBF8.png" alt="6280686D-473F-41F3-AE7A-C9AD96D0EBF8"/></p>
+
+<ul>
+<li>Wallet app：在 iOS 10 中使用了模糊效果，似乎想要表明其位于底下的页面之上，但这个并不符合逻辑，也没有起到指示所处空间的作用，所以在 iOS 11 中移除了这种模糊效果。</li>
+</ul>
+
+<p><img src="media/15028131788266/4.jpg" alt="4"/></p></li>
+<li><p>移除多余的、不必要的 UI 元素，减少复杂度以改善整个 app 的对比度。</p></li>
+</ul>
+
 <blockquote>
-<p>关联阅读：<br/>
-<a href="http://chuxiangyuan.github.io/14709182567699.html">Study iOS 9 Programming with Swift（1）</a><br/>
-<a href="http://chuxiangyuan.github.io/14710858606215.html">Study iOS 9 Programming with Swift（2）</a><br/>
-<a href="http://chuxiangyuan.github.io/14725650174400.html">Study iOS 9 Programming with Swift（3）</a></p>
+<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2017/810/">What’s New in iOS 11 - WWDC 2017 - Videos - Apple Developer</a>  </p>
 </blockquote>
-
-<h2 id="toc_0">目录</h2>
-
-<ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">更新记录</a>
-</li>
-<li>
-<a href="#toc_2">Self Sizing Cells</a>
-</li>
-<li>
-<a href="#toc_3">Unwind Segue</a>
-</li>
-<li>
-<a href="#toc_4">实例：多个button触发一个action方法</a>
-</li>
-</ul>
-
-
-<h2 id="toc_1">更新记录</h2>
-
-<ul>
-<li>2016/09/01 第一次发布</li>
-</ul>
-
-<h2 id="toc_2">Self Sizing Cells</h2>
-
-<ul>
-<li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
-</ul>
-
-<pre><code>tableView.estimatedRowHeight = 36.0 
-tableView.rowHeight = UITableViewAutomaticDimension
-</code></pre>
-
-<h2 id="toc_3">Unwind Segue</h2>
-
-<ul>
-<li>要点击一个button关闭一个view返回上一级view，可以在destination view controller中添加如下代码，并且将button与exit连接。</li>
-<li>代码片段：</li>
-</ul>
-
-<pre><code>// 从review view跳转回detail view，并且带回rating的值改变detail view
-@IBAction func close(segue:UIStoryboardSegue) {
-    
-  if let reviewViewController = segue.sourceViewController as? ReviewViewController {
-    if let rating = reviewViewController.rating {
-      ratingButton.setImage(UIImage(named: rating), forState: UIControlState.Normal)
-    }
-  }
-    
-}
-</code></pre>
-
-<h2 id="toc_4">实例：多个button触发一个action方法</h2>
-
-<ul>
-<li>对于多个button想要触发一个action方法，可以通过为不同的button定义不同的tag，之后coding时通过switch来区分不同tag，从而执行不同的动作。</li>
-<li>代码片段：
-// 对电影进行评价，根据点击button的不同给rating赋值并关闭modal view</li>
-</ul>
-
-<pre><code>@IBAction func ratingSelected(sender: UIButton) {
-  
-    switch (sender.tag) {
-    case 100: rating = &quot;dislike&quot;
-    case 200: rating = &quot;good&quot;
-    case 300: rating = &quot;great&quot;
-    default: break
-    }
-    
-    // 执行特定的segue，即unwind to detailview
-    performSegueWithIdentifier(&quot;unwindToDetailView&quot;, sender: sender)
-    
-}
-</code></pre>
-
-<p>未完待续</p>
 
 
     
@@ -235,16 +280,13 @@ tableView.rowHeight = UITableViewAutomaticDimension
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="14774965258076.html" 
-          title="Previous Post: 使用 Alfred 提高你的工作效率">&laquo; 使用 Alfred 提高你的工作效率</a>
-      
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="14725650174400.html" 
-          title="Next Post: Study iOS 9 Programming with Swift（3）">Study iOS 9 Programming with Swift（3） &raquo;</a>
+          <a  href="15028149583661.html" 
+          title="Next Post: WWDC Session 学习笔记总览">WWDC Session 学习笔记总览 &raquo;</a>
       
       </p>
         </div>
