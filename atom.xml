@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-08-16T12:56:16+08:00</updated>
+  <updated>2017-08-17T14:59:21+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -193,7 +193,7 @@
 
 <ul>
 <li>包容性 App 设计 Inclusive App Design - WWDC 2016 Session 801📱💻</li>
-<li>排版和字体 Typography and Fonts - WWDC 2016 Session 803📱💻⌚️📺</li>
+<li><a href="15029504785442.html">排版和字体 Typography and Fonts - WWDC 2016 Session 803</a>📱💻⌚️📺</li>
 <li>迭代的 UI 设计 Iteractive UI Design - WWDC 2016 Session 805📱</li>
 </ul>
 
@@ -563,6 +563,210 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[排版和字体 Typography and Fonts - WWDC 2016 Session 803]]></title>
+    <link href="http://chuxiangyuan.github.io/15029504785442.html"/>
+    <updated>2017-08-17T14:14:38+08:00</updated>
+    <id>http://chuxiangyuan.github.io/15029504785442.html</id>
+    <content type="html"><![CDATA[
+<p>由 SF 字体引出字体的一些术语和排版上的一些概念，介绍了 SF 字体在排版上提供的新功能。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">San Francisco Fonts</h2>
+
+<ul>
+<li>SF Pro Text、SF Pro Display：iOS、macOS、tvOS（WWDC 2017 开始启用）</li>
+<li>SF UI Text、SF UI Display：iOS、macOS、tvOS；</li>
+<li>SF Compact Text、SF Compact Display：watchOS；</li>
+<li><p>SF Mono（一种等宽字体，New in WWDC 2016）：Code in Xcode、Terminal、Swift Playgrounds。</p>
+
+<p><img src="media/15029504785442/BC65E41A-C90D-47C7-9C78-9A699C4EEE2F.png" alt="BC65E41A-C90D-47C7-9C78-9A699C4EEE2F"/></p>
+
+<ul>
+<li>SF 与 SF Mono</li>
+</ul>
+
+<p><img src="media/15029504785442/7AF3BC06-7011-460D-9E7C-C47B7C7695E9.png" alt="7AF3BC06-7011-460D-9E7C-C47B7C7695E9"/></p>
+
+<ul>
+<li>等宽字体（Monospaced）：不同字重下有着相同的宽度</li>
+</ul>
+
+<p><img src="media/15029504785442/0451C080-D67D-47A2-9EF4-B2451566026B.png" alt="0451C080-D67D-47A2-9EF4-B2451566026B"/></p></li>
+</ul>
+
+<h2 id="toc_1">术语 Terminology</h2>
+
+<ul>
+<li>Text：文本，如「App」；</li>
+<li>Character：字符，文本的抽象单位，可以由一个代码代表，如字母「A」</li>
+<li>Glyph：字形，如字母「A」的这个形状，人们看到这个就知道这是字母「A」，而不是其他字母；</li>
+<li><p>Feature：功能，通常在字体文件中，字形与字符是一一对应的，但有时候有特殊，如「6」这个字符在一个字体中有两种「字形」，你可以选择其中一种（Optional）；输入两个字母，这两个字母自动连笔，形成了一个新的字形（Automatic），这都是 Feature；</p>
+
+<p><img src="media/15029504785442/Font%20Automatic%20Feature.png" alt="Font Automatic Feature " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
+<li><p>Font：字体（文件）；</p></li>
+<li><p>Style：样式，如「粗体」、「斜体」、「粗斜体」、「紧缩」；</p></li>
+<li><p>Typeface：字型，样式背后的设计理念，如将字母「A」变换成各种不同的形状，但其终究还是字母「A」；</p></li>
+<li><p>Typography：排版，使用字型来设置文本并给语言编码。</p></li>
+</ul>
+
+<p><img src="media/15029504785442/94B33019-6DE5-49B8-954A-C48D7A3CD680.png" alt="94B33019-6DE5-49B8-954A-C48D7A3CD680"/></p>
+
+<ul>
+<li>Text 的关心对象：Writers，Editors；</li>
+<li>Character 的关心对象：Unicode；</li>
+<li>Glyph、Feature、Font、Style、Typeface 的关心对象：Type Designers，Font Manufacturers；</li>
+<li>Typography 的关心对象：Typographers = You（App Developer/Designer）。</li>
+</ul>
+
+<h2 id="toc_2">概念 Conceps</h2>
+
+<p><img src="media/15029504785442/30AF7D16-B07D-4AC3-A2DC-1EF3168295E8.png" alt="30AF7D16-B07D-4AC3-A2DC-1EF3168295E8"/></p>
+
+<ul>
+<li><p>内嵌于字体中（Embedded in the Font）</p>
+
+<ul>
+<li>Spacing：空间，一个字符所占的位置，内置在字体中无法改变；</li>
+<li><p>Kerning：字偶距，某两个字母间的距离，一般设置在字体内部，无法改变。</p>
+
+<p><img src="media/15029504785442/0053A8A4-21BE-4D83-9C0D-E621D0464CE6.png" alt="0053A8A4-21BE-4D83-9C0D-E621D0464CE6"/></p></li>
+</ul></li>
+<li><p>可调整的（Adjustable）</p>
+
+<ul>
+<li><p>Tracking：字符间距，字间距，所有字符整体调整，正值、零值、负值；</p>
+
+<p><img src="media/15029504785442/4616025D-2E31-4C2D-ADAA-1FF14908BAD0.png" alt="4616025D-2E31-4C2D-ADAA-1FF14908BAD0"/></p></li>
+<li><p>Leading：行距，两行的 baseline 的距离称为行距，descenders-理解为字符延伸到 baseline 下面的那部分，如小写字母 q；ascenders-理解为字符延伸到 baseline 上面的那部分，如小写字母 h。</p>
+
+<p><img src="media/15029504785442/F2282DF8-6974-46A8-957E-D34D0B85F8CD.png" alt="F2282DF8-6974-46A8-957E-D34D0B85F8CD"/></p></li>
+</ul></li>
+<li><p>外部参考链接：<a href="https://creativemarket.com/blog/whats-the-difference-between-leading-kerning-and-tracking">What’s the Difference Between Leading, Kerning and Tracking? </a></p></li>
+<li><p>影响排版的一些因素</p>
+
+<ul>
+<li>易读性（Legibility）</li>
+<li>尺寸（Scale）</li>
+<li>布局（Layout）</li>
+<li>密集度（Density）</li>
+<li>质感（Voice）</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_3">工具 Tools</h2>
+
+<ul>
+<li>System Font：使用系统字体只需确定字体大小和字重：<code>UIFont.systemFont(ofSize: 34, weight: UIFontWeightBlack)</code>，每种字体大小都有预设好的字间距 tracking，开启「粗体文本」后，系统中会自动进行粗体文本转换。</li>
+<li>Dynamic Type：应用在 iOS 和 watchOS，在「设置」→「显示与亮度」→「文字大小」中，「辅助功能」中还可开启「更大字体」。使用 Text Styles APIs：<code>UIFont.preferredFont(forTextStyle:)</code>，动态类型功能会自动支持。</li>
+<li>Custom Fonts：由于多为开发上的一些实际操作，暂不展开，具体步骤如下，
+
+<ol>
+<li>Pick or bundle a font</li>
+<li>Lookup table for the Content Size Categories</li>
+<li>Override <code>traitCollectionDidChange</code></li>
+<li>Update your fonts and paragraph style</li>
+<li>Relayout</li>
+</ol></li>
+<li>Font Selection：如果你决定要使用自定义字体，那么你需要考虑：
+
+<ol>
+<li>Easier sticking with one typeface at a time 从一次使用一个字型开始更容易</li>
+<li>Understanding design intention helps in usage 深度理解这些字型的设计目的</li>
+<li>Consider defaults and knobs you can turn 考虑你可以改变的那些样式，如字间距、行间距</li>
+</ol></li>
+</ul>
+
+<h2 id="toc_4">细节 Details</h2>
+
+<ul>
+<li><p>Arrows 箭头（New in WWDC 2016）：各个方向的箭头是内置于 SF 字体中的，并且同样有不同的自重，可在交互中用于指向。</p>
+
+<p><img src="media/15029504785442/15029510805694.jpg" alt=""/></p></li>
+<li><p>High-Legibility Alternates 高易读性替换（New in WWDC 2016）：对于一串字符串，如果用户不易辨别字符串中的字母到底是什么，可以使用开启这个功能，系统自动把不易辨别的字母转换为不会有歧义的字母。但这个功能不要轻易开启，会破坏文本整体的一致性。</p>
+
+<p><img src="media/15029504785442/E598CEAF-F8AA-4263-BE8F-6AE726388D1B.png" alt="E598CEAF-F8AA-4263-BE8F-6AE726388D1B"/></p>
+
+<p>在代码中启用的示例如下：</p>
+
+<pre><code>let pointSize: CGFloat = 60.0
+let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()
+let highLegibilityFontDesc = systemFontDesc.addingAttributes(
+  [
+    UIFontDescriptorFeatureSettingsAttribute:
+      [
+        [
+          UIFontFeatureTypeIdentifierKey: kStylisticAlternativesType,
+          UIFontFeatureSelectorIdentifierKey: kStylisticAltSixOnSelector,
+        ],
+      ]
+  ]
+)
+
+label.font = UIFont(descriptor: highLegibilityFontDesc, size: pointSize)
+</code></pre></li>
+<li><p>Small Caps 小型大写字母：大写字母的缩小版，几乎与小写字母对齐。两个例子如下图。当觉着大写字母与周围的小写字母相比过大而显得不协调，如果仅仅调整字体大小，那会改变字符串的密集度或者说字间距，故可以开启「Small Caps」功能，保证密集度和笔画厚度，使排版美观。</p>
+
+<p><img src="media/15029504785442/10C7242A-570D-4AF0-980C-94171E30D6B1.png" alt="10C7242A-570D-4AF0-980C-94171E30D6B1"/></p>
+
+<p>在 Apple TV 上使用的一个实例：</p>
+
+<p><img src="media/15029504785442/1BB0A3BB-6DC5-4A8D-BA48-08825A863171.png" alt="1BB0A3BB-6DC5-4A8D-BA48-08825A863171"/></p>
+
+<p>具体使用上分为以下几种类型，可以用一种，也可以用多种：</p>
+
+<ul>
+<li><p>Small Caps from Uppercase（把大写字母转换为小型大写字母）：对于一个字符串，1.全是大写，适合此功能；2.大小写混合，不适合此功能；3.全是小写，这样使用有点别扭，但也还 OK。</p>
+
+<p><img src="media/15029504785442/FA47AC14-09B1-4920-9854-1060555FC0C9.png" alt="FA47AC14-09B1-4920-9854-1060555FC0"/></p></li>
+<li><p>Small Caps from Lowercase（把小写字母转换为小型大写字母）：字符串的上述三种情况都还适合。</p>
+
+<p><img src="media/15029504785442/735C71DC-DA4B-4946-828E-06A578BFB51B.png" alt="735C71DC-DA4B-4946-828E-06A578BFB51B"/></p></li>
+<li><p>上述两种类型在代码中启用的方法示意如下：</p>
+
+<pre><code>let pointSize: CGFloat = 60.0
+let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()
+let smallCapsFontDesc = systemFontDesc.addingAttributes(
+  [
+    UIFontDescriptorFeatureSettingsAttribute:
+    [
+
+      [
+        UIFontFeatureTypeIdentifierKey: kLowerCaseType,
+        UIFontFeatureSelectorIdentifierKey: kLowerCaseSmallCapsSelector,
+      ],
+      [
+        UIFontFeatureTypeIdentifierKey: kUpperCaseType,
+        UIFontFeatureSelectorIdentifierKey: kUpperCaseSmallCapsSelector,
+      ],
+
+    ]
+  ]
+)
+
+label.font = UIFont(descriptor: smallCapsFontDesc, size: pointSize)
+</code></pre></li>
+<li><p>Small Caps Numbers and Punctuation<br/>
+<img src="media/15029504785442/1621C0AD-EADF-4D1C-92F7-A7C848B4B522.png" alt="1621C0AD-EADF-4D1C-92F7-A7C848B4B522"/></p></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2016/803/">Typography and Fonts - WWDC 2016 - Videos - Apple Developer</a>  </p>
+</blockquote>
+
+<h2 id="toc_5">相关文章</h2>
+
+<ul>
+<li>有关于 SF 字体的更多介绍： <a href="15028584576994.html">新的系统字体 Introducing the New System Fonts - WWDC 2015 Session 804</a></li>
+</ul>
+
+<p>📱💻⌚️📺</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[新的系统字体 Introducing the New System Fonts - WWDC 2015 Session 804]]></title>
     <link href="http://chuxiangyuan.github.io/15028584576994.html"/>
     <updated>2017-08-16T12:40:57+08:00</updated>
@@ -575,19 +779,13 @@
 <h2 id="toc_0">San Francisco Fonts</h2>
 
 <ul>
-<li>San Francisco 字体家族有两种字体二级家族，一种是 SF， 用于 iOS、macOS、tvOS，另一种是 SF Compact，专门用于 watchOS。每个字体又分两种视觉尺寸（Optical Sizes），一种是 Text，包含六种字重；另一种是 Display，包含九种字重。注：从 iOS 11 开始，苹果开始启用了 SF Pro 这个字体分支，替代了 SF。</li>
-</ul>
+<li><p>San Francisco 字体家族有两种字体二级家族，一种是 SF， 用于 iOS、macOS、tvOS，另一种是 SF Compact，专门用于 watchOS。每个字体又分两种视觉尺寸（Optical Sizes），一种是 Text，包含六种字重；另一种是 Display，包含九种字重。注：从 iOS 11 开始，苹果开始启用了 SF Pro 这个字体分支，替代了 SF。</p>
 
-<p><img src="media/15028584576994/0242A688-8764-4A6F-AE6A-D858FC82F490.png" alt="0242A688-8764-4A6F-AE6A-D858FC82F490"/></p>
+<p><img src="media/15028584576994/0242A688-8764-4A6F-AE6A-D858FC82F490.png" alt="0242A688-8764-4A6F-AE6A-D858FC82F490"/></p></li>
+<li><p>SF 与 SF Compact 的对比：SF 字体更加圆润，SF Compact 更显笔直，字母之间有更多的空间，这样在 Apple Watch 的小屏幕上，SF Compact 更加易读。</p>
 
-<ul>
-<li>SF 与 SF Compact 的对比：SF 字体更加圆润，SF Compact 更显笔直，字母之间有更多的空间，这样在 Apple Watch 的小屏幕上，SF Compact 更加易读。</li>
-</ul>
-
-<p><img src="media/15028584576994/942098B4-087E-48B0-B9C0-589F9FE1AAC3.png" alt="942098B4-087E-48B0-B9C0-589F9FE1AA"/></p>
-
-<ul>
-<li>几个排版上的术语：
+<p><img src="media/15028584576994/942098B4-087E-48B0-B9C0-589F9FE1AAC3.png" alt="942098B4-087E-48B0-B9C0-589F9FE1AA"/></p></li>
+<li><p>几个排版上的术语：</p>
 
 <ul>
 <li>baseline：基线；</li>
@@ -595,22 +793,19 @@
 <li>cap height：大写字母 X 的顶部，大写字母的对齐标准；</li>
 <li>descender：小写字母基准线以下的对齐位置；</li>
 <li>ascender：小写字母基准线以上的对齐位置。</li>
-</ul></li>
 </ul>
 
-<p><img src="media/15028584576994/Font%20Proportions.png" alt="Font Proportions"/></p>
-
-<ul>
-<li>在字体比例上的几点改善：
+<p><img src="media/15028584576994/Font%20Proportions.png" alt="Font Proportions"/></p></li>
+<li><p>在字体比例上的几点改善：</p>
 
 <ul>
 <li>Cap-Height Lower Than Ascenders</li>
 <li>Large x-Height</li>
 <li>Numbers Align with Uppercase</li>
-</ul></li>
 </ul>
 
-<p><img src="media/15028584576994/SF.png" alt="SF"/></p>
+<p><img src="media/15028584576994/SF.png" alt="SF"/></p></li>
+</ul>
 
 <h2 id="toc_1">Principles</h2>
 
@@ -621,64 +816,43 @@
 </blockquote>
 
 <ul>
-<li>Display VS Text：Display 用于 20 磅及以上大小的文字，Text 用于 19 磅及以下大小的文字。Text 这种视觉尺寸的字间距更大（相同字号下），更易读。两种视觉尺寸在系统里自动切换，但在设计软件里要注意修改。</li>
-</ul>
+<li><p>Display VS Text：Display 用于 20 磅及以上大小的文字，Text 用于 19 磅及以下大小的文字。Text 这种视觉尺寸的字间距更大（相同字号下），更易读。两种视觉尺寸在系统里自动切换，但在设计软件里要注意修改。</p>
 
-<p><img src="media/15028584576994/D704CD00-4380-4E9A-B56B-AE1C853C6E55.png" alt="D704CD00-4380-4E9A-B56B-AE1C853C6E55"/></p>
+<p><img src="media/15028584576994/D704CD00-4380-4E9A-B56B-AE1C853C6E55.png" alt="D704CD00-4380-4E9A-B56B-AE1C853C6E55"/></p></li>
+<li><p>Negative Space 负空间：字母内测、字母周围的空间，Text 周围的空间几乎是 Display 的两倍。</p>
 
-<ul>
-<li>Negative Space 负空间：字母内测、字母周围的空间，Text 周围的空间几乎是 Display 的两倍。</li>
-</ul>
-
-<p><img src="media/15028584576994/18EB4B79-F752-46AC-86CF-EA1C31446A3F.png" alt="18EB4B79-F752-46AC-86CF-EA1C31446A3F"/></p>
-
-<ul>
+<p><img src="media/15028584576994/18EB4B79-F752-46AC-86CF-EA1C31446A3F.png" alt="18EB4B79-F752-46AC-86CF-EA1C31446A3F"/></p></li>
 <li><p>Confusable Shapes：字母间有很多相似处，在字号小时很容易混淆。Text 和 Display 就在这些地方有细微的差别。</p>
 
 <ul>
-<li>counter：反向对称区，字母上下对称的部分</li>
-</ul>
+<li><p>counter：反向对称区，字母上下对称的部分</p>
 
-<p><img src="media/15028584576994/E081B9C0-3156-486D-9F58-E46496223C76.png" alt="E081B9C0-3156-486D-9F58-E46496223"/></p>
-
-<ul>
-<li>aperture：缝隙，字母的开口</li>
-</ul>
+<p><img src="media/15028584576994/E081B9C0-3156-486D-9F58-E46496223C76.png" alt="E081B9C0-3156-486D-9F58-E46496223"/></p></li>
+<li><p>aperture：缝隙，字母的开口</p>
 
 <p><img src="media/15028584576994/1F6FCE63-B891-4B23-9ECF-DFAE819AEFC5.png" alt="1F6FCE63-B891-4B23-9ECF-DFAE819AEF"/></p></li>
-<li><p>Tracking Is Size-Specific：字号越大，字间距 tracking 越小，有一个变化曲线（tracking tables）</p></li>
-</ul>
+</ul></li>
+<li><p>Tracking Is Size-Specific：字号越大，字间距 tracking 越小，有一个变化曲线（tracking tables）</p>
 
-<p><img src="media/15028584576994/15028587818938.jpg" alt=""/></p>
+<p><img src="media/15028584576994/15028587818938.jpg" alt=""/></p></li>
+<li><p>Weights 字重：Text - 6 种字重（Light、Regular、Medium、Semibold、Bold、Heavy），Display - 9 种字重（多了 Ultralight、Thin、Black），Text 的字号小，没有必要有更多字重。</p></li>
+<li><p>在 AppKit 和 UIKit 里提供了配置字号、字重的方法，如：<br/>
+<code>UIFont.systemFontOfSize(20, weight: UIFontWeightMedium)</code></p>
 
-<ul>
-<li>Weights 字重：Text - 6 种字重（Light、Regular、Medium、Semibold、Bold、Heavy），Display - 9 种字重（多了 Ultralight、Thin、Black），Text 的字号小，没有必要有更多字重。</li>
-<li>在 AppKit 和 UIKit 里提供了配置字号、字重的方法，如：
-<code>UIFont.systemFontOfSize(20, weight: UIFontWeightMedium)</code></li>
-</ul>
-
-<p><img src="media/15028584576994/609EDDCB-B829-4F59-A2FD-3CCC10C3C7C9.png" alt="609EDDCB-B829-4F59-A2FD-3CCC10C3C7"/></p>
-
-<ul>
+<p><img src="media/15028584576994/609EDDCB-B829-4F59-A2FD-3CCC10C3C7C9.png" alt="609EDDCB-B829-4F59-A2FD-3CCC10C3C7"/></p></li>
 <li><p>字重的作用：</p>
 
 <ul>
-<li>Differentiation and hierarchy 区分和层级</li>
-</ul>
+<li><p>Differentiation and hierarchy 区分和层级</p>
 
-<p><img src="media/15028584576994/Weight-Use%20in%20Differentiation%20and%20Hierarchy.png" alt="Weight-Use in Differentiation and Hierarchy"/></p>
+<p><img src="media/15028584576994/Weight-Use%20in%20Differentiation%20and%20Hierarchy.png" alt="Weight-Use in Differentiation and Hierarchy"/></p></li>
+<li><p>Similitude 相似：更大的尺寸，更小的自重；更小的尺寸，更大的自重</p>
 
-<ul>
-<li>Similitude 相似：更大的尺寸，更小的自重；更小的尺寸，更大的自重</li>
-</ul>
-
-<p><img src="media/15028584576994/F504AA59-9EF0-4347-8EDC-79C67BEBECD9.png" alt="F504AA59-9EF0-4347-8EDC-79C67BEBECD9"/></p>
-
-<ul>
-<li>Voice 氛围：字重的巧妙利用，可以营造完全不同的氛围。</li>
-</ul>
+<p><img src="media/15028584576994/F504AA59-9EF0-4347-8EDC-79C67BEBECD9.png" alt="F504AA59-9EF0-4347-8EDC-79C67BEBECD9"/></p></li>
+<li><p>Voice 氛围：字重的巧妙利用，可以营造完全不同的氛围。</p>
 
 <p><img src="media/15028584576994/5.jpg" alt="5"/></p></li>
+</ul></li>
 <li><p>怎样使用字重：</p>
 
 <ul>
@@ -698,56 +872,73 @@
 
 <ul>
 <li>Features are behaviors embedded inside a font. </li>
-<li>开启这些 Feature：Xcode 中的 Typography Panel。</li>
-</ul>
+<li><p>开启这些 Feature：Xcode 中的 Typography Panel。</p>
 
-<p><img src="media/15028584576994/A3348F38-B260-47B9-9982-1FE9E186A7F8.png" alt="A3348F38-B260-47B9-9982-1FE9E186A7F8 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<ul>
-<li> Fractions 分数：自动转换（2/9这种输入自动转换)</li>
-</ul>
+<p><img src="media/15028584576994/A3348F38-B260-47B9-9982-1FE9E186A7F8.png" alt="A3348F38-B260-47B9-9982-1FE9E186A7F8 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
+<li><p>Fractions 分数：自动转换（2/9这种输入自动转换)</p>
 
 <p><img src="media/15028584576994/542C9FA2-3971-4957-8E73-78B55AAEEF11.png" alt="542C9FA2-3971-4957-8E73-78B55AAEEF11"/></p>
 
-<ul>
-<li>Superiors / Superscripts 上标、Inferiors / Subscripts 下标</li>
+<p>在代码中启用这个功能的方法示例如下：</p>
+
+<pre><code>```
+let pointSize : CGFloat = 60.0
+let systemFontDesc = UIFont.systemFontOfSize(pointSize, weight: UIFontWeightLight).fontDescriptor()
+let fractionFontDesc = systemFontDesc.fontDescriptorByAddingAttributes(
+[
+  UIFontDescriptorFeatureSettingsAttribute: [
+    [
+      UIFontFeatureTypeIdentifierKey: kFractionsType,
+      UIFontFeatureSelectorIdentifierKey: kDiagonalFractionsSelector,
+      ],
+  ]
+]
+)
+
+label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)
+```
+</code></pre></li>
+<li><p>Superiors / Superscripts 上标、Inferiors / Subscripts 下标</p>
+
+<p><img src="media/15028584576994/Subscripts.png" alt="Subscripts"/></p></li>
+<li><p>Uppercase Forms 大写形式 （A+3中的加号）</p>
+
+<p><img src="media/15028584576994/DA34D099-ABD5-427C-8138-04205EF97FEC.png" alt="DA34D099-ABD5-427C-8138-04205EF97FE"/></p></li>
+<li><p>Vertically Centered Colon：时间中的冒号，默认开启，上下居中显示</p>
+
+<p><img src="media/15028584576994/5A85DC92-65E8-4986-AD75-C59DB5C76DC6.png" alt="5A85DC92-65E8-4986-AD75-C59DB5C76D"/></p></li>
+<li><p>Alternate Six and Nine：数字 6 和 9 在字号较小、和数字 8 混排时会容易看不清，所以有另一种字形可供使用，例如在 Apple Watch 上的小表盘里、Apple Watch 背面的序列号上。</p>
+
+<p><img src="media/15028584576994/69.png" alt="69"/></p></li>
+<li><p>Features 和 Optical Sizes 的结合：例如在 Display 尺寸下，分数中的数字 6 可以使用默认样式，而在 Text 尺寸下，分数中的数字 6 应该使用变形的样式。</p>
+
+<p><img src="media/15028584576994/B70A67F3-B5C2-4A55-9D59-B3B4B829058F.png" alt="B70A67F3-B5C2-4A55-9D59-B3B4B829058F"/></p></li>
+<li><p>proportional numbers（按比例排布的数字，自然宽度，默认），可用于固定显示的数字、monospaced numbers（等宽的数字，可选），可用于动态显示的数字（如跳动的时间、变化的速度）以及为保证对齐的列表样式和多行样式，iOS 9.0 and OS X 10.11 开始默认为 proportional numbers。</p>
+
+<p><img src="media/15028584576994/Number.png" alt="Numbe"/></p></li>
 </ul>
 
-<p><img src="media/15028584576994/Subscripts.png" alt="Subscripts"/></p>
+<h2 id="toc_3">Font API Pitfalls</h2>
+
+<p>由于涉及到具体的开发细节，在此只列出 Keynote 里提到的几点，暂不展开：</p>
 
 <ul>
-<li>Uppercase Forms 大写形式 （A+3中的加号）</li>
+<li>Don’t Access Fonts with Private Names；</li>
+<li>Don’t Reference Font File Names；</li>
+<li>Don’t Access System Font by Name；</li>
+<li>Do Reuse Font Descriptors；</li>
+<li>Don’t Draw System Font at a Different-Than-Nominal Point Size。</li>
 </ul>
-
-<p><img src="media/15028584576994/DA34D099-ABD5-427C-8138-04205EF97FEC.png" alt="DA34D099-ABD5-427C-8138-04205EF97FE"/></p>
-
-<ul>
-<li>Vertically Centered Colon：时间中的冒号，默认开启，上下居中显示</li>
-</ul>
-
-<p><img src="media/15028584576994/5A85DC92-65E8-4986-AD75-C59DB5C76DC6.png" alt="5A85DC92-65E8-4986-AD75-C59DB5C76D"/></p>
-
-<ul>
-<li>Alternate Six and Nine：数字 6 和 9 在字号较小、和数字 8 混排时会容易看不清，所以有另一种字形可供使用，例如在 Apple Watch 上的小表盘里、Apple Watch 背面的序列号上。</li>
-</ul>
-
-<p><img src="media/15028584576994/69.png" alt="69"/></p>
-
-<ul>
-<li>Features 和 Optical Sizes 的结合：例如在 Display 尺寸下，分数中的数字 6 可以使用默认样式，而在 Text 尺寸下，分数中的数字 6 应该使用变形的样式。</li>
-</ul>
-
-<p><img src="media/15028584576994/B70A67F3-B5C2-4A55-9D59-B3B4B829058F.png" alt="B70A67F3-B5C2-4A55-9D59-B3B4B829058F"/></p>
-
-<ul>
-<li>proportional numbers（按比例排布的数字，自然宽度，默认），可用于固定显示的数字、monospaced numbers（等宽的数字，可选），可用于动态显示的数字（如跳动的时间、变化的速度）以及为保证对齐的列表样式和多行样式，iOS 9.0 and OS X 10.11 开始默认为 proportional numbers。</li>
-</ul>
-
-<p><img src="media/15028584576994/Number.png" alt="Numbe"/></p>
 
 <blockquote>
 <p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2015/804/">Introducing the New System Fonts - WWDC 2015 - Videos - Apple Developer</a></p>
 </blockquote>
+
+<h2 id="toc_4">相关文章</h2>
+
+<ul>
+<li>排版和字体的一些知识： <a href="15029504785442.html">排版和字体 Typography and Fonts - WWDC 2016 Session 803</a></li>
+</ul>
 
 <p>📱💻⌚️📺 </p>
 
