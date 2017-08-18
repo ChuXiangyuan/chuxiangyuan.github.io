@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-08-17T14:59:21+08:00</updated>
+  <updated>2017-08-18T23:51:57+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -192,7 +192,7 @@
 <h3 id="toc_2">WWDC 2016</h3>
 
 <ul>
-<li>包容性 App 设计 Inclusive App Design - WWDC 2016 Session 801📱💻</li>
+<li><a href="15030704996885.html">包容性 App 设计 Inclusive App Design - WWDC 2016 Session 801</a>📱💻</li>
 <li><a href="15029504785442.html">排版和字体 Typography and Fonts - WWDC 2016 Session 803</a>📱💻⌚️📺</li>
 <li>迭代的 UI 设计 Iteractive UI Design - WWDC 2016 Session 805📱</li>
 </ul>
@@ -558,6 +558,163 @@
 </ul>
 
 <p>以上就是从设计出发从设计和开发两方面去研究的 Alert 和 Action Sheet，也即 UIAlertController。希望可以帮助设计师更好的明白其中的诸多细节逻辑，帮助工程师更好的了解这两个 View 的作用。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[包容性 App 设计 Inclusive App Design - WWDC 2016 Session 801]]></title>
+    <link href="http://chuxiangyuan.github.io/15030704996885.html"/>
+    <updated>2017-08-18T23:34:59+08:00</updated>
+    <id>http://chuxiangyuan.github.io/15030704996885.html</id>
+    <content type="html"><![CDATA[
+<p>要想让自己的 app 面向更多的国家/地区，服务更多的各种各样的用户，就需要考虑 Inclusive App Design。除了为什么这样做，重点讲了该如何做。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">Why should I be inclusive?</h2>
+
+<ul>
+<li>2016 年第二季度的苹果销售中，有 67% 是国际化的；</li>
+<li>全世界有 28.5 亿人是盲人或者视力低下；</li>
+<li>全世界超过 10 亿人有残疾。</li>
+</ul>
+
+<h2 id="toc_1">How can I be more inclusive?</h2>
+
+<h3 id="toc_2">Typography 字体排版</h3>
+
+<ul>
+<li><p>一个例子：一些文本，拆分成三块，针对每块的内容在文字大小、字重、样式、颜色上进行调整，以保证清晰的层级关系，并且可以对应翻译成中文。</p>
+
+<p><img src="media/15030704996885/B59FCDFC-2928-4781-9379-4FACAA261034.png" alt="B59FCDFC-2928-4781-9379-4FACAA261034"/></p></li>
+<li><p>需要考虑的因素：</p>
+
+<ul>
+<li><p>拉丁文书写系统和非拉丁文书写系统：拉丁文书写除了普通的样式外，还有带有声调的扩展样式；非拉丁文书写可能没有大写样式，可能没有斜体样式；</p>
+
+<p><img src="media/15030704996885/434FD317-6434-4F3A-BEE2-4DE3EB4C9D00.png" alt="434FD317-6434-4F3A-BEE2-4DE3EB4C9D00"/></p>
+
+<p><img src="media/15030704996885/071336CC-2FD3-4558-88B4-EDD4E1C4D4DA.png" alt="071336CC-2FD3-4558-88B4-EDD4E1C4D4DA"/></p></li>
+<li><p>对于不同的文字，字重数量不同：SF 字体有九种字重，中文（苹方）没有「Bold」、「Heavy」、「Black」这三种字重，日语只有「Regular」和「Bold」两种字重。</p>
+
+<p><img src="media/15030704996885/4A311761-6452-4321-8EBD-2BE24FF12CCC.png" alt="4A311761-6452-4321-8EBD-2BE24FF12CC"/></p></li>
+<li><p>更大的字号是更加通用的：对于一个很小字号的拉丁字母可能可读性尚可，但对于同样字号的汉字，可能笔画都叠在了一起而不可读。</p>
+
+<p><img src="media/15030704996885/68449820-9FB1-4B83-B0BE-9085BF4DE119.png" alt="68449820-9FB1-4B83-B0BE-9085BF4DE119"/></p></li>
+<li><p>高型书写系统：泰语的字母还有声调等样式，使得整个文字超出 ascender 和 descender，支持这些语言时不应该截掉这些信息。在布局时这些文字自然需要更大的空间显示。</p>
+
+<p><img src="media/15030704996885/BB47E969-CAEF-46DC-9F52-EB54123D5F8C.png" alt="BB47E969-CAEF-46DC-9F52-EB54123D5F8"/></p>
+
+<p><img src="media/15030704996885/B53BA56E-656A-4AEA-98E6-877283452F8C.png" alt="B53BA56E-656A-4AEA-98E6-877283452F8"/></p></li>
+</ul></li>
+</ul>
+
+<h3 id="toc_3">Dynamic layouts 动态布局</h3>
+
+<ul>
+<li><p>通常情况下英语单词越短，翻译到其他语言就越长，2-3 倍的情况经常出现。</p>
+
+<p><img src="media/15030704996885/2E58E3D7-BE8E-4B4C-BC0B-D640C6190507.png" alt="2E58E3D7-BE8E-4B4C-BC0B-D640C6190507"/></p></li>
+<li><p>你不希望一些重要的信息在末尾丢失，所以在开发时使用动态布局，以适应不同语言。</p>
+
+<p><img src="media/15030704996885/526D1AC4-5B9C-4035-A9D4-46DA686DB0E4.png" alt="526D1AC4-5B9C-4035-A9D4-46DA686DB0E4"/></p></li>
+<li><p>动态类型</p>
+
+<ul>
+<li><p>为不同的 Label 确定合适的层级，每个层级有对应的字体、字号、字重、行间距、字间距。</p>
+
+<p><img src="media/15030704996885/3283ADE5-6D59-464C-B796-6E55E77B1B94.png" alt="3283ADE5-6D59-464C-B796-6E55E77B1B94"/></p></li>
+<li><p>动态类型会根据这些层级，在系统调整字体大小时进行自动的调整。</p>
+
+<p><img src="media/15030704996885/BE60904A-8B42-4C0C-873C-FC946046BFFB.png" alt="BE60904A-8B42-4C0C-873C-FC946046BFFB"/></p></li>
+</ul></li>
+<li><p>在 iPad 上，由于屏幕很大，在阅读时从左往右读完一行很小的文字再回到第二行的最左端是比较费力的，应该在这种大屏幕上对边距进行动态调整，小字号，显示区域小；大字号，显示区域大。</p>
+
+<p><img src="media/15030704996885/11D6F175-D183-40D1-B236-435401FFA81A.png" alt="11D6F175-D183-40D1-B236-435401FFA81A"/></p></li>
+<li><p>对从右往左读的语言进行优化：镜像 UI，但像数字、电话号码、时钟、乐谱、图表、视频控制、图片不需要镜像。</p>
+
+<ul class="example-orbit" data-orbit>
+  <li>
+    <img src="media/15030704996885/21.jpg" alt="" />
+    <div class="orbit-caption">Left-to-Right Languages</div>
+  </li>
+  <li>
+    <img src="media/15030704996885/22.jpg" alt="" />
+    <div class="orbit-caption">Right-to-Left Languages</div>
+  </li>
+</ul>
+
+<p>一个实例：Tweetbot 在不同语言下的 UI</p>
+
+<p><img src="media/15030704996885/2.jpg" alt="2"/></p></li>
+</ul>
+
+<h3 id="toc_4">Color 颜色</h3>
+
+<ul>
+<li><p>颜色代表不同的含义，不同文化中不同：</p>
+
+<ul>
+<li>蓝色：蓝色是最受欢迎的颜色，蓝天、大海，代表平静，缓和情绪；</li>
+<li>绿色：生机、自然、环保、幸运、可通行、股票中的跌；</li>
+<li>红色：革命、浪漫、爱、喜庆、股票中的涨。</li>
+</ul></li>
+<li><p>色盲、色弱：</p>
+
+<ul>
+<li>在 12 个男人中就有一个人是色盲；</li>
+<li><p>一些功能不能完全靠颜色来区分，如「邮件」app 里的「旗标样式」既可以用颜色来表示，又可以用形状来表示。</p>
+
+<p><img src="media/15030704996885/93C1E2C1-0206-40B3-9259-571B06D62428.png" alt="93C1E2C1-0206-40B3-9259-571B06D62428"/></p></li>
+</ul></li>
+<li><p>较高的颜色对比度：</p>
+
+<ul>
+<li><p>Color Contrast Calculator 工具；</p>
+
+<p><img src="media/15030704996885/24737F73-241B-4EB1-B7A8-539A9D892340.png" alt="24737F73-241B-4EB1-B7A8-539A9D892340"/></p></li>
+<li><p>黑和白的对比度为 21：1，字号较小和较大时都适用；</p></li>
+<li><p>建议对比度 7：1，最小对比度 4.5：1；</p></li>
+<li><p>在对比度比较小时，使用较小的字号是不合适的；在对比度很小时，即使很大的字号也不合适，需要更换颜色；</p>
+
+<p><img src="media/15030704996885/0F2BF27A-98BA-45EB-90A8-D7FBF75730CA.png" alt="0F2BF27A-98BA-45EB-90A8-D7FBF75730CA"/></p></li>
+<li><p>在一个背景下该用黑色还是白色文字，可以通过对比度来决定，选取对比度高的颜色。</p>
+
+<p><img src="media/15030704996885/4323FDCB-0781-4B2C-ABF0-97D3AAC7F65E.png" alt="4323FDCB-0781-4B2C-ABF0-97D3AAC7F65E"/></p></li>
+</ul></li>
+</ul>
+
+<h3 id="toc_5">Iconography 图形标志</h3>
+
+<ul>
+<li><p>红十字会：有三种标志——红十字、红月牙、红水晶，用于不同文化的地区；</p>
+
+<p><img src="media/15030704996885/4971C85E-30BC-441E-A1CB-FF80919C5E98.png" alt="4971C85E-30BC-441E-A1CB-FF80919C5E98"/></p></li>
+<li><p>手掌：打招呼、阻止、无所畏惧（佛教）</p></li>
+<li><p>避免在图标中使用指引和文字；</p>
+
+<p><img src="media/15030704996885/A2633681-6E56-40B8-BF2F-BBC3BBFEC50A.png" alt="A2633681-6E56-40B8-BF2F-BBC3BBFEC50A"/></p></li>
+<li><p>图形标志应该与 UI 匹配，如 UI 为从右到左读的语言适配后，图标也要适配。</p>
+
+<p><img src="media/15030704996885/6.jpg" alt="6"/></p></li>
+</ul>
+
+<h3 id="toc_6">Next Steps</h3>
+
+<ul>
+<li>Who is your audience?</li>
+<li>What are their cultural values? </li>
+<li>What capabilities will they have? </li>
+<li>Speak with them directly</li>
+<li>How can I be more inclusive?</li>
+</ul>
+
+<blockquote>
+<p>Session 链接：<a href="https://developer.apple.com/videos/play/design/24/">Inclusive App Design - Design - Videos - Apple Developer</a>  </p>
+</blockquote>
+
+<p>📱💻</p>
 
 ]]></content>
   </entry>
