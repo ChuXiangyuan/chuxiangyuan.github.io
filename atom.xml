@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-08-18T23:51:57+08:00</updated>
+  <updated>2017-08-19T00:13:06+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -593,9 +593,16 @@
 <ul>
 <li><p>拉丁文书写系统和非拉丁文书写系统：拉丁文书写除了普通的样式外，还有带有声调的扩展样式；非拉丁文书写可能没有大写样式，可能没有斜体样式；</p>
 
-<p><img src="media/15030704996885/434FD317-6434-4F3A-BEE2-4DE3EB4C9D00.png" alt="434FD317-6434-4F3A-BEE2-4DE3EB4C9D00"/></p>
-
-<p><img src="media/15030704996885/071336CC-2FD3-4558-88B4-EDD4E1C4D4DA.png" alt="071336CC-2FD3-4558-88B4-EDD4E1C4D4DA"/></p></li>
+<ul class="example-orbit" data-orbit>
+       <li>
+        <img src="media/15030704996885/071336CC-2FD3-4558-88B4-EDD4E1C4D4DA.png" alt="" />
+        <div class="orbit-caption">非拉丁文没有大写样式</div>
+      </li>
+      <li>
+        <img src="media/15030704996885/434FD317-6434-4F3A-BEE2-4DE3EB4C9D00.png" alt="" />
+        <div class="orbit-caption">带声调的拉丁字母</div>
+      </li>
+    </ul></li>
 <li><p>对于不同的文字，字重数量不同：SF 字体有九种字重，中文（苹方）没有「Bold」、「Heavy」、「Black」这三种字重，日语只有「Regular」和「Bold」两种字重。</p>
 
 <p><img src="media/15030704996885/4A311761-6452-4321-8EBD-2BE24FF12CCC.png" alt="4A311761-6452-4321-8EBD-2BE24FF12CC"/></p></li>
@@ -618,7 +625,28 @@
 <p><img src="media/15030704996885/2E58E3D7-BE8E-4B4C-BC0B-D640C6190507.png" alt="2E58E3D7-BE8E-4B4C-BC0B-D640C6190507"/></p></li>
 <li><p>你不希望一些重要的信息在末尾丢失，所以在开发时使用动态布局，以适应不同语言。</p>
 
-<p><img src="media/15030704996885/526D1AC4-5B9C-4035-A9D4-46DA686DB0E4.png" alt="526D1AC4-5B9C-4035-A9D4-46DA686DB0E4"/></p></li>
+<ul class="example-orbit" data-orbit>
+  <li>
+    <img src="media/15030704996885/%E4%B8%AD%E6%96%87.jpg" alt="" />
+    <div class="orbit-caption">中文</div>
+  </li>
+  <li>
+    <img src="media/15030704996885/%E8%8B%B1%E8%AF%AD.jpg" alt="" />
+    <div class="orbit-caption">英语</div>
+  </li>
+  <li>
+    <img src="media/15030704996885/%E5%BE%B7%E8%AF%AD.jpg" alt="" />
+    <div class="orbit-caption">德语</div>
+  </li>
+  <li>
+    <img src="media/15030704996885/%E6%B3%B0%E8%AF%AD.jpg" alt="" />
+    <div class="orbit-caption">泰语</div>
+  </li>
+  <li>
+    <img src="media/15030704996885/%E9%98%BF%E6%8B%89%E4%BC%AF%E8%AF%AD.jpg" alt="" />
+    <div class="orbit-caption">阿拉伯语</div>
+  </li>
+</ul></li>
 <li><p>动态类型</p>
 
 <ul>
