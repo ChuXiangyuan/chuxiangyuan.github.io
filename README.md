@@ -14,7 +14,7 @@
 
 - 网站所有的源代码均托管在Github上，可在我的Github上查看，[点击前往](https://github.com/ChuXiangyuan/chuxiangyuan.github.io)；
 
-- 网站中使用了~~[多说评论插件](http://duoshuo.com)~~[Disqus 评论插件](https://disqus.com)、[JiaThis分享插件](http://www.jiathis.com)；
+- 网站中使用了[Disqus 评论插件](https://disqus.com)、[JiaThis分享插件](http://www.jiathis.com)；
 
 - 通过Github提供的[PAGES服务](https://pages.github.com)发布了网站,根据实际情况暂时没有申请独立域名；
 
