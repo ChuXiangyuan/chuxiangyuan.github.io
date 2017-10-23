@@ -258,7 +258,7 @@
 <li><p>将刘海作为 UI 的一部分，从刘海里拉出工具菜单：</p>
 
 <p><img src="media/15086036845015/72157b63ly1fjols2bjgig20ij0ij7wj.gif" alt="72157b63ly1fjols2bjgig20ij0ij7wj"/><br/>
-（图片来源：<a href="https://twitter.com/0therPlanet/status/909788913702785026">Luboš Volkov⚡️ 的 Twitter: “I was working on this idea of blending app design with the 📲🤗&quot;</a>）</p></li>
+（图片来源：<a href="https://twitter.com/0therPlanet/status/909788913702785026">Luboš Volkov⚡️ 的 Twitter: “I was working on this idea of blending app design with the #iPhoneX notch. 📲🤗&quot;</a>）</p></li>
 <li><p>有人假设设置里可以控制刘海的「开与关」🙃：</p>
 
 <p><img src="media/15086036845015/ear.gif" alt="ea"/><br/>
@@ -295,7 +295,7 @@
 
 <p><img src="media/15086036845015/1BF24051-EEA8-4266-8C6B-400D2B16798A.png" alt="1BF24051-EEA8-4266-8C6B-400D2B16798A"/><br/>
 （图片来源：<a href="https://www.paintcodeapp.com/news/iphone-x-screen-demystified">iPhone X Screen Demystified</a>）</p></li>
-<li><p>iPhone 6, 7, 8, X 在 Size Class 中都属于 Compact Width，这意味着在这些设备上的布局应该是一致的。</p>
+<li><p>iPhone 6, 7, 8, X 横屏时在 Size Class 中都属于 Compact Width，这意味着在这些设备上的横批布局应该是一致的。</p>
 
 <p><img src="media/15086036845015/E50C571F-85B9-4990-A124-C36D97C7BCB1.png" alt="E50C571F-85B9-4990-A124-C36D97C7BCB1"/></p>
 
@@ -318,10 +318,10 @@
 <li><p>在 iPhone 8 中，Safe Area 的区域即除去各种 bar 之后的区域，如果没有任何 bar，Safe Area 就是整个屏幕。iPhone 8  竖屏下的 Safe Area 大小：375pt × 667pt。</p>
 
 <p><img src="media/15086036845015/B7550342-1D3C-4228-A6DF-3D903EFF7EEE.png" alt="B7550342-1D3C-4228-A6DF-3D903EFF7EEE"/></p></li>
-<li><p>在 iPhone X 中，竖屏下的 Safe Area 顶部距屏幕顶端 44pt，底部距屏幕底端 34 pt，左右两边与屏幕左右两端对齐。这样竖屏下的 Safe Area 大小：375pt × 734pt，相比 iPhone 8 增加了 67pt。横屏下的 Safe Area 左右两边距屏幕左右两端均为 44pt（对称），底部距屏幕底端 21pt，顶部与屏幕顶端对齐。Safe Area 避免了内容与屏幕的圆角、sensor housing、Home indicator 发生重叠或裁切。</p>
+<li><p>在 iPhone X 中，竖屏下的 Safe Area 顶部距屏幕顶端 44pt，底部距屏幕底端 34 pt，左右两边与屏幕左右两端对齐。这样竖屏下的 Safe Area 大小：375pt × 734pt，相比 iPhone 8 增加了 67pt。横屏下的 Safe Area 左右两边距屏幕左右两端均为 44pt（对称），底部距屏幕底端 21pt，顶部与屏幕顶端对齐。Safe Area 避免了内容与屏幕的圆角、Sensor Housing、Home Indicator 发生重叠或裁切。</p>
 
 <p><img src="media/15086036845015/3746252E-F817-4BF9-A02C-7A7270ACA7B3.png" alt="3746252E-F817-4BF9-A02C-7A7270ACA7B3"/></p></li>
-<li><p>例如，在 iPhone X 的横向视图中，table view 将会横跨整个屏幕，而 table cell 中的 content view 是嵌入其中的，即在 Safe Area 中，以避免内容被 sensor housing 覆盖或被屏幕圆角裁切。</p>
+<li><p>例如，在 iPhone X 的横向视图中，table view 将会横跨整个屏幕，而 table cell 中的 content view 是嵌入其中的，即在 Safe Area 中，以避免内容被 Sensor Housing 覆盖或被屏幕圆角裁切。</p>
 
 <p><img src="media/15086036845015/F2DC0E2A-B215-492C-9A76-124FCE328F15.png" alt="F2DC0E2A-B215-492C-9A76-124FCE328F15"/></p></li>
 <li><p>Table view cell 中的 content view 会被限制在 Safe Area 中，而文本内容和控件又进一步被 Layout Margin 限制，这使得在整个 app 中的内容边距能够保持一致，并且内容能够与其他控件（如 navigation bar 上的按钮）对齐。即使你的 app 中没有使用 Auto Layout，UIView 也提供了 Safe Area 嵌入和 Layout Margin 属性的值。</p>
@@ -362,13 +362,13 @@
 <h2 id="toc_6">控件</h2>
 
 <ul>
-<li><p>不要对屏幕的几个新特征进行掩盖或者吸引用户特别注意：不要尝试通过在屏幕顶部或底部使用黑色的 bar 来隐藏设备的圆角、sensor housing、Home Indicator，这会使得你的 app 看上去很狭小拥挤，与其他在 iPhone X 上的 app 不一致。不要使用一些视觉装饰物（如括弧、边框、形状或指导性文字）使用户对这些区域特别注意。</p>
+<li><p>不要对屏幕的几个新特征进行掩盖或者吸引用户特别注意：不要尝试通过在屏幕顶部或底部使用黑色的 bar 来隐藏设备的圆角、Sensor Housing、Home Indicator，这会使得你的 app 看上去很狭小拥挤，与其他在 iPhone X 上的 app 不一致。不要使用一些视觉装饰物（如括弧、边框、形状或指导性文字）使用户对这些区域特别注意。</p>
 
 <p><img src="media/15086036845015/9A361EFA-8FD8-4650-9DA2-5162B122094B.png" alt="9A361EFA-8FD8-4650-9DA2-5162B122094B"/></p></li>
 <li><p>避免内容被裁切：使用标准的、系统提供的交互元素，使用 Auto Layout 构建 app 的交互。App 应该遵守由 UIKit 定义的 Safe Area 和 Layout Margin，这确保内容可以根据设备和情景合适的嵌入。 Safe Area 也会阻止内容被 status bar、navigation bar、toolbar、tab bar 覆盖。</p>
 
 <p><img src="media/15086036845015/FC998171-5121-485F-8DAE-0E2A24444DD3.png" alt="FC998171-5121-485F-8DAE-0E2A24444DD3"/></p></li>
-<li><p>避免把一些交互控制元素恰好放置在屏幕的底部或者角落：用户在使用 iPhone X 时，会在屏幕底部使用滑动手势来访问主屏幕或者切换 app，这个手势会影响你在屏幕底部自定义的手势。屏幕的几个角落放置的内容可能会被屏幕的圆角、sensor housing、Home indicator 遮挡覆盖，并且对于用户来说也是难以轻松地触碰到的。可以通过 Safe Area 和 Layout Margin 来确定合适的嵌入值。</p>
+<li><p>避免把一些交互控制元素恰好放置在屏幕的底部或者角落：用户在使用 iPhone X 时，会在屏幕底部使用滑动手势来访问主屏幕或者切换 app，这个手势会影响你在屏幕底部自定义的手势。屏幕的几个角落放置的内容可能会被屏幕的圆角、Sensor Housing、Home Indicator 遮挡覆盖，并且对于用户来说也是难以轻松地触碰到的。可以通过 Safe Area 和 Layout Margin 来确定合适的嵌入值。</p>
 
 <p><img src="media/15086036845015/896AAFBA-DAF0-4B30-9AE6-A76352A103E2.png" alt="896AAFBA-DAF0-4B30-9AE6-A76352A103E2"/></p></li>
 <li><p>大多数情况下，在横屏视图时，内容、控件能够居中对称显示是最好的。在设备旋转方式不同的情况下，如果是不对称的布局，控件会左右发生漂移，这将会造成不连贯的用户体验，潜移默化地破坏用户建立肌肉记忆的能力。</p>
@@ -391,10 +391,10 @@
 <h2 id="toc_8">Home Indicator</h2>
 
 <ul>
-<li><p>Home indicator（134pt × 5pt）可以提示用户从屏幕底部向上轻扫可以访问主屏幕或者切换 app，这是 iOS 设备的一个核心交互，因此 Home indicator 应该总是被清晰可见的。iOS 会根据当前的背景颜色，动态地调整 Home indicator 显示为白色或黑色，以保证与背景有足够的对比度。确保不要把一些交互元素放的离 Home indicator 很近。</p>
+<li><p>Home Indicator（134pt × 5pt）可以提示用户从屏幕底部向上轻扫可以访问主屏幕或者切换 app，这是 iOS 设备的一个核心交互，因此 Home Indicator 应该总是被清晰可见的。iOS 会根据当前的背景颜色，动态地调整 Home Indicator 显示为白色或黑色，以保证与背景有足够的对比度。确保不要把一些交互元素放的离 Home Indicator 很近。</p>
 
 <p><img src="media/15086036845015/5CA9DA5A-25B7-4FFC-AA3D-167A0F767940.png" alt="5CA9DA5A-25B7-4FFC-AA3D-167A0F767940"/></p></li>
-<li><p>谨慎地允许 Home indicator 可以自动隐藏：当自动隐藏功能被打开时，如果用户在几秒钟没有触碰屏幕，Home indicator 就会自动隐藏，用户再次触碰屏幕时，Home indicator 就会再次出现。这个行为只应该在像播放视频、图片幻灯片时被启用。</p></li>
+<li><p>谨慎地允许 Home Indicator 可以自动隐藏：当自动隐藏功能被打开时，如果用户在几秒钟没有触碰屏幕，Home Indicator 就会自动隐藏，用户再次触碰屏幕时，Home Indicator 就会再次出现。这个行为只应该在像播放视频、图片幻灯片时被启用。</p></li>
 </ul>
 
 <h2 id="toc_9">颜色</h2>
@@ -426,7 +426,7 @@
 <li><p>左右快速切换 app：左右轻扫 Home Indicator</p>
 
 <p><img src="media/15086036845015/%E5%B7%A6%E5%8F%B3%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E5%BA%94%E7%94%A8.gif" alt="左右快速切换应用"/></p></li>
-<li><p>界面下移悬停？：从 iPhone X 相关代码中看出 iPhone X 仍可开启界面下移悬停功能，开启方法可能是轻点（不按下）两下 Home Indicator（由于 Home Indicator 不是实体按键，这样操作似乎容易误操作，但该操作在目前 iPhone 中就是通过轻点两下 Home 键；来实现的），仅供猜测🤔，待上市后验证。</p></li>
+<li><p>界面下移悬停？：从 iPhone X 相关代码中看出 iPhone X 仍可开启界面下移悬停功能，开启方法可能是轻点（不按下）两下 Home Indicator（由于 Home Indicator 不是实体按键，这样操作似乎容易误操作，但该操作在目前 iPhone 中就是通过轻点两下 Home 键来实现的），仅供猜测🤔，待上市后验证。</p></li>
 </ul></li>
 <li><p>刘海相关手势：</p>
 
@@ -439,7 +439,7 @@
 
 <p><img src="media/15086036845015/large-4.mp4.gif" alt="large-4.mp4"/></p></li>
 </ul></li>
-<li><p>避免与系统全局的屏幕边缘手势冲突：在各个 app 中，人们依赖于这些手势。只在很少的一些情况下，一些沉浸式的 app 如游戏类 app 可能需要一些比系统手势优先级更高的自定义的屏幕边缘手势，第一次滑动响应 app 指定的手势（同时正常的 Home indicator 会被拉起并进入可用状态），第二次滑动才响应系统的手势。这个行为被称为 edge protection，一旦开启，Home indicator 将会有一个更加细致的外观，对于用户来说就很难访问系统级别的动作，导致不连贯的用户体验，所以它只应该在确实需要的情况下被启用。</p>
+<li><p>避免与系统全局的屏幕边缘手势冲突：在各个 app 中，人们依赖于这些手势。只在很少的一些情况下，一些沉浸式的 app 如游戏类 app 可能需要一些比系统手势优先级更高的自定义的屏幕边缘手势，第一次滑动响应 app 指定的手势（同时正常的 Home Indicator 会被拉起并进入可用状态），第二次滑动才响应系统的手势。这个行为被称为 edge protection，一旦开启，Home Indicator 将会有一个更加细致的外观，对于用户来说就很难访问系统级别的动作，导致不连贯的用户体验，所以它只应该在确实需要的情况下被启用。</p>
 
 <p><img src="media/15086036845015/3F9A6BCC-0971-4E35-BCBF-56CF287E902A.png" alt="3F9A6BCC-0971-4E35-BCBF-56CF287E902A"/></p></li>
 </ul>
@@ -461,7 +461,7 @@
 <li><p>关机：先进入「SOS 紧急联络」再滑动来关机、设置-通用-关机</p></li>
 <li><p>界面下移悬停？：从 iPhone X 相关代码中看出 iPhone X 仍可开启界面下移悬停功能，开启方法可能是轻点（不按下）两下侧边按钮（由于侧边按钮位于设备较上部，这样操作似乎很费劲），仅供猜测🤔，待上市后验证。</p></li>
 <li><p>强制重启：按下再快速松开调高音量按钮，然后按下再快速松开调低音量按钮，最后，按住侧边按钮 10 秒。</p></li>
-<li><p>进入恢复模式：将设备连接到电脑，打开 iTunes，按下再快速松开调高音量按钮然后按下再快速松开调低音量按钮，最后，按住侧边按钮，直到看到恢复模式屏幕（连接 iTunes 的图示）。</p></li>
+<li><p>进入恢复模式：将设备连接到电脑，打开 iTunes，按下再快速松开调高音量按钮然后按下再快速松开调低音量按钮，最后按住侧边按钮，直到看到恢复模式屏幕（连接 iTunes 的图示）。</p></li>
 </ul></li>
 </ul>
 
@@ -509,7 +509,7 @@
 <p><img src="media/15086036845015/93CE9E1E-6D21-48AB-A58D-8B987D9171AC.png" alt="93CE9E1E-6D21-48AB-A58D-8B987D9171A"/></p></li>
 <li><p>如果你的 app 使用了 Auto Layout，并且遵守了 Safe Area 和边界的布局规范，即使是使用了自定义布局，适配 iPhone X 也很简单。</p></li>
 <li><p>要特别注意测试横屏下的界面：大多数的适配问题可能都来自于横屏界面。</p></li>
-<li><p>对于没有适配 iPhone X 的 app 在 iPhone X 中可能不能全屏显示。在竖屏的情况下，顶部是 Status Bar，底部是 Home Indicator，中间部分以信箱 letterboxing 模式（即上下有黑条）显示未适配的 app，显示区域同 4.7 寸的 iPhone 8 一样大小。</p>
+<li><p>对于没有适配 iPhone X 的 app 在 iPhone X 中可能不能全屏显示。在竖屏的情况下，顶部是 status bar，底部是 Home Indicator，中间部分以信箱 letterboxing 模式（即上下有黑条）显示未适配的 app，显示区域同 4.7 寸的 iPhone 8 一样大小。</p>
 
 <p><img src="media/15086036845015/88A6CAC6-3B18-42D8-BC19-2C02CFC3691B.png" alt="88A6CAC6-3B18-42D8-BC19-2C02CFC3691B"/><br/>
 (图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-x-screen-size-a00bd109bbb9">How iOS Apps Adapt to the iPhone X Screen Size – Geoff Hackworth – Medium</a>)</p></li>
@@ -572,7 +572,7 @@
 <p><img src="media/15086036845015/5C5D601E-4F1C-4260-8227-03DB07F2A63D.png" alt="5C5D601E-4F1C-4260-8227-03DB07F2A63D"/></p>
 
 <ul>
-<li><p>Schedule tab：与 Videos tab 有着同样的问题，因为把 search bar 作为了 table view 的 header view，search bar 也有着同样的显示问题。只需像前面说的那样，把 search bar 交给 navigation bar 来处理就好了。在横屏时，如果仔细看会发现还有一个问题，table section 的背景颜色没有延伸到屏幕的左右边缘，这个颜色是我们设置的 header view 中的 <code>contenView</code> 的背景颜色。在除 iPhone X 以外的 iPhone 上这样配置都是没有问题的。</p>
+<li><p>Schedule tab：因为把 search bar 作为了 table view 的 header view，search bar 也有着与 Videos tab 同样的显示问题。只需像前面说的那样，把 search bar 交给 navigation bar 来处理就好了。在横屏时，如果仔细看会发现还有一个问题，table section 的背景颜色没有延伸到屏幕的左右边缘，这个颜色是我们设置的 header view 中的 <code>contenView</code> 的背景颜色。在除 iPhone X 以外的 iPhone 上这样配置都是没有问题的，那为什么会在 iPhone X 上出现问题呢？</p>
 
 <p><img src="media/15086036845015/28285582-BE4C-426C-B19C-E781B4283F6C.png" alt="28285582-BE4C-426C-B19C-E781B4283F6"/></p></li>
 <li><p>要想明白其中的原因，先来看下在 iPhone X 中 table view 的整体结构。从下图中可以看到 content view 是默认被嵌入 Safe Area 的，而 table cell 本身是从屏幕一端到另一端的，这就是问题所在。</p>
@@ -586,7 +586,7 @@
 <li><p>最好的的解决办法就是设置 header 中 backgroundView 的 background color。</p>
 
 <p><img src="media/15086036845015/CCD83434-A36E-4363-A74E-E51944846681.png" alt="CCD83434-A36E-4363-A74E-E51944846681"/></p></li>
-<li><p>编译并运行，可以看到 table view 的 header 的背景颜色已经从屏幕的一边延伸到了另一边。</p>
+<li><p>编译并运行，可以看到 table view 的 section 的背景颜色已经从屏幕的一边延伸到了另一边。</p>
 
 <p><img src="media/15086036845015/3F541200-E05D-46E5-99A2-1CA8C4EC8081.png" alt="3F541200-E05D-46E5-99A2-1CA8C4EC8081"/></p></li>
 </ol></li>
@@ -659,7 +659,7 @@
 
 <h2 id="toc_19">iOS 11 常用 UI 标准控件的尺寸对照</h2>
 
-<p>对于不同设备，在横向和纵向时的 Size Class 是不同的。加之 iPhone X 引入 Sensor Housing 和 Home Indicator 造成的一些特殊性，这就使得在不同的 iPhone 上 UI 标准控件有着不同的尺寸。以下列出了三款典型 iPhone 的常见 iOS11 UI 标准控件的尺寸。</p>
+<p>对于不同设备，在横向和纵向时的 Size Class 是不同的。加之 iPhone X 引入 Sensor Housing 和 Home Indicator 造成的一些特殊性，这就使得在不同的 iPhone 上 UI 标准控件有着不同的尺寸。以下列出了三款典型 iPhone 的常见 iOS 11 UI 标准控件的尺寸。</p>
 
 <h3 id="toc_20">iPhone 8</h3>
 
