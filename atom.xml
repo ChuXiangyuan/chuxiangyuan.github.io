@@ -4,13 +4,349 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-10-24T15:12:30+08:00</updated>
+  <updated>2017-10-28T23:04:41+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[个人常用 app 适配 iPhone X 的时间线记录]]></title>
+    <link href="http://chuxiangyuan.github.io/15091947537272.html"/>
+    <updated>2017-10-28T20:45:53+08:00</updated>
+    <id>http://chuxiangyuan.github.io/15091947537272.html</id>
+    <content type="html"><![CDATA[
+<p>iPhone X 与之前的 iPhone 不同，为了达到全面屏的效果，实体 Home 键被屏幕底部的 Home Indicator 取代，屏幕的四个角由直角变为了圆角，屏幕比例也不再是常见的 16:9，更引人注意的是屏幕顶部还有一个特殊的 Sensor Housing，也即人们俗称的刘海。<a href="15086036845015.html">之前的文章</a>详细阐述了这些变化给 iPhone X 上的 app  适配带去的挑战。</p>
+
+<p>10 月 27 日 iPhone X 开启预订，11 月 3 日第一批大众用户就将要拿到崭新的 iPhone X。同在 10 月 27 日，Apple 发布<a href="https://developer.apple.com/news/?id=10272017a">公告</a>提醒开发者现在可以开始在 iTunes Connect 中提交适配了 iPhone X 的 app、更新 app 的元数据信息了。<a href="https://itunespartner.apple.com/en/apps/news/5993372">iTunes Connect 也开始支持为 app 添加 5.8 寸屏幕预览图片</a>。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15091947537272/15091977143817.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+
+<p>没有适配 iPhone X 的 app 在 iPhone X 上打开时，很有可能就是以 iPhone 8 的屏幕大小、上下有黑边的形式（竖屏条件下）呈现（具体可以看<a href="15086036845015.html">这篇文章</a>的<a href="15086036845015.html#toc_15">「App 的适配」</a>部分），这将十分影响用户体验。以下按照不同的使用频率，列出了我个人使用的一些 app，以记录这些 app 适配 iPhone X 的时间线。一方面可以观察什么时间 iPhone X 可以度过这个 app 适配的尴尬期，有助于购机决策；另一方面也把这些信息记录下来，以供以后 Apple 再次推出这种改变已有屏幕比例、增加新的特性以致需要耗费较多工作适配的机型时的参考。</p>
+
+<ul>
+<li><p>Note：</p></li>
+</ul>
+
+<ol>
+<li>本文章会根据 app 适配 iPhone X 的进度不定期更新；</li>
+<li>部分 app 如果没有在更新日志中提到适配了 iPhone X，该 app 也会被标记为未适配；</li>
+<li>10 月 27 日前 Apple 不允许在更新日志中提及 iPhone X 及其相关截图、视频等资源，在这之前也有一些成功提交了更新信息的「漏网之鱼」。</li>
+</ol>
+
+<h2 id="toc_0">第一梯队</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">App</th>
+<th style="text-align: center">适配 iPhone X</th>
+<th style="text-align: center">版本号</th>
+<th style="text-align: center">日期</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">Wechat</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Weibo</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Alipay</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Youtube</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Spotify</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Pocket Casts</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Surge</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Documents</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">端</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Airmail</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Things</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Tweetbot 4</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">4.7.6</td>
+<td style="text-align: center">2017-10-22</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Due</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">My Weather</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">1.5.5</td>
+<td style="text-align: center">2017-10-27</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Medium</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Moke</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Fantastical</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Bear</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Dictionary</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Today</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Tyding</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">高德地图</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">豆瓣</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">5.10.0</td>
+<td style="text-align: center">2017-10-25</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">即刻</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">VSCO</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Ai Search</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">挖财记账理财</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Telegram</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_1">第二梯队</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">App</th>
+<th style="text-align: center">适配 iPhone X</th>
+<th style="text-align: center">版本号</th>
+<th style="text-align: center">日期</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">LightScreen</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">2.14</td>
+<td style="text-align: center">2017-10-20</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Starbucks China</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">5.0</td>
+<td style="text-align: center">2017-10-25</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">淘宝</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">京东</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Instagram</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Dropbox</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">1Password</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+</tbody>
+</table>
+
+<p>待更新</p>
+
+<h2 id="toc_2">第三梯队</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">App</th>
+<th style="text-align: center">适配 iPhone X</th>
+<th style="text-align: center">版本号</th>
+<th style="text-align: center">日期</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">Castro 2</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">2.5.1</td>
+<td style="text-align: center">2017-10-27</td>
+<td style="text-align: center"></td>
+</tr>
+</tbody>
+</table>
+
+<p>待更新 </p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Designing For iPhone X —— 关于 iPhone X 产品汪和设计狮应该了解的事]]></title>
@@ -406,6 +742,7 @@
 
 <p><img src="media/15086036845015/52141B2B-366D-4945-8728-34F2DF4DFC4B.png" alt="52141B2B-366D-4945-8728-34F2DF4DFC4B"/><br/>
 (图片来源：<a href="https://www.idropnews.com/rumors/iphone-x-plus/51494/">iPhone X Plus to Be Released in 2018 Reports Suggest</a>)</p></li>
+<li><p><strong>Update：</strong>10 月 27 日，Apple 发布<a href="https://developer.apple.com/news/?id=10272017a">公告</a>提醒开发者现在可以开始在 iTunes Connect 中提交适配了 iPhone X 的 app、更新 app 的元数据信息了。有关于个人使用的一些 app 适配 iPhone X 的时间记录可以<a href="15091947537272.html">查看我的另一篇文章</a>。</p></li>
 </ul>
 
 <h3 id="toc_16">App 适配实例</h3>
