@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-10-30T23:08:50+08:00</updated>
+  <updated>2017-10-31T22:16:57+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -314,6 +314,27 @@
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
 </tr>
+<tr>
+<td style="text-align: center">淘票票</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">7.3.5</td>
+<td style="text-align: center">2017-10-31</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">WaterMinder</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">3.4</td>
+<td style="text-align: center">2017-10-31</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">网易云音乐</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">4.2.2</td>
+<td style="text-align: center">2017-10-31</td>
+<td style="text-align: center"></td>
+</tr>
 </tbody>
 </table>
 
@@ -345,6 +366,13 @@
 <td style="text-align: center">Yes</td>
 <td style="text-align: center">3.4.5</td>
 <td style="text-align: center">2017-10-29</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">菜鸟裹裹</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">4.4.1</td>
+<td style="text-align: center">2017-10-31</td>
 <td style="text-align: center"></td>
 </tr>
 </tbody>
@@ -649,7 +677,7 @@
 <li><p>左右快速切换 app：左右轻扫 Home Indicator</p>
 
 <p><img src="media/15086036845015/%E5%B7%A6%E5%8F%B3%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E5%BA%94%E7%94%A8.gif" alt="左右快速切换应用"/></p></li>
-<li><p>界面下移悬停？：从 iPhone X 相关代码中看出 iPhone X 仍可开启界面下移悬停功能，开启方法可能是轻点（不按下）两下 Home Indicator（由于 Home Indicator 不是实体按键，这样操作似乎容易误操作，但该操作在目前 iPhone 中就是通过轻点两下 Home 键来实现的），仅供猜测🤔，待上市后验证。</p></li>
+<li><p>便捷访问 Reachability：也即在 iPhone 8 上通过轻点两下 Home 键界面下移悬停的功能。在 iPhone X 使用此功能，需要到「设置」-「通用」-「辅助功能」中打开「便捷访问」开关，使用时，向下轻扫 Home Indicator 即可。</p></li>
 </ul></li>
 <li><p>刘海相关手势：</p>
 
@@ -682,7 +710,6 @@
 <li><p>截屏：按住侧边按钮加音量增或音量减按钮。</p></li>
 <li><p>进入 SOS 紧急联络：按住侧边按钮和任一音量按键、快速点按侧边按钮五次（需在设置中开启），SOS 紧急联络中包括「滑动来关机」、「医疗急救卡」、「SOS 紧急联络」三个功能。</p></li>
 <li><p>关机：先进入「SOS 紧急联络」再滑动来关机、设置-通用-关机</p></li>
-<li><p>界面下移悬停？：从 iPhone X 相关代码中看出 iPhone X 仍可开启界面下移悬停功能，开启方法可能是轻点（不按下）两下侧边按钮（由于侧边按钮位于设备较上部，这样操作似乎很费劲），仅供猜测🤔，待上市后验证。</p></li>
 <li><p>强制重启：按下再快速松开调高音量按钮，然后按下再快速松开调低音量按钮，最后，按住侧边按钮 10 秒。</p></li>
 <li><p>进入恢复模式：将设备连接到电脑，打开 iTunes，按下再快速松开调高音量按钮然后按下再快速松开调低音量按钮，最后按住侧边按钮，直到看到恢复模式屏幕（连接 iTunes 的图示）。</p></li>
 </ul></li>
