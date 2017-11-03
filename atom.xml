@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-11-01T23:11:09+08:00</updated>
+  <updated>2017-11-03T12:48:22+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -63,9 +63,9 @@
 <tbody>
 <tr>
 <td style="text-align: center">Wechat</td>
-<td style="text-align: center">No</td>
-<td style="text-align: center"></td>
-<td style="text-align: center"></td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">6.5.21</td>
+<td style="text-align: center">2017-11-03</td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
@@ -77,7 +77,7 @@
 </tr>
 <tr>
 <td style="text-align: center">Alipay</td>
-<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
@@ -112,9 +112,9 @@
 </tr>
 <tr>
 <td style="text-align: center">Documents</td>
-<td style="text-align: center">No</td>
-<td style="text-align: center"></td>
-<td style="text-align: center"></td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">6.2.1</td>
+<td style="text-align: center">2017-11-03</td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
@@ -224,9 +224,9 @@
 </tr>
 <tr>
 <td style="text-align: center">即刻</td>
-<td style="text-align: center">No</td>
-<td style="text-align: center"></td>
-<td style="text-align: center"></td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">3.6.0</td>
+<td style="text-align: center">2017-11-03</td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
@@ -259,6 +259,8 @@
 </tr>
 </tbody>
 </table>
+
+<p>待进一步更新</p>
 
 <h2 id="toc_1">第二梯队</h2>
 
@@ -318,9 +320,9 @@
 </tr>
 <tr>
 <td style="text-align: center">1Password</td>
-<td style="text-align: center">No</td>
-<td style="text-align: center"></td>
-<td style="text-align: center"></td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">7.0</td>
+<td style="text-align: center">2017-11-02</td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
@@ -344,10 +346,24 @@
 <td style="text-align: center">2017-10-31</td>
 <td style="text-align: center"></td>
 </tr>
+<tr>
+<td style="text-align: center">滴滴出行</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">5.1.18</td>
+<td style="text-align: center">2017-11-02</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Google Photos</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">3.8.0</td>
+<td style="text-align: center">2017-11-02</td>
+<td style="text-align: center"></td>
+</tr>
 </tbody>
 </table>
 
-<p>待更新</p>
+<p>待进一步更新</p>
 
 <h2 id="toc_2">第三梯队</h2>
 
@@ -391,10 +407,24 @@
 <td style="text-align: center">2017-11-01</td>
 <td style="text-align: center"></td>
 </tr>
+<tr>
+<td style="text-align: center">Enlight</td>
+<td style="text-align: center">1.4</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">2017-11-02</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">招商银行</td>
+<td style="text-align: center">6.0.0</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">2017-11-02</td>
+<td style="text-align: center"></td>
+</tr>
 </tbody>
 </table>
 
-<p>待更新 </p>
+<p>待进一步更新 </p>
 
 ]]></content>
   </entry>
