@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-11-05T23:34:16+08:00</updated>
+  <updated>2017-11-05T23:44:49+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -168,10 +168,10 @@
 </tr>
 <tr>
 <td style="text-align: center">Due</td>
-<td style="text-align: center">No</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">2.6</td>
+<td style="text-align: center">2017-11-05</td>
 <td style="text-align: center"></td>
-<td style="text-align: center"></td>
-<td style="text-align: center">☹️</td>
 </tr>
 <tr>
 <td style="text-align: center">My Weather</td>
@@ -2731,7 +2731,7 @@ label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)
 <p><img src="media/14774965258076/14774973341760.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
 <blockquote>
-<p>该文章已被<strong>少数派</strong>推荐为『<strong>Matrix 精选</strong>』，你可以<a href="http://sspai.com/35927">点击这里</a>查看。</p>
+<p>该文章已被<strong>少数派</strong>推荐为「<strong>Matrix 精选</strong>」，你可以<a href="http://sspai.com/35927">点击这里</a>查看。</p>
 </blockquote>
 
 <h2 id="toc_0">目录</h2>
@@ -2903,7 +2903,7 @@ label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)
 
 <h2 id="toc_8">总结</h2>
 
-<p>Alfred 的偏好设置中特别设置了一个『 Usage 』tab，在这里可以查看 Alfred 的使用频率，了解这款工具到底对你的工作效率有多大的改变。在用 Alfred 的用户不妨去看一看。<br/>
+<p>Alfred 的偏好设置中特别设置了一个「Usage」tab，在这里可以查看 Alfred 的使用频率，了解这款工具到底对你的工作效率有多大的改变。在用 Alfred 的用户不妨去看一看。<br/>
 <img src="media/14774965258076/14774944700695.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
 <p>Alfred 的扩展性很高，所以他的玩法还有很多。但 Alfred 说到底是一款工具，工具的目的就是为了解决人的某些需求的。如果变成一个庞然大物，我相信不应该是一个工具的初衷。所以找到适合自己的用法才是最重要的，切忌不要被工具绑架了自己。</p>
