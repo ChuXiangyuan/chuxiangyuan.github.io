@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-11-08T21:27:48+08:00</updated>
+  <updated>2017-11-13T02:56:25+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -26,7 +26,9 @@
 
 <p><img src="media/15091947537272/15091977143817.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<p>没有适配 iPhone X 的 app 在 iPhone X 上打开时，很有可能就是以 iPhone 8 的屏幕大小、上下有黑边的形式（竖屏条件下）呈现（具体可以看<a href="15086036845015.html">这篇文章</a>的<a href="15086036845015.html#toc_15">「App 的适配」</a>部分），这将十分影响用户体验。以下按照不同的使用频率，列出了我个人使用的一些 app，以记录这些 app 适配 iPhone X 的时间线。一方面可以观察什么时间 iPhone X 可以度过这个 app 适配的尴尬期，有助于购机决策；另一方面也把这些信息记录下来，以供以后 Apple 再次推出这种改变已有屏幕比例、增加新的特性以致需要耗费较多工作适配的机型时的参考。</p>
+<p>没有适配 iPhone X 的 app 在 iPhone X 上打开时，很有可能就是以 iPhone 8 的屏幕大小、上下有黑边的形式（竖屏条件下）呈现（具体可以看<a href="15086036845015.html">这篇文章</a>的<a href="15086036845015.html#toc_16">「App 的适配」</a>部分），这将十分影响用户体验。以下按照不同的使用频率，列出了我个人使用的一些 app，以记录这些 app 适配 iPhone X 的时间线。一方面可以观察什么时间 iPhone X 可以度过这个 app 适配的尴尬期，有助于购机决策；另一方面也把这些信息记录下来，以供以后 Apple 再次推出这种改变已有屏幕比例、增加新的特性以致需要耗费较多工作适配的机型时的参考。</p>
+
+<p>一个 app 对新机型的适配速度和适配质量能够很大程度上反映出开发者对这个 app 上不上心。</p>
 
 <ul>
 <li><p><strong>Note：</strong></p></li>
@@ -122,7 +124,7 @@
 <td style="text-align: center"></td>
 </tr>
 <tr>
-<td style="text-align: center">Spotify</td>
+<td style="text-align: center"><strong><em>Spotify</em></strong></td>
 <td style="text-align: center">No</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
@@ -150,7 +152,7 @@
 <td style="text-align: center"></td>
 </tr>
 <tr>
-<td style="text-align: center">端</td>
+<td style="text-align: center"><strong><em>端</em></strong></td>
 <td style="text-align: center">No</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
@@ -234,7 +236,7 @@
 <td style="text-align: center"></td>
 </tr>
 <tr>
-<td style="text-align: center">Tyding</td>
+<td style="text-align: center"><strong><em>Tyding</em></strong></td>
 <td style="text-align: center">No</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
@@ -276,14 +278,14 @@
 <td style="text-align: center">部分 UI 切字，功能 bug，个人认为某些按钮的位置适配的不好</td>
 </tr>
 <tr>
-<td style="text-align: center">Ai Search</td>
+<td style="text-align: center"><strong><em>Ai Search</em></strong></td>
 <td style="text-align: center">No</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
 <td style="text-align: center">据作者说，这个版本应该不会对 iPhone X 适配了，只能等待新的大版本（3.0）了</td>
 </tr>
 <tr>
-<td style="text-align: center">挖财记账理财</td>
+<td style="text-align: center"><strong><em>挖财记账理财</em></strong></td>
 <td style="text-align: center">No</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
@@ -353,6 +355,27 @@
 <td style="text-align: center">Yes</td>
 <td style="text-align: center"></td>
 <td style="text-align: center">2017-11-04 前</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Reeder</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">3.1</td>
+<td style="text-align: center">2017-11-10</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Infuse</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">5.6</td>
+<td style="text-align: center">2017-11-10</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Workflow</td>
+<td style="text-align: center">Yes</td>
+<td style="text-align: center">1.7.7</td>
+<td style="text-align: center">2017-11-10</td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
@@ -477,8 +500,6 @@
 </tbody>
 </table>
 
-<p>待进一步更新</p>
-
 <h2 id="toc_2">第三梯队</h2>
 
 <table>
@@ -552,8 +573,6 @@
 </tbody>
 </table>
 
-<p>待进一步更新 </p>
-
 ]]></content>
   </entry>
   
@@ -576,6 +595,11 @@
 <li>由于仅是略懂一些开发的皮毛，文章中开发相关的问题的描述大部分是根据已有资料的自己理解，难免有不准确或错误的地方。如有发现，欢迎指出🖐</li>
 <li>文章中大部分图片资源引用自 Apple 官方，一部分引用自一些其他文章。这部分均已标注出处，如果您是这些文章的作者且觉得这些引用不合适，请尽管告诉我，我会尽快删除🤝</li>
 </ol>
+
+<blockquote>
+<p><strong>更新记录：</strong><br/>
+11 月 13 日：增加了有关于 iPhone X 上播放视频的「<a href="15086036845015.html#toc_10">视频</a>」部分。</p>
+</blockquote>
 
 <h2 id="toc_0">目录</h2>
 
@@ -611,56 +635,59 @@
 <a href="#toc_9">颜色</a>
 </li>
 <li>
-<a href="#toc_10">手势</a>
+<a href="#toc_10">视频</a>
 </li>
 <li>
-<a href="#toc_11">按键</a>
+<a href="#toc_11">手势</a>
 </li>
 <li>
-<a href="#toc_12">Face ID</a>
+<a href="#toc_12">按键</a>
 </li>
 <li>
-<a href="#toc_13">键盘</a>
+<a href="#toc_13">Face ID</a>
 </li>
 <li>
-<a href="#toc_14">适配</a>
+<a href="#toc_14">键盘</a>
+</li>
+<li>
+<a href="#toc_15">适配</a>
 <ul>
 <li>
-<a href="#toc_15">App 的适配</a>
+<a href="#toc_16">App 的适配</a>
 </li>
 <li>
-<a href="#toc_16">App 适配实例</a>
+<a href="#toc_17">App 适配实例</a>
 </li>
 <li>
-<a href="#toc_17">网页的适配</a>
+<a href="#toc_18">网页的适配</a>
 </li>
 <li>
-<a href="#toc_18">网页适配实例</a>
+<a href="#toc_19">网页适配实例</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_19">iOS 11 常用 UI 标准控件的尺寸对照</a>
+<a href="#toc_20">iOS 11 常用 UI 标准控件的尺寸对照</a>
 <ul>
 <li>
-<a href="#toc_20">iPhone 8</a>
+<a href="#toc_21">iPhone 8</a>
 </li>
 <li>
-<a href="#toc_21">iPhone 8 Plus</a>
+<a href="#toc_22">iPhone 8 Plus</a>
 </li>
 <li>
-<a href="#toc_22">iPhone X</a>
+<a href="#toc_23">iPhone X</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_23">Read More</a>
+<a href="#toc_24">Read More</a>
 <ul>
 <li>
-<a href="#toc_24">Apple 官方</a>
+<a href="#toc_25">Apple 官方</a>
 </li>
 <li>
-<a href="#toc_25">非官方</a>
+<a href="#toc_26">非官方</a>
 </li>
 </ul>
 </li>
@@ -820,6 +847,9 @@
 
 <p><img src="media/15086036845015/5CA9DA5A-25B7-4FFC-AA3D-167A0F767940.png" alt="5CA9DA5A-25B7-4FFC-AA3D-167A0F767940"/></p></li>
 <li><p>谨慎地允许 Home Indicator 可以自动隐藏：当自动隐藏功能被打开时，如果用户在几秒钟没有触碰屏幕，Home Indicator 就会自动隐藏，用户再次触碰屏幕时，Home Indicator 就会再次出现。这个行为只应该在像播放视频、图片幻灯片时被启用。</p></li>
+<li><p>避免与系统全局的屏幕边缘手势冲突：在各个 app 中，人们依赖于这些手势。只在很少的一些情况下，一些沉浸式的 app 如游戏类 app 可能需要一些比系统手势优先级更高的自定义的屏幕边缘手势，第一次滑动响应 app 指定的手势（同时正常的 Home Indicator 会被拉起并进入可用状态），第二次滑动才响应系统的手势。这个行为被称为 edge protection，一旦开启，Home Indicator 将会有一个更加细致的外观，对于用户来说就很难访问系统级别的动作，导致不连贯的用户体验，所以它只应该在确实需要的情况下被启用。</p>
+
+<p><img src="media/15086036845015/3F9A6BCC-0971-4E35-BCBF-56CF287E902A.png" alt="3F9A6BCC-0971-4E35-BCBF-56CF287E902A"/></p></li>
 </ul>
 
 <h2 id="toc_9">颜色</h2>
@@ -831,7 +861,32 @@
 <li><p>使用广色域来增强视觉体验：使用了广色域的图片和视频会看上去更加生动，视觉数据和状态指示器会更加有冲击力。</p></li>
 </ul>
 
-<h2 id="toc_10">手势</h2>
+<h2 id="toc_10">视频</h2>
+
+<ul>
+<li><p>系统提供的视频播放器提供了两种视频播放模式：全屏播放模式 full-screen (aspect fill) 和适应屏幕播放模式 fit-to-screen (aspect)。默认情况下，系统会基于视频的纵横比选择一种视频播放模式，在播放过程中，用户可以在这两种模式之间自由切换。</p>
+
+<ul>
+<li><p>全屏播放模式 Full-screen (aspect-fill) viewing mode：视频会按照视频比例进行放大以铺满整个屏幕。一些边缘切割会出现。对于宽幅视频（纵横比在 2：1 到 2.40：1 之间），全屏播放模式是系统的默认选择。</p>
+
+<p><img src="media/15086036845015/15105074890096.jpg" alt=""/></p>
+
+<p><img src="media/15086036845015/15105075047735.jpg" alt=""/></p></li>
+<li><p>适应屏幕播放模式 Fit-to-screen (aspect) viewing mode：屏幕里可以完全显示完整的视频。信箱模式或邮筒模式会出现。对于标准的视频（纵横比 4：3、16：9、低于 2：1的）和超宽幅视频（纵横比大于 2.40：1），适应屏幕模式是系统的默认选择。</p>
+
+<p><img src="media/15086036845015/15105075243173.jpg" alt=""/></p>
+
+<p><img src="media/15086036845015/15105075301705.jpg" alt=""/></p></li>
+</ul></li>
+<li><p>确保自定义的视频播放器的表现符合预期：在 iPhone X 中，默认铺满屏幕的全屏播放模式的视频，如果铺满全屏导致太多的内容被裁切，那视频就应该调整显示尺寸以适应屏幕的模式播放。你也应该允许用户基于他们的个人偏好在两种播放模式间自由切换。</p></li>
+<li><p>视频播放时总是保证其原始纵横比：如果你的视频内容为了服从某个特定的纵横比，自行插入了一个信箱或邮筒边距，iOS 将不能够基于用户对视频播放模式的选择正确的调整视频显示尺寸。在视频框架中插入的边距会造成视频在全屏播放模式下和适应屏幕播放模式下变得更小。它也使得视频不能被正确地以边到边的方式显示，也会影响非全屏情景（如 iPad 上的画中画模式）下的视频显示。</p>
+
+<p><img src="media/15086036845015/15105075474870.jpg" alt=""/></p>
+
+<p><img src="media/15086036845015/15105075538340.jpg" alt=""/></p></li>
+</ul>
+
+<h2 id="toc_11">手势</h2>
 
 <ul>
 <li>在 iPhone X 中使用屏幕边缘来触发访问主屏幕、app 切换、打开通知中心、打开控制中心的动作。</li>
@@ -864,12 +919,9 @@
 
 <p><img src="media/15086036845015/large-4.mp4.gif" alt="large-4.mp4"/></p></li>
 </ul></li>
-<li><p>避免与系统全局的屏幕边缘手势冲突：在各个 app 中，人们依赖于这些手势。只在很少的一些情况下，一些沉浸式的 app 如游戏类 app 可能需要一些比系统手势优先级更高的自定义的屏幕边缘手势，第一次滑动响应 app 指定的手势（同时正常的 Home Indicator 会被拉起并进入可用状态），第二次滑动才响应系统的手势。这个行为被称为 edge protection，一旦开启，Home Indicator 将会有一个更加细致的外观，对于用户来说就很难访问系统级别的动作，导致不连贯的用户体验，所以它只应该在确实需要的情况下被启用。</p>
-
-<p><img src="media/15086036845015/3F9A6BCC-0971-4E35-BCBF-56CF287E902A.png" alt="3F9A6BCC-0971-4E35-BCBF-56CF287E902A"/></p></li>
 </ul>
 
-<h2 id="toc_11">按键</h2>
+<h2 id="toc_12">按键</h2>
 
 <ul>
 <li><p>由于 iPhone X 取消了实体 Home 键，引入了 Home Indicator，原来的电源键现在称之为「侧边按钮」，这使得原有的一些功能的操作方法发生了变化。</p>
@@ -889,7 +941,7 @@
 </ul></li>
 </ul>
 
-<h2 id="toc_12">Face ID</h2>
+<h2 id="toc_13">Face ID</h2>
 
 <ul>
 <li><p>在 iPhone X 中，Face ID 替代了 Touch ID，这使得某些操作和体验有了变化：</p>
@@ -911,7 +963,7 @@
 <li><p>准确的定义授权方法：iPhone X 只支持 Face ID 授权，如果你的 app 使用了 Apple Pay 或者其他系统授权功能，不要在 iPhone X 上提及 Touch ID。与此相反，在只支持 Touch ID 的设备上不要提及 Face ID。</p></li>
 </ul>
 
-<h2 id="toc_13">键盘</h2>
+<h2 id="toc_14">键盘</h2>
 
 <ul>
 <li><p>不要重复系统提供的键盘功能：在 iPhone X 上，Emoji 和 Globe 按钮以及 Dictation 按钮会在键盘的下方自动出现，即使用户使用的是自定义键盘。你的 app 不能影响这些按钮，也要避免在你的 app 的键盘中重复这些而造成困惑。</p>
@@ -923,9 +975,9 @@
 (图片来源：<a href="https://medium.com/uxabc/iphone-x-ui-design-specs-696fd4f262b6">UI 設計師需要知道的 iPhone X 細節 – UXabc – Medium</a>)</p></li>
 </ul>
 
-<h2 id="toc_14">适配</h2>
+<h2 id="toc_15">适配</h2>
 
-<h3 id="toc_15">App 的适配</h3>
+<h3 id="toc_16">App 的适配</h3>
 
 <ul>
 <li><p>大多数使用标准的、系统提供的 UI 元素（如 navigation bars、tables、collections）将会自动适配 iPhone X。背景将会延伸到屏幕的边界，UI 元素将会被合适的插入和放置。比如 navigation bar 的背景色会自动延伸到 status bar 中，tab bar 、tool bar 会被合适的放置在 Home Indicator 上面，其背景色也会延伸到屏幕底端。</p>
@@ -953,7 +1005,7 @@
 <li><p><strong>Update：</strong>10 月 27 日，Apple 发布<a href="https://developer.apple.com/news/?id=10272017a">公告</a>提醒开发者现在可以开始在 iTunes Connect 中提交适配了 iPhone X 的 app、更新 app 的元数据信息了。有关于个人使用的一些 app 适配 iPhone X 的时间记录可以<a href="15091947537272.html">查看我的另一篇文章</a>。</p></li>
 </ul>
 
-<h3 id="toc_16">App 适配实例</h3>
+<h3 id="toc_17">App 适配实例</h3>
 
 <p>以适配 WWDC app 为例，说明在适配过程中遇到的布局问题和如何修复它们。</p>
 
@@ -1032,7 +1084,7 @@
 <p><img src="media/15086036845015/01D6DCD6-8765-4ACB-921C-30195350F292.png" alt="01D6DCD6-8765-4ACB-921C-30195350F292"/></p></li>
 </ul>
 
-<h3 id="toc_17">网页的适配</h3>
+<h3 id="toc_18">网页的适配</h3>
 
 <ul>
 <li><p>因为 iPhone X 的显示屏的四个圆角、顶部的 Sensor Housing 特性，通过 Safari 打开的网页，iOS 也进行了自动的特殊处理。</p>
@@ -1054,7 +1106,7 @@
 (图片来源：<a href="http://www.zcool.com.cn/article/ZNTU1MTUy.html">三分钟弄懂iPhone X 设计尺寸和适配|UI|教程|海边来的设计师 - 原创文章 - 站酷 (ZCOOL)</a>)</p></li>
 </ul>
 
-<h3 id="toc_18">网页适配实例</h3>
+<h3 id="toc_19">网页适配实例</h3>
 
 <ul>
 <li><p>下面这个<a href="https://webkit.org/demos/safe-area-insets/1-default.html">网页</a>，网页的背景颜色不是白色，整个页面背景色延伸到了屏幕边缘，但横跨整个页面宽度的上下两个导航栏被限制在了 Safe Area 中，视觉上看上去很奇怪。底部的导航栏还与 Home Indicator 发生了重叠，这会导致按钮很难点击。这样的网页就需要针对 iPhone X 进行调整。</p>
@@ -1082,11 +1134,11 @@
 (图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>)</p></li>
 </ul>
 
-<h2 id="toc_19">iOS 11 常用 UI 标准控件的尺寸对照</h2>
+<h2 id="toc_20">iOS 11 常用 UI 标准控件的尺寸对照</h2>
 
 <p>对于不同设备，在横向和纵向时的 Size Class 是不同的。加之 iPhone X 引入 Sensor Housing 和 Home Indicator 造成的一些特殊性，这就使得在不同的 iPhone 上 UI 标准控件有着不同的尺寸。以下列出了三款典型 iPhone 的常见 iOS 11 UI 标准控件的尺寸。</p>
 
-<h3 id="toc_20">iPhone 8</h3>
+<h3 id="toc_21">iPhone 8</h3>
 
 <ul>
 <li>iPhone 8 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Compact width, Compact height。
@@ -1102,7 +1154,7 @@
 </ul></li>
 </ul>
 
-<h3 id="toc_21">iPhone 8 Plus</h3>
+<h3 id="toc_22">iPhone 8 Plus</h3>
 
 <ul>
 <li>iPhone 8 Plus 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Regular width, Compact height。
@@ -1117,7 +1169,7 @@
 </ul></li>
 </ul>
 
-<h3 id="toc_22">iPhone X</h3>
+<h3 id="toc_23">iPhone X</h3>
 
 <ul>
 <li><p>iPhone X 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Compact width, Compact height。</p>
@@ -1140,9 +1192,9 @@
 （图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>，图片有改动。关于 iPhone X 横屏下，tab bar 和 Home Indicator 区域经过查找资料我认为应该分别是 32pt 和 21pt，而不是原文中的 30pt 和 23pt。）</p></li>
 </ul>
 
-<h2 id="toc_23">Read More</h2>
+<h2 id="toc_24">Read More</h2>
 
-<h3 id="toc_24">Apple 官方</h3>
+<h3 id="toc_25">Apple 官方</h3>
 
 <ul>
 <li><a href="https://www.apple.com/cn/iphone-x">iPhone X 官方介绍页面</a></li>
@@ -1155,7 +1207,7 @@
 <li><a href="https://developer.apple.com/design/resources/">Apple UI Design Resources：iPhone X</a></li>
 </ul>
 
-<h3 id="toc_25">非官方</h3>
+<h3 id="toc_26">非官方</h3>
 
 <ul>
 <li><a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">The Ultimate Guide To iPhone Resolutions</a></li>
@@ -3955,6 +4007,43 @@ movieBackgroudImageView.addSubview(blurEffectView)
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[个人网站大事记]]></title>
+    <link href="http://chuxiangyuan.github.io/15105083511786.html"/>
+    <updated>2017-11-13T01:39:11+08:00</updated>
+    <id>http://chuxiangyuan.github.io/15105083511786.html</id>
+    <content type="html"><![CDATA[
+<p>谨在此记录我的这个个人网站成长过程中值得纪念的时刻和网站中文章背后的故事。搞懂逻辑、理清思路、沉淀想法、纪录生活，愿这个网站能伴随我一起成长💪</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">2017 年</h2>
+
+<ul>
+<li>2017 年 11 月 03 日，全站启用 HTTPS🌐</li>
+<li>2017 年 10 月 23 日-24 日：压缩了全站的图片资源，显著减少网站中图片加载时长🚀</li>
+<li>2017 年 10 月 24 日：全站主要文章均增加了<a href="media/14625521742746/15088240400740.jpg">「请 Allen Chu 喝杯咖啡」的打赏二维码</a>，此二维码特别定制，一码支持微信、支付宝双通道💰</li>
+<li>2017 年 10 月 23 日：发布了「<a href="15086036845015.html">Designing For iPhone X —— 关于 iPhone X 产品汪和设计狮应该了解的事</a>」。看了那么多错误百出的水货文章，没有找到一篇真正深入 iPhone X 在设计方面的新变化的中文文章，决定自己写一篇✍️</li>
+<li>2017 年 08 月 27 日：发布了「<a href="15038367340940.html">深入了解 App Store in iOS 11</a>」这篇长文，除了文章本身的内容，也更加深入感受到在新功能的背后 Apple 所作出的探索🍎</li>
+<li>2017 年 07 月 09 日：发布了第一篇开发与设计结合的文章——<a href="14994455522628.html">从设计出发认识 UIAlertController</a>，这是一篇完全根据自己的摸索原创的一篇小众化长文，至少我没有在网络上找到过类似文章✌️</li>
+<li>2017 年 05 月 18 日：发布了「Design」分类下的第一篇文章——<a href="15028584576994.html">新的系统字体 Introducing the New System Fonts - WWDC 2015 Session 804</a>🔤</li>
+<li>2017 年 05 月 17 日：由于「多说」评论服务即将于 6 月 1 日停止服务，更换全站的评论服务为「Disqus」🎙</li>
+</ul>
+
+<h2 id="toc_1">2016 年</h2>
+
+<ul>
+<li>2016 年 10 月 26 日：发布了第一篇长文「[使用 Alfred 提高你的工作效率]」(14774965258076.html)，同时这篇文章在 10 月 28 日<a href="http://sspai.com/35927">被少数派推荐为「Matrix 精选」</a>，巧合的是这一天恰好是我的 25 岁生日🎂</li>
+<li>2016 年 06 月 29 日：发布了「Develop」分类下的第一篇文章——<a href="14672077197053.html">学习使用Swift语言编写iOS程序小记</a>，算是闯进了 iOS 开发和设计交汇的大门👨‍💻</li>
+<li>2016 年 05 月 13 日：发布了「Tools」分类下的第一篇文章——<a href="14631313149355.html">怎么获取手机上的App图标</a>📱</li>
+<li>2016 年 05 月 07 日：发布了「Teconology」分类下的第一篇文章——<a href="14625508580709.html">说说Apple“我的照片流”和“iCloud照片图库”那些事</a>📷</li>
+<li>2016 年 05 月 07 日：发布了「Others」分类下的第一篇文章——<a href="14631451597072.html">建立个人网站目标已达成√</a></li>
+<li>2016 年 05 月 07 日：网站建立🎉</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[说说Apple“我的照片流”和“iCloud照片图库”那些事]]></title>
     <link href="http://chuxiangyuan.github.io/14625508580709.html"/>
     <updated>2016-05-07T00:07:38+08:00</updated>
@@ -4112,59 +4201,11 @@ iCloud照片图库”功能既可以备份，又可以同步。</p>
 <p>之前提到的我咨询问题的Apple 苹果专家倒是给我留下了很深刻的印象。我印象中的客服都是很劳累，问多了会很没有耐心的，因为他们每天要在电话中面对形形色色的用户，重复着说着一些话，但这位Apple 苹果客服是抱着一种学习乐观的态度来做客服的，耐心的听用户反馈问题，交流问题，甚至反过来从用户的描述中学习很多东西自己利用，更甚至可以在交流中聊聊其他更广、更有趣的话题，可以听出她特别积极乐观的工作生活态度。这样一天的工作轻松结束，自己既能学到东西，还帮人解决了问题，自己很开心，客户也很开心。不管干嘛，快乐不快乐，开心不开心，还是看自己怎么看待！</p>
 
 <blockquote>
-<p><strong><em>2017 年 8 月注</em></strong><br/>
+<p><strong><em>2017 年 8 月后记</em></strong><br/>
 这篇文章可以算是我这个个人网站的第一篇文章，一年多过去，现在回过头再去看这篇文章，文笔真的十分稚嫩啊，行文中有许多口语化的东西，对科技圈许多事物的认识还只是浮于表面。时间只过去一年多，感觉自己在科技的道路上又迈出了好大一步，不敢说有多么深入，但视野也得到了极大的提升。 </p>
 
 <p>本想把这篇文章修改一下，想想还是作罢，毕竟这也是青春的一部分，哪年再回头来看一下一路的成长或许很怀念呢？</p>
 </blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[建立个人网站目标已达成√]]></title>
-    <link href="http://chuxiangyuan.github.io/14631451597072.html"/>
-    <updated>2016-05-13T21:12:39+08:00</updated>
-    <id>http://chuxiangyuan.github.io/14631451597072.html</id>
-    <content type="html"><![CDATA[
-<p>之前有了解过 Markdown 语言，但之前只了解了下皮毛，最近做了进一步研究，也对比了一下各个 Markdown 编辑器的优劣。结果利用 MWeb 以及 Github 的 PAGES 服务顺藤摸瓜的建立起了自己的个人网站。</p>
-
-<span id="more"></span><!-- more -->
-
-<h2 id="toc_0">💪 建站工具</h2>
-
-<ul>
-<li>个人网站的地址：<a href="http://chuxiangyuan.github.io/">http://chuxiangyuan.github.io/</a>，也可通过扫描或识别下边的二维码前往;</li>
-</ul>
-
-<p><img src="media/14631451597072/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2.jpg" alt="我的博客"/></p>
-
-<ul>
-<li><p>如果你习惯了使用 RSS 工具查看文章，你也可以通过 RSS 工具订阅我的个人博客，以下是 RSS 地址：<code>http://chuxiangyuan.github.io/atom.xml</code>；</p></li>
-<li><p>网站中所有文章均在 <a href="http://zh.mweb.im">MWeb</a> 中使用 Markdown 语言格式编写完成;</p></li>
-<li><p>通过 MWeb 的静态博客生成功能生成了网站，使用了 <a href="https://github.com/oulvhai/mweb-medium-like">mweb-medium-like</a> 主题样式；</p></li>
-<li><p>网站所有的源代码均托管在 Github 上，可在我的 Github 上查看，<a href="https://github.com/ChuXiangyuan/chuxiangyuan.github.io">点击前往</a>；</p></li>
-<li><p>网站中使用了<del><a href="http://duoshuo.com">多说评论插件</a></del> <a href="https://disqus.com">Disqus 评论插件</a>、<a href="http://www.jiathis.com">JiaThis 分享插件</a>；</p></li>
-<li><p>通过 Github 提供的 <a href="https://pages.github.com">PAGES 服务</a> 发布了网站,根据实际情况暂时没有申请独立域名；</p></li>
-<li><p>建站过程中除上述工具外还使用了：<a href="http://www.sketchapp.com">Sketch</a>（经常用此软件画原型，所以直接拿来进行简单的图片处理）、<a href="http://cli.im/">草料二维码</a>（二维码生成）、<a href="https://itunes.apple.com/cn/app/jie-tu-jietu/id1059334054?mt=12">Jietu</a>（截图和截图处理）、<a href="http://pasteapp.me">Paste</a>（剪贴板管理）等工具。</p></li>
-</ul>
-
-<h2 id="toc_1">🙌 建站目的</h2>
-
-<ul>
-<li><p>在这个各种信息共享的年代，希望能将自己每天所听、所见、所想的事情记录下来、沉淀下来，同时与大家共享，如果我的文字能够帮助你，那是再好不过了；</p></li>
-<li><p>具体的主题不限，但是自己作为一只产品汪，对科技、IT、数码、App 极其热爱，所以文章内容基本会与这些有关；</p></li>
-<li><p>不企望这个网站能有多大的流量，最重要的就是能够静下心来，搞懂逻辑、理清思路，将各种各样的想法转换为一行行文字。</p></li>
-</ul>
-
-<h2 id="toc_2">🙏 One More Thing</h2>
-
-<ul>
-<li><p>你可以<a href="about.html">点击这里</a>查看我的联系方式😎</p></li>
-<li><p>如果你觉得这个网站的某些文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p></li>
-</ul>
 
 ]]></content>
   </entry>

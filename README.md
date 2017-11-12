@@ -2,11 +2,11 @@
 之前有了解过 Markdown 语言，但之前只了解了下皮毛，最近做了进一步研究，也对比了一下各个 Markdown 编辑器的优劣。结果利用 MWeb 以及 Github 的 PAGES 服务顺藤摸瓜的建立起了自己的个人网站。
 
 ## 💪 建站工具
-- 个人网站的地址：[http://chuxiangyuan.github.io/](http://chuxiangyuan.github.io/)，也可通过扫描或识别下边的二维码前往;
+- 个人网站的地址：[https://chuxiangyuan.github.io/](https://chuxiangyuan.github.io/)，也可通过扫描或识别下边的二维码前往;
 
 ![我的博客](http://o6lwrrweh.bkt.clouddn.com/2016-05-13-我的博客.jpg)
 
-- 如果你习惯了使用 RSS 工具查看文章，你也可以通过 RSS 工具订阅我的个人博客，以下是 RSS 地址：`http://chuxiangyuan.github.io/atom.xml`；
+- 如果你习惯了使用 RSS 工具查看文章，你也可以通过 RSS 工具订阅我的个人博客，以下是 RSS 地址：`https://chuxiangyuan.github.io/atom.xml`；
 
 - 网站中所有文章均在 [MWeb](http://zh.mweb.im) 中使用 Markdown 语言格式编写完成;
 
@@ -28,7 +28,9 @@
 - 不企望这个网站能有多大的流量，最重要的就是能够静下心来，搞懂逻辑、理清思路，将各种各样的想法转换为一行行文字。
 
 ## 🙏 One More Thing
-- 你可以[点击这里](http://chuxiangyuan.github.io/about.html)查看我的联系方式😎
+- 你可以[点击这里查看我的联系方式](https://chuxiangyuan.github.io/about.html)😎
+
+- 你可以[点击这里查看我的个人网站大事记](https://chuxiangyuan.github.io/15105083511786.html)🧐
 
 - 如果你觉得这个网站的某些文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁
 

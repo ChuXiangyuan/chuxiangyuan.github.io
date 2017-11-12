@@ -87,7 +87,7 @@
         
             <li><a href="Teconology.html">Teconology</a></li>
         
-            <li><a href="Tool.html">Tool</a></li>
+            <li><a href="Tools.html">Tools</a></li>
         
             <li><a href="Others.html">Others</a></li>
          
@@ -152,6 +152,11 @@
 <li>文章中大部分图片资源引用自 Apple 官方，一部分引用自一些其他文章。这部分均已标注出处，如果您是这些文章的作者且觉得这些引用不合适，请尽管告诉我，我会尽快删除🤝</li>
 </ol>
 
+<blockquote>
+<p><strong>更新记录：</strong><br/>
+11 月 13 日：增加了有关于 iPhone X 上播放视频的「<a href="15086036845015.html#toc_10">视频</a>」部分。</p>
+</blockquote>
+
 <h2 id="toc_0">目录</h2>
 
 <ul>
@@ -186,56 +191,59 @@
 <a href="#toc_9">颜色</a>
 </li>
 <li>
-<a href="#toc_10">手势</a>
+<a href="#toc_10">视频</a>
 </li>
 <li>
-<a href="#toc_11">按键</a>
+<a href="#toc_11">手势</a>
 </li>
 <li>
-<a href="#toc_12">Face ID</a>
+<a href="#toc_12">按键</a>
 </li>
 <li>
-<a href="#toc_13">键盘</a>
+<a href="#toc_13">Face ID</a>
 </li>
 <li>
-<a href="#toc_14">适配</a>
+<a href="#toc_14">键盘</a>
+</li>
+<li>
+<a href="#toc_15">适配</a>
 <ul>
 <li>
-<a href="#toc_15">App 的适配</a>
+<a href="#toc_16">App 的适配</a>
 </li>
 <li>
-<a href="#toc_16">App 适配实例</a>
+<a href="#toc_17">App 适配实例</a>
 </li>
 <li>
-<a href="#toc_17">网页的适配</a>
+<a href="#toc_18">网页的适配</a>
 </li>
 <li>
-<a href="#toc_18">网页适配实例</a>
+<a href="#toc_19">网页适配实例</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_19">iOS 11 常用 UI 标准控件的尺寸对照</a>
+<a href="#toc_20">iOS 11 常用 UI 标准控件的尺寸对照</a>
 <ul>
 <li>
-<a href="#toc_20">iPhone 8</a>
+<a href="#toc_21">iPhone 8</a>
 </li>
 <li>
-<a href="#toc_21">iPhone 8 Plus</a>
+<a href="#toc_22">iPhone 8 Plus</a>
 </li>
 <li>
-<a href="#toc_22">iPhone X</a>
+<a href="#toc_23">iPhone X</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_23">Read More</a>
+<a href="#toc_24">Read More</a>
 <ul>
 <li>
-<a href="#toc_24">Apple 官方</a>
+<a href="#toc_25">Apple 官方</a>
 </li>
 <li>
-<a href="#toc_25">非官方</a>
+<a href="#toc_26">非官方</a>
 </li>
 </ul>
 </li>
@@ -395,6 +403,9 @@
 
 <p><img src="media/15086036845015/5CA9DA5A-25B7-4FFC-AA3D-167A0F767940.png" alt="5CA9DA5A-25B7-4FFC-AA3D-167A0F767940"/></p></li>
 <li><p>谨慎地允许 Home Indicator 可以自动隐藏：当自动隐藏功能被打开时，如果用户在几秒钟没有触碰屏幕，Home Indicator 就会自动隐藏，用户再次触碰屏幕时，Home Indicator 就会再次出现。这个行为只应该在像播放视频、图片幻灯片时被启用。</p></li>
+<li><p>避免与系统全局的屏幕边缘手势冲突：在各个 app 中，人们依赖于这些手势。只在很少的一些情况下，一些沉浸式的 app 如游戏类 app 可能需要一些比系统手势优先级更高的自定义的屏幕边缘手势，第一次滑动响应 app 指定的手势（同时正常的 Home Indicator 会被拉起并进入可用状态），第二次滑动才响应系统的手势。这个行为被称为 edge protection，一旦开启，Home Indicator 将会有一个更加细致的外观，对于用户来说就很难访问系统级别的动作，导致不连贯的用户体验，所以它只应该在确实需要的情况下被启用。</p>
+
+<p><img src="media/15086036845015/3F9A6BCC-0971-4E35-BCBF-56CF287E902A.png" alt="3F9A6BCC-0971-4E35-BCBF-56CF287E902A"/></p></li>
 </ul>
 
 <h2 id="toc_9">颜色</h2>
@@ -406,7 +417,32 @@
 <li><p>使用广色域来增强视觉体验：使用了广色域的图片和视频会看上去更加生动，视觉数据和状态指示器会更加有冲击力。</p></li>
 </ul>
 
-<h2 id="toc_10">手势</h2>
+<h2 id="toc_10">视频</h2>
+
+<ul>
+<li><p>系统提供的视频播放器提供了两种视频播放模式：全屏播放模式 full-screen (aspect fill) 和适应屏幕播放模式 fit-to-screen (aspect)。默认情况下，系统会基于视频的纵横比选择一种视频播放模式，在播放过程中，用户可以在这两种模式之间自由切换。</p>
+
+<ul>
+<li><p>全屏播放模式 Full-screen (aspect-fill) viewing mode：视频会按照视频比例进行放大以铺满整个屏幕。一些边缘切割会出现。对于宽幅视频（纵横比在 2：1 到 2.40：1 之间），全屏播放模式是系统的默认选择。</p>
+
+<p><img src="media/15086036845015/15105074890096.jpg" alt=""/></p>
+
+<p><img src="media/15086036845015/15105075047735.jpg" alt=""/></p></li>
+<li><p>适应屏幕播放模式 Fit-to-screen (aspect) viewing mode：屏幕里可以完全显示完整的视频。信箱模式或邮筒模式会出现。对于标准的视频（纵横比 4：3、16：9、低于 2：1的）和超宽幅视频（纵横比大于 2.40：1），适应屏幕模式是系统的默认选择。</p>
+
+<p><img src="media/15086036845015/15105075243173.jpg" alt=""/></p>
+
+<p><img src="media/15086036845015/15105075301705.jpg" alt=""/></p></li>
+</ul></li>
+<li><p>确保自定义的视频播放器的表现符合预期：在 iPhone X 中，默认铺满屏幕的全屏播放模式的视频，如果铺满全屏导致太多的内容被裁切，那视频就应该调整显示尺寸以适应屏幕的模式播放。你也应该允许用户基于他们的个人偏好在两种播放模式间自由切换。</p></li>
+<li><p>视频播放时总是保证其原始纵横比：如果你的视频内容为了服从某个特定的纵横比，自行插入了一个信箱或邮筒边距，iOS 将不能够基于用户对视频播放模式的选择正确的调整视频显示尺寸。在视频框架中插入的边距会造成视频在全屏播放模式下和适应屏幕播放模式下变得更小。它也使得视频不能被正确地以边到边的方式显示，也会影响非全屏情景（如 iPad 上的画中画模式）下的视频显示。</p>
+
+<p><img src="media/15086036845015/15105075474870.jpg" alt=""/></p>
+
+<p><img src="media/15086036845015/15105075538340.jpg" alt=""/></p></li>
+</ul>
+
+<h2 id="toc_11">手势</h2>
 
 <ul>
 <li>在 iPhone X 中使用屏幕边缘来触发访问主屏幕、app 切换、打开通知中心、打开控制中心的动作。</li>
@@ -439,12 +475,9 @@
 
 <p><img src="media/15086036845015/large-4.mp4.gif" alt="large-4.mp4"/></p></li>
 </ul></li>
-<li><p>避免与系统全局的屏幕边缘手势冲突：在各个 app 中，人们依赖于这些手势。只在很少的一些情况下，一些沉浸式的 app 如游戏类 app 可能需要一些比系统手势优先级更高的自定义的屏幕边缘手势，第一次滑动响应 app 指定的手势（同时正常的 Home Indicator 会被拉起并进入可用状态），第二次滑动才响应系统的手势。这个行为被称为 edge protection，一旦开启，Home Indicator 将会有一个更加细致的外观，对于用户来说就很难访问系统级别的动作，导致不连贯的用户体验，所以它只应该在确实需要的情况下被启用。</p>
-
-<p><img src="media/15086036845015/3F9A6BCC-0971-4E35-BCBF-56CF287E902A.png" alt="3F9A6BCC-0971-4E35-BCBF-56CF287E902A"/></p></li>
 </ul>
 
-<h2 id="toc_11">按键</h2>
+<h2 id="toc_12">按键</h2>
 
 <ul>
 <li><p>由于 iPhone X 取消了实体 Home 键，引入了 Home Indicator，原来的电源键现在称之为「侧边按钮」，这使得原有的一些功能的操作方法发生了变化。</p>
@@ -464,7 +497,7 @@
 </ul></li>
 </ul>
 
-<h2 id="toc_12">Face ID</h2>
+<h2 id="toc_13">Face ID</h2>
 
 <ul>
 <li><p>在 iPhone X 中，Face ID 替代了 Touch ID，这使得某些操作和体验有了变化：</p>
@@ -486,7 +519,7 @@
 <li><p>准确的定义授权方法：iPhone X 只支持 Face ID 授权，如果你的 app 使用了 Apple Pay 或者其他系统授权功能，不要在 iPhone X 上提及 Touch ID。与此相反，在只支持 Touch ID 的设备上不要提及 Face ID。</p></li>
 </ul>
 
-<h2 id="toc_13">键盘</h2>
+<h2 id="toc_14">键盘</h2>
 
 <ul>
 <li><p>不要重复系统提供的键盘功能：在 iPhone X 上，Emoji 和 Globe 按钮以及 Dictation 按钮会在键盘的下方自动出现，即使用户使用的是自定义键盘。你的 app 不能影响这些按钮，也要避免在你的 app 的键盘中重复这些而造成困惑。</p>
@@ -498,9 +531,9 @@
 (图片来源：<a href="https://medium.com/uxabc/iphone-x-ui-design-specs-696fd4f262b6">UI 設計師需要知道的 iPhone X 細節 – UXabc – Medium</a>)</p></li>
 </ul>
 
-<h2 id="toc_14">适配</h2>
+<h2 id="toc_15">适配</h2>
 
-<h3 id="toc_15">App 的适配</h3>
+<h3 id="toc_16">App 的适配</h3>
 
 <ul>
 <li><p>大多数使用标准的、系统提供的 UI 元素（如 navigation bars、tables、collections）将会自动适配 iPhone X。背景将会延伸到屏幕的边界，UI 元素将会被合适的插入和放置。比如 navigation bar 的背景色会自动延伸到 status bar 中，tab bar 、tool bar 会被合适的放置在 Home Indicator 上面，其背景色也会延伸到屏幕底端。</p>
@@ -528,7 +561,7 @@
 <li><p><strong>Update：</strong>10 月 27 日，Apple 发布<a href="https://developer.apple.com/news/?id=10272017a">公告</a>提醒开发者现在可以开始在 iTunes Connect 中提交适配了 iPhone X 的 app、更新 app 的元数据信息了。有关于个人使用的一些 app 适配 iPhone X 的时间记录可以<a href="15091947537272.html">查看我的另一篇文章</a>。</p></li>
 </ul>
 
-<h3 id="toc_16">App 适配实例</h3>
+<h3 id="toc_17">App 适配实例</h3>
 
 <p>以适配 WWDC app 为例，说明在适配过程中遇到的布局问题和如何修复它们。</p>
 
@@ -607,7 +640,7 @@
 <p><img src="media/15086036845015/01D6DCD6-8765-4ACB-921C-30195350F292.png" alt="01D6DCD6-8765-4ACB-921C-30195350F292"/></p></li>
 </ul>
 
-<h3 id="toc_17">网页的适配</h3>
+<h3 id="toc_18">网页的适配</h3>
 
 <ul>
 <li><p>因为 iPhone X 的显示屏的四个圆角、顶部的 Sensor Housing 特性，通过 Safari 打开的网页，iOS 也进行了自动的特殊处理。</p>
@@ -629,7 +662,7 @@
 (图片来源：<a href="http://www.zcool.com.cn/article/ZNTU1MTUy.html">三分钟弄懂iPhone X 设计尺寸和适配|UI|教程|海边来的设计师 - 原创文章 - 站酷 (ZCOOL)</a>)</p></li>
 </ul>
 
-<h3 id="toc_18">网页适配实例</h3>
+<h3 id="toc_19">网页适配实例</h3>
 
 <ul>
 <li><p>下面这个<a href="https://webkit.org/demos/safe-area-insets/1-default.html">网页</a>，网页的背景颜色不是白色，整个页面背景色延伸到了屏幕边缘，但横跨整个页面宽度的上下两个导航栏被限制在了 Safe Area 中，视觉上看上去很奇怪。底部的导航栏还与 Home Indicator 发生了重叠，这会导致按钮很难点击。这样的网页就需要针对 iPhone X 进行调整。</p>
@@ -657,11 +690,11 @@
 (图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>)</p></li>
 </ul>
 
-<h2 id="toc_19">iOS 11 常用 UI 标准控件的尺寸对照</h2>
+<h2 id="toc_20">iOS 11 常用 UI 标准控件的尺寸对照</h2>
 
 <p>对于不同设备，在横向和纵向时的 Size Class 是不同的。加之 iPhone X 引入 Sensor Housing 和 Home Indicator 造成的一些特殊性，这就使得在不同的 iPhone 上 UI 标准控件有着不同的尺寸。以下列出了三款典型 iPhone 的常见 iOS 11 UI 标准控件的尺寸。</p>
 
-<h3 id="toc_20">iPhone 8</h3>
+<h3 id="toc_21">iPhone 8</h3>
 
 <ul>
 <li>iPhone 8 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Compact width, Compact height。
@@ -677,7 +710,7 @@
 </ul></li>
 </ul>
 
-<h3 id="toc_21">iPhone 8 Plus</h3>
+<h3 id="toc_22">iPhone 8 Plus</h3>
 
 <ul>
 <li>iPhone 8 Plus 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Regular width, Compact height。
@@ -692,7 +725,7 @@
 </ul></li>
 </ul>
 
-<h3 id="toc_22">iPhone X</h3>
+<h3 id="toc_23">iPhone X</h3>
 
 <ul>
 <li><p>iPhone X 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Compact width, Compact height。</p>
@@ -715,9 +748,9 @@
 （图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>，图片有改动。关于 iPhone X 横屏下，tab bar 和 Home Indicator 区域经过查找资料我认为应该分别是 32pt 和 21pt，而不是原文中的 30pt 和 23pt。）</p></li>
 </ul>
 
-<h2 id="toc_23">Read More</h2>
+<h2 id="toc_24">Read More</h2>
 
-<h3 id="toc_24">Apple 官方</h3>
+<h3 id="toc_25">Apple 官方</h3>
 
 <ul>
 <li><a href="https://www.apple.com/cn/iphone-x">iPhone X 官方介绍页面</a></li>
@@ -730,7 +763,7 @@
 <li><a href="https://developer.apple.com/design/resources/">Apple UI Design Resources：iPhone X</a></li>
 </ul>
 
-<h3 id="toc_25">非官方</h3>
+<h3 id="toc_26">非官方</h3>
 
 <ul>
 <li><a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">The Ultimate Guide To iPhone Resolutions</a></li>
@@ -849,7 +882,7 @@
         
             <a href="Teconology.html"><strong>Teconology</strong></a>
         
-            <a href="Tool.html"><strong>Tool</strong></a>
+            <a href="Tools.html"><strong>Tools</strong></a>
         
             <a href="Others.html"><strong>Others</strong></a>
          
