@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-11-13T02:56:25+08:00</updated>
+  <updated>2017-11-14T00:29:58+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -4019,6 +4019,7 @@ movieBackgroudImageView.addSubview(blurEffectView)
 <h2 id="toc_0">2017 年</h2>
 
 <ul>
+<li>2017 年 11 月 14 日，修改个人网站的介绍为「搞懂逻辑 | 理清思路 | 沉淀想法 | 纪录生活」，首页 Sidebar 增加「Featured」模块，用来突出展示值得被推荐的文章🌟</li>
 <li>2017 年 11 月 03 日，全站启用 HTTPS🌐</li>
 <li>2017 年 10 月 23 日-24 日：压缩了全站的图片资源，显著减少网站中图片加载时长🚀</li>
 <li>2017 年 10 月 24 日：全站主要文章均增加了<a href="media/14625521742746/15088240400740.jpg">「请 Allen Chu 喝杯咖啡」的打赏二维码</a>，此二维码特别定制，一码支持微信、支付宝双通道💰</li>
@@ -4036,7 +4037,7 @@ movieBackgroudImageView.addSubview(blurEffectView)
 <li>2016 年 06 月 29 日：发布了「Develop」分类下的第一篇文章——<a href="14672077197053.html">学习使用Swift语言编写iOS程序小记</a>，算是闯进了 iOS 开发和设计交汇的大门👨‍💻</li>
 <li>2016 年 05 月 13 日：发布了「Tools」分类下的第一篇文章——<a href="14631313149355.html">怎么获取手机上的App图标</a>📱</li>
 <li>2016 年 05 月 07 日：发布了「Teconology」分类下的第一篇文章——<a href="14625508580709.html">说说Apple“我的照片流”和“iCloud照片图库”那些事</a>📷</li>
-<li>2016 年 05 月 07 日：发布了「Others」分类下的第一篇文章——<a href="14631451597072.html">建立个人网站目标已达成√</a></li>
+<li>2016 年 05 月 07 日：发布了「Others」分类下的第一篇文章——<a href="14631451597072.html">建立个人网站目标已达成✓</a>🗞</li>
 <li>2016 年 05 月 07 日：网站建立🎉</li>
 </ul>
 
