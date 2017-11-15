@@ -89,6 +89,8 @@
         
             <li><a href="Tools.html">Tools</a></li>
         
+            <li><a href="Talk.html">Talk</a></li>
+        
             <li><a href="Others.html">Others</a></li>
          
 
@@ -652,7 +654,7 @@
 <li><p>当设备处于横屏情况下，为了确保网页上的内容不被屏幕圆角、Sensor Housing 遮挡，所有内容、控件会被限制在 Safe Area 中显示，而 Safe Area 左右两侧会被页面的 <code>background-color</code> (比如为 <code>&lt;body&gt;</code> 或 <code>&lt;html&gt;</code> 元素指定的背景颜色)填充。通常情况下我们看到的网页背景颜色都是白色，例如下图中在 iPhone X 的 Safari 中打开的 Medium 官网， 背景颜色是白色，整体上除了白色基本就是黑色的文字，这样看上去效果还不错。</p>
 
 <p><img src="media/15086036845015/WechatIMG11.png" alt="WechatIMG11"/></p></li>
-<li><p>再举一个例子，下图中在 iPhone X 的 Safari 中打开 Apple 官网，同样的页面背景色为白色，但由于横跨整个页面的灰色导航栏和非白色背景的近乎全屏的图片的存在，左右两边的白边看上去比较突兀，整体效果比较奇怪。</p>
+<li><p>再举一个例子，下图中在 iPhone X 的 Safari 中打开 Apple 官网，同样的页面背景色为白色，但由于横跨整个页面的灰色导航栏和非白色背景的近乎全屏的图片的存在，左右两边的白边看上去比较突兀，整体效果比较奇怪。（Update：Apple 官网首页目前已为 iPhone X 做了适配）</p>
 
 <p><img src="media/15086036845015/WechatIMG5.png" alt="WechatIMG5"/></p></li>
 </ul></li>
@@ -677,7 +679,7 @@
 <li><p>想要既要利用整个屏幕，又要服从 Safe Area，需要给不想被遮挡的重要内容加上一个 padding。iOS 11 的 Webkit 预定义了 <a href="https://webkit.org/demos/safe-area-insets/safe-areas.html">Safe Area 上下左右四个方向的边距常量</a>，利用此为页面上的元素添加 padding 后网页上的重要内容就可以正常显示，<a href="https://webkit.org/demos/safe-area-insets/3-safe-area-constants.html">更改后网页</a>横屏下的效果图如下。</p>
 
 <p><img src="media/15086036845015/319BE822-CC4A-4A9E-AA3C-2CC141C72776.png" alt="319BE822-CC4A-4A9E-AA3C-2CC141"/></p></li>
-<li><p>iPhone X 在横屏下的 Safe Area 左右两边的间距都是 44pt，但是在竖屏下 Safe Area 左右两边的间距是 0pt。故通过上面的 padding 设置后，在竖屏下，页面会出现一些问题，文字内容会紧贴屏幕的左边缘。竖屏时对于这里的期望是文字能与屏幕左边缘有一些间距（比如 12px），要实现此，可以将文字部分的 padding-left 设置为取 12px 和 Safa Area 左边间距两者中较大的那个值，这样在横屏时 padding-left 即为 Safa Area 的左边距，在竖屏时 padding-left 即为 12px。（取较大值的这个特性将在以后版本的 iOS 11 中发布）</p>
+<li><p>iPhone X 在横屏下的 Safe Area 左右两边的间距都是 44pt，但是在竖屏下 Safe Area 左右两边的间距是 0pt。故通过上面的 padding 设置后，在竖屏下，页面会出现一些问题，文字内容会紧贴屏幕的左边缘。竖屏时对于这里的期望是文字能与屏幕左边缘有一些间距（比如 12px），要实现此，可以将文字部分的 padding-left 设置为取 12px 和 Safa Area 左边间距两者中较大的那个值，这样在横屏时 padding-left 即为 Safa Area 的左边距，在竖屏时 padding-left 即为 12px。（取较大值的这个特性将在以后版本的 iOS 11 中发布，目前已出现在 iOS 11.2 Beta 中）</p>
 
 <p><img src="media/15086036845015/8952F200-830A-4EBA-973F-94F019E27CAC.png" alt="8952F200-830A-4EBA-973F-94F019E27CA"/></p></li>
 <li><p>最终通过一系列的调整，<a href="https://webkit.org/demos/safe-area-insets/4-min-max.html">竖屏下的页面</a>效果如下图。</p>
@@ -880,12 +882,18 @@
                   
 
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15105083511786.html">2️⃣ 个人网站大事记</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15107547493398.html">2️⃣ Allen 说：</a>
+
+                  </div>
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15105083511786.html">3️⃣ 个人网站大事记</a>
 
                   </div>
                   
                 </div>
             </div>
+            
     
 
               <div id="site-categories" class="side-item ">
@@ -904,6 +912,8 @@
         
             <a href="Tools.html"><strong>Tools</strong></a>
         
+            <a href="Talk.html"><strong>Talk</strong></a>
+        
             <a href="Others.html"><strong>Others</strong></a>
          
         </p>
@@ -919,6 +929,12 @@
                 <div class="side-content">
                 <ul class="posts-list">
 	      
+		      
+			      <li class="post">
+			        <a href="15107547493398.html">Allen 说:🎙</a>
+			      </li>
+		     
+		  
 		      
 			      <li class="post">
 			        <a href="15091947537272.html">个人常用 app 适配 iPhone X 的时间线记录</a>
@@ -940,12 +956,6 @@
 		      
 			      <li class="post">
 			        <a href="15036722610708.html">为订阅成功而设计 Designing for Subscription Success - WWDC 2017 Session 814</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15028131788266.html">iOS 11 设计上的改变 What’s New in iOS 11 - WWDC 2017 Session 810</a>
 			      </li>
 		     
 		  
@@ -982,6 +992,9 @@
 		  		</ul>
                 </div>
               </div>
+
+              
+
         </div><!-- sidebar -->
       </div><!-- hide for small -->
 </div><!-- large 4 -->
