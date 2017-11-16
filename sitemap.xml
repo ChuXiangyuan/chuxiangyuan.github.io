@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>http://chuxiangyuan.github.io/</loc>
-  <lastmod>2017-11-16T00:30:38+08:00</lastmod>
+  <lastmod>2017-11-16T11:28:05+08:00</lastmod>
 </url>
 
 <url>
@@ -123,6 +123,14 @@
 
 
 <url>
+  <loc>http://chuxiangyuan.github.io/Design.html</loc>
+</url>
+
+<url>
+  <loc>http://chuxiangyuan.github.io/Develop.html</loc>
+</url>
+
+<url>
   <loc>http://chuxiangyuan.github.io/Teconology.html</loc>
 </url>
 
@@ -131,19 +139,11 @@
 </url>
 
 <url>
-  <loc>http://chuxiangyuan.github.io/Others.html</loc>
-</url>
-
-<url>
-  <loc>http://chuxiangyuan.github.io/Develop.html</loc>
-</url>
-
-<url>
-  <loc>http://chuxiangyuan.github.io/Design.html</loc>
-</url>
-
-<url>
   <loc>http://chuxiangyuan.github.io/Talk.html</loc>
+</url>
+
+<url>
+  <loc>http://chuxiangyuan.github.io/Others.html</loc>
 </url>
 
 
