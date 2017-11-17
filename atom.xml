@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-11-18T02:03:04+08:00</updated>
+  <updated>2017-11-18T02:08:51+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -46,7 +46,7 @@
 <p>不管是文章，还是闪念，一切的目的还是会如同这个博客的主题一样：搞懂逻辑、理清思路、沉淀想法、纪录生活。</p>
 
 <blockquote>
-<p><embed src="//music.163.com/style/swf/widget.swf?sid=436514312&type=2&auto=0&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=380 height=86 src="//music.163.com/outchain/player?type=2&id=436514312&auto=0&height=66"></iframe>
 </blockquote>
 
 <h2 id="toc_1">2017 年</h2>
@@ -145,9 +145,7 @@
 
 <p>一个 app 对新机型的适配速度和适配质量能够很大程度上反映出开发者对这个 app 上不上心。</p>
 
-<blockquote>
-<p><embed src="http://www.xiami.com/widget/11773714_382463/singlePlayer.swf" type="application/x-shockwave-flash" width="257" height="33" wmode="transparent"></embed></p>
-</blockquote>
+<p><embed src="http://www.xiami.com/widget/11773714_7310/singlePlayer.swf" type="application/x-shockwave-flash" width="257" height="33" wmode="transparent"></embed></p>
 
 <ul>
 <li><p><strong>Note：</strong></p></li>
