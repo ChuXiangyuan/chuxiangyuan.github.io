@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-11-17T22:57:05+08:00</updated>
+  <updated>2017-11-18T02:03:04+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -44,6 +44,10 @@
 <p>三言两语的思考可以很多，但这不能成为充斥一个以文章为主的博客的理由，我不想这里变成我的第二个「微博」。所以所有的「Allen 说」都会按照时间倒序汇总在这篇文章里，当有新的「Allen 说：」发布时，会置顶在博客首页，点击也可以进入查看所有过去的「Allen 说：」。</p>
 
 <p>不管是文章，还是闪念，一切的目的还是会如同这个博客的主题一样：搞懂逻辑、理清思路、沉淀想法、纪录生活。</p>
+
+<blockquote>
+<p><embed src="//music.163.com/style/swf/widget.swf?sid=436514312&type=2&auto=0&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed></p>
+</blockquote>
 
 <h2 id="toc_1">2017 年</h2>
 
@@ -106,7 +110,7 @@
 <h5 id="toc_10">产品设计的抉择</h5>
 
 <ul>
-<li>手里的广发信用卡进账了一笔一万块的退款，这卡本身用的也不多，一查才知道，广发规定当期消费在账单日后、还款日前发生退款，退款不能抵扣当期账单，该还多少还得还多少，莫名把这张信用卡花成了储蓄卡。</li>
+<li>手里的广发信用卡进账了一笔一万块的退款，这卡本身用的也不多，一查才知道，广发规定当期消费在账单日后、还款日前退款入账，退款不能抵扣当期账单，该还多少还得还多少，莫名把这张信用卡花成了储蓄卡。</li>
 <li>深究一下这个设定，银行既要通过长达一个多月的免息消费吸引用户，又要确保每个用卡人有能力正常偿还每期账单。广发的做法可以弥补借款被无限借下去的漏洞，但却让用户的用卡便利度打了折扣，这是一个政策安全但对用户不够方便的设定；而像招行的当期消费退款只要在当期的还款日前入账即可抵充当期账单的做法就是一个对用户方便但政策上有点风险的设定。明白不同设定背后的缘由，再去评判孰优孰劣，那就见仁见智了。</li>
 </ul>
 </blockquote>
@@ -140,6 +144,10 @@
 <p>没有适配 iPhone X 的 app 在 iPhone X 上打开时，很有可能就是以 iPhone 8 的屏幕大小、上下有黑边的形式（竖屏条件下）呈现（具体可以看<a href="15086036845015.html">这篇文章</a>的<a href="15086036845015.html#toc_16">「App 的适配」</a>部分），这将十分影响用户体验。以下按照不同的使用频率，列出了我个人使用的一些 app，以记录这些 app 适配 iPhone X 的时间线。一方面可以观察什么时间 iPhone X 可以度过这个 app 适配的尴尬期，有助于购机决策；另一方面也把这些信息记录下来，以供以后 Apple 再次推出这种改变已有屏幕比例、增加新的特性以致需要耗费较多工作适配的机型时的参考。</p>
 
 <p>一个 app 对新机型的适配速度和适配质量能够很大程度上反映出开发者对这个 app 上不上心。</p>
+
+<blockquote>
+<p><embed src="http://www.xiami.com/widget/11773714_382463/singlePlayer.swf" type="application/x-shockwave-flash" width="257" height="33" wmode="transparent"></embed></p>
+</blockquote>
 
 <ul>
 <li><p><strong>Note：</strong></p></li>
