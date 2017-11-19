@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-11-18T02:45:51+08:00</updated>
+  <updated>2017-11-19T17:43:36+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -704,6 +704,12 @@
 
 <span id="more"></span><!-- more -->
 
+<blockquote>
+<p>iPhone X 首次亮相： </p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/K4wEI5zhHB0?rel=0" frameborder="0" allowfullscreen></iframe>
+</blockquote>
+
 <ul>
 <li><p>Note：</p></li>
 </ul>
@@ -1081,6 +1087,12 @@
 <li><p>准确的定义授权方法：iPhone X 只支持 Face ID 授权，如果你的 app 使用了 Apple Pay 或者其他系统授权功能，不要在 iPhone X 上提及 Touch ID。与此相反，在只支持 Touch ID 的设备上不要提及 Face ID。</p></li>
 </ul>
 
+<blockquote>
+<p>Apple 关于 iPhone X 的基本使用的指导视频：</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/cJZoTqtwGzY?rel=0" frameborder="0" allowfullscreen></iframe>
+</blockquote>
+
 <h2 id="toc_14">键盘</h2>
 
 <ul>
@@ -1309,6 +1321,12 @@
 <p><img src="media/15086036845015/C5A278D3-B23F-48B6-9D58-7CF217975FD1.png" alt="C5A278D3-B23F-48B6-9D58-7CF217975FD1"/><br/>
 （图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>，图片有改动。关于 iPhone X 横屏下，tab bar 和 Home Indicator 区域经过查找资料我认为应该分别是 32pt 和 21pt，而不是原文中的 30pt 和 23pt。）</p></li>
 </ul>
+
+<blockquote>
+<p>最后一起来欣赏下 Apple 为 iPhone X 制作的广告，十分精彩：</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mW6hFttt_KE?rel=0" frameborder="0" allowfullscreen></iframe>
+</blockquote>
 
 <h2 id="toc_24">Read More</h2>
 
@@ -4141,6 +4159,7 @@ movieBackgroudImageView.addSubview(blurEffectView)
 <h2 id="toc_0">2017 年</h2>
 
 <ul>
+<li>2017 年 11 月 19 日：网站新增文章里插入 YouTube 视频的能力，内容更加多样化了📹</li>
 <li>2017 年 11 月 16 日：创立新的分类<a href="Talk.html">「Talk」</a>承载新的栏目<a href="15107547493398.html">「Allen 说：」</a>，用这个新的栏目来记录那些短小但值得被分享、被沉淀的闪念文字。想法来源于晚上在外运动时的灵光一闪，从有想法到实现只花了几个小时，发布这一天刚好是我的 26 岁生日，算是给自己的一份不错的值得纪念的礼物🎂</li>
 <li>2017 年 11 月 14 日：网站正式接入「Google Analytics」服务，实现网站访问数据可视化，为以后更详细的访问跟踪统计提供了可能📊</li>
 <li>2017 年 11 月 14 日：修改个人网站的介绍为「搞懂逻辑 | 理清思路 | 沉淀想法 | 纪录生活」，首页 Sidebar 增加「Featured」模块，用来突出展示值得被推荐的文章🌟</li>
