@@ -2,7 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>http://chuxiangyuan.github.io/</loc>
-  <lastmod>2017-11-19T17:43:42+08:00</lastmod>
+  <lastmod>2017-12-01T20:30:17+08:00</lastmod>
+</url>
+
+<url>
+  <loc>http://chuxiangyuan.github.io/15120578044761.html</loc>
+  <lastmod>2017-12-01T00:03:24+08:00</lastmod>
 </url>
 
 <url>
@@ -118,7 +123,7 @@
 
 <url>
   <loc>http://chuxiangyuan.github.io/about.html</loc>
-  <lastmod>2017-11-16T11:53:48+08:00</lastmod>
+  <lastmod>2017-12-01T00:29:38+08:00</lastmod>
 </url>
 
 
@@ -136,6 +141,10 @@
 
 <url>
   <loc>http://chuxiangyuan.github.io/Tools.html</loc>
+</url>
+
+<url>
+  <loc>http://chuxiangyuan.github.io/Life.html</loc>
 </url>
 
 <url>
