@@ -4,13 +4,142 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2017-12-01T20:28:00+08:00</updated>
+  <updated>2018-01-28T22:21:45+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Size Classes and Core Components - WWDC 2017 Session 812]]></title>
+    <link href="http://chuxiangyuan.github.io/15171487371271.html"/>
+    <updated>2018-01-28T22:12:17+08:00</updated>
+    <id>http://chuxiangyuan.github.io/15171487371271.html</id>
+    <content type="html"><![CDATA[
+<p>如今开发 iOS App 需要面对四种不同的 iPhone 屏幕尺寸（iPhone SE、iPhone 8、iPhone 8 Plus、iPhone X）和三种不同的 iPad 屏幕尺寸（iPad Mini、iPad Pro 9.7’’、iPad Pro 12.9’’），同时还有不同的屏幕方向、左右分屏、多任务屏幕需要处理。这就导致在设计开发一个 app 时有许多种屏幕尺寸需要考虑。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15171487371271/812_size_classes_and_core_components.jpg" alt="812_size_classes_and_core_components"/></p>
+
+<p>Apple 构建了一套基本框架用于简化设计和构建 iOS App 时的这些过程，这会使开发者节约大量时间，不管用户使用的是哪一款设备你的 app 都会看起来不错。针对于屏幕中的内容采用尺寸类别 Size Classes、使用动态类型 Dynamic Type、利用标准 UI 元素就是需要考虑的三点。</p>
+
+<h2 id="toc_0">Size Classes</h2>
+
+<p>各种尺寸的 iOS 屏幕方向都可以归类为两种尺寸类别：compact 紧凑型、regular 常规型。像 iPhone 的布局，更窄的屏幕宽度就是紧凑型，而像 iPad 的屏幕更宽的宽度就是常规型。</p>
+
+<p><img src="media/15171487371271/5079015A-8795-47C1-A410-CA4116D2A10A.png" alt="5079015A-8795-47C1-A410-CA4116D2A10A"/></p>
+
+<p>把各种尺寸的屏幕的不同屏幕方向归类在一起，每个屏幕状态的宽度和高度就可以划分出对应属于哪一个尺寸等级。根据屏幕等级，屏幕上的内容应该更加灵活，元素应该根据屏幕尺寸进行自适应。</p>
+
+<p><img src="media/15171487371271/12F5661F-2D23-4C1B-AA93-887D242801AC.png" alt="12F5661F-2D23-4C1B-AA93-887D242801A"/></p>
+
+<p>例如，横屏下的 iPhone 7 Plus 就是常规宽度，这使其可以像 iPad 一样显示分屏视图。而其他两个更小的 iPhone 在横屏下的宽度和高度都是紧凑型的。</p>
+
+<p><img src="media/15171487371271/88325087-1103-4973-B086-A14B9CE54A42.png" alt="88325087-1103-4973-B086-A14B9CE54A42"/></p>
+
+<p>这也意味着在小屏的 iPhone 上横屏条件下 bar 的高度是比竖屏条件下的高度小一些的。</p>
+
+<p><img src="media/15171487371271/9E03D92D-EF0E-4AAA-A157-5E37DB06E864.png" alt="9E03D92D-EF0E-4AAA-A157-5E37DB06E864"/></p>
+
+<p>屏幕的宽度也定义了 UIKit 的边界值，边界宽度可以是标准的，也可以是像 iPad 这种大屏幕一样更加宽松。但要注意，如果文本的边界宽度与 UIKit 的边界宽度一样，文本就会变得很长，在一行的结尾人的眼睛就需要来回地从一边跳到另一边。所以我们使用可读性边界（Readability Margin）在大屏设备上限制每行的长度。这些边界值是灵活的，可以根据文本尺寸发生变化。更小的文本需要更窄的可读长度，更大的文本需要更宽的可读长度。</p>
+
+<p><img src="media/15171487371271/A8B453F6-4191-42CA-88DC-B59C117F68F6.png" alt="A8B453F6-4191-42CA-88DC-B59C117F68F6"/></p>
+
+<p>对于各种屏幕尺寸、屏幕方向的设备的 Size Class 具体定义如下：</p>
+
+<p><img src="media/15171487371271/3481ACB7-5B29-49C1-9160-0C9B2BAA2558.png" alt="3481ACB7-5B29-49C1-9160-0C9B2BAA2558"/></p>
+
+<p>特别地，在 iPad 上以多任务方式运行你的 app 时，其 Size Class 定义如下：</p>
+
+<p><img src="media/15171487371271/B5A5362C-E8AD-4940-9E31-A76E73BD88D2.png" alt="B5A5362C-E8AD-4940-9E31-A76E73BD88D2"/></p>
+
+<h2 id="toc_1">Dynamic Type 动态类型</h2>
+
+<p>如果你使用具备可读性边界属性的动态类型的话，人们使用你的 app 将会有一个更舒服的阅读体验。动态类型预定义了可以在不同设备上变化大小的文本样式，用户可以使用某一种文本尺寸以达到最舒服的用户体验。<br/>
+有许多用户感觉在他们的 app 里的文本太小了而不能阅读。所以可以使用动态类型，从而自动地允许文本放大放小，又不影响布局。用户可以在辅助功能设置中开启更大类型。也可以使你的 app 本地化更加无缝。<br/>
+你的文本将会根据字符的高度调整字间距、行间距。使用这个特性会让更多的用户使用你的 app 更加容易。</p>
+
+<p><img src="media/15171487371271/3ADCF6DE-E144-4069-8DC2-A0045DEB753F.png" alt="3ADCF6DE-E144-4069-8DC2-A0045DEB753F"/></p>
+
+<p>Apple 定义了一份标准的动态类型图表。最近，Apple 针对于我们已经存在的文本样式进行了一些调整，将 Tiltle 样式的字重从 light 调整到了 regular。在大多数的场景下，我们推荐在每个屏幕上使用两到三种文本文本样式。你可以从十种不同的文本样式中选择，这里有无数的组合，在设计你的 app 时有很大的灵活性。</p>
+
+<p><img src="media/15171487371271/93D7931A-8512-4B2A-AABA-461E30A1174F.png" alt="93D7931A-8512-4B2A-AABA-461E30A1174F"/></p>
+
+<p>其中 Large 类型是系统默认的，其不同文本样式的字重、字号、行间距、字间距在 iOS 中具体定义如下：</p>
+
+<p><img src="media/15171487371271/4A776C6C-1C3A-4CE2-BA42-B7855A4167C9.png" alt="4A776C6C-1C3A-4CE2-BA42-B7855A4167"/></p>
+
+<p>上表中提到的 Tracking 字间距可以直接在 Photoshop 中调整，但在 Sketch 中需要调整 Character Spacing，两者之间的换算关系如下：</p>
+
+<p><img src="media/15171487371271/E68F9983-DF96-4BC6-9706-8FF690A81138.png" alt="E68F9983-DF96-4BC6-9706-8FF690A81138"/></p>
+
+<p>文本样式的名字是具有描述性的，建议了那种文本样式更适合在什么场景下使用。例如，Body 文本样式更适合在一大片正文文本中使用，它也是 iOS 整个系统的默认文本样式。你也可以使用更大或更小的文本样式，在下面的例子里，你还可以使用更粗的文本样式来建立文本层级。</p>
+
+<p><img src="media/15171487371271/B0FD4676-5E1D-4EFA-8451-ED3B161094DC.png" alt="B0FD4676-5E1D-4EFA-8451-ED3B161094D"/></p>
+
+<p>使用 Apple 提供的 API，也可以为自定义字体创建动态类型。这需要你为不同的字号尺寸分配不同的文本样式，因为不是所有的字体都有着同样的比例。</p>
+
+<p><img src="media/15171487371271/19E82A45-DFCE-4514-976D-7007F7D779AA.png" alt="19E82A45-DFCE-4514-976D-7007F7D779AA"/></p>
+
+<h2 id="toc_2">UIKit Elements</h2>
+
+<p>与其在设计一个人们都早已熟悉的功能上下功夫，不如集中精力设计你 app 里独一无二的部分。Apple 提供了一系列的标准 UI 元素可以在你的 app 里使用，这些元素可以自动适配所有屏幕尺寸。</p>
+
+<p><img src="media/15171487371271/666F9484-3AC2-4573-8E11-BC930809E52C.png" alt="666F9484-3AC2-4573-8E11-BC930809E52"/></p>
+
+<p>像 TableView 这种不仅可以很好地根据动态类型调整文本大小，同时也继承了可读性边界、标准的交互（如滑动操作、编辑模式）。还有好多其他的资源可以帮助你的 app 增强一致性、在所有的设备上无缝适配。</p>
+
+<p><img src="media/15171487371271/05295F07-01E9-4262-AE93-35B1C364EA1C.png" alt="05295F07-01E9-4262-AE93-35B1C364EA1"/></p>
+
+<p>对于 iPad 上的适配，这里有一些小建议。标准的尺寸级别或者说 iPad 可以使用分屏视图，为了在 iPhone 和 iPad 上保持内容层级，需要考虑你的 app 的内容是怎样呈现的。<br/>
+对于分屏视图，其左侧被称之为 Master View 主视图，右侧被称为 Detail View 详情视图。在 iPhone 上的详情视图你必须要进入更深的层级页面才能看到。</p>
+
+<p><img src="media/15171487371271/1A4F4352-5B32-46D8-AD28-C59F1FC066D7.png" alt="1A4F4352-5B32-46D8-AD28-C59F1FC066D7"/></p>
+
+<p>一个 iPad 会共享 iPad 和 iPhone 上特定的布局，iPad 的布局应该与 iPhone 布局一样保持相同的布局层级，比如标准的导航栏、工具栏、标签栏等。</p>
+
+<p><img src="media/15171487371271/E1F1B2A3-92EC-44AB-AD5C-B708A9B32439.png" alt="E1F1B2A3-92EC-44AB-AD5C-B708A9B32439"/></p>
+
+<p>如果的你的 app 可以使用多任务功能，当你的 app 需要与其他 app 同时显示时这可以保持 app 的一致性。在多任务时，你的 app可以根据当前的屏幕宽度在 iPhone 布局或者说 Compact 紧凑型布局和 Regular 标准型布局间过渡切换。</p>
+
+<p><img src="media/15171487371271/D19AF33C-B2CB-48DE-AA6D-FD4EBE6C9755.png" alt="D19AF33C-B2CB-48DE-AA6D-FD4EBE6"/></p>
+
+<p><img src="media/15171487371271/1C410DF9-B559-4455-8478-8C9689B61B62.png" alt="1C410DF9-B559-4455-8478-8C9689B61B62"/></p>
+
+<h2 id="toc_3">总结</h2>
+
+<ul>
+<li>考虑使用 Size Class 可以使你的 app 不管用户使用什么设备都能表现的很出色。</li>
+<li>使用动态类型可以使你的文本更加容易放大缩小、翻译到其他语言，这可以让更多的人使用你的 app。</li>
+<li>充分利用好已经有的 UI 元素将会把你从再设计、再创造那些用户早已熟悉的功能中解放出来。</li>
+</ul>
+
+<p>我们鼓励你利用好这些工具，不仅会节约你的时间，而且不管用户使用的是什么 iOS 设备，你的 app 的体验都是无缝完美的。</p>
+
+<h2 id="toc_4">Read More</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/adaptivity-and-layout/">Adaptivity and Layout - Visual Design - iOS Human Interface Guidelines</a></li>
+<li><a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/typography/">Typography - Visual Design - iOS Human Interface Guidelines</a></li>
+</ul>
+
+<blockquote>
+<p>Session 链接：<a href="https://developer.apple.com/videos/play/design/812/">https://developer.apple.com/videos/play/design/812/</a>  </p>
+</blockquote>
+
+<p>📱</p>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[什么是好的，什么是美的]]></title>
@@ -4213,71 +4342,6 @@ movieBackgroudImageView.addSubview(blurEffectView)
 <p>目前Zeplin仅支持与<a href="https://slack.com">Slack</a>连接，提供项目或页面更新提醒，如果之后能够支持更多服务（如Trello、Teambition、Worktile）就更好了。还有个小细节，目前在项目中添加的NOTE不支持导出、归档，所以在项目结束后，如果有重要的NOTE就会丢失了。这个地方如果能够稍加完善就更好了。</p>
 
 <p>大家可以到<a href="https://zeplin.io">Zeplin的官网</a>了解它的更多细节。这个工具免费版只能创建一个项目，若需创建更多项目需要付费订阅。最便宜的15刀/月可以创建3个项目，不需要项目中每个成员都付费，只需一人订阅，即可全体受益。</p>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[怎么获取手机上的App图标]]></title>
-    <link href="http://chuxiangyuan.github.io/14631313149355.html"/>
-    <updated>2016-05-13T17:21:54+08:00</updated>
-    <id>http://chuxiangyuan.github.io/14631313149355.html</id>
-    <content type="html"><![CDATA[
-<p>在写文章、做展示或者其他场景中，我们需要某些手机上的App图标来作为素材。网上有许多文章讲了图标的获取方法，在这里说几个我自己常用且获取快速方便的方法。</p>
-
-<span id="more"></span><!-- more -->
-
-<h2 id="toc_0">获取Android应用图标</h2>
-
-<p>相对于iOS应用图标，Android的应用图标获取比较简单：</p>
-
-<ul>
-<li>通过Google Play获取：比如想获取Wunderlist这个App的图标，打开Google Play，搜索到<a href="https://play.google.com/store/apps/details?id=com.wunderkinder.wunderlistandroid&amp;hl=zh-CN">Wunderlist的详情页</a>，直接图标上右击保存图标即可。</li>
-</ul>
-
-<p><img src="media/14631313149355/14631319696964.jpg" alt=""/></p>
-
-<ul>
-<li>如果你没有科学上网工具或者你要查找的App没有在Google Play中收录，那可以利用其它国内的安卓应用市场，以在豌豆荚获取网易云音乐的图标为例，同样是打开<a href="http://www.wandoujia.com/apps/com.netease.cloudmusic">网易云音乐的详情页</a>，直接图标上右击保存图标即可。</li>
-</ul>
-
-<p><img src="media/14631313149355/14631321310807.jpg" alt=""/></p>
-
-<h2 id="toc_1">获取iOS应用图标</h2>
-
-<p>iOS应用的渠道比较独立，只有App Store一个，而在应用详情页上不能直接通过右键另存为的方法保存图标，但倒是可以通过查看网页源代码来找到图标文件，如果觉着麻烦可以看看下面的方法。</p>
-
-<ul>
-<li>借助App <a href="https://appsto.re/cn/0eIv5.i">Lightscreen（点击下载）</a> 这款软件，在App Store的应用详情页上点击“分享”，再选择“保存为截图”，App的图标就乖乖地躺进相册里了。借助的这个小工具其实是一款截图管理软件，目前售价¥30，曾经冰点到¥18过。</li>
-</ul>
-
-<p><img src="media/14631313149355/IMG_1022.jpg" alt="IMG_1022"/></p>
-
-<ul>
-<li>上面的方法简单快捷，但如果没有购买 Lightscreen 可以通过<a href="http://appshopper.com/">AppShopper</a>这个网站来获取。<a href="http://appshopper.com/">AppShopper</a>网站是一个可以查看iOS、Mac应用的具体信息的网站，可以查看到App具体的升级、降价历史信息，可以在自己购买应用时做一个参考。在网站上找到应用详情页，然后在图标上直接右键另存为即可。</li>
-</ul>
-
-<p><img src="media/14631313149355/14631332088058.jpg" alt=""/></p>
-
-<h2 id="toc_2">MORE</h2>
-
-<p>如果你想知道更多获取App图标的方法，可以看下少数派的这两篇文章：<br/>
-<a href="http://sspai.com/27269">提取 Android 高清应用图标？3 招就够</a><br/>
-<a href="http://sspai.com/27234">提取 Mac OS X / iOS 应用图标的 6 种技巧</a></p>
-
-<p>推荐下其中提到的网站<a href="http://bendodson.com/code/itunes-artwork-finder/index.html">iTunes Artwork Finder</a></p>
-
-<blockquote>
-<p>iTunes Artwork Finder可以提取电视节目、视频、电子书、专辑插图、应用程序、播客、电影等多达十项元素的大图标，还可以选择商店国籍，非常全能。</p>
-</blockquote>
-
-<p>注意下，在此网站中提取到的App图标是方形的，而不是圆角矩形的。</p>
 
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
