@@ -4,13 +4,102 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2018-06-20T17:58:53+08:00</updated>
+  <updated>2018-06-20T20:10:02+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[妙用 Xcode 修改 iPhone 的当前定位位置]]></title>
+    <link href="http://chuxiangyuan.github.io/15294912961206.html"/>
+    <updated>2018-06-20T18:41:36+08:00</updated>
+    <id>http://chuxiangyuan.github.io/15294912961206.html</id>
+    <content type="html"><![CDATA[
+<p>iPhone 可以利用 GPS 来精确定位所处的位置，借助得到的位置结果可以应用在众多地图类、社交类等 app 中。为了 app 的开发和测试或者一些其他目的，有时需要改变当前的定位位置来测试一些结果。本文的主题就是在不需要越狱的前提下，使用 iOS 开发最常用的 Xcode 工具来临时修改 iPhone 的当前定位位置。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">背景</h2>
+
+<p>地图中的每一个点都有一个坐标，可以用经度（表东西方向）和纬度（表南北方向）来表示。针对于这个坐标，我们常见的有三种坐标系标准：</p>
+
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%B8%96%E7%95%8C%E5%A4%A7%E5%9C%B0%E6%B5%8B%E9%87%8F%E7%B3%BB%E7%BB%9F">WGS-84</a>：即在 1984 年定义的世界大地测量系统（World Geodetic System, WGS），也是被广泛采用的坐标系标准；</li>
+<li><a href="https://zh.wikipedia.org/wiki/GCJ-02">GCJ-02</a>：一种基于 WGS-84 制定的大地测量系统 ，由中国国测局制定。此坐标系所采用的混淆算法会在经纬度中加入看似随机的偏移，号称可以促进国家安全🙃。目前该算法已经通过多种语言形式实现了向 WGS-84 坐标的转换。高德地图、Google Map 中国内地部分的坐标采用了此标准。</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE#%E5%9D%90%E6%A0%87%E7%B3%BB">BD-09</a>：百度在 GCJ-02 的基础上多增加了一次变换，号称“有助保护用户隐私”🙃🙃。目前也已被反向转换。百度地图采用了此标准。</li>
+</ul>
+
+<p>要想把定位位置改成我们想要的位置，首先要找到那个位置的经度+维度坐标，确定其使用的坐标标准，利用工具将其转换为 WGS-84 标准，获取到在 WGS-84 标准下的准确坐标。</p>
+
+<h2 id="toc_1">准备</h2>
+
+<p>以下以「上海中心」这个地理位置坐标作为最终目标为例说明：</p>
+
+<ul>
+<li><strong>1.获取 GCJ-02 标准的地理位置坐标：</strong>在<a href="http://lbs.amap.com/console/show/picker">高德地图</a>或者 <a href="http://map.google.com">Google 地图</a>中找到上海中心的经纬度坐标（GCJ-02 标准）为<code>121.505385,31.233526</code>，如下图：</li>
+</ul>
+
+<ul class="example-orbit" data-orbit>
+      <li>
+        <img src="media/15294912961206/15294961375135.jpg" alt="" />
+        <div class="orbit-caption">高德地图</div>
+      </li>
+      <li>
+        <img src="media/15294912961206/15294959439988.jpg" alt="" />
+        <div class="orbit-caption">Google Map</div>
+      </li>
+    </ul>
+
+<ul>
+<li><strong>2.获取 WGS-84 标准的地理位置坐标：</strong>利用<a href="http://www.dituwa.com/tool/gpxaxes">转换工具</a>将获取到的 GCJ-02 标准的坐标转换成 WGS-84 标准的坐标，如下图，最终获取到的 WGS-84 坐标为<code>121.50097295,31.23555959</code>。</li>
+</ul>
+
+<p><img src="media/15294912961206/15294938764536.jpg" alt=""/></p>
+
+<ul>
+<li><strong>3.配置一个 GPX 格式的文件：</strong>这个文件稍后会导入到 Xcode 项目中使用，文件内容如下，注意将其中的 <code>lat</code> 和 <code>lon</code> 改成刚刚你获取到的 WGS-84 坐标。</li>
+</ul>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;gpx version=&quot;1.1&quot;
+    creator=&quot;GMapToGPX 6.4j - http://www.elsewhere.org/GMapToGPX/&quot;
+    xmlns=&quot;http://www.topografix.com/GPX/1/1&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd&quot;&gt;
+    &lt;wpt lat=&quot;31.23555959&quot; lon=&quot;121.50097295&quot;&gt;
+    &lt;/wpt&gt;
+&lt;/gpx&gt;
+</code></pre>
+
+<h2 id="toc_2">操作</h2>
+
+<ul>
+<li>1.在 Xcode 中新建一个项目，并将刚刚创建的 gpx 格式文件拖入到项目中，如下图：</li>
+</ul>
+
+<p><img src="media/15294912961206/15294943878773.jpg" alt=""/></p>
+
+<ul>
+<li>2.打开 Xcode 项目的「Edit Scheme…」设置窗口，在「Run-Option-Core Location」中选中「Allow Location Simulation」，并在「Default Location」选择刚刚添加的 gpx 文件（Default Location 中默认包含了一些全世界各个国家和地区的位置，这些位置的周围一般都有一家 Apple Store），如下图：</li>
+</ul>
+
+<p><img src="media/15294912961206/15294945642294.jpg" alt=""/></p>
+
+<ul>
+<li>3.在 iPhone 真机上编译并运行此 app，此时手机的定位位置就已经变成了「上海中心」，可以在地图 app 或者社交 app 中查看确认。</li>
+</ul>
+
+<p><img src="media/15294912961206/15294951958551.jpg" alt=""/></p>
+
+<ul>
+<li>4.只要不在 Xcode 中停止运行 app，这个模拟的地理位置就可以保持一段时间，在 Xcode 中停止运行 app 或者重启手机都会恢复成真实的地理位置。</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Size Classes and Core Components - WWDC 2017 Session 812]]></title>
@@ -4282,72 +4371,6 @@ movieBackgroudImageView.addSubview(blurEffectView)
 </ul>
 
 <p><img src="media/14672077197053/3.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[利器分享-Zeplin]]></title>
-    <link href="http://chuxiangyuan.github.io/14641807710350.html"/>
-    <updated>2016-05-25T20:52:51+08:00</updated>
-    <id>http://chuxiangyuan.github.io/14641807710350.html</id>
-    <content type="html"><![CDATA[
-<p>作为一个产品汪或者设计师或者程序猿，你是否遇到过下面这些问题：</p>
-
-<blockquote>
-<ul>
-<li>程序猿拿到设计师给出的设计图，只看到花花绿绿的一片，但是不知道开发时各个元素的间距到底是多少？该用啥字体？该用多大字号？这个文字是灰色还是黑色？具体的色值是多少？是半透明还是80%透明度？</li>
-<li>为了让程序猿看得懂设计图，设计师辛苦的为每个图做出精细的标注，花费的时间比设计图本身还长？</li>
-<li>产品经理针对设计图需要沟通的地方总是沟通不到位、理解不一致？花费了很多时间，最后还是没改对地方？</li>
-<li>设计师update了设计图，程序猿拿到设计图时感到顿时懵逼？不知道哪张图改了？不知道哪些地方改了？到底要改成啥样？</li>
-<li>对于设计图通用的一些样式、形状，程序猿每个都需要机械的去写css代码？</li>
-<li>设计图中某个元素需要切图时，@1x、@2x、@3x傻傻分不清楚？</li>
-</ul>
-</blockquote>
-
-<p>So，安利大家一个利器：Zeplin，上面的问题解决起来so easy，程序猿、产品汪、设计师又可以在一起愉快的玩耍了。</p>
-
-<span id="more"></span><!-- more -->
-
-<p>利用Zeplin可以基本实现：</p>
-
-<ul>
-<li><p>快速直接从Sketch文件中导出所有图层到Zeplin中，无需修改，无缝衔接；</p></li>
-<li><p>查看所有元素的长度、宽度、边距、字体、字号、字体颜色等，甚至可以生成CSS代码，无需再刻意生成标注图；</p></li>
-</ul>
-
-<p><img src="http://o6lwrrweh.bkt.clouddn.com/2016-05-25-%E6%88%AA%E5%9B%BE%202016-05-25%2018%E6%97%B636%E5%88%8650%E7%A7%92.jpg" alt="查看标注"/></p>
-
-<ul>
-<li>给具体某个元素添加注释说明NOTE，例如某次更改的地方的注释、希望让开发同学特别注意的地方；</li>
-</ul>
-
-<p><img src="http://o6lwrrweh.bkt.clouddn.com/2016-05-25-%E6%88%AA%E5%9B%BE%202016-05-25%2018%E6%97%B639%E5%88%8605%E7%A7%92.jpg" alt="添加NOTE"/></p>
-
-<ul>
-<li><p>可邀请项目成员加入协作，所有成员都能同步看到所有更改、NOTE；</p></li>
-<li><p>可以自由选择导出想导出的元素、切图；</p></li>
-</ul>
-
-<p><img src="http://o6lwrrweh.bkt.clouddn.com/2016-05-25-%E6%88%AA%E5%9B%BE%202016-05-25%2018%E6%97%B638%E5%88%8624%E7%A7%92.jpg" alt="导出元素"/></p>
-
-<ul>
-<li>可以定义、查看整个产品的颜色样式和文字样式。</li>
-</ul>
-
-<p><img src="http://o6lwrrweh.bkt.clouddn.com/2016-05-25-%E6%88%AA%E5%9B%BE%202016-05-25%2018%E6%97%B637%E5%88%8641%E7%A7%92.jpg" alt="查看颜色和文字样式"/></p>
-
-<p>作为一个细分领域的团队协作工具，Zeplin确实是抓住了设计者和开发者的痛点。对于整体使用Mac的团队，如果可以根据自己团队的实际情况加以利用，一定会提升不少效率。</p>
-
-<p>目前Zeplin仅支持与<a href="https://slack.com">Slack</a>连接，提供项目或页面更新提醒，如果之后能够支持更多服务（如Trello、Teambition、Worktile）就更好了。还有个小细节，目前在项目中添加的NOTE不支持导出、归档，所以在项目结束后，如果有重要的NOTE就会丢失了。这个地方如果能够稍加完善就更好了。</p>
-
-<p>大家可以到<a href="https://zeplin.io">Zeplin的官网</a>了解它的更多细节。这个工具免费版只能创建一个项目，若需创建更多项目需要付费订阅。最便宜的15刀/月可以创建3个项目，不需要项目中每个成员都付费，只需一人订阅，即可全体受益。</p>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
-</blockquote>
 
 ]]></content>
   </entry>

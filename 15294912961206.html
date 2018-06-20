@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  Allen Chu
+  妙用 Xcode 修改 iPhone 的当前定位位置 - Allen Chu
   
   </title>
   
@@ -107,240 +107,168 @@
        
 
  <script type="text/javascript">
-	$(function(){
-		$('#menu_item_index').addClass('is_active');
-	});
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
 </script>
 <div class="row">
-	<div class="large-8 medium-8 columns">
-		<div class="markdown-body home-categories">
-		
-			<div class="article">
-                <a class="clearlink" href="14641807710350.html">
-                
-                  <div class="f-img"><img src="media/14641807710350/ssTypeface.png" /></div>
-                
-                  <h1>利器分享-Zeplin</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>作为一个产品汪或者设计师或者程序猿，你是否遇到过下面这些问题：</p>
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+              <div class="f-img"><img src="media/15294912961206/15294956428360.jpg" /></div>
+          
+          <h1>妙用 Xcode 修改 iPhone 的当前定位位置</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2018/3/18</span>
 
-<blockquote>
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='Tools.html'>Tools</a></span>
+           
+         
+          <span class="comments">
+            
+              <a href="http://chuxiangyuan.github.io/15294912961206.html#disqus_thread">comments</a>
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p>iPhone 可以利用 GPS 来精确定位所处的位置，借助得到的位置结果可以应用在众多地图类、社交类等 app 中。为了 app 的开发和测试或者一些其他目的，有时需要改变当前的定位位置来测试一些结果。本文的主题就是在不需要越狱的前提下，使用 iOS 开发最常用的 Xcode 工具来临时修改 iPhone 的当前定位位置。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">背景</h2>
+
+<p>地图中的每一个点都有一个坐标，可以用经度（表东西方向）和纬度（表南北方向）来表示。针对于这个坐标，我们常见的有三种坐标系标准：</p>
+
 <ul>
-<li>程序猿拿到设计师给出的设计图，只看到花花绿绿的一片，但是不知道开发时各个元素的间距到底是多少？该用啥字体？该用多大字号？这个文字是灰色还是黑色？具体的色值是多少？是半透明还是80%透明度？</li>
-<li>为了让程序猿看得懂设计图，设计师辛苦的为每个图做出精细的标注，花费的时间比设计图本身还长？</li>
-<li>产品经理针对设计图需要沟通的地方总是沟通不到位、理解不一致？花费了很多时间，最后还是没改对地方？</li>
-<li>设计师update了设计图，程序猿拿到设计图时感到顿时懵逼？不知道哪张图改了？不知道哪些地方改了？到底要改成啥样？</li>
-<li>对于设计图通用的一些样式、形状，程序猿每个都需要机械的去写css代码？</li>
-<li>设计图中某个元素需要切图时，@1x、@2x、@3x傻傻分不清楚？</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%B8%96%E7%95%8C%E5%A4%A7%E5%9C%B0%E6%B5%8B%E9%87%8F%E7%B3%BB%E7%BB%9F">WGS-84</a>：即在 1984 年定义的世界大地测量系统（World Geodetic System, WGS），也是被广泛采用的坐标系标准；</li>
+<li><a href="https://zh.wikipedia.org/wiki/GCJ-02">GCJ-02</a>：一种基于 WGS-84 制定的大地测量系统 ，由中国国测局制定。此坐标系所采用的混淆算法会在经纬度中加入看似随机的偏移，号称可以促进国家安全🙃。目前该算法已经通过多种语言形式实现了向 WGS-84 坐标的转换。高德地图、Google Map 中国内地部分的坐标采用了此标准。</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE#%E5%9D%90%E6%A0%87%E7%B3%BB">BD-09</a>：百度在 GCJ-02 的基础上多增加了一次变换，号称“有助保护用户隐私”🙃🙃。目前也已被反向转换。百度地图采用了此标准。</li>
 </ul>
-</blockquote>
 
-<p>So，安利大家一个利器：Zeplin，上面的问题解决起来so easy，程序猿、产品汪、设计师又可以在一起愉快的玩耍了。</p>
+<p>要想把定位位置改成我们想要的位置，首先要找到那个位置的经度+维度坐标，确定其使用的坐标标准，利用工具将其转换为 WGS-84 标准，获取到在 WGS-84 标准下的准确坐标。</p>
 
+<h2 id="toc_1">准备</h2>
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                   <a href="14641807710350.html">Read more</a>&nbsp;&nbsp; 
-                    <span class="date">2016/5/25</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tools.html'>Tools</a></span>
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="http://chuxiangyuan.github.io/14641807710350.html#disqus_thread">comments</a>
-                      
+<p>以下以「上海中心」这个地理位置坐标作为最终目标为例说明：</p>
 
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="14631313149355.html">
-                
-                  <h1>怎么获取手机上的App图标</h1>
-                  <div class="a-content">
-                      
-		                  <div class="a-content-img">
-                      		<img src="media/14631313149355/iphone-1125136.jpg" />
-                      	  </div>
-		              
-                      <div class="a-content-text">
-                        
-                        	<p>在写文章、做展示或者其他场景中，我们需要某些手机上的App图标来作为素材。网上有许多文章讲了图标的获取方法，在这里说几个我自己常用且获取快速方便的方法。</p>
+<ul>
+<li><strong>1.获取 GCJ-02 标准的地理位置坐标：</strong>在<a href="http://lbs.amap.com/console/show/picker">高德地图</a>或者 <a href="http://map.google.com">Google 地图</a>中找到上海中心的经纬度坐标（GCJ-02 标准）为<code>121.505385,31.233526</code>，如下图：</li>
+</ul>
 
+<ul class="example-orbit" data-orbit>
+      <li>
+        <img src="media/15294912961206/15294961375135.jpg" alt="" />
+        <div class="orbit-caption">高德地图</div>
+      </li>
+      <li>
+        <img src="media/15294912961206/15294959439988.jpg" alt="" />
+        <div class="orbit-caption">Google Map</div>
+      </li>
+    </ul>
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                   <a href="14631313149355.html">Read more</a>&nbsp;&nbsp; 
-                    <span class="date">2016/5/13</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tools.html'>Tools</a></span>
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="http://chuxiangyuan.github.io/14631313149355.html#disqus_thread">comments</a>
-                      
+<ul>
+<li><strong>2.获取 WGS-84 标准的地理位置坐标：</strong>利用<a href="http://www.dituwa.com/tool/gpxaxes">转换工具</a>将获取到的 GCJ-02 标准的坐标转换成 WGS-84 标准的坐标，如下图，最终获取到的 WGS-84 坐标为<code>121.50097295,31.23555959</code>。</li>
+</ul>
 
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15105083511786.html">
-                
-                  <div class="f-img"><img src="media/15105083511786/15105118061143.jpg" /></div>
-                
-                  <h1>个人网站大事记</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>谨在此记录我的这个个人网站成长过程中值得纪念的时刻和网站中文章背后的故事。搞懂逻辑、理清思路、沉淀想法、纪录生活，愿这个网站能伴随我一起成长💪</p>
+<p><img src="media/15294912961206/15294938764536.jpg" alt=""/></p>
+
+<ul>
+<li><strong>3.配置一个 GPX 格式的文件：</strong>这个文件稍后会导入到 Xcode 项目中使用，文件内容如下，注意将其中的 <code>lat</code> 和 <code>lon</code> 改成刚刚你获取到的 WGS-84 坐标。</li>
+</ul>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;gpx version=&quot;1.1&quot;
+    creator=&quot;GMapToGPX 6.4j - http://www.elsewhere.org/GMapToGPX/&quot;
+    xmlns=&quot;http://www.topografix.com/GPX/1/1&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd&quot;&gt;
+    &lt;wpt lat=&quot;31.23555959&quot; lon=&quot;121.50097295&quot;&gt;
+    &lt;/wpt&gt;
+&lt;/gpx&gt;
+</code></pre>
+
+<h2 id="toc_2">操作</h2>
+
+<ul>
+<li>1.在 Xcode 中新建一个项目，并将刚刚创建的 gpx 格式文件拖入到项目中，如下图：</li>
+</ul>
+
+<p><img src="media/15294912961206/15294943878773.jpg" alt=""/></p>
+
+<ul>
+<li>2.打开 Xcode 项目的「Edit Scheme…」设置窗口，在「Run-Option-Core Location」中选中「Allow Location Simulation」，并在「Default Location」选择刚刚添加的 gpx 文件（Default Location 中默认包含了一些全世界各个国家和地区的位置，这些位置的周围一般都有一家 Apple Store），如下图：</li>
+</ul>
+
+<p><img src="media/15294912961206/15294945642294.jpg" alt=""/></p>
+
+<ul>
+<li>3.在 iPhone 真机上编译并运行此 app，此时手机的定位位置就已经变成了「上海中心」，可以在地图 app 或者社交 app 中查看确认。</li>
+</ul>
+
+<p><img src="media/15294912961206/15294951958551.jpg" alt=""/></p>
+
+<ul>
+<li>4.只要不在 Xcode 中停止运行 app，这个模拟的地理位置就可以保持一段时间，在 Xcode 中停止运行 app 或者重启手机都会恢复成真实的地理位置。</li>
+</ul>
 
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                   <a href="15105083511786.html">Read more</a>&nbsp;&nbsp; 
-                    <span class="date">2016/5/8</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Others.html'>Others</a></span>
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="http://chuxiangyuan.github.io/15105083511786.html#disqus_thread">comments</a>
-                      
+    
 
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="14625508580709.html">
-                
-                  <div class="f-img"><img src="media/14625508580709/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-06%2023.46.09.png" /></div>
-                
-                  <h1>说说Apple“我的照片流”和“iCloud照片图库”那些事</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>关于“我的照片流”和“iCloud照片图库”的Apple的官方解释：</p>
+      </div>
 
-<blockquote>
-<p>使用“我的照片流”，您可以在 Mac 和 PC 上访问<strong>最近</strong>使用 iPhone、iPad 或 iPod touch 拍摄的<strong>照片</strong>。</p>
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15171487371271.html" 
+          title="Next Post: Size Classes and Core Components - WWDC 2017 Session 812">Size Classes and Core Components - WWDC 2017 Session 812 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_douban"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
 
-<p>“iCloud 照片图库”可与全新“照片”应用无缝搭配使用，从而将您的<strong>照片和视频</strong>存储在 iCloud 中，并在您的 iPhone、iPad、iPod touch、Mac 和 iCloud.com 上保持最新状态。</p>
-</blockquote>
+          
+            <div id="disqus_thread"></div>
+          
 
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                   <a href="14625508580709.html">Read more</a>&nbsp;&nbsp; 
-                    <span class="date">2016/5/7</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Teconology.html'>Teconology</a></span>
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="http://chuxiangyuan.github.io/14625508580709.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="14631451597072.html">
-                
-                  <h1>建立个人网站目标已达成✓</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>之前有了解过 Markdown 语言，但之前只了解了下皮毛，最近做了进一步研究，也对比了一下各个 Markdown 编辑器的优劣。结果利用 MWeb 以及 Github 的 PAGES 服务顺藤摸瓜的建立起了自己的个人网站。</p>
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
 
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                   <a href="14631451597072.html">Read more</a>&nbsp;&nbsp; 
-                    <span class="date">2016/5/7</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Others.html'>Others</a></span>
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="http://chuxiangyuan.github.io/14631451597072.html#disqus_thread">comments</a>
-                      
 
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-              
-
-
-			<div class="row">
-			  <div class="large-6 columns">
-			  <p class="text-left" style="padding-top:25px;">
-			   <a href="all_1.html">&laquo; Prev Page</a>  
-			  </p>
-			  </div>
-			  <div class="large-6 columns">
-			<p class="text-right" style="padding-top:25px;">
-			
-			</p>
-			  </div>
-			</div>
-		</div>
-	</div><!-- large 8 -->
 
  <div class="large-4 medium-4 columns">
   <div class="hide-for-small">
