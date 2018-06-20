@@ -4,7 +4,7 @@
   <title><![CDATA[Allen Chu]]></title>
   <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
   <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2018-01-28T22:21:45+08:00</updated>
+  <updated>2018-06-20T17:58:53+08:00</updated>
   <id>http://chuxiangyuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -152,7 +152,7 @@
 <span id="more"></span><!-- more -->
 
 <blockquote>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29567193&auto=0&height=66"></iframe>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/%E6%88%91%E4%BB%AC%E7%9A%84%E6%97%B6%E5%85%89/1156892027?i=1156892150&app=music" width="100%"></iframe>
 </blockquote>
 
 <h2 id="toc_0">好的城市、好的生活</h2>
@@ -265,7 +265,7 @@
 <p>世界很大，未来的路道阻且长，但这并不妨碍我们不断去发现、去成就更好的、更美的，行则将至，与君共勉。</p>
 
 <blockquote>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=27646851&auto=0&height=66"></iframe>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/best-day-of-my-life/832889970?i=832889974&app=music" width="100%"></iframe>
 </blockquote>
 
 ]]></content>
