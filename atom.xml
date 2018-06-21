@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Allen Chu]]></title>
-  <link href="http://chuxiangyuan.github.io/atom.xml" rel="self"/>
-  <link href="http://chuxiangyuan.github.io/"/>
-  <updated>2018-06-20T20:10:02+08:00</updated>
-  <id>http://chuxiangyuan.github.io/</id>
+  <title><![CDATA[向远公园 | Step Park]]></title>
+  <link href="https://steppark.net/atom.xml" rel="self"/>
+  <link href="https://steppark.net/"/>
+  <updated>2018-06-21T23:43:17+08:00</updated>
+  <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
     
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[妙用 Xcode 修改 iPhone 的当前定位位置]]></title>
-    <link href="http://chuxiangyuan.github.io/15294912961206.html"/>
+    <link href="https://steppark.net/15294912961206.html"/>
     <updated>2018-06-20T18:41:36+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15294912961206.html</id>
+    <id>https://steppark.net/15294912961206.html</id>
     <content type="html"><![CDATA[
 <p>iPhone 可以利用 GPS 来精确定位所处的位置，借助得到的位置结果可以应用在众多地图类、社交类等 app 中。为了 app 的开发和测试或者一些其他目的，有时需要改变当前的定位位置来测试一些结果。本文的主题就是在不需要越狱的前提下，使用 iOS 开发最常用的 Xcode 工具来临时修改 iPhone 的当前定位位置。</p>
 
@@ -103,9 +103,9 @@
   
   <entry>
     <title type="html"><![CDATA[Size Classes and Core Components - WWDC 2017 Session 812]]></title>
-    <link href="http://chuxiangyuan.github.io/15171487371271.html"/>
+    <link href="https://steppark.net/15171487371271.html"/>
     <updated>2018-01-28T22:12:17+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15171487371271.html</id>
+    <id>https://steppark.net/15171487371271.html</id>
     <content type="html"><![CDATA[
 <p>如今开发 iOS App 需要面对四种不同的 iPhone 屏幕尺寸（iPhone SE、iPhone 8、iPhone 8 Plus、iPhone X）和三种不同的 iPad 屏幕尺寸（iPad Mini、iPad Pro 9.7’’、iPad Pro 12.9’’），同时还有不同的屏幕方向、左右分屏、多任务屏幕需要处理。这就导致在设计开发一个 app 时有许多种屏幕尺寸需要考虑。</p>
 
@@ -232,9 +232,9 @@
   
   <entry>
     <title type="html"><![CDATA[什么是好的，什么是美的]]></title>
-    <link href="http://chuxiangyuan.github.io/15120578044761.html"/>
+    <link href="https://steppark.net/15120578044761.html"/>
     <updated>2017-12-01T00:03:24+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15120578044761.html</id>
+    <id>https://steppark.net/15120578044761.html</id>
     <content type="html"><![CDATA[
 <p>这是我的个人博客中关于生活的第一篇文章，今天也是 2017 年的最后一个月的第一天，此时此刻的我正准备开始我的第三份工作，准备与北京说再见，再次回到上海，开启一段新的旅程。在这个转折点，我觉得值得用一篇文章来承前启后，记录下当前的状态和对未来的期望。</p>
 
@@ -362,9 +362,9 @@
   
   <entry>
     <title type="html"><![CDATA[Allen 说:🎙]]></title>
-    <link href="http://chuxiangyuan.github.io/15107547493398.html"/>
+    <link href="https://steppark.net/15107547493398.html"/>
     <updated>2017-11-15T22:05:49+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15107547493398.html</id>
+    <id>https://steppark.net/15107547493398.html</id>
     <content type="html"><![CDATA[
 <blockquote>
 <h5 id="toc_0">我眼中的优秀程序猿</h5>
@@ -473,9 +473,9 @@
   
   <entry>
     <title type="html"><![CDATA[个人常用 app 适配 iPhone X 的时间线记录]]></title>
-    <link href="http://chuxiangyuan.github.io/15091947537272.html"/>
+    <link href="https://steppark.net/15091947537272.html"/>
     <updated>2017-10-28T20:45:53+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15091947537272.html</id>
+    <id>https://steppark.net/15091947537272.html</id>
     <content type="html"><![CDATA[
 <p>iPhone X 与之前的 iPhone 不同，为了达到全面屏的效果，实体 Home 键被屏幕底部的 Home Indicator 取代，屏幕的四个角由直角变为了圆角，屏幕比例也不再是常见的 16:9，更引人注意的是屏幕顶部还有一个特殊的 Sensor Housing，也即人们俗称的刘海。<a href="15086036845015.html">之前的文章</a>详细阐述了这些变化给 iPhone X 上的 app  适配带去的挑战。</p>
 
@@ -1060,9 +1060,9 @@
   
   <entry>
     <title type="html"><![CDATA[Designing For iPhone X —— 关于 iPhone X 产品汪和设计狮应该了解的事]]></title>
-    <link href="http://chuxiangyuan.github.io/15086036845015.html"/>
+    <link href="https://steppark.net/15086036845015.html"/>
     <updated>2017-10-22T00:34:44+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15086036845015.html</id>
+    <id>https://steppark.net/15086036845015.html</id>
     <content type="html"><![CDATA[
 <p>Apple 在 2017 年 9 月的秋季发布会上正式发布了 iPhone X。iPhone X 与之前的 iPhone 不同，为了达到全面屏的效果，实体 Home 键被屏幕底部的 Home Indicator 取代，屏幕的四个角由直角变为了圆角，屏幕比例也不再是常见的 16:9，更引人注意的是屏幕顶部还有一个特殊的 Sensor Housing，也即人们俗称的刘海。这些变化对 iOS app 甚至网站的适配都提出了挑战，或多或少会影响你正在使用的 app 的功能与交互。</p>
 
@@ -1736,9 +1736,9 @@
   
   <entry>
     <title type="html"><![CDATA[深入了解 App Store in iOS 11]]></title>
-    <link href="http://chuxiangyuan.github.io/15038367340940.html"/>
+    <link href="https://steppark.net/15038367340940.html"/>
     <updated>2017-08-27T20:25:34+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15038367340940.html</id>
+    <id>https://steppark.net/15038367340940.html</id>
     <content type="html"><![CDATA[
 <p>WWDC 2017 上 Apple 介绍了 iOS 11 中全新设计的 App Store，在随后的 Session 中也从设计、编辑等角度详细介绍了焕然一新的 App Store。按照其介绍的思路，结合一些其他相关资料，在 iOS 11 正式版即将发布之前，来一起深入了解下 iOS 11 的 App Store。</p>
 
@@ -2132,9 +2132,9 @@
   
   <entry>
     <title type="html"><![CDATA[为订阅成功而设计 Designing for Subscription Success - WWDC 2017 Session 814]]></title>
-    <link href="http://chuxiangyuan.github.io/15036722610708.html"/>
+    <link href="https://steppark.net/15036722610708.html"/>
     <updated>2017-08-25T22:44:21+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15036722610708.html</id>
+    <id>https://steppark.net/15036722610708.html</id>
     <content type="html"><![CDATA[
 <p>在订阅时提供一个轻松简单、透明易懂、吸引人的用户体验将会更好地传达订阅的价值、优化订阅的流程，更加容易获取新的订阅者。</p>
 
@@ -2214,9 +2214,9 @@
   
   <entry>
     <title type="html"><![CDATA[iOS 11 设计上的改变 What’s New in iOS 11 - WWDC 2017 Session 810]]></title>
-    <link href="http://chuxiangyuan.github.io/15028131788266.html"/>
+    <link href="https://steppark.net/15028131788266.html"/>
     <updated>2017-08-16T00:06:18+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15028131788266.html</id>
+    <id>https://steppark.net/15028131788266.html</id>
     <content type="html"><![CDATA[
 <p>从寻路、排版层级、对比度三个方面介绍 iOS 11 设计上的一些变化，从而帮助你设计一个具有丰富的视觉层级、清晰的导航、易于使用和简单的交互的 app。</p>
 
@@ -2366,9 +2366,9 @@
   
   <entry>
     <title type="html"><![CDATA[WWDC Session 学习笔记总览]]></title>
-    <link href="http://chuxiangyuan.github.io/15028149583661.html"/>
+    <link href="https://steppark.net/15028149583661.html"/>
     <updated>2017-08-16T00:35:58+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15028149583661.html</id>
+    <id>https://steppark.net/15028149583661.html</id>
     <content type="html"><![CDATA[
 <p>每年 6 月份的 Apple WWDC，除了揭晓 iOS、macOS、watchOS、tvOS 四大新系统的功能亮点的 Keynote 外，在之后还会有众多的针对不同角色、不同目的的开发者、设计师等准备的 Session。虽然有些很简短、有些所讲述的主题非常垂直，但从这些 Session 中说不定就能了解到系统设计背后的故事、未来新功能发展的走向、深入简出的设计/开发方法等。</p>
 
@@ -2415,9 +2415,9 @@
   
   <entry>
     <title type="html"><![CDATA[从设计出发认识 UIAlertController]]></title>
-    <link href="http://chuxiangyuan.github.io/14994455522628.html"/>
+    <link href="https://steppark.net/14994455522628.html"/>
     <updated>2017-07-08T00:39:12+08:00</updated>
-    <id>http://chuxiangyuan.github.io/14994455522628.html</id>
+    <id>https://steppark.net/14994455522628.html</id>
     <content type="html"><![CDATA[
 <p>Apple 在 <a href="https://developer.apple.com/ios/human-interface-guidelines/ui-views/alerts/">iOS Human Interface Guidelines</a> 中提到了两种 View：Alert 和 Action Sheet。如果对 iOS 系统很熟悉的话，在各种 app 里都会看见这两种 View 的身影。两种 View 都会打断用户的操作，覆盖掉当前界面，在界面上以模态窗口的形式呈现，一般是向用户传达重要的信息并期望用户能够做出反馈。</p>
 
@@ -2777,9 +2777,9 @@
   
   <entry>
     <title type="html"><![CDATA[包容性 App 设计 Inclusive App Design - WWDC 2016 Session 801]]></title>
-    <link href="http://chuxiangyuan.github.io/15030704996885.html"/>
+    <link href="https://steppark.net/15030704996885.html"/>
     <updated>2017-08-18T23:34:59+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15030704996885.html</id>
+    <id>https://steppark.net/15030704996885.html</id>
     <content type="html"><![CDATA[
 <p>要想让自己的 app 面向更多的国家/地区，服务更多的各种各样的用户，就需要考虑 Inclusive App Design。除了为什么这样做，重点讲了该如何做。</p>
 
@@ -2968,9 +2968,9 @@
   
   <entry>
     <title type="html"><![CDATA[排版和字体 Typography and Fonts - WWDC 2016 Session 803]]></title>
-    <link href="http://chuxiangyuan.github.io/15029504785442.html"/>
+    <link href="https://steppark.net/15029504785442.html"/>
     <updated>2017-08-17T14:14:38+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15029504785442.html</id>
+    <id>https://steppark.net/15029504785442.html</id>
     <content type="html"><![CDATA[
 <p>由 SF 字体引出字体的一些术语和排版上的一些概念，介绍了 SF 字体在排版上提供的新功能。</p>
 
@@ -3178,9 +3178,9 @@ label.font = UIFont(descriptor: smallCapsFontDesc, size: pointSize)
   
   <entry>
     <title type="html"><![CDATA[新的系统字体 Introducing the New System Fonts - WWDC 2015 Session 804]]></title>
-    <link href="http://chuxiangyuan.github.io/15028584576994.html"/>
+    <link href="https://steppark.net/15028584576994.html"/>
     <updated>2017-08-16T12:40:57+08:00</updated>
-    <id>http://chuxiangyuan.github.io/15028584576994.html</id>
+    <id>https://steppark.net/15028584576994.html</id>
     <content type="html"><![CDATA[
 <p>介绍从 iOS 9 时代开始使用的新的系统字体 San Francisco，包括 SF 字体的分支、如何使用、提供的功能等。</p>
 
@@ -3363,9 +3363,9 @@ label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)
   
   <entry>
     <title type="html"><![CDATA[使用 Alfred 提高你的工作效率]]></title>
-    <link href="http://chuxiangyuan.github.io/14774965258076.html"/>
+    <link href="https://steppark.net/14774965258076.html"/>
     <updated>2016-10-26T23:42:05+08:00</updated>
-    <id>http://chuxiangyuan.github.io/14774965258076.html</id>
+    <id>https://steppark.net/14774965258076.html</id>
     <content type="html"><![CDATA[
 <p>相信看过 macOS 系统必备软件推荐这类文章的同学，一定听说过 Alfred 这款软件。Alfred 是一款通过一个输入框快速完成文件搜索、自定义动作从而大幅提高工作效率的软件，可以看成 macOS 自带功能 Spotlight 的加强版。</p>
 
@@ -3568,9 +3568,9 @@ label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)
   
   <entry>
     <title type="html"><![CDATA[Study iOS 9 Programming with Swift（4）]]></title>
-    <link href="http://chuxiangyuan.github.io/14727151264192.html"/>
+    <link href="https://steppark.net/14727151264192.html"/>
     <updated>2016-09-01T15:32:06+08:00</updated>
-    <id>http://chuxiangyuan.github.io/14727151264192.html</id>
+    <id>https://steppark.net/14727151264192.html</id>
     <content type="html"><![CDATA[
 <p>使用Swift进行iOS编程知识点总结第四篇。</p>
 
@@ -3669,9 +3669,9 @@ tableView.rowHeight = UITableViewAutomaticDimension
   
   <entry>
     <title type="html"><![CDATA[Study iOS 9 Programming with Swift（3）]]></title>
-    <link href="http://chuxiangyuan.github.io/14725650174400.html"/>
+    <link href="https://steppark.net/14725650174400.html"/>
     <updated>2016-08-30T21:50:17+08:00</updated>
-    <id>http://chuxiangyuan.github.io/14725650174400.html</id>
+    <id>https://steppark.net/14725650174400.html</id>
     <content type="html"><![CDATA[
 <p>使用Swift进行iOS编程知识点总结第三篇，主要包括Navigation Bar的导入和Appearance的自定义、状态栏的样式自定义、Segue的基本使用和通过Segues在两个View Controller间传递数据。</p>
 
@@ -3905,9 +3905,9 @@ tableView.rowHeight = UITableViewAutomaticDimension
   
   <entry>
     <title type="html"><![CDATA[Study iOS 9 Programming with Swift（2）]]></title>
-    <link href="http://chuxiangyuan.github.io/14710858606215.html"/>
+    <link href="https://steppark.net/14710858606215.html"/>
     <updated>2016-08-13T18:57:40+08:00</updated>
-    <id>http://chuxiangyuan.github.io/14710858606215.html</id>
+    <id>https://steppark.net/14710858606215.html</id>
     <content type="html"><![CDATA[
 <p>使用Swift进行iOS编程知识点总结第二篇，主要包括Table View和Table View Controller的区分使用，对Table View的Cells进行自定义，为每个cell添加分享动作，自定义tableview，图片圆角处理、模糊化处理等。</p>
 
@@ -4135,9 +4135,9 @@ movieBackgroudImageView.addSubview(blurEffectView)
   
   <entry>
     <title type="html"><![CDATA[Study iOS 9 Programming with Swift（1）]]></title>
-    <link href="http://chuxiangyuan.github.io/14709182567699.html"/>
+    <link href="https://steppark.net/14709182567699.html"/>
     <updated>2016-08-11T20:24:16+08:00</updated>
-    <id>http://chuxiangyuan.github.io/14709182567699.html</id>
+    <id>https://steppark.net/14709182567699.html</id>
     <content type="html"><![CDATA[
 <p>使用Swift进行iOS编程知识点总结第一篇，主要包括项目的基础搭建、Auto Layout、Alert的基本使用以及Table View的基本使用。</p>
 
@@ -4341,9 +4341,9 @@ movieBackgroudImageView.addSubview(blurEffectView)
   
   <entry>
     <title type="html"><![CDATA[学习使用Swift语言编写iOS程序小记]]></title>
-    <link href="http://chuxiangyuan.github.io/14672077197053.html"/>
+    <link href="https://steppark.net/14672077197053.html"/>
     <updated>2016-06-29T21:41:59+08:00</updated>
-    <id>http://chuxiangyuan.github.io/14672077197053.html</id>
+    <id>https://steppark.net/14672077197053.html</id>
     <content type="html"><![CDATA[
 <p>最近在了解Swift语言的语法，学着用Swift编写iOS程序，挖掘一下一直埋藏在心底coding的潜能，也锻炼下自己的逻辑思维能力。</p>
 
