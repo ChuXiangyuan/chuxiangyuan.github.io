@@ -4,7 +4,7 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2018-06-25T02:21:52+08:00</updated>
+  <updated>2018-06-25T12:37:07+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -21,8 +21,8 @@
 <blockquote>
 <h5 id="toc_0">「Night Mode/夜间模式」还是「Dark Mode/暗色模式」？</h5>
 
-<p><a href="https://www.apple.com/cn/macos/mojave-preview/">macOS Mojave 中关于「暗色模式」的介绍</a><br/>
-<a href="https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/">macOS Human Interface Guidelines 中关于「Dark Mode」的描述</a></p>
+<p><a href="https://www.apple.com/cn/macos/mojave-preview/">macOS Mojave 中关于「暗色模式」的介绍↗</a><br/>
+<a href="https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/">macOS Human Interface Guidelines 中关于「Dark Mode」的描述↗</a></p>
 
 <ul>
 <li>WWDC 18 中 Apple 发布了 Dark Mode for macOS，在 <a href="https://www.apple.com/cn/macos/mojave-preview/">macOS Mojave 的中文介绍页面</a>里翻译成了<strong>「暗色模式」</strong>而不是我们经常提到的<strong>「夜间模式」</strong>。关于「Night Mode/夜间模式」还是「Dark Mode/暗色模式」我有一些自己的思考。</li>
@@ -54,8 +54,8 @@
 <blockquote>
 <h5 id="toc_4">「Night Mode/夜间模式」还是「Dark Mode/暗色模式」？</h5>
 
-<p><a href="https://www.apple.com/cn/macos/mojave-preview/">macOS Mojave 中关于「暗色模式」的介绍</a><br/>
-<a href="https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/">macOS Human Interface Guidelines 中关于「Dark Mode」的描述</a></p>
+<p><a href="https://www.apple.com/cn/macos/mojave-preview/">macOS Mojave 中关于「暗色模式」的介绍↗</a><br/>
+<a href="https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/">macOS Human Interface Guidelines 中关于「Dark Mode」的描述↗</a></p>
 
 <ul>
 <li>WWDC 18 中 Apple 发布了 Dark Mode for macOS，在 <a href="https://www.apple.com/cn/macos/mojave-preview/">macOS Mojave 的中文介绍页面</a>里翻译成了<strong>「暗色模式」</strong>而不是我们经常提到的<strong>「夜间模式」</strong>。关于「Night Mode/夜间模式」还是「Dark Mode/暗色模式」我有一些自己的思考。</li>
@@ -68,10 +68,27 @@
 </ul>
 </blockquote>
 
-<h4 id="toc_5">6/13:</h4>
+<h4 id="toc_5">6/21:</h4>
 
 <blockquote>
-<h5 id="toc_6">Apple 这些年新功能、新硬件的发布节奏</h5>
+<h5 id="toc_6">越来越臃肿的知乎</h5>
+
+<ul>
+<li>我在很早期的时候（可能那时候很多非互联网从业者/爱好者还不知道知乎的存在）就成为了知乎的用户，那时候知乎的用户量还很小，整个社区的氛围很友好，回答问题的人写的基本都是干货，我也乐于花时间在知乎里到处探索自己感兴趣的话题。</li>
+<li>随着后来知乎被越来越多人知晓，知乎渐渐地从一个小众产品变成了一个大众产品，自然而然也有了更多需要落地的商业诉求，知乎涉及的领域逐渐扩大以至于变成现在这个在我看来十分「臃肿」的知乎。</li>
+<li>之前由于工作的需要，对知乎 app 现在的信息架构仔细梳理了一下，惊异于一个小小的 app 里包含如此复杂众多的内容和结构，内容方面除了包括最早的问题回答，还包括「文章」/「专栏」、社交属性的「想法」、知识付费领域的「Live 小讲」/「私家课」/「书店」/「会员课堂」/「读书会」等等，功能方面自然还有由内容引申出的「消息」、「我的/个人主页」、「设置」等，更不用说由内容引申出的多维度推荐、搜索、私信等。这一切全部塞在这一个 app 里，不免让人觉得有点喘不动气。</li>
+<li>而伴随着用户越来越多，用户的背景也越来越复杂，知乎中推荐的内容渐渐地被抖机灵的段子、消磨时间的泛娱乐化话题、看完哈哈一笑转头就忘了的各种湿货所占领，而好的回答/干货也被雪藏，乐于分享干货的人也在变少。现在如果不是因为想探索的话题恰好在知乎被搜索到，我不再会像以前一样打开知乎探索点什么未知的东西。</li>
+<li>知乎早期的 Slogan 是「与世界分享你的知识、经验、见解」，现在的 Slogan 是「发现更大的世界」。由重在分享向重在发现的转变，由知识、经验、见解向更大范围内容的转变，知乎的发展定位由此也可见一斑。</li>
+<li><p>非常戏剧化的是，今天知乎更新了新版本，又又又又增加了新的内容功能——一个视频 tab，把回答和文章里的视频单独拎了出来，看来又看上了最近逐渐火热的短视频市场。我在微博中吐槽道「有种反正已经复杂的像个怪胎索性放弃治疗的感觉，眼睁睁的看着知乎从一个清新脱俗的小孩子变成了一个失去底线的老流氓。」😔<br/>
+<img src="media/15107547493398/15298992479454.jpg" alt=""/></p></li>
+<li><p>产品做加法很简单，做减法很难，不仅在于怎么做，更在于敢不敢。受国内大环境的一部分影响，国产 app 可能都像知乎一样，因为商业诉求而不得不变得越来越庞大/复杂、核心跑偏，真的就没有办法做一个既获利，又克制的回归本源、真正重视用户体验的产品吗？</p></li>
+</ul>
+</blockquote>
+
+<h4 id="toc_7">6/13:</h4>
+
+<blockquote>
+<h5 id="toc_8">Apple 这些年新功能、新硬件的发布节奏</h5>
 
 <ul>
 <li>WWDC 18 中 Dark Mode 这个功能只在 macOS 平台中出现，Screen Time 这个功能只在 iOS 平台中出现，这俩功能什么时候会对应出现在 iOS、macOS 平台中呢？下面是根据这些年 Apple 发布的一个规律所得出的猜测：</li>
@@ -95,12 +112,12 @@
 </ul>
 </blockquote>
 
-<h4 id="toc_7">6/5:</h4>
+<h4 id="toc_9">6/5:</h4>
 
 <blockquote>
-<h5 id="toc_8">由 iOS 12 Developer Beta 预测未来的 iPad Pro</h5>
+<h5 id="toc_10">由 iOS 12 Developer Beta 预测未来的 iPad Pro</h5>
 
-<p><a href="https://weibo.com/2403484123/GjWVC9TDk?type=comment">在 iOS 12 Developer Beta 1 中，iPad Pro Face ID 的录入界面被曝光&amp;状态栏上的时间由中间移到了屏幕最左侧</a></p>
+<p><a href="https://weibo.com/2403484123/GjWVC9TDk?type=comment">在 iOS 12 Developer Beta 1 中，iPad Pro Face ID 的录入界面被曝光&amp;状态栏上的时间由中间移到了屏幕最左侧↗</a></p>
 
 <ul>
 <li>刘海屏的 iPad Pro 是一种可能性，但 iPad 更应该讲究握持感，而且「刘海」是一个因为技术所限不得不有的产物，终究有一天我们还是希望干掉刘海，如果现在能够在 iPad 上去掉刘海当然就没有必要留着了。</li>
@@ -111,14 +128,14 @@
 </ul>
 </blockquote>
 
-<h2 id="toc_9">2017 年</h2>
+<h2 id="toc_11">2017 年</h2>
 
-<h3 id="toc_10">11 月</h3>
+<h3 id="toc_12">11 月</h3>
 
-<h4 id="toc_11">11/17：</h4>
+<h4 id="toc_13">11/17：</h4>
 
 <blockquote>
-<h5 id="toc_12">我眼中的优秀程序猿</h5>
+<h5 id="toc_14">我眼中的优秀程序猿</h5>
 
 <ul>
 <li>在两份工作中我见过各型各色的程序猿，每个人的性格都不会一样，但随着各种项目的合作与配合，我发现在我的心中会逐渐形成一把衡量优秀的程序猿的尺子。与优秀的程序猿一起工作是一件十分舒服的事情。关于我眼中的优秀程序猿，我总结了下面几点：
@@ -133,7 +150,7 @@
 </ul></li>
 </ul>
 
-<h5 id="toc_13">产品汪与程序猿的关系</h5>
+<h5 id="toc_15">产品汪与程序猿的关系</h5>
 
 <ul>
 <li>时常会在网络上看到产品与开发间的相互吐槽，产品认为开发做出来的东西与自己期望值相差甚远，开发认为产品定的需求可笑离谱，甚至出现过「因产品经理不断提出新的不合理需求，工程师一怒之下捅死了产品经理」的段子/新闻。不管这些是真是假，是戏谑还是自嘲，都能看出互联网界产品汪与程序猿之间似乎有着天生的不可化解的敌意。</li>
@@ -143,33 +160,34 @@
 </ul>
 </blockquote>
 
-<h4 id="toc_14">11/15：</h4>
+<h4 id="toc_16">11/15：</h4>
 
 <blockquote>
-<h5 id="toc_15">Apple 的创新与勇气</h5>
+<h5 id="toc_17">Apple 的创新与勇气</h5>
 
-<p><a href="https://www.bilibili.com/video/av16317395/">「iPhone X 消费者报告」From @爱否科技&gt;&gt;&gt;</a><br/>
-<a href="https://www.bilibili.com/video/av14940301/">「iPhone 8 Plus消费者报告」From @爱否科技&gt;&gt;&gt;</a></p>
+<p><a href="https://www.bilibili.com/video/av16317395/">「iPhone X 消费者报告」From @爱否科技↗</a><br/>
+<a href="https://www.bilibili.com/video/av14940301/">「iPhone 8 Plus消费者报告」From @爱否科技↗</a></p>
 
 <ul>
 <li>一千个人眼中有一千个哈姆雷特，每一家媒体也会从自己的角度把对 iPhone X 的看法呈现给观众。看多了大众媒体对 iPhone X 抓住一个点就不放的浅显吐槽，甚至是为了搏大众眼球的水货文章，我们也应该静下心来去了解下产品背后的故事。</li>
 <li>这两个视频的尾声说的很好，Apple 之所以是 Apple，是因为 Apple 总是能从人性的角度出发去提前发现用户的需求并满足它，苛求极致并做到尽善尽美，不是堆叠处理器的参数而是使用不同的专用处理器去契合用户的不同使用场景，不是强调相机有多高的像素而是努力做到拍出的照片如同人眼看到的一模一样，不单单是想让用户通过拍照留住美好瞬间的 picture 而是想更多地留住这一瞬间的 moment；Apple 亦敢于顶住压力、拿出「Courage」去砍掉光驱、砍掉网口、砍掉 USB 接口、砍掉耳机接孔、用上 Touch ID、用上 Face ID，在产品上用上你想不到的创新。不敢说 Apple 百年不倒，但至少现在，Apple 值得我去学习和喜爱。</li>
 </ul>
 
-<h5 id="toc_16">共享单车</h5>
+<h5 id="toc_18">共享单车</h5>
 
-<p><a href="https://weibo.com/1750070171/Fvby82QZH">小蓝单车被爆宣布解散&gt;&gt;&gt;</a></p>
+<p><a href="https://weibo.com/1750070171/Fvby82QZH">小蓝单车被爆宣布解散↗</a></p>
 
 <ul>
 <li>今年 3 月 16 日我第一次使用小蓝单车，相比摩拜和 ofo，小蓝单车简直不能更好骑。在共享单车百家争鸣，试图通过各种红包优惠、月卡促销抢占用户的情况下，我曾一度在想用车时宁愿选择花钱的小蓝，也不愿选择免费的摩拜和 ofo。无奈小蓝还是输了，输给了入场速度，输给了融资困难，市场就是如此残酷😞</li>
 <li>去年 9 月 16 日我第一次使用共享单车-摩拜，对于接受新鲜事物很快的我来说，很期待共享单车能对我的生活做出一些改变，而那个时候也是共享单车刚刚进入市场的时候。一年的时间，共享单车确实在方便我的生活，但各家公司的野蛮发展是以牺牲城市整洁度为代价的，各种共享单车像蝗虫一样堆满了各城市主干道、各地铁站周边的道路，北京这座本身建设就不咋样的城市更是被摧残的惨不忍睹。抛开公司对单车的运营管理不足、公司为了抢占市场不择手段、政府出手监管不及时、政府监管仍在摸索不够完善这些因素，共享单车是否也是人的基本素质的照妖镜？每一次用车、每一次停车、每一次骑车穿行在繁忙的十字路口，我们每一个人是不是也应该对共享单车现在的乱象负点责？</li>
+<li>2018/04/19 Update：今天发现小蓝单车挂上了滴滴的牌子又重新出现了在北京的街头，因为之前对小蓝的喜爱而略感到一丝欣慰，希望以后能去更多城市吧。</li>
 </ul>
 </blockquote>
 
-<h4 id="toc_17">11/14：</h4>
+<h4 id="toc_19">11/14：</h4>
 
 <blockquote>
-<h5 id="toc_18">产品设计的抉择</h5>
+<h5 id="toc_20">产品设计的抉择</h5>
 
 <ul>
 <li>手里的广发信用卡进账了一笔一万块的退款，这卡本身用的也不多，一查才知道，广发规定当期消费在账单日后、还款日前退款入账，退款不能抵扣当期账单，该还多少还得还多少，莫名把这张信用卡花成了储蓄卡。</li>
@@ -177,7 +195,7 @@
 </ul>
 </blockquote>
 
-<h2 id="toc_19">One More Thing</h2>
+<h2 id="toc_21">One More Thing</h2>
 
 <ul>
 <li><p>你可以<a href="about.html">点击这里查看我的联系方式</a>😎</p></li>
