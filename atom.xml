@@ -4,7 +4,7 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2018-07-02T23:44:00+08:00</updated>
+  <updated>2018-07-07T00:59:27+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -25,14 +25,12 @@
 
 <ul>
 <li>今天在<a href="https://weibo.com/3951975029/GnsrKFujp">微博</a>上无意中了解到了日本的退休养老制度，引起我关注的几个核心内容如下，具体不展开：
-
 <ul>
 <li>以前，日本人退休后领取养老金的年龄是 60 岁，但随着日本老龄化严重、劳动力短缺问题越来越明显，政府不得不推迟领取养老金的年龄，但并不是一刀切；</li>
 <li>你可以选择在 60-70 岁之间的某个年龄开始领取养老金。以 65 岁为分界线，选择小于 65 岁时，则每提前一个月，每月领取额减少 0.5%；选择大于 65 岁时，则每延迟一个月，每月领取额增加 0.7%。以后可能会进一步实施的是，如果选择 70 岁以后开始领取，每月领取额的增额率进一步提高；</li>
 <li>总结一下就是根本上还是通过提高开始领取养老金的年龄（推荐 65 岁之后开始领取）来促进老年劳动力就业、减缓养老金开支，但实施的更加柔和，更能让人接受。在不得不推迟开始领取的年龄的前提下，我也更倾向于这种方式，毕竟自己有的选，大不了早领少拿点钱。</li>
 </ul></li>
 <li>对比下中国目前的养老保险制度，几个要点如下：
-
 <ul>
 <li>现行退休年龄是男性达到 60 岁，女性达到 55 岁，目前的计划是从某个时间点开始，女性退休年龄每 3 年延迟 1 岁，男性退休年龄每 6 年延迟 1 岁，直至同时达到 65 岁。虽然退休年龄从整体上是渐变的，但对于一个已经确定了出生年月的个体来说，根据政策退休年龄是完全确定的。</li>
 <li>领取养老金必须符合两个条件：1.达到上述的法定退休年龄；2.累积缴纳养老保险大于等于 15 年。如果符合条件，退休后领取的养老金数额将会根据你之前缴纳的金额、届时当地的平均工资水平、平均寿命都因素来计算。</li>
@@ -66,14 +64,12 @@
 
 <ul>
 <li>今天在<a href="https://weibo.com/3951975029/GnsrKFujp">微博</a>上无意中了解到了日本的退休养老制度，引起我关注的几个核心内容如下，具体不展开：
-
 <ul>
 <li>以前，日本人退休后领取养老金的年龄是 60 岁，但随着日本老龄化严重、劳动力短缺问题越来越明显，政府不得不推迟领取养老金的年龄，但并不是一刀切；</li>
 <li>你可以选择在 60-70 岁之间的某个年龄开始领取养老金。以 65 岁为分界线，选择小于 65 岁时，则每提前一个月，每月领取额减少 0.5%；选择大于 65 岁时，则每延迟一个月，每月领取额增加 0.7%。以后可能会进一步实施的是，如果选择 70 岁以后开始领取，每月领取额的增额率进一步提高；</li>
 <li>总结一下就是根本上还是通过提高开始领取养老金的年龄（推荐 65 岁之后开始领取）来促进老年劳动力就业、减缓养老金开支，但实施的更加柔和，更能让人接受。在不得不推迟开始领取的年龄的前提下，我也更倾向于这种方式，毕竟自己有的选，大不了早领少拿点钱。</li>
 </ul></li>
 <li>对比下中国目前的养老保险制度，几个要点如下：
-
 <ul>
 <li>现行退休年龄是男性达到 60 岁，女性达到 55 岁，目前的计划是从某个时间点开始，女性退休年龄每 3 年延迟 1 岁，男性退休年龄每 6 年延迟 1 岁，直至同时达到 65 岁。虽然退休年龄从整体上是渐变的，但对于一个已经确定了出生年月的个体来说，根据政策退休年龄是完全确定的。</li>
 <li>领取养老金必须符合两个条件：1.达到上述的法定退休年龄；2.累积缴纳养老保险大于等于 15 年。如果符合条件，退休后领取的养老金数额将会根据你之前缴纳的金额、届时当地的平均工资水平、平均寿命都因素来计算。</li>
@@ -136,7 +132,6 @@
 <ul>
 <li>WWDC 18 中 Dark Mode 这个功能只在 macOS 平台中出现，Screen Time 这个功能只在 iOS 平台中出现，这俩功能什么时候会对应出现在 iOS、macOS 平台中呢？下面是根据这些年 Apple 发布的一个规律所得出的猜测：</li>
 <li>过去已知🧐：
-
 <ul>
 <li>2013 年 iOS 扁平化→2014 年 macOS 扁平化；</li>
 <li>2017 年改版 iOS App Store→2018 年改版 Mac App Store；</li>
@@ -144,7 +139,6 @@
 <li>2016 年发布配备了 True Tone 技术的 iPad Pro→2017 年发布配备了 True Tone 技术的 iPhone 8、iPhone X；</li>
 </ul></li>
 <li>未来预测🤔：
-
 <ul>
 <li>2018 年 Dark Mode for macOS 10.14→2019 年 Dark Mode for iOS 13？</li>
 <li>2018 年 Screen Time for iOS 12→2019 年 Screen Time for macOS 10.15？</li>
@@ -189,7 +183,6 @@
 
 <ul>
 <li>在两份工作中我见过各型各色的程序猿，每个人的性格都不会一样，但随着各种项目的合作与配合，我发现在我的心中会逐渐形成一把衡量优秀的程序猿的尺子。与优秀的程序猿一起工作是一件十分舒服的事情。关于我眼中的优秀程序猿，我总结了下面几点：
-
 <ul>
 <li>不需要有足够多的开发知识储备，但需要有足够开阔的视野，这点十分重要；</li>
 <li>对行业的新技术、新方法十分敏感，乐于尝试，善于学习；</li>
@@ -263,12 +256,9 @@
 <ul>
 <li><p>你可以<a href="about.html">点击这里查看我的联系方式</a>😎</p></li>
 <li><p>如果你觉得这个网站的某些文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
 <p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p></li>
 </ul>
-
-<p><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"></p>
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 ]]></content>
   </entry>
   
@@ -323,7 +313,7 @@
 <li><strong>3.配置一个 GPX 格式的文件：</strong>这个文件稍后会导入到 Xcode 项目中使用，文件内容如下，注意将其中的 <code>lat</code> 和 <code>lon</code> 改成刚刚你获取到的 WGS-84 坐标。</li>
 </ul>
 
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+<pre><code class="language-text">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
 &lt;gpx version=&quot;1.1&quot;
     creator=&quot;GMapToGPX 6.4j - http://www.elsewhere.org/GMapToGPX/&quot;
     xmlns=&quot;http://www.topografix.com/GPX/1/1&quot;
@@ -519,43 +509,36 @@
 
 <ul>
 <li><p><strong>交通、地理位置</strong></p>
-
 <ul>
 <li>北京：北京的交通由于道路规划的问题堵车十分严重，北京地铁与上海地铁的里程数不相上下，但坐多了北京地铁你就会有个感觉：你去一个地方总得换乘好几次或者说两条线离得特别近，可你就是不能一下子换过去。北京虽然也是一个交通枢纽，但你会发现周边好像没啥值得去、值得玩的地方。</li>
 <li>上海：得益于将城市环线修建成高架，上海的交通拥堵会比北京好一些。上海地铁相对于也修建的晚一些，但是后期发展迅猛，目前也是十分便捷的公共交通工具。上海地理位置得天独厚，北江苏南浙江，可玩的地方太多，一小时可达南京、杭州、苏州、无锡这些重要城市。另外江浙沪小商品产业发达，「江浙沪包邮」习惯了之后可以说就离不开。</li>
 </ul></li>
 <li><p><strong>气候、空气质量</strong></p>
-
 <ul>
 <li>北京：地处北方，夏天没有那么炎热（高了也就 35 度左右），冬天寒风刺骨（低了能到零下 10 度），但好在冬季供暖。北方人应该比较适应这个气候。但到了冬季，随之而来的还有严重的雾霾，长期看着那灰蒙蒙的天空，每天的心情必然也好不到哪去。</li>
 <li>上海：地处南方，夏天潮湿闷热（高了能到 40 度），高温红色预警一年总有那么几次，冬天虽然温度没有那么低，但湿冷，没有供暖。另外上海还会有梅雨天气，一连好多天一直都是淅淅沥沥的小雨，比拼谁的袜子和内裤多的季节。雾霾相比于北京自然轻得多，但不是没有。</li>
 </ul></li>
 <li><p><strong>互联网行业</strong></p>
-
 <ul>
 <li>北京：由于大量理工类院校盘踞帝都再加上早期一些政策上的扶持等因素，北京是互联网重镇，各种各样的互联网公司层出不穷，特别是一些互联网巨头北京优势明显，择业范围很广。</li>
 <li>上海：上海作为中国的经济中心，自然互联网行业发展的远不如金融相关行业，相比北京，特别是互联网成熟的公司的数量，逊色很多。</li>
 </ul></li>
 <li><p><strong>城市建设</strong></p>
-
 <ul>
 <li>北京：北京给我的感觉是现代化、洋气的地方过于集中，一走出去立马就感觉到了城乡结合部，发展不均衡。城市的整体建设比较粗犷，可能和北方人的性格有关。</li>
 <li>上海：上海的城市建设可以用鳞次栉比、错落有致来形容，各种商圈的分布比较均匀，郊区亦有自己的特色和发展实力。</li>
 </ul></li>
 <li><p><strong>人文历史气息</strong></p>
-
 <ul>
 <li>北京：人文历史气息浓厚，天安门、故宫、前门、雍和宫、长城、天坛、鼓楼各种历史建筑任君挑选。</li>
 <li>上海：几乎没有什么历史人文景点，说到去上海旅游首先想到的应该就是外滩了。</li>
 </ul></li>
 <li><p><strong>生活便利度</strong></p>
-
 <ul>
 <li>北京：便利店稀稀落落，没有深入贯穿到大街小巷，有时候买个东西确实很不方便。</li>
 <li>上海：全家、罗森、好德、可的、711、喜士多十分常见，有这些的时候你感觉不到什么，但离开了你就能觉出来没有这些造成的不便利。</li>
 </ul></li>
 <li><p><strong>办事风格</strong></p>
-
 <ul>
 <li>北京：更讲究走关系，你需要通过一些方法来达成自己的目的，当然比三四线城市好得多。北京作为「首都」，有时候生活莫名会受到一些政策影响。</li>
 <li>上海：更有契约精神，讲究规则，讲究办事效率。如果你关注了「上海发布」，你会发现它发布的东西会和我们的民生非常贴近，有时候十分受用。</li>
@@ -574,25 +557,21 @@
 
 <ul>
 <li><p><strong>成都、西安、昆明</strong></p>
-
 <ul>
 <li>这三座城市均是省会城市，给我留下印象最深刻的还属成都，这里有着丰富的美食，有着难得的悠闲的生活节奏以及还不错的城市建设，从成都双流国际机场的客流量就可见一斑。而西安和昆明给我的感觉就是不瘟不火，有着省会城市的发达，亦有着发展过程中的种种乱象，要想更好还需要加把劲。</li>
 </ul></li>
 <li><p><strong>杭州、深圳</strong></p>
-
 <ul>
 <li>之所以把这两座城市并列来讲，是因为它们都是提到互联网可以想到的城市。杭州的地理位置决定了它不会差，良好的城市建设配上西湖，想想在这里生活就不错。</li>
 <li>来到深圳这座年轻的城市，「来了就是深圳人」的标语一定会让你留下深刻印象，去香港的便利度也让你能同时体验两种不同的城市生活。</li>
 </ul></li>
 <li><p><strong>大阪、京都、奈良、东京</strong></p>
-
 <ul>
 <li>提到日本，中国人可能想到更多的是历史，是战争。可你真正到了这个国家之后才会发现，日本值得我们学习的太多太多，礼仪之道、环保观念、服务意识、城市规划、发达交通、对每一件事的精细程度都令人大为惊叹。</li>
 <li>洗手间便池旁边的一个小挂钩、电梯里的应急物品、下车时司机的感谢、电车上的轻声细语、民宿里设备的完善周到，你在其他地方见不到或不常见到的，在日本你都能处处可见。</li>
 <li>推荐每一个做产品设计的人都去日本看看，这里的生活处处蕴藏着产品设计应有的追求极致的理念与哲学。我也期望之后能够再次造访日本，更深入地认识刻板印象背后的日本，学其长，补己短。</li>
 </ul></li>
 <li><p><strong>台北、香港、澳门</strong></p>
-
 <ul>
 <li>这三座城市的环境与生活方式与中国内地有着极大的不同，但又与中国内地密不可分。</li>
 <li>台北温良恭俭让的人民在第一天到达时给予我的热情帮助就让我对这座城市好感倍增；从澳门独特的博彩文化的神奇存在之内之外，你总能体会到一丝丝普通人生活的无奈；今年去了两次香港，不仅感受到了这座国际化都市里各种自由文化的碰撞与交流，亦感受到了香港人为争取更好生活、维系个人权利所作出的勇敢努力和其生活背后的压力。</li>
@@ -701,7 +680,6 @@
 <li>一个月过去，来个总结，这也是最后一次更新此文章。主流 app 基本完成了对 iPhone X 的适配更新。优秀的 app 整体完成度很高，能够在 iPhone X 上获得很好的使用体验；次之的是简单完成适配更新的 app，整体使用没有问题，但在一些细节上可能仍存在问题，现在的方案并不是最好的方案还需要开发者慢慢调整。</li>
 <li>当然仍然存在一些尚未更新适配的 app，其中也不乏用户量比较大的 app。</li>
 <li><p>正如之前预料的一样，对于一些紧密跟随 iOS 新技术、由独立开发者/小团队开发、有一定用户规模的 app （这类 app 反而会较多使用系统标准控件，响应用户、跟进新特性也比较及时😎）会较快适配 iPhone X，而对于一些逻辑复杂、牵一发而动全身、只追求能用不追求好用的 app（这类 app 使用系统标准控件较少，经常出现一些自以为很炫酷但实际很反人类的交互，而且修改 bug、适配新特性还不积极🙄，如银行 app、12306等）对于 iPhone X 的适配响应和质量就会差一些。</p>
-
 <p><img src="media/15086036845015/F3F09540-55D2-42BA-89A0-111F28078172.png" alt="F3F09540-55D2-42BA-89A0-111F28078172"/></p></li>
 </ol>
 
@@ -1337,27 +1315,21 @@
 
 <ul>
 <li><p>横屏时，列表滚动时文字优雅地略过刘海：</p>
-
 <p><img src="media/15086036845015/1.gif" alt="1"/><br/>
 （图片来源：<a href="https://twitter.com/vojtastavik/status/907911237983449088">Vojta Stavik 的 Twitter: “I think I’ve fixed the notch issue in landscape 🍾 ”</a>）</p></li>
 <li><p>横屏时，列表滚动时滚动条的怪异移动路径：</p>
-
 <p><img src="media/15086036845015/2.gif" alt="2"/><br/>
 （图片来源：<a href="https://twitter.com/ZevEisenberg/status/908148886363103232">Zev Eisenberg 的 Twitter: “Here’s what the notch would look like on the other side 🍷&quot;</a>）</p></li>
 <li><p>将刘海作为 UI 的一部分，从刘海里拉出工具菜单：</p>
-
 <p><img src="media/15086036845015/72157b63ly1fjols2bjgig20ij0ij7wj.gif" alt="72157b63ly1fjols2bjgig20ij0ij7wj"/><br/>
 （图片来源：<a href="https://twitter.com/0therPlanet/status/909788913702785026">Luboš Volkov⚡️ 的 Twitter: “I was working on this idea of blending app design with the #iPhoneX notch. 📲🤗&quot;</a>）</p></li>
 <li><p>有人假设设置里可以控制刘海的「开与关」🙃：</p>
-
 <p><img src="media/15086036845015/ear.gif" alt="ea"/><br/>
 （图片来源：<a href="https://dribbble.com/shots/3807679-Earsbar">Earsbar by Grisha Uglanov - Dribbble</a>）</p></li>
 <li><p>据说 iPhone X 发布后，天猫成为了最大赢家😅：</p>
-
 <p><img src="media/15086036845015/4667830F-8599-443B-AF55-A0D97F3F62A4.png" alt="4667830F-8599-443B-AF55-A0D97F3F62A4"/><br/>
 （图片来源：<a href="https://twitter.com/LON1ST/status/908221915453464576">朗仙森 的 Twitter: “天猫应该这样适配一下iPhone X！&quot;</a>）</p></li>
 <li><p>甚至有人做出了一个快速适配方法，直接将你的 app 放置在 iPhone X 屏幕中间算完😶：</p>
-
 <p><img src="media/15086036845015/6fe2f976ly4fjntfpkfa3j20kk0ddq3n.jpg" alt="6fe2f976ly4fjntfpkfa3j20kk0ddq3n"/><br/>
 （暂时没找到原始来源）</p></li>
 </ul>
@@ -1368,35 +1340,27 @@
 
 <ul>
 <li><p>在纵向时，iPhone X 的宽度同 4.7 寸的 iPhone 6、iPhone 7、iPhone 8（也包括放大模式下的 iPhone Plus）一样，故在宽度上，这几个设备显示的内容应该是一样的；而 iPhone X 的高度上比 4.7 寸屏幕高了 145pt，这使得 iPhone X 增加了 20% 的垂直空间来显示内容。</p>
-
 <p><img src="media/15086036845015/22FEEDE4-DAF5-48D3-86D9-EA6AB6CC3CC5.png" alt="22FEEDE4-DAF5-48D3-86D9-EA6AB6CC3C"/></p>
-
 <ul>
 <li>iPhone 6, 6s, 7, 8（4.7 寸屏幕，9:16，326ppi）：375pt × 667 pt @2x → 750px × 1334px；</li>
 <li>iPhone 6 Plus, 6s Plus, 7 Plus, 8 Plus（5.5 寸屏幕，9:16，401ppi）：414pt × 736 pt @3x → 1242px × 2208px （设备显示时的物理像素为 1080px × 1920px）；</li>
 <li>iPhone Plus 的放大显示模式：375pt × 667 pt @3x → 1125px × 2001px（设备显示时的物理像素为 1080px × 1920px）；</li>
 <li><p>iPhone X（5.8 寸屏幕，约 9:19.5，458ppi）：375pt × 812 pt @3x → 1125px × 2436px；</p>
-
 <p><img src="media/15086036845015/66E1E0C6-B327-445E-9734-F9C148B06ADC.png" alt="66E1E0C6-B327-445E-9734-F9C148B06AD"/><br/>
 （图片来源：<a href="https://www.paintcodeapp.com/news/iphone-x-screen-demystified">iPhone X Screen Demystified</a>）</p></li>
 </ul></li>
 <li><p>iPhone X 外壳的一些参考尺寸标注：</p>
-
 <p><img src="media/15086036845015/1BF24051-EEA8-4266-8C6B-400D2B16798A.png" alt="1BF24051-EEA8-4266-8C6B-400D2B16798A"/><br/>
 （图片来源：<a href="https://www.paintcodeapp.com/news/iphone-x-screen-demystified">iPhone X Screen Demystified</a>）</p></li>
 <li><p>iPhone 6, 7, 8, X 横屏时在 Size Class 中都属于 Compact Width，这意味着在这些设备上的横屏布局应该是一致的。</p>
-
 <p><img src="media/15086036845015/E50C571F-85B9-4990-A124-C36D97C7BCB1.png" alt="E50C571F-85B9-4990-A124-C36D97C7BCB1"/></p>
-
 <ul>
 <li><a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/adaptivity-and-layout/#size-classes">进一步了解 Size Class</a></li>
 <li><a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">有关 iPhone 各个设备分辨率的参考说明</a></li>
 </ul>
-
 <p><img src="media/15086036845015/Design-iPhone.jpg" alt="Design-iPhone"/><br/>
 （图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>）</p></li>
 <li><p>需要为 iPhone X 提供 @3x 的高分辨率的图片素材，对于一些单色的图形（Apple 称之为 Glyph，如用于 tab bar、tool bar 上的 icon）推荐使用不依赖分辨率的 pdf 格式。</p>
-
 <p><img src="media/15086036845015/2F836253-AF4A-44A8-882D-A7122378238A.png" alt="2F836253-AF4A-44A8-882D-A7122378238A"/></p></li>
 </ul>
 
@@ -1405,16 +1369,12 @@
 <ul>
 <li>从 iOS 11 开始，Auto Layout 中增加了一个新的布局指南：Safe Area Layout Guide，废弃了在 iOS 11 之前的 Top Layout Guide 和 Bottom Layout Guide。</li>
 <li><p>在 iPhone 8 中，Safe Area 的区域即除去各种 bar 之后的区域，如果没有任何 bar，Safe Area 就是整个屏幕。iPhone 8  竖屏下的 Safe Area 大小：375pt × 667pt。</p>
-
 <p><img src="media/15086036845015/B7550342-1D3C-4228-A6DF-3D903EFF7EEE.png" alt="B7550342-1D3C-4228-A6DF-3D903EFF7EEE"/></p></li>
 <li><p>在 iPhone X 中，竖屏下的 Safe Area 顶部距屏幕顶端 44pt，底部距屏幕底端 34 pt，左右两边与屏幕左右两端对齐。这样竖屏下的 Safe Area 大小：375pt × 734pt，相比 iPhone 8 增加了 67pt。横屏下的 Safe Area 左右两边距屏幕左右两端均为 44pt（对称），底部距屏幕底端 21pt，顶部与屏幕顶端对齐。Safe Area 避免了内容与屏幕的圆角、Sensor Housing、Home Indicator 发生重叠或裁切。</p>
-
 <p><img src="media/15086036845015/3746252E-F817-4BF9-A02C-7A7270ACA7B3.png" alt="3746252E-F817-4BF9-A02C-7A7270ACA7B3"/></p></li>
 <li><p>例如，在 iPhone X 的横向视图中，table view 将会横跨整个屏幕，而 table cell 中的 content view 是嵌入其中的，即在 Safe Area 中，以避免内容被 Sensor Housing 覆盖或被屏幕圆角裁切。</p>
-
 <p><img src="media/15086036845015/F2DC0E2A-B215-492C-9A76-124FCE328F15.png" alt="F2DC0E2A-B215-492C-9A76-124FCE328F15"/></p></li>
 <li><p>Table view cell 中的 content view 会被限制在 Safe Area 中，而文本内容和控件又进一步被 Layout Margin 限制，这使得在整个 app 中的内容边距能够保持一致，并且内容能够与其他控件（如 navigation bar 上的按钮）对齐。即使你的 app 中没有使用 Auto Layout，UIView 也提供了 Safe Area 嵌入和 Layout Margin 属性的值。</p>
-
 <p><img src="media/15086036845015/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-11%20%E4%B8%8A%E5%8D%8811.22.59.png" alt="屏幕快照 2017-10-11 上午11.22.59"/></p></li>
 </ul>
 
@@ -1422,17 +1382,13 @@
 
 <ul>
 <li><p>确保内容充满整个 iPhone X 屏幕，确保内容不要被设备的圆角、传感器模块（Sensor Housing，也即刘海）、主屏幕指示器（Home Indicator）遮盖。</p>
-
 <p><img src="media/15086036845015/9DBF4979-BBD6-4551-827A-40C231BA006A.png" alt="9DBF4979-BBD6-4551-827A-40C231BA006A"/></p></li>
 <li><p>例如「Carrot Weather」针对 iPhone X 的适配，让天气的背景延伸到屏幕边缘：</p>
-
 <p><img src="media/15086036845015/DJn4H8YWsAYgMRQ.jpg-large.jpeg" alt="DJn4H8YWsAYgMRQ.jpg-large"/><br/>
 (图片来源：<a href="https://twitter.com/carrot_app/status/908029622243209223">CARROT 的 Twitter: “If this doesn’t make you want to spend $1,000 in November, I don’t know what will.”</a>)</p></li>
 <li><p>可以使用 Xcode 中的模拟器提前预览 app 在 iPhone X 上的效果，检查被裁切或者其他布局问题。而对于一些特别的功能特征，像广色域图像，最好就是在 iPhone X 真机上进行测试。</p>
-
 <p><img src="media/15086036845015/AA0A093E-8874-4CA8-ADEB-873CC6929BE8.png" alt="AA0A093E-8874-4CA8-ADEB-873CC6929BE8"/></p></li>
 <li><p>提供一个全屏的使用体验：确保背景延伸到了屏幕的边界，像 tables、collections 这种竖直滚动的布局要一直延续到屏幕底部，不应被限制在 Safe Area 中。不管 table view 中的 cell 是否在 Home Indicator 的后面，轻点屏幕底部的 cell 依然可以正常操作。</p>
-
 <p><img src="media/15086036845015/PNG%20%E5%9B%BE%E5%83%8F-9478BC4F869E-1.png" alt="PNG 图像-9478BC4F869E-1"/></p></li>
 </ul>
 
@@ -1440,9 +1396,7 @@
 
 <ul>
 <li><p>当复用已有的图片资源时，注意长宽比率的不同：iPhone X 有一个特殊的长宽比率，因此，在 4.7 寸屏幕上的图片资源全屏展示在 iPhone X 上时，可能会被左右裁切或者出现信箱 letterboxing 模式（即上下有黑条）。与之相反，如果一个可以全屏显示在 iPhone X 上的图片资源拿到 4.7 寸 iPhone 上去，图片就会被上下裁切或者出现邮筒 pillarboxing 模式（即左右有黑条）。最好是采用兼容性的图片，以确保在所有的屏幕尺寸中，重要的视觉内容都能被看到。</p>
-
 <p><img src="media/15086036845015/DAA49612-4210-4D53-84F4-8F4EE6994B7B.png" alt="DAA49612-4210-4D53-84F4-8F4EE6994B7B"/></p>
-
 <ul>
 <li><a href="https://support.apple.com/zh-cn/HT204429">有关信箱模式（Letterboxing）、邮筒模式（Pillarboxing）、窗口模式（Windowboxing）的参考说明</a></li>
 </ul></li>
@@ -1452,16 +1406,12 @@
 
 <ul>
 <li><p>不要对屏幕的几个新特征进行掩盖或者吸引用户特别注意：不要尝试通过在屏幕顶部或底部使用黑色的 bar 来隐藏设备的圆角、Sensor Housing、Home Indicator，这会使得你的 app 看上去很狭小拥挤，与其他在 iPhone X 上的 app 不一致。不要使用一些视觉装饰物（如括弧、边框、形状或指导性文字）使用户对这些区域特别注意。</p>
-
 <p><img src="media/15086036845015/9A361EFA-8FD8-4650-9DA2-5162B122094B.png" alt="9A361EFA-8FD8-4650-9DA2-5162B122094B"/></p></li>
 <li><p>避免内容被裁切：使用标准的、系统提供的交互元素，使用 Auto Layout 构建 app 的交互。App 应该遵守由 UIKit 定义的 Safe Area 和 Layout Margin，这确保内容可以根据设备和情景合适的嵌入。 Safe Area 也会阻止内容被 status bar、navigation bar、toolbar、tab bar 覆盖。</p>
-
 <p><img src="media/15086036845015/FC998171-5121-485F-8DAE-0E2A24444DD3.png" alt="FC998171-5121-485F-8DAE-0E2A24444DD3"/></p></li>
 <li><p>避免把一些交互控制元素恰好放置在屏幕的底部或者角落：用户在使用 iPhone X 时，会在屏幕底部使用滑动手势来访问主屏幕或者切换 app，这个手势会影响你在屏幕底部自定义的手势。屏幕的几个角落放置的内容可能会被屏幕的圆角、Sensor Housing、Home Indicator 遮挡覆盖，并且对于用户来说也是难以轻松地触碰到的。可以通过 Safe Area 和 Layout Margin 来确定合适的嵌入值。</p>
-
 <p><img src="media/15086036845015/896AAFBA-DAF0-4B30-9AE6-A76352A103E2.png" alt="896AAFBA-DAF0-4B30-9AE6-A76352A103E2"/></p></li>
 <li><p>大多数情况下，在横屏视图时，内容、控件能够居中对称显示是最好的。在设备旋转方式不同的情况下，如果是不对称的布局，控件会左右发生漂移，这将会造成不连贯的用户体验，潜移默化地破坏用户建立肌肉记忆的能力。</p>
-
 <p><img src="media/15086036845015/CF6C33B7-F5A9-4D18-AC61-2DD8CF78F702.png" alt="CF6C33B7-F5A9-4D18-AC61-2DD8CF78F702"/></p></li>
 </ul>
 
@@ -1469,10 +1419,8 @@
 
 <ul>
 <li><p>注意 status bar 的高度：在 iPhone X 中，相比其他 iPhone status bar 更高（iPhone X 的 status bar 高度为 44pt，其他设备为 20pt）。如果你的 app 假定了一个固定的 status bar 高度，以此来在 status bar 下面放置内容，你必须更新你的 app 以基于用户设备动态放置内容。</p>
-
 <p><img src="media/15086036845015/8F514EB8-0A7B-4B39-A16B-3DA4EA1CC0EF.png" alt="8F514EB8-0A7B-4B39-A16B-3DA4EA1CC0EF"/></p></li>
 <li><p>特别注意，在 iPhone X 中，当某些后台任务（如通话中、录音中、位置记录中）进行时、status bar 不会像其他 iPhone 一样改变高度。这为提供连贯的用户体验提供了帮助。</p>
-
 <p><img src="media/15086036845015/CCD66544-DE3F-4BEF-9101-7967D164A542.png" alt="CCD66544-DE3F-4BEF-9101-7967D164A542"/></p></li>
 <li><p>如果你的 app 现在是隐藏 status bar 的，你需要在 iPhone X 上重新考虑这个：iPhone X 在垂直方向上比 4.7 寸 iPhone 提供了更多空间来显示内容。Status bar 中也展示了用户觉得很有用的信息。Status bar 应该只在真正有价值的时候被隐藏。</p></li>
 </ul>
@@ -1481,11 +1429,9 @@
 
 <ul>
 <li><p>Home Indicator（134pt × 5pt）可以提示用户从屏幕底部向上轻扫可以访问主屏幕或者切换 app，这是 iOS 设备的一个核心交互，因此 Home Indicator 应该总是被清晰可见的。iOS 会根据当前的背景颜色，动态地调整 Home Indicator 显示为白色或黑色，以保证与背景有足够的对比度。确保不要把一些交互元素放的离 Home Indicator 很近。</p>
-
 <p><img src="media/15086036845015/5CA9DA5A-25B7-4FFC-AA3D-167A0F767940.png" alt="5CA9DA5A-25B7-4FFC-AA3D-167A0F767940"/></p></li>
 <li><p>谨慎地允许 Home Indicator 可以自动隐藏：当自动隐藏功能被打开时，如果用户在几秒钟没有触碰屏幕，Home Indicator 就会自动隐藏，用户再次触碰屏幕时，Home Indicator 就会再次出现。这个行为只应该在像播放视频、图片幻灯片时被启用。</p></li>
 <li><p>避免与系统全局的屏幕边缘手势冲突：在各个 app 中，人们依赖于这些手势。只在很少的一些情况下，一些沉浸式的 app 如游戏类 app 可能需要一些比系统手势优先级更高的自定义的屏幕边缘手势，第一次滑动响应 app 指定的手势（同时正常的 Home Indicator 会被拉起并进入可用状态），第二次滑动才响应系统的手势。这个行为被称为 edge protection，一旦开启，Home Indicator 将会有一个更加细致的外观，对于用户来说就很难访问系统级别的动作，导致不连贯的用户体验，所以它只应该在确实需要的情况下被启用。</p>
-
 <p><img src="media/15086036845015/3F9A6BCC-0971-4E35-BCBF-56CF287E902A.png" alt="3F9A6BCC-0971-4E35-BCBF-56CF287E902A"/></p></li>
 </ul>
 
@@ -1493,7 +1439,6 @@
 
 <ul>
 <li><p>iPhone X 的屏幕支持 Display P3 色域，相比 sRGB 可以显示更加多样、沉浸的颜色。</p>
-
 <p><img src="media/15086036845015/D7C6D362-EA41-4140-846E-7B180517FF56.png" alt="D7C6D362-EA41-4140-846E-7B180517FF56"/></p></li>
 <li><p>使用广色域来增强视觉体验：使用了广色域的图片和视频会看上去更加生动，视觉数据和状态指示器会更加有冲击力。</p></li>
 </ul>
@@ -1502,24 +1447,17 @@
 
 <ul>
 <li><p>系统提供的视频播放器提供了两种视频播放模式：全屏播放模式 full-screen (aspect fill) 和适应屏幕播放模式 fit-to-screen (aspect)。默认情况下，系统会基于视频的纵横比选择一种视频播放模式，在播放过程中，用户可以在这两种模式之间自由切换。</p>
-
 <ul>
 <li><p>全屏播放模式 Full-screen (aspect-fill) viewing mode：视频会按照视频比例进行放大以铺满整个屏幕。一些边缘切割会出现。对于宽幅视频（纵横比在 2：1 到 2.40：1 之间），全屏播放模式是系统的默认选择。</p>
-
 <p><img src="media/15086036845015/15105074890096.jpg" alt=""/></p>
-
 <p><img src="media/15086036845015/15105075047735.jpg" alt=""/></p></li>
 <li><p>适应屏幕播放模式 Fit-to-screen (aspect) viewing mode：屏幕里可以完全显示完整的视频。信箱模式或邮筒模式会出现。对于标准的视频（纵横比 4：3、16：9、低于 2：1的）和超宽幅视频（纵横比大于 2.40：1），适应屏幕模式是系统的默认选择。</p>
-
 <p><img src="media/15086036845015/15105075243173.jpg" alt=""/></p>
-
 <p><img src="media/15086036845015/15105075301705.jpg" alt=""/></p></li>
 </ul></li>
 <li><p>确保自定义的视频播放器的表现符合预期：在 iPhone X 中，默认铺满屏幕的全屏播放模式的视频，如果铺满全屏导致太多的内容被裁切，那视频就应该调整显示尺寸以适应屏幕的模式播放。你也应该允许用户基于他们的个人偏好在两种播放模式间自由切换。</p></li>
 <li><p>视频播放时总是保证其原始纵横比：如果你的视频内容为了服从某个特定的纵横比，自行插入了一个信箱或邮筒边距，iOS 将不能够基于用户对视频播放模式的选择正确的调整视频显示尺寸。在视频框架中插入的边距会造成视频在全屏播放模式下和适应屏幕播放模式下变得更小。它也使得视频不能被正确地以边到边的方式显示，也会影响非全屏情景（如 iPad 上的画中画模式）下的视频显示。</p>
-
 <p><img src="media/15086036845015/15105075474870.jpg" alt=""/></p>
-
 <p><img src="media/15086036845015/15105075538340.jpg" alt=""/></p></li>
 </ul>
 
@@ -1528,32 +1466,24 @@
 <ul>
 <li>在 iPhone X 中使用屏幕边缘来触发访问主屏幕、app 切换、打开通知中心、打开控制中心的动作。</li>
 <li><p>Home Indicator 相关手势：</p>
-
 <ul>
 <li><p>访问主屏幕：向上轻扫 Home Indicator</p>
-
 <p><img src="media/15086036845015/large.mp4.gif" alt="large.mp4"/></p></li>
 <li><p>访问多任务处理：向上轻扫 Home Indicator 并停顿一下</p>
-
 <p><img src="media/15086036845015/large-3.mp4.gif" alt="large-3.mp4"/></p></li>
 <li><p>切换到上一个使用的 app：向上轻扫 Home Indicator 并顺势向右滑动</p>
-
 <p><img src="media/15086036845015/%E5%88%87%E6%8D%A2%E5%88%B0%E4%B8%8A%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8.gif" alt="切换到上一个应用"/><br/>
 (图片来源：iMore)</p></li>
 <li><p>左右快速切换 app：左右轻扫 Home Indicator</p>
-
 <p><img src="media/15086036845015/%E5%B7%A6%E5%8F%B3%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E5%BA%94%E7%94%A8.gif" alt="左右快速切换应用"/></p></li>
 <li><p>便捷访问 Reachability：也即在 iPhone 8 上通过轻点两下 Home 键界面下移悬停的功能。在 iPhone X 使用此功能，需要到「设置」-「通用」-「辅助功能」中打开「便捷访问」开关，使用时，向下轻扫 Home Indicator 即可。</p></li>
 </ul></li>
 <li><p>刘海相关手势：</p>
-
 <ul>
 <li><p>访问通知中心：从「刘海」处或左侧向下轻扫</p>
-
 <p><img src="media/15086036845015/%E9%80%9A%E7%9F%A5%E4%B8%AD%E5%BF%83.gif" alt="通知中心"/><br/>
 (图片来源：The Verge)</p></li>
 <li><p>访问控制中心：从「刘海」右侧向下轻扫</p>
-
 <p><img src="media/15086036845015/large-4.mp4.gif" alt="large-4.mp4"/></p></li>
 </ul></li>
 </ul>
@@ -1562,13 +1492,10 @@
 
 <ul>
 <li><p>由于 iPhone X 取消了实体 Home 键，引入了 Home Indicator，原来的电源键现在称之为「侧边按钮」，这使得原有的一些功能的操作方法发生了变化。</p>
-
 <ul>
 <li><p>使用 Siri：按住侧边按钮。</p>
-
 <p><img src="media/15086036845015/large-5.mp4.gif" alt="large-5.mp4"/></p></li>
 <li><p>使用 Apple Pay：连按两下侧边按钮。</p>
-
 <p><img src="media/15086036845015/large-6.mp4.gif" alt="large-6.mp4"/></p></li>
 <li><p>截屏：按住侧边按钮加音量增按钮。</p></li>
 <li><p>进入 SOS 紧急联络：按住侧边按钮和任一音量按键、快速点按侧边按钮五次（需在设置中开启），SOS 紧急联络中包括「滑动来关机」、「医疗急救卡」、「SOS 紧急联络」三个功能。</p></li>
@@ -1582,19 +1509,14 @@
 
 <ul>
 <li><p>在 iPhone X 中，Face ID 替代了 Touch ID，这使得某些操作和体验有了变化：</p>
-
 <ul>
 <li><p>指纹的识别变成了面容的识别：</p>
-
 <p><img src="media/15086036845015/large%20-2-.mp4.gif" alt="large -2-.mp4"/></p></li>
 <li><p>拿起手机唤醒屏幕，Face ID 完成面容识别，同时从屏幕底部向上轻扫进入系统：</p>
-
 <p><img src="media/15086036845015/large%20-1-.mp4.gif" alt="large -1-.mp4"/></p></li>
 <li><p>拿起手机唤醒屏幕，同时 Face ID 完成识别，系统显示通知的具体内容（需要配合 iOS 11 中「设置」-「通知」-「信息」-「显示预览」选项-「解锁时」）：</p>
-
 <p><img src="media/15086036845015/large.mp4%201.gif" alt="large.mp4 1"/></p></li>
 <li><p>识别 Face ID 后，使用 Apple Pay 付款：</p>
-
 <p><img src="media/15086036845015/00FE1B9D-0D34-4B46-AD64-85CFF0792880.png" alt="00FE1B9D-0D34-4B46-AD64-85CFF0792880"/></p></li>
 </ul></li>
 <li><p>准确的定义授权方法：iPhone X 只支持 Face ID 授权，如果你的 app 使用了 Apple Pay 或者其他系统授权功能，不要在 iPhone X 上提及 Touch ID。与此相反，在只支持 Touch ID 的设备上不要提及 Face ID。</p></li>
@@ -1610,10 +1532,8 @@
 
 <ul>
 <li><p>不要重复系统提供的键盘功能：在 iPhone X 上，Emoji 和 Globe 按钮以及 Dictation 按钮会在键盘的下方自动出现，即使用户使用的是自定义键盘。你的 app 不能影响这些按钮，也要避免在你的 app 的键盘中重复这些而造成困惑。</p>
-
 <p><img src="media/15086036845015/IMG_0242.png" alt="IMG_0242"/></p></li>
 <li><p>在 iPhone X 中，全字母键盘的高度由 216pt 增加到了 291pt，在设计文字输入区域时要注意。</p>
-
 <p><img src="media/15086036845015/BDE24521-5587-48B2-B827-562A0FF00DBE.png" alt="BDE24521-5587-48B2-B827-562A0FF00DBE"/><br/>
 (图片来源：<a href="https://medium.com/uxabc/iphone-x-ui-design-specs-696fd4f262b6">UI 設計師需要知道的 iPhone X 細節 – UXabc – Medium</a>)</p></li>
 </ul>
@@ -1624,25 +1544,20 @@
 
 <ul>
 <li><p>大多数使用标准的、系统提供的 UI 元素（如 navigation bars、tables、collections）将会自动适配 iPhone X。背景将会延伸到屏幕的边界，UI 元素将会被合适的插入和放置。比如 navigation bar 的背景色会自动延伸到 status bar 中，tab bar 、tool bar 会被合适的放置在 Home Indicator 上面，其背景色也会延伸到屏幕底端。</p>
-
 <p><img src="media/15086036845015/93CE9E1E-6D21-48AB-A58D-8B987D9171AC.png" alt="93CE9E1E-6D21-48AB-A58D-8B987D9171A"/></p></li>
 <li><p>如果你的 app 使用了 Auto Layout，并且遵守了 Safe Area 和边界的布局规范，即使是使用了自定义布局，适配 iPhone X 也很简单。</p></li>
 <li><p>要特别注意测试横屏下的界面：大多数的适配问题可能都来自于横屏界面。</p></li>
 <li><p>对于没有适配 iPhone X 的 app 在 iPhone X 中可能不能全屏显示。在竖屏的情况下，顶部是 status bar，底部是 Home Indicator，中间部分以信箱 letterboxing 模式（即上下有黑条）显示未适配的 app，显示区域同 4.7 寸的 iPhone 8 一样大小。</p>
-
 <p><img src="media/15086036845015/88A6CAC6-3B18-42D8-BC19-2C02CFC3691B.png" alt="88A6CAC6-3B18-42D8-BC19-2C02CFC3691B"/><br/>
 (图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-x-screen-size-a00bd109bbb9">How iOS Apps Adapt to the iPhone X Screen Size – Geoff Hackworth – Medium</a>)</p></li>
 <li><p>在横屏的情况下，会以邮筒 pillarboxing 模式（即左右有黑条）显示未适配的 app，同时屏幕底部会为 Home Indicator 留有一定的空间，整体上比 iPhone 8 的横屏模式还稍微小一点。</p>
-
 <p><img src="media/15086036845015/15FB515C-9965-4A1C-9014-8F47DCDA3D4D.png" alt="15FB515C-9965-4A1C-9014-8F47DCDA3D4D"/><br/>
 （图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-x-screen-size-a00bd109bbb9">How iOS Apps Adapt to the iPhone X Screen Size – Geoff Hackworth – Medium</a>）</p></li>
 <li><p>从未适配的 app 在 iPhone X 上的显示可以很明显的看出，iPhone X 就是 4.7 寸的 iPhone 8 的拉长版，但是由于 iPhone X 使用的是 @3x 图片资源，再加上 OLED 屏幕的加成，未适配的 app 看上去的视觉效果可能更像是在一部屏幕高配版 iPhone 8 上看。</p></li>
 <li><p>从 iPhone 8 到 iPhone X 的过渡就如同当年从 iPhone 4s 到 iPhone 5 的过渡，可以预见在 iPhone X 上市初期会有众多 app 还没有来得及或还没有找到合适的解决办法适配 iPhone X，抑或正在适配的路上苦苦摸索，最先使用 iPhone X 的用户在尝鲜的同时也会有一段混合使用已适配 app 和未适配 app 的痛苦期。从 app 市场的现状来看，对于一些紧密跟随 iOS 新技术、由独立开发者/小团队开发、有一定用户规模的 app （这类 app 反而会较多使用系统标准控件，响应用户、跟进新特性也比较及时😎）会较快适配 iPhone X，而对于一些逻辑复杂、牵一发而动全身、只追求能用不追求好用的 app（这类 app 使用系统标准控件较少，经常出现一些自以为很炫酷但实际很反人类的交互，而且修改 bug、适配新特性还不积极🙄，如银行 app、12306等），我们能做的只有慢慢等了。</p>
-
 <p><img src="media/15086036845015/F3F09540-55D2-42BA-89A0-111F28078172.png" alt="F3F09540-55D2-42BA-89A0-111F28078172"/><br/>
 注：<a href="http://t.cn/ROe0Uti">点此查看 iDaily App 适配 iPhone X 后的效果图</a>（由于目前 iPhone X 还没正式发售，Apple 暂不允许在 AppStore 中的 app 介绍中存在有关 iPhone X 的文字、图片、视频资源，已经上架的纯属巧合，其实就是看 Apple 的心情😴）</p></li>
 <li><p>虽然前期痛苦，但是随着 iPhone X 用户数的上升，市场和 Apple 都会推着开发者去适配 iPhone X。待适配大潮逐渐稳定之后，那时候我们或许就能见到拉长版的 iPhone 8 Plus 了—— 名字该叫 iPhone X Plus 还是 iPhone XI Plus🤔？在这里大胆猜测下，拉长版的 iPhone 8 Plus 应该与 iPhone X 同一个屏幕比例，按照相对于 iPhone 8 Plus 宽不变高拉长的规律渲染分辨率应该是 1242px × 2688px，如果物理分辨率也是同样的话，再加上传闻的 6.4 寸屏幕，PPI 差不多是 463。等明年看看咯。</p>
-
 <p><img src="media/15086036845015/52141B2B-366D-4945-8728-34F2DF4DFC4B.png" alt="52141B2B-366D-4945-8728-34F2DF4DFC4B"/><br/>
 (图片来源：<a href="https://www.idropnews.com/rumors/iphone-x-plus/51494/">iPhone X Plus to Be Released in 2018 Reports Suggest</a>)</p></li>
 <li><p><strong>Update：</strong>10 月 27 日，Apple 发布<a href="https://developer.apple.com/news/?id=10272017a">公告</a>提醒开发者现在可以开始在 iTunes Connect 中提交适配了 iPhone X 的 app、更新 app 的元数据信息了。有关于个人使用的一些 app 适配 iPhone X 的时间记录可以<a href="15091947537272.html">查看我的另一篇文章</a>。</p></li>
@@ -1654,36 +1569,25 @@
 
 <ul>
 <li><p>WWDC app 的历史已经很长，好多工程师曾经为它贡献过代码。在其中，它使用了许多标准控件和 Auto Layout，它也有很多自定义的 view，甚至更老的部分是完全手动布局的。</p>
-
 <p><img src="media/15086036845015/EAEA70A1-A84B-443D-BE1E-5C6607639F95.png" alt="EAEA70A1-A84B-443D-BE1E-5C6607639F95"/></p></li>
 <li><p>在 Xcode 9 中配置 WWDC app 的 Base SDK 为 iOS 11。如果你没有看到 app 在 iPhone X 的屏幕上全屏显示，请确保你配置了一个正确的 Launch Storyboard。</p>
-
 <p><img src="media/15086036845015/0C813B12-4846-4A44-B522-E437F6E71FF9.png" alt="0C813B12-4846-4A44-B522-E437F6E71FF9"/></p></li>
 <li><p>News tab：全屏的照片查看器中的 page control 离屏幕底部太近了，与 Home Indicator 跑到了一起。这是因为 page control 是根据其父视图（也即整个屏幕）限定的底部的布局约束，我们需要根据 Safe Area Layout Guide 对 page control 的底部做出布局上的约束。</p>
-
 <p><img src="media/15086036845015/1366529D-2C71-4077-9E49-6199495FBCD7.png" alt="1366529D-2C71-4077-9E49-6199495FBCD7"/></p>
-
 <ol>
 <li><p>在 xib 文件中打开 「Use Safe Area Layout Guides」（在 Xcode 9 之前创建的 xib 和 storyboard 不会自动打开此选项）。对于 iOS storyboard，打开这个选项后会自动把约束与屏幕的 top layout guide、bottom layout guide、leading edges、trailing edge 绑定，所以在开启后需要仔细检查确认 Auto Layout 的约束。</p>
-
 <p><img src="media/15086036845015/84AA7EE1-1284-4FFF-8084-164ECF3AAC7D.png" alt="84AA7EE1-1284-4FFF-8084-164ECF3AAC7D"/></p></li>
 <li><p>将 page control 的约束「Superview.Bottom = Page Control .Bottom」改为「Safe Area.Bottom = Page Control .Bottom」。</p>
-
 <p><img src="media/15086036845015/B6B768DD-E34E-49F5-8BA7-19973DCEE783.png" alt="B6B768DD-E34E-49F5-8BA7-19973DCEE783"/></p></li>
 <li><p>编译并运行，可以看到 page control 无论在竖屏还是横屏时均显示正常。</p>
-
 <p><img src="media/15086036845015/C9891FD0-8CB0-4D25-9639-4C78DB7E6471.png" alt="C9891FD0-8CB0-4D25-9639-4C78DB7E6471"/></p></li>
 </ol></li>
 <li><p>Videos tab：进入搜索功能，与「通讯录」app 对比后可以发现 search bar 的背景颜色不对，其尺寸也有些问题。</p>
-
 <p><img src="media/15086036845015/DED5E6C8-67F3-4088-931E-4D50C264C45B.png" alt="DED5E6C8-67F3-4088-931E-4D50C264C45B"/></p></li>
 <li><p>当进入横屏时，问题更加明显。search field 和取消按钮都被屏幕的圆角切割了。由此也看出 Safe Area 的重要性。</p>
-
 <p><img src="media/15086036845015/23A9C747-7024-4148-BA19-937E3B04D838.png" alt="23A9C747-7024-4148-BA19-937E3B04D838"/></p>
-
 <ol>
 <li><p>在 iOS 11 中，search bar 已经与 navigation bar 整合在了一起，而不再是一个单独的 UI search controller。在代码中做出如下变动：</p>
-
 <p><img src="media/15086036845015/2B02BC22-0424-49E6-B287-FEE92FD01995.png" alt="2B02BC22-0424-49E6-B287-FEE92FD01995"/></p></li>
 <li><p>在 navigation bar 接管 search bar 之后，剩下的工作就交给 Safe Area 就好了。编译并运行，可以看到 search bar 在竖屏与横屏下都显示正常了。</p></li>
 </ol></li>
@@ -1693,37 +1597,28 @@
 
 <ul>
 <li><p>Schedule tab：因为把 search bar 作为了 table view 的 header view，search bar 也有着与 Videos tab 同样的显示问题。只需像前面说的那样，把 search bar 交给 navigation bar 来处理就好了。在横屏时，如果仔细看会发现还有一个问题，table section 的背景颜色没有延伸到屏幕的左右边缘，这个颜色是我们设置的 header view 中的 <code>contenView</code> 的背景颜色。在除 iPhone X 以外的 iPhone 上这样配置都是没有问题的，那为什么会在 iPhone X 上出现问题呢？</p>
-
 <p><img src="media/15086036845015/28285582-BE4C-426C-B19C-E781B4283F6C.png" alt="28285582-BE4C-426C-B19C-E781B4283F6"/></p></li>
 <li><p>要想明白其中的原因，先来看下在 iPhone X 中 table view 的整体结构。从下图中可以看到 content view 是默认被嵌入 Safe Area 的，而 table cell 本身是从屏幕一端到另一端的，这就是问题所在。</p>
-
 <p><img src="media/15086036845015/EF0D06BA-EB4F-4668-8DB9-BB512CF39F7F.png" alt="EF0D06BA-EB4F-4668-8DB9-BB512CF39F7F"/></p>
-
 <ol>
 <li><p>对于 content view 嵌入 Safe Area 这个行为是可以控制的，解除这个限制后 content view 就能从屏幕一端显示到屏幕另一端。有一点需要注意，不管 content view 如何布局，其 layout margin 都是默认与 Safe Area 相关的。所以解决问题的一个办法就是禁用 content view 嵌入 Safe Area 的行为，但这样一来就会影响 content view 中的其他内容，也没有办法再使用这项挺有用的默认行为。</p>
-
 <p><img src="media/15086036845015/FBA93213-08FE-4292-92FD-41D47FAD5368.png" alt="FBA93213-08FE-4292-92FD-41D47FAD5368"/></p></li>
 <li><p>最好的的解决办法就是设置 header 中 backgroundView 的 background color。</p>
-
 <p><img src="media/15086036845015/CCD83434-A36E-4363-A74E-E51944846681.png" alt="CCD83434-A36E-4363-A74E-E51944846681"/></p></li>
 <li><p>编译并运行，可以看到 table view 的 section 的背景颜色已经从屏幕的一边延伸到了另一边。</p>
-
 <p><img src="media/15086036845015/3F541200-E05D-46E5-99A2-1CA8C4EC8081.png" alt="3F541200-E05D-46E5-99A2-1CA8C4EC8081"/></p></li>
 </ol></li>
 <li><p>总结</p>
-
 <ul>
 <li>基于 iOS 11 SDK 进行编译，确保有正确的 Launch Storyboard；</li>
 <li>在两个屏幕方向都进行充足的测试，特别是横屏情况下；</li>
 <li>遵守 Safe Area：
-
 <ul>
 <li>Auto Layout 时使用 <code>safeAreaLayoutGuide</code></li>
 <li>手动计算时使用 <code>safeAreaInsets</code></li>
 <li>避免 app 中的内容与控件与系统的 Home Indicator 发生冲突。</li>
 </ul></li>
 </ul>
-
 <p><img src="media/15086036845015/01D6DCD6-8765-4ACB-921C-30195350F292.png" alt="01D6DCD6-8765-4ACB-921C-30195350F292"/></p></li>
 </ul>
 
@@ -1731,20 +1626,15 @@
 
 <ul>
 <li><p>因为 iPhone X 的显示屏的四个圆角、顶部的 Sensor Housing 特性，通过 Safari 打开的网页，iOS 也进行了自动的特殊处理。</p>
-
 <ul>
 <li><p>当设备处于竖屏情况下，网页的显示与其他设备没有什么差别，相比 iPhone 8 就是纵向上能看到更多内容。</p>
-
 <p><img src="media/15086036845015/WechatIMG8.png" alt="WechatIMG8"/></p></li>
 <li><p>当设备处于横屏情况下，为了确保网页上的内容不被屏幕圆角、Sensor Housing 遮挡，所有内容、控件会被限制在 Safe Area 中显示，而 Safe Area 左右两侧会被页面的 <code>background-color</code> (比如为 <code>&lt;body&gt;</code> 或 <code>&lt;html&gt;</code> 元素指定的背景颜色)填充。通常情况下我们看到的网页背景颜色都是白色，例如下图中在 iPhone X 的 Safari 中打开的 Medium 官网， 背景颜色是白色，整体上除了白色基本就是黑色的文字，这样看上去效果还不错。</p>
-
 <p><img src="media/15086036845015/WechatIMG11.png" alt="WechatIMG11"/></p></li>
 <li><p>再举一个例子，下图中在 iPhone X 的 Safari 中打开 Apple 官网，同样的页面背景色为白色，但由于横跨整个页面的灰色导航栏和非白色背景的近乎全屏的图片的存在，左右两边的白边看上去比较突兀，整体效果比较奇怪。（Update：Apple 官网首页目前已为 iPhone X 做了适配）</p>
-
 <p><img src="media/15086036845015/WechatIMG5.png" alt="WechatIMG5"/></p></li>
 </ul></li>
 <li><p>iPhone X 的屏幕比例约为 9:19.5，不再是之前常见的 9:16，这对于靠「等比缩放」完成适配的 HTML5 活动页面来说，需要针对 iPhone X 调整页面布局结构。</p>
-
 <p><img src="media/15086036845015/01ebae59b88fcea801212fb7faa9b0.jpg@800w_1l_2o_100sh.jpg" alt="01ebae59b88fcea801212fb7faa9b0.jpg@800w_1l_2o_100sh"/><br/>
 (图片来源：<a href="http://www.zcool.com.cn/article/ZNTU1MTUy.html">三分钟弄懂iPhone X 设计尺寸和适配|UI|教程|海边来的设计师 - 原创文章 - 站酷 (ZCOOL)</a>)</p></li>
 </ul>
@@ -1753,26 +1643,19 @@
 
 <ul>
 <li><p>下面这个<a href="https://webkit.org/demos/safe-area-insets/1-default.html">网页</a>，网页的背景颜色不是白色，整个页面背景色延伸到了屏幕边缘，但横跨整个页面宽度的上下两个导航栏被限制在了 Safe Area 中，视觉上看上去很奇怪。底部的导航栏还与 Home Indicator 发生了重叠，这会导致按钮很难点击。这样的网页就需要针对 iPhone X 进行调整。</p>
-
 <p><img src="media/15086036845015/DEB0032B-BDCB-43AF-B018-ADE0C4FD6DDF.png" alt="DEB0032B-BDCB-43AF-B018-ADE0C4FD6DDF"/></p></li>
 <li><p>一些必要的调整（由于不熟悉前端网页开发的一些具体实现，只在此说一下大概的原理）</p>
-
 <ul>
 <li><p>横屏状态下，iPhone X 的 Safari 中默认没有让内容和控件充满整个屏幕。要想使用整个屏幕，需要在 iOS 11 中改变 <code>viewport-fit</code>的值以关闭自动嵌入行为。<a href="https://webkit.org/wp-content/uploads/viewport-fit-cover.png">改变后的网页</a>显示如下图，虽然导航栏可以从屏幕一个边缘延伸到了另一边缘，但是这时内容和控件会被屏幕的圆角以及 Sensor Housing 遮挡。</p>
-
 <p><img src="media/15086036845015/06BE16E7-5E89-4B42-8D93-E6D3033B5C7B.png" alt="06BE16E7-5E89-4B42-8D93-E6D3033B5C7B"/></p></li>
 <li><p>想要既要利用整个屏幕，又要服从 Safe Area，需要给不想被遮挡的重要内容加上一个 padding。iOS 11 的 Webkit 预定义了 <a href="https://webkit.org/demos/safe-area-insets/safe-areas.html">Safe Area 上下左右四个方向的边距常量</a>，利用此为页面上的元素添加 padding 后网页上的重要内容就可以正常显示，<a href="https://webkit.org/demos/safe-area-insets/3-safe-area-constants.html">更改后网页</a>横屏下的效果图如下。</p>
-
 <p><img src="media/15086036845015/319BE822-CC4A-4A9E-AA3C-2CC141C72776.png" alt="319BE822-CC4A-4A9E-AA3C-2CC141"/></p></li>
 <li><p>iPhone X 在横屏下的 Safe Area 左右两边的间距都是 44pt，但是在竖屏下 Safe Area 左右两边的间距是 0pt。故通过上面的 padding 设置后，在竖屏下，页面会出现一些问题，文字内容会紧贴屏幕的左边缘。竖屏时对于这里的期望是文字能与屏幕左边缘有一些间距（比如 12px），要实现此，可以将文字部分的 padding-left 设置为取 12px 和 Safa Area 左边间距两者中较大的那个值，这样在横屏时 padding-left 即为 Safa Area 的左边距，在竖屏时 padding-left 即为 12px。（取较大值的这个特性将在以后版本的 iOS 11 中发布，目前已出现在 iOS 11.2 Beta 中）</p>
-
 <p><img src="media/15086036845015/8952F200-830A-4EBA-973F-94F019E27CAC.png" alt="8952F200-830A-4EBA-973F-94F019E27CA"/></p></li>
 <li><p>最终通过一系列的调整，<a href="https://webkit.org/demos/safe-area-insets/4-min-max.html">竖屏下的页面</a>效果如下图。</p>
-
 <p><img src="media/15086036845015/396A96EA-48FA-469D-8D41-E3EE16FF3DE7.png" alt="396A96EA-48FA-469D-8D41-E3EE16FF3DE7"/></p></li>
 </ul></li>
 <li><p>前后整体框架对比：</p>
-
 <p><img src="media/15086036845015/iPhoneX-Website.png" alt="iPhoneX-Website"/><br/>
 (图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>)</p></li>
 </ul>
@@ -1785,7 +1668,6 @@
 
 <ul>
 <li>iPhone 8 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Compact width, Compact height。
-
 <ul>
 <li>Status bar：20pt（电话、录音、位置记录时会变为 40pt）</li>
 <li>竖屏 navigation bar（包括 status bar）：64（20+44）pt，竖屏下如果有 big title 就再加 52pt</li>
@@ -1801,7 +1683,6 @@
 
 <ul>
 <li>iPhone 8 Plus 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Regular width, Compact height。
-
 <ul>
 <li>Status bar：20pt（电话、录音、位置记录时会变为 40pt）</li>
 <li>横竖屏 navigation bar（包括 status bar）：64（20+44）pt，竖屏下如果有 big title 就再加 52pt</li>
@@ -1816,7 +1697,6 @@
 
 <ul>
 <li><p>iPhone X 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Compact width, Compact height。</p>
-
 <ul>
 <li>Status bar：44pt（电话、录音、位置记录时不变）</li>
 <li>竖屏 navigation bar（包括 status bar）：88（44+44）pt，如果有 big title 就再加 52pt</li>
@@ -1827,10 +1707,8 @@
 <li>Home Indictor Area：竖屏时 34pt，横屏时 21pt</li>
 <li>左右建议 Margin：竖屏时到 Safe Area 左右两边 16pt，横屏时到 Safe Area 左右两边 20pt</li>
 </ul>
-
 <p><img src="media/15086036845015/iPhoneX-Portrait.jpg" alt="iPhoneX-Portrait"/><br/>
 （图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>）</p>
-
 <p><img src="media/15086036845015/C5A278D3-B23F-48B6-9D58-7CF217975FD1.png" alt="C5A278D3-B23F-48B6-9D58-7CF217975FD1"/><br/>
 （图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>，图片有改动。关于 iPhone X 横屏下，tab bar 和 Home Indicator 区域经过查找资料我认为应该分别是 32pt 和 21pt，而不是原文中的 30pt 和 23pt。）</p></li>
 </ul>
@@ -1909,14 +1787,11 @@
 
 <ul>
 <li><p>App Store 在 2008 年 7 月诞生，那时只有 500 多个 app。</p>
-
 <p><img src="media/15038367340940/1.jpg" alt="1"/></p></li>
 <li><p>一直以来 App Store 的结构和布局并没有发生大的变化，只有一些细微的调整。</p>
-
 <p><img src="media/15038367340940/2.jpg" alt="2"/></p></li>
 <li><p>九年过去了，到 2017 年在 App Store 里已经有了 220 万个 app。App Store 改变了 app 的购买和分发方式，也影响了我们生活的方方面面。</p></li>
 <li><p>在这个历史节点，我们停下来思考如何让 App Store 变得更好？如何从头开始设计一个崭新的 App Store？从以下几点考虑：</p>
-
 <ul>
 <li>Daily destination：希望用户每天能够回到这里，把 App Store 作为一个每天的基础；</li>
 <li>Give a voice to our editors：把精力更多地放在从一开始就很出色的编辑策划上；</li>
@@ -1932,7 +1807,6 @@
 
 <ul>
 <li><p>Today：卡片式风格，每日更新，可查看最多七天的内容，目前每天会有六个内容更新。这些内容会在不同地区的 App Store 本地化，符合当地的文化习惯。Today 目前有十二种样式，各种样式穿插在一起，应用这些样式会呈现的内容会有：</p>
-
 <ul>
 <li>新 app 的发布、app 崭新版本的发布；</li>
 <li>杰出 app 的介绍、app 背后的故事、开发者访谈；</li>
@@ -1941,27 +1815,21 @@
 <li>App of the Day、Game of the Day；</li>
 <li>App 中内购的介绍与推荐。</li>
 </ul>
-
 <p><img src="media/15038367340940/3.jpg" alt="3"/></p></li>
 <li><p>每一个卡片的内容细节</p>
-
 <ul>
 <li>交互形式：卡片点击后会有一个自然的过渡从中心展开，点击屏幕右上角的叉号、从卡片顶部向下滑动卡片、从屏幕左侧向右滑动都可以将卡片关闭。</li>
 <li>具体内容：每个卡片的内容形式非常丰富，图片、文字、引用、视频、应用穿插在一起，你还可以将这个卡片分享出去，每个卡片实际上都对应一个网址。</li>
 </ul>
-
 <p><img src="media/15038367340940/4.jpg" alt="4"/></p></li>
 <li><p>每一个卡片的内容都可以在搜索中被搜索到，同时被这些卡片推荐的 app 的详情页上也会有这些卡片的入口（截止到 iOS 11.01 还未看到第二种形式）。</p>
-
 <p><img src="media/15038367340940/1BF196F8-3421-40F1-84F3-B95B45F2BBCB.png" alt="1BF196F8-3421-40F1-84F3-B95B45F2BBCB"/></p></li>
 <li><p>这些内容卡片模板的一些小细节：</p>
-
 <ul>
 <li>「Today」tab 中页面滚动到带有视频的卡片并停下时，视频会自动进行静音循环播放；</li>
 <li>横向三排式的 app 合集卡片在显示时会有一个从右向左的展示动画；</li>
 <li>当一个卡片中只推荐了一个 app 时，页面向下滚动且滚动过封面图片时，页面底部会悬浮这个 app 的详情页跳转入口。</li>
 </ul>
-
 <p><img src="media/15038367340940/EFDC65CA-301A-4CDA-B86C-B14BC688BD37.png" alt="EFDC65CA-301A-4CDA-B86C-B14BC688BD37"/></p></li>
 </ul>
 
@@ -1970,38 +1838,27 @@
 <ul>
 <li>在以前，Games 和 Apps 是混在一起的，无论是其编辑推荐还是排行榜。对于游戏，可以细分为许多分类。意识到游戏的重要性和给 App Store 带来的巨大成功，我们为游戏单独设置了一个 tab—「Games」。</li>
 <li><p>Games：在这里你能看到各种形式（单个 app、app 合集，视频、图片、文字介绍等）的游戏 app 的推荐，除了app 的推荐还包括内购的推荐、排行榜、分类等。「Apps」tab 亦是同样。在这里游戏 app 的细化分类可以被拿到顶层，用户可以直接找到自己想要的游戏。</p>
-
 <p><img src="media/15038367340940/5D9C3C35-FA24-42D6-AA15-B389897523B3.png" alt="5D9C3C35-FA24-42D6-AA15-B389897523B3"/></p></li>
 <li><p>用户在推荐页面可以得到有关 app 更多的信息：</p>
-
 <ul>
 <li>Subtitle：每个 app 都会有一个副标题（后有详细说明）；</li>
 <li>来自编辑团队的推荐语。</li>
 </ul>
-
 <p><img src="media/15038367340940/65FC4A61-C27A-4C2D-91C3-94383D7B5E41.png" alt="65FC4A61-C27A-4C2D-91C3-94383D7B5E41"/></p></li>
 <li><p>一个有意思的小细节：「Games」tab 的火箭图标形状取自于 Apple 标志的叶子。</p>
-
 <p><img src="media/15038367340940/Games.png" alt="Games"/></p></li>
 <li><p>内购的推荐：在新设计的 App Store 中可以把 app 的内容像推荐 app 一样推荐。为了表示这是一个内购，我们设计了一种专属的卡片样式来表示内购。内购的推荐会出现在「Today」、「Games」、「Apps」的推荐中，亦会出现在对应 app 的详情页面上，还可以通过「搜索」找到。</p>
-
 <p><img src="media/15038367340940/12.jpg" alt="12"/></p>
-
 <ul>
 <li><p>App 内购的直接购买流程：对于一个 app 内购推荐，如果想直接购买，若你已安装这个 app，会直接打开这个 app 并显示购买确认页面，即可完成购买；若未安装这个 app，会提示你先购买/下载这个 app。</p>
-
 <p><img src="media/15038367340940/BCB303D8-EDE0-481D-9D5B-89B70D2809CB.png" alt="BCB303D8-EDE0-481D-9D5B-89B70D2809CB"/></p></li>
 <li><p>内购卡片的设计：内购卡片的设计关键一点是不能与 app 的样式混淆，当用户看到这个样式时应该知道这就是内购，这是来自于哪个应用的内购。</p>
-
 <ul>
 <li><p>内购卡片中圆角的弧度与 app 图标的圆角弧度是一致的，或者说内购就是 app 的四分之一，表示内购是 app 的一部分。</p>
-
 <p><img src="media/15038367340940/17.jpg" alt="17"/></p></li>
 <li><p>把 app 的内购图片加上一个统一的框架，在左下角放上 app 的图标即构成了这个内购卡片。所以提供的内购图片的左下角不应有重要的信息。只有在 app 产品详情页上的内购卡片的左下角没有 app 图标。</p>
-
 <p><img src="media/15038367340940/18.jpg" alt="18"/></p></li>
 <li><p>如果想让 app 的内购能够作为推荐呈现出来，需要为每个内购提供一张图片，这张图片需要与这个内购的具体内容有关，它不应是一个 app 的截图或者是 app 的图标。</p>
-
 <p><img src="media/15038367340940/19.jpg" alt="19"/></p></li>
 </ul></li>
 </ul></li>
@@ -2011,22 +1868,17 @@
 
 <ul>
 <li><p>Product Page：这里是每个 app 的家。随着时间的流逝，在 app 的详情页上有了越多的信息和功能。我们需要对这个页面做出简化，特别是页面的前半部分，因为这是用户打开产品详情页首先映入眼帘的部分。各种各样的信息都应该被清晰的传达给用户。</p>
-
 <ul>
 <li><p>App 图标、更加醒目的 App 名称、副标题（会先显示几秒的开发者名称再显示副标题，没有副标题则只显示开发者名称）、价格及购买按钮、更多/分享</p>
-
 <ul>
 <li>App Icon：这是用户会看到的第一个元素，对于给用户留下强烈的印象和传达 app 的品质和目的十分重要。App Icon 要做到简单、易识别。为了保证在不同尺寸下的 App Icon 都是清晰可见的，不要在 icon 中添加不必要的视觉细节。上传的 icon 图片要求 1024*1024 像素。</li>
 <li>App Name：选取一个简单好记、易拼写、能表明 app 是做什么的来作为 app 名字。名字要与其他 app 区分开来，不要使用一些通用术语或与其他已有的 app 相似的名字。App Name 最多 30 个字符。</li>
 <li>Subtitle：从 iOS 11 开始，Subtitle 将出现在 App Name 的下面，最多 30 个字符。推荐使用简练、吸引人的一句话来作为 Subtitle，避免如「世界最好」的这种通用描述，可以通过 Subtitle 来表明 app 的亮点、典型功能等。每次提交一个新版本的 app 时，可以改变一次 Subtitle。</li>
 </ul>
-
 <p><img src="media/15038367340940/3FAF9FD0-8188-49A9-A37A-38A64C7D1213.png" alt="3FAF9FD0-8188-49A9-A37A-38A64C7D1213"/></p></li>
 <li><p>App 的评分（没有评分会直接写明评分信息不足）、编辑推荐（如有）、在 app 首要分类的排行榜中的名次、年龄评级信息 Age Rating 在一行呈现；</p>
-
 <ul>
 <li>分类 Categories：你可以给一个 app 设定两个分类，一个首要分类，一个次要分类。首要分类决定了 app 会出现在哪个分类目录下，影响搜索过滤结果，决定是出现在「Apps」tab 还是「Games」tab。首要分类应该符合你 app 的主要功能。
-
 <ul>
 <li>分类反映你 app 的目的、主要功能、主题；</li>
 <li>想想用户在找你这样的 app 时会自然想到哪个分类；</li>
@@ -2035,14 +1887,12 @@
 </ul></li>
 <li><p>其他包含此 app 的 bundle（如有）；</p></li>
 <li><p>更新了什么：包括了当前版本更新日志和进一步查看历史版本的更新日志；</p>
-
 <ul>
 <li>每次升级 app 时，都可以利用「What’s New」告诉用户发生了什么改变；</li>
 <li>默认显示前三行信息，点击「more」展开查看全部；</li>
 <li>只有你购买过的 app（无论现在是否已下载），「What’s New」才会显示在 App Icon 下面的部分，否则会放在「评分和评论」部分之下。因为对于购买过的 app，用户更关注这个 app 最近更新了什么；而对于还未购买过的 app，用户更关注这个 app 有什么特色，更需要从视频、截图、应用介绍中了解这些信息。「内购和订阅」部分的逻辑亦是如此。</li>
 </ul></li>
 <li><p>订阅和内购推荐；</p>
-
 <ul>
 <li>推荐的订阅和内购将被分成两个部分展示在产品详情页上；</li>
 <li>开发者可以最多添加 20 个推荐条目；</li>
@@ -2051,20 +1901,16 @@
 <li>在一个特定的设备上，开发者可以自定义用户会看到那些推荐的内购。比如用户已经购买的可以隐藏、根据用户的游戏等级推荐相关内购。</li>
 <li>App 需要支持 SKPaymentTransactionObserver 方法才能实现上述功能。</li>
 </ul>
-
 <p><img src="media/15038367340940/A2B82A35-4D61-4B3B-8F38-0EFFA0AF30E8.png" alt="A2B82A35-4D61-4B3B-8F38-0EFFA0AF30E8"/></p></li>
 <li><p>视频、app 截图、在其他设备上是否可用（默认收起），视频默认自动静音播放，并可以最多添加三个视频；</p>
-
 <ul>
 <li>视频预览：预览视频可以展示你 app 的特色、功能、UI，每段视频最长 30s，默认自动静音播放，确保第一段视频的前几秒能够快速抓住用户的心，最多可以添加三段视频。每一段视频都可以进行本地化，针对于每种 App Store 语言进行翻译。在「Preview」中首先会展示视频，截图会展示在视频之后。</li>
 <li>在视频没有自动播放时，会显示 app preview poster frames，确保这张图片是足够吸引人的。</li>
 <li>iOS 10.3 及之前版本的用户只能看到第一个预览视频。</li>
 <li>截图：最多可以添加五张图片，前两张图片应该突出 app 的重要特色，因为在搜索结果中，如果在 app 有视频预览的前提下，通常情况（竖屏截图、iPhone）下这两张图片会被展示出来。横屏截图的条件下，搜索结果中只会显示第一章截图或第一个预览视频。</li>
 </ul>
-
 <p><img src="media/15038367340940/AEB8B962-CEB3-4A34-89D2-CD416DF705D1.png" alt="AEB8B962-CEB3-4A34-89D2-CD416DF705D1"/></p></li>
 <li><p>App 介绍 App Description</p>
-
 <ul>
 <li>提供一段吸引人的、能够凸显 app 功能和特色的文字来作为 app 介绍。理想的 app 介绍应该是简洁有效，简洁地描述 app 是做什么的，之后每一个段落说明一个主要功能，在表达上使用用户看得懂的话。</li>
 <li>介绍的第一句话十分重要，因为默认情况下会显示介绍的前三行。斟酌每一个字词，将最重要的功能放在第一句话中。有关于 app 获得的荣誉可以放到最后。</li>
@@ -2073,31 +1919,24 @@
 </ul></li>
 <li><p>营销信息 Promotional Text：最多 170 个字符，会出现在应用描述的上方。无需提交 app 新版本，即可更新这个信息。可用这个信息来分享 app 的最新消息，如最新促销、内购促销、即将上线的功能和内容、限时特价等。注意营销信息不能作为搜索的索引。</p></li>
 <li><p>开发者入口：从这里可进入开发者页面，查看开发者的所有 app。</p>
-
 <p><img src="media/15038367340940/809660D0-16BD-4869-AC5B-8345AF770183.png" alt="809660D0-16BD-4869-AC5B-8345AF770183"/></p></li>
 <li><p>评分和评论 Ratings &amp; Reviews：评分在上，评论在下，评论从左向右排布，简化了其呈现形式，更加容易阅读，去除了当前版本和所有版本的区分，所以升级 app 并不会隐藏之前的评分；</p>
-
 <ul>
 <li>开发者可以在 iTunes Connect 回复用户的评论以解决用户的反馈、问题或关注。开发者回复后，用户可以收到被回复的提醒，并且可以选择更新评论。只有最新的评论和回复会被显示在产品详情页上。</li>
 <li>当你提交 app 的新版本时，你可以重置你的评分，谨慎使用此功能。</li>
 </ul></li>
 <li><p>编辑推荐词（如有）。</p>
-
 <p><img src="media/15038367340940/2D6D8E1B-48E4-4F62-9359-27A3E87B7906.png" alt="2D6D8E1B-48E4-4F62-9359-27A3E87B7906"/></p></li>
 <li><p>更多信息：开发者、app 大小、分类、兼容性、语言、开发者网站、隐私政策、包含的内购等；</p></li>
 <li><p>支持：如 Wallet、Family Sharing、Game Center 等.</p>
-
 <p><img src="media/15038367340940/1CA2769A-0E1E-4B84-BE62-BCF3C54852C6.png" alt="1CA2769A-0E1E-4B84-BE62-BCF3C54852"/></p></li>
 <li><p>Featured In：收录这个 app 的相关 Story，截止到 iOS 11.01 暂未找到实例，下图为效果图。</p></li>
 <li><p>更多来自于这个开发者的 app 和根据这个 app 的推荐。</p>
-
 <p><img src="media/15038367340940/C75EFCEF-FDC1-4B41-956F-1A566A260CCC.png" alt="C75EFCEF-FDC1-4B41-956F-1A566A260CC"/></p></li>
 <li><p>导航栏：当页面向下滚动，滚过第一部分时，导航栏上就会显示这个 app 的 icon 和购买按钮，方便在浏览时随时完成购买下载动作。</p>
-
 <p><img src="media/15038367340940/27.jpg" alt="27"/></p></li>
 </ul></li>
 <li><p>Product Page 纵览（点击下图查看完整图片）</p>
-
 <p><ul class="clearing-thumbs small-block-grid-2" data-clearing><br/>
         <li><a href="media/15038367340940/IMG_3905.jpg"><img data-caption="Product Page" src="media/15038367340940/15039294296445.jpg"></a></li><br/>
         </ul></p></li>
@@ -2121,23 +1960,19 @@
 <li>Today：每天更新，在这里聚焦观点。用户可以在卡片上直接购买喜欢的应用和游戏，亦可以点击卡片了解应用和游戏的故事。</li>
 <li><p>Games &amp; Apps：你可以看作这是包含排行榜、分类的「Feature」tab 的 2.0 进化版本。虽然不会像「Today」一样每天更新，目前会每周进行更新，以后会更加频繁。在这里用户会有更多的选择。</p></li>
 <li><p>Every app has a story to tell. 每一个 app 都有一个故事可讲。我们要找到每一个 app 中的闪光点写成故事，关于这些故事，我们确定了四个主要的主题：</p>
-
 <ul>
 <li>Gaming——Apps are the future of gaming 大游戏、小游戏、汽车游戏、动作游戏、角色扮演游戏、跑酷游戏，应用是游戏的未来。</li>
 <li>Lifestyle——Apps transform your life 社交、摄影、约会、健身、下厨、通勤应用，应用改变你的生活。</li>
 <li>Culture and Entertainment——Apps shape culture 音乐、电影、时尚、电视应用，应用塑造文化。</li>
 <li>New Tech and Innovation——Apps change everything 新服务、新想法、新能力，应用改变着一切。</li>
 </ul>
-
 <p><img src="media/15038367340940/22.jpg" alt="22"/></p></li>
 <li><p>当把这些主题写成故事时，这里三个核心目的：</p>
-
 <ul>
 <li>Inform 告知：要及时，要告诉用户他们需要知道的信息，让他们知道世界发生了什么，比如 Netflix 上有了一个新节目；</li>
 <li>Help 帮助：要指导，要动员，分享那些对我们很直观但对用户并不是的想法，让用户重温那些之前下载但可能已经闲置一旁的应用，给予全新的动力，比如如何最大化利用 Instagram 的功能；</li>
 <li>Inspire 启发：应用于创造性内容、鼓舞人心的内容、独到见解的内容，这些令人鼓舞的内容可能会走向全世界。</li>
 </ul>
-
 <p><img src="media/15038367340940/23.jpg" alt="23"/></p></li>
 </ul>
 
@@ -2145,45 +1980,37 @@
 
 <ul>
 <li><p>More ways to be featured than ever. 这里有比以前更多的各种各样的形式可以用来推荐 app。举几个例子（在 iOS 11 版本的 iPhone、iPad、iPod 的美区应用商店中才能打开以下链接）：</p>
-
 <ul>
 <li><a href="https://itunes.apple.com/us/story/id1245798920">WORLD PREMIERE 世界最佳：The Art of the Impossible——纪念碑谷 2</a></li>
 <li><a href="https://itunes.apple.com/us/story/id1246363365">HOW TO 怎样做：5 Tips to Get More Out of VSCO——VSCO</a></li>
 <li><a href="https://itunes.apple.com/us/story/id1246381517">DEEP DIVE 深入了解：It All Changes on Level 201——Causality</a></li>
 <li><a href="https://itunes.apple.com/us/story/id1247678406">MEET THE DEVELOPER 开发者访谈：It&#39;s a Mom&#39;s Mom&#39;s Mom&#39;s World——Peanut</a></li>
 </ul>
-
 <ul class="clearing-thumbs small-block-grid-2" data-clearing>
   <li><a href="media/15038367340940/IMG_3819.jpg"><img data-caption="WORLD PREMIERE 世界最佳：The Art of the Impossible" src="media/15038367340940/IMG_3819-s.png"></a></li>
   <li><a href="media/15038367340940/IMG_3857.jpg"><img data-caption="HOW TO 怎样做：5 Tips to Get More Out of VSCO" src="media/15038367340940/IMG_3857-s.png"></a></li>
   <li><a href="media/15038367340940/IMG_3858.jpg"><img data-caption="DEEP DIVE 深入了解：It All Changes on Level 201" src="media/15038367340940/IMG_3858-s.png"></a></li>
   <li><a href="media/15038367340940/IMG_3859.jpg"><img data-caption="MEET THE DEVELOPER 开发者访谈：It's a Mom's Mom's Mom's World" src="media/15038367340940/IMG_3859-s.png"></a></li>
 </ul>
-
 <ul>
 <li><a href="https://itunes.apple.com/us/story/id1254095375">APP OF THE DAY 每日应用：Day One Journal</a></li>
 <li><a href="https://itunes.apple.com/us/story/id1273222333">GAME OF THE DAY 每日游戏: Pigeon Wings</a></li>
 </ul>
-
 <ul class="clearing-thumbs small-block-grid-2" data-clearing>
     <li><a href="media/15038367340940/IMG_3860.jpg"><img data-caption="APP OF THE DAY 每日应用：Day One Journal" src="media/15038367340940/IMG_3860-s.png"></a></li>
     <li><a href="media/15038367340940/IMG_3861.jpg"><img data-caption="GAME OF THE DAY 每日游戏: Pigeon Wings" src="media/15038367340940/IMG_3861-s.png"></a></li>
     </ul>
-
 <ul>
 <li><a href="https://itunes.apple.com/us/story/id1266801024">VIDEOS 视频：Go On, Save the Tiny Aliens——Splitter Critters</a></li>
 <li><a href="https://itunes.apple.com/us/story/id1267735855">QUICK LOOK 快速浏览：Ride for a Cause</a></li>
 <li><p>内购推荐：暂未找到实例</p>
-
 <p><img src="media/15038367340940/E2CC05F2-23DF-4F15-8754-BC1CAAA3D22C.png" alt="E2CC05F2-23DF-4F15-8754-BC1CAAA3D22"/></p></li>
 <li><p>COLLECTION &amp; LIST</p>
-
 <ul>
 <li><a href="https://itunes.apple.com/us/story/id1254076297">Tap Your Way to Victory</a></li>
 <li><a href="https://itunes.apple.com/us/story/id1275104683">Not Your Normal Sports Games</a></li>
 <li><a href="https://itunes.apple.com/us/story/id1273579171">One Thumb to Play</a></li>
 </ul>
-
 <p><img src="media/15038367340940/2FB40861-7FE2-4D98-88C9-1CED7370EEFC.png" alt="2FB40861-7FE2-4D98-88C9-1CED7370EEF"/></p></li>
 </ul></li>
 </ul>
@@ -2192,7 +2019,6 @@
 
 <ul>
 <li>How do you reach us?：访问「<a href="http://AppStore.com/promote">Contact the App Store Team</a>」（需要开发者身份登录）
-
 <ul>
 <li>如果你即将发布一款新 app、新游戏，即将发布一项重要意义的升级，或者你关于 app 有一段独特的故事，希望在推出时被 App Store 推荐，你可以提前 6-8 周告知 Apple 你的故事。</li>
 <li>基本的开发者信息（开发者名字、网站）、app 信息（app 的名字、ID、描述、版本号、版本亮点、发布平台、是否针对儿童、语言、地区、计划提交日期、计划发布日期）、相关链接（网站、demo 视频、其他展示等）、商业模型（Free、Paid、Freemium、Paymium）、市场推广计划、最重要的是你的故事（最多 1000 个字符）。</li>
@@ -2208,10 +2034,8 @@
 <li>App Name &amp; Subtitle：App 名字被限制为 30 个字符，但增加了副标题；</li>
 <li>Video App Preview ：自动播放、可以本地化的预览视频；</li>
 <li><p>Promotional Text：最多 170 个字符，会出现在应用描述的上方；</p>
-
 <p><img src="media/15038367340940/26.jpg" alt="26"/></p></li>
 <li><p>Ratings and Reviews</p>
-
 <ul>
 <li>iOS 10.3 中加入了在应用内评分的功能，开发者可以回复用户的评论。开发者回复后，用户可以修改评论，通常用户都是把评论越改越好。</li>
 <li>要使用应用内评分，需要调用 SKStoreReviewController API。在 365 天内最多请求用户评分 3 次。</li>
@@ -2219,13 +2043,10 @@
 <li>强烈建议将回复用户评论作为日常事务之一。现在已经支持在 iTunes Connect 中分配用户角色为「客户支持」，该角色仅可以对评论进行回复。</li>
 </ul></li>
 <li><p>Search</p>
-
 <ul>
 <li><p>Search Ads：目前在美国、英国、澳大利亚、新西兰可用。转化率达到 50 %。从 2017 年 10 月 17 日开始，Search Ads 功能会在加拿大、墨西哥、瑞士上线。</p>
-
 <p><img src="media/15038367340940/24.jpg" alt="24"/></p></li>
 <li><p>Search Keywords：搜索关键词可以决定你的 app 在搜索结果中怎么呈现。仔细考虑当用户想搜索你这种 app 时会用到哪些词语，使用这些词语作为你的搜索关键词。</p>
-
 <ul>
 <li>过于笼统或过于具化的术语都不利于用户找到你的 app。</li>
 <li>搜索关键词用逗号分隔，最多 100 个字符。</li>
@@ -2233,7 +2054,6 @@
 <li>可能会被拒绝审核的关键词，不能使用的关键词：1.未授权的商标名称、名人的名字和其他受保护的字词；2.与 app 不相关的字词；3.竞品 app 的名字；4.不相关、不合适、无礼的、令人讨厌的字词。</li>
 </ul></li>
 <li><p>影响搜索结果的因素：</p>
-
 <ul>
 <li>搜索信息与 app 信息的匹配度；</li>
 <li>用户的下载、评分、评论等行为；</li>
@@ -2244,7 +2064,6 @@
 <li>搜索广告。</li>
 </ul></li>
 <li><p>更强大的搜索：除了应用，搜索目前可以搜索到开发者、内购、分类、故事、技巧、合集等。</p>
-
 <p><img src="media/15038367340940/15039279875875.jpg" alt=""/></p></li>
 </ul></li>
 </ul>
@@ -2293,23 +2112,17 @@
 
 <ul>
 <li><p>Be Visible：要让用户知道你的 app 里存在订阅功能，不要让用户到处寻找如何订阅/注册：</p>
-
 <ul>
 <li><p>方法一：在 app 的界面中一直显示一个「订阅」按钮，例如「The New York Times」app 中，每篇文章的导航栏上都有一个「订阅」按钮；</p>
-
 <p><img src="media/15036722610708/1.jpg" alt="1"/></p></li>
 <li><p>Note：Subscription ≠ Ad、Subscription ≠ Notification，不要把订阅以弹框或通知的形式呈现；</p></li>
 <li><p>方法二：当用户对一部分内容或者功能表现出感兴趣时，展示订阅功能，例如「Her」app 中，当你在浏览每个人的介绍时，刚好错过了一个你感兴趣的人，当你想要回退时，app 会告诉你这是一个「订阅」后可使用的功能。并且在展示订阅的界面上有着漂亮的动画。</p>
-
 <p><img src="media/15036722610708/B285906D-201B-426F-8B12-197437AA49A2.png" alt="B285906D-201B-426F-8B12-197437AA49A2"/></p></li>
 <li><p>确保在「设置」或者「帐户」中有一个地方有订阅的入口，因为当一个用户想刻意寻找订阅时自然会想到这些位置。</p>
-
 <p><img src="media/15036722610708/4.jpg" alt="4"/></p></li>
 </ul></li>
 <li><p>Remove Friction：减少麻烦，不要在注册/订阅过程中要求用户填写太多信息，不要有过多的步骤，不要让用户花过长的时间。下面是美国三大视频流媒体 app 一个月的数据，看下要求点击次数与转换率的关系。要求点击 9 次时转化率只有 7% 了。</p>
-
 <p><img src="media/15036722610708/D1FBC39B-A78F-47F9-84E5-D82A496ECAE4.png" alt="D1FBC39B-A78F-47F9-84E5-D82A496ECAE4"/></p>
-
 <ul>
 <li>Less is more. 更少的点击，更少的麻烦就会有更高的转化率和更多的订阅者。先把焦点放在让用户先完成注册上。像爱好、个人介绍等细节可以放在注册之后再让用户补充。</li>
 </ul></li>
@@ -2319,10 +2132,8 @@
 
 <ul>
 <li><p>Provide clear terms：提供清晰的订阅条款，让用户明白他们订阅了什么。看到订阅的界面，用户应该能快速了解订阅的是什么和怎样订阅。</p>
-
 <ul>
 <li><p>当提供订阅时，通常包括：简洁的价值主张、对订阅的号召、已订阅用户可登录、换了新设备的用户可恢复购买、提供不同层级的订阅选项（最多三到四种为佳）。尽可能的让界面保持简洁。</p>
-
 <p><img src="media/15036722610708/5.jpg" alt="5"/></p></li>
 </ul></li>
 </ul>
@@ -2332,16 +2143,12 @@
 <ul>
 <li>Engage through experience：在订阅前，让用户能够体验你的 app 和 app 的内容。在当今，购买前能够体验和尝试是怎样做出购买决定的重要影响因素，如试衣服、看房、试驾等。对 app 的订阅是同样的道理。</li>
 <li><p>吸引用户订阅有多种方法，决定用哪种方法时想想：用户当前的使用体验，你 app 里的内容类型，添加订阅后对于用户体验的影响。</p>
-
 <ul>
 <li><p>Free trial：适用于人们已经熟悉的品牌，人们想要在订阅前了解到底有什么内容。如 「HBO NOW」app。</p>
-
 <p><img src="media/15036722610708/6.jpg" alt="6"/></p></li>
 <li><p>Premium feature：App 的主体免费，但一部分高级功能作为订阅选项。例如「Sleep Cycle」app，将「趋势」功能作为订阅选项，模糊背景的形式作为一个预览。</p>
-
 <p><img src="media/15036722610708/7.jpg" alt="7"/></p></li>
 <li><p>Sample content：提供一部分示例内容。如「The New York Times」app，只允许未订阅的用户浏览十篇文章，这样可以让用户自己寻找和决定自己感兴趣的内容，从而决定是否要去订阅。</p>
-
 <p><img src="media/15036722610708/8.jpg" alt="8"/></p></li>
 </ul></li>
 </ul>
@@ -2385,7 +2192,6 @@
 <li>通常意义下，寻路就是指导人们通过某个环境、在物理空间自我定位；</li>
 <li><p>生活中常见的标识和信息系统：街道标识、机场、停车场。</p></li>
 <li><p>在 UI 中寻路，可以增强使用体验，理解你所处的空间：</p>
-
 <ul>
 <li>首要目标：高亮/强调内容；</li>
 <li>app 需要清晰的视觉层级；</li>
@@ -2393,24 +2199,18 @@
 </ul></li>
 <li><p>大标题导航栏：一种可选的方案，并没有替换掉标准的导航栏样式，页面往下滚动时可以切换为标准的导航栏样式；</p></li>
 <li><p>在哪里应该使用大标题导航栏：</p>
-
 <ul>
 <li>app 每个 tab 的第一层级：让你理解你在 tab 的第一层级、你已经滚动到了页面顶部；</li>
 <li>如果内容和层级众多，在某些二级页面也可以使用大标题导航栏，例如「音乐」app 中「浏览」tab 中的「最新音乐」、「歌单」、「排行榜」；</li>
 </ul>
-
 <p><img src="media/15028131788266/1.jpg" alt="1"/></p>
-
 <ul>
 <li>在布局相似的页面里也可使用大标题导航栏，例如「电话」app，每个 tab （个人收藏、最近通话、语音信箱）都是行式的文本内容，使用大标题导航栏可以让用户立即知道自己在哪里；</li>
 </ul>
-
 <p><img src="media/15028131788266/2.jpg" alt="2"/></p>
-
 <ul>
 <li>非常重要：在导航栏中使用大标题并不总是必要的，在某些场景下会阻碍其可用性，例如「时钟」app，虽然它有多个 tab，但是它没有复杂多样的内容，每一个 tab 的布局也十分容易区分，如果使用大标题导航栏，反而会使其与内容发生竞争。</li>
 </ul>
-
 <p><img src="media/15028131788266/3.jpg" alt="3"/></p></li>
 </ul>
 
@@ -2420,7 +2220,6 @@
 <li>通过排版上的层级变化，可以强调更加重要的内容，帮助内容成组；</li>
 <li>减少认知负担，减少在寻找某些东西时所付出的精神努力。</li>
 <li>建立排版层级的几个基本的方法：
-
 <ul>
 <li><strong>Position 位置：</strong>上面的会比下面的重要一些；</li>
 <li><strong>Size 尺寸/字号：</strong>大尺寸的会比小尺寸的重要一些；</li>
@@ -2434,23 +2233,17 @@
 
 <ul>
 <li><p>iOS 11 中的几个实例：</p>
-
 <ul>
 <li><strong>「照片」app：</strong>内容——你的照片是这个 app 中最重要的。导航照片的每部分的标题，在 iOS 10 中采用了两种字号来区分两种信息，但仍然显得有点小、有点轻，而在 iOS 11 中，让每部分的标题字号更大，地点信息增加了字重，日期信息采用了灰色文本。这些改变可以使你分离内容中的重点更简单了，让你更快地找到某张特别的照片。</li>
 </ul>
-
 <p><img src="media/15028131788266/1%201.jpg" alt="1 1"/></p>
-
 <ul>
 <li><strong>「日历」app：</strong>在 iOS 11 中为了强调增加了字重，有意地使用颜色指示当前的年月日。</li>
 </ul>
-
 <p><img src="media/15028131788266/2%201.jpg" alt="2 1"/></p>
-
 <ul>
 <li><strong>「天气」app：</strong>在 iOS 11 中，增加了文本字重，整体上增大了字号，使得内容更加容易阅读。</li>
 </ul>
-
 <p><img src="media/15028131788266/3%201.jpg" alt="3 1"/></p></li>
 </ul>
 
@@ -2459,41 +2252,29 @@
 <ul>
 <li>在 UI 中，为了与更大、更粗的文本样式保持平衡，需要更新其他 UI 元素，增强其对比度，同时还要保持其功能性，保证最小化粒度的改变。</li>
 <li><p>在 iOS 11 中由此带来的一些改变：</p>
-
 <ul>
 <li>填充按钮的形状，如数字键盘；</li>
 </ul>
-
 <p><img src="media/15028131788266/1%202.jpg" alt="1 2"/></p>
-
 <ul>
 <li>增加形状的尺寸，如搜索输入框；</li>
 </ul>
-
 <p><img src="media/15028131788266/A4F66E32-2ECC-49B6-873F-476C6599D916.png" alt="A4F66E32-2ECC-49B6-873F-476C6599D916"/></p>
-
 <ul>
 <li>Tab Bar：增加文本标签的字重（从 regular 到 medium），填充 icon 的形状、增加笔画的权重；</li>
 </ul>
-
 <p><img src="media/15028131788266/F913F827-1261-49A1-9990-864B983EC401.png" alt="F913F827-1261-49A1-9990-864B983EC401"/></p>
-
 <ul>
 <li>IPhone 横屏下的 Tab Bar：第一点，为了对空间更好地利用，把文本标签放在了 icon 的右边（iOS 10 中是一上一下），这样使得横屏下的 Tab Bar 更矮了，从而与导航栏、工具栏高度一致。第二点，相对于竖屏，横屏下的 icon 会稍小一些，文本会稍大一些，设计自己的 app 时需要考虑这些因素。</li>
 </ul>
-
 <p><img src="media/15028131788266/iPhone%20Tab%20Bar.png" alt="iPhone Tab Ba"/></p>
-
 <ul>
 <li>iPad 横屏下的 Tab Bar：更大的文本尺寸、icon 与竖屏时的大小一致。</li>
 </ul>
-
 <p><img src="media/15028131788266/6280686D-473F-41F3-AE7A-C9AD96D0EBF8.png" alt="6280686D-473F-41F3-AE7A-C9AD96D0EBF8"/></p>
-
 <ul>
 <li>Wallet app：在 iOS 10 中使用了模糊效果，似乎想要表明其位于底下的页面之上，但这个并不符合逻辑，也没有起到指示所处空间的作用，所以在 iOS 11 中移除了这种模糊效果。</li>
 </ul>
-
 <p><img src="media/15028131788266/4.jpg" alt="4"/></p></li>
 <li><p>移除多余的、不必要的 UI 元素，减少复杂度以改善整个 app 的对比度。</p></li>
 </ul>
@@ -2604,7 +2385,7 @@
 
 <p>最简单的 Alert 自然是只有一个操作按钮，以点击一个按钮弹出 Alert 为例说明：</p>
 
-<pre><code>@IBAction func showAlertViewWithOneAction(sender: UIButton){
+<pre><code class="language-text">@IBAction func showAlertViewWithOneAction(sender: UIButton){
     
     // 创建 alertController，定义其显示的标题和描述文字，确定其类型为 Alert
     let alertController = UIAlertController(title: &quot;Hello World！&quot;, message: &quot;This is the most simple alert view.&quot;, preferredStyle: UIAlertControllerStyle.alert)
@@ -2626,7 +2407,6 @@
 <ul>
 <li>创建 alertController 时有一个属性「preferredStyle」，当其为「UIAlertControllerStyle.alert」时则为创建一个 Alert View，当其为「UIAlertControllerStyle.actionSheet」时则为创建一个 Action Sheet。</li>
 <li>创建一个 action 时，它也有一个属性「style」，这个属性的值有三个：「.default」、「.destructive」、「.cancel」，他们之间有一些区别：
-
 <ul>
 <li>「.default」：默认的样式，视觉上是正常字重、蓝色的文字；</li>
 <li>「.destructive」：从名字上就可以看出，用在那些具有破坏性、不可恢复的操作上，比如删除、注销、清除等，视觉上是正常字重、红色的文字；</li>
@@ -2643,7 +2423,7 @@
 
 <p>当然如果想增加更多操作按钮，只需在代码中创建更多动作并添加到 alertController 即可。如下面的代码建立一个两个操作按钮的 AlertView：</p>
 
-<pre><code>@IBAction func showAlertViewWithTwoActions(sender: UIButton){
+<pre><code class="language-text">@IBAction func showAlertViewWithTwoActions(sender: UIButton){
     let alertController = UIAlertController(title: &quot;你确定要退出当前登录帐号吗？&quot;, message: &quot;退出后你的帐户数据不会清除，你可以再次登录&quot;, preferredStyle: .alert)
     
     let exitAction = UIAlertAction(title: &quot;退出&quot;, style: .default, handler: nil)
@@ -2670,7 +2450,7 @@
 
 <p>当一个 Alert 中出现了大于两个操作时，按钮的排布方式就不能再左右排布了，而是改为由上至下排布，具体代码如下：</p>
 
-<pre><code>@IBAction func showAlertViewWithThreeAcitons(sender: UIButton){
+<pre><code class="language-text">@IBAction func showAlertViewWithThreeAcitons(sender: UIButton){
     let alertController = UIAlertController(title: &quot;你确定要注销此帐户吗？&quot;, message: nil, preferredStyle: .alert)
     
     let destructAction = UIAlertAction(title: &quot;注销帐户&quot;, style: .destructive, handler: nil)
@@ -2698,7 +2478,7 @@
 
 <p>一个 Alert 中可以加入文本输入框以获取用户的某些信息，但文本输入框的数量、输入的字符量都应适度，在这么小一个窗口下输入文字的体验不会太好。系统中比较常见的就是购买 app 时输入 Apple ID 密码。以下以输入账户登录名和密码为例说明：</p>
 
-<pre><code>@IBAction func showAlertViewWithTextField(sender: UIButton){
+<pre><code class="language-text">@IBAction func showAlertViewWithTextField(sender: UIButton){
     let alertController = UIAlertController(title:  &quot;请输入你的帐户名和密码&quot;, message: nil, preferredStyle: .alert)
     
     // 在 alertController 中增加两个文本输入框
@@ -2755,7 +2535,7 @@
 
 <p>通常情况下的 Action Sheet 包括其标题、描述、选择的动作和取消动作，以下为具体举例：</p>
 
-<pre><code>  @IBAction func showActionSheetWithThreeActions(sender: UIButton){
+<pre><code class="language-text">  @IBAction func showActionSheetWithThreeActions(sender: UIButton){
     let alertController = UIAlertController(title: &quot;请选择你想要的语言&quot;, message: &quot;选择的语言将在下次 app 打开时生效&quot;, preferredStyle: .actionSheet)
     
     // 定义动作和添加动作到 alertController 两步可以合为一步
@@ -2802,7 +2582,7 @@
 
 <p>如果一个 Action Sheet 没有了「取消」样式的按钮会有什么特别呢？具体代码如下：</p>
 
-<pre><code>@IBAction func showActionSheetWithTwoActions(sender: UIButton){
+<pre><code class="language-text">@IBAction func showActionSheetWithTwoActions(sender: UIButton){
     let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     
     alertController.addAction(UIAlertAction(title: &quot;新建网页&quot;, style: .default, handler: nil))
@@ -2827,7 +2607,7 @@
 
 <p>这是一个非常特殊的例子。具体实现方式如下：</p>
 
-<pre><code>@IBAction func showActionSheetWithFourActions(sender: UIButton){
+<pre><code class="language-text">@IBAction func showActionSheetWithFourActions(sender: UIButton){
     let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     
     let twitterAction = UIAlertAction(title: &quot;Twitter&quot;, style: .default, handler: nil)
@@ -2875,7 +2655,7 @@
 
 <p>如果直接回答，答案当然是能。上文中提到的给 action 添加 icon 其实就是一种。再比如改变字体颜色只需要在创建 UIAlertController 后改变其 view 的 「tintcolor」属性，代码如下：</p>
 
-<pre><code>@IBAction func showActionSheetWithTwoActions(sender: UIButton){
+<pre><code class="language-text">@IBAction func showActionSheetWithTwoActions(sender: UIButton){
     let alertController = UIAlertController(title: nil, message: &quot;选择你想要的操作&quot;, preferredStyle: .actionSheet)
     
     // 更改 alertController 的字体颜色
@@ -2948,33 +2728,26 @@
 
 <ul>
 <li><p>一个例子：一些文本，拆分成三块，针对每块的内容在文字大小、字重、样式、颜色上进行调整，以保证清晰的层级关系，并且可以对应翻译成中文。</p>
-
 <p><img src="media/15030704996885/B59FCDFC-2928-4781-9379-4FACAA261034.png" alt="B59FCDFC-2928-4781-9379-4FACAA261034"/></p></li>
 <li><p>需要考虑的因素：</p>
-
 <ul>
 <li><p>拉丁文书写系统和非拉丁文书写系统：拉丁文书写除了普通的样式外，还有带有声调的扩展样式；非拉丁文书写可能没有大写样式，可能没有斜体样式；</p>
-
 <ul class="example-orbit" data-orbit>
-       <li>
-        <img src="media/15030704996885/071336CC-2FD3-4558-88B4-EDD4E1C4D4DA.png" alt="" />
-        <div class="orbit-caption">非拉丁文没有大写样式</div>
+       <li><br/>
+        <img src="media/15030704996885/071336CC-2FD3-4558-88B4-EDD4E1C4D4DA.png" alt="" /><br/>
+        <div class="orbit-caption">非拉丁文没有大写样式</div><br/>
       </li>
-      <li>
-        <img src="media/15030704996885/434FD317-6434-4F3A-BEE2-4DE3EB4C9D00.png" alt="" />
-        <div class="orbit-caption">带声调的拉丁字母</div>
+      <li><br/>
+        <img src="media/15030704996885/434FD317-6434-4F3A-BEE2-4DE3EB4C9D00.png" alt="" /><br/>
+        <div class="orbit-caption">带声调的拉丁字母</div><br/>
       </li>
     </ul></li>
 <li><p>对于不同的文字，字重数量不同：SF 字体有九种字重，中文（苹方）没有「Bold」、「Heavy」、「Black」这三种字重，日语只有「Regular」和「Bold」两种字重。</p>
-
 <p><img src="media/15030704996885/4A311761-6452-4321-8EBD-2BE24FF12CCC.png" alt="4A311761-6452-4321-8EBD-2BE24FF12CC"/></p></li>
 <li><p>更大的字号是更加通用的：对于一个很小字号的拉丁字母可能可读性尚可，但对于同样字号的汉字，可能笔画都叠在了一起而不可读。</p>
-
 <p><img src="media/15030704996885/68449820-9FB1-4B83-B0BE-9085BF4DE119.png" alt="68449820-9FB1-4B83-B0BE-9085BF4DE119"/></p></li>
 <li><p>高型书写系统：泰语的字母还有声调等样式，使得整个文字超出 ascender 和 descender，支持这些语言时不应该截掉这些信息。在布局时这些文字自然需要更大的空间显示。</p>
-
 <p><img src="media/15030704996885/BB47E969-CAEF-46DC-9F52-EB54123D5F8C.png" alt="BB47E969-CAEF-46DC-9F52-EB54123D5F8"/></p>
-
 <p><img src="media/15030704996885/B53BA56E-656A-4AEA-98E6-877283452F8C.png" alt="B53BA56E-656A-4AEA-98E6-877283452F8"/></p></li>
 </ul></li>
 </ul>
@@ -2983,60 +2756,51 @@
 
 <ul>
 <li><p>通常情况下英语单词越短，翻译到其他语言就越长，2-3 倍的情况经常出现。</p>
-
 <p><img src="media/15030704996885/2E58E3D7-BE8E-4B4C-BC0B-D640C6190507.png" alt="2E58E3D7-BE8E-4B4C-BC0B-D640C6190507"/></p></li>
 <li><p>你不希望一些重要的信息在末尾丢失，所以在开发时使用动态布局，以适应不同语言。</p>
-
 <ul class="example-orbit" data-orbit>
-  <li>
-    <img src="media/15030704996885/%E4%B8%AD%E6%96%87.jpg" alt="" />
-    <div class="orbit-caption">中文</div>
+  <li><br/>
+    <img src="media/15030704996885/%E4%B8%AD%E6%96%87.jpg" alt="" /><br/>
+    <div class="orbit-caption">中文</div><br/>
   </li>
-  <li>
-    <img src="media/15030704996885/%E8%8B%B1%E8%AF%AD.jpg" alt="" />
-    <div class="orbit-caption">英语</div>
+  <li><br/>
+    <img src="media/15030704996885/%E8%8B%B1%E8%AF%AD.jpg" alt="" /><br/>
+    <div class="orbit-caption">英语</div><br/>
   </li>
-  <li>
-    <img src="media/15030704996885/%E5%BE%B7%E8%AF%AD.jpg" alt="" />
-    <div class="orbit-caption">德语</div>
+  <li><br/>
+    <img src="media/15030704996885/%E5%BE%B7%E8%AF%AD.jpg" alt="" /><br/>
+    <div class="orbit-caption">德语</div><br/>
   </li>
-  <li>
-    <img src="media/15030704996885/%E6%B3%B0%E8%AF%AD.jpg" alt="" />
-    <div class="orbit-caption">泰语</div>
+  <li><br/>
+    <img src="media/15030704996885/%E6%B3%B0%E8%AF%AD.jpg" alt="" /><br/>
+    <div class="orbit-caption">泰语</div><br/>
   </li>
-  <li>
-    <img src="media/15030704996885/%E9%98%BF%E6%8B%89%E4%BC%AF%E8%AF%AD.jpg" alt="" />
-    <div class="orbit-caption">阿拉伯语</div>
+  <li><br/>
+    <img src="media/15030704996885/%E9%98%BF%E6%8B%89%E4%BC%AF%E8%AF%AD.jpg" alt="" /><br/>
+    <div class="orbit-caption">阿拉伯语</div><br/>
   </li>
 </ul></li>
 <li><p>动态类型</p>
-
 <ul>
 <li><p>为不同的 Label 确定合适的层级，每个层级有对应的字体、字号、字重、行间距、字间距。</p>
-
 <p><img src="media/15030704996885/3283ADE5-6D59-464C-B796-6E55E77B1B94.png" alt="3283ADE5-6D59-464C-B796-6E55E77B1B94"/></p></li>
 <li><p>动态类型会根据这些层级，在系统调整字体大小时进行自动的调整。</p>
-
 <p><img src="media/15030704996885/BE60904A-8B42-4C0C-873C-FC946046BFFB.png" alt="BE60904A-8B42-4C0C-873C-FC946046BFFB"/></p></li>
 </ul></li>
 <li><p>在 iPad 上，由于屏幕很大，在阅读时从左往右读完一行很小的文字再回到第二行的最左端是比较费力的，应该在这种大屏幕上对边距进行动态调整，小字号，显示区域小；大字号，显示区域大。</p>
-
 <p><img src="media/15030704996885/11D6F175-D183-40D1-B236-435401FFA81A.png" alt="11D6F175-D183-40D1-B236-435401FFA81A"/></p></li>
 <li><p>对从右往左读的语言进行优化：镜像 UI，但像数字、电话号码、时钟、乐谱、图表、视频控制、图片不需要镜像。</p>
-
 <ul class="example-orbit" data-orbit>
-  <li>
-    <img src="media/15030704996885/21.jpg" alt="" />
-    <div class="orbit-caption">Left-to-Right Languages</div>
+  <li><br/>
+    <img src="media/15030704996885/21.jpg" alt="" /><br/>
+    <div class="orbit-caption">Left-to-Right Languages</div><br/>
   </li>
-  <li>
-    <img src="media/15030704996885/22.jpg" alt="" />
-    <div class="orbit-caption">Right-to-Left Languages</div>
+  <li><br/>
+    <img src="media/15030704996885/22.jpg" alt="" /><br/>
+    <div class="orbit-caption">Right-to-Left Languages</div><br/>
   </li>
 </ul>
-
 <p>一个实例：Tweetbot 在不同语言下的 UI</p>
-
 <p><img src="media/15030704996885/2.jpg" alt="2"/></p></li>
 </ul>
 
@@ -3044,33 +2808,26 @@
 
 <ul>
 <li><p>颜色代表不同的含义，不同文化中不同：</p>
-
 <ul>
 <li>蓝色：蓝色是最受欢迎的颜色，蓝天、大海，代表平静，缓和情绪；</li>
 <li>绿色：生机、自然、环保、幸运、可通行、股票中的跌；</li>
 <li>红色：革命、浪漫、爱、喜庆、股票中的涨。</li>
 </ul></li>
 <li><p>色盲、色弱：</p>
-
 <ul>
 <li>在 12 个男人中就有一个人是色盲；</li>
 <li><p>一些功能不能完全靠颜色来区分，如「邮件」app 里的「旗标样式」既可以用颜色来表示，又可以用形状来表示。</p>
-
 <p><img src="media/15030704996885/93C1E2C1-0206-40B3-9259-571B06D62428.png" alt="93C1E2C1-0206-40B3-9259-571B06D62428"/></p></li>
 </ul></li>
 <li><p>较高的颜色对比度：</p>
-
 <ul>
 <li><p>Color Contrast Calculator 工具；</p>
-
 <p><img src="media/15030704996885/24737F73-241B-4EB1-B7A8-539A9D892340.png" alt="24737F73-241B-4EB1-B7A8-539A9D892340"/></p></li>
 <li><p>黑和白的对比度为 21：1，字号较小和较大时都适用；</p></li>
 <li><p>建议对比度 7：1，最小对比度 4.5：1；</p></li>
 <li><p>在对比度比较小时，使用较小的字号是不合适的；在对比度很小时，即使很大的字号也不合适，需要更换颜色；</p>
-
 <p><img src="media/15030704996885/0F2BF27A-98BA-45EB-90A8-D7FBF75730CA.png" alt="0F2BF27A-98BA-45EB-90A8-D7FBF75730CA"/></p></li>
 <li><p>在一个背景下该用黑色还是白色文字，可以通过对比度来决定，选取对比度高的颜色。</p>
-
 <p><img src="media/15030704996885/4323FDCB-0781-4B2C-ABF0-97D3AAC7F65E.png" alt="4323FDCB-0781-4B2C-ABF0-97D3AAC7F65E"/></p></li>
 </ul></li>
 </ul>
@@ -3079,14 +2836,11 @@
 
 <ul>
 <li><p>红十字会：有三种标志——红十字、红月牙、红水晶，用于不同文化的地区；</p>
-
 <p><img src="media/15030704996885/4971C85E-30BC-441E-A1CB-FF80919C5E98.png" alt="4971C85E-30BC-441E-A1CB-FF80919C5E98"/></p></li>
 <li><p>手掌：打招呼、阻止、无所畏惧（佛教）</p></li>
 <li><p>避免在图标中使用指引和文字；</p>
-
 <p><img src="media/15030704996885/A2633681-6E56-40B8-BF2F-BBC3BBFEC50A.png" alt="A2633681-6E56-40B8-BF2F-BBC3BBFEC50A"/></p></li>
 <li><p>图形标志应该与 UI 匹配，如 UI 为从右到左读的语言适配后，图标也要适配。</p>
-
 <p><img src="media/15030704996885/6.jpg" alt="6"/></p></li>
 </ul>
 
@@ -3132,19 +2886,14 @@
 <li>SF UI Text、SF UI Display：iOS、macOS、tvOS；</li>
 <li>SF Compact Text、SF Compact Display：watchOS；</li>
 <li><p>SF Mono（一种等宽字体，New in WWDC 2016）：Code in Xcode、Terminal、Swift Playgrounds。</p>
-
 <p><img src="media/15029504785442/BC65E41A-C90D-47C7-9C78-9A699C4EEE2F.png" alt="BC65E41A-C90D-47C7-9C78-9A699C4EEE2F"/></p>
-
 <ul>
 <li>SF 与 SF Mono</li>
 </ul>
-
 <p><img src="media/15029504785442/7AF3BC06-7011-460D-9E7C-C47B7C7695E9.png" alt="7AF3BC06-7011-460D-9E7C-C47B7C7695E9"/></p>
-
 <ul>
 <li>等宽字体（Monospaced）：不同字重下有着相同的宽度</li>
 </ul>
-
 <p><img src="media/15029504785442/0451C080-D67D-47A2-9EF4-B2451566026B.png" alt="0451C080-D67D-47A2-9EF4-B2451566026B"/></p></li>
 </ul>
 
@@ -3155,7 +2904,6 @@
 <li>Character：字符，文本的抽象单位，可以由一个代码代表，如字母「A」</li>
 <li>Glyph：字形，如字母「A」的这个形状，人们看到这个就知道这是字母「A」，而不是其他字母；</li>
 <li><p>Feature：功能，通常在字体文件中，字形与字符是一一对应的，但有时候有特殊，如「6」这个字符在一个字体中有两种「字形」，你可以选择其中一种（Optional）；输入两个字母，这两个字母自动连笔，形成了一个新的字形（Automatic），这都是 Feature；</p>
-
 <p><img src="media/15029504785442/Font%20Automatic%20Feature.png" alt="Font Automatic Feature " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
 <li><p>Font：字体（文件）；</p></li>
 <li><p>Style：样式，如「粗体」、「斜体」、「粗斜体」、「紧缩」；</p></li>
@@ -3178,26 +2926,20 @@
 
 <ul>
 <li><p>内嵌于字体中（Embedded in the Font）</p>
-
 <ul>
 <li>Spacing：空间，一个字符所占的位置，内置在字体中无法改变；</li>
 <li><p>Kerning：字偶距，某两个字母间的距离，一般设置在字体内部，无法改变。</p>
-
 <p><img src="media/15029504785442/0053A8A4-21BE-4D83-9C0D-E621D0464CE6.png" alt="0053A8A4-21BE-4D83-9C0D-E621D0464CE6"/></p></li>
 </ul></li>
 <li><p>可调整的（Adjustable）</p>
-
 <ul>
 <li><p>Tracking：字符间距，字间距，所有字符整体调整，正值、零值、负值；</p>
-
 <p><img src="media/15029504785442/4616025D-2E31-4C2D-ADAA-1FF14908BAD0.png" alt="4616025D-2E31-4C2D-ADAA-1FF14908BAD0"/></p></li>
 <li><p>Leading：行距，两行的 baseline 的距离称为行距，descenders-理解为字符延伸到 baseline 下面的那部分，如小写字母 q；ascenders-理解为字符延伸到 baseline 上面的那部分，如小写字母 h。</p>
-
 <p><img src="media/15029504785442/F2282DF8-6974-46A8-957E-D34D0B85F8CD.png" alt="F2282DF8-6974-46A8-957E-D34D0B85F8CD"/></p></li>
 </ul></li>
 <li><p>外部参考链接：<a href="https://creativemarket.com/blog/whats-the-difference-between-leading-kerning-and-tracking">What’s the Difference Between Leading, Kerning and Tracking? </a></p></li>
 <li><p>影响排版的一些因素</p>
-
 <ul>
 <li>易读性（Legibility）</li>
 <li>尺寸（Scale）</li>
@@ -3213,7 +2955,6 @@
 <li>System Font：使用系统字体只需确定字体大小和字重：<code>UIFont.systemFont(ofSize: 34, weight: UIFontWeightBlack)</code>，每种字体大小都有预设好的字间距 tracking，开启「粗体文本」后，系统中会自动进行粗体文本转换。</li>
 <li>Dynamic Type：应用在 iOS 和 watchOS，在「设置」→「显示与亮度」→「文字大小」中，「辅助功能」中还可开启「更大字体」。使用 Text Styles APIs：<code>UIFont.preferredFont(forTextStyle:)</code>，动态类型功能会自动支持。</li>
 <li>Custom Fonts：由于多为开发上的一些实际操作，暂不展开，具体步骤如下，
-
 <ol>
 <li>Pick or bundle a font</li>
 <li>Lookup table for the Content Size Categories</li>
@@ -3222,7 +2963,6 @@
 <li>Relayout</li>
 </ol></li>
 <li>Font Selection：如果你决定要使用自定义字体，那么你需要考虑：
-
 <ol>
 <li>Easier sticking with one typeface at a time 从一次使用一个字型开始更容易</li>
 <li>Understanding design intention helps in usage 深度理解这些字型的设计目的</li>
@@ -3234,69 +2974,53 @@
 
 <ul>
 <li><p>Arrows 箭头（New in WWDC 2016）：各个方向的箭头是内置于 SF 字体中的，并且同样有不同的自重，可在交互中用于指向。</p>
-
 <p><img src="media/15029504785442/15029510805694.jpg" alt=""/></p></li>
 <li><p>High-Legibility Alternates 高易读性替换（New in WWDC 2016）：对于一串字符串，如果用户不易辨别字符串中的字母到底是什么，可以使用开启这个功能，系统自动把不易辨别的字母转换为不会有歧义的字母。但这个功能不要轻易开启，会破坏文本整体的一致性。</p>
-
 <p><img src="media/15029504785442/E598CEAF-F8AA-4263-BE8F-6AE726388D1B.png" alt="E598CEAF-F8AA-4263-BE8F-6AE726388D1B"/></p>
-
 <p>在代码中启用的示例如下：</p>
-
-<pre><code>let pointSize: CGFloat = 60.0
-let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()
-let highLegibilityFontDesc = systemFontDesc.addingAttributes(
-  [
-    UIFontDescriptorFeatureSettingsAttribute:
-      [
-        [
-          UIFontFeatureTypeIdentifierKey: kStylisticAlternativesType,
-          UIFontFeatureSelectorIdentifierKey: kStylisticAltSixOnSelector,
-        ],
-      ]
-  ]
-)
-
+<pre><code class="language-text">let pointSize: CGFloat = 60.0
+let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
+let highLegibilityFontDesc = systemFontDesc.addingAttributes(<br/>
+  [<br/>
+    UIFontDescriptorFeatureSettingsAttribute:<br/>
+      [<br/>
+        [<br/>
+          UIFontFeatureTypeIdentifierKey: kStylisticAlternativesType,<br/>
+          UIFontFeatureSelectorIdentifierKey: kStylisticAltSixOnSelector,<br/>
+        ],<br/>
+      ]<br/>
+  ]<br/>
+)<br/>
 label.font = UIFont(descriptor: highLegibilityFontDesc, size: pointSize)
 </code></pre></li>
 <li><p>Small Caps 小型大写字母：大写字母的缩小版，几乎与小写字母对齐。两个例子如下图。当觉着大写字母与周围的小写字母相比过大而显得不协调，如果仅仅调整字体大小，那会改变字符串的密集度或者说字间距，故可以开启「Small Caps」功能，保证密集度和笔画厚度，使排版美观。</p>
-
 <p><img src="media/15029504785442/10C7242A-570D-4AF0-980C-94171E30D6B1.png" alt="10C7242A-570D-4AF0-980C-94171E30D6B1"/></p>
-
 <p>在 Apple TV 上使用的一个实例：</p>
-
 <p><img src="media/15029504785442/1BB0A3BB-6DC5-4A8D-BA48-08825A863171.png" alt="1BB0A3BB-6DC5-4A8D-BA48-08825A863171"/></p>
-
 <p>具体使用上分为以下几种类型，可以用一种，也可以用多种：</p>
-
 <ul>
 <li><p>Small Caps from Uppercase（把大写字母转换为小型大写字母）：对于一个字符串，1.全是大写，适合此功能；2.大小写混合，不适合此功能；3.全是小写，这样使用有点别扭，但也还 OK。</p>
-
 <p><img src="media/15029504785442/FA47AC14-09B1-4920-9854-1060555FC0C9.png" alt="FA47AC14-09B1-4920-9854-1060555FC0"/></p></li>
 <li><p>Small Caps from Lowercase（把小写字母转换为小型大写字母）：字符串的上述三种情况都还适合。</p>
-
 <p><img src="media/15029504785442/735C71DC-DA4B-4946-828E-06A578BFB51B.png" alt="735C71DC-DA4B-4946-828E-06A578BFB51B"/></p></li>
 <li><p>上述两种类型在代码中启用的方法示意如下：</p>
-
-<pre><code>let pointSize: CGFloat = 60.0
-let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()
-let smallCapsFontDesc = systemFontDesc.addingAttributes(
-  [
-    UIFontDescriptorFeatureSettingsAttribute:
-    [
-
-      [
-        UIFontFeatureTypeIdentifierKey: kLowerCaseType,
-        UIFontFeatureSelectorIdentifierKey: kLowerCaseSmallCapsSelector,
-      ],
-      [
-        UIFontFeatureTypeIdentifierKey: kUpperCaseType,
-        UIFontFeatureSelectorIdentifierKey: kUpperCaseSmallCapsSelector,
-      ],
-
-    ]
-  ]
-)
-
+<pre><code class="language-text">let pointSize: CGFloat = 60.0
+let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
+let smallCapsFontDesc = systemFontDesc.addingAttributes(<br/>
+  [<br/>
+    UIFontDescriptorFeatureSettingsAttribute:<br/>
+    [<br/>
+      [<br/>
+        UIFontFeatureTypeIdentifierKey: kLowerCaseType,<br/>
+        UIFontFeatureSelectorIdentifierKey: kLowerCaseSmallCapsSelector,<br/>
+      ],<br/>
+      [<br/>
+        UIFontFeatureTypeIdentifierKey: kUpperCaseType,<br/>
+        UIFontFeatureSelectorIdentifierKey: kUpperCaseSmallCapsSelector,<br/>
+      ],<br/>
+    ]<br/>
+  ]<br/>
+)<br/>
 label.font = UIFont(descriptor: smallCapsFontDesc, size: pointSize)
 </code></pre></li>
 <li><p>Small Caps Numbers and Punctuation<br/>
@@ -3339,13 +3063,10 @@ label.font = UIFont(descriptor: smallCapsFontDesc, size: pointSize)
 
 <ul>
 <li><p>San Francisco 字体家族有两种字体二级家族，一种是 SF， 用于 iOS、macOS、tvOS，另一种是 SF Compact，专门用于 watchOS。每个字体又分两种视觉尺寸（Optical Sizes），一种是 Text，包含六种字重；另一种是 Display，包含九种字重。注：从 iOS 11 开始，苹果开始启用了 SF Pro 这个字体分支，替代了 SF。</p>
-
 <p><img src="media/15028584576994/0242A688-8764-4A6F-AE6A-D858FC82F490.png" alt="0242A688-8764-4A6F-AE6A-D858FC82F490"/></p></li>
 <li><p>SF 与 SF Compact 的对比：SF 字体更加圆润，SF Compact 更显笔直，字母之间有更多的空间，这样在 Apple Watch 的小屏幕上，SF Compact 更加易读。</p>
-
 <p><img src="media/15028584576994/942098B4-087E-48B0-B9C0-589F9FE1AAC3.png" alt="942098B4-087E-48B0-B9C0-589F9FE1AA"/></p></li>
 <li><p>几个排版上的术语：</p>
-
 <ul>
 <li>baseline：基线；</li>
 <li>x-height：小写字母 x 的顶部，小写字母的对齐标准；</li>
@@ -3353,16 +3074,13 @@ label.font = UIFont(descriptor: smallCapsFontDesc, size: pointSize)
 <li>descender：小写字母基准线以下的对齐位置；</li>
 <li>ascender：小写字母基准线以上的对齐位置。</li>
 </ul>
-
 <p><img src="media/15028584576994/Font%20Proportions.png" alt="Font Proportions"/></p></li>
 <li><p>在字体比例上的几点改善：</p>
-
 <ul>
 <li>Cap-Height Lower Than Ascenders</li>
 <li>Large x-Height</li>
 <li>Numbers Align with Uppercase</li>
 </ul>
-
 <p><img src="media/15028584576994/SF.png" alt="SF"/></p></li>
 </ul>
 
@@ -3376,47 +3094,34 @@ label.font = UIFont(descriptor: smallCapsFontDesc, size: pointSize)
 
 <ul>
 <li><p>Display VS Text：Display 用于 20 磅及以上大小的文字，Text 用于 19 磅及以下大小的文字。Text 这种视觉尺寸的字间距更大（相同字号下），更易读。两种视觉尺寸在系统里自动切换，但在设计软件里要注意修改。</p>
-
 <p><img src="media/15028584576994/D704CD00-4380-4E9A-B56B-AE1C853C6E55.png" alt="D704CD00-4380-4E9A-B56B-AE1C853C6E55"/></p></li>
 <li><p>Negative Space 负空间：字母内测、字母周围的空间，Text 周围的空间几乎是 Display 的两倍。</p>
-
 <p><img src="media/15028584576994/18EB4B79-F752-46AC-86CF-EA1C31446A3F.png" alt="18EB4B79-F752-46AC-86CF-EA1C31446A3F"/></p></li>
 <li><p>Confusable Shapes：字母间有很多相似处，在字号小时很容易混淆。Text 和 Display 就在这些地方有细微的差别。</p>
-
 <ul>
 <li><p>counter：反向对称区，字母上下对称的部分</p>
-
 <p><img src="media/15028584576994/E081B9C0-3156-486D-9F58-E46496223C76.png" alt="E081B9C0-3156-486D-9F58-E46496223"/></p></li>
 <li><p>aperture：缝隙，字母的开口</p>
-
 <p><img src="media/15028584576994/1F6FCE63-B891-4B23-9ECF-DFAE819AEFC5.png" alt="1F6FCE63-B891-4B23-9ECF-DFAE819AEF"/></p></li>
 </ul></li>
 <li><p>Tracking Is Size-Specific：字号越大，字间距 tracking 越小，有一个变化曲线（tracking tables）</p>
-
 <p><img src="media/15028584576994/15028587818938.jpg" alt=""/></p></li>
 <li><p>Weights 字重：Text - 6 种字重（Light、Regular、Medium、Semibold、Bold、Heavy），Display - 9 种字重（多了 Ultralight、Thin、Black），Text 的字号小，没有必要有更多字重。</p></li>
 <li><p>在 AppKit 和 UIKit 里提供了配置字号、字重的方法，如：<br/>
 <code>UIFont.systemFontOfSize(20, weight: UIFontWeightMedium)</code></p>
-
 <p><img src="media/15028584576994/609EDDCB-B829-4F59-A2FD-3CCC10C3C7C9.png" alt="609EDDCB-B829-4F59-A2FD-3CCC10C3C7"/></p></li>
 <li><p>字重的作用：</p>
-
 <ul>
 <li><p>Differentiation and hierarchy 区分和层级</p>
-
 <p><img src="media/15028584576994/Weight-Use%20in%20Differentiation%20and%20Hierarchy.png" alt="Weight-Use in Differentiation and Hierarchy"/></p></li>
 <li><p>Similitude 相似：更大的尺寸，更小的自重；更小的尺寸，更大的自重</p>
-
 <p><img src="media/15028584576994/F504AA59-9EF0-4347-8EDC-79C67BEBECD9.png" alt="F504AA59-9EF0-4347-8EDC-79C67BEBECD9"/></p></li>
 <li><p>Voice 氛围：字重的巧妙利用，可以营造完全不同的氛围。</p>
-
 <p><img src="media/15028584576994/5.jpg" alt="5"/></p></li>
 </ul></li>
 <li><p>怎样使用字重：</p>
-
 <ul>
 <li>首先保证要清楚；
-
 <ul>
 <li>建立连续、清晰的层级关系；</li>
 <li>在 iOS 中可以使用 Text Style APIs，适配动态类型</li>
@@ -3432,48 +3137,37 @@ label.font = UIFont(descriptor: smallCapsFontDesc, size: pointSize)
 <ul>
 <li>Features are behaviors embedded inside a font. </li>
 <li><p>开启这些 Feature：Xcode 中的 Typography Panel。</p>
-
 <p><img src="media/15028584576994/A3348F38-B260-47B9-9982-1FE9E186A7F8.png" alt="A3348F38-B260-47B9-9982-1FE9E186A7F8 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
 <li><p>Fractions 分数：自动转换（2/9这种输入自动转换)</p>
-
 <p><img src="media/15028584576994/542C9FA2-3971-4957-8E73-78B55AAEEF11.png" alt="542C9FA2-3971-4957-8E73-78B55AAEEF11"/></p>
-
 <p>在代码中启用这个功能的方法示例如下：</p>
-
-<pre><code>```
-let pointSize : CGFloat = 60.0
-let systemFontDesc = UIFont.systemFontOfSize(pointSize, weight: UIFontWeightLight).fontDescriptor()
-let fractionFontDesc = systemFontDesc.fontDescriptorByAddingAttributes(
-[
-  UIFontDescriptorFeatureSettingsAttribute: [
-    [
-      UIFontFeatureTypeIdentifierKey: kFractionsType,
-      UIFontFeatureSelectorIdentifierKey: kDiagonalFractionsSelector,
-      ],
-  ]
-]
-)
-
-label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)
+<pre><code class="language-text">```
+let pointSize : CGFloat = 60.0<br/>
+let systemFontDesc = UIFont.systemFontOfSize(pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
+let fractionFontDesc = systemFontDesc.fontDescriptorByAddingAttributes(<br/>
+[<br/>
+  UIFontDescriptorFeatureSettingsAttribute: [<br/>
+    [<br/>
+      UIFontFeatureTypeIdentifierKey: kFractionsType,<br/>
+      UIFontFeatureSelectorIdentifierKey: kDiagonalFractionsSelector,<br/>
+      ],<br/>
+  ]<br/>
+]<br/>
+)<br/>
+label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)<br/>
 ```
 </code></pre></li>
 <li><p>Superiors / Superscripts 上标、Inferiors / Subscripts 下标</p>
-
 <p><img src="media/15028584576994/Subscripts.png" alt="Subscripts"/></p></li>
 <li><p>Uppercase Forms 大写形式 （A+3中的加号）</p>
-
 <p><img src="media/15028584576994/DA34D099-ABD5-427C-8138-04205EF97FEC.png" alt="DA34D099-ABD5-427C-8138-04205EF97FE"/></p></li>
 <li><p>Vertically Centered Colon：时间中的冒号，默认开启，上下居中显示</p>
-
 <p><img src="media/15028584576994/5A85DC92-65E8-4986-AD75-C59DB5C76DC6.png" alt="5A85DC92-65E8-4986-AD75-C59DB5C76D"/></p></li>
 <li><p>Alternate Six and Nine：数字 6 和 9 在字号较小、和数字 8 混排时会容易看不清，所以有另一种字形可供使用，例如在 Apple Watch 上的小表盘里、Apple Watch 背面的序列号上。</p>
-
 <p><img src="media/15028584576994/69.png" alt="69"/></p></li>
 <li><p>Features 和 Optical Sizes 的结合：例如在 Display 尺寸下，分数中的数字 6 可以使用默认样式，而在 Text 尺寸下，分数中的数字 6 应该使用变形的样式。</p>
-
 <p><img src="media/15028584576994/B70A67F3-B5C2-4A55-9D59-B3B4B829058F.png" alt="B70A67F3-B5C2-4A55-9D59-B3B4B829058F"/></p></li>
 <li><p>proportional numbers（按比例排布的数字，自然宽度，默认），可用于固定显示的数字、monospaced numbers（等宽的数字，可选），可用于动态显示的数字（如跳动的时间、变化的速度）以及为保证对齐的列表样式和多行样式，iOS 9.0 and OS X 10.11 开始默认为 proportional numbers。</p>
-
 <p><img src="media/15028584576994/Number.png" alt="Numbe"/></p></li>
 </ul>
 
@@ -3576,16 +3270,12 @@ label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)
 <img src="media/14774965258076/14774974534608.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
 <li><p>更多网站搜索（Web Search）：软件自身内置了一些 Google、Twitter 等搜索，基本上都是一些国外的服务。为了更接地气，我添加了如下图所示的一些网站的搜索。图中的锁形标志代表了搜索结果的网页使用了 HTTPS。<br/>
 <img src="media/14774965258076/14773860150947.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
 <p>添加自定义的搜索项也很简单，只需要知道对应网站的搜索 URL 并添加到偏好设置中的 Features-Web Search 中即可。比如： </p>
-
 <ul>
 <li>百度搜索的 URL 是：<code>http://www.baidu.com/s?wd={query}</code> </li>
 <li>Appshopper 搜索的 URL 是：<code>http://appshopper.com/search?search={query}</code> </li>
 </ul>
-
 <p>添加的时候可以设置一个快捷键，比如百度搜索设置为<code>bd</code>就可以在呼出 Alfred 时，输入『 bd 』加空格，并输入要搜索的关键词，敲击回车，即可打开网页搜索到对应的内容了。</p>
-
 <p>从上面举的两个例子，应该能看出<code>{query}</code>就是要搜索的关键词，这样只要你知道某网站一个搜索结果的 URL，这个网站的搜索 URL 你就知道，自然就可以添加到 Alfred 中了。</p></li>
 </ol>
 
@@ -3608,7 +3298,6 @@ label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)
 <img src="media/14774965258076/14774977724375.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
 <li><p>在进入<code>⌥+⌘+C</code>后，第一项是「All Snippets」，在其中可以设置一些常用的需要输入的字符，比如邮箱，这样在登录、注册时就不需要重复输入复杂的邮箱地址了。<br/>
 <img src="media/14774965258076/14774978021140.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
 <p>注：6 和 7 使用频率比较低的原因是相比其他竞品，Alfred 的调用更加复杂，呈现形式上不够直观，在这两个需求上我更喜欢 <a href="http://pasteapp.me/">Paste</a>。</p></li>
 </ol>
 
@@ -3765,7 +3454,7 @@ label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)
 <li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
 </ul>
 
-<pre><code>tableView.estimatedRowHeight = 36.0 
+<pre><code class="language-text">tableView.estimatedRowHeight = 36.0 
 tableView.rowHeight = UITableViewAutomaticDimension
 </code></pre>
 
@@ -3776,7 +3465,7 @@ tableView.rowHeight = UITableViewAutomaticDimension
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 从review view跳转回detail view，并且带回rating的值改变detail view
+<pre><code class="language-text">// 从review view跳转回detail view，并且带回rating的值改变detail view
 @IBAction func close(segue:UIStoryboardSegue) {
     
   if let reviewViewController = segue.sourceViewController as? ReviewViewController {
@@ -3792,11 +3481,11 @@ tableView.rowHeight = UITableViewAutomaticDimension
 
 <ul>
 <li>对于多个button想要触发一个action方法，可以通过为不同的button定义不同的tag，之后coding时通过switch来区分不同tag，从而执行不同的动作。</li>
-<li>代码片段：
+<li>代码片段：<br/>
 // 对电影进行评价，根据点击button的不同给rating赋值并关闭modal view</li>
 </ul>
 
-<pre><code>@IBAction func ratingSelected(sender: UIButton) {
+<pre><code class="language-text">@IBAction func ratingSelected(sender: UIButton) {
   
     switch (sender.tag) {
     case 100: rating = &quot;dislike&quot;
@@ -3892,7 +3581,7 @@ tableView.rowHeight = UITableViewAutomaticDimension
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 自定义导航栏的背景色
+<pre><code class="language-text">// 自定义导航栏的背景色
 UINavigationBar.appearance().barTintColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.9)
     
 // 自定义导航栏的导航button及文字、其他导航栏按钮元素的颜色
@@ -3913,7 +3602,7 @@ if let barFont = UIFont(name: &quot;PingFangSC-Semibold&quot;, size: 20.0) {
 <li>若想移除导航栏back button后的title，可以在souce view controller中的viewdidload方法中添加以下代码：</li>
 </ul>
 
-<pre><code>// Remove the title of the back button 
+<pre><code class="language-text">// Remove the title of the back button 
 navigationItem.backBarButtonItem = UIBarButtonItem(title: &quot;&quot;, style: .Plain, target: nil, action: nil)
 </code></pre>
 
@@ -3921,7 +3610,7 @@ navigationItem.backBarButtonItem = UIBarButtonItem(title: &quot;&quot;, style: .
 <li>在导航栏上显示上级table view中对应cell的标题，在destination view controller中的viewdidload方法中添加以下代码：</li>
 </ul>
 
-<pre><code>// 将发现页选择的cell的标题显示在导航栏上
+<pre><code class="language-text">// 将发现页选择的cell的标题显示在导航栏上
 title = movie.name
 </code></pre>
 
@@ -3932,7 +3621,7 @@ title = movie.name
 <li>在Table View Controller添加以下代码：</li>
 </ul>
 
-<pre><code>// view每次展示时都会被调起
+<pre><code class="language-text">// view每次展示时都会被调起
 override func viewWillAppear(animated: Bool) {
   super.viewWillAppear(animated)
     
@@ -3947,7 +3636,7 @@ override func viewWillAppear(animated: Bool) {
 <li>在Detail View Controller添加以下代码：</li>
 </ul>
 
-<pre><code>override func viewWillAppear(animated: Bool) {
+<pre><code class="language-text">override func viewWillAppear(animated: Bool) {
   super.viewWillAppear(animated)
     
   // 滑动时不隐藏导航栏
@@ -3966,7 +3655,7 @@ override func viewWillAppear(animated: Bool) {
 <li>若想改变某个view controller的Status Bar样式，可以添加以下代码：</li>
 </ul>
 
-<pre><code>override func preferredStatusBarStyle() -&gt; UIStatusBarStyle {
+<pre><code class="language-text">override func preferredStatusBarStyle() -&gt; UIStatusBarStyle {
   return .LightContent 
 }
 </code></pre>
@@ -3975,7 +3664,7 @@ override func viewWillAppear(animated: Bool) {
 <li>若想改变app全局的Status Bar样式，有两步需要做。第一步：Select the project in the project navigator. Under the Info tab of the FoodPin target, insert a new key named View controller-based status bar appearance and set the value to NO。第二步在AppDelegate.swift文件中的application(_:didFinishLaunchingWithOptions:)方法中添加以下代码：</li>
 </ul>
 
-<pre><code>// 自定义全局的Status Bar为Light Style
+<pre><code class="language-text">// 自定义全局的Status Bar为Light Style
 UIApplication.sharedApplication().statusBarStyle = .LightContent
 </code></pre>
 
@@ -3983,7 +3672,6 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 
 <ul>
 <li>Segue是连接两个View Controller的桥梁，在iOS9之后定义了下面几种Segue的类型
-
 <ul>
 <li><strong>Show</strong> - when the show style is used, the content is pushed on top of the current view controller stack. A back button will be displayed in the navigation bar for navigating back to the original view controller. （这种类型是有导航栏的） </li>
 <li><strong>Show detail</strong> - similar to the show style, but the content in the detail (or destination) view controller replaces the top of the current view controller stack. （没有导航栏）</li>
@@ -4000,7 +3688,7 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 向DetailViewController传递信息
+<pre><code class="language-text">// 向DetailViewController传递信息
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     // 通过已经定义的segue这个桥梁来传递信息
@@ -4023,13 +3711,11 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 
 <ul>
 <li><p>UIImageView有几种常用的模式如下，在使用时注意选择：</p>
-
 <ul>
 <li><strong>Scale to Fill</strong> (默认的模式，会把图片拉伸到指定的尺寸，不能保证图片的原始比率) </li>
 <li><strong>Aspect Fit</strong> （可以保持图片的原始比率，但是会在imageview中留下空白）</li>
 <li><strong>Aspect Fill</strong> （保持图片的原始比率的前提下不会留下空白，但会切掉图片四周的一些细节，注意使用此模式时要开启“Clip Subviews”，否则图片会扩展到其他view中去。）</li>
 </ul>
-
 <p><img src="media/14725650174400/14726256242528.jpg" alt=""/></p></li>
 </ul>
 
@@ -4045,7 +3731,7 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 <li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
 </ul>
 
-<pre><code>tableView.estimatedRowHeight = 36.0 
+<pre><code class="language-text">tableView.estimatedRowHeight = 36.0 
 tableView.rowHeight = UITableViewAutomaticDimension
 </code></pre>
 
@@ -4119,21 +3805,20 @@ tableView.rowHeight = UITableViewAutomaticDimension
 <ul>
 <li>对cell的Identifier定义为Cell→在Cell中加入需要的View，如Label、Image View等，并根据设计图添加constraints→因为cell是与UITableViewCell class关联的，所以创建一个新的class，定义为UITableViewCell的subclass</li>
 <li>Coding：
-
 <ul>
 <li>思路：对cell中自定义的views创建outlet变量→声明要展示的数据变量并赋值→告知table view有几个cell、几个section→在每个cell中显示具体的值。</li>
 <li>Class MovieTableViewCell代码片段及Class MovieTableViewController代码片段：</li>
 </ul></li>
 </ul>
 
-<pre><code>@IBOutlet weak var nameLabel: UILabel!
+<pre><code class="language-text">@IBOutlet weak var nameLabel: UILabel!
 @IBOutlet weak var yearLabel: UILabel!
 @IBOutlet weak var typeLabel: UILabel!
 @IBOutlet weak var actorLabel: UILabel!
 @IBOutlet weak var thumbnailImageView: UIImageView!
 </code></pre>
 
-<pre><code>      // 告知tableview中有几个section
+<pre><code class="language-text">      // 告知tableview中有几个section
     override func numberOfSectionsInTableView(tableView: UITableView) -&gt; Int {
         
         return 1
@@ -4171,20 +3856,18 @@ tableView.rowHeight = UITableViewAutomaticDimension
 
 <ul>
 <li>方法一：通过代码实现
-
 <ul>
 <li>代码片段：</li>
 </ul></li>
 </ul>
 
-<pre><code>// 将图片设置为圆角，圆角半径设置为3
+<pre><code class="language-text">// 将图片设置为圆角，圆角半径设置为3
         cell.thumbnailImageView.layer.cornerRadius = 3.0
         cell.thumbnailImageView.clipsToBounds = true
 </code></pre>
 
 <ul>
 <li>方法二：通过Xcode配置实现
-
 <ul>
 <li>配置步骤：在storyboard中选择imageview后，在右侧的Identity inspector中的“Use Defined Runtime Attributes”中添加一个值→Key Path定义为“layer.cornerRadius&quot;,Type定义为”Number“，Value定义为你要设置的圆角半径值。加入一张60*60的正方形图片，设置半径为30，就可以将其变为圆形→切换到Attributes Inspector，将Clip Subviews打钩。</li>
 </ul></li>
@@ -4197,7 +3880,7 @@ tableView.rowHeight = UITableViewAutomaticDimension
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 对每一个Row添加Swipe Action，如分享、删除等
+<pre><code class="language-text">// 对每一个Row添加Swipe Action，如分享、删除等
 override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -&gt; [UITableViewRowAction]? {
     
     // Social Sharing Button
@@ -4225,7 +3908,7 @@ override func tableView(tableView: UITableView, editActionsForRowAtIndexPath ind
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 定义Row被选择之后的动作
+<pre><code class="language-text">// 定义Row被选择之后的动作
 override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     // Row点击后取消被选中状态
@@ -4240,7 +3923,7 @@ override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPat
 <li>代码片段：</li>
 </ul>
 
-<pre><code>//View被加载到内存后，以下方法被调起，且只被调起一次，加载好就不再调起
+<pre><code class="language-text">//View被加载到内存后，以下方法被调起，且只被调起一次，加载好就不再调起
 override func viewDidLoad() {
     super.viewDidLoad()
                 
@@ -4260,7 +3943,7 @@ override func viewDidLoad() {
 <li>若想调整cell的背景色或者设置为透明，可在tableView(_:cellForRowAtIndexPath:)方法中添加以下代码片段：</li>
 </ul>
 
-<pre><code>// 清除cell的背景色，也即变成透明
+<pre><code class="language-text">// 清除cell的背景色，也即变成透明
 cell.backgroundColor = UIColor.clearColor()
 
 </code></pre>
@@ -4271,7 +3954,7 @@ cell.backgroundColor = UIColor.clearColor()
 <li>在viewDidLoad()中添加以下代码片段：</li>
 </ul>
 
-<pre><code>// 对背景图进行模糊化处理,style有三种：Dark，ExtraLight，Light
+<pre><code class="language-text">// 对背景图进行模糊化处理,style有三种：Dark，ExtraLight，Light
 let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
 let blurEffectView = UIVisualEffectView(effect: blurEffect)
 blurEffectView.frame = view.bounds
@@ -4378,7 +4061,7 @@ movieBackgroudImageView.addSubview(blurEffectView)
 <li>代码片段：</li>
 </ul>
 
-<pre><code>//需要import UIKit
+<pre><code class="language-text">//需要import UIKit
 @IBAction func showMessage(sender: UIButton) {
         
         //创建Alert的Title和Message，可以选择Alert或者ActionSheet显示样式
@@ -4399,7 +4082,6 @@ movieBackgroudImageView.addSubview(blurEffectView)
 
 <ul>
 <li><p>Auto layout bar</p>
-
 <ul>
 <li>Align:创建一些与对齐有关的constraints；</li>
 <li>Pin:创建一些与距离有关的constraints；</li>
@@ -4407,7 +4089,6 @@ movieBackgroudImageView.addSubview(blurEffectView)
 <li>Stack:把几个view变成一个stack view，可以理解为组合起来，以方便对整组定义constraints。</li>
 </ul></li>
 <li><p>Control-drag</p>
-
 <ul>
 <li>在具体的view上按住control键然后拖拽到相关view，松开鼠标后选择添加constraints。小技巧：在选择时按住shift键，可以同时添加多个constraints。</li>
 </ul></li>
@@ -4439,14 +4120,13 @@ movieBackgroudImageView.addSubview(blurEffectView)
 <li>对于class viewcontroller需要引入两个protocols：UITableViewDataSource和UITableViewDelegate，前者可以告知TableView要展示的数据是啥，要展示多少个等等，后者可以告诉TableView每一个展示的数据长啥样，比如行高是多少。</li>
 <li>引入两个protocols后，要在storyboard中，将其与table view连接起来，具体操作是control-drag从table view到View Controller，并选中datasource和delegate。</li>
 <li>Coding：
-
 <ul>
 <li>思路：声明要展示的数据变量并赋值→告知table view有几个cell→在每个cell中显示具体的值。</li>
 <li>代码片段：</li>
 </ul></li>
 </ul>
 
-<pre><code> // 声明tableview中展示的数据变量
+<pre><code class="language-text"> // 声明tableview中展示的数据变量
     var movieNames = [&quot;小男孩&quot;, &quot;火星救援&quot;, &quot;老炮儿&quot;, &quot;心迷宫&quot;, &quot;房间&quot;, &quot;十二公民&quot;, &quot;独立日&quot;, &quot;寒战2&quot;,&quot;完美陌生人&quot;, &quot;大鱼海棠&quot;, &quot;熔炉&quot;, &quot;头脑特工队&quot;, &quot;破风&quot;, &quot;捉妖记&quot;, &quot;歌曲改变人生&quot;, &quot;速度与激情5&quot;, &quot;肖申克的救赎&quot;, &quot;机器人总动员&quot;, &quot;盗梦空间&quot;, &quot;忠犬八公的故事&quot;]
 
  // 告知tableview中有几个cell
@@ -4479,7 +4159,7 @@ movieBackgroudImageView.addSubview(blurEffectView)
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 在该View中隐藏Status Bar
+<pre><code class="language-text">// 在该View中隐藏Status Bar
     override func prefersStatusBarHidden() -&gt; Bool {
         return true
     }

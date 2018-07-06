@@ -148,13 +148,10 @@
 
 <ul>
 <li><p>San Francisco 字体家族有两种字体二级家族，一种是 SF， 用于 iOS、macOS、tvOS，另一种是 SF Compact，专门用于 watchOS。每个字体又分两种视觉尺寸（Optical Sizes），一种是 Text，包含六种字重；另一种是 Display，包含九种字重。注：从 iOS 11 开始，苹果开始启用了 SF Pro 这个字体分支，替代了 SF。</p>
-
 <p><img src="media/15028584576994/0242A688-8764-4A6F-AE6A-D858FC82F490.png" alt="0242A688-8764-4A6F-AE6A-D858FC82F490"/></p></li>
 <li><p>SF 与 SF Compact 的对比：SF 字体更加圆润，SF Compact 更显笔直，字母之间有更多的空间，这样在 Apple Watch 的小屏幕上，SF Compact 更加易读。</p>
-
 <p><img src="media/15028584576994/942098B4-087E-48B0-B9C0-589F9FE1AAC3.png" alt="942098B4-087E-48B0-B9C0-589F9FE1AA"/></p></li>
 <li><p>几个排版上的术语：</p>
-
 <ul>
 <li>baseline：基线；</li>
 <li>x-height：小写字母 x 的顶部，小写字母的对齐标准；</li>
@@ -162,16 +159,13 @@
 <li>descender：小写字母基准线以下的对齐位置；</li>
 <li>ascender：小写字母基准线以上的对齐位置。</li>
 </ul>
-
 <p><img src="media/15028584576994/Font%20Proportions.png" alt="Font Proportions"/></p></li>
 <li><p>在字体比例上的几点改善：</p>
-
 <ul>
 <li>Cap-Height Lower Than Ascenders</li>
 <li>Large x-Height</li>
 <li>Numbers Align with Uppercase</li>
 </ul>
-
 <p><img src="media/15028584576994/SF.png" alt="SF"/></p></li>
 </ul>
 
@@ -185,47 +179,34 @@
 
 <ul>
 <li><p>Display VS Text：Display 用于 20 磅及以上大小的文字，Text 用于 19 磅及以下大小的文字。Text 这种视觉尺寸的字间距更大（相同字号下），更易读。两种视觉尺寸在系统里自动切换，但在设计软件里要注意修改。</p>
-
 <p><img src="media/15028584576994/D704CD00-4380-4E9A-B56B-AE1C853C6E55.png" alt="D704CD00-4380-4E9A-B56B-AE1C853C6E55"/></p></li>
 <li><p>Negative Space 负空间：字母内测、字母周围的空间，Text 周围的空间几乎是 Display 的两倍。</p>
-
 <p><img src="media/15028584576994/18EB4B79-F752-46AC-86CF-EA1C31446A3F.png" alt="18EB4B79-F752-46AC-86CF-EA1C31446A3F"/></p></li>
 <li><p>Confusable Shapes：字母间有很多相似处，在字号小时很容易混淆。Text 和 Display 就在这些地方有细微的差别。</p>
-
 <ul>
 <li><p>counter：反向对称区，字母上下对称的部分</p>
-
 <p><img src="media/15028584576994/E081B9C0-3156-486D-9F58-E46496223C76.png" alt="E081B9C0-3156-486D-9F58-E46496223"/></p></li>
 <li><p>aperture：缝隙，字母的开口</p>
-
 <p><img src="media/15028584576994/1F6FCE63-B891-4B23-9ECF-DFAE819AEFC5.png" alt="1F6FCE63-B891-4B23-9ECF-DFAE819AEF"/></p></li>
 </ul></li>
 <li><p>Tracking Is Size-Specific：字号越大，字间距 tracking 越小，有一个变化曲线（tracking tables）</p>
-
 <p><img src="media/15028584576994/15028587818938.jpg" alt=""/></p></li>
 <li><p>Weights 字重：Text - 6 种字重（Light、Regular、Medium、Semibold、Bold、Heavy），Display - 9 种字重（多了 Ultralight、Thin、Black），Text 的字号小，没有必要有更多字重。</p></li>
 <li><p>在 AppKit 和 UIKit 里提供了配置字号、字重的方法，如：<br/>
 <code>UIFont.systemFontOfSize(20, weight: UIFontWeightMedium)</code></p>
-
 <p><img src="media/15028584576994/609EDDCB-B829-4F59-A2FD-3CCC10C3C7C9.png" alt="609EDDCB-B829-4F59-A2FD-3CCC10C3C7"/></p></li>
 <li><p>字重的作用：</p>
-
 <ul>
 <li><p>Differentiation and hierarchy 区分和层级</p>
-
 <p><img src="media/15028584576994/Weight-Use%20in%20Differentiation%20and%20Hierarchy.png" alt="Weight-Use in Differentiation and Hierarchy"/></p></li>
 <li><p>Similitude 相似：更大的尺寸，更小的自重；更小的尺寸，更大的自重</p>
-
 <p><img src="media/15028584576994/F504AA59-9EF0-4347-8EDC-79C67BEBECD9.png" alt="F504AA59-9EF0-4347-8EDC-79C67BEBECD9"/></p></li>
 <li><p>Voice 氛围：字重的巧妙利用，可以营造完全不同的氛围。</p>
-
 <p><img src="media/15028584576994/5.jpg" alt="5"/></p></li>
 </ul></li>
 <li><p>怎样使用字重：</p>
-
 <ul>
 <li>首先保证要清楚；
-
 <ul>
 <li>建立连续、清晰的层级关系；</li>
 <li>在 iOS 中可以使用 Text Style APIs，适配动态类型</li>
@@ -241,48 +222,37 @@
 <ul>
 <li>Features are behaviors embedded inside a font. </li>
 <li><p>开启这些 Feature：Xcode 中的 Typography Panel。</p>
-
 <p><img src="media/15028584576994/A3348F38-B260-47B9-9982-1FE9E186A7F8.png" alt="A3348F38-B260-47B9-9982-1FE9E186A7F8 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
 <li><p>Fractions 分数：自动转换（2/9这种输入自动转换)</p>
-
 <p><img src="media/15028584576994/542C9FA2-3971-4957-8E73-78B55AAEEF11.png" alt="542C9FA2-3971-4957-8E73-78B55AAEEF11"/></p>
-
 <p>在代码中启用这个功能的方法示例如下：</p>
-
-<pre><code>```
-let pointSize : CGFloat = 60.0
-let systemFontDesc = UIFont.systemFontOfSize(pointSize, weight: UIFontWeightLight).fontDescriptor()
-let fractionFontDesc = systemFontDesc.fontDescriptorByAddingAttributes(
-[
-  UIFontDescriptorFeatureSettingsAttribute: [
-    [
-      UIFontFeatureTypeIdentifierKey: kFractionsType,
-      UIFontFeatureSelectorIdentifierKey: kDiagonalFractionsSelector,
-      ],
-  ]
-]
-)
-
-label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)
+<pre><code class="language-text">```
+let pointSize : CGFloat = 60.0<br/>
+let systemFontDesc = UIFont.systemFontOfSize(pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
+let fractionFontDesc = systemFontDesc.fontDescriptorByAddingAttributes(<br/>
+[<br/>
+  UIFontDescriptorFeatureSettingsAttribute: [<br/>
+    [<br/>
+      UIFontFeatureTypeIdentifierKey: kFractionsType,<br/>
+      UIFontFeatureSelectorIdentifierKey: kDiagonalFractionsSelector,<br/>
+      ],<br/>
+  ]<br/>
+]<br/>
+)<br/>
+label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)<br/>
 ```
 </code></pre></li>
 <li><p>Superiors / Superscripts 上标、Inferiors / Subscripts 下标</p>
-
 <p><img src="media/15028584576994/Subscripts.png" alt="Subscripts"/></p></li>
 <li><p>Uppercase Forms 大写形式 （A+3中的加号）</p>
-
 <p><img src="media/15028584576994/DA34D099-ABD5-427C-8138-04205EF97FEC.png" alt="DA34D099-ABD5-427C-8138-04205EF97FE"/></p></li>
 <li><p>Vertically Centered Colon：时间中的冒号，默认开启，上下居中显示</p>
-
 <p><img src="media/15028584576994/5A85DC92-65E8-4986-AD75-C59DB5C76DC6.png" alt="5A85DC92-65E8-4986-AD75-C59DB5C76D"/></p></li>
 <li><p>Alternate Six and Nine：数字 6 和 9 在字号较小、和数字 8 混排时会容易看不清，所以有另一种字形可供使用，例如在 Apple Watch 上的小表盘里、Apple Watch 背面的序列号上。</p>
-
 <p><img src="media/15028584576994/69.png" alt="69"/></p></li>
 <li><p>Features 和 Optical Sizes 的结合：例如在 Display 尺寸下，分数中的数字 6 可以使用默认样式，而在 Text 尺寸下，分数中的数字 6 应该使用变形的样式。</p>
-
 <p><img src="media/15028584576994/B70A67F3-B5C2-4A55-9D59-B3B4B829058F.png" alt="B70A67F3-B5C2-4A55-9D59-B3B4B829058F"/></p></li>
 <li><p>proportional numbers（按比例排布的数字，自然宽度，默认），可用于固定显示的数字、monospaced numbers（等宽的数字，可选），可用于动态显示的数字（如跳动的时间、变化的速度）以及为保证对齐的列表样式和多行样式，iOS 9.0 and OS X 10.11 开始默认为 proportional numbers。</p>
-
 <p><img src="media/15028584576994/Number.png" alt="Numbe"/></p></li>
 </ul>
 
@@ -583,7 +553,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
      
     </script>
 
-    <script src="asset/chart/all-min.js"></script><script type="text/javascript">$(function(){    var mwebii=0;    var mwebChartEleId = 'mweb-chart-ele-';    $('pre>code').each(function(){        mwebii++;        var eleiid = mwebChartEleId+mwebii;        if($(this).hasClass('language-sequence')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = Diagram.parse($(this).text());            diagram.drawSVG(eleiid,{theme: 'simple'});        }else if($(this).hasClass('language-flow')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = flowchart.parse($(this).text());            diagram.drawSVG(eleiid);        }    });});</script>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>

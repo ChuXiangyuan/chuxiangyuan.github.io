@@ -178,7 +178,7 @@
 
 <p>最简单的 Alert 自然是只有一个操作按钮，以点击一个按钮弹出 Alert 为例说明：</p>
 
-<pre><code>@IBAction func showAlertViewWithOneAction(sender: UIButton){
+<pre><code class="language-text">@IBAction func showAlertViewWithOneAction(sender: UIButton){
     
     // 创建 alertController，定义其显示的标题和描述文字，确定其类型为 Alert
     let alertController = UIAlertController(title: &quot;Hello World！&quot;, message: &quot;This is the most simple alert view.&quot;, preferredStyle: UIAlertControllerStyle.alert)
@@ -200,7 +200,6 @@
 <ul>
 <li>创建 alertController 时有一个属性「preferredStyle」，当其为「UIAlertControllerStyle.alert」时则为创建一个 Alert View，当其为「UIAlertControllerStyle.actionSheet」时则为创建一个 Action Sheet。</li>
 <li>创建一个 action 时，它也有一个属性「style」，这个属性的值有三个：「.default」、「.destructive」、「.cancel」，他们之间有一些区别：
-
 <ul>
 <li>「.default」：默认的样式，视觉上是正常字重、蓝色的文字；</li>
 <li>「.destructive」：从名字上就可以看出，用在那些具有破坏性、不可恢复的操作上，比如删除、注销、清除等，视觉上是正常字重、红色的文字；</li>
@@ -217,7 +216,7 @@
 
 <p>当然如果想增加更多操作按钮，只需在代码中创建更多动作并添加到 alertController 即可。如下面的代码建立一个两个操作按钮的 AlertView：</p>
 
-<pre><code>@IBAction func showAlertViewWithTwoActions(sender: UIButton){
+<pre><code class="language-text">@IBAction func showAlertViewWithTwoActions(sender: UIButton){
     let alertController = UIAlertController(title: &quot;你确定要退出当前登录帐号吗？&quot;, message: &quot;退出后你的帐户数据不会清除，你可以再次登录&quot;, preferredStyle: .alert)
     
     let exitAction = UIAlertAction(title: &quot;退出&quot;, style: .default, handler: nil)
@@ -244,7 +243,7 @@
 
 <p>当一个 Alert 中出现了大于两个操作时，按钮的排布方式就不能再左右排布了，而是改为由上至下排布，具体代码如下：</p>
 
-<pre><code>@IBAction func showAlertViewWithThreeAcitons(sender: UIButton){
+<pre><code class="language-text">@IBAction func showAlertViewWithThreeAcitons(sender: UIButton){
     let alertController = UIAlertController(title: &quot;你确定要注销此帐户吗？&quot;, message: nil, preferredStyle: .alert)
     
     let destructAction = UIAlertAction(title: &quot;注销帐户&quot;, style: .destructive, handler: nil)
@@ -272,7 +271,7 @@
 
 <p>一个 Alert 中可以加入文本输入框以获取用户的某些信息，但文本输入框的数量、输入的字符量都应适度，在这么小一个窗口下输入文字的体验不会太好。系统中比较常见的就是购买 app 时输入 Apple ID 密码。以下以输入账户登录名和密码为例说明：</p>
 
-<pre><code>@IBAction func showAlertViewWithTextField(sender: UIButton){
+<pre><code class="language-text">@IBAction func showAlertViewWithTextField(sender: UIButton){
     let alertController = UIAlertController(title:  &quot;请输入你的帐户名和密码&quot;, message: nil, preferredStyle: .alert)
     
     // 在 alertController 中增加两个文本输入框
@@ -329,7 +328,7 @@
 
 <p>通常情况下的 Action Sheet 包括其标题、描述、选择的动作和取消动作，以下为具体举例：</p>
 
-<pre><code>  @IBAction func showActionSheetWithThreeActions(sender: UIButton){
+<pre><code class="language-text">  @IBAction func showActionSheetWithThreeActions(sender: UIButton){
     let alertController = UIAlertController(title: &quot;请选择你想要的语言&quot;, message: &quot;选择的语言将在下次 app 打开时生效&quot;, preferredStyle: .actionSheet)
     
     // 定义动作和添加动作到 alertController 两步可以合为一步
@@ -376,7 +375,7 @@
 
 <p>如果一个 Action Sheet 没有了「取消」样式的按钮会有什么特别呢？具体代码如下：</p>
 
-<pre><code>@IBAction func showActionSheetWithTwoActions(sender: UIButton){
+<pre><code class="language-text">@IBAction func showActionSheetWithTwoActions(sender: UIButton){
     let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     
     alertController.addAction(UIAlertAction(title: &quot;新建网页&quot;, style: .default, handler: nil))
@@ -401,7 +400,7 @@
 
 <p>这是一个非常特殊的例子。具体实现方式如下：</p>
 
-<pre><code>@IBAction func showActionSheetWithFourActions(sender: UIButton){
+<pre><code class="language-text">@IBAction func showActionSheetWithFourActions(sender: UIButton){
     let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     
     let twitterAction = UIAlertAction(title: &quot;Twitter&quot;, style: .default, handler: nil)
@@ -449,7 +448,7 @@
 
 <p>如果直接回答，答案当然是能。上文中提到的给 action 添加 icon 其实就是一种。再比如改变字体颜色只需要在创建 UIAlertController 后改变其 view 的 「tintcolor」属性，代码如下：</p>
 
-<pre><code>@IBAction func showActionSheetWithTwoActions(sender: UIButton){
+<pre><code class="language-text">@IBAction func showActionSheetWithTwoActions(sender: UIButton){
     let alertController = UIAlertController(title: nil, message: &quot;选择你想要的操作&quot;, preferredStyle: .actionSheet)
     
     // 更改 alertController 的字体颜色
@@ -762,7 +761,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
      
     </script>
 
-    <script src="asset/chart/all-min.js"></script><script type="text/javascript">$(function(){    var mwebii=0;    var mwebChartEleId = 'mweb-chart-ele-';    $('pre>code').each(function(){        mwebii++;        var eleiid = mwebChartEleId+mwebii;        if($(this).hasClass('language-sequence')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = Diagram.parse($(this).text());            diagram.drawSVG(eleiid,{theme: 'simple'});        }else if($(this).hasClass('language-flow')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = flowchart.parse($(this).text());            diagram.drawSVG(eleiid);        }    });});</script>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>

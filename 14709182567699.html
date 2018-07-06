@@ -228,7 +228,7 @@
 <li>代码片段：</li>
 </ul>
 
-<pre><code>//需要import UIKit
+<pre><code class="language-text">//需要import UIKit
 @IBAction func showMessage(sender: UIButton) {
         
         //创建Alert的Title和Message，可以选择Alert或者ActionSheet显示样式
@@ -249,7 +249,6 @@
 
 <ul>
 <li><p>Auto layout bar</p>
-
 <ul>
 <li>Align:创建一些与对齐有关的constraints；</li>
 <li>Pin:创建一些与距离有关的constraints；</li>
@@ -257,7 +256,6 @@
 <li>Stack:把几个view变成一个stack view，可以理解为组合起来，以方便对整组定义constraints。</li>
 </ul></li>
 <li><p>Control-drag</p>
-
 <ul>
 <li>在具体的view上按住control键然后拖拽到相关view，松开鼠标后选择添加constraints。小技巧：在选择时按住shift键，可以同时添加多个constraints。</li>
 </ul></li>
@@ -289,14 +287,13 @@
 <li>对于class viewcontroller需要引入两个protocols：UITableViewDataSource和UITableViewDelegate，前者可以告知TableView要展示的数据是啥，要展示多少个等等，后者可以告诉TableView每一个展示的数据长啥样，比如行高是多少。</li>
 <li>引入两个protocols后，要在storyboard中，将其与table view连接起来，具体操作是control-drag从table view到View Controller，并选中datasource和delegate。</li>
 <li>Coding：
-
 <ul>
 <li>思路：声明要展示的数据变量并赋值→告知table view有几个cell→在每个cell中显示具体的值。</li>
 <li>代码片段：</li>
 </ul></li>
 </ul>
 
-<pre><code> // 声明tableview中展示的数据变量
+<pre><code class="language-text"> // 声明tableview中展示的数据变量
     var movieNames = [&quot;小男孩&quot;, &quot;火星救援&quot;, &quot;老炮儿&quot;, &quot;心迷宫&quot;, &quot;房间&quot;, &quot;十二公民&quot;, &quot;独立日&quot;, &quot;寒战2&quot;,&quot;完美陌生人&quot;, &quot;大鱼海棠&quot;, &quot;熔炉&quot;, &quot;头脑特工队&quot;, &quot;破风&quot;, &quot;捉妖记&quot;, &quot;歌曲改变人生&quot;, &quot;速度与激情5&quot;, &quot;肖申克的救赎&quot;, &quot;机器人总动员&quot;, &quot;盗梦空间&quot;, &quot;忠犬八公的故事&quot;]
 
  // 告知tableview中有几个cell
@@ -329,7 +326,7 @@
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 在该View中隐藏Status Bar
+<pre><code class="language-text">// 在该View中隐藏Status Bar
     override func prefersStatusBarHidden() -&gt; Bool {
         return true
     }
@@ -602,7 +599,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
      
     </script>
 
-    <script src="asset/chart/all-min.js"></script><script type="text/javascript">$(function(){    var mwebii=0;    var mwebChartEleId = 'mweb-chart-ele-';    $('pre>code').each(function(){        mwebii++;        var eleiid = mwebChartEleId+mwebii;        if($(this).hasClass('language-sequence')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = Diagram.parse($(this).text());            diagram.drawSVG(eleiid,{theme: 'simple'});        }else if($(this).hasClass('language-flow')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = flowchart.parse($(this).text());            diagram.drawSVG(eleiid);        }    });});</script>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>

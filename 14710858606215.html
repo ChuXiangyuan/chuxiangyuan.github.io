@@ -199,21 +199,20 @@
 <ul>
 <li>对cell的Identifier定义为Cell→在Cell中加入需要的View，如Label、Image View等，并根据设计图添加constraints→因为cell是与UITableViewCell class关联的，所以创建一个新的class，定义为UITableViewCell的subclass</li>
 <li>Coding：
-
 <ul>
 <li>思路：对cell中自定义的views创建outlet变量→声明要展示的数据变量并赋值→告知table view有几个cell、几个section→在每个cell中显示具体的值。</li>
 <li>Class MovieTableViewCell代码片段及Class MovieTableViewController代码片段：</li>
 </ul></li>
 </ul>
 
-<pre><code>@IBOutlet weak var nameLabel: UILabel!
+<pre><code class="language-text">@IBOutlet weak var nameLabel: UILabel!
 @IBOutlet weak var yearLabel: UILabel!
 @IBOutlet weak var typeLabel: UILabel!
 @IBOutlet weak var actorLabel: UILabel!
 @IBOutlet weak var thumbnailImageView: UIImageView!
 </code></pre>
 
-<pre><code>      // 告知tableview中有几个section
+<pre><code class="language-text">      // 告知tableview中有几个section
     override func numberOfSectionsInTableView(tableView: UITableView) -&gt; Int {
         
         return 1
@@ -251,20 +250,18 @@
 
 <ul>
 <li>方法一：通过代码实现
-
 <ul>
 <li>代码片段：</li>
 </ul></li>
 </ul>
 
-<pre><code>// 将图片设置为圆角，圆角半径设置为3
+<pre><code class="language-text">// 将图片设置为圆角，圆角半径设置为3
         cell.thumbnailImageView.layer.cornerRadius = 3.0
         cell.thumbnailImageView.clipsToBounds = true
 </code></pre>
 
 <ul>
 <li>方法二：通过Xcode配置实现
-
 <ul>
 <li>配置步骤：在storyboard中选择imageview后，在右侧的Identity inspector中的“Use Defined Runtime Attributes”中添加一个值→Key Path定义为“layer.cornerRadius&quot;,Type定义为”Number“，Value定义为你要设置的圆角半径值。加入一张60*60的正方形图片，设置半径为30，就可以将其变为圆形→切换到Attributes Inspector，将Clip Subviews打钩。</li>
 </ul></li>
@@ -277,7 +274,7 @@
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 对每一个Row添加Swipe Action，如分享、删除等
+<pre><code class="language-text">// 对每一个Row添加Swipe Action，如分享、删除等
 override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -&gt; [UITableViewRowAction]? {
     
     // Social Sharing Button
@@ -305,7 +302,7 @@ override func tableView(tableView: UITableView, editActionsForRowAtIndexPath ind
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 定义Row被选择之后的动作
+<pre><code class="language-text">// 定义Row被选择之后的动作
 override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     // Row点击后取消被选中状态
@@ -320,7 +317,7 @@ override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPat
 <li>代码片段：</li>
 </ul>
 
-<pre><code>//View被加载到内存后，以下方法被调起，且只被调起一次，加载好就不再调起
+<pre><code class="language-text">//View被加载到内存后，以下方法被调起，且只被调起一次，加载好就不再调起
 override func viewDidLoad() {
     super.viewDidLoad()
                 
@@ -340,7 +337,7 @@ override func viewDidLoad() {
 <li>若想调整cell的背景色或者设置为透明，可在tableView(_:cellForRowAtIndexPath:)方法中添加以下代码片段：</li>
 </ul>
 
-<pre><code>// 清除cell的背景色，也即变成透明
+<pre><code class="language-text">// 清除cell的背景色，也即变成透明
 cell.backgroundColor = UIColor.clearColor()
 
 </code></pre>
@@ -351,7 +348,7 @@ cell.backgroundColor = UIColor.clearColor()
 <li>在viewDidLoad()中添加以下代码片段：</li>
 </ul>
 
-<pre><code>// 对背景图进行模糊化处理,style有三种：Dark，ExtraLight，Light
+<pre><code class="language-text">// 对背景图进行模糊化处理,style有三种：Dark，ExtraLight，Light
 let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
 let blurEffectView = UIVisualEffectView(effect: blurEffect)
 blurEffectView.frame = view.bounds
@@ -626,7 +623,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
      
     </script>
 
-    <script src="asset/chart/all-min.js"></script><script type="text/javascript">$(function(){    var mwebii=0;    var mwebChartEleId = 'mweb-chart-ele-';    $('pre>code').each(function(){        mwebii++;        var eleiid = mwebChartEleId+mwebii;        if($(this).hasClass('language-sequence')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = Diagram.parse($(this).text());            diagram.drawSVG(eleiid,{theme: 'simple'});        }else if($(this).hasClass('language-flow')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = flowchart.parse($(this).text());            diagram.drawSVG(eleiid);        }    });});</script>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>

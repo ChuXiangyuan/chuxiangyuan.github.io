@@ -200,16 +200,12 @@
 <img src="media/14774965258076/14774974534608.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
 <li><p>更多网站搜索（Web Search）：软件自身内置了一些 Google、Twitter 等搜索，基本上都是一些国外的服务。为了更接地气，我添加了如下图所示的一些网站的搜索。图中的锁形标志代表了搜索结果的网页使用了 HTTPS。<br/>
 <img src="media/14774965258076/14773860150947.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
 <p>添加自定义的搜索项也很简单，只需要知道对应网站的搜索 URL 并添加到偏好设置中的 Features-Web Search 中即可。比如： </p>
-
 <ul>
 <li>百度搜索的 URL 是：<code>http://www.baidu.com/s?wd={query}</code> </li>
 <li>Appshopper 搜索的 URL 是：<code>http://appshopper.com/search?search={query}</code> </li>
 </ul>
-
 <p>添加的时候可以设置一个快捷键，比如百度搜索设置为<code>bd</code>就可以在呼出 Alfred 时，输入『 bd 』加空格，并输入要搜索的关键词，敲击回车，即可打开网页搜索到对应的内容了。</p>
-
 <p>从上面举的两个例子，应该能看出<code>{query}</code>就是要搜索的关键词，这样只要你知道某网站一个搜索结果的 URL，这个网站的搜索 URL 你就知道，自然就可以添加到 Alfred 中了。</p></li>
 </ol>
 
@@ -232,7 +228,6 @@
 <img src="media/14774965258076/14774977724375.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
 <li><p>在进入<code>⌥+⌘+C</code>后，第一项是「All Snippets」，在其中可以设置一些常用的需要输入的字符，比如邮箱，这样在登录、注册时就不需要重复输入复杂的邮箱地址了。<br/>
 <img src="media/14774965258076/14774978021140.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
 <p>注：6 和 7 使用频率比较低的原因是相比其他竞品，Alfred 的调用更加复杂，呈现形式上不够直观，在这两个需求上我更喜欢 <a href="http://pasteapp.me/">Paste</a>。</p></li>
 </ol>
 
@@ -603,7 +598,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
      
     </script>
 
-    <script src="asset/chart/all-min.js"></script><script type="text/javascript">$(function(){    var mwebii=0;    var mwebChartEleId = 'mweb-chart-ele-';    $('pre>code').each(function(){        mwebii++;        var eleiid = mwebChartEleId+mwebii;        if($(this).hasClass('language-sequence')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = Diagram.parse($(this).text());            diagram.drawSVG(eleiid,{theme: 'simple'});        }else if($(this).hasClass('language-flow')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = flowchart.parse($(this).text());            diagram.drawSVG(eleiid);        }    });});</script>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>

@@ -182,7 +182,7 @@
 <li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
 </ul>
 
-<pre><code>tableView.estimatedRowHeight = 36.0 
+<pre><code class="language-text">tableView.estimatedRowHeight = 36.0 
 tableView.rowHeight = UITableViewAutomaticDimension
 </code></pre>
 
@@ -193,7 +193,7 @@ tableView.rowHeight = UITableViewAutomaticDimension
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 从review view跳转回detail view，并且带回rating的值改变detail view
+<pre><code class="language-text">// 从review view跳转回detail view，并且带回rating的值改变detail view
 @IBAction func close(segue:UIStoryboardSegue) {
     
   if let reviewViewController = segue.sourceViewController as? ReviewViewController {
@@ -209,11 +209,11 @@ tableView.rowHeight = UITableViewAutomaticDimension
 
 <ul>
 <li>对于多个button想要触发一个action方法，可以通过为不同的button定义不同的tag，之后coding时通过switch来区分不同tag，从而执行不同的动作。</li>
-<li>代码片段：
+<li>代码片段：<br/>
 // 对电影进行评价，根据点击button的不同给rating赋值并关闭modal view</li>
 </ul>
 
-<pre><code>@IBAction func ratingSelected(sender: UIButton) {
+<pre><code class="language-text">@IBAction func ratingSelected(sender: UIButton) {
   
     switch (sender.tag) {
     case 100: rating = &quot;dislike&quot;
@@ -497,7 +497,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
      
     </script>
 
-    <script src="asset/chart/all-min.js"></script><script type="text/javascript">$(function(){    var mwebii=0;    var mwebChartEleId = 'mweb-chart-ele-';    $('pre>code').each(function(){        mwebii++;        var eleiid = mwebChartEleId+mwebii;        if($(this).hasClass('language-sequence')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = Diagram.parse($(this).text());            diagram.drawSVG(eleiid,{theme: 'simple'});        }else if($(this).hasClass('language-flow')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = flowchart.parse($(this).text());            diagram.drawSVG(eleiid);        }    });});</script>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>

@@ -151,19 +151,14 @@
 <li>SF UI Text、SF UI Display：iOS、macOS、tvOS；</li>
 <li>SF Compact Text、SF Compact Display：watchOS；</li>
 <li><p>SF Mono（一种等宽字体，New in WWDC 2016）：Code in Xcode、Terminal、Swift Playgrounds。</p>
-
 <p><img src="media/15029504785442/BC65E41A-C90D-47C7-9C78-9A699C4EEE2F.png" alt="BC65E41A-C90D-47C7-9C78-9A699C4EEE2F"/></p>
-
 <ul>
 <li>SF 与 SF Mono</li>
 </ul>
-
 <p><img src="media/15029504785442/7AF3BC06-7011-460D-9E7C-C47B7C7695E9.png" alt="7AF3BC06-7011-460D-9E7C-C47B7C7695E9"/></p>
-
 <ul>
 <li>等宽字体（Monospaced）：不同字重下有着相同的宽度</li>
 </ul>
-
 <p><img src="media/15029504785442/0451C080-D67D-47A2-9EF4-B2451566026B.png" alt="0451C080-D67D-47A2-9EF4-B2451566026B"/></p></li>
 </ul>
 
@@ -174,7 +169,6 @@
 <li>Character：字符，文本的抽象单位，可以由一个代码代表，如字母「A」</li>
 <li>Glyph：字形，如字母「A」的这个形状，人们看到这个就知道这是字母「A」，而不是其他字母；</li>
 <li><p>Feature：功能，通常在字体文件中，字形与字符是一一对应的，但有时候有特殊，如「6」这个字符在一个字体中有两种「字形」，你可以选择其中一种（Optional）；输入两个字母，这两个字母自动连笔，形成了一个新的字形（Automatic），这都是 Feature；</p>
-
 <p><img src="media/15029504785442/Font%20Automatic%20Feature.png" alt="Font Automatic Feature " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
 <li><p>Font：字体（文件）；</p></li>
 <li><p>Style：样式，如「粗体」、「斜体」、「粗斜体」、「紧缩」；</p></li>
@@ -197,26 +191,20 @@
 
 <ul>
 <li><p>内嵌于字体中（Embedded in the Font）</p>
-
 <ul>
 <li>Spacing：空间，一个字符所占的位置，内置在字体中无法改变；</li>
 <li><p>Kerning：字偶距，某两个字母间的距离，一般设置在字体内部，无法改变。</p>
-
 <p><img src="media/15029504785442/0053A8A4-21BE-4D83-9C0D-E621D0464CE6.png" alt="0053A8A4-21BE-4D83-9C0D-E621D0464CE6"/></p></li>
 </ul></li>
 <li><p>可调整的（Adjustable）</p>
-
 <ul>
 <li><p>Tracking：字符间距，字间距，所有字符整体调整，正值、零值、负值；</p>
-
 <p><img src="media/15029504785442/4616025D-2E31-4C2D-ADAA-1FF14908BAD0.png" alt="4616025D-2E31-4C2D-ADAA-1FF14908BAD0"/></p></li>
 <li><p>Leading：行距，两行的 baseline 的距离称为行距，descenders-理解为字符延伸到 baseline 下面的那部分，如小写字母 q；ascenders-理解为字符延伸到 baseline 上面的那部分，如小写字母 h。</p>
-
 <p><img src="media/15029504785442/F2282DF8-6974-46A8-957E-D34D0B85F8CD.png" alt="F2282DF8-6974-46A8-957E-D34D0B85F8CD"/></p></li>
 </ul></li>
 <li><p>外部参考链接：<a href="https://creativemarket.com/blog/whats-the-difference-between-leading-kerning-and-tracking">What’s the Difference Between Leading, Kerning and Tracking? </a></p></li>
 <li><p>影响排版的一些因素</p>
-
 <ul>
 <li>易读性（Legibility）</li>
 <li>尺寸（Scale）</li>
@@ -232,7 +220,6 @@
 <li>System Font：使用系统字体只需确定字体大小和字重：<code>UIFont.systemFont(ofSize: 34, weight: UIFontWeightBlack)</code>，每种字体大小都有预设好的字间距 tracking，开启「粗体文本」后，系统中会自动进行粗体文本转换。</li>
 <li>Dynamic Type：应用在 iOS 和 watchOS，在「设置」→「显示与亮度」→「文字大小」中，「辅助功能」中还可开启「更大字体」。使用 Text Styles APIs：<code>UIFont.preferredFont(forTextStyle:)</code>，动态类型功能会自动支持。</li>
 <li>Custom Fonts：由于多为开发上的一些实际操作，暂不展开，具体步骤如下，
-
 <ol>
 <li>Pick or bundle a font</li>
 <li>Lookup table for the Content Size Categories</li>
@@ -241,7 +228,6 @@
 <li>Relayout</li>
 </ol></li>
 <li>Font Selection：如果你决定要使用自定义字体，那么你需要考虑：
-
 <ol>
 <li>Easier sticking with one typeface at a time 从一次使用一个字型开始更容易</li>
 <li>Understanding design intention helps in usage 深度理解这些字型的设计目的</li>
@@ -253,69 +239,53 @@
 
 <ul>
 <li><p>Arrows 箭头（New in WWDC 2016）：各个方向的箭头是内置于 SF 字体中的，并且同样有不同的自重，可在交互中用于指向。</p>
-
 <p><img src="media/15029504785442/15029510805694.jpg" alt=""/></p></li>
 <li><p>High-Legibility Alternates 高易读性替换（New in WWDC 2016）：对于一串字符串，如果用户不易辨别字符串中的字母到底是什么，可以使用开启这个功能，系统自动把不易辨别的字母转换为不会有歧义的字母。但这个功能不要轻易开启，会破坏文本整体的一致性。</p>
-
 <p><img src="media/15029504785442/E598CEAF-F8AA-4263-BE8F-6AE726388D1B.png" alt="E598CEAF-F8AA-4263-BE8F-6AE726388D1B"/></p>
-
 <p>在代码中启用的示例如下：</p>
-
-<pre><code>let pointSize: CGFloat = 60.0
-let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()
-let highLegibilityFontDesc = systemFontDesc.addingAttributes(
-  [
-    UIFontDescriptorFeatureSettingsAttribute:
-      [
-        [
-          UIFontFeatureTypeIdentifierKey: kStylisticAlternativesType,
-          UIFontFeatureSelectorIdentifierKey: kStylisticAltSixOnSelector,
-        ],
-      ]
-  ]
-)
-
+<pre><code class="language-text">let pointSize: CGFloat = 60.0
+let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
+let highLegibilityFontDesc = systemFontDesc.addingAttributes(<br/>
+  [<br/>
+    UIFontDescriptorFeatureSettingsAttribute:<br/>
+      [<br/>
+        [<br/>
+          UIFontFeatureTypeIdentifierKey: kStylisticAlternativesType,<br/>
+          UIFontFeatureSelectorIdentifierKey: kStylisticAltSixOnSelector,<br/>
+        ],<br/>
+      ]<br/>
+  ]<br/>
+)<br/>
 label.font = UIFont(descriptor: highLegibilityFontDesc, size: pointSize)
 </code></pre></li>
 <li><p>Small Caps 小型大写字母：大写字母的缩小版，几乎与小写字母对齐。两个例子如下图。当觉着大写字母与周围的小写字母相比过大而显得不协调，如果仅仅调整字体大小，那会改变字符串的密集度或者说字间距，故可以开启「Small Caps」功能，保证密集度和笔画厚度，使排版美观。</p>
-
 <p><img src="media/15029504785442/10C7242A-570D-4AF0-980C-94171E30D6B1.png" alt="10C7242A-570D-4AF0-980C-94171E30D6B1"/></p>
-
 <p>在 Apple TV 上使用的一个实例：</p>
-
 <p><img src="media/15029504785442/1BB0A3BB-6DC5-4A8D-BA48-08825A863171.png" alt="1BB0A3BB-6DC5-4A8D-BA48-08825A863171"/></p>
-
 <p>具体使用上分为以下几种类型，可以用一种，也可以用多种：</p>
-
 <ul>
 <li><p>Small Caps from Uppercase（把大写字母转换为小型大写字母）：对于一个字符串，1.全是大写，适合此功能；2.大小写混合，不适合此功能；3.全是小写，这样使用有点别扭，但也还 OK。</p>
-
 <p><img src="media/15029504785442/FA47AC14-09B1-4920-9854-1060555FC0C9.png" alt="FA47AC14-09B1-4920-9854-1060555FC0"/></p></li>
 <li><p>Small Caps from Lowercase（把小写字母转换为小型大写字母）：字符串的上述三种情况都还适合。</p>
-
 <p><img src="media/15029504785442/735C71DC-DA4B-4946-828E-06A578BFB51B.png" alt="735C71DC-DA4B-4946-828E-06A578BFB51B"/></p></li>
 <li><p>上述两种类型在代码中启用的方法示意如下：</p>
-
-<pre><code>let pointSize: CGFloat = 60.0
-let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()
-let smallCapsFontDesc = systemFontDesc.addingAttributes(
-  [
-    UIFontDescriptorFeatureSettingsAttribute:
-    [
-
-      [
-        UIFontFeatureTypeIdentifierKey: kLowerCaseType,
-        UIFontFeatureSelectorIdentifierKey: kLowerCaseSmallCapsSelector,
-      ],
-      [
-        UIFontFeatureTypeIdentifierKey: kUpperCaseType,
-        UIFontFeatureSelectorIdentifierKey: kUpperCaseSmallCapsSelector,
-      ],
-
-    ]
-  ]
-)
-
+<pre><code class="language-text">let pointSize: CGFloat = 60.0
+let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
+let smallCapsFontDesc = systemFontDesc.addingAttributes(<br/>
+  [<br/>
+    UIFontDescriptorFeatureSettingsAttribute:<br/>
+    [<br/>
+      [<br/>
+        UIFontFeatureTypeIdentifierKey: kLowerCaseType,<br/>
+        UIFontFeatureSelectorIdentifierKey: kLowerCaseSmallCapsSelector,<br/>
+      ],<br/>
+      [<br/>
+        UIFontFeatureTypeIdentifierKey: kUpperCaseType,<br/>
+        UIFontFeatureSelectorIdentifierKey: kUpperCaseSmallCapsSelector,<br/>
+      ],<br/>
+    ]<br/>
+  ]<br/>
+)<br/>
 label.font = UIFont(descriptor: smallCapsFontDesc, size: pointSize)
 </code></pre></li>
 <li><p>Small Caps Numbers and Punctuation<br/>
@@ -608,7 +578,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
      
     </script>
 
-    <script src="asset/chart/all-min.js"></script><script type="text/javascript">$(function(){    var mwebii=0;    var mwebChartEleId = 'mweb-chart-ele-';    $('pre>code').each(function(){        mwebii++;        var eleiid = mwebChartEleId+mwebii;        if($(this).hasClass('language-sequence')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = Diagram.parse($(this).text());            diagram.drawSVG(eleiid,{theme: 'simple'});        }else if($(this).hasClass('language-flow')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = flowchart.parse($(this).text());            diagram.drawSVG(eleiid);        }    });});</script>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>

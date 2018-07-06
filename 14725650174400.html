@@ -208,7 +208,7 @@
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 自定义导航栏的背景色
+<pre><code class="language-text">// 自定义导航栏的背景色
 UINavigationBar.appearance().barTintColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.9)
     
 // 自定义导航栏的导航button及文字、其他导航栏按钮元素的颜色
@@ -229,7 +229,7 @@ if let barFont = UIFont(name: &quot;PingFangSC-Semibold&quot;, size: 20.0) {
 <li>若想移除导航栏back button后的title，可以在souce view controller中的viewdidload方法中添加以下代码：</li>
 </ul>
 
-<pre><code>// Remove the title of the back button 
+<pre><code class="language-text">// Remove the title of the back button 
 navigationItem.backBarButtonItem = UIBarButtonItem(title: &quot;&quot;, style: .Plain, target: nil, action: nil)
 </code></pre>
 
@@ -237,7 +237,7 @@ navigationItem.backBarButtonItem = UIBarButtonItem(title: &quot;&quot;, style: .
 <li>在导航栏上显示上级table view中对应cell的标题，在destination view controller中的viewdidload方法中添加以下代码：</li>
 </ul>
 
-<pre><code>// 将发现页选择的cell的标题显示在导航栏上
+<pre><code class="language-text">// 将发现页选择的cell的标题显示在导航栏上
 title = movie.name
 </code></pre>
 
@@ -248,7 +248,7 @@ title = movie.name
 <li>在Table View Controller添加以下代码：</li>
 </ul>
 
-<pre><code>// view每次展示时都会被调起
+<pre><code class="language-text">// view每次展示时都会被调起
 override func viewWillAppear(animated: Bool) {
   super.viewWillAppear(animated)
     
@@ -263,7 +263,7 @@ override func viewWillAppear(animated: Bool) {
 <li>在Detail View Controller添加以下代码：</li>
 </ul>
 
-<pre><code>override func viewWillAppear(animated: Bool) {
+<pre><code class="language-text">override func viewWillAppear(animated: Bool) {
   super.viewWillAppear(animated)
     
   // 滑动时不隐藏导航栏
@@ -282,7 +282,7 @@ override func viewWillAppear(animated: Bool) {
 <li>若想改变某个view controller的Status Bar样式，可以添加以下代码：</li>
 </ul>
 
-<pre><code>override func preferredStatusBarStyle() -&gt; UIStatusBarStyle {
+<pre><code class="language-text">override func preferredStatusBarStyle() -&gt; UIStatusBarStyle {
   return .LightContent 
 }
 </code></pre>
@@ -291,7 +291,7 @@ override func viewWillAppear(animated: Bool) {
 <li>若想改变app全局的Status Bar样式，有两步需要做。第一步：Select the project in the project navigator. Under the Info tab of the FoodPin target, insert a new key named View controller-based status bar appearance and set the value to NO。第二步在AppDelegate.swift文件中的application(_:didFinishLaunchingWithOptions:)方法中添加以下代码：</li>
 </ul>
 
-<pre><code>// 自定义全局的Status Bar为Light Style
+<pre><code class="language-text">// 自定义全局的Status Bar为Light Style
 UIApplication.sharedApplication().statusBarStyle = .LightContent
 </code></pre>
 
@@ -299,7 +299,6 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 
 <ul>
 <li>Segue是连接两个View Controller的桥梁，在iOS9之后定义了下面几种Segue的类型
-
 <ul>
 <li><strong>Show</strong> - when the show style is used, the content is pushed on top of the current view controller stack. A back button will be displayed in the navigation bar for navigating back to the original view controller. （这种类型是有导航栏的） </li>
 <li><strong>Show detail</strong> - similar to the show style, but the content in the detail (or destination) view controller replaces the top of the current view controller stack. （没有导航栏）</li>
@@ -316,7 +315,7 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 <li>代码片段：</li>
 </ul>
 
-<pre><code>// 向DetailViewController传递信息
+<pre><code class="language-text">// 向DetailViewController传递信息
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     // 通过已经定义的segue这个桥梁来传递信息
@@ -339,13 +338,11 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 
 <ul>
 <li><p>UIImageView有几种常用的模式如下，在使用时注意选择：</p>
-
 <ul>
 <li><strong>Scale to Fill</strong> (默认的模式，会把图片拉伸到指定的尺寸，不能保证图片的原始比率) </li>
 <li><strong>Aspect Fit</strong> （可以保持图片的原始比率，但是会在imageview中留下空白）</li>
 <li><strong>Aspect Fill</strong> （保持图片的原始比率的前提下不会留下空白，但会切掉图片四周的一些细节，注意使用此模式时要开启“Clip Subviews”，否则图片会扩展到其他view中去。）</li>
 </ul>
-
 <p><img src="media/14725650174400/14726256242528.jpg" alt=""/></p></li>
 </ul>
 
@@ -361,7 +358,7 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 <li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
 </ul>
 
-<pre><code>tableView.estimatedRowHeight = 36.0 
+<pre><code class="language-text">tableView.estimatedRowHeight = 36.0 
 tableView.rowHeight = UITableViewAutomaticDimension
 </code></pre>
 
@@ -632,7 +629,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
      
     </script>
 
-    <script src="asset/chart/all-min.js"></script><script type="text/javascript">$(function(){    var mwebii=0;    var mwebChartEleId = 'mweb-chart-ele-';    $('pre>code').each(function(){        mwebii++;        var eleiid = mwebChartEleId+mwebii;        if($(this).hasClass('language-sequence')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = Diagram.parse($(this).text());            diagram.drawSVG(eleiid,{theme: 'simple'});        }else if($(this).hasClass('language-flow')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = flowchart.parse($(this).text());            diagram.drawSVG(eleiid);        }    });});</script>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
