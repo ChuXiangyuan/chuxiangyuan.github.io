@@ -1,0 +1,656 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803 - 向远公园 | Step Park
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="向远公园 | Step Park" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:steppark.net ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+</script>
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">Home</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="about.html">About</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 向远公园 | Step Park</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="about.html">About</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="Design.html">Design</a></li>
+        
+            <li><a href="Develop.html">Develop</a></li>
+        
+            <li><a href="Teconology.html">Teconology</a></li>
+        
+            <li><a href="Tools.html">Tools</a></li>
+        
+            <li><a href="Life.html">Life</a></li>
+        
+            <li><a href="Talk.html">Talk</a></li>
+        
+            <li><a href="Others.html">Others</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2018/8/9</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='Design.html'>Design</a></span>
+          
+              <span class="posted-in"><a href='Develop.html'>Develop</a></span>
+           
+         
+          <span class="comments">
+            
+              <a href="https://steppark.net/15416957498069.html#disqus_thread">comments</a>
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p>在使用 iPhone X 时，用户可以通过简单直观的手势顺畅地完成回到主屏幕、查看多任务、切换 app 等操作。之所以让用户感到界面如此流畅甚至与用户的思想融为一体的界面是如何设计的？这个 session 将会带领你学习如何设计直观、自然的手势、动画，从而让用户爱上你的 app。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15416957498069/2247_wide_250x141_2x.jpg" alt="2247_wide_250x141_2x" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+
+<h2 id="toc_0">Interfaces that extend our minds 延伸我们思想的界面</h2>
+
+<blockquote>
+<p>Aligning interfaces to the way we think and the way we move</p>
+</blockquote>
+
+<ul>
+<li>Respond to input instantly 对输入马上做出响应</li>
+<li><p>Allow for constant redirection and interruption 允许持续的重新定向和打断</p>
+<ul>
+<li><p>如果不允许重新定向和打断，那界面的操作将是线性的，你要先思考决定要干什么再通过特定的手势完成任务。<br/>
+<img src="media/15416957498069/FA964CC6-3EC4-4B9C-81D3-CCF065537F62.png" alt="FA964CC6-3EC4-4B9C-81D3-CCF065537F62"/></p></li>
+<li><p>如果可以重新定向和打断，那「思考」和「手势操作」就可以同时进行，你可以将不同的单一的手势结合，组成新的手势。<br/>
+<img src="media/15416957498069/75DDEA69-BA4C-4A4F-8CA9-75680B5759E2.png" alt="75DDEA69-BA4C-4A4F-8CA9-75680B5759E2"/></p></li>
+<li><p>Gesture in Parallel With Thought Summary</p>
+<ol>
+<li>Faster than thinking before doing 比「做之前做出思考」更快</li>
+<li>One gesture solves multiple problems 一个综合的手势可以解决多个不同的问题</li>
+<li>Helps with discovery 有助于探索新的手势，创造 1+1&gt;2 的效果</li>
+<li>Allow you to layer gestures at the speed of thought 允许你跟上思考的速度做出对应的手势</li>
+</ol></li>
+<li><p>Examples：</p>
+<ol>
+<li>Swipe home-screen pages /<em>while</em>/ going home</li>
+<li>Go to multitasking /<em>while</em>/ app is launching</li>
+<li>Close app /<em>while</em>/ launching app</li>
+<li>Interact with app /<em>as</em>/ it launches</li>
+</ol></li>
+</ul></li>
+<li><p><em>Summary：</em>这些事情看起来没有那么重要，但要想界面一直能够及时响应并理解你的意图这一点十分重要。要让用户感到界面是有生命的。这对于用户对界面的期待和理解以及使用的舒适度亦十分重要。</p></li>
+<li><p>Maintain spatial consistency throughout movement 在移动的过程中保持空间一致性</p>
+<ul>
+<li>保持在移动时的空间一致性、对称性，以符合物理世界物体运动的规律。例如一个页面自右向左滑入屏幕，那返回时应该自左向右滑出屏幕。
+<img src="media/15416957498069/ECD639EA-72D3-42C9-8902-ECC64975F8CC.png" alt="ECD639EA-72D3-42C9-8902-ECC64975F8C"/></li>
+</ul></li>
+<li><p>Hint in the direction of the gesture 在手势方向上的暗示/预测</p>
+<ul>
+<li>物理世界中，人们会根据规律，对物体的形态、轨迹进行预测。例如控制中心的某个功能模块会随着手指的按下弹起并逐渐变大，直至弹出完整的功能页面。
+<img src="media/15416957498069/73AA81DD-4777-4730-959E-DADA6A8F3BBE.png" alt="73AA81DD-4777-4730-959E-DADA6A8F3BBE"/></li>
+</ul></li>
+<li><p>Keep touch interfaces lightweight, but amplify their motion 保持触摸交互轻量化，但是放大它们的动作</p>
+<ul>
+<li>小的投入产生大的、满意的效果；</li>
+<li>short interaction：通过 position（位置）、velocity（加速度）、speed（速度）、force（力）建立手势的动量/惯性文档，继而放大动作的效果，让其感觉就是自己的延伸。例如在滚动页面时，手指只在屏幕停留了一瞬间，但系统可以保持手指手势的能量和动量，移动合适、满意的距离。
+<img src="media/15416957498069/DB59CA57-9C73-4543-8B86-514552C0AD36.png" alt="DB59CA57-9C73-4543-8B86-514552C0AD36"/></li>
+</ul></li>
+<li><p>Softly indicate boundaries 柔和地表明边界</p>
+<ul>
+<li>例如在到达页面顶端和底端时，界面会柔和的提醒你，而不是戛然而止，像是碰到了一堵墙。</li>
+</ul></li>
+<li><p>Soft transitions 柔和地过渡</p>
+<ul>
+<li>从一个界面过渡到另一个界面、从一个动作过渡到另一个动作。例如在 iPad 上手指从屏幕底部向上轻扫划出 Dock，继续向上轻扫会进入多任务界面或回到首页。在这两者直接的过渡是平滑的，不是生硬的。</li>
+</ul></li>
+<li><p>Design smooth frames of motion 设计平滑的动作运动效果</p>
+<ul>
+<li>界面中物体的运动实际上是由多个帧组成，相邻的两个帧的视觉变动太大，就会造成视觉频闪，人的眼睛跟不上运动的速度。</li>
+<li>在设计中重要的不是帧速率，而是帧内容。</li>
+<li>几种运动效果：正常、动作模糊、动作拉伸
+<img src="media/15416957498069/BDB64898-80DC-483F-A3CB-825400986D7D.png" alt="BDB64898-80DC-483F-A3CB-825400986D7D"/></li>
+</ul></li>
+<li><p>Work with behavior rather than animation 更多地考虑行为而不是动画</p>
+<ul>
+<li>物理世界中的物体是一直处于动态的，并且会受到人的影响。</li>
+<li>动画和操作更像是你和物体之间的对话，而非界面的描述。不要把静态的事物转变成动态的。</li>
+<li>例如，在相册中滑动照片时的阻力较小，因为这个动作是轻量化的；而通过 Home Indicator 左右滑动切换 app 时需要用到的阻力就会更大，因为我们把这个动作看得更重。</li>
+</ul></li>
+<li><p><em>Summary 总结：</em></p>
+<ul>
+<li>Instant response and constant redirection 立即地响应、连续地重定向</li>
+<li>Maintain spatial consistency 保持空间一致性</li>
+<li>Hint in the direction of the gesture 在手势方向上的预测</li>
+<li>Lightweight interactions, amplified output 轻量化交互，放大输出</li>
+<li>Soft boundaries and transitions 柔和的边界和过渡</li>
+<li>Design smooth, dynamic behavior 设计平滑、动态的行为
+<img src="media/15416957498069/35E6DFE8-E909-4A8A-9CEC-52A9E926134B.png" alt="35E6DFE8-E909-4A8A-9CEC-52A9E926134B"/></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_1">Designing with dynamic motion 动态动作的设计</h2>
+
+<ul>
+<li><p>在界面中常见的使用动态的一种形式是定时动画，只要敲击一下按钮，屏幕的控制权就完全交给了设计者。<br/>
+<img src="media/15416957498069/C4E49A86-76BE-4816-9A62-9D50B5808E20.png" alt="C4E49A86-76BE-4816-9A62-9D50B5808E20"/></p></li>
+<li><p>在一个流畅的界面中，动画是动态的，屏幕的控制权是属于用户的，动画应该与互动同步进行。<br/>
+<img src="media/15416957498069/9D40AE03-CB51-4928-B9BC-6414EBC68811.png" alt="9D40AE03-CB51-4928-B9BC-6414EB"/></p></li>
+<li><p>Seamless motion 无缝动作</p>
+<blockquote>
+<p>Characteristics of the physical world make great behaviors  物理世界的特征创造了完美的行为。  </p>
+</blockquote>
+<ul>
+<li>Familiar, natural motion 熟悉的、自然的符合物理规律、人们认知的动作</li>
+<li>Maintains throw momentum 保持运动的动力</li>
+<li>Friction gracefully reduces speed 阻力优雅地使速度变慢</li>
+<li><p>Imperceptibly comes to rest 难以觉察地趋向于静止，这种感觉不到结尾的运动会增强内容是不断运动的感觉。</p></li>
+<li><p>当滚动一个页面到边缘时，页面会有一个弹性告诉用户用户已经到了页面的边缘，当用户放手时，这个弹性又会让页面渐渐回到其静息状态。</p></li>
+<li><p>拿物理世界中最常见的弹簧来看，影响弹簧运动的几个因素：</p>
+<ul>
+<li>质量+硬度（可合称为响应时间）：可以影响弹簧的惯性、运动时间和距离等</li>
+<li>阻尼：可以影响弹簧的力的衰减等。
+<img src="media/15416957498069/2C9B4A83-EB8C-4AA2-B3B8-17EAC1065935.png" alt="2C9B4A83-EB8C-4AA2-B3B8-17EAC1065935"/></li>
+</ul></li>
+<li><p>从简单开始，最基本的动作不需要弹簧的阻尼/过冲；一个有动量的手势需要有像弹簧一样的阻尼/过冲。例如在音乐 app 中，点击 tab bar 上方的正在播放以展开「正在播放」模态页面时，这个点击动作就没有动量，不需要阻尼，但当用手指向下轻扫关闭「正在播放」模态页面时就需要一点阻尼。</p></li>
+<li><p>反弹可以用来暗示：例如在 iPhone X 的锁屏上有「手电筒」和「照相机」按钮，为了避免用户在无意间点击了这两个按钮，用户需要使用更加强烈的手势（3D Touch）才能打开相应的功能。但当一个不知道如何操作的用户轻点了这两个按钮，两个按钮会使用反弹的形式告诉用户界面正在响应用户的操作，这两个按钮是可以使用的，但还需要再用力一点。</p></li>
+<li><p>Think beyond motion. 思考并不仅仅是动作。</p>
+<ul>
+<li>在界面中，不仅仅可以通过动效来告诉用户内容是运动的，还可以通过声音、触觉、颜色等。</li>
+<li>例如在一个 Data Picker 中，用户上下滑动日期，屏幕上有动画，扬声器中有声音，手机会有震动反馈，这更加让用户感受到内容的运动。</li>
+</ul></li>
+</ul></li>
+<li><p>Crafting a character 构造一个特征</p>
+<ul>
+<li>任何一个动作都不应该是独立的，而应该是置于整体考虑的，应该是在 app 中可重复的，用户可以轻易学会的；</li>
+<li>例如手指向上滑动，使一个页面向上滚动时，用户也可以双击状态栏使页面回到顶部，这是无缝衔接的，这也应该是贯彻整个 app 的交互操作。</li>
+</ul></li>
+<li><p>Understanding intent 理解意图</p>
+<ul>
+<li>普通的按钮在点击后的发生的结果比较显而易见，且每个按钮与结果一般是一一对应的。但对于用户触发的手势来说，需要根据用户手势的动作、动量、时间等因素预测并理解用户的意图。</li>
+<li><p>例如在 Facetime 中，默认情况下右下角的浮窗可以显示对方能看到的你的画面，用户可以通过手势将其移动到屏幕的四个角落的任意一个。当用户的手势触发时，就应该根据手势的动量等数据预测用户的意图，以确定最终的移动位置。<br/>
+<img src="media/15416957498069/BA2FC553-65E1-4611-A6AC-ED2A11E524C4.png" alt="BA2FC553-65E1-4611-A6AC-ED2A11E524"/></p></li>
+<li><p>意图的预测与理解不仅适用于物体的移动，也适用于物体的旋转、改变大小或者几者之间的结合。</p></li>
+</ul></li>
+<li><p><em>Summary 总结：</em></p>
+<ul>
+<li>Continuous behaviors, not timed animations 连续一致的行为，而不是定时动画；</li>
+<li>Draw inspiration from the physical world 从物理世界获取灵感</li>
+<li>Springs don’t need to be springy! 弹簧并不一定要有弹性，要合理利用反弹</li>
+<li>Align motion with intent  利用动量，预测意图，展现动作
+<img src="media/15416957498069/1C9C0D1D-58D6-49E2-8067-9481C9145948.png" alt="1C9C0D1D-58D6-49E2-8067-9481"/></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_2">Responding to interaction 对交互作出响应</h2>
+
+<ul>
+<li><p>Design of taps and swipes  轻点和轻扫手势的设计</p>
+<ul>
+<li>轻点手势：以计算器键盘上的一个按钮来说，一个按钮需要至少满足以下条件：
+<ul>
+<li>按钮在点击之后需要立即做出响应，这让用户知道按钮响应了用户的操作；</li>
+<li>除开按钮本身的可见区域外，还需要有一个更大的点击有效区域，这可以防止用户在点击过程完成前意外移动出了按钮的可见区域；</li>
+<li>若用户在按下按钮之后且松开按钮之前改变了注意，用户可以将手指移出可点击区域取消操作，亦可在移出后回到可点击区域恢复操作，即用户松开手指才算是完成了一次轻点手势操作。</li>
+</ul></li>
+<li>轻扫手势：广义上的轻扫可以代表许多动作，滑动、拖拽、弹开、滚动等，以将一张图片从一个位置拖拽到另一个位置为例，其过程需要注意：
+<ul>
+<li>当拖拽手势离原点移动超过了 10 point（动作滞后），图片就应该开始移动；</li>
+<li>当开始移动时，需要注意其运动的方向，严格符合拖拽手势的动量、速度，符合物理规律；</li>
+<li>最后，根据移动的历史轨迹落入最终的位置。</li>
+</ul></li>
+</ul></li>
+<li><p>Principles of fluid interactions 流畅交互的原则</p>
+<ul>
+<li>Touch and content move together 触摸和内容要一起动，两者是一一对应的。
+<ul>
+<li>一旦触摸和内容没有一起移动，用户立即就能感受到。例如滑动一个页面到页面边缘时。</li>
+<li>触摸和内容一起动不仅仅存在于手和屏幕之间，还存在于 Apple TV 中，遥控器上的触摸手势和屏幕之间。</li>
+</ul></li>
+<li>Provide continuous feedback 提供连续一致的反馈
+<ul>
+<li>例子一：iPhone X 锁屏上的手电筒按钮，随着按压的面积和力度逐渐变大，按钮会变得越来越大，同时也提醒用户只要再用力一点，就可以触发其功能。</li>
+<li>例子二：Apple TV 上的焦点系统会随着遥控器触摸表面上的手势而变化：聚焦时焦点的变化、移动焦点时的方向指向</li>
+</ul></li>
+</ul></li>
+<li><p>Dealing with multiple gestures 处理多个手势</p>
+<ul>
+<li>例如，在一个列表页面可以通过轻扫上下滚动，也可以用力按下（3D Touch）一个条目以预览/查看（Peep）其详细内容。</li>
+<li><p>如果系统先判断出是什么手势再做出视觉反馈，那么就会存在延迟：<br/>
+<img src="media/15416957498069/09920A47-6F3B-488D-9063-4FCCE3EA817E.png" alt="09920A47-6F3B-488D-9063-4FCCE3EA817E"/></p></li>
+<li><p>所以，必须要同时判断所有手势，并在确定最终手势的时候，中断其他手势。例如在 3D Touch 过程中又想改变意图而去滚动页面。<br/>
+<img src="media/15416957498069/3051B1CB-A29C-40CB-9867-3B464570CB76.png" alt="3051B1CB-A29C-40CB-9867-3B464570CB76"/></p></li>
+<li><p>但有时候延迟不可避免，例如在「照片」中当照片全屏显示时，单击可以显示菜单，双击可以使图片放大，系统必须要等点击结束后才能做出响应，因为其必须要知道这次点击是单击还是双击。</p></li>
+</ul></li>
+<li><p><em>Summary 总结：</em></p>
+<ul>
+<li>Design of taps and swipes 轻点和轻扫手势的设计</li>
+<li>Content and touch move one-to-one  内容和触摸的移动是一一对应的</li>
+<li>Provide continuous feedback 提供连续一致的反馈</li>
+<li>Detect multiple gestures in parallel 同步检测多个手势
+<img src="media/15416957498069/2C7A08D4-CCE8-4E4A-9E26-4FB5660A4814.png" alt="2C7A08D4-CCE8-4E4A-9E26-4FB5660A4814"/></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_3">Fluidity as a medium 作为一个媒介的流畅度</h2>
+
+<ul>
+<li><p>怎样让用户知道交互具体是如何操作的？</p>
+<ul>
+<li><p>Visual Cues 视觉线索：页面底部只露出一部分内容，表明后面还有更多的内容；利用页面指示器表明还有更多的页面；通过一个「把手」提示用户这个界面可以提起展示更多内容。<br/>
+<img src="media/15416957498069/96F7DD7F-0734-47B5-996B-5C02C365CE2B.png" alt="96F7DD7F-0734-47B5-996B-5C02C365CE2B"/></p>
+<p><img src="media/15416957498069/C25E1BC2-9E74-4A81-9940-4D475CBE7C7C.png" alt="C25E1BC2-9E74-4A81-9940-4D475CBE7C7"/></p></li>
+<li><p>Elevate interactive elements to a separate plane 提升可交互元素的层级到一个单独的平面：「开关」控件。<br/>
+<img src="media/15416957498069/70ECC8F0-C04B-4EB1-B18D-4C20BE56DFF4.png" alt="70ECC8F0-C04B-4EB1-B18D-4C20BE56DFF4"/></p></li>
+<li><p>Use behavior to teach gesture 利用行为去教用户手势：如在 Safari 中的多页面界面，点击「关闭」按钮，该网页会从右往左滑出屏幕，也暗示了如果直接在网页上从右往左滑动也可以关闭网页。<br/>
+<img src="media/15416957498069/A5A04C11-E4E8-46D7-BA51-2AB5BE6EC3EF.png" alt="A5A04C11-E4E8-46D7-BA51-2AB5BE6EC3EF"/></p></li>
+<li><p>Explanations 解释：应该最少使用，应该只在那些重复使用的场景下使用，不要在间歇性使用手势的地方使用，否则用户会记不住</p></li>
+</ul></li>
+<li><p>Playfulness 让交互变得活泼有趣——一个将以上都做到所达到的境界，这表明 app 的界面和交互正在内化：</p>
+<ul>
+<li>A natural consequence of a fluid interface 一个流畅交互的自然结果</li>
+<li>Happens when the interface feels in sync with you 界面与你完全同步这件事真的发生了</li>
+<li>You feel comfortable exploring new areas 探索新的领域，你感觉很舒服</li>
+<li>Allow people to <em>discover</em>your interface through play 允许人们通过玩去发现你的界面</li>
+</ul></li>
+<li><p><em>Summary 总结：</em></p>
+<ul>
+<li>Design the interactions to be /inseparable/ from the visuals 将交互和视觉设计成不可分割的</li>
+<li>A interactive demo is worth a million static designs 一个可交互的 demo 值得一百万个静态设计，以让自己真正理解其内涵</li>
+<li>Prototyping helps you /think/ by exploring 搭建原型时通过探索可以帮助你的思考</li>
+<li>Sets a goal for the implementation 为实施设定一个目标</li>
+<li>Hard to copy and gives your app a unique character 很难复制，给予你的 app 一个独一无二的特征
+<img src="media/15416957498069/B2BE5E1E-A4A9-407C-B938-420C44C099B2.png" alt="B2BE5E1E-A4A9-407C-B938-420C44C099B2"/></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2018/803/">Designing Fluid Interfaces - WWDC 2018 - Videos - Apple Developer</a>  </p>
+</blockquote>
+
+<p>📱</p>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15416976044741.html" 
+          title="Previous Post: Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?">&laquo; Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15107547493398.html" 
+          title="Next Post: Allen 说:🎙">Allen 说:🎙 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_douban"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          
+            <div id="disqus_thread"></div>
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <div class="site-a-logo"><img src="media/14625521742746/Step%20Park%20LOGO-White+Circle-.png" /></div>
+            
+                <h1>向远公园 | Step Park</h1>
+                <div class="site-des">搞懂逻辑 | 理清思路 | 沉淀想法 | 纪录生活</div>
+                <div class="social">
+
+
+
+
+
+
+
+<a target="_blank" class="weibo" href="https://weibo.com/chuxiangyuan1104/" title="Weibo">Weibo</a>
+<a target="_blank" class="twitter" target="_blank" href="https://twitter.com/chuxiangyuan/" title="Twitter">Twitter</a>
+<a target="_blank" class="github" target="_blank" href="https://github.com/ChuXiangyuan/" title="GitHub">GitHub</a>
+<a target="_blank" class="email" href="mailto:chuxiangyuan1104@gmail.com" title="Email">Email</a>
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+               
+             <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Featured</h2>
+                </div>
+                <div class="side-content">
+                  
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15416976044741.html">1️⃣ Designing For New iPad Pro and Apple Pencil</a>
+
+                  </div>
+                  
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15086036845015.html">2️⃣ Designing For iPhone X</a>
+
+                  </div>
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15107547493398.html">3️⃣ Allen 说：</a>
+
+                  </div>
+                  
+                </div>
+            </div>
+            
+    
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="Design.html"><strong>Design</strong></a>
+        
+            <a href="Develop.html"><strong>Develop</strong></a>
+        
+            <a href="Teconology.html"><strong>Teconology</strong></a>
+        
+            <a href="Tools.html"><strong>Tools</strong></a>
+        
+            <a href="Life.html"><strong>Life</strong></a>
+        
+            <a href="Talk.html"><strong>Talk</strong></a>
+        
+            <a href="Others.html"><strong>Others</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15416957498069.html">Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15107547493398.html">Allen 说:🎙</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15416970661320.html">内容丰富的通知 Rich Notifications - WWDC 2017 Session 817</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15294912961206.html">妙用 Xcode 修改 iPhone 的当前定位位置</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              
+
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2018
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'chuxiangyuan'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script type="text/javascript">
+var disqus_shortname = 'chuxiangyuan'; 
+
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109532424-1');
+  gtag('set', {'user_id': 'USER_ID'}); // 使用已登录的 user_id 来设置用户 ID。
+</script>
+
+  </body>
+</html>

@@ -208,7 +208,7 @@
 <li>代码片段：</li>
 </ul>
 
-<pre><code class="language-text">// 自定义导航栏的背景色
+<pre class="line-numbers"><code class="language-text">// 自定义导航栏的背景色
 UINavigationBar.appearance().barTintColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.9)
     
 // 自定义导航栏的导航button及文字、其他导航栏按钮元素的颜色
@@ -229,7 +229,7 @@ if let barFont = UIFont(name: &quot;PingFangSC-Semibold&quot;, size: 20.0) {
 <li>若想移除导航栏back button后的title，可以在souce view controller中的viewdidload方法中添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">// Remove the title of the back button 
+<pre class="line-numbers"><code class="language-text">// Remove the title of the back button 
 navigationItem.backBarButtonItem = UIBarButtonItem(title: &quot;&quot;, style: .Plain, target: nil, action: nil)
 </code></pre>
 
@@ -237,7 +237,7 @@ navigationItem.backBarButtonItem = UIBarButtonItem(title: &quot;&quot;, style: .
 <li>在导航栏上显示上级table view中对应cell的标题，在destination view controller中的viewdidload方法中添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">// 将发现页选择的cell的标题显示在导航栏上
+<pre class="line-numbers"><code class="language-text">// 将发现页选择的cell的标题显示在导航栏上
 title = movie.name
 </code></pre>
 
@@ -248,7 +248,7 @@ title = movie.name
 <li>在Table View Controller添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">// view每次展示时都会被调起
+<pre class="line-numbers"><code class="language-text">// view每次展示时都会被调起
 override func viewWillAppear(animated: Bool) {
   super.viewWillAppear(animated)
     
@@ -263,7 +263,7 @@ override func viewWillAppear(animated: Bool) {
 <li>在Detail View Controller添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">override func viewWillAppear(animated: Bool) {
+<pre class="line-numbers"><code class="language-text">override func viewWillAppear(animated: Bool) {
   super.viewWillAppear(animated)
     
   // 滑动时不隐藏导航栏
@@ -282,7 +282,7 @@ override func viewWillAppear(animated: Bool) {
 <li>若想改变某个view controller的Status Bar样式，可以添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">override func preferredStatusBarStyle() -&gt; UIStatusBarStyle {
+<pre class="line-numbers"><code class="language-text">override func preferredStatusBarStyle() -&gt; UIStatusBarStyle {
   return .LightContent 
 }
 </code></pre>
@@ -291,7 +291,7 @@ override func viewWillAppear(animated: Bool) {
 <li>若想改变app全局的Status Bar样式，有两步需要做。第一步：Select the project in the project navigator. Under the Info tab of the FoodPin target, insert a new key named View controller-based status bar appearance and set the value to NO。第二步在AppDelegate.swift文件中的application(_:didFinishLaunchingWithOptions:)方法中添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">// 自定义全局的Status Bar为Light Style
+<pre class="line-numbers"><code class="language-text">// 自定义全局的Status Bar为Light Style
 UIApplication.sharedApplication().statusBarStyle = .LightContent
 </code></pre>
 
@@ -315,7 +315,7 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 <li>代码片段：</li>
 </ul>
 
-<pre><code class="language-text">// 向DetailViewController传递信息
+<pre class="line-numbers"><code class="language-text">// 向DetailViewController传递信息
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     // 通过已经定义的segue这个桥梁来传递信息
@@ -358,7 +358,7 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 <li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">tableView.estimatedRowHeight = 36.0 
+<pre class="line-numbers"><code class="language-text">tableView.estimatedRowHeight = 36.0 
 tableView.rowHeight = UITableViewAutomaticDimension
 </code></pre>
 
@@ -449,18 +449,18 @@ tableView.rowHeight = UITableViewAutomaticDimension
                 <div class="side-content">
                   
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15086036845015.html">1️⃣ Designing For iPhone X</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15416976044741.html">1️⃣ Designing For New iPad Pro and Apple Pencil</a>
 
                   </div>
                   
 
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15107547493398.html">2️⃣ Allen 说：</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15086036845015.html">2️⃣ Designing For iPhone X</a>
 
                   </div>
 
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15105083511786.html">3️⃣ 个人网站大事记</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15107547493398.html">3️⃣ Allen 说：</a>
 
                   </div>
                   
@@ -506,31 +506,31 @@ tableView.rowHeight = UITableViewAutomaticDimension
 	      
 		      
 			      <li class="post">
+			        <a href="15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15416957498069.html">Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15107547493398.html">Allen 说:🎙</a>
 			      </li>
 		     
 		  
 		      
 			      <li class="post">
+			        <a href="15416970661320.html">内容丰富的通知 Rich Notifications - WWDC 2017 Session 817</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15294912961206.html">妙用 Xcode 修改 iPhone 的当前定位位置</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15171487371271.html">Size Classes and Core Components - WWDC 2017 Session 812</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15120578044761.html">什么是好的，什么是美的</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15091947537272.html">个人常用 app 适配 iPhone X 的时间线记录</a>
 			      </li>
 		     
 		  

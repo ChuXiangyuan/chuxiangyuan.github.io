@@ -4,13 +4,374 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2018-07-07T00:59:27+08:00</updated>
+  <updated>2018-11-09T01:45:58+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?]]></title>
+    <link href="https://steppark.net/15416976044741.html"/>
+    <updated>2018-11-09T01:20:04+08:00</updated>
+    <id>https://steppark.net/15416976044741.html</id>
+    <content type="html"><![CDATA[
+<p>Apple 在 10 月 30 日发布了全新的 iPad Pro 11 寸版本和 12.9 寸版本，它们去除了 Home 键、配备了 Face ID，从而使得边框变得极窄，iPad Pro 也步入了无 Home 键的时代。但与之前发布的 iPhone Xs、iPhone Xs Max 不同，全新的 iPad Pro 并没有刘海。同时，Apple 发布了第二代 Apple Pencil，在这支笔上配备了双击手势功能。那在设计与开发适配全新的具备 Split View、Slide Over 功能、搭配第二代 Apple Pencil 的 iPad Pro 时，有什么要注意的呢？</p>
+
+<span id="more"></span><!-- more -->
+
+<blockquote>
+<p>在进一步阅读此文章前，推荐阅读这篇文章的姊妹篇，有利于更好地理解 Apple 最新 iPhone、iPad 的适配原则：  </p>
+
+<ol>
+<li><a href="15086036845015.html">Designing For iPhone X —— iPhone 上有了刘海，设计和开发到底该咋整?</a><br/></li>
+<li>Designing For iPhone Xs、iPhone Xs Max — 比大还大，更大的刘海屏 iPhone 来了（待更新）</li>
+</ol>
+</blockquote>
+
+<ul>
+<li><strong>Note:</strong>
+<ul>
+<li>全文未完成，仍在不断补充更新中...</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_0">屏幕尺寸</h2>
+
+<ul>
+<li><p>全新的 iPad Pro 11″ 与 iPad Pro 10.5″ 相比，在去除了 Home 键之后，将上下边框（竖屏模式下）缩小，而机身尺寸几乎变化不大，故屏幕由原来的 10.5 寸增大为 11 寸。因此 iPad Pro 11″ 在横屏模式下的屏幕高度与 iPad Pro 10.5″ 是相同的，但在横屏模式下的屏幕宽度比  iPad Pro 10.5″ 多出了 82pt @2x，即横屏模式下 iPad Pro 11″ 为 1194 × 834pt @2x，iPad Pro 10.5″ 为 1112 × 834pt @2x。</p></li>
+<li><p>全新的 iPad Pro 12.9″ 与第二代 iPad Pro 12.9″ 相比，在去除了 Home 键并缩小了上下边框（竖屏模式下）后，整体机身尺寸变小一圈，使得屏幕仍保持 12.9 寸不变。因此第三代 iPad Pro 12.9″ 和前两代的 iPad Pro 12.9″ 的屏幕显示宽度、高度完全一致，即横屏模式下 1366 × 1024pt @2x。</p></li>
+<li><p>有人可能会产生疑惑：同是新一代的 iPad Pro，为什么 11 寸的和 12.9 寸的相比上一代的变化方式不同？一个增大屏幕、保持机身尺寸几乎不变；一个保持屏幕尺寸不变、减小机身尺寸。如果新的小尺寸的 iPad Pro 仍然保持 10.5 寸屏幕、减小机身尺寸，iPad 分辨率的变种不就更少、适配不就更简单？一个个人感觉靠谱的说法：iPad Pro 的定位是注重生产力的个人电脑，Smart Keyboard 是其重要的一个配件，不可或缺，如果机身尺寸在上一代的基础上进一步缩小，那就会导致全尺寸的 Smart Keyboard 的按键设计出现问题。所以基于此，Apple 不会再减小 iPad Pro 的机身尺寸，自然只能扩大屏幕尺寸。</p></li>
+</ul>
+
+<h2 id="toc_1">App 的适配与设计</h2>
+
+<p>全新的 iPad Pro 的屏幕与 iPhone Xs 一样是四个圆角，所以在设计 app 时，应该避免重要的信息或控件出现在四个角落，以免被圆角遮挡或切割。像 Status Bar、Navigation Bar、Tab Bar、Tool Bar 这些会覆盖到边角的标准控件，应该被自动且正确地放置。</p>
+
+<p><img src="media/15416976044741/ED039BBE-40FF-438D-A43F-9BAAC784EF3A.png" alt="ED039BBE-40FF-438D-A43F-9BAAC784EF3A"/></p>
+
+<p>为了让你的 app 在全新的 iPad Pro 上完美地呈现，你需要在设计 app 时遵守下面三个原则：</p>
+
+<ul>
+<li><p><strong>使用安全区域布局规范（Safe Area Layout Guides）阻止界面元素被屏幕圆角切割或者被 Home Indicator 遮挡。</strong></p>
+<ul>
+<li><p>在屏幕上没有其他控件时，安全区域几乎覆盖整个屏幕，在横屏和竖屏模式下，需要在底部留出 20pt 高度的区域给 Home Indicator，以防内容被 Home Indicator 遮挡。</p>
+<p><img src="media/15416976044741/AA38670A-D8C0-4759-A5FB-FFAE16FB66F8.png" alt="AA38670A-D8C0-4759-A5FB-FFAE16FB66F8"/></p></li>
+<li><p>不要尝试在 Home Indicator 周围放置控件、元素，虽然在全屏模式下，Home Indicator 是位于屏幕底部中央位置的，但在 Split View 中，Home Indicator 的位置会跟随 app 发生变化。如果有内容放置在 Home Indicator 两边就可能会被遮挡。</p>
+<p><img src="media/15416976044741/52F6C707-BEDA-4663-9EFC-68573F451383.png" alt="52F6C707-BEDA-4663-9EFC-68573F451383"/></p></li>
+<li><p>当界面中显示 Status Bar 时，Status Bar 的高度是 24pt，而不是 iPhone 或者前几代 iPad 上的 20pt。</p>
+<p><img src="media/15416976044741/73F8EA5A-E64A-41B3-98C1-7BE2AB92DB05.png" alt="73F8EA5A-E64A-41B3-98C1-7BE2AB92DB05"/></p></li>
+<li><p>特别提示，在 Slide Over 模式中，app 的安全区域完全充满 app 的可显示区域，安全区域到顶部和底部的距离均为 0pt。 </p>
+<p><img src="media/15416976044741/FE0AAB89-583B-46CA-AAD0-363DD002F92C.png" alt="FE0AAB89-583B-46CA-AAD0-363DD002F92"/></p></li>
+<li><p>在界面中有 Navigation Bar、Tab Bar 或者 Tool Bar 时，不管屏幕方向是横向还是纵向，安全区域到左右两侧的距离均为 0pt。这不同于 iPhone Xs，在横向屏幕时，因为刘海的缘故，需要在左右两侧留出对称相等的安全距离。</p>
+<p><img src="media/15416976044741/71D19712-586A-40B0-BA80-293F2C31BFF3.png" alt="71D19712-586A-40B0-BA80-293F2C31BFF3"/></p></li>
+</ul></li>
+<li><p><strong>使用布局边界（Layout Margins）从屏幕左端到屏幕右端插入内容。</strong></p>
+<ul>
+<li><p>布局边界在内容之间、屏幕的左右边缘提供了可以呼吸的空间，也有利于内容与 Status Bar、Navigation Bar、Tab Bar、Status Bar 上的内容相对齐。同时布局边界也使得内容不会滚动到屏幕边缘的圆角中去。</p>
+<p><img src="media/15416976044741/87E608E5-598A-44F5-98A5-631F7A8CF886.png" alt="87E608E5-598A-44F5-98A5-631F7A8CF886"/></p></li>
+<li><p>布局边界的宽度是由 app 的 Size Class 来决定的。在 Regular 普通模式（如iPad Pro 11″ 横屏模式）下，布局边界的宽度是 20pt；在 Compact 紧凑模式（如 iPhone Xs Max 竖屏模式）下，布局边界的宽度是 16pt。有关于 Size Class 的更多细节可以阅读我的另一篇文章：<a href="15171487371271.html">尺寸级别和核心要素 Size Classes and Core Components - WWDC 2017 Session 812</a></p>
+<p><img src="media/15416976044741/CD25F2B3-A2CD-40DC-A63A-D23796C9202B.png" alt="CD25F2B3-A2CD-40DC-A63A-D23796C9202B"/></p></li>
+</ul></li>
+<li><p><strong>要考虑到多种不同的屏幕比率。</strong></p>
+<ul>
+<li><p>所有之前的 iPad 的屏幕比率是 4:3，iPad Pro 11″ 有着更宽的屏幕比率。</p>
+<p><img src="media/15416976044741/ABF2E500-6E6E-4985-BDCB-BC9B44AF9B6E.png" alt="ABF2E500-6E6E-4985-BDCB-BC9B44AF9B6E"/></p></li>
+<li><p>例如，一个游戏只为 4:3 比率而设计，那么在横屏模式下的 iPad Pro 11″ 上显示时，左右两侧就会出现黑条，或者当 app 充满屏幕显示时，上下两侧的内容就会被切掉。所以要特别注意那些独立的界面元素的位置和大小。</p>
+<p><img src="media/15416976044741/3C2337B8-C3B5-423C-B863-6497ABB8CA3E.png" alt="3C2337B8-C3B5-423C-B863-6497ABB8CA3E"/></p></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_2">Apple Pencil 新功能的设计</h2>
+
+<p><img src="media/15416976044741/A33D261C-522D-4423-B4BD-50851B7744FE.png" alt="A33D261C-522D-4423-B4BD-50851B7744FE"/></p>
+
+<ul>
+<li>第二代 Apple Pencil 在笔身上增加了一个双击手势。用户可以在系统设置中为双击手势选定一个固定操作，这也给用户在使用各个 app 时提供了连贯一致的、可预测的使用体验。用户可以在以下几种选项中选择双击手势的操作：
+<ul>
+<li>在当前选择的工具和橡皮擦之间切换；</li>
+<li>在当前选择的工具和上次使用的工具之间切换；</li>
+<li>展示一个调色板；</li>
+<li>关闭双击手势功能。</li>
+</ul></li>
+</ul>
+
+<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.41.04.png" alt="屏幕快照 2018-11-06 上午12.41.04"/></p>
+
+<ul>
+<li><p>为了在 app 中提供不同功能的 Apple Pencil 双击操作手势，你需要遵守下面几个原则：</p>
+<ul>
+<li><p>如果在系统设置中用户关闭了双击操作手势，app 就不应该响应用户在 Apple Pencil 上的双击操作手势。</p>
+<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.41.27.png" alt="屏幕快照 2018-11-06 上午12.41.27"/></p></li>
+<li><p>在任何可能的时候，都要遵守系统的设置。在你的 app 中如果存在多种不同的笔功能、橡皮擦功能、调色板功能，但却并没有遵守双击操作手势对应功能的系统设置，这种不一致、不连贯的操作会让你的 app 变得不直观，特别是在配合其他支持 Apple Pencil 的 app 进行多任务操作时尤为明显。</p>
+<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.41.45.png" alt="屏幕快照 2018-11-06 上午12.41.45"/></p></li>
+<li><p>如果在你的 app 中，需要针对双击手势提供不同于系统设置中的功能，确保让这个自定义的行为默认保持关闭。在用户明确需要的时候，由用户主动开启，以让 app 中的自定义功能覆盖系统层级中设定的功能。这样也防止了用户在使用你的 app 时发现其行为与其他 app 不一致。</p>
+<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.42.27.png" alt="屏幕快照 2018-11-06 上午12.42.27"/></p></li>
+<li><p>如果你的 app 支持 Apple Pencil，但并不支持或不完全支持在系统设置中提到的几个双击手势功能，你可以尽可能地将相似含义的功能映射到 Apple Pencil 的双击手势上，以保持连贯一致。例如在一个照片类 app 中，Apple Pencil 的双击手势可以在两种不同的滤镜模式中切换。不要让 Apple Pencil 的双击手势执行直接修改内容的操作以防止出现严重的操作失误，因为双击手势这个操作很容易误操作。</p></li>
+<li><p>不管 Apple Pencil 的双击手势在你的 app 中对应什么操作，确保总是给用户提供有关于 Apple Pencil 双击后发生了什么的清晰、及时的视觉反馈，这样用户可以及时感知到 app 的行为发生了变化，如果是误操作可以及时恢复。</p></li>
+<li><p>要向第一代、第二代 Apple Pencil 的用户都提供一份绝佳的使用体验。Apple Pencil 双击手势所提供的功能应该是用户在 app 中某个功能的快捷方式，而不是在 app 的界面中找不到的功能。</p></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_3">Read More</h2>
+
+<h3 id="toc_4">Apple 官方</h3>
+
+<ul>
+<li><a href="https://developer.apple.com/videos/play/tech-talks/804/">Designing for iPad Pro and Apple Pencil - Tech Talks - Videos - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803]]></title>
+    <link href="https://steppark.net/15416957498069.html"/>
+    <updated>2018-11-09T00:49:09+08:00</updated>
+    <id>https://steppark.net/15416957498069.html</id>
+    <content type="html"><![CDATA[
+<p>在使用 iPhone X 时，用户可以通过简单直观的手势顺畅地完成回到主屏幕、查看多任务、切换 app 等操作。之所以让用户感到界面如此流畅甚至与用户的思想融为一体的界面是如何设计的？这个 session 将会带领你学习如何设计直观、自然的手势、动画，从而让用户爱上你的 app。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15416957498069/2247_wide_250x141_2x.jpg" alt="2247_wide_250x141_2x" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+
+<h2 id="toc_0">Interfaces that extend our minds 延伸我们思想的界面</h2>
+
+<blockquote>
+<p>Aligning interfaces to the way we think and the way we move</p>
+</blockquote>
+
+<ul>
+<li>Respond to input instantly 对输入马上做出响应</li>
+<li><p>Allow for constant redirection and interruption 允许持续的重新定向和打断</p>
+<ul>
+<li><p>如果不允许重新定向和打断，那界面的操作将是线性的，你要先思考决定要干什么再通过特定的手势完成任务。<br/>
+<img src="media/15416957498069/FA964CC6-3EC4-4B9C-81D3-CCF065537F62.png" alt="FA964CC6-3EC4-4B9C-81D3-CCF065537F62"/></p></li>
+<li><p>如果可以重新定向和打断，那「思考」和「手势操作」就可以同时进行，你可以将不同的单一的手势结合，组成新的手势。<br/>
+<img src="media/15416957498069/75DDEA69-BA4C-4A4F-8CA9-75680B5759E2.png" alt="75DDEA69-BA4C-4A4F-8CA9-75680B5759E2"/></p></li>
+<li><p>Gesture in Parallel With Thought Summary</p>
+<ol>
+<li>Faster than thinking before doing 比「做之前做出思考」更快</li>
+<li>One gesture solves multiple problems 一个综合的手势可以解决多个不同的问题</li>
+<li>Helps with discovery 有助于探索新的手势，创造 1+1&gt;2 的效果</li>
+<li>Allow you to layer gestures at the speed of thought 允许你跟上思考的速度做出对应的手势</li>
+</ol></li>
+<li><p>Examples：</p>
+<ol>
+<li>Swipe home-screen pages /<em>while</em>/ going home</li>
+<li>Go to multitasking /<em>while</em>/ app is launching</li>
+<li>Close app /<em>while</em>/ launching app</li>
+<li>Interact with app /<em>as</em>/ it launches</li>
+</ol></li>
+</ul></li>
+<li><p><em>Summary：</em>这些事情看起来没有那么重要，但要想界面一直能够及时响应并理解你的意图这一点十分重要。要让用户感到界面是有生命的。这对于用户对界面的期待和理解以及使用的舒适度亦十分重要。</p></li>
+<li><p>Maintain spatial consistency throughout movement 在移动的过程中保持空间一致性</p>
+<ul>
+<li>保持在移动时的空间一致性、对称性，以符合物理世界物体运动的规律。例如一个页面自右向左滑入屏幕，那返回时应该自左向右滑出屏幕。
+<img src="media/15416957498069/ECD639EA-72D3-42C9-8902-ECC64975F8CC.png" alt="ECD639EA-72D3-42C9-8902-ECC64975F8C"/></li>
+</ul></li>
+<li><p>Hint in the direction of the gesture 在手势方向上的暗示/预测</p>
+<ul>
+<li>物理世界中，人们会根据规律，对物体的形态、轨迹进行预测。例如控制中心的某个功能模块会随着手指的按下弹起并逐渐变大，直至弹出完整的功能页面。
+<img src="media/15416957498069/73AA81DD-4777-4730-959E-DADA6A8F3BBE.png" alt="73AA81DD-4777-4730-959E-DADA6A8F3BBE"/></li>
+</ul></li>
+<li><p>Keep touch interfaces lightweight, but amplify their motion 保持触摸交互轻量化，但是放大它们的动作</p>
+<ul>
+<li>小的投入产生大的、满意的效果；</li>
+<li>short interaction：通过 position（位置）、velocity（加速度）、speed（速度）、force（力）建立手势的动量/惯性文档，继而放大动作的效果，让其感觉就是自己的延伸。例如在滚动页面时，手指只在屏幕停留了一瞬间，但系统可以保持手指手势的能量和动量，移动合适、满意的距离。
+<img src="media/15416957498069/DB59CA57-9C73-4543-8B86-514552C0AD36.png" alt="DB59CA57-9C73-4543-8B86-514552C0AD36"/></li>
+</ul></li>
+<li><p>Softly indicate boundaries 柔和地表明边界</p>
+<ul>
+<li>例如在到达页面顶端和底端时，界面会柔和的提醒你，而不是戛然而止，像是碰到了一堵墙。</li>
+</ul></li>
+<li><p>Soft transitions 柔和地过渡</p>
+<ul>
+<li>从一个界面过渡到另一个界面、从一个动作过渡到另一个动作。例如在 iPad 上手指从屏幕底部向上轻扫划出 Dock，继续向上轻扫会进入多任务界面或回到首页。在这两者直接的过渡是平滑的，不是生硬的。</li>
+</ul></li>
+<li><p>Design smooth frames of motion 设计平滑的动作运动效果</p>
+<ul>
+<li>界面中物体的运动实际上是由多个帧组成，相邻的两个帧的视觉变动太大，就会造成视觉频闪，人的眼睛跟不上运动的速度。</li>
+<li>在设计中重要的不是帧速率，而是帧内容。</li>
+<li>几种运动效果：正常、动作模糊、动作拉伸
+<img src="media/15416957498069/BDB64898-80DC-483F-A3CB-825400986D7D.png" alt="BDB64898-80DC-483F-A3CB-825400986D7D"/></li>
+</ul></li>
+<li><p>Work with behavior rather than animation 更多地考虑行为而不是动画</p>
+<ul>
+<li>物理世界中的物体是一直处于动态的，并且会受到人的影响。</li>
+<li>动画和操作更像是你和物体之间的对话，而非界面的描述。不要把静态的事物转变成动态的。</li>
+<li>例如，在相册中滑动照片时的阻力较小，因为这个动作是轻量化的；而通过 Home Indicator 左右滑动切换 app 时需要用到的阻力就会更大，因为我们把这个动作看得更重。</li>
+</ul></li>
+<li><p><em>Summary 总结：</em></p>
+<ul>
+<li>Instant response and constant redirection 立即地响应、连续地重定向</li>
+<li>Maintain spatial consistency 保持空间一致性</li>
+<li>Hint in the direction of the gesture 在手势方向上的预测</li>
+<li>Lightweight interactions, amplified output 轻量化交互，放大输出</li>
+<li>Soft boundaries and transitions 柔和的边界和过渡</li>
+<li>Design smooth, dynamic behavior 设计平滑、动态的行为
+<img src="media/15416957498069/35E6DFE8-E909-4A8A-9CEC-52A9E926134B.png" alt="35E6DFE8-E909-4A8A-9CEC-52A9E926134B"/></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_1">Designing with dynamic motion 动态动作的设计</h2>
+
+<ul>
+<li><p>在界面中常见的使用动态的一种形式是定时动画，只要敲击一下按钮，屏幕的控制权就完全交给了设计者。<br/>
+<img src="media/15416957498069/C4E49A86-76BE-4816-9A62-9D50B5808E20.png" alt="C4E49A86-76BE-4816-9A62-9D50B5808E20"/></p></li>
+<li><p>在一个流畅的界面中，动画是动态的，屏幕的控制权是属于用户的，动画应该与互动同步进行。<br/>
+<img src="media/15416957498069/9D40AE03-CB51-4928-B9BC-6414EBC68811.png" alt="9D40AE03-CB51-4928-B9BC-6414EB"/></p></li>
+<li><p>Seamless motion 无缝动作</p>
+<blockquote>
+<p>Characteristics of the physical world make great behaviors  物理世界的特征创造了完美的行为。  </p>
+</blockquote>
+<ul>
+<li>Familiar, natural motion 熟悉的、自然的符合物理规律、人们认知的动作</li>
+<li>Maintains throw momentum 保持运动的动力</li>
+<li>Friction gracefully reduces speed 阻力优雅地使速度变慢</li>
+<li><p>Imperceptibly comes to rest 难以觉察地趋向于静止，这种感觉不到结尾的运动会增强内容是不断运动的感觉。</p></li>
+<li><p>当滚动一个页面到边缘时，页面会有一个弹性告诉用户用户已经到了页面的边缘，当用户放手时，这个弹性又会让页面渐渐回到其静息状态。</p></li>
+<li><p>拿物理世界中最常见的弹簧来看，影响弹簧运动的几个因素：</p>
+<ul>
+<li>质量+硬度（可合称为响应时间）：可以影响弹簧的惯性、运动时间和距离等</li>
+<li>阻尼：可以影响弹簧的力的衰减等。
+<img src="media/15416957498069/2C9B4A83-EB8C-4AA2-B3B8-17EAC1065935.png" alt="2C9B4A83-EB8C-4AA2-B3B8-17EAC1065935"/></li>
+</ul></li>
+<li><p>从简单开始，最基本的动作不需要弹簧的阻尼/过冲；一个有动量的手势需要有像弹簧一样的阻尼/过冲。例如在音乐 app 中，点击 tab bar 上方的正在播放以展开「正在播放」模态页面时，这个点击动作就没有动量，不需要阻尼，但当用手指向下轻扫关闭「正在播放」模态页面时就需要一点阻尼。</p></li>
+<li><p>反弹可以用来暗示：例如在 iPhone X 的锁屏上有「手电筒」和「照相机」按钮，为了避免用户在无意间点击了这两个按钮，用户需要使用更加强烈的手势（3D Touch）才能打开相应的功能。但当一个不知道如何操作的用户轻点了这两个按钮，两个按钮会使用反弹的形式告诉用户界面正在响应用户的操作，这两个按钮是可以使用的，但还需要再用力一点。</p></li>
+<li><p>Think beyond motion. 思考并不仅仅是动作。</p>
+<ul>
+<li>在界面中，不仅仅可以通过动效来告诉用户内容是运动的，还可以通过声音、触觉、颜色等。</li>
+<li>例如在一个 Data Picker 中，用户上下滑动日期，屏幕上有动画，扬声器中有声音，手机会有震动反馈，这更加让用户感受到内容的运动。</li>
+</ul></li>
+</ul></li>
+<li><p>Crafting a character 构造一个特征</p>
+<ul>
+<li>任何一个动作都不应该是独立的，而应该是置于整体考虑的，应该是在 app 中可重复的，用户可以轻易学会的；</li>
+<li>例如手指向上滑动，使一个页面向上滚动时，用户也可以双击状态栏使页面回到顶部，这是无缝衔接的，这也应该是贯彻整个 app 的交互操作。</li>
+</ul></li>
+<li><p>Understanding intent 理解意图</p>
+<ul>
+<li>普通的按钮在点击后的发生的结果比较显而易见，且每个按钮与结果一般是一一对应的。但对于用户触发的手势来说，需要根据用户手势的动作、动量、时间等因素预测并理解用户的意图。</li>
+<li><p>例如在 Facetime 中，默认情况下右下角的浮窗可以显示对方能看到的你的画面，用户可以通过手势将其移动到屏幕的四个角落的任意一个。当用户的手势触发时，就应该根据手势的动量等数据预测用户的意图，以确定最终的移动位置。<br/>
+<img src="media/15416957498069/BA2FC553-65E1-4611-A6AC-ED2A11E524C4.png" alt="BA2FC553-65E1-4611-A6AC-ED2A11E524"/></p></li>
+<li><p>意图的预测与理解不仅适用于物体的移动，也适用于物体的旋转、改变大小或者几者之间的结合。</p></li>
+</ul></li>
+<li><p><em>Summary 总结：</em></p>
+<ul>
+<li>Continuous behaviors, not timed animations 连续一致的行为，而不是定时动画；</li>
+<li>Draw inspiration from the physical world 从物理世界获取灵感</li>
+<li>Springs don’t need to be springy! 弹簧并不一定要有弹性，要合理利用反弹</li>
+<li>Align motion with intent  利用动量，预测意图，展现动作
+<img src="media/15416957498069/1C9C0D1D-58D6-49E2-8067-9481C9145948.png" alt="1C9C0D1D-58D6-49E2-8067-9481"/></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_2">Responding to interaction 对交互作出响应</h2>
+
+<ul>
+<li><p>Design of taps and swipes  轻点和轻扫手势的设计</p>
+<ul>
+<li>轻点手势：以计算器键盘上的一个按钮来说，一个按钮需要至少满足以下条件：
+<ul>
+<li>按钮在点击之后需要立即做出响应，这让用户知道按钮响应了用户的操作；</li>
+<li>除开按钮本身的可见区域外，还需要有一个更大的点击有效区域，这可以防止用户在点击过程完成前意外移动出了按钮的可见区域；</li>
+<li>若用户在按下按钮之后且松开按钮之前改变了注意，用户可以将手指移出可点击区域取消操作，亦可在移出后回到可点击区域恢复操作，即用户松开手指才算是完成了一次轻点手势操作。</li>
+</ul></li>
+<li>轻扫手势：广义上的轻扫可以代表许多动作，滑动、拖拽、弹开、滚动等，以将一张图片从一个位置拖拽到另一个位置为例，其过程需要注意：
+<ul>
+<li>当拖拽手势离原点移动超过了 10 point（动作滞后），图片就应该开始移动；</li>
+<li>当开始移动时，需要注意其运动的方向，严格符合拖拽手势的动量、速度，符合物理规律；</li>
+<li>最后，根据移动的历史轨迹落入最终的位置。</li>
+</ul></li>
+</ul></li>
+<li><p>Principles of fluid interactions 流畅交互的原则</p>
+<ul>
+<li>Touch and content move together 触摸和内容要一起动，两者是一一对应的。
+<ul>
+<li>一旦触摸和内容没有一起移动，用户立即就能感受到。例如滑动一个页面到页面边缘时。</li>
+<li>触摸和内容一起动不仅仅存在于手和屏幕之间，还存在于 Apple TV 中，遥控器上的触摸手势和屏幕之间。</li>
+</ul></li>
+<li>Provide continuous feedback 提供连续一致的反馈
+<ul>
+<li>例子一：iPhone X 锁屏上的手电筒按钮，随着按压的面积和力度逐渐变大，按钮会变得越来越大，同时也提醒用户只要再用力一点，就可以触发其功能。</li>
+<li>例子二：Apple TV 上的焦点系统会随着遥控器触摸表面上的手势而变化：聚焦时焦点的变化、移动焦点时的方向指向</li>
+</ul></li>
+</ul></li>
+<li><p>Dealing with multiple gestures 处理多个手势</p>
+<ul>
+<li>例如，在一个列表页面可以通过轻扫上下滚动，也可以用力按下（3D Touch）一个条目以预览/查看（Peep）其详细内容。</li>
+<li><p>如果系统先判断出是什么手势再做出视觉反馈，那么就会存在延迟：<br/>
+<img src="media/15416957498069/09920A47-6F3B-488D-9063-4FCCE3EA817E.png" alt="09920A47-6F3B-488D-9063-4FCCE3EA817E"/></p></li>
+<li><p>所以，必须要同时判断所有手势，并在确定最终手势的时候，中断其他手势。例如在 3D Touch 过程中又想改变意图而去滚动页面。<br/>
+<img src="media/15416957498069/3051B1CB-A29C-40CB-9867-3B464570CB76.png" alt="3051B1CB-A29C-40CB-9867-3B464570CB76"/></p></li>
+<li><p>但有时候延迟不可避免，例如在「照片」中当照片全屏显示时，单击可以显示菜单，双击可以使图片放大，系统必须要等点击结束后才能做出响应，因为其必须要知道这次点击是单击还是双击。</p></li>
+</ul></li>
+<li><p><em>Summary 总结：</em></p>
+<ul>
+<li>Design of taps and swipes 轻点和轻扫手势的设计</li>
+<li>Content and touch move one-to-one  内容和触摸的移动是一一对应的</li>
+<li>Provide continuous feedback 提供连续一致的反馈</li>
+<li>Detect multiple gestures in parallel 同步检测多个手势
+<img src="media/15416957498069/2C7A08D4-CCE8-4E4A-9E26-4FB5660A4814.png" alt="2C7A08D4-CCE8-4E4A-9E26-4FB5660A4814"/></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_3">Fluidity as a medium 作为一个媒介的流畅度</h2>
+
+<ul>
+<li><p>怎样让用户知道交互具体是如何操作的？</p>
+<ul>
+<li><p>Visual Cues 视觉线索：页面底部只露出一部分内容，表明后面还有更多的内容；利用页面指示器表明还有更多的页面；通过一个「把手」提示用户这个界面可以提起展示更多内容。<br/>
+<img src="media/15416957498069/96F7DD7F-0734-47B5-996B-5C02C365CE2B.png" alt="96F7DD7F-0734-47B5-996B-5C02C365CE2B"/></p>
+<p><img src="media/15416957498069/C25E1BC2-9E74-4A81-9940-4D475CBE7C7C.png" alt="C25E1BC2-9E74-4A81-9940-4D475CBE7C7"/></p></li>
+<li><p>Elevate interactive elements to a separate plane 提升可交互元素的层级到一个单独的平面：「开关」控件。<br/>
+<img src="media/15416957498069/70ECC8F0-C04B-4EB1-B18D-4C20BE56DFF4.png" alt="70ECC8F0-C04B-4EB1-B18D-4C20BE56DFF4"/></p></li>
+<li><p>Use behavior to teach gesture 利用行为去教用户手势：如在 Safari 中的多页面界面，点击「关闭」按钮，该网页会从右往左滑出屏幕，也暗示了如果直接在网页上从右往左滑动也可以关闭网页。<br/>
+<img src="media/15416957498069/A5A04C11-E4E8-46D7-BA51-2AB5BE6EC3EF.png" alt="A5A04C11-E4E8-46D7-BA51-2AB5BE6EC3EF"/></p></li>
+<li><p>Explanations 解释：应该最少使用，应该只在那些重复使用的场景下使用，不要在间歇性使用手势的地方使用，否则用户会记不住</p></li>
+</ul></li>
+<li><p>Playfulness 让交互变得活泼有趣——一个将以上都做到所达到的境界，这表明 app 的界面和交互正在内化：</p>
+<ul>
+<li>A natural consequence of a fluid interface 一个流畅交互的自然结果</li>
+<li>Happens when the interface feels in sync with you 界面与你完全同步这件事真的发生了</li>
+<li>You feel comfortable exploring new areas 探索新的领域，你感觉很舒服</li>
+<li>Allow people to <em>discover</em>your interface through play 允许人们通过玩去发现你的界面</li>
+</ul></li>
+<li><p><em>Summary 总结：</em></p>
+<ul>
+<li>Design the interactions to be /inseparable/ from the visuals 将交互和视觉设计成不可分割的</li>
+<li>A interactive demo is worth a million static designs 一个可交互的 demo 值得一百万个静态设计，以让自己真正理解其内涵</li>
+<li>Prototyping helps you /think/ by exploring 搭建原型时通过探索可以帮助你的思考</li>
+<li>Sets a goal for the implementation 为实施设定一个目标</li>
+<li>Hard to copy and gives your app a unique character 很难复制，给予你的 app 一个独一无二的特征
+<img src="media/15416957498069/B2BE5E1E-A4A9-407C-B938-420C44C099B2.png" alt="B2BE5E1E-A4A9-407C-B938-420C44C099B2"/></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2018/803/">Designing Fluid Interfaces - WWDC 2018 - Videos - Apple Developer</a>  </p>
+</blockquote>
+
+<p>📱</p>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Allen 说:🎙]]></title>
@@ -263,6 +624,94 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[内容丰富的通知 Rich Notifications - WWDC 2017 Session 817]]></title>
+    <link href="https://steppark.net/15416970661320.html"/>
+    <updated>2018-11-09T01:11:06+08:00</updated>
+    <id>https://steppark.net/15416970661320.html</id>
+    <content type="html"><![CDATA[
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">一个通知的概述</h2>
+
+<ul>
+<li><p>注意人们的时间</p>
+<ul>
+<li>只发送有必要的消息，不要发送垃圾信息；</li>
+<li>不要只是为了促进流量或是参与度就发给他们通知；</li>
+<li>在请求通知权限时，解释下这些通知是干什么用的，它们提供了什么价值？</li>
+</ul></li>
+<li><p>一个好的通知不仅仅是一个打开 app 的邀请</p>
+<ul>
+<li>不要把通知当作是进入你 app 的途径；</li>
+<li>它们应该是完备的信息包，可以让你完成某个任务；</li>
+<li>确保人与通知进行交互是值得的，一个令人愉快的通知有机会在人们与 app   之间创立一条纽带，以为开发者和用户创造价值。</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_1">如何创造一个内容丰富的通知</h2>
+
+<ul>
+<li><p><em>Short Look：通知是用来干什么的？</em>描述通知的内容，确保通知中所有的描述是清晰、直观且提供足够信息量的。</p>
+<ul>
+<li>在日历中，告诉了用户事件的名称、时间以及位置
+<img src="media/15416970661320/FullSizeRender.jpg" alt="FullSizeRende"/></li>
+</ul></li>
+<li><p><em>Long Look：额外的哪些信息对用户是有帮助的？</em>提供一些额外的上下文情景信息，提供一些关于通知的额外信息。</p>
+<ul>
+<li>在日历中，获得了事件的更多细节信息，可以看到当天的详细日程</li>
+</ul></li>
+<li><p><em>Quick Action：哪些操作对于这个通知是合适的？</em>完成相关的操作，让用户继续做刚才在做的事情。</p>
+<ul>
+<li>在日历中，根据获取的信息可以快速做出想到的那些操作
+<img src="media/15416970661320/FullSizeRender%202.jpg" alt="FullSizeRender 2"/></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_2">实例说明</h2>
+
+<ul>
+<li><p>邮件：短视图中提供邮件的发件人、邮件主题以及邮件的几行预览，长视图中提供了更加详细的邮件内容→短视图中，某些内容被切割了，可以在长视图中显示完整的内容。</p>
+<p><img src="media/15416970661320/06EB2774-70FB-4013-956B-441092C9B520.png" alt="06EB2774-70FB-4013-956B-441092C9B520"/></p></li>
+<li><p>照片：短视图中提供了照片发布的流、发布的人以及照片的缩略图，长视图中提供了更大尺寸的完整清晰的图片以及相关操作→在长视图中为了显示完整的内容，不一定是显示图片，还可以显示定制的页面、定制的排版、图表、流程图、天气状况、股票趋势等。</p>
+<p><img src="media/15416970661320/EE968F3C-40B9-4BD5-9EE1-DD107CA193D4.png" alt="EE968F3C-40B9-4BD5-9EE1-DD107CA193D4"/></p></li>
+<li><p>提示：短视图中告诉了你通知的内容，长视图中，会通过视频让内容变得生动起来，以展示某个技巧→例如在一个象棋游戏中，可以通过通知的长视图来显示上一个人的具体下法。既可以使用 UI 动画，又可以使用视频形式（如新闻摘要）来展示内容。</p>
+<p><img src="media/15416970661320/A313F2D4-BF69-4B8F-B41E-ACE716A59492.png" alt="A313F2D4-BF69-4B8F-B41E-ACE716A59492"/></p></li>
+<li><p>电话：短视图中告诉了你你的朋友给你打了一个电话并留了一条语音信箱，长视图中可以看到未接来电的具体信息，可以直接听语音信息或是阅读文本翻译的内容。</p>
+<p><img src="media/15416970661320/D1373765-0D11-4175-9EE6-93B17FE1F0F8.png" alt="D1373765-0D11-4175-9EE6-93B17FE1F0F8"/></p></li>
+<li><p>查找朋友：短视图中告诉了你你的朋友分享了他的位置，长视图中可以在地图中看到实时更新的朋友的位置→这种实时更新的通知可以是某种送达服务、航班追踪服务等，或是应用中的动态数据，如股价、赛事比分等。</p>
+<p><img src="media/15416970661320/7D01010A-329F-4880-AFBA-C012A327A4E5.png" alt="7D01010A-329F-4880-AFBA-C012A327A4E5"/></p></li>
+<li><p>信息：短视图中可以看到发送者和他发的信息，长视图中可以看到完整的 iMessage 实时对话界面。</p>
+<p><img src="media/15416970661320/FCB672F6-0A49-4366-ACF2-EC9BFCD90206.png" alt="FCB672F6-0A49-4366-ACF2-EC9BFCD90206"/></p></li>
+<li><p>Castro：短视图中告诉你有一集新的播客更新，长视图中可以看到标题、持续时间、完整的描述以及博客的缩略图，而且文字是已经经过排版的。→一个应用可以把应用内的设计语言带到通知中去。<br/>
+<img src="media/15416970661320/B3CC5DE4-17E5-4BF1-970B-F5C8E30CC6EA.png" alt="B3CC5DE4-17E5-4BF1-970B-F5C8E30CC6EA"/></p></li>
+<li><p>Kuna：短视图中告诉你摄像头监测到有人来到了前门，长视图中可以看到实时的摄像头影像并可作出适合的操作</p>
+<p><img src="media/15416970661320/BE3E5CF2-28F4-4CB7-BC41-9E9F96AA7FF6.png" alt="BE3E5CF2-28F4-4CB7-BC41-9E9F96AA7FF6"/></p></li>
+</ul>
+
+<h2 id="toc_3">总结</h2>
+
+<ul>
+<li>确保在<em>短视图（Short Look）</em>中提供了清晰的信息，以告诉用户这个通知是干什么的；</li>
+<li>在一个设计漂亮的<em>长视图（Long Look）</em>中提供额外的上下文环境信息；</li>
+<li>确保提供的<em>快速操作（Quick Action）</em>是相关的、有用的，用户可以在这里实现那些想做的操作并切处理好通知。</li>
+</ul>
+
+<blockquote>
+<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2017/817/">Rich Notifications - WWDC 2017 - Videos - Apple Developer</a>  </p>
+</blockquote>
+
+<p>📱</p>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[妙用 Xcode 修改 iPhone 的当前定位位置]]></title>
     <link href="https://steppark.net/15294912961206.html"/>
     <updated>2018-06-20T18:41:36+08:00</updated>
@@ -313,7 +762,7 @@
 <li><strong>3.配置一个 GPX 格式的文件：</strong>这个文件稍后会导入到 Xcode 项目中使用，文件内容如下，注意将其中的 <code>lat</code> 和 <code>lon</code> 改成刚刚你获取到的 WGS-84 坐标。</li>
 </ul>
 
-<pre><code class="language-text">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+<pre class="line-numbers"><code class="language-text">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
 &lt;gpx version=&quot;1.1&quot;
     creator=&quot;GMapToGPX 6.4j - http://www.elsewhere.org/GMapToGPX/&quot;
     xmlns=&quot;http://www.topografix.com/GPX/1/1&quot;
@@ -352,12 +801,12 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Size Classes and Core Components - WWDC 2017 Session 812]]></title>
+    <title type="html"><![CDATA[尺寸级别和核心要素 Size Classes and Core Components - WWDC 2017 Session 812]]></title>
     <link href="https://steppark.net/15171487371271.html"/>
     <updated>2018-01-28T22:12:17+08:00</updated>
     <id>https://steppark.net/15171487371271.html</id>
     <content type="html"><![CDATA[
-<p>如今开发 iOS App 需要面对四种不同的 iPhone 屏幕尺寸（iPhone SE、iPhone 8、iPhone 8 Plus、iPhone X）和三种不同的 iPad 屏幕尺寸（iPad Mini、iPad Pro 9.7’’、iPad Pro 12.9’’），同时还有不同的屏幕方向、左右分屏、多任务屏幕需要处理。这就导致在设计开发一个 app 时有许多种屏幕尺寸需要考虑。</p>
+<p>如今开发 iOS App 需要面对六种不同的 iPhone 屏幕尺寸（iPhone SE、iPhone 8、iPhone 8 Plus、iPhone Xs 、iPhone Xs Max 、iPhone Xʀ）和五种不同的 iPad 屏幕尺寸（iPad Mini、iPad 9.7″、iPad Pro 10.5″、iPad Pro 11″、iPad Pro 12.9″），同时还有不同的屏幕方向、左右分屏、多任务屏幕需要处理。这就导致在设计开发一个 app 时有许多种屏幕尺寸需要考虑。</p>
 
 <span id="more"></span><!-- more -->
 
@@ -389,11 +838,13 @@
 
 <p>对于各种屏幕尺寸、屏幕方向的设备的 Size Class 具体定义如下：</p>
 
-<p><img src="media/15171487371271/3481ACB7-5B29-49C1-9160-0C9B2BAA2558.png" alt="3481ACB7-5B29-49C1-9160-0C9B2BAA2558"/></p>
+<p><img src="media/15171487371271/745CCD32-7AAF-4E17-9BA4-E65D75C1D923.png" alt="745CCD32-7AAF-4E17-9BA4-E65D75C1D923"/></p>
 
 <p>特别地，在 iPad 上以多任务方式运行你的 app 时，其 Size Class 定义如下：</p>
 
-<p><img src="media/15171487371271/B5A5362C-E8AD-4940-9E31-A76E73BD88D2.png" alt="B5A5362C-E8AD-4940-9E31-A76E73BD88D2"/></p>
+<p><img src="media/15171487371271/00E6370F-92B2-4219-81EE-02153711F136.png" alt="00E6370F-92B2-4219-81EE-02153711F136"/></p>
+
+<p>注：自 iOS 12 开始，苹果在全系 iPad 上移除了竖屏模式下 1/2 Split View 的这种显示模式。</p>
 
 <h2 id="toc_1">Dynamic Type 动态类型</h2>
 
@@ -1186,7 +1637,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Designing For iPhone X —— 关于 iPhone X 产品汪和设计狮应该了解的事]]></title>
+    <title type="html"><![CDATA[Designing For iPhone X —— iPhone 上有了刘海，设计和开发到底该咋整?]]></title>
     <link href="https://steppark.net/15086036845015.html"/>
     <updated>2017-10-22T00:34:44+08:00</updated>
     <id>https://steppark.net/15086036845015.html</id>
@@ -2319,14 +2770,22 @@
 
 <h2 id="toc_0">Design🎨</h2>
 
-<h3 id="toc_1">WWDC 2017</h3>
+<h3 id="toc_1">WWDC 2018</h3>
+
+<ul>
+<li><a href="15416957498069.html">设计流畅的界面 Designing Fluid Interfaces - WWDC 2018 Session 803</a> 📱</li>
+</ul>
+
+<h3 id="toc_2">WWDC 2017</h3>
 
 <ul>
 <li><a href="15028131788266.html">iOS 11 设计上的改变 What’s New in iOS 11 - WWDC 2017 Session 810</a>📱</li>
+<li><a href="15171487371271.html">尺寸级别和核心要素 Size Classes and Core Components - WWDC 2017 Session 812</a> 📱</li>
 <li><a href="15036722610708.html">为订阅成功而设计 Designing for Subscription Success - WWDC 2017 Session 814</a>📱💻📺</li>
+<li><a href="15416970661320.html">内容丰富的通知 Rich Notifications - WWDC 2017 Session 817</a> 📱</li>
 </ul>
 
-<h3 id="toc_2">WWDC 2016</h3>
+<h3 id="toc_3">WWDC 2016</h3>
 
 <ul>
 <li><a href="15030704996885.html">包容性 App 设计 Inclusive App Design - WWDC 2016 Session 801</a>📱💻</li>
@@ -2334,7 +2793,7 @@
 <li>迭代的 UI 设计 Iteractive UI Design - WWDC 2016 Session 805📱</li>
 </ul>
 
-<h3 id="toc_3">WWDC 2015</h3>
+<h3 id="toc_4">WWDC 2015</h3>
 
 <ul>
 <li><a href="15028584576994.html">新的系统字体 Introducing the New System Fonts - WWDC 2015 Session 804</a>📱💻⌚️📺</li>
@@ -2385,7 +2844,7 @@
 
 <p>最简单的 Alert 自然是只有一个操作按钮，以点击一个按钮弹出 Alert 为例说明：</p>
 
-<pre><code class="language-text">@IBAction func showAlertViewWithOneAction(sender: UIButton){
+<pre class="line-numbers"><code class="language-text">@IBAction func showAlertViewWithOneAction(sender: UIButton){
     
     // 创建 alertController，定义其显示的标题和描述文字，确定其类型为 Alert
     let alertController = UIAlertController(title: &quot;Hello World！&quot;, message: &quot;This is the most simple alert view.&quot;, preferredStyle: UIAlertControllerStyle.alert)
@@ -2423,7 +2882,7 @@
 
 <p>当然如果想增加更多操作按钮，只需在代码中创建更多动作并添加到 alertController 即可。如下面的代码建立一个两个操作按钮的 AlertView：</p>
 
-<pre><code class="language-text">@IBAction func showAlertViewWithTwoActions(sender: UIButton){
+<pre class="line-numbers"><code class="language-text">@IBAction func showAlertViewWithTwoActions(sender: UIButton){
     let alertController = UIAlertController(title: &quot;你确定要退出当前登录帐号吗？&quot;, message: &quot;退出后你的帐户数据不会清除，你可以再次登录&quot;, preferredStyle: .alert)
     
     let exitAction = UIAlertAction(title: &quot;退出&quot;, style: .default, handler: nil)
@@ -2450,7 +2909,7 @@
 
 <p>当一个 Alert 中出现了大于两个操作时，按钮的排布方式就不能再左右排布了，而是改为由上至下排布，具体代码如下：</p>
 
-<pre><code class="language-text">@IBAction func showAlertViewWithThreeAcitons(sender: UIButton){
+<pre class="line-numbers"><code class="language-text">@IBAction func showAlertViewWithThreeAcitons(sender: UIButton){
     let alertController = UIAlertController(title: &quot;你确定要注销此帐户吗？&quot;, message: nil, preferredStyle: .alert)
     
     let destructAction = UIAlertAction(title: &quot;注销帐户&quot;, style: .destructive, handler: nil)
@@ -2478,7 +2937,7 @@
 
 <p>一个 Alert 中可以加入文本输入框以获取用户的某些信息，但文本输入框的数量、输入的字符量都应适度，在这么小一个窗口下输入文字的体验不会太好。系统中比较常见的就是购买 app 时输入 Apple ID 密码。以下以输入账户登录名和密码为例说明：</p>
 
-<pre><code class="language-text">@IBAction func showAlertViewWithTextField(sender: UIButton){
+<pre class="line-numbers"><code class="language-text">@IBAction func showAlertViewWithTextField(sender: UIButton){
     let alertController = UIAlertController(title:  &quot;请输入你的帐户名和密码&quot;, message: nil, preferredStyle: .alert)
     
     // 在 alertController 中增加两个文本输入框
@@ -2535,7 +2994,7 @@
 
 <p>通常情况下的 Action Sheet 包括其标题、描述、选择的动作和取消动作，以下为具体举例：</p>
 
-<pre><code class="language-text">  @IBAction func showActionSheetWithThreeActions(sender: UIButton){
+<pre class="line-numbers"><code class="language-text">  @IBAction func showActionSheetWithThreeActions(sender: UIButton){
     let alertController = UIAlertController(title: &quot;请选择你想要的语言&quot;, message: &quot;选择的语言将在下次 app 打开时生效&quot;, preferredStyle: .actionSheet)
     
     // 定义动作和添加动作到 alertController 两步可以合为一步
@@ -2582,7 +3041,7 @@
 
 <p>如果一个 Action Sheet 没有了「取消」样式的按钮会有什么特别呢？具体代码如下：</p>
 
-<pre><code class="language-text">@IBAction func showActionSheetWithTwoActions(sender: UIButton){
+<pre class="line-numbers"><code class="language-text">@IBAction func showActionSheetWithTwoActions(sender: UIButton){
     let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     
     alertController.addAction(UIAlertAction(title: &quot;新建网页&quot;, style: .default, handler: nil))
@@ -2607,7 +3066,7 @@
 
 <p>这是一个非常特殊的例子。具体实现方式如下：</p>
 
-<pre><code class="language-text">@IBAction func showActionSheetWithFourActions(sender: UIButton){
+<pre class="line-numbers"><code class="language-text">@IBAction func showActionSheetWithFourActions(sender: UIButton){
     let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     
     let twitterAction = UIAlertAction(title: &quot;Twitter&quot;, style: .default, handler: nil)
@@ -2655,7 +3114,7 @@
 
 <p>如果直接回答，答案当然是能。上文中提到的给 action 添加 icon 其实就是一种。再比如改变字体颜色只需要在创建 UIAlertController 后改变其 view 的 「tintcolor」属性，代码如下：</p>
 
-<pre><code class="language-text">@IBAction func showActionSheetWithTwoActions(sender: UIButton){
+<pre class="line-numbers"><code class="language-text">@IBAction func showActionSheetWithTwoActions(sender: UIButton){
     let alertController = UIAlertController(title: nil, message: &quot;选择你想要的操作&quot;, preferredStyle: .actionSheet)
     
     // 更改 alertController 的字体颜色
@@ -2978,7 +3437,7 @@
 <li><p>High-Legibility Alternates 高易读性替换（New in WWDC 2016）：对于一串字符串，如果用户不易辨别字符串中的字母到底是什么，可以使用开启这个功能，系统自动把不易辨别的字母转换为不会有歧义的字母。但这个功能不要轻易开启，会破坏文本整体的一致性。</p>
 <p><img src="media/15029504785442/E598CEAF-F8AA-4263-BE8F-6AE726388D1B.png" alt="E598CEAF-F8AA-4263-BE8F-6AE726388D1B"/></p>
 <p>在代码中启用的示例如下：</p>
-<pre><code class="language-text">let pointSize: CGFloat = 60.0
+<pre class="line-numbers"><code class="language-text">let pointSize: CGFloat = 60.0
 let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
 let highLegibilityFontDesc = systemFontDesc.addingAttributes(<br/>
   [<br/>
@@ -3004,7 +3463,7 @@ label.font = UIFont(descriptor: highLegibilityFontDesc, size: pointSize)
 <li><p>Small Caps from Lowercase（把小写字母转换为小型大写字母）：字符串的上述三种情况都还适合。</p>
 <p><img src="media/15029504785442/735C71DC-DA4B-4946-828E-06A578BFB51B.png" alt="735C71DC-DA4B-4946-828E-06A578BFB51B"/></p></li>
 <li><p>上述两种类型在代码中启用的方法示意如下：</p>
-<pre><code class="language-text">let pointSize: CGFloat = 60.0
+<pre class="line-numbers"><code class="language-text">let pointSize: CGFloat = 60.0
 let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
 let smallCapsFontDesc = systemFontDesc.addingAttributes(<br/>
   [<br/>
@@ -3141,7 +3600,7 @@ label.font = UIFont(descriptor: smallCapsFontDesc, size: pointSize)
 <li><p>Fractions 分数：自动转换（2/9这种输入自动转换)</p>
 <p><img src="media/15028584576994/542C9FA2-3971-4957-8E73-78B55AAEEF11.png" alt="542C9FA2-3971-4957-8E73-78B55AAEEF11"/></p>
 <p>在代码中启用这个功能的方法示例如下：</p>
-<pre><code class="language-text">```
+<pre class="line-numbers"><code class="language-text">```
 let pointSize : CGFloat = 60.0<br/>
 let systemFontDesc = UIFont.systemFontOfSize(pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
 let fractionFontDesc = systemFontDesc.fontDescriptorByAddingAttributes(<br/>
@@ -3454,7 +3913,7 @@ label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)<br/>
 <li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">tableView.estimatedRowHeight = 36.0 
+<pre class="line-numbers"><code class="language-text">tableView.estimatedRowHeight = 36.0 
 tableView.rowHeight = UITableViewAutomaticDimension
 </code></pre>
 
@@ -3465,7 +3924,7 @@ tableView.rowHeight = UITableViewAutomaticDimension
 <li>代码片段：</li>
 </ul>
 
-<pre><code class="language-text">// 从review view跳转回detail view，并且带回rating的值改变detail view
+<pre class="line-numbers"><code class="language-text">// 从review view跳转回detail view，并且带回rating的值改变detail view
 @IBAction func close(segue:UIStoryboardSegue) {
     
   if let reviewViewController = segue.sourceViewController as? ReviewViewController {
@@ -3485,7 +3944,7 @@ tableView.rowHeight = UITableViewAutomaticDimension
 // 对电影进行评价，根据点击button的不同给rating赋值并关闭modal view</li>
 </ul>
 
-<pre><code class="language-text">@IBAction func ratingSelected(sender: UIButton) {
+<pre class="line-numbers"><code class="language-text">@IBAction func ratingSelected(sender: UIButton) {
   
     switch (sender.tag) {
     case 100: rating = &quot;dislike&quot;
@@ -3581,7 +4040,7 @@ tableView.rowHeight = UITableViewAutomaticDimension
 <li>代码片段：</li>
 </ul>
 
-<pre><code class="language-text">// 自定义导航栏的背景色
+<pre class="line-numbers"><code class="language-text">// 自定义导航栏的背景色
 UINavigationBar.appearance().barTintColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.9)
     
 // 自定义导航栏的导航button及文字、其他导航栏按钮元素的颜色
@@ -3602,7 +4061,7 @@ if let barFont = UIFont(name: &quot;PingFangSC-Semibold&quot;, size: 20.0) {
 <li>若想移除导航栏back button后的title，可以在souce view controller中的viewdidload方法中添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">// Remove the title of the back button 
+<pre class="line-numbers"><code class="language-text">// Remove the title of the back button 
 navigationItem.backBarButtonItem = UIBarButtonItem(title: &quot;&quot;, style: .Plain, target: nil, action: nil)
 </code></pre>
 
@@ -3610,7 +4069,7 @@ navigationItem.backBarButtonItem = UIBarButtonItem(title: &quot;&quot;, style: .
 <li>在导航栏上显示上级table view中对应cell的标题，在destination view controller中的viewdidload方法中添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">// 将发现页选择的cell的标题显示在导航栏上
+<pre class="line-numbers"><code class="language-text">// 将发现页选择的cell的标题显示在导航栏上
 title = movie.name
 </code></pre>
 
@@ -3621,7 +4080,7 @@ title = movie.name
 <li>在Table View Controller添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">// view每次展示时都会被调起
+<pre class="line-numbers"><code class="language-text">// view每次展示时都会被调起
 override func viewWillAppear(animated: Bool) {
   super.viewWillAppear(animated)
     
@@ -3636,7 +4095,7 @@ override func viewWillAppear(animated: Bool) {
 <li>在Detail View Controller添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">override func viewWillAppear(animated: Bool) {
+<pre class="line-numbers"><code class="language-text">override func viewWillAppear(animated: Bool) {
   super.viewWillAppear(animated)
     
   // 滑动时不隐藏导航栏
@@ -3655,7 +4114,7 @@ override func viewWillAppear(animated: Bool) {
 <li>若想改变某个view controller的Status Bar样式，可以添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">override func preferredStatusBarStyle() -&gt; UIStatusBarStyle {
+<pre class="line-numbers"><code class="language-text">override func preferredStatusBarStyle() -&gt; UIStatusBarStyle {
   return .LightContent 
 }
 </code></pre>
@@ -3664,7 +4123,7 @@ override func viewWillAppear(animated: Bool) {
 <li>若想改变app全局的Status Bar样式，有两步需要做。第一步：Select the project in the project navigator. Under the Info tab of the FoodPin target, insert a new key named View controller-based status bar appearance and set the value to NO。第二步在AppDelegate.swift文件中的application(_:didFinishLaunchingWithOptions:)方法中添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">// 自定义全局的Status Bar为Light Style
+<pre class="line-numbers"><code class="language-text">// 自定义全局的Status Bar为Light Style
 UIApplication.sharedApplication().statusBarStyle = .LightContent
 </code></pre>
 
@@ -3688,7 +4147,7 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 <li>代码片段：</li>
 </ul>
 
-<pre><code class="language-text">// 向DetailViewController传递信息
+<pre class="line-numbers"><code class="language-text">// 向DetailViewController传递信息
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     // 通过已经定义的segue这个桥梁来传递信息
@@ -3731,475 +4190,9 @@ UIApplication.sharedApplication().statusBarStyle = .LightContent
 <li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
 </ul>
 
-<pre><code class="language-text">tableView.estimatedRowHeight = 36.0 
+<pre class="line-numbers"><code class="language-text">tableView.estimatedRowHeight = 36.0 
 tableView.rowHeight = UITableViewAutomaticDimension
 </code></pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Study iOS 9 Programming with Swift（2）]]></title>
-    <link href="https://steppark.net/14710858606215.html"/>
-    <updated>2016-08-13T18:57:40+08:00</updated>
-    <id>https://steppark.net/14710858606215.html</id>
-    <content type="html"><![CDATA[
-<p>使用Swift进行iOS编程知识点总结第二篇，主要包括Table View和Table View Controller的区分使用，对Table View的Cells进行自定义，为每个cell添加分享动作，自定义tableview，图片圆角处理、模糊化处理等。</p>
-
-<span id="more"></span><!-- more -->
-
-<blockquote>
-<p>关联阅读：<br/>
-<a href="http://chuxiangyuan.github.io/14709182567699.html">Study iOS 9 Programming with Swift（1）</a><br/>
-<a href="http://chuxiangyuan.github.io/14710858606215.html">Study iOS 9 Programming with Swift（2）</a><br/>
-<a href="http://chuxiangyuan.github.io/14725650174400.html">Study iOS 9 Programming with Swift（3）</a></p>
-</blockquote>
-
-<h2 id="toc_0">目录</h2>
-
-<ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">更新记录</a>
-</li>
-<li>
-<a href="#toc_2">Table View &amp; Table View Controller</a>
-</li>
-<li>
-<a href="#toc_3">实例：自定义Table View Cells</a>
-</li>
-<li>
-<a href="#toc_4">实例：将图片四个角设置为圆角/将正方形图片设置为圆形图片</a>
-</li>
-<li>
-<a href="#toc_5">实例：对table view中的cell添加Swipe动作——分享</a>
-</li>
-<li>
-<a href="#toc_6">实例：取消row点击后被选中的状态</a>
-</li>
-<li>
-<a href="#toc_7">实例：对table view的分隔线、背景色等进行自定义</a>
-</li>
-<li>
-<a href="#toc_8">实例：对图片采用系统自带的模糊化处理</a>
-</li>
-</ul>
-
-
-<h2 id="toc_1">更新记录</h2>
-
-<ul>
-<li>2016/08/15 第一次发布</li>
-</ul>
-
-<h2 id="toc_2">Table View &amp; Table View Controller</h2>
-
-<ul>
-<li>相对于View Controller + Table View, Table View Controller已经提供了DataSource和Delegate，而且针对Table View提前配置好了一些参数，但在某些方面也失去了灵活性。</li>
-</ul>
-
-<h2 id="toc_3">实例：自定义Table View Cells</h2>
-
-<ul>
-<li>对cell的Identifier定义为Cell→在Cell中加入需要的View，如Label、Image View等，并根据设计图添加constraints→因为cell是与UITableViewCell class关联的，所以创建一个新的class，定义为UITableViewCell的subclass</li>
-<li>Coding：
-<ul>
-<li>思路：对cell中自定义的views创建outlet变量→声明要展示的数据变量并赋值→告知table view有几个cell、几个section→在每个cell中显示具体的值。</li>
-<li>Class MovieTableViewCell代码片段及Class MovieTableViewController代码片段：</li>
-</ul></li>
-</ul>
-
-<pre><code class="language-text">@IBOutlet weak var nameLabel: UILabel!
-@IBOutlet weak var yearLabel: UILabel!
-@IBOutlet weak var typeLabel: UILabel!
-@IBOutlet weak var actorLabel: UILabel!
-@IBOutlet weak var thumbnailImageView: UIImageView!
-</code></pre>
-
-<pre><code class="language-text">      // 告知tableview中有几个section
-    override func numberOfSectionsInTableView(tableView: UITableView) -&gt; Int {
-        
-        return 1
-        
-    }
-    
-    // 告知tableview中有几个cell
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
-        
-        // 根据数组的数量返回table view中cell的数量
-        return movieNames.count
-        
-    }
-    
-    // 在每个cell中显示具体的内容,这个方法会在table view每个row要展示的时候被调起
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
-        
-        // 为节省资源，使每个cell可以重复利用
-        let cellIdentifier = &quot;Cell&quot;
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MovieTableViewCell //downcasting: covert the returned object of dequeueReusableCellWithIdentifier to MovieTableViewCell (对于downcast以及as! &amp; as?的区分与使用还没完全搞懂)
-        
-        // 定义cell要显示的内容
-        cell.nameLabel.text = movieNames[indexPath.row]
-        cell.thumbnailImageView.image = UIImage(named: movieImages[indexPath.row])
-        cell.yearLabel.text = movieYear[indexPath.row]
-        cell.typeLabel.text = movieType[indexPath.row]
-        cell.actorLabel.text = movieActor[indexPath.row]
-        
-        return cell
-        
-    }
-</code></pre>
-
-<h2 id="toc_4">实例：将图片四个角设置为圆角/将正方形图片设置为圆形图片</h2>
-
-<ul>
-<li>方法一：通过代码实现
-<ul>
-<li>代码片段：</li>
-</ul></li>
-</ul>
-
-<pre><code class="language-text">// 将图片设置为圆角，圆角半径设置为3
-        cell.thumbnailImageView.layer.cornerRadius = 3.0
-        cell.thumbnailImageView.clipsToBounds = true
-</code></pre>
-
-<ul>
-<li>方法二：通过Xcode配置实现
-<ul>
-<li>配置步骤：在storyboard中选择imageview后，在右侧的Identity inspector中的“Use Defined Runtime Attributes”中添加一个值→Key Path定义为“layer.cornerRadius&quot;,Type定义为”Number“，Value定义为你要设置的圆角半径值。加入一张60*60的正方形图片，设置半径为30，就可以将其变为圆形→切换到Attributes Inspector，将Clip Subviews打钩。</li>
-</ul></li>
-</ul>
-
-<h2 id="toc_5">实例：对table view中的cell添加Swipe动作——分享</h2>
-
-<ul>
-<li>思路：定义分享button的title和style→定义点击分享button后的动作，包括定义分享的文本和图片信息→展示ActivityView。其中share button的颜色可以通过backgroudColor属性来进行自定义。</li>
-<li>代码片段：</li>
-</ul>
-
-<pre><code class="language-text">// 对每一个Row添加Swipe Action，如分享、删除等
-override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -&gt; [UITableViewRowAction]? {
-    
-    // Social Sharing Button
-    let shareAction = UITableViewRowAction(style: .Default, title: &quot;分享&quot;, handler: {(action, indexPath) -&gt; Void in
-        
-        // 定义Share的文本和图片信息，并显示ActivityView
-        let defaultText = &quot;Just checking in at&quot; + self.movieNames[indexPath.row]
-        if let imageToShare = UIImage(named: self.movieImages[indexPath.row]){
-            let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
-            self.presentViewController(activityController, animated: true, completion: nil)
-        }
-    })
-    
-    // 自定义share action的背景色
-    shareAction.backgroundColor = UIColor(red: 25.0/255.0, green: 118.0/255.0, blue: 210.0/255.0, alpha: 1.0)
-    
-    return [shareAction]
-    
-}
-</code></pre>
-
-<h2 id="toc_6">实例：取消row点击后被选中的状态</h2>
-
-<ul>
-<li>代码片段：</li>
-</ul>
-
-<pre><code class="language-text">// 定义Row被选择之后的动作
-override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    // Row点击后取消被选中状态
-    tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        
-}
-</code></pre>
-
-<h2 id="toc_7">实例：对table view的分隔线、背景色等进行自定义</h2>
-
-<ul>
-<li>代码片段：</li>
-</ul>
-
-<pre><code class="language-text">//View被加载到内存后，以下方法被调起，且只被调起一次，加载好就不再调起
-override func viewDidLoad() {
-    super.viewDidLoad()
-                
-    // 自定义tableview的背景色，注意每个cell也有自己的背景色，cell没有内容时才能看到tableview的背景色
-    tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
-    
-    // 通过设置FooterView，移除空的row的分隔线
-    tableView.tableFooterView = UIView(frame: CGRectZero)
-    
-    // 自定义分隔线的颜色
-    tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
-    
-}
-</code></pre>
-
-<ul>
-<li>若想调整cell的背景色或者设置为透明，可在tableView(_:cellForRowAtIndexPath:)方法中添加以下代码片段：</li>
-</ul>
-
-<pre><code class="language-text">// 清除cell的背景色，也即变成透明
-cell.backgroundColor = UIColor.clearColor()
-
-</code></pre>
-
-<h2 id="toc_8">实例：对图片采用系统自带的模糊化处理</h2>
-
-<ul>
-<li>在viewDidLoad()中添加以下代码片段：</li>
-</ul>
-
-<pre><code class="language-text">// 对背景图进行模糊化处理,style有三种：Dark，ExtraLight，Light
-let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
-let blurEffectView = UIVisualEffectView(effect: blurEffect)
-blurEffectView.frame = view.bounds
-movieBackgroudImageView.addSubview(blurEffectView)
-
-</code></pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Study iOS 9 Programming with Swift（1）]]></title>
-    <link href="https://steppark.net/14709182567699.html"/>
-    <updated>2016-08-11T20:24:16+08:00</updated>
-    <id>https://steppark.net/14709182567699.html</id>
-    <content type="html"><![CDATA[
-<p>使用Swift进行iOS编程知识点总结第一篇，主要包括项目的基础搭建、Auto Layout、Alert的基本使用以及Table View的基本使用。</p>
-
-<span id="more"></span><!-- more -->
-
-<blockquote>
-<p>关联阅读：<br/>
-<a href="http://chuxiangyuan.github.io/14709182567699.html">Study iOS 9 Programming with Swift（1）</a><br/>
-<a href="http://chuxiangyuan.github.io/14710858606215.html">Study iOS 9 Programming with Swift（2）</a><br/>
-<a href="http://chuxiangyuan.github.io/14725650174400.html">Study iOS 9 Programming with Swift（3）</a></p>
-</blockquote>
-
-<h2 id="toc_0">目录</h2>
-
-<ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">介绍</a>
-</li>
-<li>
-<a href="#toc_2">更新记录</a>
-</li>
-<li>
-<a href="#toc_3">创建项目</a>
-</li>
-<li>
-<a href="#toc_4">熟悉Xcode</a>
-</li>
-<li>
-<a href="#toc_5">实例：点击一个button，弹出一个alert</a>
-</li>
-<li>
-<a href="#toc_6">Auto Layout</a>
-</li>
-<li>
-<a href="#toc_7">Stack View</a>
-</li>
-<li>
-<a href="#toc_8">Size Classes</a>
-</li>
-<li>
-<a href="#toc_9">实例：创建Table View</a>
-</li>
-<li>
-<a href="#toc_10">实例：隐藏某一个View中的Status Bar</a>
-</li>
-</ul>
-
-
-<h2 id="toc_1">介绍</h2>
-
-<ul>
-<li>该系列文章主要总结整理了自己在初学使用Swift语言进行iOS编程时的知识点，特别是一些常见功能的实例；</li>
-<li>本文档总结的知识点出自<a href="https://www.appcoda.com/swift/">Beginning iOS 9 Programming with Swift</a> —— 国外作者写的一本针对于初学者的电子书，加之自己的理解和实践探索；</li>
-<li>由于作为一名小白刚开始学习使用swift进行编程，所以总结的知识点可能有不准确或者错误的地方，故随着学习的深入和对知识点的回顾，可能会不定期的进行更正、增补；</li>
-<li>所有的描述以自己能够理解为准则，但可能表述不够严谨或者完整；</li>
-<li>为保证原汁原味，一些在开发过程中用到的术语，没有进行翻译。</li>
-</ul>
-
-<h2 id="toc_2">更新记录</h2>
-
-<ul>
-<li>2016/08/11 第一次发布</li>
-</ul>
-
-<h2 id="toc_3">创建项目</h2>
-
-<ul>
-<li>Organization Identifier是唯一的，命名方式采用reverse domain name service (or reverse-DNS) notation，如com.chuxiangyuan。加上Product Name，两者组合成一起为独一无二的Bundle ID，如com.chuxiangyuan.myproduct。</li>
-<li>Use Core Data：Core Data简单理解为Apple开发包中自带的在本地存储数据的数据库。</li>
-</ul>
-
-<h2 id="toc_4">熟悉Xcode</h2>
-
-<ul>
-<li>最左侧的列有文件树一栏称为Project Navigator，展示了一个项目的所有文件，中间是编辑区，右侧是选中元素对应的工具区，在storyboard中未选中任何元素时，可以看到Object library，展示了一些内置的元素。底部是Debug相关区域。</li>
-<li>Swift扩展名的文件是项目的主要代码，一般是**controller.swift，表示是某一个controller。AppDelegate.swift文件主要用来控制一些全局的设置。</li>
-<li>Main.storyboard用于存储App的主路径上的user interface，其中包括Document Outline View、Interface Builder editor。</li>
-<li>Assets.xcassets用于存储App中用到所有资源文件，如图片。</li>
-<li>Info.plist用于存储App的一些初始化设置项。</li>
-</ul>
-
-<h2 id="toc_5">实例：点击一个button，弹出一个alert</h2>
-
-<ul>
-<li>思路：创建一个button的点击函数→定义点击后Alert显示消息的title、message、style→定义Alert的button的title、style、handler→展示Alert</li>
-<li>代码片段：</li>
-</ul>
-
-<pre><code class="language-text">//需要import UIKit
-@IBAction func showMessage(sender: UIButton) {
-        
-        //创建Alert的Title和Message，可以选择Alert或者ActionSheet显示样式
-        let alertController = UIAlertController(title: &quot;Title&quot;, message: &quot;Message&quot;, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        //给Alert添加动作、点击后的功能，样式可选择Default（文字为蓝色）、Cancel（文字为蓝色加粗）、Destructive（文字为红色）
-        alertController.addAction(UIAlertAction(title: &quot;Button Title&quot;, style: UIAlertActionStyle.Default, handler: nil))
-        alertController.addAction(UIAlertAction(title: &quot;Button2 Title&quot;, style: UIAlertActionStyle.Destructive, handler: nil))
-        alertController.addAction(UIAlertAction(title: &quot;Button3 Title&quot;, style: UIAlertActionStyle.Cancel, handler: nil))
-        
-        //展示Alert，可选有过渡动画或没有，可在展示后添加动作
-        self.presentViewController(alertController, animated: true, completion: nil)
-        
-}
-</code></pre>
-
-<h2 id="toc_6">Auto Layout</h2>
-
-<ul>
-<li><p>Auto layout bar</p>
-<ul>
-<li>Align:创建一些与对齐有关的constraints；</li>
-<li>Pin:创建一些与距离有关的constraints；</li>
-<li>Issues:自动化解决一些constraints相关问题；</li>
-<li>Stack:把几个view变成一个stack view，可以理解为组合起来，以方便对整组定义constraints。</li>
-</ul></li>
-<li><p>Control-drag</p>
-<ul>
-<li>在具体的view上按住control键然后拖拽到相关view，松开鼠标后选择添加constraints。小技巧：在选择时按住shift键，可以同时添加多个constraints。</li>
-</ul></li>
-<li><p>在具体constraints旁边出现黄色或红色标记，表示constraints存在一些问题。可以点击标记并update frames。只有一个问题时可能好使，多个问题的时候一般不好使。</p></li>
-<li><p>小技巧：选择assistant pop-up menu→Preview→按住option键点击storyboard，可以在新窗口中预览不同机型的效果，可调整屏幕方向。（constraints复杂了之后，这个方法也不好使了）</p></li>
-</ul>
-
-<h2 id="toc_7">Stack View</h2>
-
-<ul>
-<li>Stack View插入的两种方式：1.从Object Library中拖到storyboard中，再把要组合的view拖进去；2.选中要组合的view后，使用Auto Layout bar中的Stack选项。</li>
-<li>Stack View的两种基本形式：Horizontal（各view在其中水平排列）、Vertical（各view在其中竖直排列）</li>
-<li>Stack View的几个可配置项：1.Alignment：设置Stack View中的Views是左对齐、居中还是右对齐；2.Distribution：设置Stack View中的Views高度或者宽度是各自适应还是相等；3.Spaceing：设置Stack View中的Views之间的间距。具体可参见下图。
-<img src="media/14709182567699/14709260278104.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></li>
-</ul>
-
-<h2 id="toc_8">Size Classes</h2>
-
-<ul>
-<li>从iOS8开始，开启Size Classes后，可以通过一个storyboard适配不同尺寸、不同屏幕方向的屏幕，甚至是iPhone和iPad，即响应式布局Adaptive Layout。</li>
-<li>Size Classes针对于横屏和竖屏定义了两种类型：Regular-空间大，Compact-空间小，这样排列组合后就会有四种类型。这四种类型分别代表了iPhone或iPad设备的不同屏幕方向，具体见下图。这样在针对View进行定义和constraints进行定义时就可以对于不同设备、不同屏幕方向采取不同的方案。具体方法是在这些设置项前面会有一个加号，点击后选择对应Size Classes并进行配置。
-<img src="media/14709182567699/14709267301294.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></li>
-</ul>
-
-<h2 id="toc_9">实例：创建Table View</h2>
-
-<ul>
-<li>拖拽一个Table View到storyboard，然后初始配置其Cell（Table View中的每一行）的Style为Basic（系统内置类型），定义其Identifier为Cell，并添加必要的constraints；</li>
-<li>对于class viewcontroller需要引入两个protocols：UITableViewDataSource和UITableViewDelegate，前者可以告知TableView要展示的数据是啥，要展示多少个等等，后者可以告诉TableView每一个展示的数据长啥样，比如行高是多少。</li>
-<li>引入两个protocols后，要在storyboard中，将其与table view连接起来，具体操作是control-drag从table view到View Controller，并选中datasource和delegate。</li>
-<li>Coding：
-<ul>
-<li>思路：声明要展示的数据变量并赋值→告知table view有几个cell→在每个cell中显示具体的值。</li>
-<li>代码片段：</li>
-</ul></li>
-</ul>
-
-<pre><code class="language-text"> // 声明tableview中展示的数据变量
-    var movieNames = [&quot;小男孩&quot;, &quot;火星救援&quot;, &quot;老炮儿&quot;, &quot;心迷宫&quot;, &quot;房间&quot;, &quot;十二公民&quot;, &quot;独立日&quot;, &quot;寒战2&quot;,&quot;完美陌生人&quot;, &quot;大鱼海棠&quot;, &quot;熔炉&quot;, &quot;头脑特工队&quot;, &quot;破风&quot;, &quot;捉妖记&quot;, &quot;歌曲改变人生&quot;, &quot;速度与激情5&quot;, &quot;肖申克的救赎&quot;, &quot;机器人总动员&quot;, &quot;盗梦空间&quot;, &quot;忠犬八公的故事&quot;]
-
- // 告知tableview中有几个cell
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
-        
-        // 根据数组的数量返回table view中cell的数量
-        return movieNames.count
-        
-    }
-    
-// 在每个cell中显示具体的内容,这个方法会在table view每个row要展示的时候被调起
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
-        
-        // 为节省资源，使每个cell可以重复利用
-        let cellIdentifier = &quot;Cell&quot;
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
-        
-        // 定义cell要显示的内容
-        cell.textLabel?.text = movieNames[indexPath.row]
-        cell.imageView?.image = UIImage(named: &quot;房间&quot;)
-        
-        return cell
-        
-    }
-</code></pre>
-
-<h2 id="toc_10">实例：隐藏某一个View中的Status Bar</h2>
-
-<ul>
-<li>代码片段：</li>
-</ul>
-
-<pre><code class="language-text">// 在该View中隐藏Status Bar
-    override func prefersStatusBarHidden() -&gt; Bool {
-        return true
-    }
-</code></pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[学习使用Swift语言编写iOS程序小记]]></title>
-    <link href="https://steppark.net/14672077197053.html"/>
-    <updated>2016-06-29T21:41:59+08:00</updated>
-    <id>https://steppark.net/14672077197053.html</id>
-    <content type="html"><![CDATA[
-<p>最近在了解Swift语言的语法，学着用Swift编写iOS程序，挖掘一下一直埋藏在心底coding的潜能，也锻炼下自己的逻辑思维能力。</p>
-
-<span id="more"></span><!-- more -->
-
-<h2 id="toc_0">学习时使用的资料汇总</h2>
-
-<ul>
-<li><p><a href="https://itunes.apple.com/cn/course/developing-ios-9-apps-swift/id1104579961">Developing iOS 9 Apps with Swift</a> —— Stanford大学一位有名的白胡子老头讲的公开课，年年根据苹果Swift版本迭代和iOS版本迭代的节奏不断更新，苹果官方推荐。iTunes U中有英文字幕，<a href="https://github.com/CS193P-Translation-Group/Developing-iOS-9-Apps-with-Swift">Github</a>上有中文字幕翻译项目，目前翻译的比较慢。着急的话可考虑去年的<a href="https://github.com/CS193P-Translation-Group/Developing_iOS_8_Apps_With_Swift">iOS 8版本</a>,翻译已全部完成。讲的很不错，但是自我感觉语速很快。</p></li>
-<li><p><a href="https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0">The Swift Programming Language</a> —— 苹果官方Swift语言指导手册，iOS 9在用的是<a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0">Swift 2.2版本</a>，2016年WWDC刚刚发布<a href="https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0">Swift 3版本</a>。</p></li>
-<li><p><a href="https://www.appcoda.com/swift/">Beginning iOS 9 Programming with Swift</a> —— 国外作者写的一本针对于初学者的电子书，图文并茂，讲解的很详细，例子也很丰富。感觉每一章，作者都在害怕读者因为讲的东西太困难而放弃学习，在书中强调多次😂。</p></li>
-</ul>
-
-<h2 id="toc_1">有意思的iOS小程序记录</h2>
-
-<p>从开始学习到不断深入，不管是视频中还是书中或是网络中，总会有很多有意思、启发性的iOS小程序，它们可能很简单，但是却带我走进了iOS开发的大门，让我兴趣越来越浓厚。感觉学习coding还是得以实例来引路，如果一直闷头学习语法，学很长时间也不知道学的到底用来干什么，真的会有强烈的挫败感，最后就像背单词永远停留在字母A序列中一样，了解了语法的皮毛就放弃了。</p>
-
-<p>以下iOS小程序的完整代码可在<a href="https://github.com/ChuXiangyuan/Beginning-iOS-Programming-with-Swift">我的Github</a>中获取到。</p>
-
-<ul>
-<li><p>Hello World - 很简单，界面上有个button，点击后弹出一条消息。同时界面上的button和label元素实现Auto Layout。通过这个小程序，初步了解在Xcode中创建项目的方法，了解简单的View和Controler的创建方法和关系，了解了Auto Layout的基本方法。<br/>
-<img src="media/14672077197053/1.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>StackViewDemo - 学习利用Stack View进行Auto Layout，进一步了解Auto Layout的方法，了解在不同设备上响应式布局的方法。<br/>
-<img src="media/14672077197053/2.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-</ul>
-
-<p><img src="media/14672077197053/3.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
 ]]></content>
   </entry>

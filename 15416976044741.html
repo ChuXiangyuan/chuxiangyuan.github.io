@@ -1,0 +1,534 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同? - 向远公园 | Step Park
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="向远公园 | Step Park" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:steppark.net ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+</script>
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">Home</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="about.html">About</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 向远公园 | Step Park</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="about.html">About</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="Design.html">Design</a></li>
+        
+            <li><a href="Develop.html">Develop</a></li>
+        
+            <li><a href="Teconology.html">Teconology</a></li>
+        
+            <li><a href="Tools.html">Tools</a></li>
+        
+            <li><a href="Life.html">Life</a></li>
+        
+            <li><a href="Talk.html">Talk</a></li>
+        
+            <li><a href="Others.html">Others</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+              <div class="f-img"><img src="media/15416976044741/15416985114807.jpg" /></div>
+          
+          <h1>Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2018/11/6</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='Design.html'>Design</a></span>
+          
+              <span class="posted-in"><a href='Develop.html'>Develop</a></span>
+           
+         
+          <span class="comments">
+            
+              <a href="https://steppark.net/15416976044741.html#disqus_thread">comments</a>
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p>Apple 在 10 月 30 日发布了全新的 iPad Pro 11 寸版本和 12.9 寸版本，它们去除了 Home 键、配备了 Face ID，从而使得边框变得极窄，iPad Pro 也步入了无 Home 键的时代。但与之前发布的 iPhone Xs、iPhone Xs Max 不同，全新的 iPad Pro 并没有刘海。同时，Apple 发布了第二代 Apple Pencil，在这支笔上配备了双击手势功能。那在设计与开发适配全新的具备 Split View、Slide Over 功能、搭配第二代 Apple Pencil 的 iPad Pro 时，有什么要注意的呢？</p>
+
+<span id="more"></span><!-- more -->
+
+<blockquote>
+<p>在进一步阅读此文章前，推荐阅读这篇文章的姊妹篇，有利于更好地理解 Apple 最新 iPhone、iPad 的适配原则：  </p>
+
+<ol>
+<li><a href="15086036845015.html">Designing For iPhone X —— iPhone 上有了刘海，设计和开发到底该咋整?</a><br/></li>
+<li>Designing For iPhone Xs、iPhone Xs Max — 比大还大，更大的刘海屏 iPhone 来了（待更新）</li>
+</ol>
+</blockquote>
+
+<ul>
+<li><strong>Note:</strong>
+<ul>
+<li>全文未完成，仍在不断补充更新中...</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_0">屏幕尺寸</h2>
+
+<ul>
+<li><p>全新的 iPad Pro 11″ 与 iPad Pro 10.5″ 相比，在去除了 Home 键之后，将上下边框（竖屏模式下）缩小，而机身尺寸几乎变化不大，故屏幕由原来的 10.5 寸增大为 11 寸。因此 iPad Pro 11″ 在横屏模式下的屏幕高度与 iPad Pro 10.5″ 是相同的，但在横屏模式下的屏幕宽度比  iPad Pro 10.5″ 多出了 82pt @2x，即横屏模式下 iPad Pro 11″ 为 1194 × 834pt @2x，iPad Pro 10.5″ 为 1112 × 834pt @2x。</p></li>
+<li><p>全新的 iPad Pro 12.9″ 与第二代 iPad Pro 12.9″ 相比，在去除了 Home 键并缩小了上下边框（竖屏模式下）后，整体机身尺寸变小一圈，使得屏幕仍保持 12.9 寸不变。因此第三代 iPad Pro 12.9″ 和前两代的 iPad Pro 12.9″ 的屏幕显示宽度、高度完全一致，即横屏模式下 1366 × 1024pt @2x。</p></li>
+<li><p>有人可能会产生疑惑：同是新一代的 iPad Pro，为什么 11 寸的和 12.9 寸的相比上一代的变化方式不同？一个增大屏幕、保持机身尺寸几乎不变；一个保持屏幕尺寸不变、减小机身尺寸。如果新的小尺寸的 iPad Pro 仍然保持 10.5 寸屏幕、减小机身尺寸，iPad 分辨率的变种不就更少、适配不就更简单？一个个人感觉靠谱的说法：iPad Pro 的定位是注重生产力的个人电脑，Smart Keyboard 是其重要的一个配件，不可或缺，如果机身尺寸在上一代的基础上进一步缩小，那就会导致全尺寸的 Smart Keyboard 的按键设计出现问题。所以基于此，Apple 不会再减小 iPad Pro 的机身尺寸，自然只能扩大屏幕尺寸。</p></li>
+</ul>
+
+<h2 id="toc_1">App 的适配与设计</h2>
+
+<p>全新的 iPad Pro 的屏幕与 iPhone Xs 一样是四个圆角，所以在设计 app 时，应该避免重要的信息或控件出现在四个角落，以免被圆角遮挡或切割。像 Status Bar、Navigation Bar、Tab Bar、Tool Bar 这些会覆盖到边角的标准控件，应该被自动且正确地放置。</p>
+
+<p><img src="media/15416976044741/ED039BBE-40FF-438D-A43F-9BAAC784EF3A.png" alt="ED039BBE-40FF-438D-A43F-9BAAC784EF3A"/></p>
+
+<p>为了让你的 app 在全新的 iPad Pro 上完美地呈现，你需要在设计 app 时遵守下面三个原则：</p>
+
+<ul>
+<li><p><strong>使用安全区域布局规范（Safe Area Layout Guides）阻止界面元素被屏幕圆角切割或者被 Home Indicator 遮挡。</strong></p>
+<ul>
+<li><p>在屏幕上没有其他控件时，安全区域几乎覆盖整个屏幕，在横屏和竖屏模式下，需要在底部留出 20pt 高度的区域给 Home Indicator，以防内容被 Home Indicator 遮挡。</p>
+<p><img src="media/15416976044741/AA38670A-D8C0-4759-A5FB-FFAE16FB66F8.png" alt="AA38670A-D8C0-4759-A5FB-FFAE16FB66F8"/></p></li>
+<li><p>不要尝试在 Home Indicator 周围放置控件、元素，虽然在全屏模式下，Home Indicator 是位于屏幕底部中央位置的，但在 Split View 中，Home Indicator 的位置会跟随 app 发生变化。如果有内容放置在 Home Indicator 两边就可能会被遮挡。</p>
+<p><img src="media/15416976044741/52F6C707-BEDA-4663-9EFC-68573F451383.png" alt="52F6C707-BEDA-4663-9EFC-68573F451383"/></p></li>
+<li><p>当界面中显示 Status Bar 时，Status Bar 的高度是 24pt，而不是 iPhone 或者前几代 iPad 上的 20pt。</p>
+<p><img src="media/15416976044741/73F8EA5A-E64A-41B3-98C1-7BE2AB92DB05.png" alt="73F8EA5A-E64A-41B3-98C1-7BE2AB92DB05"/></p></li>
+<li><p>特别提示，在 Slide Over 模式中，app 的安全区域完全充满 app 的可显示区域，安全区域到顶部和底部的距离均为 0pt。 </p>
+<p><img src="media/15416976044741/FE0AAB89-583B-46CA-AAD0-363DD002F92C.png" alt="FE0AAB89-583B-46CA-AAD0-363DD002F92"/></p></li>
+<li><p>在界面中有 Navigation Bar、Tab Bar 或者 Tool Bar 时，不管屏幕方向是横向还是纵向，安全区域到左右两侧的距离均为 0pt。这不同于 iPhone Xs，在横向屏幕时，因为刘海的缘故，需要在左右两侧留出对称相等的安全距离。</p>
+<p><img src="media/15416976044741/71D19712-586A-40B0-BA80-293F2C31BFF3.png" alt="71D19712-586A-40B0-BA80-293F2C31BFF3"/></p></li>
+</ul></li>
+<li><p><strong>使用布局边界（Layout Margins）从屏幕左端到屏幕右端插入内容。</strong></p>
+<ul>
+<li><p>布局边界在内容之间、屏幕的左右边缘提供了可以呼吸的空间，也有利于内容与 Status Bar、Navigation Bar、Tab Bar、Status Bar 上的内容相对齐。同时布局边界也使得内容不会滚动到屏幕边缘的圆角中去。</p>
+<p><img src="media/15416976044741/87E608E5-598A-44F5-98A5-631F7A8CF886.png" alt="87E608E5-598A-44F5-98A5-631F7A8CF886"/></p></li>
+<li><p>布局边界的宽度是由 app 的 Size Class 来决定的。在 Regular 普通模式（如iPad Pro 11″ 横屏模式）下，布局边界的宽度是 20pt；在 Compact 紧凑模式（如 iPhone Xs Max 竖屏模式）下，布局边界的宽度是 16pt。有关于 Size Class 的更多细节可以阅读我的另一篇文章：<a href="15171487371271.html">尺寸级别和核心要素 Size Classes and Core Components - WWDC 2017 Session 812</a></p>
+<p><img src="media/15416976044741/CD25F2B3-A2CD-40DC-A63A-D23796C9202B.png" alt="CD25F2B3-A2CD-40DC-A63A-D23796C9202B"/></p></li>
+</ul></li>
+<li><p><strong>要考虑到多种不同的屏幕比率。</strong></p>
+<ul>
+<li><p>所有之前的 iPad 的屏幕比率是 4:3，iPad Pro 11″ 有着更宽的屏幕比率。</p>
+<p><img src="media/15416976044741/ABF2E500-6E6E-4985-BDCB-BC9B44AF9B6E.png" alt="ABF2E500-6E6E-4985-BDCB-BC9B44AF9B6E"/></p></li>
+<li><p>例如，一个游戏只为 4:3 比率而设计，那么在横屏模式下的 iPad Pro 11″ 上显示时，左右两侧就会出现黑条，或者当 app 充满屏幕显示时，上下两侧的内容就会被切掉。所以要特别注意那些独立的界面元素的位置和大小。</p>
+<p><img src="media/15416976044741/3C2337B8-C3B5-423C-B863-6497ABB8CA3E.png" alt="3C2337B8-C3B5-423C-B863-6497ABB8CA3E"/></p></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_2">Apple Pencil 新功能的设计</h2>
+
+<p><img src="media/15416976044741/A33D261C-522D-4423-B4BD-50851B7744FE.png" alt="A33D261C-522D-4423-B4BD-50851B7744FE"/></p>
+
+<ul>
+<li>第二代 Apple Pencil 在笔身上增加了一个双击手势。用户可以在系统设置中为双击手势选定一个固定操作，这也给用户在使用各个 app 时提供了连贯一致的、可预测的使用体验。用户可以在以下几种选项中选择双击手势的操作：
+<ul>
+<li>在当前选择的工具和橡皮擦之间切换；</li>
+<li>在当前选择的工具和上次使用的工具之间切换；</li>
+<li>展示一个调色板；</li>
+<li>关闭双击手势功能。</li>
+</ul></li>
+</ul>
+
+<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.41.04.png" alt="屏幕快照 2018-11-06 上午12.41.04"/></p>
+
+<ul>
+<li><p>为了在 app 中提供不同功能的 Apple Pencil 双击操作手势，你需要遵守下面几个原则：</p>
+<ul>
+<li><p>如果在系统设置中用户关闭了双击操作手势，app 就不应该响应用户在 Apple Pencil 上的双击操作手势。</p>
+<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.41.27.png" alt="屏幕快照 2018-11-06 上午12.41.27"/></p></li>
+<li><p>在任何可能的时候，都要遵守系统的设置。在你的 app 中如果存在多种不同的笔功能、橡皮擦功能、调色板功能，但却并没有遵守双击操作手势对应功能的系统设置，这种不一致、不连贯的操作会让你的 app 变得不直观，特别是在配合其他支持 Apple Pencil 的 app 进行多任务操作时尤为明显。</p>
+<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.41.45.png" alt="屏幕快照 2018-11-06 上午12.41.45"/></p></li>
+<li><p>如果在你的 app 中，需要针对双击手势提供不同于系统设置中的功能，确保让这个自定义的行为默认保持关闭。在用户明确需要的时候，由用户主动开启，以让 app 中的自定义功能覆盖系统层级中设定的功能。这样也防止了用户在使用你的 app 时发现其行为与其他 app 不一致。</p>
+<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.42.27.png" alt="屏幕快照 2018-11-06 上午12.42.27"/></p></li>
+<li><p>如果你的 app 支持 Apple Pencil，但并不支持或不完全支持在系统设置中提到的几个双击手势功能，你可以尽可能地将相似含义的功能映射到 Apple Pencil 的双击手势上，以保持连贯一致。例如在一个照片类 app 中，Apple Pencil 的双击手势可以在两种不同的滤镜模式中切换。不要让 Apple Pencil 的双击手势执行直接修改内容的操作以防止出现严重的操作失误，因为双击手势这个操作很容易误操作。</p></li>
+<li><p>不管 Apple Pencil 的双击手势在你的 app 中对应什么操作，确保总是给用户提供有关于 Apple Pencil 双击后发生了什么的清晰、及时的视觉反馈，这样用户可以及时感知到 app 的行为发生了变化，如果是误操作可以及时恢复。</p></li>
+<li><p>要向第一代、第二代 Apple Pencil 的用户都提供一份绝佳的使用体验。Apple Pencil 双击手势所提供的功能应该是用户在 app 中某个功能的快捷方式，而不是在 app 的界面中找不到的功能。</p></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_3">Read More</h2>
+
+<h3 id="toc_4">Apple 官方</h3>
+
+<ul>
+<li><a href="https://developer.apple.com/videos/play/tech-talks/804/">Designing for iPad Pro and Apple Pencil - Tech Talks - Videos - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15416957498069.html" 
+          title="Next Post: Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803">Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_douban"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          
+            <div id="disqus_thread"></div>
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <div class="site-a-logo"><img src="media/14625521742746/Step%20Park%20LOGO-White+Circle-.png" /></div>
+            
+                <h1>向远公园 | Step Park</h1>
+                <div class="site-des">搞懂逻辑 | 理清思路 | 沉淀想法 | 纪录生活</div>
+                <div class="social">
+
+
+
+
+
+
+
+<a target="_blank" class="weibo" href="https://weibo.com/chuxiangyuan1104/" title="Weibo">Weibo</a>
+<a target="_blank" class="twitter" target="_blank" href="https://twitter.com/chuxiangyuan/" title="Twitter">Twitter</a>
+<a target="_blank" class="github" target="_blank" href="https://github.com/ChuXiangyuan/" title="GitHub">GitHub</a>
+<a target="_blank" class="email" href="mailto:chuxiangyuan1104@gmail.com" title="Email">Email</a>
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+               
+             <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Featured</h2>
+                </div>
+                <div class="side-content">
+                  
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15416976044741.html">1️⃣ Designing For New iPad Pro and Apple Pencil</a>
+
+                  </div>
+                  
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15086036845015.html">2️⃣ Designing For iPhone X</a>
+
+                  </div>
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15107547493398.html">3️⃣ Allen 说：</a>
+
+                  </div>
+                  
+                </div>
+            </div>
+            
+    
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="Design.html"><strong>Design</strong></a>
+        
+            <a href="Develop.html"><strong>Develop</strong></a>
+        
+            <a href="Teconology.html"><strong>Teconology</strong></a>
+        
+            <a href="Tools.html"><strong>Tools</strong></a>
+        
+            <a href="Life.html"><strong>Life</strong></a>
+        
+            <a href="Talk.html"><strong>Talk</strong></a>
+        
+            <a href="Others.html"><strong>Others</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15416957498069.html">Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15107547493398.html">Allen 说:🎙</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15416970661320.html">内容丰富的通知 Rich Notifications - WWDC 2017 Session 817</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15294912961206.html">妙用 Xcode 修改 iPhone 的当前定位位置</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              
+
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2018
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'chuxiangyuan'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script type="text/javascript">
+var disqus_shortname = 'chuxiangyuan'; 
+
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109532424-1');
+  gtag('set', {'user_id': 'USER_ID'}); // 使用已登录的 user_id 来设置用户 ID。
+</script>
+
+  </body>
+</html>
