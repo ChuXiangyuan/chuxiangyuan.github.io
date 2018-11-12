@@ -2,7 +2,7 @@
 之前有了解过 Markdown 语言，但之前只了解了下皮毛，最近做了进一步研究，也对比了一下各个 Markdown 编辑器的优劣。结果利用 MWeb 以及 Github 的 PAGES 服务顺藤摸瓜的建立起了自己的个人网站。
 
 ## 💪 建站工具
-- 个人网站的地址：[https://chuxiangyuan.github.io/](https://chuxiangyuan.github.io/)，也可通过扫描或识别下边的二维码前往;
+- 个人网站的地址：[https://steppark.net/](https://steppark.net/)，也可通过扫描或识别下边的二维码前往;
 
 ![我的博客](media/14631451597072/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2.jpg)
 

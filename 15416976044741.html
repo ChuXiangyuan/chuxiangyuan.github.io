@@ -221,7 +221,7 @@
 
 <h2 id="toc_2">App 没有适配会如何显示？</h2>
 
-<p>不同于 iPhone iPhone Xs、iPhone iPhone Xs Max 在屏幕尺寸发生变化时基本上只需要考虑竖屏和横屏两种情况，iPad Pro 在屏幕尺寸发生变化时不仅需要考虑 app 全屏时在竖屏和横屏的适配显示方式，还需要考虑 app 在 Slide Over、Spit View 模式下的适配显示方式。<br/>
+<p>不同于 iPhone Xs、iPhone Xs Max 在屏幕尺寸发生变化时基本上只需要考虑竖屏和横屏两种情况，iPad Pro 在屏幕尺寸发生变化时不仅需要考虑 app 全屏时在竖屏和横屏的适配显示方式，还需要考虑 app 在 Slide Over、Spit View 模式下的适配显示方式。<br/>
 以下主要以 iPad Pro 11″ 为例说明在各种不同的情况下，未适配的 app 会如何在新款 iPad Pro 上显示。请注意，探究 app 最后的显示结果是次要的，重要的是为什么 app 会那样显示，以此来深入了解、思考当硬件屏幕尺寸发生变化时，原有的 app 如何兼容、新的 app 如何与旧的 app 共存？进一步可展望未来新硬件设备尺寸的可能性和兼容旧 app 的大原则、大方向。</p>
 
 <p><strong>图例说明</strong></p>
@@ -269,7 +269,7 @@
 
 <ul>
 <li>自 iOS 12 开始，Apple 取消了在竖屏模式下的 1/2 Split View 这种显示模式，猜测可能是因为在此模式下两个 app 的显示宽度比较窄，功能使用比较受限，所以被取消。当处于横屏下 1/2 Split View 显示模式时，此时将设备竖屏会自动切换到 1/3 Split View 显示模式。</li>
-<li>由于 iPad Pro 11″ 的宽度（横屏模式下）比上一代进一步增加，所以在横屏下的 1/3 Split View 显示模式时，较窄的 app 的宽度由 320pt（iPhone SE、iPhone 4s 相同宽度） 增加到了 375pt（iPhone 8、iPhone iPhone Xs 相同宽度），与 iPad Pro 12.9″ 同样情况下的宽度相等。</li>
+<li>由于 iPad Pro 11″ 的宽度（横屏模式下）比上一代进一步增加，所以在横屏下的 1/3 Split View 显示模式时，较窄的 app 的宽度由 320pt（iPhone SE、iPhone 4s 相同宽度） 增加到了 375pt（iPhone 8、iPhone Xs 相同宽度），与 iPad Pro 12.9″ 同样情况下的宽度相等。</li>
 </ul>
 
 <p>不管是横屏还是竖屏，未适配的 app 在显示时需要为 Status Bar 和 Home Indicator 留出空间，所以在 1/2 Split View 和 1/3 Split View 时上、下均有黑边。<br/>
@@ -280,7 +280,7 @@
 <h3 id="toc_5">Slide Over</h3>
 
 <p>在 Slide Over 显示模式下，一个全屏显示的 app 或者两个进行 Split View 的 app 之外，可以打开另一个 app 附在其他 app 之上进行操作，不需要时可以滑出屏幕隐藏，继续在之前的 app 上操作。这个功能对于需要临时查看、参考的 app 很有用。已经适配全新 iPad Pro 的 app 进行 Slide Over 时，app 可以充满其分配的显示区域，并浮在其他 app 之上，上、下、右都会留出一个 Status Bar 的高度/宽度（24pt）。<br/>
-同样的，由于 iPad Pro 11″ 的宽度（横屏模式下）的增加，横屏下进行 Slide Over 的 app 的宽度也由 320pt（iPhone SE、iPhone 4s 相同宽度） 增加到了 375pt（iPhone 8、iPhone iPhone Xs 相同宽度），与 iPad Pro 12.9″ 同样情况下的宽度相等。</p>
+同样的，由于 iPad Pro 11″ 的宽度（横屏模式下）的增加，横屏下进行 Slide Over 的 app 的宽度也由 320pt（iPhone SE、iPhone 4s 相同宽度） 增加到了 375pt（iPhone 8、iPhone Xs 相同宽度），与 iPad Pro 12.9″ 同样情况下的宽度相等。</p>
 
 <p>不管是横屏还是竖屏，未适配的 app 在进行 Slide Over 时，app 均可以充满被分配的显示区域。但在实际情况下，与已适配的 app 对比，还是可能会有一些细节上的不同。例如，Tab Bar/Tool Bar 的高度在未适配的 app 中是 50pt，而在已适配的 app 中是 70pt，增加的 20pt 即是 Home Indicator 的高度。</p>
 
@@ -297,7 +297,7 @@
 
 <p>从各种情况的不适配 app 的显示结果来看，全新 iPad Pro 对原有 app 的兼容显示原则并不像从 iPhone 7 → iPhone X 时那样简单明了，app 的显示尺寸也不一定是与老设备的显示尺寸完全一致，需要考虑 iPad 特有的多种不同的显示模式、屏幕方向、app 显示比例的变化、新的屏幕元素（圆角和 Home Indicator ）的引入、已适配 app 和未适配 app 的共存等诸多因素，综合这些来确定一个合适的最终方案。</p>
 
-<p>从发布 iPhone iPhone Xs Max 之后来看，由于 iPhone iPhone Xs Max 上的 app 显示时会直接放大 iPhone X 版本的 app 到全屏，不存在黑边，看上去问题没有那么严重，因此 app 的开发者/开发厂商对于适配 iPhone iPhone Xs Max 的积极性并不高或者说推进速度并不块，例如「微信」在 iPhone iPhone Xs Max 发布今近两月后仍没有适配。而对于全新的 iPad Pro 来说，iPad 的 app 市场远小于 iPhone app 市场，许多厂商在考虑缩减成本的情况下，将 iPad 版本直接做成了 iPhone 版本的放大版甚至完全停止更新或取消 iPad 版本。这是一个不好的信号，可想而知，全新 iPad Pro 的 app 的适配推进速度也不会很快。<br/>
+<p>从发布 iPhone Xs Max 之后来看，由于 iPhone Xs Max 上的 app 显示时会直接放大 iPhone X 版本的 app 到全屏，不存在黑边，看上去问题没有那么严重，因此 app 的开发者/开发厂商对于适配 iPhone Xs Max 的积极性并不高或者说推进速度并不块，例如「微信」在 iPhone Xs Max 发布今近两月后仍没有适配。而对于全新的 iPad Pro 来说，iPad 的 app 市场远小于 iPhone app 市场，许多厂商在考虑缩减成本的情况下，将 iPad 版本直接做成了 iPhone 版本的放大版甚至完全停止更新或取消 iPad 版本。这是一个不好的信号，可想而知，全新 iPad Pro 的 app 的适配推进速度也不会很快。<br/>
 Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚定和清晰地将 iPad 分为了高低端两档产品，低端维持原有的娱乐属性，高端大幅向提高生产力、创造力方向改进，并从近期和远期推出两项改进计划：</p>
 
 <ol>
