@@ -4,7 +4,7 @@
 ## 💪 建站工具
 - 个人网站的地址：[https://chuxiangyuan.github.io/](https://chuxiangyuan.github.io/)，也可通过扫描或识别下边的二维码前往;
 
-![我的博客](http://o6lwrrweh.bkt.clouddn.com/2016-05-13-我的博客.jpg)
+![我的博客](media/14631451597072/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2.jpg)
 
 - 如果你习惯了使用 RSS 工具查看文章，你也可以通过 RSS 工具订阅我的个人博客，以下是 RSS 地址：`https://chuxiangyuan.github.io/atom.xml`；
 
