@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  Study iOS 9 Programming with Swift（4） - 向远公园 | Step Park
+  Designing For iPhone Xs、iPhone Xs Max、iPhone Xʀ — 比大还大，更大的刘海屏 iPhone 来了 - 向远公园 | Step Park
   
   </title>
   
@@ -116,19 +116,21 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>Study iOS 9 Programming with Swift（4）</h1>
+          <h1>Designing For iPhone Xs、iPhone Xs Max、iPhone Xʀ — 比大还大，更大的刘海屏 iPhone 来了</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2016/9/1</span>
+          <span class="date">2018/9/20</span>
 
           <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='Design.html'>Design</a></span>
           
               <span class="posted-in"><a href='Develop.html'>Develop</a></span>
            
          
           <span class="comments">
             
-              <a href="https://steppark.net/14727151264192.html#disqus_thread">comments</a>
+              <a href="https://steppark.net/15433010141111.html#disqus_thread">comments</a>
             
 
             
@@ -138,97 +140,103 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <p>使用Swift进行iOS编程知识点总结第四篇。</p>
+      <p>在人民群众的热切期盼下，比 iPhone X 更大、刘海屏版的 iPhone 8 Plus —— iPhone Xs Max 终于在 2018 年 9 月苹果秋季发布上发布，一同发布的还有升级版的 iPhone X —— iPhone Xs 和看似低配实则仍然很贵的 iPhone Xʀ。正如<a href="15086036845015.html#toc_16">去年文章中推测</a>的一样，iPhone Xs Max 的分辨率是在 iPhone 8 Plus 的基础上保持宽不变高拉长的规律且保持与 iPhone X 一致的屏幕比例，即为 1242px × 2689px。那设计、适配运行在 iPhone Xs Max 上以及 iPhone Xʀ 上的 app 又有什么需要注意的呢？这就是本篇文章想要探讨的主题。</p>
 
 <span id="more"></span><!-- more -->
 
 <blockquote>
-<p>关联阅读：<br/>
-<a href="http://chuxiangyuan.github.io/14709182567699.html">Study iOS 9 Programming with Swift（1）</a><br/>
-<a href="http://chuxiangyuan.github.io/14710858606215.html">Study iOS 9 Programming with Swift（2）</a><br/>
-<a href="http://chuxiangyuan.github.io/14725650174400.html">Study iOS 9 Programming with Swift（3）</a></p>
+<p>iPhone Xs Max、iPhone Xs 广告：</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uJkOP1-v9B4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>iPhone Xʀ 广告：</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tG7vx7-3sl0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </blockquote>
 
-<h2 id="toc_0">目录</h2>
-
 <ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">更新记录</a>
-</li>
-<li>
-<a href="#toc_2">Self Sizing Cells</a>
-</li>
-<li>
-<a href="#toc_3">Unwind Segue</a>
-</li>
-<li>
-<a href="#toc_4">实例：多个button触发一个action方法</a>
-</li>
+<li><strong>Note:</strong></li>
 </ul>
 
-
-<h2 id="toc_1">更新记录</h2>
-
-<ul>
-<li>2016/09/01 第一次发布</li>
-</ul>
-
-<h2 id="toc_2">Self Sizing Cells</h2>
+<blockquote>
+<p>在进一步阅读此文章前，推荐先阅读这篇文章的姊妹篇，看看初代刘海屏手机上 app 的那些设计和开发问题，再来更好地理解全新 iPhone 的变化：  </p>
 
 <ul>
-<li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
+<li><a href="https://steppark.net/15086036845015.html">Designing For iPhone X —— iPhone 上有了刘海，设计和开发到底该咋整?</a><br/></li>
 </ul>
 
-<pre class="line-numbers"><code class="language-text">tableView.estimatedRowHeight = 36.0 
-tableView.rowHeight = UITableViewAutomaticDimension
-</code></pre>
-
-<h2 id="toc_3">Unwind Segue</h2>
+<p>2018 年 10 月苹果秋季发布会上，iPad 也与 Home 实体键说再见了，想了解全新 iPad Pro 的更多设计和适配细节，推荐阅读下面这篇文章：  </p>
 
 <ul>
-<li>要点击一个button关闭一个view返回上一级view，可以在destination view controller中添加如下代码，并且将button与exit连接。</li>
-<li>代码片段：</li>
+<li><a href="https://steppark.net/15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a><br/></li>
 </ul>
+</blockquote>
 
-<pre class="line-numbers"><code class="language-text">// 从review view跳转回detail view，并且带回rating的值改变detail view
-@IBAction func close(segue:UIStoryboardSegue) {
-    
-  if let reviewViewController = segue.sourceViewController as? ReviewViewController {
-    if let rating = reviewViewController.rating {
-      ratingButton.setImage(UIImage(named: rating), forState: UIControlState.Normal)
-    }
-  }
-    
-}
-</code></pre>
+<p><em>全文未完成，待进一步更新</em></p>
 
-<h2 id="toc_4">实例：多个button触发一个action方法</h2>
+<h2 id="toc_0">屏幕尺寸的变化</h2>
 
 <ul>
-<li>对于多个button想要触发一个action方法，可以通过为不同的button定义不同的tag，之后coding时通过switch来区分不同tag，从而执行不同的动作。</li>
-<li>代码片段：<br/>
-// 对电影进行评价，根据点击button的不同给rating赋值并关闭modal view</li>
+<li>iPhone Xs 的屏幕尺寸以及屏幕分辨率与上一代的 iPhone X 没有任何区别，仍然是 375 × 812pt @2x。</li>
+<li>iPhone Xs Max 的屏幕尺寸是 6.5 寸，其屏幕分辨率是在 iPhone 8 Plus 的基础上保持宽不变高拉长，即 414 × 896pt @3x。其比例因子与 iPhone 8 Plus 一样，同是 @3x。</li>
+<li>对于 6.1 寸的 iPhone Xʀ，其屏幕分辨率是 414 × 896pt @2x，和 iPhone Xs Max 不同的是其比例因子为 @2x，但它们以 pt 为单位的屏幕分辨率是完全一样的，这就意味着在这两款设备上运行相同的 app，看到的内容是完全一致的。</li>
+<li>新发布的三款 iPhone 设备的屏幕比例都大约为 9:19.5。</li>
 </ul>
 
-<pre class="line-numbers"><code class="language-text">@IBAction func ratingSelected(sender: UIButton) {
-  
-    switch (sender.tag) {
-    case 100: rating = &quot;dislike&quot;
-    case 200: rating = &quot;good&quot;
-    case 300: rating = &quot;great&quot;
-    default: break
-    }
-    
-    // 执行特定的segue，即unwind to detailview
-    performSegueWithIdentifier(&quot;unwindToDetailView&quot;, sender: sender)
-    
-}
-</code></pre>
+<p><img src="media/15433010141111/5AA815C9-BF65-408C-BE39-6C1363922A04.png" alt="5AA815C9-BF65-408C-BE39-6C1363922A04"/><br/>
+<em>注：iPhone 8 Plus 物理设备的屏幕在渲染时是在上述屏幕分辨率基础上进一步进行了缩放，实际屏幕物理分辨率为 1080px × 1920px。</em></p>
 
-<p>未完待续</p>
+<ul>
+<li>Size Class 方面，由于 iPhone Xs Max 和 iPhone Xʀ 是由 iPhone 8 Plus 衍化而来，所以其在横屏和竖屏时的 Size Class 与 iPhone 8 Plus 保持一致，具体可以参见下表。</li>
+<li>特别的，在横屏条件下，iPhone Xs Max 和 iPhone Xʀ 的 Size Class 均为「Regular width，Compact height」，与 iPhone Xs 横屏的 Size Class「Compact width，Compact height」相比，更宽的宽度可以显示更多的内容，例如 Split View 可以同时显示 Master View 与 Detail View。</li>
+<li>有关于 Size Class 的更多细节可以阅读我的另一篇文章：<a href="15171487371271.html">Size Classes and Core Components - WWDC 2017 Session 812</a></li>
+</ul>
+
+<p><img src="media/15433010141111/D92ABA2D-810A-4DF5-B386-F38C9F37B85E.png" alt="D92ABA2D-810A-4DF5-B386-F38C9F37B85E"/></p>
+
+<h2 id="toc_1">未适配 app 在新 iPhone 上的显示</h2>
+
+<ul>
+<li>由于 iPhone Xs 与 iPhone X 的屏幕分辨率、屏幕尺寸完全一致，那如果已经适配了 iPhone X 的 app 自然可以在 iPhone Xs 上正常显示。</li>
+<li><p>对于相同屏幕分辨率（以 pt 为单位）的 iPhone Xs Max 与 iPhone Xʀ 来说，由于它们与 iPhone X 的屏幕比例一样，所以运行在这两款新 iPhone 上的未适配 app 会直接通过放大拉伸 iPhone X 版本的 app 到全屏幕的方式来显示。这时，与 iPhone X 上显示的内容是完全一致的，但由于是整体放大显示，与 iPhone X 屏幕上的 app 显示相比仔细看会有些模糊。</p>
+<p><img src="media/15433010141111/FE5B0516-B29C-4DFF-810B-AB58145C6EC9.png" alt="FE5B0516-B29C-4DFF-810B-AB58145C6E"/><br/>
+图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone%20X%CA%80-screen-sizes-f4c1f2d4eec2">How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes</a></p></li>
+<li><p>特别的，由于屏幕宽度（横屏下）的进一步拉长，在横屏时，iPhone Xs Max、iPhone Xʀ 默认情况下显示的 Split View 与 iPhone 8 Plus 有稍许的不同。</p>
+<ul>
+<li>虽然这几款设备在横屏时的 Size Class 都为「Regular width，Compact height」，但在默认情况下显示 Split View 时，iPhone 8 Plus 会默认左右并排显示 Master View 和 Detail View，用户若有需要可以手动放大 Detail View 到全屏，其 Master View 的 Size Class 为「Compact width，Compact height」，Detail View 的 Size Class 为「Regular width，Compact height」。</li>
+<li>而在 iPhone Xs Max 和 iPhone Xʀ 上，会默认全屏显示 Detail View，需要显示 Master View 时可以通过导航栏上的按钮呼出，Master View 的显示方式是直接覆盖住 Detail View 的一部分显示，而不是左右并排显示。此时 Master View 的 Size Class 为「Regular width，Compact height」，Detail View 的「Regular width，Compact height」也为「Regular width，Compact height」。</li>
+<li>当然，开发者可以在开发时不选择这种默认显示模式，而选择与 iPhone 8 Plus 上一样的左右并排显示模式。</li>
+</ul>
+<p><img src="media/15433010141111/F6BB8A5B-5ED1-424C-8C99-75DCD1A871B8.png" alt="F6BB8A5B-5ED1-424C-8C99-75DCD1A871B8"/><br/>
+图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone%20X%CA%80-screen-sizes-f4c1f2d4eec2">How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes</a></p></li>
+</ul>
+
+<h2 id="toc_2">适配常见问题</h2>
+
+<p>待更新</p>
+
+<h2 id="toc_3">Read More</h2>
+
+<h3 id="toc_4">Apple 官方</h3>
+
+<ul>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/#auto-layout">Adaptivity and Layout - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/iphone/">iPhone - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/tech-talks/207">Building Apps for iPhone Xs, iPhone Xs Max, and iPhone Xʀ - Tech Talks - Videos - Apple Developer</a></li>
+</ul>
+
+<h3 id="toc_5">非官方</h3>
+
+<ul>
+<li><a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">The Ultimate Guide To iPhone Resolutions</a></li>
+<li><a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone%20X%CA%80-screen-sizes-f4c1f2d4eec2">How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
 
 
     
@@ -239,16 +247,16 @@ tableView.rowHeight = UITableViewAutomaticDimension
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="14774965258076.html" 
-          title="Previous Post: 使用 Alfred 提高你的工作效率">&laquo; 使用 Alfred 提高你的工作效率</a>
+          <a href="15416976044741.html" 
+          title="Previous Post: Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?">&laquo; Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a>
       
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="14725650174400.html" 
-          title="Next Post: Study iOS 9 Programming with Swift（3）">Study iOS 9 Programming with Swift（3） &raquo;</a>
+          <a  href="15416957498069.html" 
+          title="Next Post: Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803">Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803 &raquo;</a>
       
       </p>
         </div>
