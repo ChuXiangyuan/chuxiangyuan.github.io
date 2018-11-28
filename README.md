@@ -6,7 +6,7 @@
 
 ![我的博客](media/14631451597072/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2.jpg)
 
-- 如果你习惯了使用 RSS 工具查看文章，你也可以通过 RSS 工具订阅我的个人博客，以下是 RSS 地址：`https://chuxiangyuan.github.io/atom.xml`；
+- 如果你习惯了使用 RSS 工具查看文章，你也可以通过 RSS 工具订阅我的个人博客，以下是 RSS 地址：`https://steppark.net/atom.xml`；
 
 - 网站中所有文章均在 [MWeb](http://zh.mweb.im) 中使用 Markdown 语言格式编写完成;
 
@@ -30,7 +30,7 @@
 ## 🙏 One More Thing
 - 你可以[点击这里查看我的联系方式](https://chuxiangyuan.github.io/about.html)😎
 
-- 你可以[点击这里查看我的个人网站大事记](https://chuxiangyuan.github.io/15105083511786.html)🧐
+- 你可以[点击这里查看我的个人网站大事记](https://chuxiangyuan.github.io/15105083511786.html)——了解我的网站从 1 到 ∞ 的每一小步 🧐
 
 - 如果你觉得这个网站的某些文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁
 
