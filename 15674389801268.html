@@ -1,0 +1,679 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  iOS 13 的设计有什么新变化？ - 向远公园 | Step Park
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="向远公园 | Step Park" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:steppark.net ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+</script>
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">Home</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="music.html">Music</a></li>
+        
+        <li id=""><a target="_self" href="about.html">About</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 向远公园 | Step Park</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="music.html">Music</a></li>
+        
+        <li><a target="_self" href="about.html">About</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="Design.html">Design</a></li>
+        
+            <li><a href="Develop.html">Develop</a></li>
+        
+            <li><a href="Teconology.html">Teconology</a></li>
+        
+            <li><a href="Tools.html">Tools</a></li>
+        
+            <li><a href="Life.html">Life</a></li>
+        
+            <li><a href="Talk.html">Talk</a></li>
+        
+            <li><a href="Others.html">Others</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+              <div class="f-img"><img src="media/15674389801268/apple-ios-13-update.jpg" /></div>
+          
+          <h1>iOS 13 的设计有什么新变化？</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2019/6/30</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='Design.html'>Design</a></span>
+           
+         
+          <span class="comments">
+            
+              <a href="https://steppark.net/15674389801268.html#disqus_thread">comments</a>
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p>从 iOS 13 系统开始，用户可以像在 macOS 中一样开启全局的「Dark Mode 深色模式」，聚焦于内容本身。这对 app 在设计时提出了挑战。为了让用户在 app 中使用时更有空间感，iOS 13 强化了「Modal Presentation 模态展示」页面的样式。3D Touch 让使用支持此功能的硬件的用户可以快捷访问某些功能、预览某些页面，「Context Menu 情景化菜单」把这项功能带给了所有用户。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">Dark Mode 深色模式</a>
+<ul>
+<li>
+<a href="#toc_2">核心设计目标</a>
+</li>
+<li>
+<a href="#toc_3">Color 颜色</a>
+</li>
+<li>
+<a href="#toc_4">Materials 材料</a>
+</li>
+<li>
+<a href="#toc_5">Controls and bar 控件和栏</a>
+</li>
+<li>
+<a href="#toc_6">SF Symbols</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_7">Modal Presentations 模态展示</a>
+</li>
+<li>
+<a href="#toc_8">Contextual Menus 情景化菜单</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">Dark Mode 深色模式</h2>
+
+<p>在 iOS 13 及之后的系统中，人们可以选择采用一个全局的深色系统外观——称为「Dark Mode 深色模式」。在深色模式中，系统中的所有屏幕、界面、菜单、控件都使用了更深的颜色，这让在更深背景中的前景内容更容易显现出来。注意深色模式仍然支持所有的辅助功能设置。<br/>
+人们可以选择深色模式作为他们的默认界面样式，他们也可以通过设置设定周围灯光变暗时自动开启深色模式。<br/>
+因此深色模式带来了一个与颜色、图片、文本打交道的新界面方案。</p>
+
+<p><img src="media/15674389801268/646DFB45-7C4F-49F0-A993-7BB4CE922BF7.png" alt=""/></p>
+
+<p>深色的 UI 更适合灯光条件较暗的情况，对于我们的眼睛来说，在一个暗色的屏幕和周围的世界之间做出调整也更加容易。抛开功能性去说，许多人只是喜欢把使用暗色的界面作为自己的个人偏好。<br/>
+ iOS 的 Dark Mode 使用了几乎全黑的背景以提供与文本和其他前景元素的最大对比度。黑色的背景会使 UI 与硬件本身看上去融为一体。<br/>
+通常情况下，你的 app 都应该支持 Dark Mode 功能。当人们使用 iPhone 切换到 Dark Mode 时，他们期望你的 app 也一起改变。</p>
+
+<p><img src="media/15674389801268/78327CCF-8350-4BF7-9068-5A7E7C59294F.png" alt=""/></p>
+
+<h3 id="toc_2">核心设计目标</h3>
+
+<ul>
+<li>保持熟悉：iOS 设计系统会经历一个从头到尾的更新，但是结果还是人们熟悉的那个 iOS 系统；</li>
+<li>平台一致性：所有的内置 app 在 iOS 13 中都被重新设计过，它们的组成部分都保持着平台的一致性；</li>
+<li>清晰的信息层级：通过颜色区分信息层级，让重要的信息更加显眼，不重要的信息隐藏在背后；</li>
+<li>可访问：把辅助功能与其他目标放在同等地位，新的系统同样支持粗体文本、增强对比度、减少透明度等辅助功能模式；</li>
+<li>保持简洁：让新的设计系统保持简洁、直接、易于操作执行。</li>
+</ul>
+
+<p><img src="media/15674389801268/7E2132DC-7C02-4F1E-9880-9236DBA3A791.png" alt=""/></p>
+
+<h3 id="toc_3">Color 颜色</h3>
+
+<p>每一个 app 都有一个背景，大多数 app 会包含文字、图形。有的还会包含分隔线、分组以帮助组织内容。在以前当我们描述这些的颜色时，可以直接说它们的色值是多少，比如文本是黑色，背景是白色等等。但当 app 有了另一套外观时，就出现了两套对应相同元素的不同颜色体系。</p>
+
+<p><img src="media/15674389801268/051EB791-1111-4B2D-AFD0-6AE98178B070.png" alt=""/></p>
+
+<p>此时，对颜色需要有一个更抽象的方式来描述，那就是「semantic colors 语义化颜色」。</p>
+
+<p><img src="media/15674389801268/525A6D6E-F76B-4AA2-86B0-5AD9C2C41ECD.png" alt=""/></p>
+
+<p>「语义化颜色」描述了一个颜色的目的而不是颜色的值。所以对于「背景颜色」来说，在亮色模式下是白色，在深色模式下就是黑色。你需要对 UI 元素匹配语义化颜色，以使得外观可以自动在亮色和深色模式之间切换。</p>
+
+<p>大多数的颜色会分为四个等级：一级、二级、三级、四级。这些变种用来表现不同的信息层级。</p>
+
+<p><img src="media/15674389801268/1EBDD6C2-467E-4DDC-A970-63B52C9745E1.png" alt=""/></p>
+
+<p>Label 文字标签应该与背景有着最强的对比度，是需要用户注意的地方，所以对于标题使用一级，副标题使用二级，占位文本使用三级，不可用文本使用四级。</p>
+
+<p><img src="media/15674389801268/9F81C17D-43BA-4A2E-8002-41F064B9CBBE.png" alt=""/></p>
+
+<p>同样的，对于背景颜色也是这样。系统背景是一级，二级和三级的背景颜色可以让你在视觉上构建信息层级。</p>
+
+<p><img src="media/15674389801268/4704953F-249F-4938-A4C6-C5913F89031B.png" alt=""/></p>
+
+<p>对于成组的 table view 来说也有特定的视差背景效果。Table view 的背景是一级，每一行的背景是二级。仔细观察，相比于亮色模式，深色模式不是简单地将颜色进行翻转。</p>
+
+<p><img src="media/15674389801268/92D3DA9F-0CD1-457F-A9C8-72EC20CC2441.png" alt=""/></p>
+
+<p>新的系统色盘还包括「fill color 填充颜色」和「separator color 分隔线颜色」。所有的填充颜色和其中一个分隔线颜色都是半透明的。这对增强与多变的背景颜色的对比度有所帮助。</p>
+
+<p><img src="media/15674389801268/0F1002CC-DADA-4A29-8776-27500D219B13.png" alt=""/></p>
+
+<p>新的色盘还包括了六种完全不透明的灰色值。当透明会导致出现问题时，可以使用这些灰色值。例如在绘制横纵相见的分割线时。</p>
+
+<p><img src="media/15674389801268/D2311261-FC2E-4052-AE50-BAABD2EB25F3.png" alt=""/></p>
+
+<p>同样地，在色盘中，对于「tint color 着色」在亮色模式和深色模式中也有不同的变种。针对增强对比度模式，也有更进一步的变种。开启增强对比度功能后，对于一个颜色，在亮色模式中应该更暗，在深色模式中应该更亮。</p>
+
+<p><img src="media/15674389801268/B105C12C-5FA9-4B88-A0F7-B371D2FF5E16.png" alt=""/></p>
+
+<p><img src="media/15674389801268/E3B32D72-911F-472A-B098-69DBFD9DB91D.png" alt=""/></p>
+
+<p>当你自己设置自定义的颜色时，要注意在两种模式中颜色的显示都应该合适，必要时应该使用颜色对比度计算器，对比度至少达到 4.5：1，对于更小的文本需要达到 7：1。更强的颜色对比度可以帮助改善 app 的可访问性和可用性。不同模式下的颜色可以在保证最小对比度的情况下保持相似。</p>
+
+<p><img src="media/15674389801268/1D9B0DE5-1B2F-4B44-93D6-74525CA26667.png" alt=""/></p>
+
+<p><img src="media/15674389801268/A4BD32F0-5B28-4934-9CC3-7196B3183FAC.png" alt=""/></p>
+
+<p>当两个界面叠在一起时，我们需要建立视觉上的层级。比如两个白色背景的界面叠在一起的时候，两个界面之间会通过阴影来表现出两个界面间的关系。但到了深色模式下的黑色背景，这个方法就不太管用了。此时，需要对背景中的那个界面使用更深的背景，对于前景中的界面使用较浅的背景。</p>
+
+<p><img src="media/15674389801268/3AB6AB66-57CA-4E1B-8FC5-A875AEFB4A30.png" alt=""/></p>
+
+<p>以「通讯录」应用举例，当有一个模态窗口展示在原来的界面上时，通讯录的界面相比之前会更浅。</p>
+
+<p><img src="media/15674389801268/4F198898-3971-4E9F-A19D-62EF7A42B9D3.png" alt=""/></p>
+
+<p>继续看一个更复杂的例子，在 iPad 上的「邮箱」应用的界面上 slide over 一个「通讯录」应用。「通讯录」应用的背景颜色会比背景中的「邮箱」应用更浅，以使其更显眼。</p>
+
+<p><img src="media/15674389801268/DD839CD9-A8D3-438B-84CE-2E45F72AA99E.png" alt=""/></p>
+
+<p>当「邮箱」应用和「通讯录」应用以 side view 的方式并排展示时，它们两个应用的背景颜色都变得更浅了。这可以与两个 app 间的分隔线形成对比，也避免了两个 app 的背景色融在了一起，看上去像一个 app。</p>
+
+<p><img src="media/15674389801268/BC4DDC06-7451-4F1E-B344-59F893935A39.png" alt=""/></p>
+
+<p>再进一步，在上面的情况下，在「邮箱」应用中写一封新邮件会弹出一个模态窗口。新的窗口的背景颜色与旁边的「通讯录」应用一个层级，而背景中的「邮箱」主应用看上去变得更暗了一些。这是因为模态窗口绘制了一层遮罩覆盖在了上面。</p>
+
+<p><img src="media/15674389801268/B6694725-3EED-4234-842A-10D2C4272B7B.png" alt=""/></p>
+
+<p>以上，为了保持对视觉层级的呈现，需要在深色模式的设计中特别注意背景颜色的变化（可借助前面提到的「fill colors」和「separator colors」，并确保有合适的对比度。</p>
+
+<p><img src="media/15674389801268/E5B6CA2C-6749-4180-801D-46B5706A2E7B.png" alt=""/></p>
+
+<p>如果你必须在深色模式中使用白色的背景颜色，可以选择一个稍暗淡的白色，以此避免白色背景与周围的暗色内容相冲撞。</p>
+
+<h3 id="toc_4">Materials 材料</h3>
+
+<p>在 iOS 13 中引入了四种不停厚度的材料：厚、普通（默认）、薄、超薄，并且针对亮色和深色模式有不同的变种。<br/>
+如果需要建立与背景明确的对比度，可以使用更厚的材料；对于一些更轻量化的交互，可以使用更薄的材料。使用何种材料完全取决于你要展示的内容。</p>
+
+<p><img src="media/15674389801268/71C5D5FD-61E6-4395-B3FE-85F888454CBB.png" alt=""/></p>
+
+<p>对于不同的材料类型，系统也对文本标签、填充和分隔线的颜色进行了定义。「Vibrancy 虚化透明效果」是贯彻 Apple 所有系统的一个视觉效果，使用系统材料，建议最好使用动态调整颜色而不是固定的颜色。因为随着背景的各种变化，使用固定颜色可能会造成一些可读性的问题，而动态调整可以在背景颜色变化的情况下保持良好的对比度。</p>
+
+<p><img src="media/15674389801268/B38ACF92-1D10-44EA-9812-04AA4E2D4708.png" alt=""/></p>
+
+<p><img src="media/15674389801268/553B48CA-14F8-4FE3-A16C-153C324BB88F.png" alt=""/></p>
+
+<h3 id="toc_5">Controls and bar 控件和栏</h3>
+
+<p>iOS 13 UIKit 中的所有控件已经更新，针对于亮色和深色模式有着不同的变种。所有的控件都使用了语义化颜色重新绘制。不要对这些已有的控件尝试重新创造，不要重复造轮子。</p>
+
+<p><img src="media/15674389801268/10CA82E2-0904-48D4-8E0D-0D4D28CF23D0.png" alt=""/></p>
+
+<p>在创造自定义控件时，针对于亮色和深色模式的不同颜色使用系统色盘。</p>
+
+<p><img src="media/15674389801268/9A7A0EDC-8711-4A0A-92C5-00D7ED2E7B7C.png" alt=""/></p>
+
+<p>导航栏也被进行了更新。默认情况下，大标题导航栏没有背景和阴影，这可以使标题和下面的内容融为一体。当内容滚动时，导航栏的背景和阴影才会出现。</p>
+
+<p><img src="media/15674389801268/4977D064-E0FB-44A3-954F-F43F73F2E308.png" alt=""/></p>
+
+<p>非大标题的导航栏在某些情况下也可以使用这种效果。例如在 iPad 上的「设置」app，master view 和 split view 中的导航栏都没有背景和阴影。</p>
+
+<p><img src="media/15674389801268/253033E1-998A-4F57-BEF8-12B2612EFC57.png" alt=""/></p>
+
+<p>但这种样式并不是总是合适的。以下两种情况还是更适合以前的导航栏样式：<br/>
+    * 元素会出现在透明的导航栏后面时；<br/>
+    * 需要视觉分隔时。</p>
+
+<p><img src="media/15674389801268/C208AC65-6DBE-47CC-B84D-0FADADD5C120.png" alt=""/></p>
+
+<h3 id="toc_6">SF Symbols</h3>
+
+<p>以前，iOS 系统提供了一些常用的「symbol 符号」用于表示 table view 每一行和工具栏上的图标。但现在有了深色模式，一些符号就会看上去不是很合适，显得有些单薄。</p>
+
+<p><img src="media/15674389801268/850CC01D-0D09-4EBB-97C8-1C025EB61014.png" alt=""/></p>
+
+<p>设计团队重新设计了所有的符号，并且整合成了包含 1500 多个符号的「SF Symbols」。这不仅仅是一些图标的合集，而且这代表了一种思考、设计图标的新的方式。</p>
+
+<p><img src="media/15674389801268/61A389C4-E26F-4D3F-8CF2-25D58F7D179C.png" alt=""/></p>
+
+<p>SF Symbols 可以与 Apple 的系统字体 San Francisco 的设计特征相匹配。它们可以被展示到一行文本中，SF Symbols 中插入了基线以确保能与文字有合适的对齐关系。每一个 SF Symbol 在一个字号下提供了小、中等、大三种大小变种以适配不同的情景 。</p>
+
+<p><img src="media/15674389801268/9C0D501E-81D6-4C51-BBDE-60BEBCA0411C.png" alt=""/></p>
+
+<p>并且每一个 SF Symbol 也像 SF 字体一样提供了九种字重，因此在粗体文本的辅助功能开启时可以变得更粗。因为 SF Symbols 是矢量的，所以可以跟随文本在动态类型中发生变化。</p>
+
+<p><img src="media/15674389801268/B03256ED-240B-4C35-B865-EE6571A6A6FD.png" alt=""/></p>
+
+<p>要在实际的设计中使用 SF Symbols，只需要在 SF Symbols app 中浏览或搜索你想要的符号，将其复制粘贴到你的设计中即可。</p>
+
+<p><img src="media/15674389801268/9612CE0C-2A32-4E25-AC69-2A98B99C4BEE.png" alt=""/></p>
+
+<p>如果 app 中没有你想要的符号，你可以通过模板创造一个格式为 svg 的自定义的符号，之后就可以获得 SF Symbols 所提供的所有功能。</p>
+
+<h2 id="toc_7">Modal Presentations 模态展示</h2>
+
+<p>新的卡片样式的表单不仅通过一种不同的方式呈现了「Modal Prensentations 模态展示」，而且改变了我们与这些控件交互的方式。</p>
+
+<p><img src="media/15674389801268/84F85BAC-67D0-4E1C-9EA6-CC1EC96ECD71.png" alt=""/></p>
+
+<p>模态展示通常被称为「sheets 薄片」，因为它是从屏幕底部划入屏幕中的。这个进场动画告诉人们他们从一个模式转换到了另一个新的模式或者说进入了 app 的一个新的模态。在 iOS 13 中，模态窗口有了一个在全系统使用的新的像卡片样子的外观。模态展示的好处是可以让用户看到背景中还有其他内容待确认或者待完成。如果是一个全屏的模态窗口，你可能就会忘记你之前在做什么。</p>
+
+<p><img src="media/15674389801268/7F9F72A7-5DFD-4D2E-BF92-95C4B292AA3B.png" alt=""/></p>
+
+<p>模态窗口可以通过在卡片的导航栏上向下滑动来关闭。不可滚动的卡片样式的模态窗口可以通过在任意位置向下滑动来关闭，这比点击导航栏上的一个按钮来得更容易操作，而且这种单指就能完成的操作也对大屏手机有利。可滚动的模态窗口向上滚动到顶端，若继续向上滚动则可以关闭模态窗口。</p>
+
+<p><img src="media/15674389801268/51B77D63-51C6-4A08-884E-906257511494.png" alt=""/></p>
+
+<p>如果你的 app 的某个交互与这个关闭交互发生了冲突，那这个关闭操作就会不起作用。当模态窗口包含一个强制性的操作请求时，那关闭模态窗口的交互也会不起作用。例如在关闭一个正在写邮件的模态窗口时，为了防止用户误操作而丢失内容，界面会显示一个 Action Sheet 让用户选择是否要保存草稿。</p>
+
+<p><img src="media/15674389801268/AE97B31F-6872-4D5E-B88A-872E48E589A1.png" alt=""/></p>
+
+<p>有了关闭的手势并不代表不需要可以执行关闭操作的按钮。关闭按钮对于让用户知道这个页面可以关闭十分重要，对于可访问性也非常有帮助。况且人们可能并不熟悉关闭窗口的手势操作。而且当一个内容区域被向下滚动时，一个关闭操作的按钮也更加方便。</p>
+
+<p><img src="media/15674389801268/BA4E395B-55E2-4B1A-A3C1-3B2089FA2956.png" alt=""/></p>
+
+<p>虽然卡片形式的模态展示非常方便，遍布整个 iOS 系统，但是并不代表这个交互总是合适的。对于一些任务，像编辑图片、标记截图界面，你更需要最大化屏幕操作空间，减少让用户分心的视觉元素。对于这种情况，你应该使用全屏的模态展示。</p>
+
+<p><img src="media/15674389801268/8CAC7C5E-B6F7-421F-8D83-95D387187A76.png" alt=""/></p>
+
+<p>特别注意，模态是指的是模式之前的切换。不要因为喜欢这个交互的动效或者视觉样式而去使用它。例如在日历中，当浏览日历时你可以查看日历的所有事项，选中某个事项查看详情。因为我们一直处于浏览模式，一个子视图更加适合展示事项详情。一个子视图就是父视图的延伸，其代表任务或者工作流的继续。当创建或编辑一个事项时，一个模态窗口表示进入了一个新的工作流。</p>
+
+<p><img src="media/15674389801268/8B778C6D-2B5B-40B3-8CB2-EA874F2D7EF2.png" alt=""/></p>
+
+<h2 id="toc_8">Contextual Menus 情景化菜单</h2>
+
+<p>新的「Contextual Menus 情景化菜单」控件使快速获取情景相关的功能更加简单。</p>
+
+<p><img src="media/15674389801268/EB1ADF03-10DB-4E52-8F8F-151022C908C7.png" alt=""/></p>
+
+<p>通过 3D Touch 引入了一个新的一个新的交互「Peek」和「Pop」。这对于预览内容很有用，如果有相关的操作可以通过上划显示并选择相应的操作。情景化菜单在这基础上进行了转化，将重点放在了操作上。与内容相关的操作可以立马呈现出来。</p>
+
+<p><img src="media/15674389801268/E68D02C0-178A-41BE-AB5A-2ED19B0F1EDD.png" alt=""/></p>
+
+<p>情景化菜单可以在所有的设备上起作用，而 peek 和 pop 操作只在具备 3D Touch 功能的设备上起作用。展示情景化菜单的手势是通过长按，而在具备 3D Touch 功能的设备上操作更简单，只需用力按。情景化菜单可以分为两部分，一部分是可以被执行的操作，另一部分是可选的，用于显示所选内容的预览。</p>
+
+<p><img src="media/15674389801268/66E6CD12-593E-4F4D-B94B-A7E64D4B9C4B.png" alt=""/></p>
+
+<p>情景化菜单的样式取决于设备的屏幕尺寸和方向。在 iPhone 上情景化菜单的预览和命令操作竖直排列，在 iPad 上当命令操作小于等于三个时，也是竖直排列，而其他情况则是左右排列。</p>
+
+<p><img src="media/15674389801268/8EDA95BD-4E07-4E11-9599-48EA23657854.png" alt=""/></p>
+
+<p>情景化菜单会出现在被触发内容的最近之处，应该把用户常用的操作放在上面。并且对于相关的操作应该作为一组，对于不同的组可以使用分隔线进行视觉区分。情景化菜单也可以是有层级的，某些操作可以有二级操作。情景化菜单也包括一个图标帮助用户快速找到想要的操作，并使用红色文本标签提醒用户这是一个破坏性的操作。就像 macOS 的情景化菜单（右键菜单）一样，你应该尽可能地让 app 的每一个对象都有情景化菜单。</p>
+
+<p><img src="media/15674389801268/32B6A089-A1F4-4510-97A7-08E77385F3CC.png" alt=""/></p>
+
+<p>情景化菜单中的操作也应该在 app 中的其他位置找到并可用。因为人们可能并不一定能及时发现相关的情景化菜单。</p>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15416976044741.html" 
+          title="Next Post: Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同? &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_douban"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          
+            <div id="disqus_thread"></div>
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <div class="site-a-logo"><img src="media/14625521742746/Step%20Park%20LOGO-White+Circle-.png" /></div>
+            
+                <h1>向远公园 | Step Park</h1>
+                <div class="site-des">搞懂逻辑 | 理清思路 | 沉淀想法 | 纪录生活</div>
+                <div class="social">
+
+
+
+
+
+
+
+<a target="_blank" class="weibo" href="https://weibo.com/chuxiangyuan1104/" title="Weibo">Weibo</a>
+<a target="_blank" class="twitter" target="_blank" href="https://twitter.com/chuxiangyuan/" title="Twitter">Twitter</a>
+<a target="_blank" class="github" target="_blank" href="https://github.com/ChuXiangyuan/" title="GitHub">GitHub</a>
+<a target="_blank" class="email" href="mailto:chuxiangyuan1104@gmail.com" title="Email">Email</a>
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+               
+             <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Featured</h2>
+                </div>
+                <div class="side-content">
+                  
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15674389801268.html">1️⃣ iOS 13 的设计有什么新变化？</a>
+
+                  </div>
+                  
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15416976044741.html">2️⃣ Designing For New iPad Pro and Apple Pencil</a>
+
+                  </div>
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15086036845015.html">3️⃣ Designing For iPhone X</a>
+
+                  </div>
+                  
+                </div>
+            </div>
+            
+    
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="Design.html"><strong>Design</strong></a>
+        
+            <a href="Develop.html"><strong>Develop</strong></a>
+        
+            <a href="Teconology.html"><strong>Teconology</strong></a>
+        
+            <a href="Tools.html"><strong>Tools</strong></a>
+        
+            <a href="Life.html"><strong>Life</strong></a>
+        
+            <a href="Talk.html"><strong>Talk</strong></a>
+        
+            <a href="Others.html"><strong>Others</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15674389801268.html">iOS 13 的设计有什么新变化？</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15433010141111.html">Designing For iPhone Xs、iPhone Xs Max、iPhone Xʀ — 比大还大，更大的刘海屏 iPhone 来了</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15416957498069.html">Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15107547493398.html">Allen 说:🎙</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              
+
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2018
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'chuxiangyuan'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script type="text/javascript">
+var disqus_shortname = 'chuxiangyuan'; 
+
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109532424-1');
+  gtag('set', {'user_id': 'USER_ID'}); // 使用已登录的 user_id 来设置用户 ID。
+</script>
+
+  </body>
+</html>
