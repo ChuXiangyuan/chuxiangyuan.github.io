@@ -1,0 +1,753 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  Android 10 的深色主题应用 - 向远公园 | Step Park
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="向远公园 | Step Park" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:steppark.net ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+</script>
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">Home</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="music.html">Music</a></li>
+        
+        <li id=""><a target="_self" href="about.html">About</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 向远公园 | Step Park</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="music.html">Music</a></li>
+        
+        <li><a target="_self" href="about.html">About</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="Design.html">Design</a></li>
+        
+            <li><a href="Develop.html">Develop</a></li>
+        
+            <li><a href="Teconology.html">Teconology</a></li>
+        
+            <li><a href="Tools.html">Tools</a></li>
+        
+            <li><a href="Life.html">Life</a></li>
+        
+            <li><a href="Talk.html">Talk</a></li>
+        
+            <li><a href="Others.html">Others</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>Android 10 的深色主题应用</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2019/8/10</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='Design.html'>Design</a></span>
+           
+         
+          <span class="comments">
+            
+              <a href="https://steppark.net/15675754544495.html#disqus_thread">comments</a>
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p>从 Android 10 开始，系统引入了「Dark Theme 深色主题」功能，app 不仅可以在默认的浅色主题模式下浏览，也可以在新的深色主题下浏览。<br/>
+深色主题简而言之就是在深色的界面上展示低亮度的 UI。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15675754544495/darktheme-overview.png" alt=""/></p>
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">Usage 用法</a>
+<ul>
+<li>
+<a href="#toc_2">Principles 原则</a>
+</li>
+<li>
+<a href="#toc_3">Properties 特性</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_4">Anatomy 结构</a>
+</li>
+<li>
+<a href="#toc_5">Behavior 行为</a>
+</li>
+<li>
+<a href="#toc_6">Properties 属性</a>
+<ul>
+<li>
+<a href="#toc_7">Elevation 海拔</a>
+</li>
+<li>
+<a href="#toc_8">Accessibility and contrast 可访问性和对比度</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_9">UI application UI 应用</a>
+<ul>
+<li>
+<a href="#toc_10">Theme colors 主题颜色</a>
+</li>
+<li>
+<a href="#toc_11">Primary color 主要颜色</a>
+</li>
+<li>
+<a href="#toc_12">Secondary color 次要颜色</a>
+</li>
+<li>
+<a href="#toc_13">Accnet color 强调色</a>
+</li>
+<li>
+<a href="#toc_14">Brand colors 品牌颜色</a>
+</li>
+<li>
+<a href="#toc_15">The dark theme baseline palette 深色主题基线色盘</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_16">Custom application 自定义应用</a>
+</li>
+<li>
+<a href="#toc_17">States 状态</a>
+<ul>
+<li>
+<a href="#toc_18">Surface Containers</a>
+</li>
+<li>
+<a href="#toc_19">Primary Containers</a>
+</li>
+<li>
+<a href="#toc_20">不可用状态</a>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2 id="toc_1">Usage 用法</h2>
+
+<p>深色主题在主要的 UI 之间展示了深色的界面，它是默认浅色主题的一个补充。<br/>
+深色主题减少了屏幕发出的亮度，但仍然满足最小对比度。它通过减少眼部压力、适应当前光照条件、让在黑暗环境中使用屏幕更便利来改善视觉效率。当然也节省了电量，对于 OLED 屏幕通过关掉所有的黑色像素的发光来从中受益。</p>
+
+<h3 id="toc_2">Principles 原则</h3>
+
+<ul>
+<li>Darken with grey 使用灰色来变暗：使用深灰色而不是纯黑色来表现环境中的海拔感和空间感。</li>
+</ul>
+
+<p><img src="media/15675754544495/dark-mode-gray.png" alt=""/></p>
+
+<ul>
+<li>Color with accents 强调色：在深色主题中使用有限的强调色，大部分的空间都应该是深色的界面。</li>
+</ul>
+
+<p><img src="media/15675754544495/dark-mode-color.png" alt=""/></p>
+
+<ul>
+<li>Conserve engery 节省能量：在需要注意效率的设备上，比如 OLED 屏幕，通过减少浅色像素的使用来节省电量。</li>
+</ul>
+
+<p><img src="media/15675754544495/dark-mode-battery.png" alt=""/></p>
+
+<ul>
+<li>Enhance accessibility：要考虑到那些特殊的使用深色主题的用户，比如视力障碍人士，通过符号可访问性的颜色对比度标准来实现。</li>
+</ul>
+
+<p><img src="media/15675754544495/dark-mode-aa.png" alt=""/></p>
+
+<h3 id="toc_3">Properties 特性</h3>
+
+<ul>
+<li>Contrast 对比度：深色的界面和纯白色的文本有至少 15.8:1 的对比度；</li>
+<li>Depth 深度：在更好的层级上，组件在表现深度时应使用更浅的界面颜色；</li>
+<li>Desaturation 去饱和：主要颜色（Primary Colors）应该去饱和，以满足 WCAG 至少 4.5:1 的 AA 标准；</li>
+<li>Limited color 限制颜色使用：大的界面使用深色的界面颜色，限制使用强调色。</li>
+</ul>
+
+<h2 id="toc_4">Anatomy 结构</h2>
+
+<p>深色主题的 UI 主要使用深色的表面，一点点强调色。为了保持一个高标准的可用性，界面只会散发出一点点光。</p>
+
+<p>下图是一个界面的颜色示例：</p>
+
+<ol>
+<li>Background (0dp elevation surface overlay)</li>
+<li>Surface (with 1dp elevation surface overlay)</li>
+<li>Primary</li>
+<li>Secondary</li>
+<li>On background</li>
+<li>On Surface</li>
+<li>On Primary</li>
+<li>On Secondary</li>
+</ol>
+
+<p><img src="media/15675754544495/darktheme-anatomy.png" alt=""/></p>
+
+<h2 id="toc_5">Behavior 行为</h2>
+
+<p>深色主题可以通过使用一个控件被开启或关闭。</p>
+
+<ul>
+<li>为了显眼，可以使用一个 icon 来触发深色主题的开启和关闭；</li>
+<li>如果为了不那么显眼，可以使用菜单或者设置里的一个开关来控制。</li>
+</ul>
+
+<p>下图是在 top app bar 上设置了一个按钮开关：</p>
+
+<p><img src="media/15675754544495/darktheme-darktheme-usage-availability-toggle.png" alt=""/></p>
+
+<p>下图是在一个弹出菜单中设置了选项：</p>
+
+<p><img src="media/15675754544495/darktheme-darktheme-usage-availability-menu.png" alt=""/></p>
+
+<p>下图是在 app 的设置中设置了一个开关：</p>
+
+<p><img src="media/15675754544495/darktheme-darktheme-usage-availability-settings.png" alt=""/></p>
+
+<h2 id="toc_6">Properties 属性</h2>
+
+<p>深色主题应使用深灰色而不是纯黑色作为组件的首要表面颜色（primary surface color）。深灰色的表面更容易表示更大范围的颜色、海拔、深度，因为它更容易在灰色上看清除阴影。<br/>
+深灰色的表面也减少了眼部的压力，在深灰色表面上的浅色文本比在黑色表面上的浅色文本有更低的对比度。</p>
+
+<p>推荐的深色主题表面颜色是「#121212」。</p>
+
+<p><img src="media/15675754544495/darktheme-darksurfaces-grey.png" alt=""/></p>
+
+<h3 id="toc_7">Elevation 海拔</h3>
+
+<p>在深色主题中，组件具有与浅色主题相同的海拔层级和阴影。然而，在深色主题中，不同的海拔层级表示方法不再与以前完全一样。<br/>
+表面的海拔层级越高（就像离光源越近），表面应该变得越亮，可以<a href="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1ro3dFa9v71nmSj8eg-tqN83z1Hcclgeu%2Fdarktheme-lightsource.mp4">查看动态展示↗</a>。</p>
+
+<p><img src="media/15675754544495/294E1135-1CB1-467F-AE9B-2E33629CBE68.png" alt=""/></p>
+
+<p><img src="media/15675754544495/BDD71245-2701-47E6-92BB-26DF6EA5F007.png" alt=""/></p>
+
+<p>深色主题的表面通过在组件表面上放置一层半透明的白色遮罩（overlay）来展现。</p>
+
+<p><img src="media/15675754544495/4AD669E7-FA38-4068-93A7-AB911BA151CB.png" alt=""/></p>
+
+<p>在表面上的遮罩也使得更容易区分组件之间的海拔层级，以看到阴影。遮罩在表面和阴影之间增加了对比度，使每个表面的边缘更明显，可以<a href="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1MHUUJUUsP5V7UUaeeVrgzOuJ6r4FFlIG%2Fdarktheme-light-dark-elevation.mp4">查看动态演示↗</a></p>
+
+<p><img src="media/15675754544495/619B6D2B-B55B-460D-AEE9-B81D39E9D165.png" alt=""/></p>
+
+<p><img src="media/15675754544495/2CC0B459-0D4E-4DAA-9A75-D265B2ECC56B.png" alt=""/></p>
+
+<p>这些表面遮罩的值为保证最大可读性来设计，同时也确保不同海拔层级之间能够看得清。</p>
+
+<p><img src="media/15675754544495/B8C3A6ED-55BD-4E8C-A4C2-98FAAD462736.png" alt=""/></p>
+
+<p>遮罩表明了在组件之间的不同海拔层级。</p>
+
+<p><img src="media/15675754544495/AC6F11F6-71CF-4FE2-B509-0945860E6867.png" alt=""/></p>
+
+<p>对于主要颜色和次要颜色，不要在使用这些颜色的表面上使用海拔层级遮罩。在深色主题中，阴影仍然是深色以保证投影的准确度。</p>
+
+<p><img src="media/15675754544495/D470FB72-D596-40C8-82BB-4595CBF8C6A4.png" alt=""/></p>
+
+<h3 id="toc_8">Accessibility and contrast 可访问性和对比度</h3>
+
+<p>深色主题的表面必须足够暗以能够展示白色文本。在文本和背景之间至少应该达到 15.8:1 的对比度。在更高海拔层级（更浅颜色）的表面上，文本应该至少满足 WACG 的 4.5:1 的 AA 对比度要求。</p>
+
+<p><img src="media/15675754544495/FFE564DB-3E23-4749-9C9F-A846D4CC5782.png" alt=""/></p>
+
+<p><img src="media/15675754544495/4375B991-5860-4BC7-B527-EA964F94D7DC.png" alt=""/></p>
+
+<p>对于那些对电量使用有效率要求的 UI 来说可以使用纯黑色，一些设备（比如配备 OLED 屏幕的可穿戴设备）可以通过关闭像素点来显示黑色从而解压电量，可以<a href="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1-j0v2NbxU5lVtcB1A2wjDj-n1_UFHBNu%2Fdarktheme-surfaces-black.mp4">查看动态演示↗</a>。</p>
+
+<p><img src="media/15675754544495/4D14680C-2580-4C09-872D-1F96413B50D6.png" alt=""/></p>
+
+<h2 id="toc_9">UI application UI 应用</h2>
+
+<h3 id="toc_10">Theme colors 主题颜色</h3>
+
+<p>深色主题应该避免使用过饱和的颜色，因为它们与深色表面放在一起不会通过 4.5:1 的最低对比度要求。过饱和的颜色也会造成光学上的振动，增加眼部压力。去饱和的颜色是更好的选择。</p>
+
+<p><img src="media/15675754544495/43E0D0B2-AF8A-4BE3-BBB8-FD4257445867.png" alt=""/></p>
+
+<h3 id="toc_11">Primary color 主要颜色</h3>
+
+<p>主要颜色是在你的 app 中的屏幕和组件中最频繁使用的。Material Design 深色主题一般使用主要颜色的 200 色调变种作为基线，这个变种可以在任何海拔高度的表面通过至少 4.5:1 的对比度要求。</p>
+
+<p><img src="media/15675754544495/6F0FF795-43C2-4478-8B00-D548E2101962.png" alt=""/></p>
+
+<p>具有浅色表面的组件可以使用深色主题主要颜色的某个变种。</p>
+
+<p><img src="media/15675754544495/1FD67276-5D96-4310-BEBA-D95022F152F0.png" alt=""/></p>
+
+<h3 id="toc_12">Secondary color 次要颜色</h3>
+
+<p>次要颜色被用来强调 UI 中的选择部分。在深色主题中，次要颜色也要去饱和以满足至少 4.5:1 的对比度要求。、</p>
+
+<p><img src="media/15675754544495/2DBAB354-3179-4FAC-A587-54C1AABA204C.png" alt=""/></p>
+
+<p><img src="media/15675754544495/FC29658B-068B-4CC6-99D0-5380A39FDD6D.png" alt=""/></p>
+
+<h3 id="toc_13">Accnet color 强调色</h3>
+
+<p>在深色主题中，深色表面几乎占据了 UI 的全部。强调色可以让元素显眼，它们应该被单独应用与需要被强调的核心元素，比如文字或按钮。</p>
+
+<p>可以使用「色盘生成器 color palette generator」来生成颜色主题，它会根据你自定义的主要颜色和次要颜色生成从深色到浅色的一系列颜色变种。你可以从中选择你要用在深色主题中的颜色。</p>
+
+<p><img src="media/15675754544495/05575D43-B1A1-4C0E-84E3-76498A93E0C8.png" alt=""/></p>
+
+<p><img src="media/15675754544495/7B87DF6D-3E56-447A-A9CE-B16C7BB9F570.png" alt=""/></p>
+
+<p><img src="media/15675754544495/918377D7-D1D7-45A0-AD6A-2740BB947FD0.png" alt=""/></p>
+
+<h3 id="toc_14">Brand colors 品牌颜色</h3>
+
+<p>为了保持品牌辨识度，品牌颜色可以在深色主题中保持饱和度，但应用内的品牌元素应该有所限制，比如只有一两个，例如 logo 或者品牌按钮。通过单独使用品牌颜色，元素可以在层级中保持显眼。</p>
+
+<p><img src="media/15675754544495/8EB784ED-2694-417C-B3AA-6C104FA8B662.png" alt=""/></p>
+
+<h3 id="toc_15">The dark theme baseline palette 深色主题基线色盘</h3>
+
+<p>深色主题颜色应该被应用与各个深色主题的 UI，包括下面这些部分</p>
+
+<ul>
+<li>颜色：主要颜色、次要颜色、主要颜色变种；</li>
+<li>表面：背景和组件；</li>
+<li>状态：比如错误状态；</li>
+<li>内容：文字排版、图标排版。</li>
+</ul>
+
+<p><img src="media/15675754544495/19D185BE-2F00-49B8-9942-18928A2ACDF0.png" alt=""/></p>
+
+<p>在浅色主题和深色主题下不同组成部分颜色的变化：</p>
+
+<p><img src="media/15675754544495/301C1DCF-B20E-4A5D-A371-FAE935028871.png" alt=""/></p>
+
+<p>错误颜色用来表示错误状态。</p>
+
+<p><img src="media/15675754544495/1C65FD00-9040-4B78-8325-FB7F1FCFC863.png" alt=""/></p>
+
+<p>通常情况下用于文字排版和图标排版的「On colors」表示在其他主题颜色表面上使用的颜色，比如主要颜色上、次要颜色上、表面颜色上、背景颜色上、错误颜色上。默认情况下，深色主题的「On colors」是白色和黑色。</p>
+
+<p><img src="media/15675754544495/B0AF1EEA-9AF8-4446-82E1-B8D5CE9B1DC3.png" alt=""/></p>
+
+<p>当浅色文本出现在深色背景上时，一般遵照下面的准则：</p>
+
+<ul>
+<li>高层级强调：87% 不透明度；</li>
+<li>中层级强调：60% 不透明度；</li>
+<li>不可用文本：38% 不透明度。</li>
+</ul>
+
+<p><img src="media/15675754544495/darktheme-adjustedcolor-textlegibility.png" alt=""/></p>
+
+<h2 id="toc_16">Custom application 自定义应用</h2>
+
+<p>使用较大比例屏幕的组件，比如 app bar、backdrop，可以使用表面颜色作为深色主题的颜色。</p>
+
+<p><img src="media/15675754544495/2FA48FD2-8085-4840-8A9F-05EB7A74C4C0.png" alt=""/></p>
+
+<p><img src="media/15675754544495/930AC981-60F8-490B-A4E5-5B45118A47B8.png" alt=""/></p>
+
+<p>当深色主题中需要一个浅色表面时，浅色可以被用在组件表面以突出层级关系。举个例子，深色主题的 snackbar 为了突出显示就可以有一个浅色的表面。因此你可以应用浅色主题的 Surface color 和 On Surface color。</p>
+
+<p><img src="media/15675754544495/173DD1EF-CE9D-4C19-BB85-C947F43AD8F4.png" alt=""/></p>
+
+<h2 id="toc_17">States 状态</h2>
+
+<p>「状态」在视觉上通过使用遮罩表达了组件或不可交互元素的状态。在深色主题中，状态也应该使用与浅色主题一样的遮罩值，它们调整后可以满足 AA 的对比度要求。<br/>
+有两种类型的容器：一种使用「Surface」填充色，另一种使用「Primary」填充色。</p>
+
+<h3 id="toc_18">Surface Containers</h3>
+
+<p>Surface containers 使用「Surface」颜色作为填充色，使用文本或 icon 的颜色作为遮罩颜色。</p>
+
+<p><img src="media/15675754544495/2A191F46-7395-4218-A962-D873541EE785.png" alt=""/></p>
+
+<h3 id="toc_19">Primary Containers</h3>
+
+<p>Primary containers 使用「Primary」颜色作为填充色，使用白色作为遮罩颜色。</p>
+
+<p><img src="media/15675754544495/CFE7BCF9-8190-4EFC-B1C8-A7A68FE76B4F.png" alt=""/></p>
+
+<h3 id="toc_20">不可用状态</h3>
+
+<p>不可用状态的组件都使用 12% 不透明度的白色作为描边颜色和填充颜色，38% 不透明度的白色作为内容颜色，比如文本或 icon。</p>
+
+<p><img src="media/15675754544495/4D85DF39-029F-4FA5-8418-FE3DE3A1A3B7.png" alt=""/></p>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15675156374221.html" 
+          title="Next Post: 在 tvOS 中把内容放在第一位">在 tvOS 中把内容放在第一位 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_douban"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          
+            <div id="disqus_thread"></div>
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <div class="site-a-logo"><img src="media/14625521742746/Step%20Park%20LOGO-White+Circle-.png" /></div>
+            
+                <h1>向远公园 | Step Park</h1>
+                <div class="site-des">搞懂逻辑 | 理清思路 | 沉淀想法 | 纪录生活</div>
+                <div class="social">
+
+
+
+
+
+
+
+<a target="_blank" class="weibo" href="https://weibo.com/chuxiangyuan1104/" title="Weibo">Weibo</a>
+<a target="_blank" class="twitter" target="_blank" href="https://twitter.com/chuxiangyuan/" title="Twitter">Twitter</a>
+<a target="_blank" class="github" target="_blank" href="https://github.com/ChuXiangyuan/" title="GitHub">GitHub</a>
+<a target="_blank" class="email" href="mailto:chuxiangyuan1104@gmail.com" title="Email">Email</a>
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+               
+             <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Featured</h2>
+                </div>
+                <div class="side-content">
+                  
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15674389801268.html">1️⃣ iOS 13 的设计有什么新变化？</a>
+
+                  </div>
+                  
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15416976044741.html">2️⃣ Designing For New iPad Pro and Apple Pencil</a>
+
+                  </div>
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15086036845015.html">3️⃣ Designing For iPhone X</a>
+
+                  </div>
+                  
+                </div>
+            </div>
+            
+    
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="Design.html"><strong>Design</strong></a>
+        
+            <a href="Develop.html"><strong>Develop</strong></a>
+        
+            <a href="Teconology.html"><strong>Teconology</strong></a>
+        
+            <a href="Tools.html"><strong>Tools</strong></a>
+        
+            <a href="Life.html"><strong>Life</strong></a>
+        
+            <a href="Talk.html"><strong>Talk</strong></a>
+        
+            <a href="Others.html"><strong>Others</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15675754544495.html">Android 10 的深色主题应用</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15675156374221.html">在 tvOS 中把内容放在第一位</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15675148872165.html">在设计和开发时使用 SF Symbols</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15674389801268.html">iOS 13 的设计有什么新变化？</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              
+
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2018
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'chuxiangyuan'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script type="text/javascript">
+var disqus_shortname = 'chuxiangyuan'; 
+
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109532424-1');
+  gtag('set', {'user_id': 'USER_ID'}); // 使用已登录的 user_id 来设置用户 ID。
+</script>
+
+  </body>
+</html>

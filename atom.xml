@@ -4,13 +4,1174 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2019-09-03T19:02:23+08:00</updated>
+  <updated>2019-09-04T13:48:19+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Android 10 的深色主题应用]]></title>
+    <link href="https://steppark.net/15675754544495.html"/>
+    <updated>2019-09-04T13:37:34+08:00</updated>
+    <id>https://steppark.net/15675754544495.html</id>
+    <content type="html"><![CDATA[
+<p>从 Android 10 开始，系统引入了「Dark Theme 深色主题」功能，app 不仅可以在默认的浅色主题模式下浏览，也可以在新的深色主题下浏览。<br/>
+深色主题简而言之就是在深色的界面上展示低亮度的 UI。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15675754544495/darktheme-overview.png" alt=""/></p>
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">Usage 用法</a>
+<ul>
+<li>
+<a href="#toc_2">Principles 原则</a>
+</li>
+<li>
+<a href="#toc_3">Properties 特性</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_4">Anatomy 结构</a>
+</li>
+<li>
+<a href="#toc_5">Behavior 行为</a>
+</li>
+<li>
+<a href="#toc_6">Properties 属性</a>
+<ul>
+<li>
+<a href="#toc_7">Elevation 海拔</a>
+</li>
+<li>
+<a href="#toc_8">Accessibility and contrast 可访问性和对比度</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_9">UI application UI 应用</a>
+<ul>
+<li>
+<a href="#toc_10">Theme colors 主题颜色</a>
+</li>
+<li>
+<a href="#toc_11">Primary color 主要颜色</a>
+</li>
+<li>
+<a href="#toc_12">Secondary color 次要颜色</a>
+</li>
+<li>
+<a href="#toc_13">Accnet color 强调色</a>
+</li>
+<li>
+<a href="#toc_14">Brand colors 品牌颜色</a>
+</li>
+<li>
+<a href="#toc_15">The dark theme baseline palette 深色主题基线色盘</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_16">Custom application 自定义应用</a>
+</li>
+<li>
+<a href="#toc_17">States 状态</a>
+<ul>
+<li>
+<a href="#toc_18">Surface Containers</a>
+</li>
+<li>
+<a href="#toc_19">Primary Containers</a>
+</li>
+<li>
+<a href="#toc_20">不可用状态</a>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2 id="toc_1">Usage 用法</h2>
+
+<p>深色主题在主要的 UI 之间展示了深色的界面，它是默认浅色主题的一个补充。<br/>
+深色主题减少了屏幕发出的亮度，但仍然满足最小对比度。它通过减少眼部压力、适应当前光照条件、让在黑暗环境中使用屏幕更便利来改善视觉效率。当然也节省了电量，对于 OLED 屏幕通过关掉所有的黑色像素的发光来从中受益。</p>
+
+<h3 id="toc_2">Principles 原则</h3>
+
+<ul>
+<li>Darken with grey 使用灰色来变暗：使用深灰色而不是纯黑色来表现环境中的海拔感和空间感。</li>
+</ul>
+
+<p><img src="media/15675754544495/dark-mode-gray.png" alt=""/></p>
+
+<ul>
+<li>Color with accents 强调色：在深色主题中使用有限的强调色，大部分的空间都应该是深色的界面。</li>
+</ul>
+
+<p><img src="media/15675754544495/dark-mode-color.png" alt=""/></p>
+
+<ul>
+<li>Conserve engery 节省能量：在需要注意效率的设备上，比如 OLED 屏幕，通过减少浅色像素的使用来节省电量。</li>
+</ul>
+
+<p><img src="media/15675754544495/dark-mode-battery.png" alt=""/></p>
+
+<ul>
+<li>Enhance accessibility：要考虑到那些特殊的使用深色主题的用户，比如视力障碍人士，通过符号可访问性的颜色对比度标准来实现。</li>
+</ul>
+
+<p><img src="media/15675754544495/dark-mode-aa.png" alt=""/></p>
+
+<h3 id="toc_3">Properties 特性</h3>
+
+<ul>
+<li>Contrast 对比度：深色的界面和纯白色的文本有至少 15.8:1 的对比度；</li>
+<li>Depth 深度：在更好的层级上，组件在表现深度时应使用更浅的界面颜色；</li>
+<li>Desaturation 去饱和：主要颜色（Primary Colors）应该去饱和，以满足 WCAG 至少 4.5:1 的 AA 标准；</li>
+<li>Limited color 限制颜色使用：大的界面使用深色的界面颜色，限制使用强调色。</li>
+</ul>
+
+<h2 id="toc_4">Anatomy 结构</h2>
+
+<p>深色主题的 UI 主要使用深色的表面，一点点强调色。为了保持一个高标准的可用性，界面只会散发出一点点光。</p>
+
+<p>下图是一个界面的颜色示例：</p>
+
+<ol>
+<li>Background (0dp elevation surface overlay)</li>
+<li>Surface (with 1dp elevation surface overlay)</li>
+<li>Primary</li>
+<li>Secondary</li>
+<li>On background</li>
+<li>On Surface</li>
+<li>On Primary</li>
+<li>On Secondary</li>
+</ol>
+
+<p><img src="media/15675754544495/darktheme-anatomy.png" alt=""/></p>
+
+<h2 id="toc_5">Behavior 行为</h2>
+
+<p>深色主题可以通过使用一个控件被开启或关闭。</p>
+
+<ul>
+<li>为了显眼，可以使用一个 icon 来触发深色主题的开启和关闭；</li>
+<li>如果为了不那么显眼，可以使用菜单或者设置里的一个开关来控制。</li>
+</ul>
+
+<p>下图是在 top app bar 上设置了一个按钮开关：</p>
+
+<p><img src="media/15675754544495/darktheme-darktheme-usage-availability-toggle.png" alt=""/></p>
+
+<p>下图是在一个弹出菜单中设置了选项：</p>
+
+<p><img src="media/15675754544495/darktheme-darktheme-usage-availability-menu.png" alt=""/></p>
+
+<p>下图是在 app 的设置中设置了一个开关：</p>
+
+<p><img src="media/15675754544495/darktheme-darktheme-usage-availability-settings.png" alt=""/></p>
+
+<h2 id="toc_6">Properties 属性</h2>
+
+<p>深色主题应使用深灰色而不是纯黑色作为组件的首要表面颜色（primary surface color）。深灰色的表面更容易表示更大范围的颜色、海拔、深度，因为它更容易在灰色上看清除阴影。<br/>
+深灰色的表面也减少了眼部的压力，在深灰色表面上的浅色文本比在黑色表面上的浅色文本有更低的对比度。</p>
+
+<p>推荐的深色主题表面颜色是「#121212」。</p>
+
+<p><img src="media/15675754544495/darktheme-darksurfaces-grey.png" alt=""/></p>
+
+<h3 id="toc_7">Elevation 海拔</h3>
+
+<p>在深色主题中，组件具有与浅色主题相同的海拔层级和阴影。然而，在深色主题中，不同的海拔层级表示方法不再与以前完全一样。<br/>
+表面的海拔层级越高（就像离光源越近），表面应该变得越亮，可以<a href="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1ro3dFa9v71nmSj8eg-tqN83z1Hcclgeu%2Fdarktheme-lightsource.mp4">查看动态展示↗</a>。</p>
+
+<p><img src="media/15675754544495/294E1135-1CB1-467F-AE9B-2E33629CBE68.png" alt=""/></p>
+
+<p><img src="media/15675754544495/BDD71245-2701-47E6-92BB-26DF6EA5F007.png" alt=""/></p>
+
+<p>深色主题的表面通过在组件表面上放置一层半透明的白色遮罩（overlay）来展现。</p>
+
+<p><img src="media/15675754544495/4AD669E7-FA38-4068-93A7-AB911BA151CB.png" alt=""/></p>
+
+<p>在表面上的遮罩也使得更容易区分组件之间的海拔层级，以看到阴影。遮罩在表面和阴影之间增加了对比度，使每个表面的边缘更明显，可以<a href="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1MHUUJUUsP5V7UUaeeVrgzOuJ6r4FFlIG%2Fdarktheme-light-dark-elevation.mp4">查看动态演示↗</a></p>
+
+<p><img src="media/15675754544495/619B6D2B-B55B-460D-AEE9-B81D39E9D165.png" alt=""/></p>
+
+<p><img src="media/15675754544495/2CC0B459-0D4E-4DAA-9A75-D265B2ECC56B.png" alt=""/></p>
+
+<p>这些表面遮罩的值为保证最大可读性来设计，同时也确保不同海拔层级之间能够看得清。</p>
+
+<p><img src="media/15675754544495/B8C3A6ED-55BD-4E8C-A4C2-98FAAD462736.png" alt=""/></p>
+
+<p>遮罩表明了在组件之间的不同海拔层级。</p>
+
+<p><img src="media/15675754544495/AC6F11F6-71CF-4FE2-B509-0945860E6867.png" alt=""/></p>
+
+<p>对于主要颜色和次要颜色，不要在使用这些颜色的表面上使用海拔层级遮罩。在深色主题中，阴影仍然是深色以保证投影的准确度。</p>
+
+<p><img src="media/15675754544495/D470FB72-D596-40C8-82BB-4595CBF8C6A4.png" alt=""/></p>
+
+<h3 id="toc_8">Accessibility and contrast 可访问性和对比度</h3>
+
+<p>深色主题的表面必须足够暗以能够展示白色文本。在文本和背景之间至少应该达到 15.8:1 的对比度。在更高海拔层级（更浅颜色）的表面上，文本应该至少满足 WACG 的 4.5:1 的 AA 对比度要求。</p>
+
+<p><img src="media/15675754544495/FFE564DB-3E23-4749-9C9F-A846D4CC5782.png" alt=""/></p>
+
+<p><img src="media/15675754544495/4375B991-5860-4BC7-B527-EA964F94D7DC.png" alt=""/></p>
+
+<p>对于那些对电量使用有效率要求的 UI 来说可以使用纯黑色，一些设备（比如配备 OLED 屏幕的可穿戴设备）可以通过关闭像素点来显示黑色从而解压电量，可以<a href="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1-j0v2NbxU5lVtcB1A2wjDj-n1_UFHBNu%2Fdarktheme-surfaces-black.mp4">查看动态演示↗</a>。</p>
+
+<p><img src="media/15675754544495/4D14680C-2580-4C09-872D-1F96413B50D6.png" alt=""/></p>
+
+<h2 id="toc_9">UI application UI 应用</h2>
+
+<h3 id="toc_10">Theme colors 主题颜色</h3>
+
+<p>深色主题应该避免使用过饱和的颜色，因为它们与深色表面放在一起不会通过 4.5:1 的最低对比度要求。过饱和的颜色也会造成光学上的振动，增加眼部压力。去饱和的颜色是更好的选择。</p>
+
+<p><img src="media/15675754544495/43E0D0B2-AF8A-4BE3-BBB8-FD4257445867.png" alt=""/></p>
+
+<h3 id="toc_11">Primary color 主要颜色</h3>
+
+<p>主要颜色是在你的 app 中的屏幕和组件中最频繁使用的。Material Design 深色主题一般使用主要颜色的 200 色调变种作为基线，这个变种可以在任何海拔高度的表面通过至少 4.5:1 的对比度要求。</p>
+
+<p><img src="media/15675754544495/6F0FF795-43C2-4478-8B00-D548E2101962.png" alt=""/></p>
+
+<p>具有浅色表面的组件可以使用深色主题主要颜色的某个变种。</p>
+
+<p><img src="media/15675754544495/1FD67276-5D96-4310-BEBA-D95022F152F0.png" alt=""/></p>
+
+<h3 id="toc_12">Secondary color 次要颜色</h3>
+
+<p>次要颜色被用来强调 UI 中的选择部分。在深色主题中，次要颜色也要去饱和以满足至少 4.5:1 的对比度要求。、</p>
+
+<p><img src="media/15675754544495/2DBAB354-3179-4FAC-A587-54C1AABA204C.png" alt=""/></p>
+
+<p><img src="media/15675754544495/FC29658B-068B-4CC6-99D0-5380A39FDD6D.png" alt=""/></p>
+
+<h3 id="toc_13">Accnet color 强调色</h3>
+
+<p>在深色主题中，深色表面几乎占据了 UI 的全部。强调色可以让元素显眼，它们应该被单独应用与需要被强调的核心元素，比如文字或按钮。</p>
+
+<p>可以使用「色盘生成器 color palette generator」来生成颜色主题，它会根据你自定义的主要颜色和次要颜色生成从深色到浅色的一系列颜色变种。你可以从中选择你要用在深色主题中的颜色。</p>
+
+<p><img src="media/15675754544495/05575D43-B1A1-4C0E-84E3-76498A93E0C8.png" alt=""/></p>
+
+<p><img src="media/15675754544495/7B87DF6D-3E56-447A-A9CE-B16C7BB9F570.png" alt=""/></p>
+
+<p><img src="media/15675754544495/918377D7-D1D7-45A0-AD6A-2740BB947FD0.png" alt=""/></p>
+
+<h3 id="toc_14">Brand colors 品牌颜色</h3>
+
+<p>为了保持品牌辨识度，品牌颜色可以在深色主题中保持饱和度，但应用内的品牌元素应该有所限制，比如只有一两个，例如 logo 或者品牌按钮。通过单独使用品牌颜色，元素可以在层级中保持显眼。</p>
+
+<p><img src="media/15675754544495/8EB784ED-2694-417C-B3AA-6C104FA8B662.png" alt=""/></p>
+
+<h3 id="toc_15">The dark theme baseline palette 深色主题基线色盘</h3>
+
+<p>深色主题颜色应该被应用与各个深色主题的 UI，包括下面这些部分</p>
+
+<ul>
+<li>颜色：主要颜色、次要颜色、主要颜色变种；</li>
+<li>表面：背景和组件；</li>
+<li>状态：比如错误状态；</li>
+<li>内容：文字排版、图标排版。</li>
+</ul>
+
+<p><img src="media/15675754544495/19D185BE-2F00-49B8-9942-18928A2ACDF0.png" alt=""/></p>
+
+<p>在浅色主题和深色主题下不同组成部分颜色的变化：</p>
+
+<p><img src="media/15675754544495/301C1DCF-B20E-4A5D-A371-FAE935028871.png" alt=""/></p>
+
+<p>错误颜色用来表示错误状态。</p>
+
+<p><img src="media/15675754544495/1C65FD00-9040-4B78-8325-FB7F1FCFC863.png" alt=""/></p>
+
+<p>通常情况下用于文字排版和图标排版的「On colors」表示在其他主题颜色表面上使用的颜色，比如主要颜色上、次要颜色上、表面颜色上、背景颜色上、错误颜色上。默认情况下，深色主题的「On colors」是白色和黑色。</p>
+
+<p><img src="media/15675754544495/B0AF1EEA-9AF8-4446-82E1-B8D5CE9B1DC3.png" alt=""/></p>
+
+<p>当浅色文本出现在深色背景上时，一般遵照下面的准则：</p>
+
+<ul>
+<li>高层级强调：87% 不透明度；</li>
+<li>中层级强调：60% 不透明度；</li>
+<li>不可用文本：38% 不透明度。</li>
+</ul>
+
+<p><img src="media/15675754544495/darktheme-adjustedcolor-textlegibility.png" alt=""/></p>
+
+<h2 id="toc_16">Custom application 自定义应用</h2>
+
+<p>使用较大比例屏幕的组件，比如 app bar、backdrop，可以使用表面颜色作为深色主题的颜色。</p>
+
+<p><img src="media/15675754544495/2FA48FD2-8085-4840-8A9F-05EB7A74C4C0.png" alt=""/></p>
+
+<p><img src="media/15675754544495/930AC981-60F8-490B-A4E5-5B45118A47B8.png" alt=""/></p>
+
+<p>当深色主题中需要一个浅色表面时，浅色可以被用在组件表面以突出层级关系。举个例子，深色主题的 snackbar 为了突出显示就可以有一个浅色的表面。因此你可以应用浅色主题的 Surface color 和 On Surface color。</p>
+
+<p><img src="media/15675754544495/173DD1EF-CE9D-4C19-BB85-C947F43AD8F4.png" alt=""/></p>
+
+<h2 id="toc_17">States 状态</h2>
+
+<p>「状态」在视觉上通过使用遮罩表达了组件或不可交互元素的状态。在深色主题中，状态也应该使用与浅色主题一样的遮罩值，它们调整后可以满足 AA 的对比度要求。<br/>
+有两种类型的容器：一种使用「Surface」填充色，另一种使用「Primary」填充色。</p>
+
+<h3 id="toc_18">Surface Containers</h3>
+
+<p>Surface containers 使用「Surface」颜色作为填充色，使用文本或 icon 的颜色作为遮罩颜色。</p>
+
+<p><img src="media/15675754544495/2A191F46-7395-4218-A962-D873541EE785.png" alt=""/></p>
+
+<h3 id="toc_19">Primary Containers</h3>
+
+<p>Primary containers 使用「Primary」颜色作为填充色，使用白色作为遮罩颜色。</p>
+
+<p><img src="media/15675754544495/CFE7BCF9-8190-4EFC-B1C8-A7A68FE76B4F.png" alt=""/></p>
+
+<h3 id="toc_20">不可用状态</h3>
+
+<p>不可用状态的组件都使用 12% 不透明度的白色作为描边颜色和填充颜色，38% 不透明度的白色作为内容颜色，比如文本或 icon。</p>
+
+<p><img src="media/15675754544495/4D85DF39-029F-4FA5-8418-FE3DE3A1A3B7.png" alt=""/></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在 tvOS 中把内容放在第一位]]></title>
+    <link href="https://steppark.net/15675156374221.html"/>
+    <updated>2019-09-03T21:00:37+08:00</updated>
+    <id>https://steppark.net/15675156374221.html</id>
+    <content type="html"><![CDATA[
+<p>曾经的日子里，我们通过电视去了解不同的人，更多样的文化，更大的世界。电视就是一座桥梁。你在电视的丰富内容中不断搜索，当你找到吸引你的内容时，你会全神贯注地沉浸其中。</p>
+
+<p>但现在电视的状态有些啰嗦。你会看到一行又一行的内容，你在这些内容中迷茫地穿梭，为了寻找想要看的内容在其中花费了 5 分钟、10分钟、20分钟……这种体验很普遍，也很让人沮丧。我们会失去选择的能力而变得犹豫不决。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15675156374221/1E55D9BD-C2BE-47C8-ABCF-A9F9D01A6625.png" alt=""/></p>
+
+<p>怎样让用户快速地找到他想要看的内容并且排除一切障碍进入呢？</p>
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">内容优先 Content First</a>
+<ul>
+<li>
+<a href="#toc_2">Top Shelf——移除障碍</a>
+</li>
+<li>
+<a href="#toc_3">速度和节奏</a>
+</li>
+<li>
+<a href="#toc_4">避免过度刺激</a>
+</li>
+<li>
+<a href="#toc_5">在 UI 中让内容类型多样化</a>
+</li>
+<li>
+<a href="#toc_6">减少元素的数量</a>
+</li>
+<li>
+<a href="#toc_7">内容元数据</a>
+</li>
+<li>
+<a href="#toc_8">使用页码符号</a>
+</li>
+<li>
+<a href="#toc_9">使用 V 形箭头</a>
+</li>
+<li>
+<a href="#toc_10">小结</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_11">Top Shelf 的新样式及使用要点</a>
+<ul>
+<li>
+<a href="#toc_12">Top Shelf Carousel（传送带/分页滚动视图）</a>
+<ul>
+<li>
+<a href="#toc_13">Actions Carousel</a>
+</li>
+<li>
+<a href="#toc_14">Details Carousel</a>
+</li>
+<li>
+<a href="#toc_15">Content Best Practices</a>
+</li>
+<li>
+<a href="#toc_16">Image Best Practices</a>
+</li>
+<li>
+<a href="#toc_17">Video Best Practices</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_18">Top Shelf Items 的构成</a>
+</li>
+<li>
+<a href="#toc_19">User Profile 用户描述文件</a>
+<ul>
+<li>
+<a href="#toc_20">关于切换用户，系统提供了什么？</a>
+</li>
+<li>
+<a href="#toc_21">关于切换用户，开发者需要做什么？</a>
+</li>
+<li>
+<a href="#toc_22">实例说明</a>
+</li>
+<li>
+<a href="#toc_23">关于 User Profiles 的小结</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_24">Tab Bar 标签栏</a>
+</li>
+<li>
+<a href="#toc_25">Full Screen Browse 全屏浏览</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">内容优先 Content First</h2>
+
+<p>Apple TV 的第一设计目标是「内容优先」。这意味着一定有东西正在呈现，一定有东西正在放映。当你运行一个 app 时，它应该是活的。</p>
+
+<h3 id="toc_2">Top Shelf——移除障碍</h3>
+
+<p>首先，我们要移除进入 app 之前的障碍，摆脱内容和界面之间的障碍。这也正是我们要让 Top Shelf 变得可交互、更沉浸的原因。</p>
+
+<p>当光标聚焦在「TV」app 上时，tvOS 默认会显示全屏的节目海报。当光标停留超过五秒后，这个节目的预告片就会开始播放。核心内容占据了屏幕上的每一个元素，充满了整个屏幕。这时，用户不会在没有预料到的情况下听到视频的声音。</p>
+
+<p><img src="media/15675156374221/2A013130-8335-4375-99A1-A2AB21B66280.png" alt=""/></p>
+
+<p><img src="media/15675156374221/CF14EDAC-B119-4546-9814-E5FFE5309648.png" alt=""/></p>
+
+<p>接下来我们要让用户看到的内容变得可交互。在 Top Shelf 中，屏幕顶部会有一个视觉提示，告诉用户可以通过向上移动光标进入全屏模式。当用户在遥控器上向上滑动后，dock 栏将会隐去，内容进入全屏模式。同时视频的标题可能会出现在屏幕上，用户也可以听到视频的声音。虽然仍然处于内容浏览模式中，但用户仿佛已经置身在电影之中。</p>
+
+<p><img src="media/15675156374221/9747D4AC-D95F-4798-85D8-50D17F01EF9A.png" alt=""/></p>
+
+<h3 id="toc_3">速度和节奏</h3>
+
+<p>速度和节奏也是减少用户认知负担的重要组成部分。尝试移除掉 app 中所有的延迟和滞后，这样一来，app 就会变得生动、流畅。</p>
+
+<p><img src="media/15675156374221/A8E4EE05-0431-4DEA-AFF3-BFE145C52D21.png" alt=""/></p>
+
+<h3 id="toc_4">避免过度刺激</h3>
+
+<p>混乱的界面会让用户分心。想象一下在一个屋子里，同时有十几个人在和你讲话，你不能听清任何一个人所讲的内容。如果电视上的 app 也这样，用户就不能找到聚焦点。<br/>
+如果使用了太多的动画、图标、图片、文本样式，就会与内容抢夺用户的注意力。我们需要让用户聚焦且放松。</p>
+
+<p><img src="media/15675156374221/C29179D9-0F57-4D46-B1DC-0C27235AA3A6.png" alt=""/></p>
+
+<h3 id="toc_5">在 UI 中让内容类型多样化</h3>
+
+<p>在 UI 中让内容类型多样化实际上就是与不同的形状和比例打交道。在 Apple TV 上，屏幕被划分成不同大小的网格以来展示不同种类的内容。对于内容提供者来说，这些地方可以用来展示重要的、值得注意的有意义的内容。对于内容观看者来说，在浏览这些密集的内容时，这些不同类型的网格能让眼睛能够得到短暂的休息。</p>
+
+<p><img src="media/15675156374221/91496B88-FAF9-43B7-98DF-F9B491EEA557.png" alt=""/></p>
+
+<h3 id="toc_6">减少元素的数量</h3>
+
+<p>减少元素的数量意味着我们要创造层级。在 Top Shelf 的设计中，内容是最高优先级，所以它充满了整个屏幕，接着在屏幕底部放上了 app dock，在下面是其他的应用，这些的重要性要比内容低一些。通过给不同的元素划分优先级，你可以帮助用户导航、更好地引导用户。</p>
+
+<p><img src="media/15675156374221/CFC7F25E-A6D0-427F-9AA9-D47878D28AA8.png" alt=""/></p>
+
+<h3 id="toc_7">内容元数据</h3>
+
+<p>在 Top Shelf 中，内容的元数据是有用的，但是是次于内容考虑的事。因为我们要让用户首先被内容吸引，然后再去关注更多的可用信息。<br/>
+Top Shelf 的内容进入全屏时，通过轻点遥控器就可以让内容元数据显示出来，这让用户有了控制权，进一步可以观看内容。这也让用户可以从浏览模式转到购买或订阅的操作中去。</p>
+
+<p><img src="media/15675156374221/97B18CDC-DA4F-4B9C-9C5D-F02720259763.png" alt=""/></p>
+
+<h3 id="toc_8">使用页码符号</h3>
+
+<p>页码符号会提醒用户他们正在浏览一系列内容中的一个，也表明他们正处于浏览模式而不是实际播放模式。就像面包屑一样，页码符号很小并且会出现在界面底部。我们使用了 Apple TV 的系统材料组件以让其与背景有良好的对比度。</p>
+
+<p><img src="media/15675156374221/2683B0EC-9363-409A-A4BE-BB308781D518.png" alt=""/></p>
+
+<h3 id="toc_9">使用 V 形箭头</h3>
+
+<p>V 形箭头表明了滑动的方向，还表明了还有内容在屏幕之后。它和页码符号一起让用户保持空间感。</p>
+
+<p><img src="media/15675156374221/D6CC6FD5-BC21-4819-80C0-BCDE940920CE.png" alt=""/></p>
+
+<h3 id="toc_10">小结</h3>
+
+<p>这些注意点和小功能会避免用户在使用过程中陷入迷惑，避免让他们思考我该怎么导航出去，过一会儿我还能回来这个页面吗。这些地方会让用户沉浸在内容之中，我们也相信内容优先的力量。</p>
+
+<p><img src="media/15675156374221/27B71BA7-32A1-4FE2-B811-B5EEAC2A1A5A.png" alt=""/></p>
+
+<p>电视上的内容有能力改变我们的思维，有能力把我们带到一个新的世界，有能力打开我们的眼界，我们的工作就是让用户与这些能够改变他们的内容连接在一起，不要让用户困惑，帮助他们打开内容的大门，让用户进来，让内容发光。如果我们做到了，用户就会留下来沉浸在内容之中。这也会在用户和你的产品之间创造一种情感上的连接。</p>
+
+<p><img src="media/15675156374221/1ECB973B-2EEE-4C05-B919-57C199926AB8.png" alt=""/></p>
+
+<h2 id="toc_11">Top Shelf 的新样式及使用要点</h2>
+
+<p>Top Shelf 是让用户在进入 app 前就提前预览内容的好地方。已有的 Top Shelf 提供了两种样式，一种是「分组内容 Sectioned Content」，另一种是「插入内容 Inset Content」。</p>
+
+<p><img src="media/15675156374221/D520B4A0-7F0C-4E1B-B7F4-3E6FD3EF18BC.png" alt=""/></p>
+
+<p><img src="media/15675156374221/3A5EF15C-024D-4965-897F-C60C1269D412.png" alt=""/></p>
+
+<p>在 tvOS 13 中，提供了新的一种样式，称为「传送带内容 Carousel Content」。</p>
+
+<h3 id="toc_12">Top Shelf Carousel（传送带/分页滚动视图）</h3>
+
+<p>当 Top Shelf 中的内容进入全屏时，Carousel 是可交互的。你可以在不同项目之间滑动就像是在浏览不同的频道。当你选中一个项目，你会在屏幕底部看到内容的丰富的元数据。这可以让你 app 中的某些内容直接展示在 Apple TV 的首屏上。当然并不是所有的内容都有一样的结构，所以在 API 中有两种内容样式提供给开发者，一种是 Action Carousel，一种是 Details Carousel。</p>
+
+<p><img src="media/15675156374221/E5FBFBFE-5588-4146-B98F-C3DE1ECAE871.png" alt=""/></p>
+
+<h4 id="toc_13">Actions Carousel</h4>
+
+<p>Actions Carousel 首先聚焦于你 app 提供的内容的全屏图片，并且有一部分 UI 元素你可以进行自定义。<br/>
+在左上角有标题（title）和情景标题（context title），这可以告诉用户他们看到的是什么内容以及为什么要把这个内容展示给用户。你可以把情景标题想象成是一个部分的统称，它可以在 Top Shelf 的不同项目中创建逻辑分组。<br/>
+在屏幕底部会有播放按钮和更多信息按钮，这为用户浏览指定的内容并直接进入 app 提供了一种确切的方式，用户可以选择直接播放或者查看更多信息。</p>
+
+<p><img src="media/15675156374221/0F407464-8AC8-4440-8DB0-A4AF3FB38F54.png" alt=""/></p>
+
+<h4 id="toc_14">Details Carousel</h4>
+
+<p>在这种样式中有熟悉的标题部分以及动作按钮，并且 API 还允许你提供丰富的内容元数据以显示在这里。像下图这样，包括内容的简介、类型、年份、时长，还包括支持的音视频模式以及字幕和声音描述，以及演职员信息。</p>
+
+<p><img src="media/15675156374221/06DAF1F1-6364-4CC2-BE43-D91548260B61.png" alt=""/></p>
+
+<h4 id="toc_15">Content Best Practices</h4>
+
+<ul>
+<li>Carousel 被用来作为发现内容的方式是最好的，比如说推荐的电影、电视剧的新剧集或者是已登录用户的个性化推荐。</li>
+<li>Top Shelf 中的内容应该被定期更新。这是通过展示亮点内容吸引用户进入 app 的窗口，所以需要保持新鲜和活力。</li>
+<li>在 Top Shelf 中不要给用户太多选择，太多的项目会让用户迷失。推荐 5 到 10 个项目为佳。</li>
+</ul>
+
+<h4 id="toc_16">Image Best Practices</h4>
+
+<ul>
+<li>在 Top Shelf 中的内容是全屏的，所以内容应该是 1920 × 1080pt 的，并且应该铺满全屏。对于 1080P 设备，API 会让你提供 1x 分辨率的，对于 4K 设备，API 会让你提供 2x 分辨率的。这些优化会让你的内容给用户提供最佳的体验。</li>
+</ul>
+
+<p><img src="media/15675156374221/8418FB51-FF76-4549-B13D-0588EE6971A1.png" alt=""/></p>
+
+<ul>
+<li>tvOS 的安全区域像下图所示，左右有 90pt 的间距，上下有 60pt 的间距。注意如果内容可能会跑出安全区域是没有关系的，但要知道根据不同的设备或电视设置，用户可能看不到边缘的内容和控件。对于 Carousel 也有同样的安全区域定义，当你把图片放上去时，要记得会有一些系统元素会出现在上面，比如 V 形箭头、内容元数据信息等。所以如果图片上有重要的信息，要确保不会与这些系统元素冲突。</li>
+</ul>
+
+<p><img src="media/15675156374221/18082266-4007-400F-88DF-5A01C171CC32.png" alt=""/></p>
+
+<p><img src="media/15675156374221/120E542D-DBF9-4C06-82EB-F0AC9673ABFC.png" alt=""/></p>
+
+<h4 id="toc_17">Video Best Practices</h4>
+
+<ul>
+<li>你可以在 Top Shelf 中播放视频、预告片等内容，这些视频应该是 1080p 高分辨率的。</li>
+<li>你应该使用 HLS（HTTP Live Streaming）把视频传输给系统。这可以帮助改善内容，提供用户更好地体验。这些视频应该可以快速载入，可以根据用户的带宽调整分辨率。</li>
+<li>Carousel 是预览内容的好地方，所以不要在这提供过长的视频，推荐 2-5 分钟。</li>
+<li>推荐在视频中包含声音。只有在用户作出确切动作的时候，电视才会发出声音。</li>
+</ul>
+
+<h2 id="toc_18">Top Shelf Items 的构成</h2>
+
+<ul>
+<li>TVTopShelfContentProvider 是 Top Shelf Extension 的源对象，当系统请求 Top Shelf 的数据时，它负责响应此请求。</li>
+<li>TVTopShelfContent 是一个你不会直接与其交互的协议，其包括三个具体的类，Carousel、Sectioned、Inset，每一种代表一种 UI 样式。每一个类都有其具体的属性。</li>
+<li>TVTopShelfItem 是每一个具备不同属性的内容样式的不同类。</li>
+</ul>
+
+<p><img src="media/15675156374221/5C4AEEE3-B233-4B51-9128-B0D057DC7F9A.png" alt=""/></p>
+
+<h2 id="toc_19">User Profile 用户描述文件</h2>
+
+<p>在 tvOS 13 中增加了控制中心，人们可以在这里快速访问一些常用功能，如睡眠、搜索、正在播放以及切换用户。通过这里的切换用户，人们可以在不离开当前情景的前提下，快速地切换到他们的个性化内容和推荐中。这个功能也开放给了开发者，所以开发者也可以利用这个多用户功能。</p>
+
+<p><img src="media/15675156374221/974E8058-7C2C-4F72-B94B-F36C4ADD67F6.png" alt=""/></p>
+
+<p>有多少 app 在一进入时就像下面一样让你选择用户，对于一个提供个性化体验的 app 来说，这样的功能不符合把内容放在第一位的使用体验。在 tvOS 13 中，你应该已经知道了是哪个用户在使用 app，而不需要再次询问用户。</p>
+
+<p><img src="media/15675156374221/8F2C9333-D126-44EB-A6CF-2A482F9E8E99.png" alt=""/></p>
+
+<h3 id="toc_20">关于切换用户，系统提供了什么？</h3>
+
+<p>tvOS 13 的 API 提供了 <code>TVUserManager</code>，使用它可以帮助你的基于用户描述文件的 app 快速切换用户。</p>
+
+<ul>
+<li>它提供了一个 identifier 用来代表当前的用户；</li>
+<li>它会通知 app 什么时候用户的 identifier 发生了改变；</li>
+<li>提供了一些系统 UI 把系统用户的 identifier 映射到 app 的多用户上。</li>
+</ul>
+
+<p><img src="media/15675156374221/C03A7488-86A0-41D6-85F6-4264AC053193.png" alt=""/></p>
+
+<h3 id="toc_21">关于切换用户，开发者需要做什么？</h3>
+
+<p>以上是系统提供的功能，对于开发者来说，需要做的是：</p>
+
+<ul>
+<li>存储用户的 identifier 并映射到 app 中的用户描述文件，存在多个用户 identifier 映射到一个用户描述文件的情况；identifier 对于不同的开发者账户是不一样的，如果你有多个 app，你可以共享相同的偏好设置。</li>
+<li>监听当前用户 identifier 的改变；</li>
+<li>在你 app 的路径中调起需要的系统 UI。</li>
+</ul>
+
+<p><img src="media/15675156374221/354EA095-401D-4014-9ACB-71663D4A11E8.png" alt=""/></p>
+
+<h3 id="toc_22">实例说明</h3>
+
+<p>以上面的进入 app 显示选择用户的界面为例，现在在进入这个页面之前，你需要检查 app 的描述文件是否已经映射到了当前系统的 identifier。<br/>
+如果已经映射了，那无需再显示这个用户选择界面，直接进入相应的内容就好。<br/>
+如果没有映射，你可以显示用户选择界面，当用户选择一个用户后你可以询问用户现在选择的用户是否可以映射到当前的 Apple TV 用户。如果用户选择确定映射，那你应该记住这个结果，下次进入 app 就不需要再选择用户了。你可以通过 API <code>shouldStorePreferenceForCurrentUser</code> 来实现。</p>
+
+<p><img src="media/15675156374221/9DC8E472-7B86-45EA-84A3-12201AF36032.png" alt=""/></p>
+
+<p>用户在之后也应该可以修改这个映射，你可以通过 API <code>presentProfilePreferencePane</code> 来实现。</p>
+
+<p><img src="media/15675156374221/DEE0DE37-96A7-437F-81BC-1712E67594A8.png" alt=""/></p>
+
+<p>你需要监听当前用户 identifier 的改变。你可以通过API <code>currentUserIdentifierDidChangeNotification</code>  来实现。当改变发生时，你需要让系统知道新的系统用户映射到了当前的用户描述文件。</p>
+
+<p>几条使用注意点：</p>
+
+<ul>
+<li>在切换用户描述文件之前保存当前数据；</li>
+<li>确保这种改变是清晰且有意义的，比如改变后个性化推荐发生了变化，应该有一个明显的过渡，告知用户已经切换了用户。</li>
+</ul>
+
+<h3 id="toc_23">关于 User Profiles 的小结</h3>
+
+<ul>
+<li>如果你的 app 是有多个用户，依赖用户描述文件运行的，那利用好 tvOS 13 系统提供的多用户功能，让用户获得更好的个性化体验；</li>
+<li>使用 TVUserManager 构建一个内容优先的体验，用户可以跳过那些不必要的对话框直接进入内容。</li>
+</ul>
+
+<h2 id="toc_24">Tab Bar 标签栏</h2>
+
+<p>在 TV app 中引入了新的 tab bar，它让导航更加简单，也让背后的内容更加大放异彩。因为它可以跟随内容一起竖直滚动，而不是在失去焦点时就消失。这对强化用户的层级意识很有用。在 tvOS 13 中，每一个 app 都可以使用这种新的 tab bar 样式。</p>
+
+<p><img src="media/15675156374221/9BF51811-5F7B-4F2D-B6E9-CB44ED8276D8.png" alt=""/></p>
+
+<p>如果你想让 tab bar 与内容一起滚动，你可以在 view controller 中设置 <code>tabBarObservedScrollView</code> 属性，这样样式推荐用于一系列可浏览的内容，而且对于 UI Collection View Controller 这种样式是自动的。<br/>
+如果你想 tab bar 固定在屏幕顶部，你可以让上面这个属性为 nil。<br/>
+不管哪种情况，你都需要注意安全区域。</p>
+
+<p><img src="media/15675156374221/BD5DAAC1-AA54-4F83-A35C-AECA47967FF8.png" alt=""/></p>
+
+<p>在 tab bar 中也引入了新的 API，你可以在其中展示你的品牌。你可以在 tab bar 的左右两边放置品牌 Logo。Logo 会与 tab bar 一起滚动。</p>
+
+<p><img src="media/15675156374221/0AE331D5-E220-41E6-A291-8AC0A53DDBDF.png" alt=""/></p>
+
+<p>你可以通过下图中的两个属性来实现，同时你不应该把按钮等其他动态内容放在这里。如果你想进一步自定义 tab bar，你也可以通过下面的新属性来实现。</p>
+
+<p><img src="media/15675156374221/F13CF4EF-EFD7-4D44-8932-EB811B31DC30.png" alt=""/></p>
+
+<h2 id="toc_25">Full Screen Browse 全屏浏览</h2>
+
+<p><img src="media/15675156374221/0C4DE9D8-FFD6-4B18-9ADF-C8BFFE075297.png" alt=""/></p>
+
+<p>在 tvOS 13 系统的 API 中引入了「TVCollectionViewFullScreenCell」，它包括「Masked Background View」和「Masked Content View」两部分。你可以在前者上添加不透明的图片，可以在后者上添加 UI 元素。<br/>
+因为新的 collection view layout 是为了利用好全屏幕而设计的，所以它的 cell 占据了整个屏幕。</p>
+
+<p><img src="media/15675156374221/C266B0CC-335D-497B-B460-ECFE7A52D67A.png" alt=""/></p>
+
+<p>使用注意点：</p>
+
+<ul>
+<li>在cell 移动到中心前不要开始动画或者播放视频；</li>
+<li>注意屏外传入（offscreen passes）；</li>
+<li>注意内存使用。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在设计和开发时使用 SF Symbols]]></title>
+    <link href="https://steppark.net/15675148872165.html"/>
+    <updated>2019-09-03T20:48:07+08:00</updated>
+    <id>https://steppark.net/15675148872165.html</id>
+    <content type="html"><![CDATA[
+<p>标志（symbol）在界面中扮演一个非常重要的角色，它们在表达某些含义时非常有效，它们可以表明哪个条目被你选中了，它们被用来在视觉上区分不同的内容类型。标志出现在系统的不同情景中。它们给用户在整个用户界面中创造了一种熟悉的感觉。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15675148872165/BF89717D-7443-4872-B640-BA3E33A0C9EB.png" alt=""/></p>
+
+<p><img src="media/15675148872165/93E43829-F84A-47AC-B8D4-A27124993FB5.png" alt=""/></p>
+
+<p>标志可以在不同的方式中被使用，设计标志也是一个内在的挑战。这些标志要设计得与其他 UI 元素完美得匹配在一起，比如文本。在 UI 中文本会有不同的尺寸，标志也是这样。</p>
+
+<p><img src="media/15675148872165/2D210958-0871-42DC-A0B4-1579BB663A55.png" alt=""/></p>
+
+<p><img src="media/15675148872165/AA300161-C710-4255-8920-6C28183BA193.png" alt=""/></p>
+
+<p>所以为了让这项工作变得更为简单，在 iOS 13 中我们重新设计了所有的标志。你会知道这些标志怎样有一个圆形套在外面，怎样在字重上更粗一点。他们可以完美地与文字相搭配。除了重新设计所有已有的标志，我们还扩展了这个列表，设计了更多的标志。它们统称为「SF Symbols」。它们在整个平台具有高度一致性，可以高质量地应用在你的所有 app 中。它们采用矢量形式，这意味着它们可以放大缩小，无论大尺寸还是小尺寸都能被渲染地很好。</p>
+
+<p><img src="media/15675148872165/D0078F5B-ED9B-49E0-80D9-A7B9BB4D2CF1.png" alt=""/></p>
+
+<p>针对于系统字体 San Francisco 的不同字重，SF Symbols 也有着不同的字重与之搭配。<br/>
+这里有超过 1000 个标志可供选择使用。如果这里的标志仍然不够，你甚至可以自动以他们，并创建自己的标志。</p>
+
+<p><img src="media/15675148872165/9B6C4A51-C215-4EB6-811D-2FF8EEFC9136.png" alt=""/></p>
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">在设计时使用 SF Symbols</a>
+<ul>
+<li>
+<a href="#toc_2">字号、对齐</a>
+</li>
+<li>
+<a href="#toc_3">字重、缩放</a>
+</li>
+<li>
+<a href="#toc_4">综合使用</a>
+</li>
+<li>
+<a href="#toc_5">设计小结</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6">在开发中使用 SF Symbols</a>
+<ul>
+<li>
+<a href="#toc_7">使用系统提供的 SF Symbols</a>
+</li>
+<li>
+<a href="#toc_8">使用自定义 symbols</a>
+</li>
+<li>
+<a href="#toc_9">配置 SF Symbols 的参数</a>
+</li>
+<li>
+<a href="#toc_10">使用 SF Symbols 进行布局</a>
+</li>
+<li>
+<a href="#toc_11">在按钮中使用 SF Symbols</a>
+</li>
+<li>
+<a href="#toc_12">SF Symbols 的渲染模式（render mode）</a>
+</li>
+<li>
+<a href="#toc_13">几个注意点</a>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2 id="toc_1">在设计时使用 SF Symbols</h2>
+
+<h3 id="toc_2">字号、对齐</h3>
+
+<p>SF Symbols 可以像文本一样指定字号。当标志和文本并排在一起时，它们拥有相同的基线。</p>
+
+<p><img src="media/15675148872165/BB1D7CAE-6116-4CC2-83F4-C08949C8A071.png" alt=""/></p>
+
+<p>当标志和文本竖直放在一起时，这里通常会有两种情况：文本支撑标志或者标志支撑文本。</p>
+
+<p><img src="media/15675148872165/8F0D8AA5-82AB-4615-B7E8-4CC93CDFA525.png" alt=""/></p>
+
+<p><img src="media/15675148872165/944E11DC-EDA2-403D-AE58-1D064DCE2A30.png" alt=""/></p>
+
+<p>水平对齐可以确保每一项都看起来没问题，这得益于标志的边界。每一个标志的边界并不一定相同。边界是不可见的，但当在屏幕上布局元素时会需要用到边界。</p>
+
+<p><img src="media/15675148872165/74F33F12-B4C4-4061-A855-3CE5131ECC58.png" alt=""/></p>
+
+<h3 id="toc_3">字重、缩放</h3>
+
+<p>每一个标志都有着九种不同的字重，从超细到超粗，对应系统字体的不同字重。每一个字重都被手动绘制出来，特别考虑了每种不同的设计。更细的字重有着可区分的、优雅的外表，而更粗的字重会尽力保持细节和可见性。</p>
+
+<p><img src="media/15675148872165/4AB3E729-C976-4142-B5A2-F2634809714B.png" alt=""/></p>
+
+<p><img src="media/15675148872165/C2F6D939-1C0F-4C3C-A6A5-62ABFD6FE877.png" alt=""/></p>
+
+<p>当与文本搭配使用，即使文本字号没有变化，可能也需要不同大小的标志。这就是之前我们设计标志时要考虑的问题，取决于我们要多强调标志，取决于有多大的展示空间。在 iOS 13 里，我们把这些变成了系统功能。我们称这一个特性为「scales 缩放」——分为三种，小、中等、大。</p>
+
+<p><img src="media/15675148872165/E2D443BD-1DA0-4ED5-924F-35E9D7F11C76.png" alt=""/></p>
+
+<p><img src="media/15675148872165/D253DF8B-9B35-4A68-9D9A-9D927DAD7709.png" alt=""/></p>
+
+<p>这里注意下，在调整标志的缩放大小时，其字号大小（point size）是始终不变的。调整标志的缩放，会有与文本相匹配的字重，并且会与文本的大写字母高度始终竖直中心对齐。</p>
+
+<p><img src="media/15675148872165/EEA6A64A-E342-47BD-A0A3-96D97FB9668E.png" alt=""/></p>
+
+<p><img src="media/15675148872165/67709481-39F7-4D32-8FE8-DF1F0D7C4666.png" alt=""/></p>
+
+<p>对于该在哪里使用不同的缩放，什么时候该用哪一个具体的 缩放，这里有三个具体的示例。它们都包括了字号为 17 的文本，但每个标志的容器有着不同的高度。文字和标志的字号是相同的，但通过改变标志的缩放来更好地适配不同情况的空间。在像工具栏这样的地方，UIKit 可以自动对控件使用合适的缩放。</p>
+
+<p><img src="media/15675148872165/342151F3-DFA1-4103-8C0B-BF5AA0AA283C.png" alt=""/></p>
+
+<h3 id="toc_4">综合使用</h3>
+
+<p>我们把字号大小、字重、缩放三者放在一起看，这意味着你可以在动态类型中使用它们，每一项都会很完美。</p>
+
+<p><img src="media/15675148872165/912A3D57-82BA-4D5F-9698-B497C274E413.png" alt=""/></p>
+
+<p>当然，标志也可以被本地化。这里有一个语音备忘录应用的例子，在英语和阿拉伯语的不同运行情况下，同一个标志有着不同的样式。</p>
+
+<p><img src="media/15675148872165/5F149E76-1585-4FBD-81F6-8A68D54705D5.png" alt=""/></p>
+
+<p>如果你想搞清楚这些标志的话，每一个标志都提供了一个名字。大多数的标志还会有描边和填充两种样式。</p>
+
+<p><img src="media/15675148872165/3A280B27-7DEE-45B4-979A-A8371362928C.png" alt=""/></p>
+
+<p>它们还可以被包在一个圆圈或者一个方形中，还可以带有一个标准的系统角标。</p>
+
+<p><img src="media/15675148872165/6D8F70DE-FD8D-4FF7-A2DE-803542CDD577.png" alt=""/></p>
+
+<p>使用这些标志也很方便。它们属于 SF 字体家族的一部分，可供下载，你可以在你的设计中使用。缩放功能可以通过 open Type 功能开启。默认缩放是中等，你可以在字体面板中选择小或大的缩放，抑或其他指定 UI 形状。</p>
+
+<p><img src="media/15675148872165/26C1A051-CA9E-4241-AED6-389D191409E3.png" alt=""/></p>
+
+<p>为了更方便使用，我们创建一个名为「SF Symbols」的应用。可以在里面通过平铺方式或者列表方式浏览所有的标志。可以通过名字搜索标志，预览不同的字重。</p>
+
+<p><img src="media/15675148872165/40777400-657E-4E97-B470-8FA68D43F44C.png" alt=""/></p>
+
+<p>我们来看一个实际的例子。在下面的设计中，按以前的操作，你需要定义图片的边界，确定图片的大小、四周边界值。</p>
+
+<p><img src="media/15675148872165/84196755-080A-4CEC-8DE2-46ABD7E314EA.png" alt=""/></p>
+
+<p>但有了 SF Symbols，你只需要确定标志的名字和字号大小以及对齐方式就可以了，如果有需要可以再定义字重和缩放。</p>
+
+<p><img src="media/15675148872165/B84773FC-5D52-43E7-A3B0-FF8E6EDB0B91.png" alt=""/></p>
+
+<p>第二行的图片有些普通，我们可以自己绘制一个茶杯的形状。因为 SF Symbol 里没有这个图形，我们可以自定义一个。</p>
+
+<p><img src="media/15675148872165/2B574EDD-C6A9-4702-A401-550BB42AE0AC.png" alt=""/></p>
+
+<p>你可以从已有的标志中选取一个相似的，导出并作为模板。导出的模板包括所有的字重和缩放大小，并且是 SVG 格式，可以使用自己熟悉的设计工具进行编辑。</p>
+
+<p><img src="media/15675148872165/976421CB-0043-4199-B9F7-05EC781C1F38.png" alt=""/></p>
+
+<p>这个文件可以直接被用于开发时的 Xcode 中，不再需要许多个文件。<br/>
+在所有的字重和缩放中，你至少需要提供 regular 字重的中等规模标志样式。</p>
+
+<p><img src="media/15675148872165/D2F965D3-84EE-455C-99DD-C9BD03164F01.png" alt=""/></p>
+
+<p>进一步可提供其他两种缩放的样式，进一步可提供 medium 和 bold 两种字重。当然，也需要根据你 app 的排版样式有针对性的考虑。</p>
+
+<p><img src="media/15675148872165/49D1B752-0FAA-4C2D-BF17-4B12203F211E.png" alt=""/></p>
+
+<p><img src="media/15675148872165/668B2F3C-4AF7-4656-9B51-E018A0F37113.png" alt=""/></p>
+
+<p>制作好的自定义标志可以在「SF Symbols」app 中浏览。</p>
+
+<h3 id="toc_5">设计小结</h3>
+
+<p><img src="media/15675148872165/BA4F526B-0925-425E-9423-9719EBE9BF18.png" alt=""/></p>
+
+<h2 id="toc_6">在开发中使用 SF Symbols</h2>
+
+<h3 id="toc_7">使用系统提供的 SF Symbols</h3>
+
+<p>下面这个 app 提供了滑块的相关功能，可以通过控制滑块或者两边的按钮来调节速度，但是目前的加减图片不太好，我尝试用 SF Symbols 来替换这两张图片。</p>
+
+<p><img src="media/15675148872165/05470A32-D8E1-446E-BF94-F0A1794DF75D.png" alt=""/></p>
+
+<p>在 SF Symbols app 中可以找到「乌龟」和「野兔」两个标志，分别代表更慢和更快。</p>
+
+<p><img src="media/15675148872165/4BB0A6FC-13E4-4776-AD45-7B5802820B65.png" alt=""/></p>
+
+<p><img src="media/15675148872165/59D963FB-581D-4259-85E7-A0BADB3D07F5.png" alt=""/></p>
+
+<p>可以利用新的 API：<code>UIImage(systemName:)</code>  来替换相应的图片，具体的代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// You’re eager to use one of these 1500+ new system symbols
+// It’s easy!
+
+slowerImageView.image = UIImage(systemName: &quot;tortoise&quot;)
+fasterImageView.image = UIImage(systemName: &quot;hare&quot;)
+</code></pre>
+
+<p><img src="media/15675148872165/3ACCCF42-A8E5-4FB9-91CF-E06711FEA672.png" alt=""/></p>
+
+<h3 id="toc_8">使用自定义 symbols</h3>
+
+<p><img src="media/15675148872165/97A3D814-AEA8-4769-8425-D7D18DFD1E76.png" alt=""/></p>
+
+<p>在开发中要使用上图的自定义标志，需要将设计师提供的「teacup.svg」文件导入 Xcode 中，在代码中使用 API  <code>UIImage(named:)</code>  即可调用这个自定义标志，具体代码如下：</p>
+
+<p><img src="media/15675148872165/58FA9B53-A6B3-4641-A257-508559BBA9A8.png" alt=""/></p>
+
+<pre class="line-numbers"><code class="language-swift">// And you want to use the image your designer made?
+// It&#39;s just like it was:
+
+cupView.image = UIImage(named: &quot;teacup&quot;) 
+</code></pre>
+
+<p><img src="media/15675148872165/6B2B2613-A01B-4179-943B-D8AAF5CD4B4C.png" alt=""/></p>
+
+<p>不止你有没有注意到在资源目录中同时存在两个名称为「teacup」的资源文件，它们都是图片，都不是相同的类型，一个是普通 png 格式图片，一个是 svg 格式的标志。</p>
+
+<p><img src="media/15675148872165/75D6ABC3-6229-436A-B919-A67F770C90EF.png" alt=""/></p>
+
+<p>以前的时候你通过 UIImage(named:)  这个 API 调用图片文件名非常直接和方便，当有了 SF Symbols 时，事情会变得稍微有些复杂。以文件名「envelope」为例，解释下这里。同一个文件名的图片，这里可能有三个版本：一个是系统标志，一个是自定义标志，还有一个是非标志的普通图片。<br/>
+对于系统标志没有什么问题，因为它是通过 API  <code>UIImage(systemName:)</code>  单独的命名空间来调用的，不会与其他的产生冲突。</p>
+
+<p><img src="media/15675148872165/B9BDE0CD-DE63-4EEA-94C3-7FCA5142547B.png" alt=""/></p>
+
+<p>而对于自定义标志和普通图片来说，它们都是通过 API <code>UIImage(named:)</code> 来调用的。系统会优先调用自定义标志文件，如果没有再调用普通类型的图片文件。这样做的好处是，不需要多余的代码，不需要版本检查代码，在 iOS 12 或更早版本可以显示普通类型的图片，而在 iOS 13 或之后版本中可以利用 SF Symbols 的功能显示自定义标志。</p>
+
+<p><img src="media/15675148872165/DFDCD360-3C44-47EF-9F0F-4047DF0391A1.png" alt=""/></p>
+
+<h3 id="toc_9">配置 SF Symbols 的参数</h3>
+
+<p><img src="media/15675148872165/905D12FC-859A-4EAB-BFBD-DC783DDEC99D.png" alt=""/></p>
+
+<p>我们需要对「teacup」这个标志进行配置，其缩放是「large」,可以利用新的 API <code>UIImage.SymbolConfiguration()</code> ，具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Our designer specified to use a large configuration:
+
+let configuration = UIImage.SymbolConfiguration(scale: .large)
+imageView.preferredSymbolConfiguration = configuration
+</code></pre>
+
+<p><img src="media/15675148872165/F8C0C1AD-E96E-40DF-8CF9-194A745341ED.png" alt=""/></p>
+
+<p>想改变标志的更多参数，比如字号、字重，具体的代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Symbols are typographic in nature, and it reflects
+// in how you configure them
+
+// typographic points, not screen points
+let headlineConfig = UIImage.SymbolConfiguration(pointSize: 23.0f, weight: .medium)
+
+// you can always add a scale
+let annotationConfig = UIImage.SymbolConfiguration(pointSize: 17.0f, scale: .small)
+</code></pre>
+
+<p>在这里注意，标志的「pointSize」指的是字体字号大小，而不是屏幕尺寸大小。</p>
+
+<p><img src="media/15675148872165/93C0A958-957B-43E9-876E-D5560A715350.png" alt=""/></p>
+
+<p>如下图所示，下面这个标志其字号尺寸是 28 pt，但其物理尺寸是 33pt × 32pt。你应该把标志看作是文本的一部分。</p>
+
+<p><img src="media/15675148872165/378AB0A3-37A1-4F02-944B-D256B9BDF725.png" alt=""/></p>
+
+<p>正因为标志就像文本一样，所有标志可以配置它的文本类型（text style），以支持系统的动态类型功能。具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Symbols are typographic in nature, and it reflects
+// in how you configure them
+
+// dynamic type text styles
+let footnoteConfig = UIImage.SymbolConfiguration(textStyle: .footnote)
+
+// … you can always add a scale
+let introConfig = UIImage.SymbolConfiguration(textStyle: .body, scale: .large) 
+</code></pre>
+
+<p><img src="media/15675148872165/3D2A54FF-758F-4021-A02A-D37E45311B04.png" alt=""/></p>
+
+<p>如果 app 使用了非系统字体，标志的参数也可以根据自定义字体进行变化。当你已经有了一段配置好属性的文本，你就不需要一个个属性地去调整标志。具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Symbols are typographic in nature,
+// and it reflects in how you configure them
+
+titleLabel.font = style.titleFont()
+
+let configuration = UIImage.SymbolConfiguration(font: titleLabel.font, scale: .large)
+titleImage.preferredSymbolConfiguration = configuration
+</code></pre>
+
+<p>关于标志的属性它是一个常量，它是不可变的。如果你想利用已有的属性值，你可以通过方法 <code>applying</code> 去创建了一个新的属性，从而间接修改已有的属性，并应用在你需要的地方。具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// It’s also possible to combine configurations、
+let boldLargeConfig = UIImage.SymbolConfiguration(weight: .bold, scale: .large)
+let smallConfig = UIImage.SymbolConfiguration(scale: .small)
+
+let config = boldLargeConfig.applying(smallConfig)
+
+// config will be .bold, .small
+</code></pre>
+
+<h3 id="toc_10">使用 SF Symbols 进行布局</h3>
+
+<p><img src="media/15675148872165/6D8FD6EC-70A7-4B9E-B545-DABD5784525A.png" alt=""/></p>
+
+<p>上图这个 app，每一行都有一个头像、一条文字评论和一个箭头。对于头像可以使用 SF Symbols，一般情况下头像与右边的文字是竖直中心对齐的，即使右边的文字大于一行，也是可以的。</p>
+
+<p><img src="media/15675148872165/A2211C0B-3E93-4918-AC91-8F7E0F75CB8A.png" alt=""/></p>
+
+<p>要想让头像与第一行文字对齐，有两种方法，一种是让头像和文字的边缘对齐，还有一种方法是让头像的基线与第一行文字的基线对齐。对于第二种方法，在 iOS 13 中，对于图片新增了一个 <code>baselineOffsetFromBottom</code> 属性，正如名字所示，它表示从底部到基线的偏移值，它是一个可选的 CGFloat 类型。对于 SF Symbols 来说，它默认具有这个属性，而对于普通图片来说，它默认不具有这个属性。查看图片的这个属性的具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// You can inspect the baseline values on images
+// Expressed in screen points from the bottom of the image
+
+let chevron = UIImage(systemName: “person.square”)
+
+// Not all images have baselines!
+if let offset = chevron.baselineOffsetFromBottom {
+    // …
+}
+</code></pre>
+
+<p>下图中的两个标志和文字的基线相同，可以看到下箭头标志的偏移值是「-3.5」，而云朵标志的偏移值是「+4.5」，所以说基线可能不在图片的边界之内。如果偏移值为 0，并不是说没有基线，而是基线与图片的底部是重合的。</p>
+
+<p><img src="media/15675148872165/9486BA51-3194-4ACD-BE6D-23AB135A2467.png" alt=""/></p>
+
+<p>对于默认没有基线的普通图片，我们可以通过 API <code>withBaselineOffsetFromBottom</code> 来为其添加基线。具体的代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// You can add baselines to any image
+// Important: baseline offsets are in screen points.
+
+let avatarImage: UIImage?
+
+if let loadedImage = AvatarCache.load(forUser: user.id) {
+    // give the avatar a baseline
+    avatarImage = loadedImage.withBaselineOffsetFromBottom(3.5f)
+}
+else {
+    avatarImage = UIImage(systemName: “person.square”)
+}
+</code></pre>
+
+<p>通过以上代码，为普通图片添加了基线，这样普通图片和标志可以用同一逻辑进行统一的布局。</p>
+
+<p><img src="media/15675148872165/83EF3DF8-E3EA-44F7-8218-2283628F7D8B.png" alt=""/></p>
+
+<h3 id="toc_11">在按钮中使用 SF Symbols</h3>
+
+<p>为了区分不同的情况，在这里把按钮可以分为三种，第一种是系统按钮，第一种是普通按钮，第三种是栏上的按钮（bar buttons)。先来看系统按钮。</p>
+
+<p><img src="media/15675148872165/F9940190-1D9B-4F65-A937-78B56B6BAB01.png" alt=""/></p>
+
+<p>在 UIKit  中的所有「系统按钮」都有一个预置的配置参数，他是「body」文本类型，「large」缩放大小。在系统按钮中使用 SF Symbols 的具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// System buttons have a default configuration of: .body, .large
+
+let watchImage = UIImage(systemName: “stopwatch”)
+
+let startButton = UIButton.system(image: watchImage,
+                                     target: self,
+                                     action: #selector(startTimer)) 
+</code></pre>
+
+<p>再来看普通按钮。在下图的这个例子中，有一个 pop-over 弹窗，在其中有两个动作按钮。在普通按钮上使用 SF Symbols，默认缩放大小是「medium」。</p>
+
+<p><img src="media/15675148872165/4A0CDA48-C850-4355-B6E2-8FE4CF5C6229.png" alt=""/></p>
+
+<p>在普通按钮上使用 SF Symbols 并改变其属性值的具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Buttons have a default configuration of .medium
+// use setPreferredSymbolConfiguration() to change
+
+let checkButton = UIButton(type: .custom)
+checkButton.setImage(UIImage(systemName: &quot;check&quot;), forState: .normal)
+
+let config = UIImage.SymbolConfiguration(textStyle: .caption, scale: .small)
+button.setPreferredSymbolConfiguration(config, forState: .normal)
+</code></pre>
+
+<p>对于下图中左右两个按钮，左边按钮是一个标志，右边按钮是文字，虽然它们没有紧挨在一起，但它们应该有同样的参数。它们应该有着同一条基线值，有着同样的属性（字体、字号、字重、文本样式等）。这样来看，可以让布局的思考更加简单。</p>
+
+<p><img src="media/15675148872165/4BA54907-B7A2-43BC-8F56-A6EA0F2244F3.png" alt=""/></p>
+
+<p>最后来看栏上的按钮（bar buttons）。在 iOS 13 中，所有 bar buttons 的图片资源也已经使用 SF Symbols 更新过了。</p>
+
+<p><img src="media/15675148872165/ACA71914-7234-414E-BB3A-52B04341431C.png" alt=""/></p>
+
+<p>对于 bar buttons，也有预置的属性。栏上按钮在像 iPhone 竖屏高度上是 regular 这种尺寸等级（size class）的屏幕上是「large」缩放大小，而在高度上是 compact 这种尺寸等级的屏幕上是「medium」缩放大小。这也意味着你不需要针对高度不同的栏提供两套不同的栏上按钮资源文件。</p>
+
+<p><img src="media/15675148872165/4FE6E169-46A4-4B05-A7A6-AE41C59DADFA.png" alt=""/></p>
+
+<p><img src="media/15675148872165/B8DCF7C7-82C8-4634-8942-3F9073D4A667.png" alt=""/></p>
+
+<h3 id="toc_12">SF Symbols 的渲染模式（render mode）</h3>
+
+<p>对于普通图片来说都有颜色数据，而对于 SF Symbols 来说其没有固定的颜色。我们可以通过描边颜色（tint color）来渲染标志。如果没有描边颜色，会使用黑色。但黑色并不总是合适，比如在深色模式中。</p>
+
+<p><img src="media/15675148872165/62511826-436F-4D03-9F28-758C809FA357.png" alt=""/></p>
+
+<p>以前图片的渲染模式都是自动的，都是原始颜色。而现在来说对于非标志类型的图片仍然是这样，对于标志类型的图片将会是根据描边颜色来显示。</p>
+
+<p><img src="media/15675148872165/9A9B0D1B-899F-44A2-9801-113ED8B4649D.png" alt=""/></p>
+
+<p>绘制一个标志的具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Drawing symbols
+
+let cupImage = UIImage(named: &quot;teacup&quot;)
+let receipt = UIGraphicsImageRenderer(size: receiptSize).image {
+    // …
+
+    cupImage.draw(at: .zero) // use natural size of the image
+
+    // …
+}
+</code></pre>
+
+<p>如果觉得绘制的标志太小，可以通过下面的代码创建一个新的属性，并创建一张新的标志图片。</p>
+
+<pre class="line-numbers"><code class="language-swift">let cupImage = UIImage(named: &quot;teacup&quot;)
+
+let configuration = UIImage.SymbolConfiguration(pointSize: 34.0f, weight: .bold)
+let largeTeacupImage = cupImage.withConfiguration(configuration)
+</code></pre>
+
+<p>回到之前的 pop-over 页面，我们想要让其中的某些文字用标志替代。</p>
+
+<p><img src="media/15675148872165/4F754298-E167-47EB-9D07-8A49307DF25B.png" alt=""/></p>
+
+<p>因为标志是图片，我们要把标志通过一些方法转换为字符串，具体的代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Symbols in strings
+// — use attachments
+
+let string = NSMutableAttributedString(string: &quot;I just symbol images!&quot;,
+                                          attributes: [.foregroundColor: UIColor.label])
+
+let heartImage = UIImage(systemName: &quot;heart.fill&quot;)
+let heartAttachment = NSTextAttachment(image: heartImage)
+let heartString = NSAttributedString(attachment: heartAttachment)
+
+string.insert(heartString, at: 7)
+</code></pre>
+
+<p>转换后的标志会根据匹配的文字来自动确定属性值，比如颜色、大小等。进一步，要想改变插入文字中的这些标志的颜色，可以通过下面的代码实现，其中可以选择是否改变渲染模式：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Tinting images
+// — apply a color to the whole image
+
+let heartImage = UIImage(systemName: &quot;heart.fill&quot;)
+let redHeartImage = heartImage.withTintColor(.redColor, renderingMode: .alwaysOriginal) 
+</code></pre>
+
+<p><img src="media/15675148872165/758AF029-8C10-4E6E-AB41-E6A11A915BD9.png" alt=""/></p>
+
+<h3 id="toc_13">几个注意点</h3>
+
+<p><img src="media/15675148872165/097FDF53-4ED4-41D8-BE08-3C09EA2A0458.png" alt=""/></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iOS 13 的设计有什么新变化？]]></title>
@@ -3929,541 +5090,6 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
 </blockquote>
 
 <p>📱💻</p>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[排版和字体 Typography and Fonts - WWDC 2016 Session 803]]></title>
-    <link href="https://steppark.net/15029504785442.html"/>
-    <updated>2017-08-17T14:14:38+08:00</updated>
-    <id>https://steppark.net/15029504785442.html</id>
-    <content type="html"><![CDATA[
-<p>由 SF 字体引出字体的一些术语和排版上的一些概念，介绍了 SF 字体在排版上提供的新功能。</p>
-
-<span id="more"></span><!-- more -->
-
-<h2 id="toc_0">San Francisco Fonts</h2>
-
-<ul>
-<li>SF Pro Text、SF Pro Display：iOS、macOS、tvOS（WWDC 2017 开始启用）</li>
-<li>SF UI Text、SF UI Display：iOS、macOS、tvOS；</li>
-<li>SF Compact Text、SF Compact Display：watchOS；</li>
-<li><p>SF Mono（一种等宽字体，New in WWDC 2016）：Code in Xcode、Terminal、Swift Playgrounds。</p>
-<p><img src="media/15029504785442/BC65E41A-C90D-47C7-9C78-9A699C4EEE2F.png" alt="BC65E41A-C90D-47C7-9C78-9A699C4EEE2F"/></p>
-<ul>
-<li>SF 与 SF Mono</li>
-</ul>
-<p><img src="media/15029504785442/7AF3BC06-7011-460D-9E7C-C47B7C7695E9.png" alt="7AF3BC06-7011-460D-9E7C-C47B7C7695E9"/></p>
-<ul>
-<li>等宽字体（Monospaced）：不同字重下有着相同的宽度</li>
-</ul>
-<p><img src="media/15029504785442/0451C080-D67D-47A2-9EF4-B2451566026B.png" alt="0451C080-D67D-47A2-9EF4-B2451566026B"/></p></li>
-</ul>
-
-<h2 id="toc_1">术语 Terminology</h2>
-
-<ul>
-<li>Text：文本，如「App」；</li>
-<li>Character：字符，文本的抽象单位，可以由一个代码代表，如字母「A」</li>
-<li>Glyph：字形，如字母「A」的这个形状，人们看到这个就知道这是字母「A」，而不是其他字母；</li>
-<li><p>Feature：功能，通常在字体文件中，字形与字符是一一对应的，但有时候有特殊，如「6」这个字符在一个字体中有两种「字形」，你可以选择其中一种（Optional）；输入两个字母，这两个字母自动连笔，形成了一个新的字形（Automatic），这都是 Feature；</p>
-<p><img src="media/15029504785442/Font%20Automatic%20Feature.png" alt="Font Automatic Feature " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>Font：字体（文件）；</p></li>
-<li><p>Style：样式，如「粗体」、「斜体」、「粗斜体」、「紧缩」；</p></li>
-<li><p>Typeface：字型，样式背后的设计理念，如将字母「A」变换成各种不同的形状，但其终究还是字母「A」；</p></li>
-<li><p>Typography：排版，使用字型来设置文本并给语言编码。</p></li>
-</ul>
-
-<p><img src="media/15029504785442/94B33019-6DE5-49B8-954A-C48D7A3CD680.png" alt="94B33019-6DE5-49B8-954A-C48D7A3CD680"/></p>
-
-<ul>
-<li>Text 的关心对象：Writers，Editors；</li>
-<li>Character 的关心对象：Unicode；</li>
-<li>Glyph、Feature、Font、Style、Typeface 的关心对象：Type Designers，Font Manufacturers；</li>
-<li>Typography 的关心对象：Typographers = You（App Developer/Designer）。</li>
-</ul>
-
-<h2 id="toc_2">概念 Conceps</h2>
-
-<p><img src="media/15029504785442/30AF7D16-B07D-4AC3-A2DC-1EF3168295E8.png" alt="30AF7D16-B07D-4AC3-A2DC-1EF3168295E8"/></p>
-
-<ul>
-<li><p>内嵌于字体中（Embedded in the Font）</p>
-<ul>
-<li>Spacing：空间，一个字符所占的位置，内置在字体中无法改变；</li>
-<li><p>Kerning：字偶距，某两个字母间的距离，一般设置在字体内部，无法改变。</p>
-<p><img src="media/15029504785442/0053A8A4-21BE-4D83-9C0D-E621D0464CE6.png" alt="0053A8A4-21BE-4D83-9C0D-E621D0464CE6"/></p></li>
-</ul></li>
-<li><p>可调整的（Adjustable）</p>
-<ul>
-<li><p>Tracking：字符间距，字间距，所有字符整体调整，正值、零值、负值；</p>
-<p><img src="media/15029504785442/4616025D-2E31-4C2D-ADAA-1FF14908BAD0.png" alt="4616025D-2E31-4C2D-ADAA-1FF14908BAD0"/></p></li>
-<li><p>Leading：行距，两行的 baseline 的距离称为行距，descenders-理解为字符延伸到 baseline 下面的那部分，如小写字母 q；ascenders-理解为字符延伸到 baseline 上面的那部分，如小写字母 h。</p>
-<p><img src="media/15029504785442/F2282DF8-6974-46A8-957E-D34D0B85F8CD.png" alt="F2282DF8-6974-46A8-957E-D34D0B85F8CD"/></p></li>
-</ul></li>
-<li><p>外部参考链接：<a href="https://creativemarket.com/blog/whats-the-difference-between-leading-kerning-and-tracking">What’s the Difference Between Leading, Kerning and Tracking? </a></p></li>
-<li><p>影响排版的一些因素</p>
-<ul>
-<li>易读性（Legibility）</li>
-<li>尺寸（Scale）</li>
-<li>布局（Layout）</li>
-<li>密集度（Density）</li>
-<li>质感（Voice）</li>
-</ul></li>
-</ul>
-
-<h2 id="toc_3">工具 Tools</h2>
-
-<ul>
-<li>System Font：使用系统字体只需确定字体大小和字重：<code>UIFont.systemFont(ofSize: 34, weight: UIFontWeightBlack)</code>，每种字体大小都有预设好的字间距 tracking，开启「粗体文本」后，系统中会自动进行粗体文本转换。</li>
-<li>Dynamic Type：应用在 iOS 和 watchOS，在「设置」→「显示与亮度」→「文字大小」中，「辅助功能」中还可开启「更大字体」。使用 Text Styles APIs：<code>UIFont.preferredFont(forTextStyle:)</code>，动态类型功能会自动支持。</li>
-<li>Custom Fonts：由于多为开发上的一些实际操作，暂不展开，具体步骤如下，
-<ol>
-<li>Pick or bundle a font</li>
-<li>Lookup table for the Content Size Categories</li>
-<li>Override <code>traitCollectionDidChange</code></li>
-<li>Update your fonts and paragraph style</li>
-<li>Relayout</li>
-</ol></li>
-<li>Font Selection：如果你决定要使用自定义字体，那么你需要考虑：
-<ol>
-<li>Easier sticking with one typeface at a time 从一次使用一个字型开始更容易</li>
-<li>Understanding design intention helps in usage 深度理解这些字型的设计目的</li>
-<li>Consider defaults and knobs you can turn 考虑你可以改变的那些样式，如字间距、行间距</li>
-</ol></li>
-</ul>
-
-<h2 id="toc_4">细节 Details</h2>
-
-<ul>
-<li><p>Arrows 箭头（New in WWDC 2016）：各个方向的箭头是内置于 SF 字体中的，并且同样有不同的自重，可在交互中用于指向。</p>
-<p><img src="media/15029504785442/15029510805694.jpg" alt=""/></p></li>
-<li><p>High-Legibility Alternates 高易读性替换（New in WWDC 2016）：对于一串字符串，如果用户不易辨别字符串中的字母到底是什么，可以使用开启这个功能，系统自动把不易辨别的字母转换为不会有歧义的字母。但这个功能不要轻易开启，会破坏文本整体的一致性。</p>
-<p><img src="media/15029504785442/E598CEAF-F8AA-4263-BE8F-6AE726388D1B.png" alt="E598CEAF-F8AA-4263-BE8F-6AE726388D1B"/></p>
-<p>在代码中启用的示例如下：</p>
-<pre class="line-numbers"><code class="language-text">let pointSize: CGFloat = 60.0
-let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
-let highLegibilityFontDesc = systemFontDesc.addingAttributes(<br/>
-  [<br/>
-    UIFontDescriptorFeatureSettingsAttribute:<br/>
-      [<br/>
-        [<br/>
-          UIFontFeatureTypeIdentifierKey: kStylisticAlternativesType,<br/>
-          UIFontFeatureSelectorIdentifierKey: kStylisticAltSixOnSelector,<br/>
-        ],<br/>
-      ]<br/>
-  ]<br/>
-)<br/>
-label.font = UIFont(descriptor: highLegibilityFontDesc, size: pointSize)
-</code></pre></li>
-<li><p>Small Caps 小型大写字母：大写字母的缩小版，几乎与小写字母对齐。两个例子如下图。当觉着大写字母与周围的小写字母相比过大而显得不协调，如果仅仅调整字体大小，那会改变字符串的密集度或者说字间距，故可以开启「Small Caps」功能，保证密集度和笔画厚度，使排版美观。</p>
-<p><img src="media/15029504785442/10C7242A-570D-4AF0-980C-94171E30D6B1.png" alt="10C7242A-570D-4AF0-980C-94171E30D6B1"/></p>
-<p>在 Apple TV 上使用的一个实例：</p>
-<p><img src="media/15029504785442/1BB0A3BB-6DC5-4A8D-BA48-08825A863171.png" alt="1BB0A3BB-6DC5-4A8D-BA48-08825A863171"/></p>
-<p>具体使用上分为以下几种类型，可以用一种，也可以用多种：</p>
-<ul>
-<li><p>Small Caps from Uppercase（把大写字母转换为小型大写字母）：对于一个字符串，1.全是大写，适合此功能；2.大小写混合，不适合此功能；3.全是小写，这样使用有点别扭，但也还 OK。</p>
-<p><img src="media/15029504785442/FA47AC14-09B1-4920-9854-1060555FC0C9.png" alt="FA47AC14-09B1-4920-9854-1060555FC0"/></p></li>
-<li><p>Small Caps from Lowercase（把小写字母转换为小型大写字母）：字符串的上述三种情况都还适合。</p>
-<p><img src="media/15029504785442/735C71DC-DA4B-4946-828E-06A578BFB51B.png" alt="735C71DC-DA4B-4946-828E-06A578BFB51B"/></p></li>
-<li><p>上述两种类型在代码中启用的方法示意如下：</p>
-<pre class="line-numbers"><code class="language-text">let pointSize: CGFloat = 60.0
-let systemFontDesc = UIFont.systemFont(ofSize: pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
-let smallCapsFontDesc = systemFontDesc.addingAttributes(<br/>
-  [<br/>
-    UIFontDescriptorFeatureSettingsAttribute:<br/>
-    [<br/>
-      [<br/>
-        UIFontFeatureTypeIdentifierKey: kLowerCaseType,<br/>
-        UIFontFeatureSelectorIdentifierKey: kLowerCaseSmallCapsSelector,<br/>
-      ],<br/>
-      [<br/>
-        UIFontFeatureTypeIdentifierKey: kUpperCaseType,<br/>
-        UIFontFeatureSelectorIdentifierKey: kUpperCaseSmallCapsSelector,<br/>
-      ],<br/>
-    ]<br/>
-  ]<br/>
-)<br/>
-label.font = UIFont(descriptor: smallCapsFontDesc, size: pointSize)
-</code></pre></li>
-<li><p>Small Caps Numbers and Punctuation<br/>
-<img src="media/15029504785442/1621C0AD-EADF-4D1C-92F7-A7C848B4B522.png" alt="1621C0AD-EADF-4D1C-92F7-A7C848B4B522"/></p></li>
-</ul></li>
-</ul>
-
-<blockquote>
-<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2016/803/">Typography and Fonts - WWDC 2016 - Videos - Apple Developer</a>  </p>
-</blockquote>
-
-<h2 id="toc_5">相关文章</h2>
-
-<ul>
-<li>有关于 SF 字体的更多介绍： <a href="15028584576994.html">新的系统字体 Introducing the New System Fonts - WWDC 2015 Session 804</a></li>
-</ul>
-
-<p>📱💻⌚️📺</p>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[新的系统字体 Introducing the New System Fonts - WWDC 2015 Session 804]]></title>
-    <link href="https://steppark.net/15028584576994.html"/>
-    <updated>2017-08-16T12:40:57+08:00</updated>
-    <id>https://steppark.net/15028584576994.html</id>
-    <content type="html"><![CDATA[
-<p>介绍从 iOS 9 时代开始使用的新的系统字体 San Francisco，包括 SF 字体的分支、如何使用、提供的功能等。</p>
-
-<span id="more"></span><!-- more -->
-
-<h2 id="toc_0">San Francisco Fonts</h2>
-
-<ul>
-<li><p>San Francisco 字体家族有两种字体二级家族，一种是 SF， 用于 iOS、macOS、tvOS，另一种是 SF Compact，专门用于 watchOS。每个字体又分两种视觉尺寸（Optical Sizes），一种是 Text，包含六种字重；另一种是 Display，包含九种字重。注：从 iOS 11 开始，苹果开始启用了 SF Pro 这个字体分支，替代了 SF。</p>
-<p><img src="media/15028584576994/0242A688-8764-4A6F-AE6A-D858FC82F490.png" alt="0242A688-8764-4A6F-AE6A-D858FC82F490"/></p></li>
-<li><p>SF 与 SF Compact 的对比：SF 字体更加圆润，SF Compact 更显笔直，字母之间有更多的空间，这样在 Apple Watch 的小屏幕上，SF Compact 更加易读。</p>
-<p><img src="media/15028584576994/942098B4-087E-48B0-B9C0-589F9FE1AAC3.png" alt="942098B4-087E-48B0-B9C0-589F9FE1AA"/></p></li>
-<li><p>几个排版上的术语：</p>
-<ul>
-<li>baseline：基线；</li>
-<li>x-height：小写字母 x 的顶部，小写字母的对齐标准；</li>
-<li>cap height：大写字母 X 的顶部，大写字母的对齐标准；</li>
-<li>descender：小写字母基准线以下的对齐位置；</li>
-<li>ascender：小写字母基准线以上的对齐位置。</li>
-</ul>
-<p><img src="media/15028584576994/Font%20Proportions.png" alt="Font Proportions"/></p></li>
-<li><p>在字体比例上的几点改善：</p>
-<ul>
-<li>Cap-Height Lower Than Ascenders</li>
-<li>Large x-Height</li>
-<li>Numbers Align with Uppercase</li>
-</ul>
-<p><img src="media/15028584576994/SF.png" alt="SF"/></p></li>
-</ul>
-
-<h2 id="toc_1">Principles</h2>
-
-<blockquote>
-<p>Visual perception is largely about illusion. 视觉感知总是跟错觉有关。  </p>
-
-<p>To make two shapes look similar, they often have to be made dissimilar. 为了让两个形状看起来相似，他们必须要被弄得不相似。  </p>
-</blockquote>
-
-<ul>
-<li><p>Display VS Text：Display 用于 20 磅及以上大小的文字，Text 用于 19 磅及以下大小的文字。Text 这种视觉尺寸的字间距更大（相同字号下），更易读。两种视觉尺寸在系统里自动切换，但在设计软件里要注意修改。</p>
-<p><img src="media/15028584576994/D704CD00-4380-4E9A-B56B-AE1C853C6E55.png" alt="D704CD00-4380-4E9A-B56B-AE1C853C6E55"/></p></li>
-<li><p>Negative Space 负空间：字母内测、字母周围的空间，Text 周围的空间几乎是 Display 的两倍。</p>
-<p><img src="media/15028584576994/18EB4B79-F752-46AC-86CF-EA1C31446A3F.png" alt="18EB4B79-F752-46AC-86CF-EA1C31446A3F"/></p></li>
-<li><p>Confusable Shapes：字母间有很多相似处，在字号小时很容易混淆。Text 和 Display 就在这些地方有细微的差别。</p>
-<ul>
-<li><p>counter：反向对称区，字母上下对称的部分</p>
-<p><img src="media/15028584576994/E081B9C0-3156-486D-9F58-E46496223C76.png" alt="E081B9C0-3156-486D-9F58-E46496223"/></p></li>
-<li><p>aperture：缝隙，字母的开口</p>
-<p><img src="media/15028584576994/1F6FCE63-B891-4B23-9ECF-DFAE819AEFC5.png" alt="1F6FCE63-B891-4B23-9ECF-DFAE819AEF"/></p></li>
-</ul></li>
-<li><p>Tracking Is Size-Specific：字号越大，字间距 tracking 越小，有一个变化曲线（tracking tables）</p>
-<p><img src="media/15028584576994/15028587818938.jpg" alt=""/></p></li>
-<li><p>Weights 字重：Text - 6 种字重（Light、Regular、Medium、Semibold、Bold、Heavy），Display - 9 种字重（多了 Ultralight、Thin、Black），Text 的字号小，没有必要有更多字重。</p></li>
-<li><p>在 AppKit 和 UIKit 里提供了配置字号、字重的方法，如：<br/>
-<code>UIFont.systemFontOfSize(20, weight: UIFontWeightMedium)</code></p>
-<p><img src="media/15028584576994/609EDDCB-B829-4F59-A2FD-3CCC10C3C7C9.png" alt="609EDDCB-B829-4F59-A2FD-3CCC10C3C7"/></p></li>
-<li><p>字重的作用：</p>
-<ul>
-<li><p>Differentiation and hierarchy 区分和层级</p>
-<p><img src="media/15028584576994/Weight-Use%20in%20Differentiation%20and%20Hierarchy.png" alt="Weight-Use in Differentiation and Hierarchy"/></p></li>
-<li><p>Similitude 相似：更大的尺寸，更小的自重；更小的尺寸，更大的自重</p>
-<p><img src="media/15028584576994/F504AA59-9EF0-4347-8EDC-79C67BEBECD9.png" alt="F504AA59-9EF0-4347-8EDC-79C67BEBECD9"/></p></li>
-<li><p>Voice 氛围：字重的巧妙利用，可以营造完全不同的氛围。</p>
-<p><img src="media/15028584576994/5.jpg" alt="5"/></p></li>
-</ul></li>
-<li><p>怎样使用字重：</p>
-<ul>
-<li>首先保证要清楚；
-<ul>
-<li>建立连续、清晰的层级关系；</li>
-<li>在 iOS 中可以使用 Text Style APIs，适配动态类型</li>
-</ul></li>
-<li>注意在 iOS 和 watchOS 中的「设置」→「通用」→「辅助功能」里提供了「粗体文本」的开关选项；</li>
-<li>如果使用过粗的字重可能就会到达极限；</li>
-<li>如果使用过细的字重，对于某些用户来说，可读性大大下降。</li>
-</ul></li>
-</ul>
-
-<h2 id="toc_2">Typographic Features</h2>
-
-<ul>
-<li>Features are behaviors embedded inside a font. </li>
-<li><p>开启这些 Feature：Xcode 中的 Typography Panel。</p>
-<p><img src="media/15028584576994/A3348F38-B260-47B9-9982-1FE9E186A7F8.png" alt="A3348F38-B260-47B9-9982-1FE9E186A7F8 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>Fractions 分数：自动转换（2/9这种输入自动转换)</p>
-<p><img src="media/15028584576994/542C9FA2-3971-4957-8E73-78B55AAEEF11.png" alt="542C9FA2-3971-4957-8E73-78B55AAEEF11"/></p>
-<p>在代码中启用这个功能的方法示例如下：</p>
-<pre class="line-numbers"><code class="language-text">```
-let pointSize : CGFloat = 60.0<br/>
-let systemFontDesc = UIFont.systemFontOfSize(pointSize, weight: UIFontWeightLight).fontDescriptor()<br/>
-let fractionFontDesc = systemFontDesc.fontDescriptorByAddingAttributes(<br/>
-[<br/>
-  UIFontDescriptorFeatureSettingsAttribute: [<br/>
-    [<br/>
-      UIFontFeatureTypeIdentifierKey: kFractionsType,<br/>
-      UIFontFeatureSelectorIdentifierKey: kDiagonalFractionsSelector,<br/>
-      ],<br/>
-  ]<br/>
-]<br/>
-)<br/>
-label.font = UIFont(descriptor: fractionFontDesc, size:pointSize)<br/>
-```
-</code></pre></li>
-<li><p>Superiors / Superscripts 上标、Inferiors / Subscripts 下标</p>
-<p><img src="media/15028584576994/Subscripts.png" alt="Subscripts"/></p></li>
-<li><p>Uppercase Forms 大写形式 （A+3中的加号）</p>
-<p><img src="media/15028584576994/DA34D099-ABD5-427C-8138-04205EF97FEC.png" alt="DA34D099-ABD5-427C-8138-04205EF97FE"/></p></li>
-<li><p>Vertically Centered Colon：时间中的冒号，默认开启，上下居中显示</p>
-<p><img src="media/15028584576994/5A85DC92-65E8-4986-AD75-C59DB5C76DC6.png" alt="5A85DC92-65E8-4986-AD75-C59DB5C76D"/></p></li>
-<li><p>Alternate Six and Nine：数字 6 和 9 在字号较小、和数字 8 混排时会容易看不清，所以有另一种字形可供使用，例如在 Apple Watch 上的小表盘里、Apple Watch 背面的序列号上。</p>
-<p><img src="media/15028584576994/69.png" alt="69"/></p></li>
-<li><p>Features 和 Optical Sizes 的结合：例如在 Display 尺寸下，分数中的数字 6 可以使用默认样式，而在 Text 尺寸下，分数中的数字 6 应该使用变形的样式。</p>
-<p><img src="media/15028584576994/B70A67F3-B5C2-4A55-9D59-B3B4B829058F.png" alt="B70A67F3-B5C2-4A55-9D59-B3B4B829058F"/></p></li>
-<li><p>proportional numbers（按比例排布的数字，自然宽度，默认），可用于固定显示的数字、monospaced numbers（等宽的数字，可选），可用于动态显示的数字（如跳动的时间、变化的速度）以及为保证对齐的列表样式和多行样式，iOS 9.0 and OS X 10.11 开始默认为 proportional numbers。</p>
-<p><img src="media/15028584576994/Number.png" alt="Numbe"/></p></li>
-</ul>
-
-<h2 id="toc_3">Font API Pitfalls</h2>
-
-<p>由于涉及到具体的开发细节，在此只列出 Keynote 里提到的几点，暂不展开：</p>
-
-<ul>
-<li>Don’t Access Fonts with Private Names；</li>
-<li>Don’t Reference Font File Names；</li>
-<li>Don’t Access System Font by Name；</li>
-<li>Do Reuse Font Descriptors；</li>
-<li>Don’t Draw System Font at a Different-Than-Nominal Point Size。</li>
-</ul>
-
-<blockquote>
-<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2015/804/">Introducing the New System Fonts - WWDC 2015 - Videos - Apple Developer</a></p>
-</blockquote>
-
-<h2 id="toc_4">相关文章</h2>
-
-<ul>
-<li>排版和字体的一些知识： <a href="15029504785442.html">排版和字体 Typography and Fonts - WWDC 2016 Session 803</a></li>
-</ul>
-
-<p>📱💻⌚️📺 </p>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[使用 Alfred 提高你的工作效率]]></title>
-    <link href="https://steppark.net/14774965258076.html"/>
-    <updated>2016-10-26T23:42:05+08:00</updated>
-    <id>https://steppark.net/14774965258076.html</id>
-    <content type="html"><![CDATA[
-<p>相信看过 macOS 系统必备软件推荐这类文章的同学，一定听说过 Alfred 这款软件。Alfred 是一款通过一个输入框快速完成文件搜索、自定义动作从而大幅提高工作效率的软件，可以看成 macOS 自带功能 Spotlight 的加强版。</p>
-
-<p>网上讲 Alfred 的文章很多，Alfred 的许多深度功能可能我都还没用上。在这里只与大家分享一下我自己的一些用法，供大家参考。</p>
-
-<p>写这篇文章的时候，正好赶上万众期待的新的 MacBook 即将发布，对于第一次使用 Mac 的同学这篇文章应该会对你有所帮助，对于还没拥有 Mac 的同学，说不定你看了这篇文章一冲动就买了呢。</p>
-
-<span id="more"></span><!-- more -->
-
-<p><img src="media/14774965258076/14774973341760.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<blockquote>
-<p>该文章已被<strong>少数派</strong>推荐为「<strong>Matrix 精选</strong>」，你可以<a href="http://sspai.com/35927">点击这里</a>查看。</p>
-</blockquote>
-
-<h2 id="toc_0">目录</h2>
-
-<ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">基本使用</a>
-</li>
-<li>
-<a href="#toc_2">奇思妙用</a>
-</li>
-<li>
-<a href="#toc_3">进阶使用</a>
-<ul>
-<li>
-<a href="#toc_4">搜索类</a>
-</li>
-<li>
-<a href="#toc_5">工具类</a>
-</li>
-<li>
-<a href="#toc_6">软件辅助类</a>
-</li>
-<li>
-<a href="#toc_7">自己动手，丰衣足食</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_8">总结</a>
-</li>
-</ul>
-
-
-<h2 id="toc_1">基本使用</h2>
-
-<p>Alfred 可以通过快捷键快速触发搜索输入框，我设置的快捷键是<code>⌥+Space</code>。Alfred 本身是免费的，但是想要用更高级的功能需要付费激活 PowerPack 功能。</p>
-
-<ol>
-<li><p>基本文件搜索：输入关键字可以搜索电脑里的文件、程序、联系人、书签等，你完全不需要到对应的文件夹或者 Launchpad 里眼花缭乱的找到文件或程序再打开。在搜索结果中可以按<code>⌘+Enter</code>打开文件所在的位置。当然你可以在 Alfred 的偏好设置中选择哪些内容在搜索结果中展示，可以搜索哪些路径下的内容。<br/>
-<img src="media/14774965258076/14774975502470.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>无搜索结果时默认搜索：当没有符合关键词的搜索结果时，Alfred 会默认使用 Google、Amazon、Wikipedia 的网页搜索。为了更符合自己的使用习惯，我把它默认设置为 Google 和 Baidu 的网页搜索。（在偏好设置中的 Features-Default Results-Fallbacks：Setup fallback results 进行设置）<br/>
-<img src="media/14774965258076/14774974534608.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>更多网站搜索（Web Search）：软件自身内置了一些 Google、Twitter 等搜索，基本上都是一些国外的服务。为了更接地气，我添加了如下图所示的一些网站的搜索。图中的锁形标志代表了搜索结果的网页使用了 HTTPS。<br/>
-<img src="media/14774965258076/14773860150947.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-<p>添加自定义的搜索项也很简单，只需要知道对应网站的搜索 URL 并添加到偏好设置中的 Features-Web Search 中即可。比如： </p>
-<ul>
-<li>百度搜索的 URL 是：<code>http://www.baidu.com/s?wd={query}</code> </li>
-<li>Appshopper 搜索的 URL 是：<code>http://appshopper.com/search?search={query}</code> </li>
-</ul>
-<p>添加的时候可以设置一个快捷键，比如百度搜索设置为<code>bd</code>就可以在呼出 Alfred 时，输入『 bd 』加空格，并输入要搜索的关键词，敲击回车，即可打开网页搜索到对应的内容了。</p>
-<p>从上面举的两个例子，应该能看出<code>{query}</code>就是要搜索的关键词，这样只要你知道某网站一个搜索结果的 URL，这个网站的搜索 URL 你就知道，自然就可以添加到 Alfred 中了。</p></li>
-</ol>
-
-<h2 id="toc_2">奇思妙用</h2>
-
-<p>除了基本的搜索功能，Alfred 还内置了一些常用的小功能。以下列出几个我常用的，大概按我的使用频率由高到低排序。</p>
-
-<ol>
-<li><p>如果你恰好需要计算一个简单的算式，可以直接在 Alfred 的搜索框中输入算式，Alfred 就会显示出计算结果。<br/>
-<img src="media/14774965258076/14774975977854.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>Alfred 可以作为一个迷你的播放器，调用 iTunes 播放音乐。我设置的快捷键是<code>⌥+⌘+Enter</code>，然后直接输入歌曲／歌手／专辑名称，回车后就可以播放了。同样你也可以在调出 Alfred 搜索框后输入<code>itunes</code>，也可以打开迷你播放器。<br/>
-<img src="media/14774965258076/14774976336355.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>Alfred 中内置了一部分系统功能的命令，可以通过自定义的关键字触发，如下图。举两个例子，在 macOS 中想立即锁定自己电脑进入输入密码的界面，除了通过系统自定义的触发角功能，可以在 Alfred 的搜索框中输入<code>lock</code>来锁定；下载安装了多个 dmg 程序安装包，但每个程序的 dmg 安装包都加载在了电脑上，如果一个个弹出，费时费力，可以在 Alfred 的搜索框中输入<code>ejectall</code>直接弹出所有挂载的磁盘。<br/>
-<img src="media/14774965258076/14774976593989.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>遇到不懂的英文单词，调起 Alfred 的输入框输入<code>dic</code>+空格+单词即可调用 macOS 内置的词典查询单词的释义，按回车进入词典。<br/>
-<img src="media/14774965258076/14774979006501.jpg" alt=""/></p></li>
-<li><p>搜索框中直接输入<code>&gt;</code>，并在之后输入命令，就可以调用「终端」程序，并运行命令。例如，在搜索框中输入下面的命令可以查看通过 adb 连接上的安卓设备：<code>adb devices</code><br/>
-<img src="media/14774965258076/14774977477267.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>记录多个剪贴板历史：我设置的快捷键是<code>⌥+⌘+C</code>，打开后可以查看最新所有的剪贴板历史。<br/>
-<img src="media/14774965258076/14774977724375.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>在进入<code>⌥+⌘+C</code>后，第一项是「All Snippets」，在其中可以设置一些常用的需要输入的字符，比如邮箱，这样在登录、注册时就不需要重复输入复杂的邮箱地址了。<br/>
-<img src="media/14774965258076/14774978021140.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-<p>注：6 和 7 使用频率比较低的原因是相比其他竞品，Alfred 的调用更加复杂，呈现形式上不够直观，在这两个需求上我更喜欢 <a href="http://pasteapp.me/">Paste</a>。</p></li>
-</ol>
-
-<h2 id="toc_3">进阶使用</h2>
-
-<p>在 Alfred 中有一个 Workflows 的 tab，用上这个，你才会发现 Alfred 的强大。简而言之，Workflow 就是把你想干的搜索的事，通过程序代码编写成一个流程化的东西，之后你只需要每次调用就行了。网上有很多分享的 workflow，可以参考 <a href="http://www.alfredworkflow.com">Alfred 2 Workflow List</a> 、<a href="http://www.packal.org/">Packal</a> 这两个网站。软件本身的功能是固定的，但提供的这种可扩展的能力却可以让 Alfred 完成更多不可思议的操作。</p>
-
-<h3 id="toc_4">搜索类</h3>
-
-<p>这类 workflow 主要是搜索某些软件或网站的内容，但相比 Web Search，可以直接在 Alfred 中显示搜索结果，一键即可打开搜索内容的详情页。</p>
-
-<ol>
-<li><p><a href="http://www.packal.org/workflow/itunes-store-search">iTunes Store Search</a><br/>
-搜索 iTunes Store 里的 app、song、album、podcast 等内容，直接在 Alfred 中显示搜索结果，进一步可在 iTunes Store 里查看。你可在 workflow 的设置中自定义 iTunes Store 的搜索地区和显示的搜索结果的最大数量。<br/>
-<img src="media/14774965258076/14774981208539.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p><a href="http://www.packal.org/workflow/mac-app-store-search">Mac App Store Search</a><br/>
-与 iTunes Store Search 类似，只不过这个是在 Mac App Store 中进行搜索。类似的还有 <a href="http://www.packal.org/workflow/ibooks-search">iBooks Search</a>，在 iBooks Store 中进行搜索。<br/>
-<img src="media/14774965258076/14774980375390.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p><a href="https://github.com/lucifr/Alfredv2-Extensions/raw/master/Douban.alfredworkflow">Douban</a><br/>
-快速搜索豆瓣上的电影、音乐、图书，并返回相应搜索结果。<br/>
-<img src="media/14774965258076/14774859695926.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p><a href="https://github.com/em91/dianping-Alfredv2/raw/master/Dianping.alfredworkflow">Dianping</a><br/>
-快速搜索大众点评上的商家店铺，可以自定义搜索的默认城市。<br/>
-<img src="media/14774965258076/14774862831831.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p><a href="https://github.com/KJlmfe/Alfred-workflows/raw/master/zhihu.alfredworkflow">知乎</a><br/>
-快速搜索知乎上的问题、话题、人，还可返回知乎日报文章列表。<br/>
-<img src="media/14774965258076/14774953262521.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-</ol>
-
-<h3 id="toc_5">工具类</h3>
-
-<p>这类 workflow 主要是满足某些生活、工作、学习中经常用到、但又及其繁琐的需求。</p>
-
-<ol>
-<li><p><a href="https://github.com/roylez/alfred_kuaidi/raw/master/kuaidi.alfredworkflow">快递查询</a><br/>
-快速查询快递利器，可对查询结果一键复制，可记录查询历史。<br/>
-<img src="media/14774965258076/14774872384661.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p><a href="https://github.com/wensonsmith/YoudaoTranslate/raw/master/Youdao%20Translate.alfredworkflow">Youdao Translate</a><br/>
-调用有道翻译单词、词组、句子，中英互译。<br/>
-<img src="media/14774965258076/14774874490798.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p><a href="http://www.packal.org/workflow/newfile">NewFile</a><br/>
-在 Finder 当前目录下新建文件，默认扩展名是 txt。有两种形式：仅创建和创建并打开。如果习惯于 Windows 的右键新建某种格式的文件，这个应该很方便。<br/>
-<img src="media/14774965258076/14774877559589.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p><a href="http://www.packal.org/workflow/resize-image">Resize Image</a><br/>
-快速对 Finder 中当前选中的图片等比例调整尺寸。输入的数字代表想要调整的图片宽度。<br/>
-<img src="media/14774965258076/14774879454220.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p><a href="https://github.com/hzlzh/Alfred-Workflows/raw/master/Downloads/Shorten-URL.alfredworkflow">Shorten URL</a><br/>
-把已有的较长的链接转换成短连接并复制到剪切板。<br/>
-<img src="media/14774965258076/14774883038847.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p><a href="http://www.packal.org/workflow/toggle-hidden-files">Toggle Hidden Files</a><br/>
-快速显示/隐藏系统中的隐藏文件。虽然在 macOS 10.12 中已经可以通过快捷键<code>⇧+⌘+.</code>来完成上述操作，但这个快捷键可能你会忘记，使用 workflow 可能更加方便快捷。<br/>
-<img src="media/14774965258076/14774896982373.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-</ol>
-
-<h3 id="toc_6">软件辅助类</h3>
-
-<p>这类 workflow 主要是给已安装的软件提供一个辅助功能。但一般情况下这些软件自身都会带有一些全局快捷键或者工具条，软件原生的功能可能支持的更好，通过 Alfred 来实现可能并不能获得最好的效果，在此仅举一例。</p>
-
-<ol>
-<li><a href="http://www.packal.org/workflow/things">Things</a>
-在 Things 中添加一个 TODO。
-<img src="media/14774965258076/14774913959274.jpg" alt=""/></li>
-</ol>
-
-<h3 id="toc_7">自己动手，丰衣足食</h3>
-
-<p>上文中提到的所有 workflow 其实都是 Alfred 的用户们自己创造的，有的简单，有的复杂。对于初学者来说，即使你不懂代码，你也可以通过简单的操作来做一个 workflow，从而提高自己的工作效率。</p>
-
-<p>在此拿我自己的实际情况举一个非常简单的例子。每天开始工作的时候，我需要在 Teambiton 中查看最新的项目进展，在微信中与同事沟通，在 Foxmail 中收发邮件。所以我需要在进入工作状态后，打开 Teambiton 网页、微信 app、Foxmail app。这是一个较为固定的操作，但如果手动完成，其实很麻烦，可以借助一个 workflow 来解放劳动力。创建这个 workflow 大概分为以下几步：</p>
-
-<ol>
-<li><p>添加 workflow：Alfred 中内置了一些固定的模板，可以选择通过快捷键打开多个文件； <br/>
-<img src="media/14774965258076/14774928163426.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>填写 workflow 基本信息：包括名称、Icon 等；<br/>
-<img src="media/14774965258076/14774930055324.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>除了打开多个文件，还要添加一个 Action：打开一个 URL；<br/>
-<img src="media/14774965258076/14774932148437.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>配置 Keyword；<br/>
-<img src="media/14774965258076/14774937454375.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>添加要打开的 app；<br/>
-<img src="media/14774965258076/14774931068193.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>配置要打开的 URL。<br/>
-<img src="media/14774965258076/14774932046964.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-</ol>
-
-<p>workflow 创建完成后，在 Alfred 的输入框中输入设置好的 keyword，敲回车，一切搞定。<br/>
-<img src="media/14774965258076/14774938791148.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<h2 id="toc_8">总结</h2>
-
-<p>Alfred 的偏好设置中特别设置了一个「Usage」tab，在这里可以查看 Alfred 的使用频率，了解这款工具到底对你的工作效率有多大的改变。在用 Alfred 的用户不妨去看一看。<br/>
-<img src="media/14774965258076/14774944700695.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>Alfred 的扩展性很高，所以他的玩法还有很多。但 Alfred 说到底是一款工具，工具的目的就是为了解决人的某些需求的。如果变成一个庞然大物，我相信不应该是一个工具的初衷。所以找到适合自己的用法才是最重要的，切忌不要被工具绑架了自己。</p>
-
-<p>如你有更多有趣实用的玩法，欢迎与我交流。</p>
 
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
