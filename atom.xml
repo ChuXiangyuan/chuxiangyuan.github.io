@@ -4,13 +4,549 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2019-09-04T13:48:23+08:00</updated>
+  <updated>2019-09-11T00:24:39+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[再说 iOS 和 macOS 深色模式]]></title>
+    <link href="https://steppark.net/15681308995404.html"/>
+    <updated>2019-09-10T23:54:59+08:00</updated>
+    <id>https://steppark.net/15681308995404.html</id>
+    <content type="html"><![CDATA[
+<p>在 iOS 13 及之后的版本中，人们可以选择使用一种全局深色的外观，它就是深色模式（Dark Mode）。在深色模式中，系统对于所有的界面、菜单、控件都使用了深色色盘，也使用了更多的虚化效果（vibrancy）以使得与更暗的背景内容相比，前景内容能够更加显眼明亮。深色模式支持所有的辅助功能。</p>
+
+<span id="more"></span><!-- more -->
+
+<p>人们可以选择使用深色模式作为系统的默认界面样式，他们可以通过设置使设备在周围的灯光变暗时自动转换到深色模式。</p>
+
+<ul>
+<li>将焦点放在内容上：深色模式会把焦点放在你界面的内容区域，以让内容能够显眼，而周围的 UI 能够沉浸到背景中去。</li>
+<li>在浅色模式和深色模式下都测试你的设计：观察你的 app 的界面在两种模式下是什么样子，根据需要调整设计。在一个模式下表现良好的设计在另一个模式下可能就会有问题。</li>
+<li>当你调整对比度和透明度等辅助功能设置使，确保你 app 的内容可以在深色模式下保持舒服的可读性：在深色模式下，你应该测试在开启增强对比度和降低透明度功能时 app 的内容，包括单独开启时的测试和都开启时的测试。你可能会发现在一些深色背景上，深色的文本可读性会比较低。你也可能发现在深色模式下打开增强对比度会导致深色文本和深色背景之间的对比度。虽然具备正常视力的人们仍然能够阅读低对比度的文本，但这样的文本可能对于视力有损伤的人们就是不可读的。</li>
+</ul>
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">颜色</a>
+<ul>
+<li>
+<a href="#toc_2">系统颜色</a>
+</li>
+<li>
+<a href="#toc_3">动态系统颜色</a>
+</li>
+<li>
+<a href="#toc_4">图片、图标、标志颜色</a>
+</li>
+<li>
+<a href="#toc_5">文本颜色</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6">材料</a>
+<ul>
+<li>
+<a href="#toc_7">系统定义的材料和虚化效果</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_8">在 iOS 上实现 Dark Mode</a>
+</li>
+<li>
+<a href="#toc_9">在 macOS 上实现 Dark Mode</a>
+</li>
+<li>
+<a href="#toc_10">参考链接</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">颜色</h2>
+
+<p>在深色模式的色盘中包括了更深的背景颜色和更浅的前景颜色，他们都经过了仔细的筛选，在保持两个模式下的一致性的前提下，也确保了良好的对比度。</p>
+
+<ul>
+<li>使用适配当前外观的颜色：语义化颜色，像是「背景颜色」，可以自动适配当前的外观。当你需要一个自定义颜色时，添加一个颜色集合（Color Set）资源到你 app 的资源目录中，指定浅色和深色模式下的颜色变种，这样就可以适配当前的外观模式。避免使用硬编码的颜色值或者不能适配的颜色。</li>
+<li>在所有的外观下确保充足的颜色对比度：使用系统定义的颜色确保前景和背景内容间有合适的对比度比值。对于自定义颜色，以达到 7:1 的对比度比值为目标，特别是对于小的文本。</li>
+<li>软化白色背景的颜色：如果你必须在深色模式中对于内容使用白色背景，选择一个稍微深一点的白色，以避免背景会打亮周围的深色内容。</li>
+</ul>
+
+<h3 id="toc_2">系统颜色</h3>
+
+<p>iOS 根据深色模式或者浅色模式定义了以下系统颜色，这些颜色值可能随着不断的版本迭代发生变化，所以使用系统 API 去调用这些系统颜色。</p>
+
+<p><img src="media/15681308995404/8BFF358A-9711-4A7B-A28E-3D7E8DF4961D.png" alt=""/></p>
+
+<p>为增强可读性，系统颜色还有下面这些变种：</p>
+
+<p><img src="media/15681308995404/AD034246-06F9-4778-A8B2-3CD176AAF6A0.png" alt=""/></p>
+
+<p>iOS 13 还引入了六种不透明的灰色值，虽然会用到的地方很少，但可以方便你在半透明效果不好的地方使用。比如在元素相交或者重叠时，像是网格中的线或者 bar，这些地方使用不透明的颜色更好。通常情况下还是应该使用系统颜色。</p>
+
+<p><img src="media/15681308995404/DD3BD49D-6045-41EE-B028-DCAD45AE2525.png" alt=""/></p>
+
+<p>同样地，为增强可读性，有下列变种：</p>
+
+<p><img src="media/15681308995404/593D3082-2E51-48A2-B12E-B7809DAE3343.png" alt=""/></p>
+
+<h3 id="toc_3">动态系统颜色</h3>
+
+<p>除了描边颜色，iOS 也根据语义对背景区域和前景内容提供了定义好的系统颜色，比如文本标签、分隔线、填充。这些颜色可以自动适配深色模式和浅色模式。<br/>
+iOS 定义了两个系列的背景颜色：一个系列是「系统背景颜色」，另一个系列是「成组背景颜色」。每一个系列都包含了四个等级的变种以帮助传达信息的层级。通常情况下，在成组的 table view 上使用「成组背景颜色」，否则就使用「系统背景颜色」。</p>
+
+<p>使用这两个系列的背景颜色，你可以通过下面这些方式使用不同的等级变种表现层级：</p>
+
+<ul>
+<li>在总体视图使用一级；</li>
+<li>在位于总体视图上的成组的内容和元素上使用二级；</li>
+<li>在位于二级元素上的成组的内容和元素上使用三级。</li>
+</ul>
+
+<p>对于前景内容，iOS 系统定义了下面这些颜色：</p>
+
+<p><img src="media/15681308995404/6712CB33-87BD-47C8-8232-1F6BC110A11A.png" alt=""/></p>
+
+<ul>
+<li>不要重新定义动态系统颜色的语义化定义：为了给人们创造一致化的体验，确保你的 app 的界面在不同的情景下都表现得没问题，应该倾向于使用动态系统颜色。</li>
+<li>不要尝试复制动态系统颜色：动态系统颜色可能基于不同的环境变量，随着版本的迭代发生波动。使用动态系统颜色去搭配系统颜色，而是创造自定义颜色去搭配系统颜色。</li>
+</ul>
+
+<h3 id="toc_4">图片、图标、标志颜色</h3>
+
+<p>iOS 13 的系统使用了 SF Symbols，它可以在深色模式下保持美观。系统也使用了经过对浅色模式和深色模式都优化了的全颜色图片。</p>
+
+<ul>
+<li>在任何可能的地方使用 SF Symbols：使用了 SF Symbols 后，当你使用了动态颜色去给标志着色或者是增加了一层虚化效果时，标志都可以在两种模式下保持美观。</li>
+<li>必要时，为浅色和深色模式分别设计独立的图形元素：在浅色模式中，图形使用中空的描边，而在深色模式中，图形使用实心填充的形状样式可能会更好。</li>
+<li>确保全颜色的图片和图标显示没问题：如果在两种模式下看起来都不错，那就可以使用相同的资源。如果一个资源只在某个模式中显示没问题，那就修改资源或者为两种模式创建分别的资源。使用资源目录把两个资源组合成一个，命名成一张图片。</li>
+</ul>
+
+<h3 id="toc_5">文本颜色</h3>
+
+<p>虚化效果可以使得深色背景上的文本保持良好的对比度。</p>
+
+<ul>
+<li>对于文本使用系统提供的文本颜色：系统提供的一级、二级、三级、四级文本颜色可以自动适配浅色和深色模式。</li>
+<li>使用系统视图绘制文本输入框和文本视图：系统视图和控件可以使你 app 的文本在所有的背景下看起来都没问题，并且可以根据虚化效果的有无自动调整适配。当你可以使用系统提供的视图去展示文本时就不要自己单独绘制文本视图。</li>
+</ul>
+
+<h2 id="toc_6">材料</h2>
+
+<p>iOS 提供了材料效果（materials，也可叫 blur effects）以通过一种半透明的效果在 app 中创造深度的感觉。材料效果可以让视图和控件既暗示了背景上的内容，又不分散前景内容的注意力。为了制造这种效果，材料允许背景颜色信息穿过前景的视图，同时也会模糊背景的情景以保持可读性。</p>
+
+<p>当你使用系统定义的材料效果时，你的 app 的元素会在各个情景中看起来都很好，因为这些效果可以自动适配系统的浅色模式和深色模式。</p>
+
+<ul>
+<li>以系统使用的材料效果为指导：在任何可能的时候，比较具备相似功能的你的 app 的自定义视图和系统提供的视图，对其使用相同的材料效果。</li>
+<li>利用好系统提供的文本、填充、图形、分隔线颜色：系统提供的颜色可以让这些元素在半透明的背景上看起来不错。</li>
+<li>在任何可能的时候，使用 SF Symbols：当你使用动态系统颜色去给一个标志着色或者应用一个虚化效果时，标志可以在任何情景中都看起来不错。与之相对比，全颜色的图片可能不能与背景形成足够的对比度，在用在一个半透明背景的视图上时也可能不合时宜。</li>
+</ul>
+
+<h3 id="toc_7">系统定义的材料和虚化效果</h3>
+
+<p>iOS 定义了你可以在指定的区域使用的多种材料，以控制前景内容和背景的视觉分隔。系统提供的材料包括浅色和深色两种变种，可以很好地匹配大多数背景。</p>
+
+<p>为了让材料用在内容容器中，iOS 13 定义了四种不同透明度的材料：</p>
+
+<ul>
+<li>SystemUltraThinMaterial</li>
+<li>SystemThinMaterial</li>
+<li>SystemMaterial （默认）</li>
+<li>SystemThickMaterial</li>
+</ul>
+
+<p>注意以下几点：</p>
+
+<ul>
+<li>在选择材料时考虑对比度和视觉分隔：在选择使用哪种材料与虚化效果组合时，没有绝对的规则。在做出选择时考虑下面这些方面：
+<ul>
+<li>更厚的材料可以在文本和其他元素间提供更好的对比度；</li>
+<li>通过在背景中提供一个内容的可见提醒，不透明度可以帮助人们记住当前的场景。</li>
+</ul></li>
+</ul>
+
+<p>iOS 13 也为文本、填充、分隔定义了虚化值，可以与每一种材料匹配良好。通过从背景颜色中抽样、修改饱和度，虚化使 UI 元素更亮或更暗。虚化的 UI 元素可以与材料融合得更好，并增强半透明效果。</p>
+
+<p>文本和填充都提供了几种等级的虚化效果，分隔线只有一个等级。等级的名字表明了元素和背景间的相对对比度，默认层级有着最高的对比度，第四等级有最低的对比度。</p>
+
+<p>除了第四等级，你可以在任何材料上对文本使用下面的虚化效果值。不推荐在薄和超薄材料上使用第四等级，因为对比度太低。</p>
+
+<ul>
+<li>label（默认）</li>
+<li>secondaryLabel</li>
+<li>tertiaryLabel</li>
+<li>quaternaryLabel</li>
+</ul>
+
+<p>你可以在任何材料上对填充使用下面的虚化效果值：</p>
+
+<ul>
+<li>fill（默认）</li>
+<li>secondaryFill</li>
+<li>tertiaryFill</li>
+</ul>
+
+<p>iOS 为分隔线定义了一个默认的虚化效果值，它可以与任何材料上都匹配地很好。</p>
+
+<ul>
+<li>基于语义化含义选择虚化效果：避免混用这些效果，例如，不要给分隔符使用文本的虚化效果。</li>
+</ul>
+
+<h2 id="toc_8">在 iOS 上实现 Dark Mode</h2>
+
+<p>待补充...</p>
+
+<h2 id="toc_9">在 macOS 上实现 Dark Mode</h2>
+
+<p>待补充...</p>
+
+<h2 id="toc_10">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/dark-mode/">Dark Mode - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/#dynamic-system-colors">Color - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/materials/">Materials - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols/">SF Symbols - SF Symbols - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">Typography - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/accessibility/overview/color-and-contrast/">Color and Contrast - Accessibility - Human Interface Guidelines - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[把 iPad 上的 app 带到 Mac 中去]]></title>
+    <link href="https://steppark.net/15681304209417.html"/>
+    <updated>2019-09-10T23:47:00+08:00</updated>
+    <id>https://steppark.net/15681304209417.html</id>
+    <content type="html"><![CDATA[
+<p>当你把你的 iPad 上打造的 app 带到 Mac 中去时，你就给了人们一个机会可以在具备宽大的屏幕、杰出的原生表现和充足的本地存储的 Mac 上享受你的 app。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">开始之前的准备</a>
+</li>
+<li>
+<a href="#toc_2">针对 Mac app 考虑一些增强功能</a>
+</li>
+<li>
+<a href="#toc_3">适配 macOS app 结构和导航惯例</a>
+</li>
+<li>
+<a href="#toc_4">支持 macOS 的用户交互</a>
+<ul>
+<li>
+<a href="#toc_5">键盘输入</a>
+</li>
+<li>
+<a href="#toc_6">手势</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_7">把 app 的所有命令放到菜单中去</a>
+<ul>
+<li>
+<a href="#toc_8">情景化菜单</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_9">视觉设计考量</a>
+<ul>
+<li>
+<a href="#toc_10">布局</a>
+</li>
+<li>
+<a href="#toc_11">颜色</a>
+</li>
+<li>
+<a href="#toc_12">文字排版</a>
+</li>
+<li>
+<a href="#toc_13">自定义图标和图形</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_14">偏好</a>
+</li>
+<li>
+<a href="#toc_15">参考链接</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">开始之前的准备</h2>
+
+<p>大多数的 iPad app 都适合这种改造，但是一些依赖 Mac 上没有的 iPad 功能的 app 可能就会有些问题。例如，如果你的 app 的核心功能是需要 iPad 的陀螺仪、加速剂或者是后置摄像头，亦或是想 HeathKIt、ARKit 这种 iOS 框架，又或者是 app 的主要功能是一些有关导航的事情，那这种 app 就不适合 Mac。</p>
+
+<p>对于那些没有要求只在 iPad 上才有的功能的 app，确保你的 app 可以良好运行在 Mac 上的最佳方法就是确保这些 app 也可以在 iPad 上运行良好。特别地，你的 app 应该：</p>
+
+<ul>
+<li>支持多任务功能（multitasking）：那些运行良好的 app 在 iPad 上都会支持 Split View、Slide Over、Picture in Picture 功能以改变界面的大小，对这些功能的支持也使得 app 能够接近 Mac 用户期待的窗口可以随意调整大小的终极目标。</li>
+<li>支持拖放（drag and drop）：当你在你的 iPad app 上支持拖放功能时，你的 app 就在 Mac 上自动获得了这项功能。</li>
+<li>可以对键盘快捷方式，包括 macOS 通用的键盘快捷方式作出响应：即使一个键盘并不总是能操控你的 iPad app，但 iOS 和 macOS 用户会很希望使用键盘快捷方式来提供与 app 交互的效率。</li>
+</ul>
+
+<h2 id="toc_2">针对 Mac app 考虑一些增强功能</h2>
+
+<p>当你使用 Mac Catalyst 去为 macOS 构建 iPad app 时，你可以自动获得 Mac 基础功能的支持，例如：</p>
+
+<ul>
+<li>系统偏好设置；</li>
+<li>键盘、触控板、鼠标和触控栏的输入，包括按键对焦和键盘导航；</li>
+<li>窗口管理；</li>
+<li>富文本交互，包括复制、粘贴、情景化编辑菜单；</li>
+<li>文件管理。</li>
+</ul>
+
+<p>额外的，许多系统提供的 UI 元素会从 iOS 自动地转移到 macOS。例如，你可以获得下面这些 iOS 项目的适合的 macOS 版本：</p>
+
+<ul>
+<li>Split view 分隔视图</li>
+<li>File browser 文件浏览器</li>
+<li>Activity view 活动视图</li>
+<li>Form sheet 表单</li>
+<li>Contextual actions 情景化操作</li>
+</ul>
+
+<p>为了确保你的 app 可以给用户一个丰富的 Mac 使用体验，增强这些基础，不仅仅是简单地在 macOS 窗口中展示 iOS UI 是非常重要的。在你深入下去更新这些特定的视图和控件之前，先熟悉平台之间的主要不同点，这样你就可以在 Mac 上创造十分合适的 app。</p>
+
+<p>iOS 和 macOS 系统都根据用户使用设备的不同方式分别定义了设计模式和用户交互的惯例。例如，在 iOS 上有轻扫删除的管理，有在手持设备上为触摸屏最优化的 action sheet 命令和控件都会出现在屏幕底部的惯例。相似的，在 macOS 上有键盘快捷方式的惯例，有为键盘、鼠标、触控板交互和单独显示器最优化的菜单命令和控件都会出现在窗口顶部的惯例。</p>
+
+<p>这些对适配有着最大影响的惯例和设计模式可以归纳为下面四个核心区域：</p>
+
+<ul>
+<li>导航：许多 iOS 和 macOS 的 app 通过相似的方式组织数据，但它们使用不同的控件和视觉标记帮助人们理解和在数据间导航。</li>
+<li>用户输入和交互：虽然 iPad 和 Mac 都可以通过许多设备接收输入信息，例如屏幕多点触控、键盘、鼠标、触控板，但是可触摸的交互形成了 iOS 的惯例，而键盘和鼠标的交互形成了 macOS 的惯例。</li>
+<li>菜单：Mac 用户对常驻的菜单栏非常熟悉，并且期望在菜单栏的菜单中找到所有的 app 命令。另一方面，iOS 并没有一个常驻的菜单栏，iOS 用户只会在 app 的 UI 中找到 app 的命令。</li>
+<li>内容大小：在 iPad app 的 macOS 版本中的文本看上去会跟 iOS 一样，因为 SF 字体可以在所有的平台上使用。然而，在 iOS 上的基线字体尺寸是 17pt，而在 macOS 上最通用的字体尺寸是 13pt。为了确保你的 app 的文本和交互元素可以与 macOS 环境一致，iOS 视图会自动缩小到原来的 77%。</li>
+</ul>
+
+<p>除了适配 macOS 的交互和设计惯例，你还需要更新你的 app 的视觉设计和布局以利用好 Mac 更宽大的屏幕，并给 macOS 用户一个良好的使用体验。例如，你可能需要：</p>
+
+<ul>
+<li>把一列内容或者操作变成多列；</li>
+<li>在主要内容旁边展示一个查看器 UI，而不是一个 popover；</li>
+<li>同步展示你的 app 层级中的两个层级或者更多层级。</li>
+</ul>
+
+<p>理想情况下，从 macOS 设计惯例的角度查看 iPad app 也是一种改进 iOS 版本的方法。如果你想确保每一个版本都能与它的平台惯例保持正确，那就用这个机会重新审查你的 app 的设计。特别是如果你的 iPad  app 是从 iPhone app 发展而来的，重新仔细考虑你放置视图和控件的方法，看看这里是不是有地方可以更好地利用好 iPad 的大屏幕。</p>
+
+<h2 id="toc_3">适配 macOS app 结构和导航惯例</h2>
+
+<p>设计良好的 app 导航通过遵循平台的惯例反映数据的结构，为 app 的首要目标提供支持。为了帮助 macOS 用户在使用你的 app 时不会陌生，你需要把 iOS 的导航惯例翻译成 macOS 的等价惯例。</p>
+
+<p>大多数的 iPad app 使用扁平的导航或者层级导航，有些 app 两种组合使用。扁平导航把功能区域或者数据分类作为同一等级的组展示，它们每一组都是始终可用的。例如，「音乐」和「应用商店」app 使用了扁平导航让用户可以始终访问最高层级的区域，例如资料库、为你推荐、浏览、今天、游戏。层级导航把信息以树状结构呈现，用户通过在每个视图中选择一个条目，直到抵达目的地。例如，在设置中人们可以通过「通用」→「键盘」→「文本替换」来自定义文本替换。</p>
+
+<p>通常情况下，iPad app 使用下面这些 UIKit 控件来实现导航：</p>
+
+<ul>
+<li>Tab bar 标签栏：Tab bar 通过在屏幕底部的 bar 上始终展示一个最高层级的目录来支持扁平导航；</li>
+<li>Page control 页码控件：一个 page control 通过在屏幕底部展示一系列的圆点来表明在多个扁平页面组成的列表中当前页面的位置。</li>
+<li>Split view 分隔视图：一个 split view 可以通过在一级视图（或者叫主视图 master view）和二级视图（或者叫详情视图 detail view）展示条目或者功能来实现层级导航。当人们在一级视图中选择一个条目，分隔视图就可以在二级视图中展示与这个条目相关联的内容。</li>
+</ul>
+
+<p>将 iOS 上的 tab bar 转化成 macOS 的控件时需注意：</p>
+
+<ul>
+<li>如果你在 iPad app 中使用了 tab bar，考虑使用一个 segmented control 分段控件或者在一个分隔视图控制器中使用边栏背景样式：这两种样式与 Mac 上的窗口样式有着相似的导航惯例。为了在这些条目中选择，考虑下面这些要点：
+<ul>
+<li>一个分段控件和一个标签栏可以提供相似的交互，例如互相排斥的选择，所以一个分段控件可以作为直接适配的替换选择。一个分段控件对于在每个 tab 中没有很多层级的 iPad app 是理想的，因为它可以在一个 tab 中与一个边栏搭配发挥导航的作用。</li>
+<li>一个边栏展示了一个顶级条目的列表，每一个条目可以包括一个子条目的列表。使用边栏可以让导航更流畅，因为你可以让用户在边栏中看到每个 tab 的内容。边栏对于展示不会经常改变的 app 特定的或者用户特定的分类是一个好的选择。例如，在「News」 app 的边栏中，即使人们可以改变每个分类列出的条目，但「订阅中」和「建议」分类就不会经常改变。</li>
+</ul></li>
+<li>你也可以在 app 中把分段控件和边栏组合使用。例如，你可能需要分段控件去容纳 tab，需要边栏去展示每个 tab 的内容。不管你怎么适配你的 tab bar，确保让用户可以通过 macOS 的查看菜单内，快速访问每个 tab 的内容。</li>
+</ul>
+
+<p>将 iOS 上的 split view 转化成 macOS 的控件时需注意：</p>
+
+<ul>
+<li>如果你在 iPad app 上使用了分隔视图，macOS 会自动将其转化成 Mac 版本的分隔视图：在两个平台上，主视图是呈现各种条目列表的好选择，例如在「邮件」应用中的邮箱列表，因为它可以既包含文本又包含图标，还支持排序和过滤功能。然而，如果你的内容层级超过两个层级，在主视图和当前详情视图之间的中间层级就会在 Mac 样式的窗口中看不见。为了确保人们可以沿路径返回，在工具栏上要包括一个后退按钮。</li>
+</ul>
+
+<p>将 iOS 上的 page control 转化成 macOS 的控件时需注意：</p>
+
+<ul>
+<li>如果你通过使用页码控件或者另一种方式来实现横向导航，给用户一个特定的控件可以查看页面：如果你支持这种样式的水平导航，你可以在 Mac 样式的窗口中通过在工具栏上展示一个「下一页/上一页」按钮或者在菜单栏的菜单中添加导航命令来帮助人们在页面间导航。例如，macOS 上的「股票」应用既在工具栏上展示了一个后退按钮，也在查看菜单中展示了下一个和上一个命令。</li>
+</ul>
+
+<p>对于多窗口要注意的点：</p>
+
+<ul>
+<li>如果你在你的 iPad app 中支持多窗口功能，那在 macOS 的版本中也会获得多窗口功能的支持。另外，许多 macOS app 让人们可以在新 tab 中打开新的文档或其他内容，而不是在新窗口中打开。例如，人们可以在 Safari 的窗口中的每个 tab 中打开不同的网页，在一个 Finder 窗口中的每个 tab 中打开不同系统路径的文件系统。当人们使用系统偏好设置去设定更喜欢 tab 而不是窗口时，系统会把相关的菜单条目动态地添加到 app 的菜单中去，例如「视图」→「显示标签栏和窗口」→「显示下一个标签」。</li>
+</ul>
+
+<h2 id="toc_4">支持 macOS 的用户交互</h2>
+
+<p>「Selection persistence 持续保持选择状态」是 iOS 和 macOS 用户交互的基本不同。因为许多 macOS 用户期望只通过使用键盘来控制 app 和系统，对象的选择状态必须一直保持，人们才可以通过一连串的键盘敲击去选择一个对象，再通过一连串的敲击去执行对象。相对比的，iOS 用户期望执行一个对象时不需要选中它，所以对象没有必要一直保持选中状态。众所周知，iOS app 并不是为最优化的键盘交互而生的。</p>
+
+<p>这里有一些方式，在这些方式中不同的交互惯例会影响用户体验：</p>
+
+<ul>
+<li> macOS 用户总是会想要「下一个」和「上一个」按钮来取代 iPad或者触控板的手势，例如在页面之间轻扫。</li>
+<li>在一个 Mac 上，人们期望使用删除键和在菜单中选择删除命令，所以在 UI 中展示一个删除按钮通常是没必要的。</li>
+<li>iOS 用户习惯于下拉页面刷新内容，相比的，Mac 用户期望使用一个菜单命令，例如「检查新内容」。</li>
+</ul>
+
+<p>当你把 iPad 的用户交互模式翻译成 Mac 的交互时，将聚焦点放在让用户通过遵循平台惯例的方式操作对象上。</p>
+
+<h3 id="toc_5">键盘输入</h3>
+
+<p>为支持键盘惯例做好准备，让用户可以通过使用方向按键或者按一个字母/数字按键来改变选择对象。<br/>
+如果在你的 app 中可以实现，那就利用好 Mac 用户可以同时轻松使用键盘和鼠标或者触控板这一事实。<br/>
+如果你在你的 iPad app 中通过实现 <code>UIKeyCommand</code> 去定义命令的键盘快捷方式，你 app 的 macOS 版本会把这些快捷方式翻译成菜单。例如，你应该把每一个主要的内容显示区域都映射成键盘快捷方式，例如每一个 tab 的键盘快捷方式就是「⌘1」、「⌘2」……并把这些快捷方式展示在你 app 的 macOS 版本中的查看菜单中。</p>
+
+<p>如果在你的 iPad app 的 UI 中有一个删除按钮，那就考虑从 macOS 版本中移除这个按钮，让用户可以通过删除按键或者「编辑」→「删除」菜单完成删除操作。</p>
+
+<h3 id="toc_6">手势</h3>
+
+<p>当你的 iPad app 运行在 macOS 上时，大多数的手势可以被自动转换，例如：</p>
+
+<p><img src="media/15681304209417/ED86E27E-3EFB-4525-89CB-768CBE116F96.png" alt="ED86E27E-3EFB-4525-89CB-768CBE116F96"/></p>
+
+<p><img src="media/15681304209417/FF88D1DF-5D30-483B-A58B-618AE2FE4960.png" alt="FF88D1DF-5D30-483B-A58B-618AE2FE4960"/></p>
+
+<p>注意：在 pinch 和 rotate 手势中的两个触摸点会被传送给光标下面的视图，而不是每个触摸点下面的视图。</p>
+
+<h2 id="toc_7">把 app 的所有命令放到菜单中去</h2>
+
+<p>在一个 Mac 上，屏幕顶部的菜单栏可以让那些控制 app 和系统的命令给用户一个始终如一的位置。除了 Apple 菜单列出的总是可用的系统层级的命令，菜单栏还包含由当前 app 提供的标准菜单和自定义菜单。Mac 用户期望每一个 macOS app 可以在菜单栏中显示所有的命令。</p>
+
+<p>开发手记：你必须使用 <code>UICommand</code> 去代表 iPad app 上的每一个命令，因此这些命令才会被放进 macOS 的菜单栏的菜单中。为了让命令支持键盘快捷方式，使用 <code>UIKeyCommand</code>。</p>
+
+<p>因为 iPad app 在主要的 UI 中使用控件去展示命令，为每一个 app 的命令找到一个有逻辑的、直观的菜单栏位置是适配过程的核心部分。</p>
+
+<p>为了设计你的 macOS 版本的 app 的菜单栏菜单，从列出人们可以执行的所有动作开始，并把它们根据标准菜单栏菜单定义的分类分组。例如：</p>
+
+<ul>
+<li>app 名字；</li>
+<li>文件 File；</li>
+<li>编辑 Edit；</li>
+<li>查看 View；</li>
+<li>窗口 Window；</li>
+<li>帮助 Help。</li>
+</ul>
+
+<p>注意：大多数的 macOS app 都包含「查看」和「窗口」菜单。虽然这俩菜单会有些相似，但是它们都有不同的目的。人们使用「查看」菜单去自定义 app 窗口的外观、在不同的功能区域之间移动；使用「窗口」菜单在 app 中的一系列窗口间导航、组织和管理这些窗口。</p>
+
+<p>如果你的清单中某些动作放在标准菜单栏中的菜单中讲不通的话，你可能需要添加一个自定义菜单。Mac app 总是会为那些与核心 app 对象或者核心 app 工作流相关联的命令添加一个自定义菜单栏菜单。例如，在 macOS 中的「邮件」app 中，使用了「信息」和「邮箱」菜单列出了那些操作 app 基础对象的命令。同样的，「Keynote」app 使用了「排列」菜单列出了在幻灯片上与排列对象核心工作流相关的所有命令。</p>
+
+<p>在你把 app 的所有动作都分组到菜单中后，你需要用一种讲得清楚的方法在每个菜单中排列这些动作。每一个标准菜单都定义了一个推荐动作排序，所以对你支持的动作按照这个顺序排列非常重要。例如，Mac 用户期望「文件」菜单会按下面这个顺序呈现：</p>
+
+<ul>
+<li>新建…</li>
+<li>打开…</li>
+<li>打开最近的文档</li>
+<li>关闭</li>
+</ul>
+
+<p>在一个自定义菜单栏的菜单中，你应该根据重要性、使用频率或者你 app 中讲得清楚的其他机制排序这些动作。菜单栏菜单也可能包含子菜单和分隔线，以让动作按逻辑方式被分组。</p>
+
+<p>当然，对于你的菜单中所有的常见命令支持键盘快捷方式也很重要，这样使用键盘的 Mac 用户和 iPad 用户都可以从中受益。除了为标准菜单条目创建键盘快捷方式，你也可以为自定义条目创建快捷方式。</p>
+
+<h3 id="toc_8">情景化菜单</h3>
+
+<p>情景化菜单可以帮助人们发现那些不需要打开菜单栏菜单就能在某个对象上执行的动作。如果你在 iPad app 上支持情景化菜单，系统会自动把它们转化为 macOS 版本的情景化菜单。</p>
+
+<p>为了给 Mac 用户创造最佳用户体验，为支持情景化菜单寻找额外的空间。例如，如果人们可以在 app 中对一个对象执行一些常用的动作，那就添加一个列出这些动作的情景化菜单。你也可以对代表一个对象的视图添加情景化菜单，例如，在「Finder」中的文件夹对象就支持情景化菜单，其提供了像是「在新标签中打开」、「重命名」、「复制」这些动作。</p>
+
+<h2 id="toc_9">视觉设计考量</h2>
+
+<p>当运行到 macOS 上时，为了让你的 iPad app 也会看起来运行良好，仔细在下面这些视觉设计领域考虑平台间的不同。</p>
+
+<h3 id="toc_10">布局</h3>
+
+<p>Mac 用户期望将 app 的窗口大小从全屏一直调整到 app 允许的最小尺寸。为了支持这种无限可调整大小的类型，也是为了利用好 Mac 宽带的屏幕，那就使用「regular width」和「regular height」的 size class 尺寸等级，必要时考虑把窗口内容区域中的元素重新排列成并排排列。</p>
+
+<ul>
+<li>尽可能地适配一个从上到下的布局：macOS app 会把最重要的动作和内容放到靠近窗口顶部的地方。如果你的 iPad app 在工具栏或者导航栏上有控件，那么把这些控件放到 app 的 macOS 版本中的窗口工具栏上。</li>
+<li>考虑把 iPad app 主要 UI 中的控件移动到 macOS 窗口中的工具栏上：当然，也把与这些控件相关联的命令列在 macOS app 的菜单栏的菜单中。</li>
+<li>特别注意：在 macOS 中，工具栏上的按钮总是可见的，但当前的情景可能使这些按钮不可用。而在 iOS 中，工具栏上的按钮总是可用的，但当前情景可能没有工具栏。例如，如果你的 iPad app 只在一个 tab 中有工具栏按钮，那 macOS 版本的 app 中应在其他的 app 中也展示这个按钮，只不过要将其设置为不可用状态。为了避免让用户疑惑，在工具栏上使用一个「齿轮」按钮会更好，因为在尺寸按钮的菜单中的条目会根据当前 app 的选择发生变化。</li>
+<li>从屏幕左边或者右边，重新放置按钮：在 iPad 上，把按钮放在屏幕的居中靠左或者居中靠右的位置上会帮助用户可以更容易点击，但是在 Mac 上，工程效率学的考虑不需要了。你可能想要把控件重新放在内容区域的顶部或底部，抑或是放在你 macOS app 窗口的工具栏上。</li>
+</ul>
+
+<h3 id="toc_11">颜色</h3>
+
+<ul>
+<li>在两个平台上使用系统的选中颜色：通常情况下，iOS 用颜色去给按钮描边着色、表明被选中状态，但是在 macOS 中，人们期望使用系统偏好设置去选择他们想要的被选中颜色和按钮颜色。</li>
+</ul>
+
+<p>为 iOS 背景所设计的动态系统颜色会自动映射成合适的 macOS 等价颜色，如下表所示：</p>
+
+<p><img src="media/15681304209417/949C9F3A-A172-450C-8C05-4B9CDB62D23C.png" alt="949C9F3A-A172-450C-8C05-4B9CDB62D23"/></p>
+
+<p>其他定义的语义化颜色，如系统颜色、文字标签颜色、分隔线颜色，会映射到相似名字的 macOS 颜色。</p>
+
+<ul>
+<li>不要在 tab rows 中给按钮着色：在你的 iPad app 中，你会通过着色表明那个在 tab rows 中的按钮是活跃状态，但是在 macOS 中，在 tab rows 中被着色的按钮会看上去不到位不合适。</li>
+</ul>
+
+<h3 id="toc_12">文字排版</h3>
+
+<p>虽然系统提供的自动缩放功能可以让你在所有的平台上不需要指定不同的字体大小值，这个功能一般都有一个不错的结果，但在每一种情况下你可能不会得到最好的结果。</p>
+
+<ul>
+<li>确保 small 类型在 Mac 上是可读的：为在 iPad 上使用的一些最小字体尺寸做出增加做好准备，在 macOS 上的所有文本都应该保持可读性。当然，需要注意在 macOS 上不支持动态类型。</li>
+</ul>
+
+<h3 id="toc_13">自定义图标和图形</h3>
+
+<ul>
+<li>创建一个 macOS 版本的 app 图标：好的 macOS app 图标明显与好的 iOS app 图标不同。例如，macOS app 图标可以是非矩形形状，图标可以被歪曲或者旋转。默认情况下，macOS 会在 iOS app 的图标上增加一层投影，让其在 Mac 上更合适，但是最好是设计一个特定的 Mac app 图标。</li>
+<li>如果有必要的话，创建平台特定的图形：如果你的 iPad app 使用了以某种方式提及了操作平台的自定义图形，那就需要创造一个新的适合于 Mac 的图形。Xcode 提供了一个分离的资源目录，你可以在 iPad app 中使用它存放特定的 macOS 图形。</li>
+</ul>
+
+<h2 id="toc_14">偏好</h2>
+
+<p>如果你的 app 在 iOS 的「设置」中提供了 app 的设置选项，macOS 会自动在 app Mac 版本的偏好设置窗口中显示这些选项。默认情况下，macOS 会在偏好设置窗口中为 iOS 设置中的每个条目添加一个工具栏按钮，所以要给这些条目匹配一个标准的系统偏好设置按钮和标题。</p>
+
+<p>正如 Mac 用户所期望的，当用户在你 app 的菜单中选择「偏好设置」菜单时你的偏好设置窗口就会出现。然而，这里有一些方法可以改进 app 设置条目的展示，让 app 的偏好设置体验更像 Mac：</p>
+
+<ul>
+<li>自定义每个条目的工具栏图标：因为 macOS 会对你的 app 的设置条目自动使用标准的系统偏好设置图标，人们就必须阅读每个工具栏按钮的标题以区分多个条目。为了改进这个体验，为每个设置条目提供一个自定义的图标。</li>
+<li>让macOS 用户更容易理解开关控件：不像 iPad app，当用户在系统偏好设置中使用一个开关做出改变时，一个 macOS app 总是会展示一个确认弹窗。另外，在 iOS 设置中的开关可以展示一小部分的文本信息以告诉用户这个开关会如何影响用户体验。在 app 的 Mac 版本中，你可以与 macOS 开关一起提供一段简短的描述，你可以在用户使用开关改变设置时在确认弹窗中指定一段内容去展示。</li>
+</ul>
+
+<h2 id="toc_15">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/overview/ipad-apps-for-mac/#visual-design-considerations">iPad Apps for Mac - iOS - Human Interface Guidelines - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sign In with Apple 的设计准则和功能实现]]></title>
@@ -83,6 +619,9 @@ Sign In with Apple 提供了反欺骗的特性，它可以通过机器学习和�
 <a href="#toc_15">Best Practices</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="#toc_16">参考链接</a>
 </li>
 </ul>
 
@@ -315,6 +854,19 @@ case let credential as ASPasswordCredential:
 
 <p><img src="media/15676959360699/751B01C9-1E19-4A80-B841-B9332F298918.png" alt=""/></p>
 
+<h2 id="toc_16">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/">Sign In with Apple - Sign In with Apple - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/706/">Introducing Sign In with Apple - WWDC 2019 - Videos - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
 ]]></content>
   </entry>
   
@@ -404,6 +956,9 @@ case let credential as ASPasswordCredential:
 <a href="#toc_20">不可用状态</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="#toc_21">参考链接</a>
 </li>
 </ul>
 
@@ -654,6 +1209,18 @@ case let credential as ASPasswordCredential:
 
 <p><img src="media/15675754544495/4D85DF39-029F-4FA5-8418-FE3DE3A1A3B7.png" alt=""/></p>
 
+<h2 id="toc_21">参考链接</h2>
+
+<ul>
+<li><a href="https://material.io/design/color/dark-theme.html">Dark theme - Material Design</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
 ]]></content>
   </entry>
   
@@ -761,6 +1328,9 @@ case let credential as ASPasswordCredential:
 </li>
 <li>
 <a href="#toc_25">Full Screen Browse 全屏浏览</a>
+</li>
+<li>
+<a href="#toc_26">参考链接</a>
 </li>
 </ul>
 
@@ -1009,6 +1579,21 @@ Top Shelf 的内容进入全屏时，通过轻点遥控器就可以让内容元�
 <li>注意内存使用。</li>
 </ul>
 
+<h2 id="toc_26">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/tvos/system-capabilities/profiles/">Profiles - System Capabilities - tvOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/tvos/icons-and-images/top-shelf-content/">Top Shelf Content - Icons and Images - tvOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/tvos/interface-elements/tab-bars/">Tab Bars - Interface Elements - tvOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/211/">Mastering the Living Room With tvOS - WWDC 2019 - Videos - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
 ]]></content>
   </entry>
   
@@ -1089,6 +1674,9 @@ Top Shelf 的内容进入全屏时，通过轻点遥控器就可以让内容元�
 <a href="#toc_13">几个注意点</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="#toc_14">参考链接</a>
 </li>
 </ul>
 
@@ -1476,6 +2064,19 @@ let redHeartImage = heartImage.withTintColor(.redColor, renderingMode: .alwaysOr
 
 <p><img src="media/15675148872165/097FDF53-4ED4-41D8-BE08-3C09EA2A0458.png" alt=""/></p>
 
+<h2 id="toc_14">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/">SF Symbols - SF Symbols - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/206/">Introducing SF Symbols - WWDC 2019 - Videos - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
 ]]></content>
   </entry>
   
@@ -1520,6 +2121,9 @@ let redHeartImage = heartImage.withTintColor(.redColor, renderingMode: .alwaysOr
 </li>
 <li>
 <a href="#toc_8">Contextual Menus 情景化菜单</a>
+</li>
+<li>
+<a href="#toc_9">参考链接</a>
 </li>
 </ul>
 
@@ -1738,6 +2342,25 @@ let redHeartImage = heartImage.withTintColor(.redColor, renderingMode: .alwaysOr
 <p><img src="media/15674389801268/32B6A089-A1F4-4510-97A7-08E77385F3CC.png" alt=""/></p>
 
 <p>情景化菜单中的操作也应该在 app 中的其他位置找到并可用。因为人们可能并不一定能及时发现相关的情景化菜单。</p>
+
+<h2 id="toc_9">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/808/">What’s New in iOS Design - WWDC 2019 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/dark-mode/">Dark Mode - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/#dynamic-system-colors">Color - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/materials/">Materials - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols/">SF Symbols - SF Symbols - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/bars/navigation-bars/">Navigation Bars - Bars - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/modality/">Modality - App Architecture - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/controls/context-menus/">Context Menus - Controls - iOS - Human Interface Guidelines - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
 
 ]]></content>
   </entry>
@@ -2053,7 +2676,7 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Designing For iPhone Xs、iPhone Xs Max、iPhone Xʀ — 比大还大，更大的刘海屏 iPhone 来了]]></title>
+    <title type="html"><![CDATA[Designing For iPhone Xs、iPhone Xs Max、iPhone Xʀ — 比大还大，更大的刘海屏 iPhone app 如何适配]]></title>
     <link href="https://steppark.net/15433010141111.html"/>
     <updated>2018-11-27T14:43:34+08:00</updated>
     <id>https://steppark.net/15433010141111.html</id>
@@ -2199,7 +2822,7 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Designing Fluid Interfaces 设计流畅的界面 - WWDC 2018 Session 803]]></title>
+    <title type="html"><![CDATA[流畅界面背后的设计考量]]></title>
     <link href="https://steppark.net/15416957498069.html"/>
     <updated>2018-11-09T00:49:09+08:00</updated>
     <id>https://steppark.net/15416957498069.html</id>
@@ -2424,11 +3047,11 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
 </ul></li>
 </ul>
 
-<blockquote>
-<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2018/803/">Designing Fluid Interfaces - WWDC 2018 - Videos - Apple Developer</a>  </p>
-</blockquote>
+<h2 id="toc_4">参考链接</h2>
 
-<p>📱</p>
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2018/803/">Designing Fluid Interfaces - WWDC 2018 - Videos - Apple Developer</a><br/></li>
+</ul>
 
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
@@ -2690,7 +3313,7 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[内容丰富的通知 Rich Notifications - WWDC 2017 Session 817]]></title>
+    <title type="html"><![CDATA[让 app 的通知内容不再单调]]></title>
     <link href="https://steppark.net/15416970661320.html"/>
     <updated>2018-11-09T01:11:06+08:00</updated>
     <id>https://steppark.net/15416970661320.html</id>
@@ -2762,11 +3385,11 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
 <li>确保提供的<em>快速操作（Quick Action）</em>是相关的、有用的，用户可以在这里实现那些想做的操作并切处理好通知。</li>
 </ul>
 
-<blockquote>
-<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2017/817/">Rich Notifications - WWDC 2017 - Videos - Apple Developer</a>  </p>
-</blockquote>
+<h2 id="toc_4">参考链接</h2>
 
-<p>📱</p>
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/817/">Rich Notifications - WWDC 2017 - Videos - Apple Developer</a><br/></li>
+</ul>
 
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
@@ -2867,7 +3490,7 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[尺寸级别和核心要素 Size Classes and Core Components - WWDC 2017 Session 812]]></title>
+    <title type="html"><![CDATA[在不同尺寸的设备上让 app 都大放异彩：尺寸级别和核心要素 Size Classes and Core Components]]></title>
     <link href="https://steppark.net/15171487371271.html"/>
     <updated>2018-01-28T22:12:17+08:00</updated>
     <id>https://steppark.net/15171487371271.html</id>
@@ -2975,18 +3598,13 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
 
 <p>我们鼓励你利用好这些工具，不仅会节约你的时间，而且不管用户使用的是什么 iOS 设备，你的 app 的体验都是无缝完美的。</p>
 
-<h2 id="toc_4">Read More</h2>
+<h2 id="toc_4">参考链接</h2>
 
 <ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/812">Size Classes and Core Components - WWDC 2017 - Videos - Apple Developer</a><br/></li>
 <li><a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/adaptivity-and-layout/">Adaptivity and Layout - Visual Design - iOS Human Interface Guidelines</a></li>
 <li><a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/typography/">Typography - Visual Design - iOS Human Interface Guidelines</a></li>
 </ul>
-
-<blockquote>
-<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2017/812">Size Classes and Core Components - WWDC 2017 - Videos - Apple Developer</a>    </p>
-</blockquote>
-
-<p>📱</p>
 
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
@@ -4602,7 +5220,7 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
 
 <p>目前，美区的 App Store 中的「Today」已经开始每天频率的内容更新，中区的 App Store 暂时还是一周一更新。期待 iOS 11 正式发布后，App Store 为应用带去的崭新的活力。</p>
 
-<h2 id="toc_11">参考内容</h2>
+<h2 id="toc_11">参考链接</h2>
 
 <ul>
 <li><a href="https://developer.apple.com/videos/play/wwdc2017/301">Introducing the New App Store - WWDC 2017</a></li>
@@ -4628,7 +5246,7 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[为订阅成功而设计 Designing for Subscription Success - WWDC 2017 Session 814]]></title>
+    <title type="html"><![CDATA[设计 app 内订阅项目的基本准则]]></title>
     <link href="https://steppark.net/15036722610708.html"/>
     <updated>2017-08-25T22:44:21+08:00</updated>
     <id>https://steppark.net/15036722610708.html</id>
@@ -4682,11 +5300,11 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
 </ul></li>
 </ul>
 
-<blockquote>
-<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2017/814">Designing for Subscription Success - WWDC 2017 - Videos - Apple Developer</a>  </p>
-</blockquote>
+<h2 id="toc_3">参考链接</h2>
 
-<p>📱💻📺</p>
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/814">Designing for Subscription Success - WWDC 2017 - Videos - Apple Developer</a><br/></li>
+</ul>
 
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
@@ -4698,7 +5316,7 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[iOS 11 设计上的改变 What’s New in iOS 11 - WWDC 2017 Session 810]]></title>
+    <title type="html"><![CDATA[iOS 11 的设计有什么新变化？]]></title>
     <link href="https://steppark.net/15028131788266.html"/>
     <updated>2017-08-16T00:06:18+08:00</updated>
     <id>https://steppark.net/15028131788266.html</id>
@@ -4808,429 +5426,11 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
 <li><p>移除多余的、不必要的 UI 元素，减少复杂度以改善整个 app 的对比度。</p></li>
 </ul>
 
-<blockquote>
-<p>Session 链接：<a href="https://developer.apple.com/videos/play/wwdc2017/810/">What’s New in iOS 11 - WWDC 2017 - Videos - Apple Developer</a>  </p>
-</blockquote>
-
-<p>📱</p>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[WWDC Session 学习笔记总览]]></title>
-    <link href="https://steppark.net/15028149583661.html"/>
-    <updated>2017-08-16T00:35:58+08:00</updated>
-    <id>https://steppark.net/15028149583661.html</id>
-    <content type="html"><![CDATA[
-<p>每年 6 月份的 Apple WWDC，除了揭晓 iOS、macOS、watchOS、tvOS 四大新系统的功能亮点的 Keynote 外，在之后还会有众多的针对不同角色、不同目的的开发者、设计师等准备的 Session。虽然有些很简短、有些所讲述的主题非常垂直，但从这些 Session 中说不定就能了解到系统设计背后的故事、未来新功能发展的走向、深入简出的设计/开发方法等。</p>
-
-<p>「好记性不如烂笔头」，我把我看过的 Session 的精华整理成简短的笔记记录下来，笔记中的一些翻译不求准确，但重在理解其所说即可。这篇文章作为这些学习笔记的分类汇总，以方便日后查找。</p>
-
-<p>与设计相关、功能介绍类的 Session 居多，比较简单、能看懂的与开发相关的 Session 也会有一些。</p>
-
-<span id="more"></span><!-- more -->
-
-<p><strong>分类标注：</strong></p>
+<h2 id="toc_4">参考链接</h2>
 
 <ul>
-<li>iOS：📱</li>
-<li>macOS：💻</li>
-<li>watchOS：⌚️</li>
-<li>tvOS：📺</li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/810/">What’s New in iOS 11 - WWDC 2017 - Videos - Apple Developer</a><br/></li>
 </ul>
-
-<h2 id="toc_0">Design🎨</h2>
-
-<h3 id="toc_1">WWDC 2018</h3>
-
-<ul>
-<li><a href="15416957498069.html">设计流畅的界面 Designing Fluid Interfaces - WWDC 2018 Session 803</a> 📱</li>
-</ul>
-
-<h3 id="toc_2">WWDC 2017</h3>
-
-<ul>
-<li><a href="15028131788266.html">iOS 11 设计上的改变 What’s New in iOS 11 - WWDC 2017 Session 810</a>📱</li>
-<li><a href="15171487371271.html">尺寸级别和核心要素 Size Classes and Core Components - WWDC 2017 Session 812</a> 📱</li>
-<li><a href="15036722610708.html">为订阅成功而设计 Designing for Subscription Success - WWDC 2017 Session 814</a>📱💻📺</li>
-<li><a href="15416970661320.html">内容丰富的通知 Rich Notifications - WWDC 2017 Session 817</a> 📱</li>
-</ul>
-
-<h3 id="toc_3">WWDC 2016</h3>
-
-<ul>
-<li><a href="15030704996885.html">包容性 App 设计 Inclusive App Design - WWDC 2016 Session 801</a>📱💻</li>
-<li><a href="15029504785442.html">排版和字体 Typography and Fonts - WWDC 2016 Session 803</a>📱💻⌚️📺</li>
-<li>迭代的 UI 设计 Iteractive UI Design - WWDC 2016 Session 805📱</li>
-</ul>
-
-<h3 id="toc_4">WWDC 2015</h3>
-
-<ul>
-<li><a href="15028584576994.html">新的系统字体 Introducing the New System Fonts - WWDC 2015 Session 804</a>📱💻⌚️📺</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[从设计出发认识 UIAlertController]]></title>
-    <link href="https://steppark.net/14994455522628.html"/>
-    <updated>2017-07-08T00:39:12+08:00</updated>
-    <id>https://steppark.net/14994455522628.html</id>
-    <content type="html"><![CDATA[
-<p>Apple 在 <a href="https://developer.apple.com/ios/human-interface-guidelines/ui-views/alerts/">iOS Human Interface Guidelines</a> 中提到了两种 View：Alert 和 Action Sheet。如果对 iOS 系统很熟悉的话，在各种 app 里都会看见这两种 View 的身影。两种 View 都会打断用户的操作，覆盖掉当前界面，在界面上以模态窗口的形式呈现，一般是向用户传达重要的信息并期望用户能够做出反馈。</p>
-
-<span id="more"></span><!-- more -->
-
-<h2 id="toc_0">初见 Alert 和 Action Sheet</h2>
-
-<p>通常的 Alert 由标题、描述、一个或一个以上的操作组成，还可能有文本输入框。Alert 会直接显示在界面的中央，必须点击某个操作后才能使其关闭，一般在 app 请求系统权限、确认删除某些内容、输入 Apple ID 等情景时会出现。当然也有一些特殊的 Alert 样式，比如 Touch ID 授权、iOS 10.3 才引入的在应用内评分。</p>
-
-<p><img src="media/14994455522628/Alert.png" alt="Alert " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>Action Sheet 由标题、描述、一个或一个以上的操作组成，在 iPhone 上通常情况下在最底部还会有一个表示「取消」意义的操作。Action Sheet 在 iPhone 上是从底部滑出的一种形式，在 iPad 上是 Popover 的形式。它可以展示较多的操作，且在呈现形式上比 Alert 更圆滑一些，没有那么强硬，一般在一些用户主动操作之后才会出现。在系统里也发现了一个特殊定制化的 Action Sheet，就是音乐 app 里针对一首歌的操作。</p>
-
-<p><img src="media/14994455522628/Action%20Sheet.png" alt="Action Sheet " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>从设计角度来说，Apple 定义了这两种 View 的具体规则，希望 iOS app 的设计师和开发者们都能遵从这套设计规范，这样一方面节省了设计成本，另一方面对于使用 app 的用户来说降低了学习成本，各个 app 的 Alert 和 ActionSheet 的操作逻辑是一样的，各个 iOS app 在不同中又有相同。</p>
-
-<p>当然有的 app 认为原生的样式与自己 app 的设计风格不协调，加之有足够的设计&amp;开发资源，于是根据自己 app 的设计风格设计了一套完全自定义的 Alert 和 Action Sheet。但万变不离其宗，以微信&amp;微博举例，其操作逻辑与原生的是一模一样的，毕竟这样对于用户来说没有什么学习成本，用户也不会觉得很奇怪。</p>
-
-<p><img src="media/14994455522628/Custom%20Alert%20-%20Action%20Sheet.png" alt="Custom Alert - Action Sheet " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>Apple 在设计上对两种 View 进行了规范，那具体在开发上又是怎么去服从这套设计规范的呢？从代码里还能看到这两种 View 的什么细节呢？</p>
-
-<h2 id="toc_1">UIAlertController 是什么？</h2>
-
-<p>Apple 在设计规范中对 Alert 和 Action Sheet 进行了定义，这两种 View 其实也被从代码层级定义好了，使用时直接在 Xcode 中调用就可以。在 iOS 8 时代以前，要想展示 Alert 需要调用 UIAlertView ，想展示 Action Sheet 需要调用 UIActionSheet，且调用的逻辑较为复杂。自 iOS 8 之后，Apple 废弃了之前的调用方法，将上述两个统一成了 UIAlertController，具体呈现哪种样式，由属性「preferredStyle」来决定。</p>
-
-<p>在使用时，整体的思路可以分为三步，1.定义 AlertController 本身，包括其标题、描述、是 Alert 还是 Action Sheet 等；2.定义在 AlertController 中要添加的动作，每个动作又有自己的属性，比如样式、显示文字、执行操作等；3.在页面上展示这个 AlertController。</p>
-
-<p>下面用具体的例子分别说明下各种情景的 AlertController 应该怎么使用，且从这些代码的逻辑中发现那些没有在设计规范中说明的细节。</p>
-
-<h2 id="toc_2">Alert 在代码中的实现</h2>
-
-<h3 id="toc_3">一个操作按钮的 Alert</h3>
-
-<p>最简单的 Alert 自然是只有一个操作按钮，以点击一个按钮弹出 Alert 为例说明：</p>
-
-<pre class="line-numbers"><code class="language-text">@IBAction func showAlertViewWithOneAction(sender: UIButton){
-    
-    // 创建 alertController，定义其显示的标题和描述文字，确定其类型为 Alert
-    let alertController = UIAlertController(title: &quot;Hello World！&quot;, message: &quot;This is the most simple alert view.&quot;, preferredStyle: UIAlertControllerStyle.alert)
-    
-    // 定义要添加到 alertController 中的动作，包括每个动作的标题和样式
-    let okAction = UIAlertAction(title: &quot;OK&quot;, style: .default, handler: nil)
-    
-    // 向 alertController 中添加定义好的动作
-    alertController.addAction(okAction)
-    
-    // 在界面上显示已经配置好的 alertController
-    self.present(alertController, animated: true, completion: nil)
-    
-  }
-</code></pre>
-
-<p>对这段代码做一个简单的解析：</p>
-
-<ul>
-<li>创建 alertController 时有一个属性「preferredStyle」，当其为「UIAlertControllerStyle.alert」时则为创建一个 Alert View，当其为「UIAlertControllerStyle.actionSheet」时则为创建一个 Action Sheet。</li>
-<li>创建一个 action 时，它也有一个属性「style」，这个属性的值有三个：「.default」、「.destructive」、「.cancel」，他们之间有一些区别：
-<ul>
-<li>「.default」：默认的样式，视觉上是正常字重、蓝色的文字；</li>
-<li>「.destructive」：从名字上就可以看出，用在那些具有破坏性、不可恢复的操作上，比如删除、注销、清除等，视觉上是正常字重、红色的文字；</li>
-<li>「.cancel」：iOS 开发中特意择出来的一种样式，特别用在取消、不操作、仅关闭 Alert 的这种操作上，视觉上是半加粗（Semibold）的字重、蓝色的文字。 无论在 Alert Controller 中添加取消样式的动作排在第几个，在显示上都会放到所有操作的最后一个，只有两个操作时会放在左边，这是系统定义好的。<strong>注意一个 alertController 里只能有一个样式为「.cancel」的 action，如果代码中写了大于等于两个，app 会直接 crash。</strong></li>
-</ul></li>
-<li>action 中的 handler 属性是用来描述点击这个操作后会发生的动作，一般情况下会写作一个闭包函数。而对于像取消这种操作，自然就是什么也不执行，即可写成「nil」。文章仅针对 UIAlertController 进行讨论，这部分就不展开详述了。</li>
-</ul>
-
-<p>上面这段代码的运行效果如下图，这种只有一个操作按钮的 Alert 多用于提示/告知用户某些信息，起到一个通知的作用。</p>
-
-<p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%888.43.15.png" alt="Simulator Screen Shot 2017年7月9日 下午8.43.15 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<h3 id="toc_4">两个操作按钮的 Alert</h3>
-
-<p>当然如果想增加更多操作按钮，只需在代码中创建更多动作并添加到 alertController 即可。如下面的代码建立一个两个操作按钮的 AlertView：</p>
-
-<pre class="line-numbers"><code class="language-text">@IBAction func showAlertViewWithTwoActions(sender: UIButton){
-    let alertController = UIAlertController(title: &quot;你确定要退出当前登录帐号吗？&quot;, message: &quot;退出后你的帐户数据不会清除，你可以再次登录&quot;, preferredStyle: .alert)
-    
-    let exitAction = UIAlertAction(title: &quot;退出&quot;, style: .default, handler: nil)
-    let cancelAciton = UIAlertAction(title: &quot;取消&quot;, style: .cancel, handler: nil)
-    
-    alertController.addAction(exitAction)
-    alertController.addAction(cancelAciton)
-    
-    // 定义 alertController 中的哪个动作需要 highlight
-    alertController.preferredAction = alertController.actions[0]
-    
-    self.present(alertController, animated: true, completion: nil)
-    
-  }
-</code></pre>
-
-<p>下图是这段代码的运行效果。但这里有个问题，「取消」按钮并没有如期显示为半粗体字重，反而「退出」按钮显示为了半粗体字重。这个的原因是在代码里对创建的 alertController 的「preferredAction」属性进行了定义，将 alertController 里的第一个动作设置为了「preferredAction」，在显示效果上使这个 action highlight，也即应用了半粗体字重。因此原本使用了「.cancel」样式的操作按钮恢复成了正常字重。只能有一个动作可以被设置为「preferredAction」，且当设备有外接键盘时，按回车键等于直接点击这个操作。这个逻辑也是系统内置的。</p>
-
-<p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%888.59.34.png" alt="Simulator Screen Shot 2017年7月9日 下午8.59.34 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>在使用「preferredAction」这个属性时有几点需要注意，1.必须在创建完 alertController 且添加完动作后才能定义；2.这个属性只能应用于 Alert，不能应用于 Action Sheet。</p>
-
-<h3 id="toc_5">三个操作按钮的 Alert</h3>
-
-<p>当一个 Alert 中出现了大于两个操作时，按钮的排布方式就不能再左右排布了，而是改为由上至下排布，具体代码如下：</p>
-
-<pre class="line-numbers"><code class="language-text">@IBAction func showAlertViewWithThreeAcitons(sender: UIButton){
-    let alertController = UIAlertController(title: &quot;你确定要注销此帐户吗？&quot;, message: nil, preferredStyle: .alert)
-    
-    let destructAction = UIAlertAction(title: &quot;注销帐户&quot;, style: .destructive, handler: nil)
-    let exitAction = UIAlertAction(title: &quot;仅退出帐户&quot;, style: .default, handler: nil)
-    let cancelAction = UIAlertAction(title: &quot;取消&quot;, style: .cancel, handler: nil)
-    
-    alertController.addAction(destructAction)
-    alertController.addAction(exitAction)
-    alertController.addAction(cancelAction)
-    
-    self.present(alertController, animated: true, completion: nil)
-    
-  }
-</code></pre>
-
-<p>以上运行结果为下图，可以看到这个 Alert 只有标题，没有具体的描述信息，这个是被允许的。如果你代码写成只有描述，没有标题，系统会自动把描述作为标题；<strong>但如果你代码中标题和描述都没有，app 会 crash。</strong>如果只有标题和描述，但没有添加任何动作的 alertController 也是可以创建并显示的，但你无法关闭这个 alert。不过这个在实际中也不可能出现这种情况。</p>
-
-<p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%8810%E6%97%A5%20%E4%B8%8A%E5%8D%8812.56.33.png" alt="Simulator Screen Shot 2017年7月10日 上午12.56.33 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>当一个 Alert 中有 n 个操作按钮时又会怎样呢？这个 Alert 会自动可上下滚动，并且打开时默认显示最下面的几个按钮操作。Alert 本身就是希望用户对某些操作做出判断并反馈的一个模态窗口，如果有太多的操作，会让用户感觉十分困惑，无法选择，而且交互体验也是非常差的，所以应极力避免这种情况。然而在 iOS 系统中，Airdrop 接收文件选择用什么 app 打开时就会出现这种情况，看上去十分糟糕🙃。</p>
-
-<p><img src="media/14994455522628/%E5%8F%AF%E7%BF%BB%E9%A1%B5%E7%9A%84%20Action%20Sheet.png" alt="可翻页的 Action Sheet " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<h3 id="toc_6">带文本输入框的 Alert</h3>
-
-<p>一个 Alert 中可以加入文本输入框以获取用户的某些信息，但文本输入框的数量、输入的字符量都应适度，在这么小一个窗口下输入文字的体验不会太好。系统中比较常见的就是购买 app 时输入 Apple ID 密码。以下以输入账户登录名和密码为例说明：</p>
-
-<pre class="line-numbers"><code class="language-text">@IBAction func showAlertViewWithTextField(sender: UIButton){
-    let alertController = UIAlertController(title:  &quot;请输入你的帐户名和密码&quot;, message: nil, preferredStyle: .alert)
-    
-    // 在 alertController 中增加两个文本输入框
-    alertController.addTextField(configurationHandler: {(textField: UITextField!) -&gt; Void in
-      // 为文本输入框添加占位符，也即输入提示
-      textField.placeholder = &quot;帐户名&quot;
-    })
-    
-    alertController.addTextField(configurationHandler: {(textField: UITextField!) -&gt; Void in
-      textField.placeholder = &quot;密码&quot;
-      // 改变文本输入框的属性为安全输入模式
-      textField.isSecureTextEntry = true
-    })
-    
-    let loginAction = UIAlertAction(title: &quot;登录&quot;, style: .default, handler: {
-      (action:UIAlertAction!) -&gt; Void in
-      let firstTextField = alertController.textFields![0] as UITextField
-      let secondTextField = alertController.textFields![1] as UITextField
-      
-      print(&quot;Name \(String(describing: firstTextField.text)), Password \(String(describing: secondTextField.text))&quot;)
-    })
-    let cancelAction = UIAlertAction(title: &quot;取消&quot;, style: .cancel, handler: nil)
-
-    alertController.addAction(loginAction)
-    alertController.addAction(cancelAction)
-    
-    self.present(alertController, animated: true, completion: nil)
-    
-  }
-</code></pre>
-
-<p>这段代码与之前的不同就是为创建的 alertController 增加了两个文本输入框。在第二个密码输入框中还用到了 textField 的「isSecureTextEntry」属性，当其值「true」时即为安全输入模式，一般用来输入密码。上面这段代码中还细化了点击「登录」按钮时的动作，系统会在控制台中以「Name XXX，Password XXX」的格式输出输入的帐户名和密码。下图是运行效果：</p>
-
-<p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%889.52.11.png" alt="Simulator Screen Shot 2017年7月9日 下午9.52.11 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>每个输入框中的文字属性可以自定义，但以默认为佳。另一般情况下这种帐户名+密码输入框会有一些字符判断，比如判断输入值不为空时，「登录」按钮才会可点击。Action 的「isEnabled」属性可以控制按钮是否可点击，「true」为可点击，「false」为不可点。</p>
-
-<h3 id="toc_7">Alert 小结</h3>
-
-<p>从以上实例中小结一下发现的 Alert 的设计细节：</p>
-
-<ul>
-<li>Alert 必须要有标题，可以没有描述；只有描述没有标题时，描述会自动变为标题的样式；</li>
-<li>Alert 可以有一个或多个操作按钮，当大于两个按钮时会由上至下排列，过多时可以滚动；</li>
-<li>Alert 的每个操作有「默认」、「破坏」、「取消」三种样式，显示效果不同。一个 Alert 中只能有一个「取消」样式的操作，且会显示在所有操作之后；</li>
-<li>Alert 中有操作（只能有一个）被 highlight 时，「取消」样式的操作会恢复为与「默认」样式相同；</li>
-<li>Alert 中的操作可以被控制是否可点击；</li>
-<li>Alert 中可以添加文本输入框。</li>
-</ul>
-
-<h2 id="toc_8">Action Sheet 在代码中的实现</h2>
-
-<h3 id="toc_9">通常情况下的 Action Sheet</h3>
-
-<p>通常情况下的 Action Sheet 包括其标题、描述、选择的动作和取消动作，以下为具体举例：</p>
-
-<pre class="line-numbers"><code class="language-text">  @IBAction func showActionSheetWithThreeActions(sender: UIButton){
-    let alertController = UIAlertController(title: &quot;请选择你想要的语言&quot;, message: &quot;选择的语言将在下次 app 打开时生效&quot;, preferredStyle: .actionSheet)
-    
-    // 定义动作和添加动作到 alertController 两步可以合为一步
-    alertController.addAction(UIAlertAction(title: &quot;中文简体&quot;, style: .default, handler: nil))
-    alertController.addAction(UIAlertAction(title: &quot;中文繁体&quot;, style: .default, handler: nil))
-    alertController.addAction(UIAlertAction(title: &quot;英语&quot;, style: .default, handler: nil))
-    alertController.addAction(UIAlertAction(title: &quot;取消&quot;, style: .cancel, handler: nil))
-    
-    // 设置在 iPad 上 Action Sheet 以 Popover 形式呈现时显示的位置
-    let popover = alertController.popoverPresentationController
-    if (popover != nil){
-      popover?.sourceView = sender
-      popover?.sourceRect = sender.bounds
-    }
-    
-    self.present(alertController, animated: true, completion: nil)
-    
-  }
-</code></pre>
-
-<p>说下与之前创建 Alert 时明显的几点不同：</p>
-
-<ul>
-<li>Alert 不管在 iPhone 上还是 iPad 上都会显示在屏幕中央，这个位置是系统已经确定好的，无需自己定义；但对于 Action Sheet 来说，在 iPhone 上会从屏幕底部滑出，但对于 iPad 来说要以 Popover 形式展现，就需要定义显示的位置。故上述代码中定义了在 iPad 显示的位置。还有一点，在 iPad 上取消样式的操作按钮是被自动隐藏的。</li>
-<li>创建 Action Sheet 后，其中的操作是不可以自定义 highlight 的。</li>
-<li>Action Sheet 中是不能有文本输入框的。</li>
-</ul>
-
-<p>与 Alert 相同的是：</p>
-
-<ul>
-<li>Action Sheet 的操作也是有三种样式，取消样式的操作会显示在最后，且取消样式操作只能有一个；</li>
-<li>Action Sheet 的操作过多时会支持滚动；</li>
-<li>Action Sheet 只有描述没有标题时，描述会自动变为标题的样式。</li>
-</ul>
-
-<p>具体显示效果见下图。</p>
-
-<p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%889.52.49.png" alt="Simulator Screen Shot 2017年7月9日 下午9.52.49 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>需要注意的一点是，在显示创建的 alertController 时，「animated」也即是否有过渡动画一般设置为「true」显示。Alert 的过渡动画是一个渐现渐隐的过程，没有的话不会很突兀，但 Action Sheet 如果没有从下而上进入或从上而下退出的过渡动画就会感觉很突然。当然既然系统已经定义好了，两者都显示过渡动画是最好的。</p>
-
-<h3 id="toc_10">没有「取消」操作的 Action Sheet</h3>
-
-<p>如果一个 Action Sheet 没有了「取消」样式的按钮会有什么特别呢？具体代码如下：</p>
-
-<pre class="line-numbers"><code class="language-text">@IBAction func showActionSheetWithTwoActions(sender: UIButton){
-    let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-    
-    alertController.addAction(UIAlertAction(title: &quot;新建网页&quot;, style: .default, handler: nil))
-    alertController.addAction(UIAlertAction(title: &quot;关闭所有网页&quot;, style: .destructive, handler: nil))
-    
-    self.present(alertController, animated: true, completion: nil)
-    
-  }
-</code></pre>
-
-<p>显示效果见下图。与前面的 Action Sheet 对比就会发现，当一个 Action Sheet 有取消样式操作时，点击这个取消样式的操作按钮或者按页面空白处都可以关闭这个 Action Sheet；但当一个 Action Sheet 没有操作按钮时，点击空白处是没有任何作用的，必须点击操作按钮中的一个才能使其关闭。</p>
-
-<p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%889.52.53.png" alt="Simulator Screen Shot 2017年7月9日 下午9.52.53 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>对于 Action Sheet，标题和描述都是可以为空的，这也是与 Alert 不同的一个地方。</p>
-
-<h3 id="toc_11">带有 icon 的 Action Sheet</h3>
-
-<p>99% 的原生 Action Sheet 的操作按钮上都只有文字没有 icon，但在 iOS 系统的系统功能中，在选择输出音频源时显示的 Action Sheet，出现了 icon，如下图。</p>
-
-<p><img src="media/14994455522628/%E5%B8%A6%20Icon%20%E7%9A%84%20Action%20Sheet.png" alt="带 Icon 的 Action Sheet " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>这是一个非常特殊的例子。具体实现方式如下：</p>
-
-<pre class="line-numbers"><code class="language-text">@IBAction func showActionSheetWithFourActions(sender: UIButton){
-    let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-    
-    let twitterAction = UIAlertAction(title: &quot;Twitter&quot;, style: .default, handler: nil)
-    // 为这个动作添加一个 icon
-    twitterAction.setValue(UIImage(named:&quot;twitter&quot;), forKey: &quot;image&quot;)
-    
-    let spotifyAction = UIAlertAction(title: &quot;Spotify&quot;, style: .default, handler: nil)
-    spotifyAction.setValue(UIImage(named:&quot;spotify&quot;), forKey: &quot;image&quot;)
-    
-    let pinterestAction = UIAlertAction(title: &quot;Pinterest&quot;, style: .default, handler: nil)
-    pinterestAction.setValue(UIImage(named:&quot;pinterest&quot;), forKey: &quot;image&quot;)
-    
-    alertController.addAction(twitterAction)
-    alertController.addAction(spotifyAction)
-    alertController.addAction(pinterestAction)
-    alertController.addAction(UIAlertAction(title: &quot;Cancel&quot;, style: .cancel, handler: nil))
-    
-    self.present(alertController, animated: true, completion: nil)
-    
-  }
-</code></pre>
-
-<p>上述代码运行效果如下图。可以看到添加的 icon 图片默认显示在了每个 action 的最左边，很难再进行进一步的自定义。在 Action Sheet 中显示 icon 不能说不可以，但这种在原生基础上对 AlertController 进行自定义，从设计上来说，一定程度上破坏了统一性。</p>
-
-<p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%889.52.57.png" alt="Simulator Screen Shot 2017年7月9日 下午9.52.57 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<h3 id="toc_12">Action Sheet 小结</h3>
-
-<p>从以上实例中小结一下发现的 Action Sheet 的设计细节：</p>
-
-<ul>
-<li>Action Sheet 可以既没有标题，又没有描述；只有描述没有标题时，描述会自动变为标题的样式；</li>
-<li>Action Sheet  可以有一个或多个操作按钮，过多时可以滚动，适配 iPad 时要定义在 iPad 上显示的位置，并以 Popover 的形式展现，且取消样式的操作按钮在 iPad 上是被自动隐藏的；</li>
-<li>Action Sheet  的每个操作有「默认」、「破坏」、「取消」三种样式，显示效果不同。一个 Alert 中只能有一个「取消」样式的操作，且会显示在所有操作之后；</li>
-<li>Action Sheet 有「取消」样式的操作按钮时，可以点击空白处关闭 Action Sheet；但当没有「取消」样式的操作按钮时，不可以点击空白处关闭；</li>
-<li>Action Sheet 中的操作不能被自定义 highlight ；</li>
-<li>Action Sheet  中的操作可以被控制是否可点击；</li>
-<li>Action Sheet 中不可以添加文本输入框；</li>
-<li>Action Sheet 的每个操作可以添加 icon，但不推荐。</li>
-</ul>
-
-<h2 id="toc_13">自定义 AlertController ？</h2>
-
-<p>iOS 系统提供给了设计师和开发者定义好的 Alert 和 Action Sheet，那这两个 View 还能不能进一步进行自定义视觉显示样式呢？</p>
-
-<p>如果直接回答，答案当然是能。上文中提到的给 action 添加 icon 其实就是一种。再比如改变字体颜色只需要在创建 UIAlertController 后改变其 view 的 「tintcolor」属性，代码如下：</p>
-
-<pre class="line-numbers"><code class="language-text">@IBAction func showActionSheetWithTwoActions(sender: UIButton){
-    let alertController = UIAlertController(title: nil, message: &quot;选择你想要的操作&quot;, preferredStyle: .actionSheet)
-    
-    // 更改 alertController 的字体颜色
-    alertController.view.tintColor = UIColor.black
-    
-    // 下面的代码同上文提到的没有「取消」操作的 Action Sheet，不再重复，以……表示
-    ……
-  }
-</code></pre>
-
-<p>运行效果如下图，可以看到默认样式操作的字体已被改为黑色，但破坏样式的操作的字体颜色没有变化。</p>
-
-<p><img src="media/14994455522628/Simulator%20Screen%20Shot%202017%E5%B9%B47%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%8810.10.45.png" alt="Simulator Screen Shot 2017年7月9日 下午10.10.45 " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>在 Apple 的 <a href="https://developer.apple.com/documentation/uikit/uialertcontroller">UIAlertController 开发文档</a> 中有这样一段话：</p>
-
-<blockquote>
-<p>The UIAlertController class is intended to be used as-is and does not support subclassing. The view hierarchy for this class is private and must not be modified.  </p>
-</blockquote>
-
-<p>故从 Apple 官网的角度来看，是完全不推荐或者说不允许自定义 UIAlertController 样式的。从设计角度来看亦是如此。原生定义的这两种 View 如果被任意的局部自定义，那么就会有各种奇形怪状的 Alert 和 Action Sheet 出现在用户面前，体验上差劲，整体性大打折扣。网络上有很多文章讲怎么自定义这两个 View 的某些样式，定义后的效果如下：🙄🙄🙄</p>
-
-<p><img src="media/14994455522628/%E5%A5%87%E6%80%AA%E7%9A%84%20Alert%20and%20Action%20Sheet.png" alt="奇怪的 Alert and Action Sheet " class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<p>个人觉得把这些自定义作为开发研究还好，但如果真应用于实际 app 中，就真的……如果觉得系统的原生 Alert 和 Action Sheet 不能满足自己的需求，还是建议重新设计一套有视觉规范的符合自己需求的 Alert 和 Action Sheet。</p>
-
-<h2 id="toc_14">设计 Alert 和 Action Sheet 时还要注意什么</h2>
-
-<p>有关于 Alert 和 Action Sheet 的设计，Apple 在 <a href="https://developer.apple.com/ios/human-interface-guidelines/ui-views/alerts/">iOS Human Interface Guidelines</a> 中还提到了几点：</p>
-
-<ul>
-<li>Alert 会打断用户的当前操作，所以在显示 Alert 应该足够谨慎，只在非常必要时显示 Alert，并确保每个操作按钮的必要性和易读性，这样才能确保当真正发生问题时，一个 Alert 能够立即引起用户重视并作出正确的选择。</li>
-<li>在横屏和竖屏下的 Alert 显示的标题、描述文本排列是不同的，在测试时应确保在两种角度下文本显示均是最优的。</li>
-<li>在 Action Sheet 中，一个表示取消意义的「取消」按钮是十分有必要的，对用户的使用也是友好的。</li>
-<li>确保 Action Sheet 中的破坏性操作始终在最上面显示。</li>
-</ul>
-
-<p>以上就是从设计出发从设计和开发两方面去研究的 Alert 和 Action Sheet，也即 UIAlertController。希望可以帮助设计师更好的明白其中的诸多细节逻辑，帮助工程师更好的了解这两个 View 的作用。</p>
 
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
