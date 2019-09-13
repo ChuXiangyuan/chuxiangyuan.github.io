@@ -211,7 +211,18 @@ Sign In with Apple 提供了反欺骗的特性，它可以通过机器学习和�
 </ul>
 </li>
 <li>
-<a href="#toc_16">参考链接</a>
+<a href="#toc_16">Sign in with Apple 新的审核规范</a>
+<ul>
+<li>
+<a href="#toc_17">App Store 审核规范</a>
+</li>
+<li>
+<a href="#toc_18">网站和其他平台上的使用规范</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_19">参考链接</a>
 </li>
 </ul>
 
@@ -444,11 +455,57 @@ case let credential as ASPasswordCredential:
 
 <p><img src="media/15676959360699/751B01C9-1E19-4A80-B841-B9332F298918.png" alt=""/></p>
 
-<h2 id="toc_16">参考链接</h2>
+<h2 id="toc_16">Sign in with Apple 新的审核规范</h2>
+
+<p>2019 年 9 月 12 日 Apple 针对 Sign in with Apple 发出<a href="https://developer.apple.com/news/?id=09122019b">通知</a>，更新了 App Store 审核规范，提供了 app 什么时候该使用 Sign in with Apple 的标准。从现在开始，所有的新 app 必须遵守这个规范，对于已经存在的 app 和 app 更新的最后期限是 2020 年 4 月。对于在 web 上和其他平台上使用，Apple 也提供了相应规范。</p>
+
+<h3 id="toc_17">App Store 审核规范</h3>
+
+<p>对于仅使用了第三方登录或者社交登录服务（例如 Facebook 登录、Google 登录、Twitter 登录、LinkedIn 登录、Amazon 登录、微信登录）设置或者授权用户的主要账户的 app，必须也提供「Sign in with Apple」作为一个同等的选项。用户的主要账户是指他们在 app 中建立的用来识别他们自己、登录、访问某些功能和相关服务的账户。</p>
+
+<p>Sign in with Apple 在下面这些情况中不是必须的：</p>
+
+<ul>
+<li>你的 app 只使用了你公司自己的账户设置和登录系统；</li>
+<li>你的 app 是一个要求用户使用已有的教育或企业账户登录的教育、企业、商业 app；</li>
+<li>你的 app 通过政府或者行业支持的公民身份识别系统或者电子 ID 来授权用户；</li>
+<li>你的 app 是特定的第三方服务的客户，用户被要求登录他们的电子邮件、社交媒体或其他第三方账户才能访问他们的内容。</li>
+</ul>
+
+<h3 id="toc_18">网站和其他平台上的使用规范</h3>
+
+<p>如果在你的已上架 App Store 的 app 中使用了 Sign in with Apple，我们推荐在任何相关的网站或者其他平台的 app 上通过调用 Apple JS 来提供 Sign in with Apple 功能。</p>
+
+<p>在下面这些情况下，网站或者 app 可能不适合使用 Sign in with Apple：</p>
+
+<ul>
+<li>违反任何法律或者是在其他方面不能遵守任何法律要求的；</li>
+<li>提供下面的服务或交易的：
+<ul>
+<li>香烟和烟草产品；</li>
+<li>枪、武器或者弹药；</li>
+<li>非法药品或者不合法的处方药品；</li>
+<li>给用户造成安全风险的项目；</li>
+<li>被用于参加非法活动的项目；</li>
+<li>色情作品；</li>
+<li>假冒或失窃商品。</li>
+</ul></li>
+<li>主要提供或出售毒品用具或者面向性的用品和服务；</li>
+<li>宣扬基于种族、年龄、性别、性别认同、族裔、宗教信仰或性取向的仇恨、暴力或排斥；</li>
+<li>参与任何类型的诈骗；</li>
+<li>侵犯他人的知识产权、宣传权、隐私权；</li>
+<li>以虚假或贬损的方式展示 Apple 和它的产品。</li>
+</ul>
+
+<p>除了允许用户自愿地设置一个账户和登录你的 app 或服务，不得通过 Apple API 为了其他目的使用 Sign in with Apple。</p>
+
+<h2 id="toc_19">参考链接</h2>
 
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/">Sign In with Apple - Sign In with Apple - Human Interface Guidelines - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2019/706/">Introducing Sign In with Apple - WWDC 2019 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple">App Store Review Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/sign-in-with-apple/usage-guidelines-for-websites-and-other-platforms/">Usage Guidelines for Website and Other Platforms - Sign in with Apple - Apple Developer</a></li>
 </ul>
 
 <blockquote>

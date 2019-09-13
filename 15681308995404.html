@@ -191,12 +191,37 @@
 </li>
 <li>
 <a href="#toc_8">在 iOS 上实现 Dark Mode</a>
+<ul>
+<li>
+<a href="#toc_9">颜色</a>
 </li>
 <li>
-<a href="#toc_9">在 macOS 上实现 Dark Mode</a>
+<a href="#toc_10">材料</a>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_10">参考链接</a>
+<a href="#toc_11">iOS 的深色模式如何工作？</a>
+<ul>
+<li>
+<a href="#toc_12">颜色</a>
+</li>
+<li>
+<a href="#toc_13">图片</a>
+</li>
+<li>
+<a href="#toc_14">Trait Collection</a>
+</li>
+<li>
+<a href="#toc_15">深色模式 API 更新</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_16">在 macOS 上实现 Dark Mode</a>
+</li>
+<li>
+<a href="#toc_17">参考链接</a>
 </li>
 </ul>
 
@@ -334,13 +359,172 @@ iOS 定义了两个系列的背景颜色：一个系列是「系统背景颜色�
 
 <h2 id="toc_8">在 iOS 上实现 Dark Mode</h2>
 
+<ul>
+<li>使用 iOS 13 SDK 以实现对深色模式的支持；</li>
+<li>在系统提供的功能之外，自定义 app 的外表。</li>
+</ul>
+
+<h3 id="toc_9">颜色</h3>
+
+<p>在过去，每一个 UI 颜色都只有一个值，现在 UI 颜色变成了动态的。当你在一个视图上使用动态颜色作为背景颜色或者文本颜色时，UIKit 会自动地使用正确的值，当模式发生变化时，会自动更新，所以你只需要设置颜色一次就好了。</p>
+
+<p><img src="media/15681308995404/6648FFDF-7939-41CF-81E8-D228B1C466E5.png" alt="6648FFDF-7939-41CF-81E8-D228B1C466E5"/></p>
+
+<h3 id="toc_10">材料</h3>
+
+<p>在下面的例子中，背景中有一张图片，我想在上面添加一些模糊效果。首先创建一个 <code>UIBlurEffect</code>，并且指定样式为系统材料。然后创建一个 <code>UIVisualEffectView</code> ，并在这个 view 中使用前面创建好的样式。进一步确定这个 view 的尺寸和位置，把它放到背景图片上。</p>
+
+<p><img src="media/15681308995404/F319C8FE-E980-4DA4-94E7-DA4344988C97.png" alt="F319C8FE-E980-4DA4-94E7-DA4344988"/></p>
+
+<p>接下来可以在这个材料上添加一些虚化内容，虚化效果（vibrancy effect）可以让背景材料的一部分穿过。过去，这种效果只有一种样式，但现在有了多种样式：四种文本样式、三种填充区域样式、分隔线样式。我们创建一个 <code>UIVibrancyEffect</code> 并指定它的样式为「fill」，为了展示这个样式，我们创建另一个 <code>UIVisualEffectView</code> ，然后把它放进前面创建的 <code>UIVisualEffectView</code> 的「contenView」中。</p>
+
+<p><img src="media/15681308995404/8F145E74-4C23-44A5-BC53-007BF0280B0D.png" alt="8F145E74-4C23-44A5-BC53-007BF0280B0D"/></p>
+
+<h2 id="toc_11">iOS 的深色模式如何工作？</h2>
+
+<h3 id="toc_12">颜色</h3>
+
+<p>动态颜色可以在不同模式间自动切换，那颜色是怎么知道它是浅色还是深色的呢？这是通过「trait collections」来实现的。每一个 view 和 view controller 都有一个 trait collection，它可以帮助决定 view 的外观。</p>
+
+<p><img src="media/15681308995404/44254C8A-15B2-431A-A523-525804C0C0C9.png" alt="44254C8A-15B2-431A-A523-525804C0C0"/></p>
+
+<p>如果我们想解析某个特定的颜色，可以通过下面的代码实现：</p>
+
+<pre class="line-numbers"><code class="language-swift">let dynamicColor = UIColor.systemBackground
+let traitCollection = view.traitCollection
+let resolvedColor = dynamicColor.resolvedColor(with: traitCollection)
+</code></pre>
+
+<p>当然你也可以通过代码创建自定义的动态颜色，具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">let dynamicColor = UIColor { (traitCollection: UITraitCollection) -&gt; UIColor in if traitCollection.userInterfaceStyle == .dark {
+return .black } else {
+return .white }
+}
+</code></pre>
+
+<p>动态颜色可以直接像其他颜色一样被直接调用，它是怎样自动解析的？如果有一个动态颜色，我请求他的 RGB 值，它就会返回一个结果。这是通过 「UITrait Collection」 的「current」属性来实现的。</p>
+
+<p><img src="media/15681308995404/6BD138EB-41BD-49CA-8FC9-47F4324197F7.png" alt="6BD138EB-41BD-49CA-8FC9-47F4324197F7"/></p>
+
+<p>注意在 UIKit 之外，「current trait collection」不会有一个特定值，你需要自己去解析颜色。例如在像「CA Layer」、「CG Color」这种低等级的类就无法直接理解动态颜色。下面是示例代码：</p>
+
+<pre class="line-numbers"><code class="language-swift"> let layer = CALayer()
+ let traitCollection = view.traitCollection
+
+// Option 1
+
+let resolvedColor = UIColor.label.resolvedColor(with: traitCollection)
+layer.borderColor = resolvedColor.cgColor
+</code></pre>
+
+<p>当需要调用的颜色比较多时，可以使用下面这种代码写法：</p>
+
+<pre class="line-numbers"><code class="language-swift">let layer = CALayer()
+let traitCollection = view.traitCollection
+
+// Option 2
+traitCollection.performAsCurrent { 
+    layer.borderColor = UIColor.label.cgColor 
+}
+</code></pre>
+
+<p>还有第三种写法，注意 trait 会发生变化的情况：</p>
+
+<pre class="line-numbers"><code class="language-swift">let layer = CALayer()
+let traitCollection = view.traitCollection
+
+// Option 3 
+let savedTraitCollection = UITraitCollection.current 
+
+UITraitCollection.current = traitCollection 
+layer.borderColor = UIColor.label.cgColor 
+
+UITraitCollection.current = savedTraitCollection 
+
+</code></pre>
+
+<p><img src="media/15681308995404/8ED899D8-DC37-4D03-98D3-9156BDE0B5A6.png" alt="8ED899D8-DC37-4D03-98D3-9156BDE0B5A6"/></p>
+
+<h3 id="toc_13">图片</h3>
+
+<p>UIImageView 和 UIColor 一样会根据当前的 trait collection 决定显示哪一张图片。</p>
+
+<p><img src="media/15681308995404/FC6F50C9-76EE-4265-92F2-E313C37659B8.png" alt="FC6F50C9-76EE-4265-92F2-E313C37659B8"/></p>
+
+<p>但 UIImage 不会关注当前的 trait collection。如果你想自己解析某张图片，你可以通过下面的代码实现：</p>
+
+<pre class="line-numbers"><code class="language-swift">let image = UIImage(named: “HeaderImage”)
+let asset = image?.imageAsset
+let resolvedImage = asset?.image(with: traitCollection)
+</code></pre>
+
+<h3 id="toc_14">Trait Collection</h3>
+
+<p>来总结一下 trait collection 是如何工作的？它在深色模式中扮演着核心的角色。记住最重要的一点，trait collection 在你的 app 中不止一个。<br/>
+Trait collection 贯穿了你的整个 app，从屏幕的根层级一直到窗口屏幕。当模式发生变化时，贯穿整个 app 的 trait collection 都会发生变化。</p>
+
+<p><img src="media/15681308995404/355BBA61-A06A-488A-867D-F9F9C9655744.png" alt="355BBA61-A06A-488A-867D-F9F9"/></p>
+
+<p>当 app 处于浅色模式时，你只想让 app 的某部分 UIView 或 UIViewController 处于深色模式，你可以通过下面的代码实现。</p>
+
+<p><img src="media/15681308995404/4947BB9D-1BFB-4488-86BF-ED0D88173614.png" alt="4947BB9D-1BFB-4488-86BF-ED0D88173614"/></p>
+
+<ul>
+<li>UIViewController：</li>
+</ul>
+
+<pre class="line-numbers"><code class="language-swift">class UIViewController {
+var overrideUserInterfaceStyle: UIUserInterfaceStyle
+}
+</code></pre>
+
+<ul>
+<li>UIView：</li>
+</ul>
+
+<pre class="line-numbers"><code class="language-swift">class UIView {
+var overrideUserInterfaceStyle: UIUserInterfaceStyle
+}
+</code></pre>
+
+<p>如果你想让整个 app 保持一种模式，你可以通过「Info.plist」的「UIUserInterfaceStyle 」去设置。</p>
+
+<h3 id="toc_15">深色模式 API 更新</h3>
+
+<p>在 iOS 13 之前的版本中，有两种样式的状态栏：「default」和「lightContent」；而在 iOS 13 中「default」样式会根据系统外观自动变化。同样的，「UIScroll」视图的「indicator」样式也发生了同样的变化。</p>
+
+<p><img src="media/15681308995404/35D4E68F-037B-48AE-B8FD-BFC73F8F5677.png" alt="35D4E68F-037B-48AE-B8FD-BFC73F8F5677"/></p>
+
+<p>对于 「UIActivityIndicatorView」原有的几种样式都被废弃。现在它们根据尺寸分成两种样式，颜色默认是灰色，在两种模式下都可以显示的很好，当然你也可以自定义颜色。</p>
+
+<p><img src="media/15681308995404/01E17013-97BB-490A-BF71-359F9B37BEF2.png" alt="01E17013-97BB-490A-BF71-359F9B37BEF2"/></p>
+
+<p><img src="media/15681308995404/93EBB456-8674-4891-A586-7322EC0EE0F2.png" alt="93EBB456-8674-4891-A586-7322EC0EE0F2"/></p>
+
+<p>在绘制文本时，如果你是使用了「UILabel」、「UITextField」、「UITextView」，你只需要设置其中的文本颜色为「label color」就可以良好地适配不同外观。但如果你使用了属性字符串，那需要特别指定一个前景颜色。</p>
+
+<pre class="line-numbers"><code class="language-swift">let attributes: [NSAttributedString.Key: Any] = [ 
+    .font: UIFont.systemFont(ofSize: 36.0) 
+    .foregroundColor: UIColor.label
+]
+</code></pre>
+
+<p>对于 app 中出现的 web 内容，同样可以适配不同外观模式。</p>
+
+<p><img src="media/15681308995404/C15FE592-0DA9-402B-A1E0-57A4B1962DA5.png" alt="C15FE592-0DA9-402B-A1E0-57A4B1962DA5"/></p>
+
+<p>对于 tvOS 适配深色模式和将适配了深色模式的 iPad app 带到 Mac 上去：</p>
+
+<p><img src="media/15681308995404/00C5F632-98DD-4233-973A-2B45BA6099AD.png" alt="00C5F632-98DD-4233-973A-2B45BA6099AD"/></p>
+
+<p><img src="media/15681308995404/CB2740E2-9046-41DC-B866-02F7C42F3513.png" alt="CB2740E2-9046-41DC-B866-02F7C42F3513"/></p>
+
+<h2 id="toc_16">在 macOS 上实现 Dark Mode</h2>
+
 <p>待补充...</p>
 
-<h2 id="toc_9">在 macOS 上实现 Dark Mode</h2>
-
-<p>待补充...</p>
-
-<h2 id="toc_10">参考链接</h2>
+<h2 id="toc_17">参考链接</h2>
 
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/dark-mode/">Dark Mode - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
@@ -349,6 +533,9 @@ iOS 定义了两个系列的背景颜色：一个系列是「系统背景颜色�
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols/">SF Symbols - SF Symbols - Human Interface Guidelines - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">Typography - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/accessibility/overview/color-and-contrast/">Color and Contrast - Accessibility - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/214/">Implementing Dark Mode on iOS - WWDC 2019 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/appearance_customization/adopting_ios_dark_mode">Adopting iOS Dark Mode | Apple Developer Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/xcode/supporting_dark_mode_in_your_interface">Supporting Dark Mode in Your Interface | Apple Developer Documentation</a></li>
 </ul>
 
 <blockquote>
