@@ -4,7 +4,7 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2019-10-02T01:42:01+08:00</updated>
+  <updated>2019-10-02T01:49:51+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -450,7 +450,7 @@
     <updated>2019-09-10T23:54:59+08:00</updated>
     <id>https://steppark.net/15681308995404.html</id>
     <content type="html"><![CDATA[
-<p>在 iOS 13 及之后的版本中，人们可以选择使用一种全局深色的外观，它就是深色模式（Dark Mode）。在深色模式中，系统对于所有的界面、菜单、控件都使用了深色色盘，也使用了更多的虚化效果（vibrancy）以使得与更暗的背景内容相比，前景内容能够更加显眼明亮。深色模式支持所有的辅助功能。</p>
+<p>在 iOS 13 及之后的版本中，人们可以选择使用一种全局深色的外观，它就是深色模式（Dark Mode），这也是 <a href="15674389801268.html">iOS 13 设计最大的变化</a>。在深色模式中，系统对于所有的界面、菜单、控件都使用了深色色盘，也使用了更多的虚化效果（vibrancy）以使得与更暗的背景内容相比，前景内容能够更加显眼明亮。深色模式支持所有的辅助功能。</p>
 
 <span id="more"></span><!-- more -->
 
@@ -2972,6 +2972,8 @@ let redHeartImage = heartImage.withTintColor(.redColor, renderingMode: .alwaysOr
 <p><img src="media/15674389801268/9612CE0C-2A32-4E25-AC69-2A98B99C4BEE.png" alt=""/></p>
 
 <p>如果 app 中没有你想要的符号，你可以通过模板创造一个格式为 svg 的自定义的符号，之后就可以获得 SF Symbols 所提供的所有功能。</p>
+
+<p>有关于 SF Symbols 的更多细节和使用方法请阅读<a href="15675148872165.html">「在设计和开发时使用 SF Symbols」</a>。</p>
 
 <h2 id="toc_7">Modal Presentations 模态展示</h2>
 
