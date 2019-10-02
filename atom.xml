@@ -4,13 +4,159 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2019-10-02T01:49:51+08:00</updated>
+  <updated>2019-10-02T01:50:46+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[如何设计和实现 iPad app 的多窗口功能]]></title>
+    <link href="https://steppark.net/15699939059941.html"/>
+    <updated>2019-10-02T13:25:05+08:00</updated>
+    <id>https://steppark.net/15699939059941.html</id>
+    <content type="html"><![CDATA[
+<p>在 iOS 13 及之后的版本中，iPad app 可以支持多窗口功能。例如，在一个具有文档创建功能的 iPad app 中，人们可以同时打开多个文档窗口。这篇文章会从设计和实现层面讲述 iPad 多窗口功能的触发方法、样式以及功能等主题。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15699939059941/E590DF33-C0BC-471B-9BE1-9D1903DD7208.png" alt=""/></p>
+
+<p>注意：如果你想把你的 iPad app 带到 Mac 中去，想让 Mac 版本支持多窗口功能，那就必须在 iPad app 中支持多窗口功能。有关于把 iPad app 带到 Mac 中去，参见 <a href="15681304209417.html">「把 iPad 上的 app 带到 Mac 中去（上）」</a>和 <a href="15699505035288.html">「把 iPad 上的 app 带到 Mac 中去（下）」</a> 。</p>
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">设计意图</a>
+</li>
+<li>
+<a href="#toc_2">实现</a>
+</li>
+<li>
+<a href="#toc_3">参考链接</a>
+</li>
+</ul>
+
+
+<p>人们可以好多种方式打开一个新的窗口，例如：</p>
+
+<ul>
+<li>从 Dock 栏拖拽 app 的图标到屏幕的一边，选择一个当前的窗口或者创建一个新的窗口；</li>
+<li>拖拽一个对象到屏幕的一边，把它释放到系统提供的可供释放的目标上；</li>
+<li>长按 Dock 栏上或者首页上一个 app 的图标，点击情景菜单中出现的「显示所有窗口」，再点击添加按钮；</li>
+<li>长按一个对象直到出现一个情景菜单，其中包括在新窗口中查看对象的选项。</li>
+</ul>
+
+<p>通常情况下，iPad app 使用两种类型的窗口。「Primary window 主要窗口」包括了多个 app 对象以及与之相关的动作，通常人们会一直与「primary window」保持交互。「Auxiliary window 辅助窗口」包含了一个对象以及与之相关联的动作，人们在关闭辅助窗口前通常会与其只交互一次。例如，在「邮件」app 中，主要窗口包括了邮箱，而一条单独的信息会展示在辅助窗口中。</p>
+
+<ul>
+<li>支持主要窗口和辅助窗口的多窗口体验：因为主要窗口总是包含高层级的对象，人们会从打开展示了不同区域内容的多窗口中受益。例如，人们可能想要首要邮件窗口一个展示他们的收件箱，另一个展示草稿箱。正如你所期待的，多个辅助窗口让用户更容易浏览和在多个条目间工作，例如多条邮件信息。</li>
+<li>确保一个辅助窗口自己是有用的：辅助窗口应该给人们 app 的内容和功能的额外视图。避免只是使用辅助窗口去提供主要窗口内容的选项或工具。</li>
+<li>在辅助窗口使用一个「Done 完成」或者「Close 关闭」按钮：因为辅助窗口只包含了一个任务或对象的内容和动作，人们期望在完成时能够关闭它。不要在按钮中使用「Back 后退」来关闭窗口。你可以在按钮中使用「Back 后退」去帮助人们返回窗口中的上一个视图。</li>
+</ul>
+
+<h2 id="toc_1">设计意图</h2>
+
+<p>在 iOS 12 和之前的版本中，如果你进入切换 app 界面，你会看到下面这种 app 的网格布局，你可以点击其中一个进入那个 app。</p>
+
+<p><img src="media/15699939059941/D4133C79-53E1-41C9-BCA0-8C36642583EF.png" alt=""/></p>
+
+<p>在 iOS 13 中，一切看上去还跟以前一样，但在这个界面中，不再全是一个个的应用，而是一个个的窗口。</p>
+
+<p><img src="media/15699939059941/EE434B28-A3F2-404B-8F9E-F8A99406E934.png" alt=""/></p>
+
+<p>首先来看下多窗口功能在 app 中是什么样子的，从中解答两个问题，我的 app 应该支持多窗口功能吗？如果需要支持，这些多窗口应该是怎样的？具体的我应该在哪里添加多窗口功能？它们应该怎么表现？用户是如何思考它们的？我们将通过看几个 Apple 原生应用的例子来回答上面的问题。<br/>
+先来看「Safari 浏览器」，Safari 是多窗口功能的早产儿，因为在 iOS 13 之前的版本就已经基本具备了多窗口功能，下图中展示了在 iOS 12 中，Safari 通过分隔视图实现了多窗口功能。</p>
+
+<p><img src="media/15699939059941/3A79C899-4DBE-471C-A450-1F82643D30C4.png" alt=""/></p>
+
+<p>在 iOS 13 或者 iPadOS 13 中，是下面这个样式，实际上看起来和之前没有什么不同。因为在之前，在 Safari 中能使用多窗口功能打开多个网页就已经非常重要，现在我们将多窗口功能带到了整个系统中。</p>
+
+<p><img src="media/15699939059941/C7CE7D8F-1643-407C-A8F4-384DFB769782.png" alt=""/></p>
+
+<p>具体来看，Safari 的每个窗口都是完全一样的，它们就像是另一个界面的克隆。每一个窗口都可以做 app 所有的事情，这很重要，因为在 iPad 上用户应该在他们想要的那个窗口中做任何的事情。如果人们觉得需要，还可以创建更多的窗口。但是需要注意，如果你的 app 必须依赖多窗口功能才能工作，那就有些问题了。所以说每一个窗口都是另一个窗口的克隆并不是必须的，但用户打开的第一个窗口应该可以完成所有的事情更加重要。而在 Safari 的这个例子中，每一个窗口都是一样的，在大多数的 app 中也是这样。<br/>
+在 iOS 13 的 Safari 中，你可以随时从多窗口的 Split View 模式转换到 Slide Over 模式，并将屏幕边缘的窗口滑出去，以进行一会儿更加专注的工作。</p>
+
+<p>第二个例子是一个基于文档的 app，Pages。在任何基于文档的 app 中，用户都会希望能够同时在不同的窗口中查看多个文档。所以你很有必要支持多窗口功能。但有一个点你需要注意，在每个窗口的左上角，有一个「文档」按钮，你可以通过这个按钮访问你想要的其他文档。这也跟 Safari 一样，每一个窗口都是一样的。当然，并不是每一个基于文档的 app 都要做成这样，但在这里，这是讲得通的。</p>
+
+<p><img src="media/15699939059941/E1D6E2B9-4F52-4A39-950F-AF052F0513C7.png" alt=""/></p>
+
+<p>第三个例子是「Maps 地图」，它也是只有一种多窗口类型的 app，要在这里提这个 app 的原因，是它更可以展示需要支持多窗口功能的必要性。通常情况下，你打开地图，去到某个地方然后关闭它。但当你计划你的晚上安排时，你可能想要先去吃晚饭，晚饭后再去看一个演出，在此时使用多窗口功能就很有帮助，你可以在两者之间思考并改变它们。所以我们不能确保在任何时候多窗口功能都是有用的，但我们知道有时候会用上它。</p>
+
+<p><img src="media/15699939059941/0594EE13-1A6E-4CA1-B661-A2C921C87F60.png" alt=""/></p>
+
+<p>同时，多窗口功能是系统级别的。当你已经确定了要去哪里吃晚饭后，你可以关闭右边的地图，将其替换成「Notes 备忘录」app，从而去完成其他事情。</p>
+
+<p><img src="media/15699939059941/BB1AACC9-14FC-4608-9ED2-FFF247CFEAF5.png" alt=""/></p>
+
+<p>第四个例子是「Mail 邮件」，这是第一个有不同类型多窗口功能的 app。当你回复一条消息时，你可以把这个模态窗口变成一个单独的窗口，以 Slide Over 或者 Split View 的方式展示。你可以看到在单独的这个信息窗口中有一个发送按钮和一个取消按钮，你不能在这个窗口中回到上一级的邮件列表中，这种窗口是经过特殊设计的，当你点击发送或者取消按钮时，这个窗口就会关闭，关闭时会有一个过渡动画，这也可以应用在你的 app 中。</p>
+
+<p><img src="media/15699939059941/C44B091D-63B4-443A-8FF1-494E46F8E92F.png" alt=""/></p>
+
+<p>你可以通过滑动窗口底部的知识条在多个 Slide  Over 的窗口中切换。</p>
+
+<p><img src="media/15699939059941/62C254A4-8EDE-434A-8A81-BB3442F7CAF3.png" alt=""/></p>
+
+<p>第五个例子是「Messages 信息」，它也有不同类型的多窗口。当你把一条消息拖动到屏幕边缘时，就可以开启一个单独的窗口，一个只属于那个对话的窗口。你会在窗口顶部看到一个完成按钮，点击就可以完成这个任务。在浏览一条信息时可以同时查看另一条信息作为参考是非常有帮助的。所以在这种需要另一个页面同时作为参考时，就需要支持多窗口功能。</p>
+
+<p><img src="media/15699939059941/D55AB27D-5996-4A85-B5CA-FF524CE42B27.png" alt=""/></p>
+
+<p>最后一个例子是「Calendar 日历」，日历已经支持了拖放功能，但现在通过多窗口功能，你可以在不同的窗口中同时查看两个不同周的事项，你还可以从一边拖拽一个事项到另一边。所以如果你的 app 支持了多窗口的拖放功能，你也可以获得上面这个功能的强大能力。</p>
+
+<p><img src="media/15699939059941/6D99F23A-9EBD-49AC-B909-70DFC3D01A29.png" alt=""/></p>
+
+<p>今年我们介绍了将 iPad app 带到 Mac 上去，Mac app 都有多个窗口，如果没有多窗口功能，Mac app 会非常奇怪。但现在有了 iOS 13 的多窗口功能，这件事就变得更加顺理成章了。</p>
+
+<p><img src="media/15699939059941/96580663-31FF-456C-B2F6-89192004EF60.png" alt=""/></p>
+
+<p>那具体用户可以通过什么样的交互打开多窗口功能呢？<br/>
+首先来看下系统提供了哪些交互。在 App Expose 中，右上角会有一个小按钮用来打开新的窗口，这是系统自带的功能。</p>
+
+<p><img src="media/15699939059941/9266CF13-187E-4B40-B72F-114F88622740.png" alt=""/></p>
+
+<p>另外一个就是可以通过拖拽 app 的图标到屏幕的边缘开启多窗口功能，因为当你那样操作时，就像是确切的在说我要在这里开启一个新的窗口。</p>
+
+<p><img src="media/15699939059941/39F2B13C-3B1E-46A2-B91A-8C09BA28AF67.png" alt=""/></p>
+
+<p>再来看下用户会根据已有的东西做出哪些动作来想开启多窗口功能。用户可以直接拖拽 Safari 的某个 tab 到屏幕边缘来开启多窗口功能，这种交互系统不能自动帮你实现，但你可以通过 API 适配实现这个交互。</p>
+
+<p><img src="media/15699939059941/08E6BC04-6DE3-4EA9-9324-0A39102D7F47.png" alt=""/></p>
+
+<p>如果用户可以拖拽起某个对象，并且打开一个新的窗口可以讲得通的话，那用户就期望有这么一个功能，你应该去实现他。比较普遍的例子就是任何形式的「master-detail view 主要-详情视图」，比如在「Mail 邮件」中，左侧主视图中的每一个 cell 都代表着一条消息，如果点击一条消息，那就可以在详情视图中看到完整的消息。所以用户就会期望当拖起 table view 中的一条消息到屏幕边缘时可以打开一个新的窗口。</p>
+
+<p><img src="media/15699939059941/C33A5ED6-FA6A-43AB-BAA8-D8BF87DEE71C.png" alt=""/></p>
+
+<p>你也可以通过一个确切的动作创建一个新的窗口。在像 Safari 这样有链接的应用中，可以通过长按一个链接显示一个弹窗，在弹窗中有一个按钮，通过点击这个按钮可以在新窗口中打开链接。</p>
+
+<p><img src="media/15699939059941/5F8FE4F9-D4CD-4063-89A0-1E6F11197EBB.png" alt=""/></p>
+
+<p>用户不应该被强制使用多窗口功能，应该需要一个用户触发的确切的动作才能开启多窗口功能。</p>
+
+<h2 id="toc_2">实现</h2>
+
+<p>待更新 ……</p>
+
+<h2 id="toc_3">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/212/?time=452">Introducing Multiple Windows on iPad - WWDC 2019 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/multiple-windows/">Multiple Windows - System Capabilities - iOS - Human Interface Guidelines - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[把 iPad 上的 app 带到 Mac 中去（下）]]></title>
@@ -5920,76 +6066,6 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
 <li><a href="https://developer.apple.com/app-store/ratings-and-reviews/">Ratings, Reviews, and Responses - App Store - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/app-store/categories/">Choosing a Category - App Store - Apple Developer</a></li>
 <li><a href="https://help.apple.com/itunes-connect/developer/">iTunes Connect 开发人员帮助</a></li>
-</ul>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[设计 app 内订阅项目的基本准则]]></title>
-    <link href="https://steppark.net/15036722610708.html"/>
-    <updated>2017-08-25T22:44:21+08:00</updated>
-    <id>https://steppark.net/15036722610708.html</id>
-    <content type="html"><![CDATA[
-<p>在订阅时提供一个轻松简单、透明易懂、吸引人的用户体验将会更好地传达订阅的价值、优化订阅的流程，更加容易获取新的订阅者。</p>
-
-<span id="more"></span><!-- more -->
-
-<h2 id="toc_0">Effortless 轻松</h2>
-
-<ul>
-<li><p>Be Visible：要让用户知道你的 app 里存在订阅功能，不要让用户到处寻找如何订阅/注册：</p>
-<ul>
-<li><p>方法一：在 app 的界面中一直显示一个「订阅」按钮，例如「The New York Times」app 中，每篇文章的导航栏上都有一个「订阅」按钮；</p>
-<p><img src="media/15036722610708/1.jpg" alt="1"/></p></li>
-<li><p>Note：Subscription ≠ Ad、Subscription ≠ Notification，不要把订阅以弹框或通知的形式呈现；</p></li>
-<li><p>方法二：当用户对一部分内容或者功能表现出感兴趣时，展示订阅功能，例如「Her」app 中，当你在浏览每个人的介绍时，刚好错过了一个你感兴趣的人，当你想要回退时，app 会告诉你这是一个「订阅」后可使用的功能。并且在展示订阅的界面上有着漂亮的动画。</p>
-<p><img src="media/15036722610708/B285906D-201B-426F-8B12-197437AA49A2.png" alt="B285906D-201B-426F-8B12-197437AA49A2"/></p></li>
-<li><p>确保在「设置」或者「帐户」中有一个地方有订阅的入口，因为当一个用户想刻意寻找订阅时自然会想到这些位置。</p>
-<p><img src="media/15036722610708/4.jpg" alt="4"/></p></li>
-</ul></li>
-<li><p>Remove Friction：减少麻烦，不要在注册/订阅过程中要求用户填写太多信息，不要有过多的步骤，不要让用户花过长的时间。下面是美国三大视频流媒体 app 一个月的数据，看下要求点击次数与转换率的关系。要求点击 9 次时转化率只有 7% 了。</p>
-<p><img src="media/15036722610708/D1FBC39B-A78F-47F9-84E5-D82A496ECAE4.png" alt="D1FBC39B-A78F-47F9-84E5-D82A496ECAE4"/></p>
-<ul>
-<li>Less is more. 更少的点击，更少的麻烦就会有更高的转化率和更多的订阅者。先把焦点放在让用户先完成注册上。像爱好、个人介绍等细节可以放在注册之后再让用户补充。</li>
-</ul></li>
-</ul>
-
-<h2 id="toc_1">Transparent 透明</h2>
-
-<ul>
-<li><p>Provide clear terms：提供清晰的订阅条款，让用户明白他们订阅了什么。看到订阅的界面，用户应该能快速了解订阅的是什么和怎样订阅。</p>
-<ul>
-<li><p>当提供订阅时，通常包括：简洁的价值主张、对订阅的号召、已订阅用户可登录、换了新设备的用户可恢复购买、提供不同层级的订阅选项（最多三到四种为佳）。尽可能的让界面保持简洁。</p>
-<p><img src="media/15036722610708/5.jpg" alt="5"/></p></li>
-</ul></li>
-</ul>
-
-<h2 id="toc_2">Engaging 吸引</h2>
-
-<ul>
-<li>Engage through experience：在订阅前，让用户能够体验你的 app 和 app 的内容。在当今，购买前能够体验和尝试是怎样做出购买决定的重要影响因素，如试衣服、看房、试驾等。对 app 的订阅是同样的道理。</li>
-<li><p>吸引用户订阅有多种方法，决定用哪种方法时想想：用户当前的使用体验，你 app 里的内容类型，添加订阅后对于用户体验的影响。</p>
-<ul>
-<li><p>Free trial：适用于人们已经熟悉的品牌，人们想要在订阅前了解到底有什么内容。如 「HBO NOW」app。</p>
-<p><img src="media/15036722610708/6.jpg" alt="6"/></p></li>
-<li><p>Premium feature：App 的主体免费，但一部分高级功能作为订阅选项。例如「Sleep Cycle」app，将「趋势」功能作为订阅选项，模糊背景的形式作为一个预览。</p>
-<p><img src="media/15036722610708/7.jpg" alt="7"/></p></li>
-<li><p>Sample content：提供一部分示例内容。如「The New York Times」app，只允许未订阅的用户浏览十篇文章，这样可以让用户自己寻找和决定自己感兴趣的内容，从而决定是否要去订阅。</p>
-<p><img src="media/15036722610708/8.jpg" alt="8"/></p></li>
-</ul></li>
-</ul>
-
-<h2 id="toc_3">参考链接</h2>
-
-<ul>
-<li><a href="https://developer.apple.com/videos/play/wwdc2017/814">Designing for Subscription Success - WWDC 2017 - Videos - Apple Developer</a><br/></li>
 </ul>
 
 <blockquote>
