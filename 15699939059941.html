@@ -162,10 +162,19 @@
 <a href="#toc_1">设计意图</a>
 </li>
 <li>
-<a href="#toc_2">实现</a>
+<a href="#toc_2">UIScene 生命周期</a>
 </li>
 <li>
-<a href="#toc_3">参考链接</a>
+<a href="#toc_3">进一步实现</a>
+</li>
+<li>
+<a href="#toc_4">最佳实践</a>
+</li>
+<li>
+<a href="#toc_5">调试建议</a>
+</li>
+<li>
+<a href="#toc_6">参考链接</a>
 </li>
 </ul>
 
@@ -264,11 +273,134 @@
 
 <p>用户不应该被强制使用多窗口功能，应该需要一个用户触发的确切的动作才能开启多窗口功能。</p>
 
-<h2 id="toc_2">实现</h2>
+<h2 id="toc_2">UIScene 生命周期</h2>
 
-<p>待更新 ……</p>
+<p>要在 iPadOS 中实现多窗口功能，你需要特别关注两个类：UIWindowScene 和 UISceneSession。你可能在之前已经熟悉了在 UIKit 中的 UI 是如何构建的。你有一个 Screen，然后有多个 Window，每个 Window 下又有不同的 View。</p>
 
-<h2 id="toc_3">参考链接</h2>
+<p><img src="media/15699939059941/5BF5DA59-13FD-4583-BEEB-2CE49557F651.png" alt=""/></p>
+
+<p>而现在，UIWindowScene 插入到了 Screen 和 Window 之间，这可以让多个 Window 属于用户界面的一个单独的实例，而不需要强制改变应用或用户界面结构太多。</p>
+
+<p><img src="media/15699939059941/DE569067-8DFA-452E-AB30-06C7E2E0253A.png" alt=""/></p>
+
+<p>从基本上来看，一个 Scene 包括了根据你的需要由系统创建的用户界面。无论用户在什么时候执行了一个拖拽动作，都会根据你的用户界面请求一个新的窗口打开。之后，如果那个 Scene 应该进入后台，不再与其发生交互，那么系统就可以决定挂起它、不再需要它、销毁这个 Scene。</p>
+
+<p><img src="media/15699939059941/4B2B0410-3C28-448E-9C8C-F5602DFD2854.png" alt=""/></p>
+
+<p>当我们不需要那个 Scene 时，我们可以将其移到后台，但在 switcher 中用户知道它还在。你需要一种方法去理解什么东西实际上还在 switcher 中。那就是 UISceneSession 该出现的地方。UISceneSession 代表了一种存留的用户状态，表示用户最后进行操作的那个状态。现在，它们有了一个清晰的系统角色，这可能是一个你可以在真实的设备上与其进行交互的标准的应用界面，也可能是一个外部显示器界面。每次系统上创建一个新的窗口，你的应用就会被软件代理通知有一个新的 session 被创建。无论是通过 API 交互还是用户在 switcher 中上划，每当用户销毁/关闭掉一个窗口时，你也会被通知那个 session 被销毁。UIScene 通过你的应用的生命周期与这些 session 相连接或断开连接。</p>
+
+<p><img src="media/15699939059941/F04301AE-94FF-421F-8861-458C191B08DF.png" alt=""/></p>
+
+<p>为了更好地了解这对一个 app 的生命周期的影响，这里用一个图表进一步说明。在应用中有三个 Session，它们代表着系统中三种不同的空间，在这些空间中应用正在展示它们的界面。现在，三个 session 都断开了连接，它们处于后台线之下，而此时整个 app 的状态也是在后台中，如图所示。</p>
+
+<p><img src="media/15699939059941/43BD048A-5BF6-43DB-ACCB-DABD7D058E7D.png" alt=""/></p>
+
+<p>现在，如果我激活一个空间，一个 Session 也被激活，整个 app 也会随那个连接在一起的 Scene 进入前台活跃状态。</p>
+
+<p><img src="media/15699939059941/DDF95A41-8083-4733-9CDD-6FCC0C0CA896.png" alt=""/></p>
+
+<p>当我让一个 Scene 回到后台中，整个应用的状态也会随之进入后台。而如果我切换到另外两个 Scene，我的应用状态就会变成前台活跃状态。</p>
+
+<p><img src="media/15699939059941/1DD846A3-0352-4F95-BF3F-9E473D21E0C5.png" alt=""/></p>
+
+<p>说到 UIApplication 和 UIApplicationDelegate 两个类，我们习惯于把系统的其他界面、ApplicationDelegate 中的生命周期和 Application 对象组合在一起，现在如果还是这样就会有些不清楚。</p>
+
+<p><img src="media/15699939059941/16EFB43C-6112-4F5B-94B7-B9BB6DEDC23E.png" alt=""/></p>
+
+<p>所以我们进行进一步的拆分。Application 继续表示作为一个系统进程的系统状态，ApplicationDelegate 可以获得事件和有关于进程、事件、运行、中断的代理通知。而现在 Scene 概括了 UI 状态，SceneDelegate 可以得到在特定场景打开 URL、从后台返回到前台等等这样的通知。SceneSession 代表存留的 UI 状态。</p>
+
+<p><img src="media/15699939059941/7AD092B2-2857-4AAC-8842-8748EEDBEB94.png" alt=""/></p>
+
+<p>由于上面概念上的变化，许多 API 需要进行修改，但大部分都是相似的，基本上都是从 application 到 scene 的变化。</p>
+
+<p><img src="media/15699939059941/63E86F91-C8E8-4B2D-8BFF-882F5EF8DD59.png" alt=""/></p>
+
+<p><img src="media/15699939059941/227F8660-822B-430F-8DC6-94933624323A.png" alt=""/></p>
+
+<h2 id="toc_3">进一步实现</h2>
+
+<p>之前，用户在 swticher 中会看到一个 app 的四个窗口，这也是用户自然想到的。但作为开发者，我们鼓励你把他们直接看做是 scene 和 scene session。这之间的区别是很重要的，因为用户看到的窗口只是一张截图，应用的 scene 可能并没有在你的 app 中加载，它们可以根据需要出现和关闭，而 session 对你来说是总是可用的。正因如此，我们使用 session 在程序上控制窗口。</p>
+
+<p><img src="media/15699939059941/3DE96D64-16CE-42A0-AF70-B6BC52657125.png" alt=""/></p>
+
+<p>因为多窗口功能，我们增加了新的 API，可以通过这些 API 在程序上创建新窗口、更新 app switcher 中的截图、响应用户手势或者某个文档过期等事件而关闭窗口。</p>
+
+<p><img src="media/15699939059941/AD255690-3B5F-483B-A606-EFF3C1269CA6.png" alt=""/></p>
+
+<p>下面看一些代码实例。<br/>
+第一个是 <code>requestSceneSessionActivation</code> API，这可以让你在前台打开已有的 scene 或者创建一个新的 scene。在下面的这个例子中是打开一个新的文档。首先检查应用中是否有存在的 scene，如果有打开它，如果没有，就创建一个新的。</p>
+
+<pre class="line-numbers"><code class="language-swift">// Open a New Window
+
+@IBAction func handleLongPress(forDocumentAt url: URL) {
+
+    if let existingSession = findSession(for: url) {
+        UIApplication.shared.requestSceneSessionActivation(existingSession, userActivity: nil,
+options: nil)
+    } else {
+        let activity = NSUserActivity(activityType: “com.example.MyApp.EditDocument”)
+        activity.userInfo[“url”] = url
+
+        UIApplication.shared.requestSceneSessionActivation(nil, userActivity: activity,
+options: nil)
+        }
+
+}
+</code></pre>
+
+<p>第二个是 <code>requestSceneSessionRefresh</code> API，你可以在你接到一个信息的推送通知的地方或者在像日历这样的 app 中当一个事件发生改变时使用这个 API。当你调起这个方法，UIKit 会安排一个在未来时间点的更新，那时候会连接上后台中的 scene。你将有机会更新 UI，一个新的截图被截取并且保存到之后的 app switcher 中。</p>
+
+<pre class="line-numbers"><code class="language-swift">// Update App Switcher Snapshot
+
+func application(_ application: UIApplication,
+    didReceiveRemoteNotification userInfo: [AnyHashable:Any],
+    fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -&gt; Void) {
+
+    let session = findSession(for: userInfo)
+    application.requestSceneSessionRefresh(session)
+
+}
+</code></pre>
+
+<p>最后一个是 <code>requestSceneSessionDestruction</code>API，你可以使用它关闭 scene，并且可以根据语义定义关闭时的动画过渡效果。你可以在「邮件」应用中的写邮件窗口看到这个实例，当用户发送一条消息时，窗口会从上面滑出屏幕，而当用户保存所写内容为草稿时，窗口会从下面滑出并提醒用户已经保存。你也可以在你的 app 的 scene 中使用相同的动画过渡效果。</p>
+
+<pre class="line-numbers"><code class="language-swift">// Close a Window
+func closeWindow(and action: DraftAction) {
+    let options = UIWindowScene.DestructionRequestOptions()
+
+    switch action {
+    case .send: options.windowDismissalAnimation = .commit
+    case .save: options.windowDismissalAnimation = .decline
+    case .delete: options.windowDismissalAnimation = .standard
+    }
+    let session = view.window!.windowScene!.session
+    UIApplication.shared.requestSceneSessionDestruction(session, options: options)
+
+}
+</code></pre>
+
+<h2 id="toc_4">最佳实践</h2>
+
+<p>正如前面所说，我们已经从 UIApplicationDelegate 中拆分了用户界面状态和进程的生命周期责任，也拆分了 UIApplication。你可以同时看到应用的多个 scene，你可能会有一个浅色的状态栏内容，还有一个深色的状态栏内容。如果对于状态栏还是只返回一个值那就讲不通了。所以，原有基于应用的状态栏 API 被舍弃，引入了新的基于 window scene 的状态栏 API。<br/>
+其他类似的 API 也是这样。<br/>
+即使你现在不准备适配多窗口功能，我们也鼓励你现在就开始直接使用新的 API，因为如果你之后需要适配这个功能，就不用再花更多的功夫了。</p>
+
+<p><img src="media/15699939059941/90B6E0B4-9564-4671-9FBB-7C3F53E42130.png" alt=""/></p>
+
+<p><img src="media/15699939059941/9A3386FB-71C1-4870-B716-BCECC00B1AAC.png" alt=""/></p>
+
+<h2 id="toc_5">调试建议</h2>
+
+<ul>
+<li>每一个 app 都有独一无二的挑战：你的 app 中会有许多自定义的代码，虽然已经有许多系统框架帮助你，但我们无法预测你需要做出多少改变，但一定会有。</li>
+<li>做出改变：仔细思考过去写下的代码，适配新的生命周期，特别是适配多个 scene 的情景。</li>
+<li>一遍一遍的测试：如果你有自动化测试，那很好，但即使通过，用户可能也会遇到 bug。找出问题最好的方式就是把玩你的 app，同时观察 app 的两个界面，快速找出问题。</li>
+<li>更加注意多个 scene 的情景：因为现在不再只是一个界面，不再只有一个 view controller 的实例。</li>
+</ul>
+
+<p><img src="media/15699939059941/BE02A923-E955-4B4B-BF91-70399AFFCB89.png" alt=""/></p>
+
+<h2 id="toc_6">参考链接</h2>
 
 <ul>
 <li><a href="https://developer.apple.com/videos/play/wwdc2019/212/?time=452">Introducing Multiple Windows on iPad - WWDC 2019 - Videos - Apple Developer</a></li>
