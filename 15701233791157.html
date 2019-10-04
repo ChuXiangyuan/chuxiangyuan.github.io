@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  在 iOS 上设计优雅的声音-触感体验 - 向远公园 | Step Park
+  在 iOS 和 watchOS 上设计优雅的声音-触感体验 - 向远公园 | Step Park
   
   </title>
   
@@ -120,7 +120,7 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>在 iOS 上设计优雅的声音-触感体验</h1>
+          <h1>在 iOS 和 watchOS 上设计优雅的声音-触感体验</h1>
      
         <div class="read-more clearfix">
           <span class="date">2019/9/28</span>
@@ -156,33 +156,39 @@
 <a href="#toc_1">iOS 上的触感</a>
 </li>
 <li>
-<a href="#toc_2">设计触感</a>
+<a href="#toc_2">设计 iOS 上的触感</a>
 </li>
 <li>
-<a href="#toc_3">创建自定义的触感模式</a>
+<a href="#toc_3">在 iOS 13 中创建自定义的触感模式</a>
 </li>
 <li>
-<a href="#toc_4">什么是声音触感体验？</a>
+<a href="#toc_4">watchOS 上的触感</a>
 </li>
 <li>
-<a href="#toc_5">设计指导原则</a>
+<a href="#toc_5">设计 watchOS 上的触感</a>
+</li>
+<li>
+<a href="#toc_6">什么是声音触感体验？</a>
+</li>
+<li>
+<a href="#toc_7">设计指导原则</a>
 <ul>
 <li>
-<a href="#toc_6">因果性 Causality</a>
+<a href="#toc_8">因果性 Causality</a>
 </li>
 <li>
-<a href="#toc_7">和谐 Harmony</a>
+<a href="#toc_9">和谐 Harmony</a>
 </li>
 <li>
-<a href="#toc_8">实用 Utility</a>
+<a href="#toc_10">实用 Utility</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_9">实践建议</a>
+<a href="#toc_11">实践建议</a>
 </li>
 <li>
-<a href="#toc_10">参考链接</a>
+<a href="#toc_12">参考链接</a>
 </li>
 </ul>
 
@@ -226,7 +232,7 @@
 
 <p>无论你是否使用系统提供的触感还是自己创建，使用触感增强用户体验而不是让用户从他们的目标中分散注意力是十分重要的。</p>
 
-<h2 id="toc_2">设计触感</h2>
+<h2 id="toc_2">设计 iOS 上的触感</h2>
 
 <p>设计吸引人们触觉的界面可以把他们在物理世界熟悉的感觉带到 app 中。无论你怎样在你的 app 中产生触感，下面这些设计规范都可以帮助你给用户一个统一的和扣人心弦的体验。</p>
 
@@ -242,7 +248,7 @@
 <li>要意识到产生触感可能会影响其他的用户体验：通过设计，触感会对人们产生产生足够的物理力度，让他们感觉到设备的震动。确保触感不会扰乱相机、陀螺仪、麦克风等的用户体验。</li>
 </ul>
 
-<h2 id="toc_3">创建自定义的触感模式</h2>
+<h2 id="toc_3">在 iOS 13 中创建自定义的触感模式</h2>
 
 <p>自定义触感模式可以表现像是射出弹弓、在崎岖的小路上行驶这种事情。自定义模式可以基于用户的输入和情景动态变化。例如，当一个游戏角色从树中跳出来时玩家会感觉比角色跳入一个地方更强烈。</p>
 
@@ -261,7 +267,38 @@
 
 <p>通过对短暂事件和持续性事件的组合，变化锐度和强度，加入可选的听觉内容，你可以创建非常多的不同的触感体验。</p>
 
-<h2 id="toc_4">什么是声音触感体验？</h2>
+<h2 id="toc_4">watchOS 上的触感</h2>
+
+<p>在 Apple Watch 上，由 Taptic Engine 产生的每一个触感都会搭配一段声音，这两者在一起工作可以用连贯一致的方法传达相同的信息。</p>
+
+<p><img src="media/15701233791157/D402016D-3073-4A6E-B45F-5C189FA2806E.png" alt="D402016D-3073-4A6E-B45F-5C189FA2806E"/></p>
+
+<p>Apple Watch 根据一些特定的目的定义了一些触感，每一个触感类型都传达了特定的含义，而且只应该被传达那个含义：</p>
+
+<ul>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/watchos/images/haptics-notification.mp4">Notification（通知）</a>：告诉用户有一些重要的事情或者是不普通的事情发生了，需要引起用户的注意。当一个本机或者远程通知到达时，这个触感就会由系统发出。</li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/watchos/images/haptics-levelup.mp4">Up（增加）</a>：告诉用户有一个重要的值增加到了一个重要的门槛之上。</li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/watchos/images/haptics-leveldown.mp4">Down（减少）</a>：告诉用户有一个重要的值减少到了 一个重要的门槛之下。</li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/watchos/images/haptics-success.mp4">Success（成功）</a>：告诉用户一个动作成功完成。</li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/watchos/images/haptics-failure.mp4">Failure（失败）</a>：告诉用户一个动作失败了。</li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/watchos/images/haptics-retry.mp4">Retry（重试）</a>：告诉用户一个动作失败了但可能需要重试。</li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/watchos/images/haptics-start.mp4">Start（开始）</a>：告诉用户一个活动开始了。当开启一个计时器或者任何其他有准确起点和终点的活动时使用这个触感。这个触感之后一般都会有一个相对应的停止触感。</li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/watchos/images/haptics-stop.mp4">Stop（停止）</a>：告诉用户一个活动结束了。当停止一个计时器或者其他已经开始的活动时使用这个触感。</li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/watchos/images/haptics-click.mp4">Click（点击）</a>：提供一种拨号盘点击或者有预置增量/间隔的进程的感觉。较少地使用这个触感。过度使用点击触感会削弱它的实用性，而当点击相互覆盖时会让人困惑。</li>
+</ul>
+
+<h2 id="toc_5">设计 watchOS 上的触感</h2>
+
+<p>Apple Watch 上的触感不应该被 app 频繁使用，系统会阻止两个触感同时产生。</p>
+
+<ul>
+<li>使用触感时要克制：只在为了引起对那些重要事件的注意力时使用触感。过度使用触感反馈会造成困惑或者削弱那个反馈的用处。</li>
+<li>只为了它本来的目的使用每一个触感：每一个触感和声音都是根据状态目标而设计的。如果因为不同的目的使用了那个触感会让用户对表达的意思感到困惑。</li>
+<li>提供视觉提示以匹配触感：更新你的界面的视觉样式或者内容以强化触发触感所表达的含义。同时提供视觉和触感反馈可以在用户的动作和结果间创造更深的连接。</li>
+<li>在合适的时间产生触感：通常情况下，播放触感会有一段等待期。因此，最好是在执行相关任务时的第一步而不是最后一步产生触感。如果你在任务的最后一步产生触感，触感就会来得太晚，在触感和任务之间形成一种没关联的感觉。</li>
+</ul>
+
+<h2 id="toc_6">什么是声音触感体验？</h2>
 
 <p>当声音的频率很低很低时，你的耳朵就无法听到，但当你把手放在扬声器上时，你还能感觉到。因此我们设计了 Taptic Engine 用来播放那些只有你自己能感受到的低频声音。在 iPhone 中，Tapic Engine 旁边就是扬声器模块。Tapic Engine 产生的触感会与扬声器发出的声音同步，得到的结果，我们就称之为声音触感体验。</p>
 
@@ -289,21 +326,21 @@
 
 <p><img src="media/15701233791157/2C1DC148-CC6A-4615-8510-D2A54614697C.png" alt=""/></p>
 
-<h2 id="toc_5">设计指导原则</h2>
+<h2 id="toc_7">设计指导原则</h2>
 
 <p>对于设计绝佳的声音触感体验，有三个设计指导原则：</p>
 
 <ul>
 <li>因果性</li>
 <li>和谐</li>
-<li>实用。</li>
+<li>实用</li>
 </ul>
 
 <p><img src="media/15701233791157/89E27213-972C-4619-AC57-26A0B4B34D7D.png" alt=""/></p>
 
 <p>这些概念或者方法被贯彻使用在 Apple 产品的工作中，它们也可以帮助提升你的 app 体验。下面具体来看。</p>
 
-<h3 id="toc_6">因果性 Causality</h3>
+<h3 id="toc_8">因果性 Causality</h3>
 
 <p>第一个是因果性，因果性是有有关于声音触感必须有用，造成它的体验必须是明显的。想象一个足球运动员踢球，在原因—脚踢球和结果-撞击的声音和感觉之间就有一个明显或者清晰的关系。</p>
 
@@ -325,7 +362,7 @@
 
 <p><img src="media/15701233791157/767ED677-3538-4471-A8DF-AF59586E9296.png" alt=""/></p>
 
-<h3 id="toc_7">和谐 Harmony</h3>
+<h3 id="toc_9">和谐 Harmony</h3>
 
 <p>第二个是和谐，和谐是有关于事物通过视觉、通过声音应该感觉到的方式。在真实世界中，声音、触感、视觉是自然和谐的，因为它们有清晰的因果关系。在数字世界，我们需要手动地实现这个工作，输入和输出需要由开发者进行特别的设计。<br/>
 来试着创建一个简单的模型，这里有一个小球从空中掉落并与屏幕底部发生碰撞。先来添加声音反馈，找一个与物理冲撞相匹配的声音，它需要短、精确、清晰，还需要基于撞击的速率调整声音的振幅。接下来添加添加触感，想象一下球撞到你手里的感觉，与小球撞击屏幕底部保持同步，所以我们可以选择一个高锐度的短暂事件，同时需要根据速率调整强度。最后，非常重要的是，让视觉、听觉、触觉达到同步。之后，魔法就发生了，就像是一个真的球与墙壁发生了碰撞。但当我们不让三者同步，感觉就完全不对了。所以「和谐」需要你仔细考虑、多加注意，当完成时就可以创造完美的令人愉悦的体验。</p>
@@ -338,7 +375,7 @@
 
 <p><img src="media/15701233791157/63002678-D238-4C8D-ACBD-7B8B362A0389.png" alt=""/></p>
 
-<h3 id="toc_8">实用 Utility</h3>
+<h3 id="toc_10">实用 Utility</h3>
 
 <p>第三个是实用，实用是只在你对 app 体验可以提供清晰的价值和好处时才添加声音触感反馈。要使用克制，不要因为你可以而添加声音触感。</p>
 
@@ -349,7 +386,7 @@
 <p>针对不同的元素或者 app 中的小交互克制地添加声音触感反馈，有时候只有触感没有声音也是一个好主意。寻找 app 中可能需要声音触感反馈的地方，聚焦于可以增强用户体验或者传达什么重要事情的元素，尽量保持简单。<br/>
 但如果你添加的太多，这很有可能淹没用户，削弱真正重要事情的价值。</p>
 
-<h2 id="toc_9">实践建议</h2>
+<h2 id="toc_11">实践建议</h2>
 
 <p>先回顾下 Core Haptics 提供的两个建设组件，一个是短暂事件，它是敏捷的、紧凑的触感体验，像是一个点击、一个敲击。另一个是持续的触感体验，可以维持很长时间。你可以指定持续时间。</p>
 
@@ -393,7 +430,7 @@
 
 <p>除了上面的这些指导原则，还有一些思考。最好的结果会在亲手听到、看到、感受到时产生。如果你是一名动画师，要与声音或者交互设计师紧密合作，反之亦然。那是创造统一体验的最好方式。想象你第一次使用你的 app，你会想听到什么、感受到什么？然后想象你使用了 100 多次，那些声音触感体验还能帮助你听到或感受到那些东西吗？或者是已经被淹没了。尽管体验它，去掉那些不引人注目或者没用的东西。不要害怕试验，尽管尝试。</p>
 
-<h2 id="toc_10">参考链接</h2>
+<h2 id="toc_12">参考链接</h2>
 
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/haptics/">Haptics - User Interaction - iOS - Human Interface Guidelines - Apple Developer</a></li>
@@ -549,7 +586,7 @@
 	      
 		      
 			      <li class="post">
-			        <a href="15701233791157.html">在 iOS 上设计优雅的声音-触感体验</a>
+			        <a href="15701233791157.html">在 iOS 和 watchOS 上设计优雅的声音-触感体验</a>
 			      </li>
 		     
 		  
