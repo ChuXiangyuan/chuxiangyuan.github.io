@@ -1,0 +1,629 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  核心设计原理（上） - 向远公园 | Step Park
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="向远公园 | Step Park" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:steppark.net ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+</script>
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">Home</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="music.html">Music</a></li>
+        
+        <li id=""><a target="_self" href="about.html">About</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 向远公园 | Step Park</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="music.html">Music</a></li>
+        
+        <li><a target="_self" href="about.html">About</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="Design.html">Design</a></li>
+        
+            <li><a href="Develop.html">Develop</a></li>
+        
+            <li><a href="Teconology.html">Teconology</a></li>
+        
+            <li><a href="Tools.html">Tools</a></li>
+        
+            <li><a href="Life.html">Life</a></li>
+        
+            <li><a href="Talk.html">Talk</a></li>
+        
+            <li><a href="Others.html">Others</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+              <div class="f-img"><img src="media/15702878227518/3474C6F9-6E9A-4054-9526-608BEB704B8D.png" /></div>
+          
+          <h1>核心设计原理（上）</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2019/10/1</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='Design.html'>Design</a></span>
+           
+         
+          <span class="comments">
+            
+              <a href="https://steppark.net/15702878227518.html#disqus_thread">comments</a>
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p>当我们谈论设计时，我们总是聚焦于设计的技术和过程。虽然这些考虑很重要，但是它们不会成就好的设计，至少它们本身不能。好的设计是在一个更基础、更人性的层级上由有关于设计是什么的更深的理解所指导。这就是设计原理所告诉我们的。它们会传达出我们如何感知到周围世界的核心事实，还有我们如何处理信息、我们如何做决定、我们如何交流。这些事实是永恒的、通用的。它们可以应用于各种图形设计、建筑设计、室内设计、零售店设计、风景设计、汽车设计等等。设计的原理不是告诉我们在设计中如何做出特定的事情，而是告诉我们为什么要做这些事情。这是好的设计建设的基础。</p>
+
+<span id="more"></span><!-- more -->
+
+<p>在 Apple 总是使用术语「human interface 人机交互」来描述其他人称之为「user interface 用户交互」的东西。人机交互这个说法并不普遍，没有被广泛使用，但它在 Apple 中有很长的历史。我们的设计指导文档被称为「HIG」，也就是「Human Interface Guidelines 人机交互规范」。这个文档可以追溯到 1978 年。</p>
+
+<p><img src="media/15702878227518/1C26D84A-C504-4A0E-9D81-8569699C48E3.png" alt=""/></p>
+
+<p>「用户」这个词语有一种冷冰冰的效果，它勉强定义了人和界面之间的关系。而「人类」这个词语更能凸显我们在为谁所设计。如果说我只是人类，那表明我会有不完美的地方，会有缺点，可能达不到你的期望。另一方面，「人类」这个词语也用来表达我们最好最高尚的品质。当你承认一个人的人性（humanity）时，你就在承认他们的善良、同情、慷慨、友好。</p>
+
+<p>设计一个界面从根本上讲就是服务其他人。设计的目标不是做一个漂亮的 app 、一个有条理的 app、一个简单或者专注的 app。这些事情当然也十分重要，但它们不是真正的目标。真正的目标是为人服务或者说积极地影响使用你的 app 的人的生活。<br/>
+真正重要的唯一一件事就是你的 app 怎样很好的满足你的目标用户的情感和实际需求。我们有保证安全和可预测未来的需求；我们有了解知识、理解含义的需求；我们有完成任务、实现我们的个人和专业目标的需求；我们也有体验美丽和快乐的需求。</p>
+
+<p><img src="media/15702878227518/8CDA02C0-1832-4360-8D92-11DE225B1BE5.png" alt=""/></p>
+
+<p>设计绝佳的 app 应该提供这些东西，这样的 app 让用户更容易预测未来动作的结果，用户会感到稳定、坚固、值得信任；通过提供清晰有帮助的信息帮助用户做出见多识广的选择；它们流线化和简化了工作流，因此人们可以有效率的、有作用的完成他们的任务；它们也应该有审美上的快乐、享受、优美的体验。使用具备这些品质的 app 会让人感到愉悦、满意，你可以告诉人们是谁创造了完全考虑他们需求的 app，你会感知到为了让事情快速成功完成所付出的所有的时间和所有的努力。每一个事情都是有目的的，每一个事情都是可理解的，这会让人感觉到很人性。</p>
+
+<p><img src="media/15702878227518/15F6F775-139A-4C32-AADF-B903183D9A9D.png" alt=""/></p>
+
+<p>这篇文章分享的一些设计原理可能是显而易见或者是很基础的。但大多数意义深远的东西都是最简单的。因为这些设计原理是通用的，所以我们可以看看它们是如何在现实世界构建我们的体验的，接下来会通过一个「去夏威夷旅行」的实际例子来讲讲这些设计原理。</p>
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">导向 Wayfinding</a>
+</li>
+<li>
+<a href="#toc_2">反馈 Feedback</a>
+</li>
+<li>
+<a href="#toc_3">可视性 Visibility</a>
+</li>
+<li>
+<a href="#toc_4">一致性 Consistency</a>
+</li>
+<li>
+<a href="#toc_5">参考链接</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">导向 Wayfinding</h2>
+
+<p><img src="media/15702878227518/C96704E4-3ECE-4104-B579-BF8838B258EB.png" alt=""/></p>
+
+<p>旅行的第一站是「机场」。在我们去机场的路上，会看到各种标识，告诉我们如何去机场的路、每一个航站楼的具体信息、去登机口的方向。、</p>
+
+<p><img src="media/15702878227518/9E0C1974-CA95-4FE3-8AEA-7F0D3FF14746.png" alt=""/></p>
+
+<p><img src="media/15702878227518/1345513D-AE3F-4F20-862A-71B40E4A98DF.png" alt=""/></p>
+
+<p><img src="media/15702878227518/92986F62-CB84-4967-BF35-7BC291E94269.png" alt=""/></p>
+
+<p>当到达登机口时，我们会通过标识知道我们已经到达正确的位置。如果我们到达了错误的位置或者登机口变更，我们可以获得去往附近登机口的方向。为防止有紧急情况或者我们需要离开，标识会清晰地指出出口的位置。</p>
+
+<p><img src="media/15702878227518/BA45D23C-7E84-4936-A2FA-68FB83F505BF.png" alt=""/></p>
+
+<p><img src="media/15702878227518/F6F3F3BE-D03C-4530-8DE5-9BDF70FD4BB5.png" alt=""/></p>
+
+<p>这些引导我们的标识系统我们称之为「导向系统」。导向系统帮助人们在复杂的环境中快速成功地导航。这对让人们感到有方向感和安全十分重要。人们在机场很疲惫，他们有时差，他们在赶路，他们很紧张，所以机场需要仔细深入的考虑导向系统。好的导向系统提供了人们通常会去到的地方的一个全面易懂的列表，它们提供了在这些地方的需要的细节，它们是完全与情景相关的。当我们进入的系统越来越深，它们就会变得更加特定。它们通过清晰的告知人们的当前位置和相关其他位置帮助人们弄清方向，而且它们提供了一条清晰的退出的道路。知道你可以回到一个你熟悉的地方或者开始的地方是令人欣慰的。<br/>
+导向通过回答一些基本的问题帮助我们感到安全：我在哪？我可以去哪？当我到那时可以找到什么？周围有什么？我如何出去？没有这些问题的答案，我们就会迷路。</p>
+
+<p><img src="media/15702878227518/30AB2D4B-978A-4CA5-B871-7DDB551E8247.png" alt=""/></p>
+
+<p>你的 app 的界面也是一个巨大的古老的导向系统。导航栏、内容区域、标签栏，它们都是你 app 里提供导向的工具。导航栏标题和选中的标签栏条目让人们知道他们在哪儿，内容区域的标签栏让人们知道他们可以去哪儿、周围有什么，简单着色和可识别的标签栏图标、易懂的文字标签告诉人们当他们到那里时可以发现什么，后退按钮提供了一条退出路径，可以帮助人们识别他们进入的 app 区域。你的 app 的每一个屏幕都应该这些问题，否则用户就会迷路。</p>
+
+<p><img src="media/15702878227518/99BD8D8F-034C-446C-ADAF-BA8B1D8B7B95.png" alt=""/></p>
+
+<p><img src="media/15702878227518/FB058C11-9952-49EF-9CF0-1BFDEB9E7151.png" alt=""/></p>
+
+<p><img src="media/15702878227518/57E34351-8003-467F-88D2-C0C30F74B73D.png" alt=""/></p>
+
+<p>所以，彻底检查你的 app，每次到达一个屏幕，问问自己是否很好地回答了这些问题，每一个屏幕是否帮助人们知道他们在哪儿，每一个屏幕是否帮助提供选项给人们以告诉他们还可以去哪儿？如果有些屏幕不能清楚地回答这些问题，那就有一些工作需要做。</p>
+
+<h2 id="toc_2">反馈 Feedback</h2>
+
+<p><img src="media/15702878227518/E12FBFA5-FCC1-4787-94EB-99E12605E817.png" alt=""/></p>
+
+<p>到达目的地，我们要去租一辆车前往酒店。让人们以高速度驾驶两吨重的物体行驶在路上这件事有些滑稽，特别是当人们可能很疲惫或者要去不熟悉的地方时。现在，因为驾驶车辆的潜在危险，汽车制造商必须认真思考车辆的内部设计。安全是考虑的第一位。所以，对我们来说这是一个学习反馈设计原理的好方式。<br/>
+反馈帮助我们有信心地、安全地操纵车辆，反馈帮助我们预料到可能让某些功能不能运转或者让车辆不能动的问题。对于汽车来说，它提供了许多种类型的反馈。</p>
+
+<ul>
+<li>状态反馈：让我们知道车辆现在是怎样的；</li>
+<li>完成反馈：让我们知道我们执行的动作是否成功完成或者失败了；</li>
+<li>警告反馈：告诉我们潜在的问题；</li>
+<li>错误反馈：告诉我们尝试的操作造成了错误。</li>
+</ul>
+
+<p><img src="media/15702878227518/625E63E0-E277-4EC7-9AA0-1B637DC199F2.png" alt=""/></p>
+
+<p>为了我们的安全、其他乘客和行人的安全，汽车提供的反馈必须是清晰、及时、易懂的。具体来看下，车辆是如何与我们沟通的。<br/>
+第一个来看状态反馈。当我们上了车准备走时，看看档位，它告诉我们处于停车状态。知道现在车辆处于哪个档位状态十分重要，重要到在档位和仪表盘上两个地方都有展示。仪表盘上的其他状态让我知道燃料状态，我可以在补充燃料前预估到可以走多远；让我知道当前的速度，帮助我避免拿到超速罚单。这对驾驶者来说是两个很重要的信息。</p>
+
+<p><img src="media/15702878227518/8930E498-9F5A-4EB5-A6EC-9ABECA7A95E3.png" alt=""/></p>
+
+<p><img src="media/15702878227518/B89A9E33-579E-49F4-9F01-43A54288C9A3.png" alt=""/></p>
+
+<p>app 中的状态信息应该一样清楚。例如在「邮件」app 中，未读状态指示标记帮助人们知道该优先读哪些邮件；在「日历」app 中，状态指示标记帮助人们看到什么时间有人不能参加会议，以进一步帮助人们决定是否要调整会议时间；在「相机」app 中，红点、一点点增加的时间、录制按钮的状态三个元素可以让人们知道正在录制视频，它们都让人们知道珍贵但转瞬即逝的时刻正在被记录。清晰直接地展示状态对节约人们时间和帮助他们避免犯错非常重要。</p>
+
+<p><img src="media/15702878227518/BCE1ECBD-F5F6-4405-9FD7-BA29E0082A32.png" alt=""/></p>
+
+<p><img src="media/15702878227518/B91B1BE8-DBDE-4943-8AB9-C0C720E823F9.png" alt=""/></p>
+
+<p><img src="media/15702878227518/C211A607-CF65-4319-BD47-F3CD5D4335EA.png" alt=""/></p>
+
+<p>第二个来看完成反馈。我们准备出发，所以我发动了汽车引擎。我们可以听到引擎发动的声音，可以感觉到发动机的震动，可以看到仪表盘上的数字活跃了起来，毫无疑问这表示我们可以出发了。当我从停车档位变换到行驶档位，我可以获得触觉反馈让我知道我已经变换了档位。当我驶离停车点时，我可以听到车门锁定的声音。这一切都是自动发生的，我们获得这些反馈非常重要，这些反馈是可靠的，是用汽车的方式告诉我们一切正常，一切如你所期待的那样发生，这让驾驶者更能专注于其他认知任务，如确定驶离停车点是否安全。</p>
+
+<p><img src="media/15702878227518/8122FD1A-5ACB-4944-9352-A8F59CFBDEB8.png" alt=""/></p>
+
+<p><img src="media/15702878227518/722398C0-5FB8-46BB-A282-0B21DE219A61%202.png" alt=""/></p>
+
+<p><img src="media/15702878227518/DEC5872E-71BE-4AAB-B9F6-C2E778A4C9F4.png" alt=""/></p>
+
+<p>在 app 中的完成反馈有着同样的目的，例如锁定 iPhone 的声音，一个邮件被标记为未读时的动画或者邮件被删除时的动画，这些提示是谨慎的、没有攻击性的，但它们很难被忽视，它们告知我们设备如期望的所运行。<br/>
+当然，确认反馈可以更加明显，Apple Pay 交易成功的动画和声音-触感就是一个例子，这很难被忽视。每一个在你 app 中的操作都应该提供某种形式的确认反馈，因为这让人们知道动作执行成功很有必要。</p>
+
+<p><img src="media/15702878227518/C03D3B57-8121-436D-9D82-7614C53D55A0.png" alt=""/></p>
+
+<p>第三个来看警告反馈。警告可以帮助人们提前知道潜在的错误，比如低机油、低制动液、低燃油。警告可以通过状态指示标记、信息、仪表盘、内建显示器、声音或者以上所有来告知人们。这些警告很重要，它们让给我们保持安全，保护我们的车不受伤害。</p>
+
+<p><img src="media/15702878227518/EC8EC93F-C7C4-494D-8859-D0DD39CEFBAD.png" alt=""/></p>
+
+<p>最后一个来看错误反馈。在车上，错误反馈非常关键。如果你打算启动一辆没有燃料的车，你将会得到一条错误信息。</p>
+
+<p><img src="media/15702878227518/36D95C68-6EC1-4261-982B-C2503D68BDF9.png" alt=""/></p>
+
+<p>错误状态总是让人失望和沮丧，最好是在一开始就帮助人们避免犯错误。警告和确认反馈就对此有帮助。例如，检查表格内每行信息的有效性就是让人们知道哪些值是被接受的，哪些是不被接受的好方法。实时反馈可以帮助人们修正信息，在之后就不会遇到错误。</p>
+
+<p><img src="media/15702878227518/DED58C2E-B4CF-4258-95A0-37F8135D14DC.png" alt=""/></p>
+
+<p>你也可以尝试猜测人们打算做什么或者犯错误时会做什么，并做出一些合理的事情。例如，在「Things 3」app 中，如果你在日期中输入 6 月 31 日这个不存在的日期，这对人们来说是一个常见的错误，这时 app 不会显示错误或警告，而是自动修正为日期 7 月 1 日。如此小的一个调整，但很聪明、很人性化。</p>
+
+<p><img src="media/15702878227518/015C1621-2C32-4627-8244-3EF55E8DDFCE.png" alt=""/></p>
+
+<p>正如你在前面所看到的，清晰、及时、易懂和提供信息的反馈很关键，反馈解答了极为重要的问题：我能做什么？刚刚发生了什么？现在正在发生什么？将来会发生什么？许多 app 在提供反馈上没有做的很好。</p>
+
+<p><img src="media/15702878227518/D07E6390-75DB-41CF-A2CE-3E7E5A72C407.png" alt=""/></p>
+
+<p>没做好的原因可能是在设计时，容易只想到固定的屏幕，而忘记随着时间不断前进、后退可交互的这种体验。好的反馈就像是与设计它的人进行对话。作为一个设计师，反馈就是你让 app 回答人们没有说出来的问题的方式，让人们知道他们该怎么做以及给他们提供有帮助的指导。所以，当你设计你的 app 时，想象你与使用 app 的人有一个对话。如果你在一个房间里跟他们对话你会说什么？你怎样说？一个简单但有效的方法是寻求没有用过你的 app 的人的建议，让他们告诉你他们在想什么，什么地方是不清楚的，他们认为什么东西是困惑的，接着向他们解释你的 app 是如何实际工作的。引导他们，向他们解释正在发生什么，他们应该注意什么。之后回过头来，考虑你说的和 app 表达的有何不同。当有人要向我解释他的 app 的设计，通常会比设计本身更清晰，人们对我说的东西填补了设计中忽视的部分。</p>
+
+<p><img src="media/15702878227518/83E39A62-FADE-4D8E-98B3-06A5DE2CD092.png" alt=""/></p>
+
+<h2 id="toc_3">可视性 Visibility</h2>
+
+<p>如果人们看不见，好的反馈也没用。可视性捕捉的是十分明显的东西，当控件和信息是清晰可见的时候，一个设计的可用性会被很好地改善。仔细思考下可视性在你的车里是多么重要。仪表盘在你面前直接的呈现了状态信息和警告指示标记，仪表盘看上去很乱，有很多文本、数字、移动的计量器、闪烁的灯和状态指示标记，但这对于操控一辆车来说都是有必要的，需要被一下子看见，而不必移动你的头和身体才能看到。隐藏一部分信息或者把一部分放到车的其他地方将会损失可用性。</p>
+
+<p><img src="media/15702878227518/722398C0-5FB8-46BB-A282-0B21DE219A61%202.png" alt=""/></p>
+
+<p>关键的反馈会被忽视，app 也是同样的道理。在「邮件」app 中，小蓝点提供了有关于邮件消息的有帮助的状态信息，移除掉它可以减少杂乱、会更干净，但却极大地降低了可用性。人们必须要进入每条邮件消息才能获得那个信息，这是低效冗长的。所以，尽可能地让关键状态信息浮出水面很重要。</p>
+
+<p><img src="media/15702878227518/BCE1ECBD-F5F6-4405-9FD7-BA29E0082A32.png" alt=""/></p>
+
+<p>再来看下「时钟」app，如果把底部的「世界时钟、闹钟、就寝、秒表、计时器」隐藏到一个汉堡包菜单中，人们就要花更多的时间寻找 app 提供了什么其他功能。</p>
+
+<p><img src="media/15702878227518/22FBEC4C-5489-48D8-B90F-24DF55A7AF6E.png" alt=""/></p>
+
+<p><img src="media/15702878227518/EDBC591F-6899-4E8C-B8C6-782A2AB98CC9.png" alt=""/></p>
+
+<p>当然，这里有一个平衡，界面过于密集会淹没人们，让人们特别是那些新用户做决定缓慢。所以可视性必须与其他元素进行权衡。</p>
+
+<h2 id="toc_4">一致性 Consistency</h2>
+
+<p>一致性原则是关于用相似的方式表示相似的设计特性。如果你以前开过车，有些标识和术语你一定很熟悉。你会认出下面的标识是锁门、车窗、加油、机油、电池、前灯，你也会知道停车、驾驶、倒车这些词语在操控车辆时的意思。</p>
+
+<p><img src="media/15702878227518/CC311A74-73C4-4256-928D-A3F029436018.png" alt=""/></p>
+
+<p><img src="media/15702878227518/54DACA20-642E-4AE3-B491-A1357F5EFA35.png" alt=""/></p>
+
+<p>一致性也应用于位置和控件的配置。我们都希望刹车在左边，油门在右边。一致性很好地改善了车辆的可用性，或者反过来说不一致会破坏可用性。所有的车都共享了一份普遍的针对于标识和术语的设计词典。所有的车的位置控制也都差不多，得益于一致性，当每次开一辆新车时不需要重新学习如何驾驶。</p>
+
+<p><img src="media/15702878227518/5857973A-E73A-4663-B72C-EBE2687B7C5B.png" alt=""/></p>
+
+<p>这是显而易见的，但一致性实际上很难实现。你必须有意识地保持一致性，你必须正确使用一致性，你要全面考虑当人们使用你的 app 时人们会有什么期待，这些期待可能大多数来源于他们使用其他 app 的经验。你可能不知道他们使用如何使用其他 app，但你可以做出一些有用的推测，也许他们使用其他和你 app 做的事情差不多的 app，很可能他们在一个平台上使用其他 app。所以你需要关注平台惯例，像是图形、术语、导航机制甚至是典型任务的普遍工作流。</p>
+
+<p><img src="media/15702878227518/6D5A4042-3835-4D36-B195-D4BE8E43457E.png" alt=""/></p>
+
+<p>下面用一个具象的例子来说明。在 iOS 上，这个用来表示动作概念的图形是一个从盒子里出来的向上的箭头，因为这个图形会普遍地与分享动作结合在一起，我们可以称之为「sharrow」。有些 app 使用了另一个不同的图形表示相似的概念，这个图形在网站和其他平台很普遍，这个图形没有任何问题，但是这不是 iOS 用户熟悉的图形。从你的目标用户的角度，最好与他们最熟悉的图形保持一致。</p>
+
+<p><img src="media/15702878227518/C28EB126-4BD4-4CF3-A312-1090A240FFA6.png" alt=""/></p>
+
+<p>保持一致性会让你的 app 更方便使用。但有时我们总想做一点不一样的事情，当然那是好事情，你应该尝试新的想法，创新可能也会因此诞生。但像图标和文字标签这样简单的事情的不一致会让人们困惑。所以最好是保持一致，除非你有很坚定的理由。</p>
+
+<p><img src="media/15702878227518/3077FE65-28F5-4EEC-8DE7-D2CD4E31D27A.png" alt=""/></p>
+
+<p>关于一致性还有很重要的一点是内部一致性。内部一致性有关于设计相似样式的控件，你的 app 的图形应该有一个一致的视觉样式，你 app 中的文本应该只有几种字体、字号、颜色等等。内部一致性有助于使 app 具有内部凝聚力和整体性。当一切相互匹配，一切正好合适，人们就会对产品的完整性有更深的感受，我们会本能地认为这个设计是经过深思熟虑的，并且十分合理。保持一致需要自我控制和约束。</p>
+
+<p><img src="media/15702878227518/2ACB9535-8AC4-4599-A3B4-BA251C2CD49A.png" alt=""/></p>
+
+<h2 id="toc_5">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/802">Essential Design Principles - WWDC 2017 - Videos - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15701233791157.html" 
+          title="Next Post: 在 iOS 和 watchOS 上设计优雅的声音-触感体验">在 iOS 和 watchOS 上设计优雅的声音-触感体验 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_douban"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          
+            <div id="disqus_thread"></div>
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <div class="site-a-logo"><img src="media/14625521742746/Step%20Park%20LOGO-White+Circle-.png" /></div>
+            
+                <h1>向远公园 | Step Park</h1>
+                <div class="site-des">搞懂逻辑 | 理清思路 | 沉淀想法 | 纪录生活</div>
+                <div class="social">
+
+
+
+
+
+
+
+<a target="_blank" class="weibo" href="https://weibo.com/chuxiangyuan1104/" title="Weibo">Weibo</a>
+<a target="_blank" class="twitter" target="_blank" href="https://twitter.com/chuxiangyuan/" title="Twitter">Twitter</a>
+<a target="_blank" class="github" target="_blank" href="https://github.com/ChuXiangyuan/" title="GitHub">GitHub</a>
+<a target="_blank" class="email" href="mailto:chuxiangyuan1104@gmail.com" title="Email">Email</a>
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+               
+             <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Featured</h2>
+                </div>
+                <div class="side-content">
+                  
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15674389801268.html">1️⃣ iOS 13 的设计有什么新变化？</a>
+
+                  </div>
+                  
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15416976044741.html">2️⃣ Designing For New iPad Pro and Apple Pencil</a>
+
+                  </div>
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15086036845015.html">3️⃣ Designing For iPhone X</a>
+
+                  </div>
+                  
+                </div>
+            </div>
+            
+    
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="Design.html"><strong>Design</strong></a>
+        
+            <a href="Develop.html"><strong>Develop</strong></a>
+        
+            <a href="Teconology.html"><strong>Teconology</strong></a>
+        
+            <a href="Tools.html"><strong>Tools</strong></a>
+        
+            <a href="Life.html"><strong>Life</strong></a>
+        
+            <a href="Talk.html"><strong>Talk</strong></a>
+        
+            <a href="Others.html"><strong>Others</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15702878227518.html">核心设计原理（上）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15701233791157.html">在 iOS 和 watchOS 上设计优雅的声音-触感体验</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15699939059941.html">如何设计和实现 iPad app 的多窗口功能</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15699505035288.html">把 iPad 上的 app 带到 Mac 中去（下）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15681308995404.html">再说 iOS 和 macOS 深色模式</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              
+
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2018
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'chuxiangyuan'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script type="text/javascript">
+var disqus_shortname = 'chuxiangyuan'; 
+
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109532424-1');
+  gtag('set', {'user_id': 'USER_ID'}); // 使用已登录的 user_id 来设置用户 ID。
+</script>
+
+  </body>
+</html>
