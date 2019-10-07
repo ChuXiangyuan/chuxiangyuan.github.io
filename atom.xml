@@ -4,13 +4,268 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2019-10-05T23:11:38+08:00</updated>
+  <updated>2019-10-06T18:34:43+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[核心设计原理（下）]]></title>
+    <link href="https://steppark.net/15703570206973.html"/>
+    <updated>2019-10-06T18:17:00+08:00</updated>
+    <id>https://steppark.net/15703570206973.html</id>
+    <content type="html"><![CDATA[
+<p><a href="15702878227518.html">核心设计原理的上半部分</a>通过一个去夏威夷旅游的经历中的所见所闻所想讲述了导向、反馈、可见性、一致性、心智模型几个设计原理，旅程还没有结束，这是核心设计原理的下半部分。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">接近性 Proximity</a>
+</li>
+<li>
+<a href="#toc_2">分组 Grouping</a>
+</li>
+<li>
+<a href="#toc_3">映像 Mapping</a>
+</li>
+<li>
+<a href="#toc_4">可供性 Affordance</a>
+</li>
+<li>
+<a href="#toc_5">渐进展开 Progressive Disclosure</a>
+</li>
+<li>
+<a href="#toc_6">八二原则 80/20 Rule</a>
+</li>
+<li>
+<a href="#toc_7">对称性 Symmetry</a>
+</li>
+<li>
+<a href="#toc_8">总结</a>
+</li>
+<li>
+<a href="#toc_9">参考链接</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">接近性 Proximity</h2>
+
+<p>你按了一下开关关掉浴室的灯走出来，太阳落山了，屋子里有些暗，所以你打开了走廊的灯。接着你走进卧室，按下开关打开了另外几盏灯。这概括来说就是设计原理「接近性」。接近性是有关于控件和它控制的对象之间的距离。</p>
+
+<p><img src="media/15703570206973/690DFA49-5F84-47A2-B491-2630EDDFC7D1.png" alt=""/></p>
+
+<p>一个控件离那个对象越接近，两者之间的关联就可能越大，浴室的灯的开关在浴室里，走廊的灯的开关在走廊里，卧室的灯的开关也当然在卧室里。好的接近性也是符合人体工程学的。通常情况下，你离物体或者感兴趣的区域越近，你越可能与它进行交互或者控制它，人们认为走进浴室时可以打开浴室灯的开关。所以把灯的开关放在门的旁边，需要的时候伸一下胳膊就能够到。</p>
+
+<p><img src="media/15703570206973/3299350E-15E6-43F5-952A-8FD7EDC1CB23.png" alt=""/></p>
+
+<p>接近性对表现控件之间的关系也有用。例如，如果你在墙上看到一些开关，你知道其中一个可以控制灯的开关，然后你就可以假设其他开关也是灯的开关。</p>
+
+<p><img src="media/15703570206973/A9A6FD92-8348-45F4-8285-562592104492.png" alt=""/></p>
+
+<p>如果其中一个是控制灯的亮度，那最好把它与其他分隔开来。这种设置让人们更容易记住哪个开关是控制灯的亮度，哪个开关是控制灯的开关。</p>
+
+<p><img src="media/15703570206973/31EE0827-65B8-4063-99CD-A82AAA21F3A4.png" alt=""/></p>
+
+<h2 id="toc_2">分组 Grouping</h2>
+
+<p>上面说的这种设置和安排就是「分组」。分组是一个非常基础和重要的设计原理。分组可以帮助人们理解元素之间的关系，它是确定设计结构的关键核心。<br/>
+虽然我们理解这个，但许多 app 没有有效地利用分组，它很容易被忽视。现在来看一些接近性和分组如何构建设计的结构、建立控件和它影响的对象或视图的例子。<br/>
+在「Keynote」app 中，接近性帮助我们把显示菜单与幻灯片导航器和画布区域联系在了一起。几个对象创建工具放置在了画布的上方，创建后这些对象将会在画布上出现。格式和文稿选项的切换位于这些面板显示的正上方。</p>
+
+<p><img src="media/15703570206973/E4612CB0-D77A-46B8-BE36-526AC25B78F0.png" alt=""/></p>
+
+<p>在「Sketch」 app 中，你可以看到分组如何被用于将彼此相关的控件聚在一起，像是成组/取消成组控件、转换和编辑工具控件、路径操作控件、图层排序控件。</p>
+
+<p><img src="media/15703570206973/E0E68BB6-43E1-494C-9A3C-CB6458F8B4B8.png" alt=""/></p>
+
+<p>你的界面越大，对接近性和分组的需求绝对会越高，但这个设计原理对 iPhone、iPad 甚至 Apple Watch 这样的小屏幕也很重要。</p>
+
+<h2 id="toc_3">映像 Mapping</h2>
+
+<p>现在回过头来再来看下调整灯的亮度的开关。看看这个开关，你现在可能并不能知道开关是开着还是关着，但当把开关改成滑动条的样式的时候，你就知道它是关着的了。这就是映像，映像让你知道它是开着还是关着，映像是指控件的设计能象征它所控制的对象，向上就是调亮灯光，向下就是调暗灯光，用一个可以上下移动的控件在这里是可以讲清楚的，对于如何调整亮度没有模糊。</p>
+
+<p><img src="media/15703570206973/44D089CF-E37A-4AE8-B1F0-8FAEDE7ED37F.png" alt=""/></p>
+
+<p>映像也与控件之间是如何排列的有关。它们的顺序应该象征着被控制对象的配置。对于卧室的多盏灯与多个开关来说，良好的映像就是让灯的开关镜像安排成灯的布局。通过专注于映像，会更容易做出在哪里放置控件、如何排序它们甚至该使用哪个控件的选择。</p>
+
+<p><img src="media/15703570206973/E2A19BC5-00F6-4E30-A7F6-BE9111708743.png" alt=""/></p>
+
+<p><img src="media/15703570206973/2C336FDA-C8EC-4E66-BEA9-26BC0605CBBB.png" alt=""/></p>
+
+<p>当映像不够清楚的时候，你会发现文字标签的出现，这有作用，但不是一个好的解决方案。阅读需要花费时间，对人们记住控件的位置或者如何与它们进行交互没有帮助。</p>
+
+<p><img src="media/15703570206973/55F8DA0A-12A8-4276-B566-A0F3D7FAD96E.png" alt=""/></p>
+
+<p>在界面的场景中，使用一个水平的滑块调整一个水平属性更加直观，类似的，使用一个拨号盘调整旋转角度比滑块或者步进器的效果更好。</p>
+
+<p><img src="media/15703570206973/9B98638D-592B-4EB5-BC0F-2C22161837A9.png" alt=""/></p>
+
+<p><img src="media/15703570206973/44534FE2-40D4-454B-8B97-913B05F0AD8B.png" alt=""/></p>
+
+<p>当然，最好的映像是最直接的映像，可以让人们直接能操纵对象，这更直观、更精确，例如在 macOS 上的鼠标指针或者 iOS 上的手势。</p>
+
+<p><img src="media/15703570206973/1EA49C6A-9182-4537-8078-3094A22AEFA3.png" alt=""/></p>
+
+<h2 id="toc_4">可供性 Affordance</h2>
+
+<p><img src="media/15703570206973/AE21ABFD-441C-4706-B70F-1D01AA6851D5.png" alt=""/></p>
+
+<p>接下来要去餐厅吃晚饭。当你坐下来时，你会在你面前看到一个空盘子。用这个空盘子可以做什么呢？你可以用来装食物，你也可以用它来做其他事。盘子很光滑，很容易转起来，盘子有一个边缘，很容易像飞碟一样抓住并扔出去，开个玩笑了。我们对如何与这个盘子进行交互的见解就是「可供性」。换句话说，一个盘子的物理特性提供了关于这个盘子可以提供给我们什么交互的视觉和触觉提示。</p>
+
+<p><img src="media/15703570206973/40818154-E12E-40EE-8322-193DE7636FE2.png" alt=""/></p>
+
+<p>我们看着盘子思考，我们把食物放进去，或者我考虑用这个盘子把我的食物运到另一个地方，我们不会考虑用这个盘子去装水。可供性不是对象本身的属性，它更多的是人和对象之间的关系。可供性基于一个人的身体能力而不同，因此可供性对每一个人都不一样。例如，一个飞碟提供了我可以抓住和扔出去的能力，但对于我的狗，一个飞碟只提供了狗抓住的能力，没有扔出去的能力。一个盘子提供了我用它吃饭的能力，我的狗也能感知得到这个可供性。</p>
+
+<p><img src="media/15703570206973/E941AE35-18DA-4718-8CCD-E59DD9B78304.png" alt=""/></p>
+
+<p>因为可供性是主观的，一个人能感知到的可供性其他人可能感知不到。当与一个可能进行的动作相关时，人会更可能地感知到可供性。例如，虽然我可以把这个盘子当做茶托，但这是一个几乎不可能的动作，所以我不能容易地感知到一个盘子可以做茶托的可供性。我很可能把事物放在里面，所以我容易感知到一个盘子可以装食物的可供性。</p>
+
+<p><img src="media/15703570206973/3845274A-9885-495D-841E-376DCA2DADFC.png" alt=""/></p>
+
+<p>这种可供性的感知与每个环境、每个你交互的对象都有关系。当你走进一家餐馆时，你经过了一道提供给你可以穿过的可供性的门，门比人高比人宽，你可以想到你的身体可以轻松穿过去，地面平坦连续，你可以想到你自己可以没有障碍地走过去，不会被绊倒。</p>
+
+<p><img src="media/15703570206973/54F0DBBB-CA34-4C31-A4DA-9DE0CA5BEB6F.png" alt=""/></p>
+
+<p>你坐的椅子提供了可以坐的可供性，你面前的桌子提供了可以把东西放在上面的可供性，你脚下的地面提供了可以让你歇歇脚的可供性。</p>
+
+<p><img src="media/15703570206973/581F84BC-95C8-4C0B-BE22-75032BAB21B2.png" alt=""/></p>
+
+<p>人制造的产品都会通过提示提供可供性，它让人们知道哪些操作是可以进行的，这些提示的明显程度和可见性帮助人们知道交互的正确或倾向方式。</p>
+
+<p><img src="media/15703570206973/49836ACC-5276-4C9A-8A27-2070032E09FE.png" alt=""/></p>
+
+<p>app 同样也是这样。滑块可以让人在轨道上拖动小圆点，拨盘让人旋转，按钮让人可以点击。在每一个这样的例子中，可供性都在用最大的效率传达。事实上，随着时间推移，我们会更加习惯于抽象事物。按钮就是物理真实世界按钮的一个高度抽象，两者之间的关联就是圆角弧度。</p>
+
+<p><img src="media/15703570206973/EF39D203-0B52-42DB-8007-7A18E79591DF.png" alt=""/></p>
+
+<p>在滑块小圆点周围微弱的阴影把它与轨道分开，这表明它可以被独立移动。甚至是这个视觉提示都不是完全必要的。多余大多数人来说，看到一条直线上有一个填充的圆形就足以感知到它的滑块可供性。</p>
+
+<p><img src="media/15703570206973/7D8CE625-069A-4F3C-AD19-AA873389B711.png" alt=""/></p>
+
+<p><img src="media/15703570206973/72A57B5E-C5FC-4D9F-9079-B609D22184BC.png" alt=""/></p>
+
+<p>有时可供性通过动画来传达。在「天气」app 中轻点，会看到画面滑上去一点，这表明内容区域可以被滚动。不管你用了什么技术，你的 app 的界面必须清晰的表现它提供了什么行为能力。如果没有的话，人们就不知道如何合适地与其进行交互，他们会用你 app 不提供的方式与其进行交互，他们会对不可交互的控件感到困惑。</p>
+
+<p><img src="media/15703570206973/03C5F949-A39A-4944-BECD-1A800E98DAA4.png" alt=""/></p>
+
+<h2 id="toc_5">渐进展开 Progressive Disclosure</h2>
+
+<p>现在我们知道了食物应该去哪儿，现在该点菜了。我想要一个芝士汉堡，我跟服务员说了我要的菜，服务员问我几分熟，我说七分熟；他问我要哪种芝士，Cheddar/Swiss/Jack/Gruyere/Cottage，我说要 Cheddar；他问我是否要加点培根、鸡蛋、牛油果，我说不需要；他问我是否需要薯条、输啦或者洋葱圈，我说要洋葱圈。上面说的这个过程就是「渐进展开」设计原理。</p>
+
+<p><img src="media/15703570206973/A81240A5-5276-40BA-8073-4ECCCF74C11B.png" alt=""/></p>
+
+<p>渐进展开是用来管理复杂度的技术，这个术语只用于交互设计的场景中。渐进展开可以让人们在由简单到复杂的过程放松。</p>
+
+<p><img src="media/15703570206973/447E9A38-CACF-4633-B1A1-0A5F32788411.png" alt=""/></p>
+
+<p>渐进展开也与隐藏复杂度有关，人们只需要简单可用的界面就能完成基本的任务。</p>
+
+<p><img src="media/15703570206973/BFBDD5C7-0CC9-41E3-927D-EC1018DD2E01.png" alt=""/></p>
+
+<p>订芝士汉堡时如果你需要考虑所有的选项，那将是复杂且令人怯步的。当有人带着你通过这个过程作出决定，你自己定制芝士汉堡就会更容易。某些在之前你清楚做出的选择可能会需要你之后做出其他选择。例如，如果我需要薯条，服务员会问我需要哪种薯条，因为我说不需要薯条所以我就不关心有哪几种薯条，告诉我有什么薯条将会浪费我的时间和精力。</p>
+
+<h2 id="toc_6">八二原则 80/20 Rule</h2>
+
+<p>渐进展开是管理复杂度和简化做决定的过程的有必要、有帮助的技术。但是这个技术会淹没信息和功能，讲到如何合适地使用渐进展开总是会提到八二原则。八二原则就是说系统 80% 的影响都是由 20% 的变量造成。对于一个 app 来说，这意味着 80% 的效益来自于它显示的 20% 的操作，或者说 80% 的使用 app 的人只会使用 20% 的功能。当然，确认的数字是不同的，但基本原理是有效的。</p>
+
+<p><img src="media/15703570206973/770E763E-6419-4309-838E-0EA345A3EA9A.png" alt=""/></p>
+
+<p>并不是所有的信息和功能都是平等的，有一些更重要。所以为了减少杂乱，简化做决定的过程，使用渐进展开隐藏不重要的事情是一个好方法。换句话说，如果你的 app 很复杂，让最常用的 20% 的功能更容易被发现，其余 80% 隐藏起来是可行的。一个典型的例子就是打印对话框，大多数时候，人们只关心基本参数，使用哪个打印机，打印几份，打印哪几页，屏幕上显示的只有不到 20% 的功能，但却超过了 80% 用户想要的功能。如果需要更多功能，通过点击一下既可以展开。渐进式展开不仅减少了视觉杂乱、让打印更简单，而且也不会让人感到困惑。</p>
+
+<p><img src="media/15703570206973/2A046303-4F79-4452-9EEC-2393F21A5A32.png" alt=""/></p>
+
+<p><img src="media/15703570206973/9AD9D213-18DB-4FF5-A117-B0B46E743B3F.png" alt=""/></p>
+
+<p>通过让事情保持简单，人们会更少地感到被威胁、被淹没或者让自己陷入麻烦，而更有经验的用户可以快速找到他们想要的操作和选项。</p>
+
+<h2 id="toc_7">对称性 Symmetry</h2>
+
+<p><img src="media/15703570206973/C4F7FBF6-FE38-42A6-BF52-E1A763432055.png" alt=""/></p>
+
+<p>经过了一晚上的好好休息后，今天我们要去海边潜水了。到达海滩，你戴上护目镜，穿上潜水服，调整好通气管，进入大海，你能看到很多热带鱼。海底的景色很美，为什么呢？这就要说道最后一个设计原理，对称性。对称性我们都很熟悉，当我们想到对称性时，我们通常会想到镜面对称或者两面对称。实际上还有更多对称方式，还有放射旋转对称、平移对称。这三种对称在自然中是普遍存在的。</p>
+
+<p><img src="media/15703570206973/9D01FAA9-BF3E-4016-82CB-F8CC4A1DE804.png" alt=""/></p>
+
+<p>对称形式是一种有效的形式，我们会把它与健康、稳定、平衡、有序联系在一起，我们感觉它赏心悦目，也许还有进化的理由。即使没有物理上相互连接的对称元素感觉上也是有关联的。当我们看到一个中括号时，我们的大脑就不会无意识地把它们看做一个整体。</p>
+
+<p><img src="media/15703570206973/371EACED-C032-49D6-A901-83D39876C0D6.png" alt=""/></p>
+
+<p>当你在海中游时，你会看到各种对称。实际上不管是哪种植物或动物，不管是海里游的、地上跑的、天上飞的，都可能会包含一两种对称。大多数的人造物体也是这样。</p>
+
+<p><img src="media/15703570206973/07FE523E-E276-400E-B692-B5CBC2D5166C.png" alt=""/></p>
+
+<p>一个开关是水平竖直中心对称的，水龙头是对称的，车也是对称的。</p>
+
+<p><img src="media/15703570206973/65F73869-3FB7-45ED-8749-6557238511AA.png" alt=""/></p>
+
+<p>有吸引力的界面倾向于混合使用镜面对称和平移对称。在「天气」app 中，镜面对称提供了一种平衡感，核心元素沿着一条中线对齐，而其他元素也几乎呈平衡分布。</p>
+
+<p><img src="media/15703570206973/9AE76AE2-E2CB-4BB6-9CB1-B16376674E6D.png" alt=""/></p>
+
+<p><img src="media/15703570206973/908C4FE0-6160-4E81-A6F3-FAA173D219D9.png" alt=""/></p>
+
+<p>同样的模式在「相机」、「时钟」、「电话」等等其他 app 中也有出现。</p>
+
+<p><img src="media/15703570206973/CF2B51E4-35F6-4EDE-8D6A-A4E5CB4167CF.png" alt=""/></p>
+
+<p><img src="media/15703570206973/C67FBB95-088A-4C23-8ABD-946FEC222274.png" alt=""/></p>
+
+<p><img src="media/15703570206973/0E481A83-7A58-4074-AB97-9F7C8A7E8606.png" alt=""/></p>
+
+<p>平移对称给界面一种结构感，重复使用相似的元素。</p>
+
+<p><img src="media/15703570206973/390B3097-48C3-4A9A-B3F3-357B30BB4695.png" alt=""/></p>
+
+<p>你可以在「时钟」app 中的城市和时间排列中看到平移对称，在「天气」app 中的城市列表中看到平移对称。当为你的 app 界面进行布局时，寻找机会使用对称以提供平衡感、有序感。</p>
+
+<p><img src="media/15703570206973/C828F0D9-A8BD-4D34-8D47-D68A19E4B37D.png" alt=""/></p>
+
+<p><img src="media/15703570206973/28780E1A-AB84-420F-A989-EDAAF0D62B41.png" alt=""/></p>
+
+<h2 id="toc_8">总结</h2>
+
+<p><img src="media/15703570206973/23DDAAAC-105E-4ED4-9D73-934FC58572FC.png" alt=""/></p>
+
+<p>以上所展现的设计原理展示了人类认知的基本原理，它们简单而强有力地提醒了你设计的本质和目的，它们提供一种理解的框架，一种表述设计优劣的语言。通过这些设计原理，你会更清晰地知道你的 app 设计该如何帮助满足人们的需求，对安全的需求，对理解的需求，对实现目标的需求，对体验美丽和快乐的需求。</p>
+
+<p><img src="media/15703570206973/18302496-86D2-4AAE-A171-60B581B50EAD.png" alt=""/></p>
+
+<p>这些设计原理看上去很简单，但应用到实际工作中并不简单。</p>
+
+<ul>
+<li>每一个设计原理都指向不同的方向，告诉你的 app 的设计该怎么做。设计通常就是解决这些分歧，即使是一名有经验的设计设计师也要面临这些困难。</li>
+<li>也有可能有太多好东西可以用，但太多的反馈会令人烦恼，太多的可见性会让人分心，太多的渐进展开会让工作流没有效率。所以你必须要自己衡量，谨慎判断，周全考虑。</li>
+<li>哪些设计原理更适合，取决于你设计的 app 类型、平台、屏幕尺寸、用例、目标用户经验水平等等。种种因素都会影响某个时间点、某个设计原理的适应性。</li>
+</ul>
+
+<p><img src="media/15703570206973/212A8CF4-699A-4FE0-A8D9-55E629CC817A.png" alt=""/></p>
+
+<p>设计是一个有挑战的工作，没有人说设计是简单的，但当你理解了基础，设计会更简单，让这些设计原理做你的北斗星，指引你做出更好的 app 服务于你的目标用户，这才是重中之重。相对的，你的目标用户也会意识到你的努力工作，他们会感激你的周全和体贴，他们会感知到 app 中的人文关怀。</p>
+
+<h2 id="toc_9">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/802">Essential Design Principles - WWDC 2017 - Videos - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[核心设计原理（上）]]></title>
@@ -58,7 +313,13 @@
 <a href="#toc_4">一致性 Consistency</a>
 </li>
 <li>
-<a href="#toc_5">参考链接</a>
+<a href="#toc_5">心智模型 Mental Model</a>
+</li>
+<li>
+<a href="#toc_6">继续阅读</a>
+</li>
+<li>
+<a href="#toc_7">参考链接</a>
 </li>
 </ul>
 
@@ -210,7 +471,45 @@
 
 <p><img src="media/15702878227518/2ACB9535-8AC4-4599-A3B4-BA251C2CD49A.png" alt=""/></p>
 
-<h2 id="toc_5">参考链接</h2>
+<h2 id="toc_5">心智模型 Mental Model</h2>
+
+<p><img src="media/15702878227518/6B9FBE9E-F84D-4E49-B1A6-55E260B70943.png" alt=""/></p>
+
+<p>到达酒店，你从不太透气的车上下来，进入房间走向浴室，打开水龙头的把手开关让水流出来。过了一会儿，你把手指放在水下面检查水温。水还有点凉，所以你让热水开大了一点。你又等了一会儿，水热了，你开始洗脸。</p>
+
+<p><img src="media/15702878227518/5D5DEFF3-27FF-45A7-8FAB-9141B926FA98.png" alt=""/></p>
+
+<p>相比于一辆汽车，一个水龙头更加基础。但是在某些方面，你必须学习如何使用一个水龙头，你通过适应不同水龙头的控制开关和观察结果去学习。例如，你怎么知道哪个把手是控制热水的？因为你知道是大多数热水都由左边的把手控制。为什么你要等一会儿才去检查水温？因为你知道在调整水温和水变热之间会有延迟。单纯只看水的样子，你很难知道是冷是热，我们都有在水龙头下被烫伤的经历。现在当你每次使用水龙头时，你没有思考这么多事情，你从直觉上期待是那样。</p>
+
+<p><img src="media/15702878227518/CCBD4855-726E-4F5B-BF21-556CDD7F0091.png" alt=""/></p>
+
+<p>在你的大脑中，有一个小小的可爱的水龙头模型，这个模型代表水龙头是含有不同部分和一系列功能和行为的系统，有一个喷口可以出水，有把手控制温度和流量。这些部分都有特定的配置，你的那个模型会有特定的行为，比如在调整热水和水温增加之间会有延迟。这个模型就是心智模型。你交互的每一个系统都有一个心智模型，这些心智模型十分简化，它们没有全面获取系统内部的运作。然而你使用这个系统的经验越多，你的模型就会变得越全面。</p>
+
+<p><img src="media/15702878227518/F9EDF834-F471-4C02-A968-CE07E4509C18.png" alt=""/></p>
+
+<p>心智模型是根据个人经验建立的，并且基于不完整的事实，所以每个人的心智模型都是独一无二的。心智模型可以分为两个部分去理解。<br/>
+一个是系统模型。系统模型是关于一个系统是如何工作的。对于水龙头的系统模型，它包括对两个独立的一热一冷的水源的思考。系统允许输入混合以创造一个温度范围。系统没有立即响应，改变温度可能要花一点时间，特别是刚打开水龙头时。系统模型包括对延迟和温度的理解。</p>
+
+<p><img src="media/15702878227518/7D79F0F9-DA26-43CD-BC04-601C2B8B16FA.png" alt=""/></p>
+
+<p>另一个是交互模型。交互模型是关于如何与系统交互的。对于水龙头的交互模型就是我们用把手调整温度和水流量。<br/>
+那这一切与我们的关系是怎样的？当像水龙头这样的系统匹配了我们的心智模型，我们对系统的期待就会被满足。事实发生时我们不会意识到我们的期望，我们对这个系统的认知是本能的。相反，当一个系统不符合我们的心智模型时，它就打破了我们的期待，我们就认为它不是本能的。</p>
+
+<p><img src="media/15702878227518/F3916929-064C-4F94-947F-46D7D5D0901D.png" alt=""/></p>
+
+<p>心智模型这个概念对于设计非常重要。在此用一个水龙头设计师的小故事来进一步说说这个设计原理。有一天水龙头设计师灵光一现，有个一个水龙头设计的新想法，不是用一个把手控制热水另一个把手控制冷水，而是用一个把手控制温度另一个控制水流量，这样当人们想调整水流量的时候就不会不小心改变温度了。现在，对于水龙头设计师，有了一个新的心智模型。但对于其他人来说，他们的心智模型与设计师的不匹配。当人们使用设计师的水龙头时，不能满足人们的期待，人们会认为是不直观的。更糟糕的是，新的水龙头的外观跟以前的太像了，但是实际行为却完全不一样。当人们以为打开了热水时，却没有水出来。期待的行为和体验到的事实间形成的落差造成了主要的可用性问题。</p>
+
+<p><img src="media/15702878227518/D4385477-67CA-471E-9127-5DF739E0D0B4.png" alt=""/></p>
+
+<p>也许对把手样式进行改变可以表示它有了新的交互模型，或者添加一个文字说明，但这还是有问题。文字说明和微小的变化是很容易被忽视的设计线索，特别是人们对于一个系统的运作和如何操作它已经有了根深蒂固的认知时。这也是设计中的一个大问题，尝试让人们改变 app 如何运作的心智模型是很冒险的，人们越熟悉越严重，对已长期使用的产品做出改变都会让人感觉难以适应，不管这些改变有多么好多么必要。当考虑对已有 app 要做出改变时，你必须有 100% 的把握这些改变让应用的使用者用着更舒服。为了改变而改变不是一个好的理由。仔细地测试你的设计，在怀疑之下证明你的创新更好。如果你做到了，那就可以推动，人们最终会被吸引。</p>
+
+<p><img src="media/15702878227518/47372CE4-3F77-42F9-A831-B0CB84D22B81.png" alt=""/></p>
+
+<h2 id="toc_6">继续阅读</h2>
+
+<p>出发机场，坐上飞机，到达夏威夷，向酒店开去，到达酒店好好休息，旅程还没有结束，<a href="15703570206973.html">继续阅读核心设计原理的下半部分……</a></p>
+
+<h2 id="toc_7">参考链接</h2>
 
 <ul>
 <li><a href="https://developer.apple.com/videos/play/wwdc2017/802">Essential Design Principles - WWDC 2017 - Videos - Apple Developer</a></li>
@@ -5219,592 +5518,6 @@ Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚�
 <blockquote>
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/best-day-of-my-life/832889970?i=832889974&app=music" width="100%"></iframe>
 </blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[个人常用 app 适配 iPhone X 的时间线记录]]></title>
-    <link href="https://steppark.net/15091947537272.html"/>
-    <updated>2017-10-28T20:45:53+08:00</updated>
-    <id>https://steppark.net/15091947537272.html</id>
-    <content type="html"><![CDATA[
-<p>iPhone X 与之前的 iPhone 不同，为了达到全面屏的效果，实体 Home 键被屏幕底部的 Home Indicator 取代，屏幕的四个角由直角变为了圆角，屏幕比例也不再是常见的 16:9，更引人注意的是屏幕顶部还有一个特殊的 Sensor Housing，也即人们俗称的刘海。<a href="15086036845015.html">之前的文章</a>详细阐述了这些变化给 iPhone X 上的 app  适配带去的挑战。</p>
-
-<p>10 月 27 日 iPhone X 开启预订，11 月 3 日第一批大众用户就将要拿到崭新的 iPhone X。同在 10 月 27 日，Apple 发布<a href="https://developer.apple.com/news/?id=10272017a">公告</a>提醒开发者现在可以开始在 iTunes Connect 中提交适配了 iPhone X 的 app、更新 app 的元数据信息了。<a href="https://itunespartner.apple.com/en/apps/news/5993372">iTunes Connect 也开始支持为 app 添加 5.8 寸屏幕预览图片</a>。</p>
-
-<span id="more"></span><!-- more -->
-
-<p><img src="media/15091947537272/15091977143817.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<blockquote>
-<h5 id="toc_0">🗳 <strong>本文章已归档，不再更新</strong></h5>
-</blockquote>
-
-<p>没有适配 iPhone X 的 app 在 iPhone X 上打开时，很有可能就是以 iPhone 8 的屏幕大小、上下有黑边的形式（竖屏条件下）呈现（具体可以看<a href="15086036845015.html">这篇文章</a>的<a href="15086036845015.html#toc_16">「App 的适配」</a>部分），这将十分影响用户体验。以下按照不同的使用频率，列出了我个人使用的一些 app，以记录这些 app 适配 iPhone X 的时间线。一方面可以观察什么时间 iPhone X 可以度过这个 app 适配的尴尬期，有助于购机决策；另一方面也把这些信息记录下来，以供以后 Apple 再次推出这种改变已有屏幕比例、增加新的特性以致需要耗费较多工作适配的机型时的参考。</p>
-
-<p>一个 app 对新机型的适配速度和适配质量能够很大程度上反映出开发者对这个 app 上不上心。</p>
-
-<ul>
-<li><p><strong>Note：</strong></p></li>
-</ul>
-
-<ol>
-<li>本文章会根据 app 适配 iPhone X 的进度不定期更新；</li>
-<li>部分 app 如果没有在更新日志中提到适配了 iPhone X，该 app 也会被标记为未适配；</li>
-<li><p>10 月 27 日前 Apple 不允许在更新日志中提及 iPhone X 及其相关截图、视频等资源，在这之前也有一些成功提交了更新信息的「漏网之鱼」。</p></li>
-</ol>
-
-<ul>
-<li><p><strong>11 月 1 日更新：</strong></p></li>
-</ul>
-
-<ol>
-<li>从 10 月 31 日各家媒体发出的 iPhone X 评测来看，国内的这些应用适配的速度比想象的快一些，像手机淘宝、大众点评、什么值得买等 app 都进行了 iPhone X 的适配，但并没有在更新说明中提到此事。不过常用的微博没有适配，微信适配了一部分，仍有一些问题。</li>
-<li><p>下表中的适配选项暂时仍按照 app 的更新说明来确定。</p></li>
-</ol>
-
-<ul>
-<li><p><strong>11 月 3 日更新：</strong></p></li>
-</ul>
-
-<ol>
-<li>今日 iPhone X 正式开卖，App Store app 更新密度变高，适配 iPhone X 的 app 开始多了起来；</li>
-<li>微信算是在发售前赶上了末班车，完成适配；微博不出所料依旧没有适配，点名批评；支付宝看似适配了，实际上 Face ID 没有适配，iPhone X 上只能用手势和密码了；</li>
-<li>银行界的希望「招商银行」果然完成了适配，表扬；</li>
-<li><p>后续只更新个人认为比较重要 app 的更新状态。</p></li>
-</ol>
-
-<ul>
-<li><p><strong>11 月 5 日更新：</strong></p></li>
-</ul>
-
-<ol>
-<li>根据 app 在真机上的实际情况来更新适配情况，不再根据 app 更新日志来确定 app 适配情况；</li>
-<li>还是有挺多 app 已经完成了适配，但是并没有在 app 更新日志里提及； </li>
-<li><p>适配 iPhone X 的状态改为三种：Yes-完全适配，No-完全没适配，Icp（incomplete）-不完全适配，在备注中会写明适配细节，☹️ 表明对这个 app 本来很看好，但实际的适配情况略有失望。</p></li>
-</ol>
-
-<ul>
-<li><p><strong>11 月 8 日更新：</strong></p></li>
-</ul>
-
-<ol>
-<li>越来越多的 app 更新适配了 iPhone X，但发现绝大多数的 app 的适配更新都有赶工痕迹，主要路径、整体 UI 没有特别大的问题，但仔细观察一些细节就会发现问题。要想把 iPhone X 适配好，得仔细多花些心思。</li>
-<li>视频播放这块，由于各家视频应用的播放器都有一些花里胡哨的功能，所以在横屏播放上大多数的适配都有问题或者说交互不够友好、容易误触等。</li>
-<li>国内的这些应用喜欢在开屏时设置全屏的开屏广告，应用内又喜欢设置令人眼花缭乱的推荐位广告。非常明显，这些广告的图片没有针对 iPhone X 进行特殊优化，切字、盖字现象普遍存在。</li>
-<li><p>笼统比较一下国内主要 app 适配的速度，豆瓣、饿了么、美团、大众点评、携程、网易、京东、滴滴这几家都比较迅速，腾讯紧随其后，再就是阿里系，百度直接垫底。</p></li>
-</ol>
-
-<ul>
-<li><p><strong>12 月 1 日最后更新：</strong></p></li>
-</ul>
-
-<ol>
-<li>一个月过去，来个总结，这也是最后一次更新此文章。主流 app 基本完成了对 iPhone X 的适配更新。优秀的 app 整体完成度很高，能够在 iPhone X 上获得很好的使用体验；次之的是简单完成适配更新的 app，整体使用没有问题，但在一些细节上可能仍存在问题，现在的方案并不是最好的方案还需要开发者慢慢调整。</li>
-<li>当然仍然存在一些尚未更新适配的 app，其中也不乏用户量比较大的 app。</li>
-<li><p>正如之前预料的一样，对于一些紧密跟随 iOS 新技术、由独立开发者/小团队开发、有一定用户规模的 app （这类 app 反而会较多使用系统标准控件，响应用户、跟进新特性也比较及时😎）会较快适配 iPhone X，而对于一些逻辑复杂、牵一发而动全身、只追求能用不追求好用的 app（这类 app 使用系统标准控件较少，经常出现一些自以为很炫酷但实际很反人类的交互，而且修改 bug、适配新特性还不积极🙄，如银行 app、12306等）对于 iPhone X 的适配响应和质量就会差一些。</p>
-<p><img src="media/15086036845015/F3F09540-55D2-42BA-89A0-111F28078172.png" alt="F3F09540-55D2-42BA-89A0-111F28078172"/></p></li>
-</ol>
-
-<h2 id="toc_1">第一梯队</h2>
-
-<table>
-<thead>
-<tr>
-<th style="text-align: center">App</th>
-<th style="text-align: center">适配 iPhone X</th>
-<th style="text-align: center">版本号</th>
-<th style="text-align: center">日期</th>
-<th style="text-align: center">备注</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td style="text-align: center">Wechat</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">6.5.21</td>
-<td style="text-align: center">2017-11-03</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Weibo</td>
-<td style="text-align: center">Icp</td>
-<td style="text-align: center">7.10.3</td>
-<td style="text-align: center">2017-11-04</td>
-<td style="text-align: center">赶工痕迹明显，图片拉伸、UI 错位</td>
-</tr>
-<tr>
-<td style="text-align: center">Alipay</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">10.1.8</td>
-<td style="text-align: center">2017-11-28</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Youtube</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Spotify</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">8.4.28</td>
-<td style="text-align: center">2017-11-17</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Pocket Casts</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Surge</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">2.7.0</td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center">在此指 TestFlight 版本</td>
-</tr>
-<tr>
-<td style="text-align: center">Documents</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">6.2.1</td>
-<td style="text-align: center">2017-11-03</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">端</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">1.9.0</td>
-<td style="text-align: center">2017-11-29</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Airmail</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Things 3</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">3.2.4</td>
-<td style="text-align: center">2017-11-04</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Tweetbot 4</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">4.7.6</td>
-<td style="text-align: center">2017-10-22</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Due</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">2.6</td>
-<td style="text-align: center">2017-11-05</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">My Weather</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">1.5.5</td>
-<td style="text-align: center">2017-10-27</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Medium</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">3.11</td>
-<td style="text-align: center">2017-11-04</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Moke</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">2.23</td>
-<td style="text-align: center">2017-11-03</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Fantastical</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">2.9.2</td>
-<td style="text-align: center">2017-11-02</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Bear</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">1.3.2</td>
-<td style="text-align: center">2017-11-04</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Dictionary</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Today</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Tydlig</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">1.6</td>
-<td style="text-align: center">2017-11-29</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">高德地图</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">8.2.0</td>
-<td style="text-align: center">2017-11-07</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">豆瓣</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">5.10.0</td>
-<td style="text-align: center">2017-10-25</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">即刻</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">3.6.0</td>
-<td style="text-align: center">2017-11-03</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Instapaper</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">7.5</td>
-<td style="text-align: center">2017-11-04</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">VSCO</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center"><strong><em>Ai Search</em></strong></td>
-<td style="text-align: center">No</td>
-<td style="text-align: center"></td>
-<td style="text-align: center"></td>
-<td style="text-align: center">据作者说，这个版本应该不会对 iPhone X 适配了，只能等待新的大版本（3.0）了</td>
-</tr>
-<tr>
-<td style="text-align: center"><strong><em>挖财记账理财</em></strong></td>
-<td style="text-align: center">No</td>
-<td style="text-align: center"></td>
-<td style="text-align: center"></td>
-<td style="text-align: center"></td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="toc_2">第二梯队</h2>
-
-<table>
-<thead>
-<tr>
-<th style="text-align: center">App</th>
-<th style="text-align: center">适配 iPhone X</th>
-<th style="text-align: center">版本号</th>
-<th style="text-align: center">日期</th>
-<th style="text-align: center">备注</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td style="text-align: center">LightScreen</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">2.14</td>
-<td style="text-align: center">2017-10-20</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Starbucks China</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">5.0</td>
-<td style="text-align: center">2017-10-25</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">淘宝</td>
-<td style="text-align: center">Icp</td>
-<td style="text-align: center"></td>
-<td style="text-align: center"></td>
-<td style="text-align: center">还是很多页面适配存在问题，顶部导航栏直接被刘海遮住，另外商品详情页上的 tool bar 适配的与京东一样，不够完美</td>
-</tr>
-<tr>
-<td style="text-align: center">京东</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center">个人感觉在商品详情页上的 tool bar 适配的不够好</td>
-</tr>
-<tr>
-<td style="text-align: center">Instagram</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Dropbox</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Swarm</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Reeder</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">3.1</td>
-<td style="text-align: center">2017-11-10</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Infuse</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">5.6</td>
-<td style="text-align: center">2017-11-10</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Workflow</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">1.7.7</td>
-<td style="text-align: center">2017-11-10</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Authy</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">21.1</td>
-<td style="text-align: center">2017-11-23</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Telegram</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">4.5</td>
-<td style="text-align: center">2017-11-15</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">1Password</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">7.0</td>
-<td style="text-align: center">2017-11-02</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">ofo</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Mobike</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center"></td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">大众点评</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">饿了么</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">7.21</td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Twitter</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">7.10</td>
-<td style="text-align: center">2017-11-04 前</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">淘票票</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">7.3.5</td>
-<td style="text-align: center">2017-10-31</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">WaterMinder</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">3.4</td>
-<td style="text-align: center">2017-10-31</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">网易云音乐</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">4.2.2</td>
-<td style="text-align: center">2017-10-31</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">滴滴出行</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">5.1.18</td>
-<td style="text-align: center">2017-11-02</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Google Photos</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">3.8.0</td>
-<td style="text-align: center">2017-11-02</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Instapaper</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center"></td>
-<td style="text-align: center">2017-11-06</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">猫眼电影</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">8.1.4</td>
-<td style="text-align: center">2017-11-06</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">知乎</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">4.4.2</td>
-<td style="text-align: center">2017-11-08</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">QQ</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">7.2.8</td>
-<td style="text-align: center">2017-11-08</td>
-<td style="text-align: center"></td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="toc_3">第三梯队</h2>
-
-<table>
-<thead>
-<tr>
-<th style="text-align: center">App</th>
-<th style="text-align: center">适配 iPhone X</th>
-<th style="text-align: center">版本号</th>
-<th style="text-align: center">日期</th>
-<th style="text-align: center">备注</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td style="text-align: center">Castro 2</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">2.5.1</td>
-<td style="text-align: center">2017-10-27</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">好奇心日报</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">3.4.5</td>
-<td style="text-align: center">2017-10-29</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">菜鸟裹裹</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">4.4.1</td>
-<td style="text-align: center">2017-10-31</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">PCalc</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">3.7.2</td>
-<td style="text-align: center">2017-11-01</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Enlight</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">1.4</td>
-<td style="text-align: center">2017-11-02</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">招商银行</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">6.0.0</td>
-<td style="text-align: center">2017-11-02</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Spark</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">1.12</td>
-<td style="text-align: center">2017-11-04</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">Launcher Center Pro</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">2.8.2</td>
-<td style="text-align: center">2017-11-04</td>
-<td style="text-align: center"></td>
-</tr>
-<tr>
-<td style="text-align: center">QQ音乐</td>
-<td style="text-align: center">Yes</td>
-<td style="text-align: center">7.9.2</td>
-<td style="text-align: center">2017-11-14</td>
-<td style="text-align: center"></td>
-</tr>
-</tbody>
-</table>
 
 ]]></content>
   </entry>
