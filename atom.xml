@@ -4,7 +4,7 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2020-03-18T14:03:19+08:00</updated>
+  <updated>2020-03-18T18:41:57+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -13,7 +13,7 @@
   <generator uri="http://www.mweb.im/">MWeb</generator>
   
   <entry>
-    <title type="html"><![CDATA[订阅 Apple Music 选哪个区？——中美坡港日五大地区全对比]]></title>
+    <title type="html"><![CDATA[订阅 Apple Music 该选哪个区？——中美坡港日五大地区全对比]]></title>
     <link href="https://steppark.net/15844652241485.html"/>
     <updated>2020-03-18T01:13:44+08:00</updated>
     <id>https://steppark.net/15844652241485.html</id>
@@ -271,7 +271,7 @@
 
 <ul>
 <li>Apple Music 推出后，涵盖了 iTunes Match 的所有功能。iTunes Match 不再推广，但并没有停止运营，现在你仍可以通过 iTunes Store 的边栏找到入口，按年订阅 iTunes Match。</li>
-<li>由于早期中国大陆地区没有 iTunes Store 功能，也就没有推出过 iTunes Match，现在的 Apple Music 也就不包括 iTunes Match，以上是<a href="https://support.apple.com/zh-cn/HT204956">官方描述</a>。但在实际情况中，中国大陆地区的 Apple Music 在使用 iCloud 音乐资料库上传歌曲后，某些歌曲可以呈现「已匹配」状态。2019 年 1 月<a href="https://www.v2ex.com/t/526383">有网友在 V2EX 发帖</a>称，原来上传后状态为「已匹配」的无压缩、无 DRM 保护的歌曲变成了「已匹配」的有压缩、有 DRM 保护的歌曲，而非中区不存在这种情况。故此功能在中国大陆区的具体规则十分模糊。</li>
+<li>由于早期中国大陆地区没有 iTunes Store 功能，也就没有推出过 iTunes Match，现在的 Apple Music 也就不包括 iTunes Match，以上是<a href="https://support.apple.com/zh-cn/HT204956">官方描述</a>。但在实际情况中，中国大陆地区的 Apple Music 在使用 iCloud 音乐资料库上传歌曲后，某些歌曲可以呈现「已匹配」状态。2019 年 1 月<a href="https://www.v2ex.com/t/526383">有网友在 V2EX 发帖</a>称，原来上传后状态为「已匹配」的无压缩、无 DRM 保护的歌曲变成了「已匹配」的有压缩、有 DRM 保护的歌曲，而非中区不存在这种情况。2019 年 2 月<a href="https://www.v2ex.com/t/532944">又有网友在 V2EX 发帖</a>称，自己上传的歌曲不仅存在上述问题，歌曲还出现了不明杂音，不知此情况是否为个别现象或是 bug。故此功能在中国大陆区的具体规则十分模糊。</li>
 </ul>
 
 <h3 id="toc_11">类似艺人</h3>
@@ -282,7 +282,7 @@
 
 <h3 id="toc_12">音乐向导</h3>
 
-<p>「音乐向导」可以理解为 Apple Music 中某些官方机构、组织创建的播放列表合集，这个功能随着 Apple Music 改版被弱化，从之前的专门入口演变到现在只能通过搜索或链接访问，但并没有停止更新。非中区的音乐向导基本一致，但中区只包含部分，其他即使通过链接也无法访问。例如，以「music」为搜索关键字搜索音乐向导：</p>
+<p>「音乐向导」可以理解为 Apple Music 中某些官方机构、组织创建的播放列表合集，这个功能随着 Apple Music 改版被弱化，从之前的专门入口演变到现在只能通过搜索或链接访问，但并没有停止更新。非中区的音乐向导基本一致，但中区只包含部分，其他即使通过链接也无法访问，如音乐向导「<a href="https://music.apple.com/sg/curator/disney-music/1111371904">Disney Music</a>」。例如，以「music」为搜索关键字搜索音乐向导：</p>
 
 <p><img src="media/15844652241485/8CEA454A-09C1-42D2-B8AA-E788D05D415E.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
@@ -333,7 +333,7 @@
 <p><img src="media/15844652241485/D8D2D54C-8F4A-41EE-BFCC-9E86F0D862EC.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
 <ul>
-<li><strong>网页端</strong>：2019 年 9 月 Apple 上线了<a href="https://beta.music.apple.com/">网页端的 beta 版 Apple Music</a>，用户可以在浏览器中使用 Apple Music，其访问地址是：<a href="https://beta.music.apple.com/%E3%80%82%E7%94%B1%E4%BA%8E%E6%98%AF">https://beta.music.apple.com/。由于是</a> beta 版，部分功能暂时不可用，例如 Beats 1 直播电台、Apple 原创音乐视频、智能播放列表，并且你不能在网站中开启 Apple Music 的订阅。值得注意的是，在笔者的上海电信网络环境下，直接访问网页端 Apple Music 会自动跳转至 <a href="https://www.apple.com.cn/apple-music/">Apple Music 苹果官网</a>，<strong>导致网页端 Apple Music 服务无法正常使用</strong>，若使用非大陆地区 iPhone 访问则是正常的，其他地区和运营商网络访问情况未知，导致这个问题的原因未知。</li>
+<li><strong>网页端</strong>：2019 年 9 月 Apple 上线了<a href="https://beta.music.apple.com/">网页端的 beta 版 Apple Music</a>，用户可以在浏览器中使用 Apple Music，其访问地址是：<a href="https://beta.music.apple.com/%E3%80%82%E7%94%B1%E4%BA%8E%E6%98%AF">https://beta.music.apple.com/。由于是</a> beta 版，部分功能暂时不可用，例如 Beats 1 直播电台、Apple 原创音乐视频、智能播放列表，并且你不能在网站中开启 Apple Music 的订阅。值得注意的是，在笔者的上海电信网络环境下，直接访问网页端 Apple Music 会自动跳转至 <a href="https://www.apple.com.cn/apple-music/">Apple Music 苹果官网</a>，<strong>导致网页端 Apple Music 服务无法正常使用</strong>，若使用非大陆地区网络访问则是正常的，其他地区和运营商网络访问情况未知，导致这个问题的原因未知。</li>
 </ul>
 
 <p><img src="media/15844652241485/applemusicweb.0.png.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
@@ -388,7 +388,7 @@
 
 <ul>
 <li>由于非中区 Apple ID 付款方式终归不如中区便利，在中国大陆使用非中区 Apple Music 的用户一般还同时拥有一个中区 Apple ID，常用于 App Store 的付费应用和服务的购买和订阅或者下载只在中区上架的 app（如 Bilibili）。但基于上述逻辑，你无法在同一台设备上让 Apple Music 登录 A 帐号，App Store 登录 B 帐号，iTunes Store 登录 C 帐号……于是你就不得不有切换 Apple 媒体帐号的需求。</li>
-<li>在 iOS 设备、HomePod 上切换 Apple 媒体帐号时可借助系统自带 iCloud钥匙串、1Password 等工具自动填充密码，减少输入，简化流程；在 watchOS 设备上，Apple 媒体帐号与配对的 iPhone 保持同步；在 macOS 设备上切换 Apple 媒体帐号时可借助1Password 等工具填充密码；由于 Apple TV 定位于家庭中多用户使用的设备，在 Apple TV 中可登录多个 Apple ID，从 tvOS 13 开始，需要切换 Apple 媒体帐号时可一键切换，无需输入密码。</li>
+<li>在 iOS 设备、HomePod 上切换 Apple 媒体帐号时可借助系统自带 iCloud钥匙串、1Password 等工具自动填充密码，减少输入，简化流程；在 watchOS 设备上，Apple 媒体帐号与配对的 iPhone 保持同步；在 macOS 设备上切换 Apple 媒体帐号时可借助 1Password 等工具填充密码；由于 Apple TV 定位于家庭中多用户使用的设备，在 Apple TV 中可登录多个 Apple ID，从 tvOS 13 开始，需要切换 Apple 媒体帐号时可一键切换，无需输入密码。</li>
 </ul>
 
 <p><img src="media/15844652241485/58BEB754-F64A-4E51-80F1-16158A1F4190.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
