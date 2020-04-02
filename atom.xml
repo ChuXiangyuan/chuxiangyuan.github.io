@@ -4,7 +4,7 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2020-03-18T18:41:57+08:00</updated>
+  <updated>2020-03-20T12:58:32+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -407,7 +407,7 @@
 
 <ul>
 <li>关于 app 的下载，对于从 A 帐号下载的 app，在登录 B 帐号的情况下，只要 B 帐号所在地区的 App Store 有上架此 app，无需切换回 A 帐号就可检测到该 app 的更新，并可以正常更新，第一次更新时可能要求输入 A 帐号的登录密码。</li>
-<li>关于 app 的内购和订阅，对于 A 帐号下载的 app 的内购和订阅，在登录 B 帐号的情况下，无需切换回 A 帐号，即可恢复 A 帐号的内购和订阅，可能会提示需要输入 A 帐号的登录密码；但若是通过 B 帐号下载同一个 app，是无法恢复 A 帐号的内容和订阅的。</li>
+<li>关于 app 的内购和订阅，对于 A 帐号购买的 app 的内购和订阅，一般情况下只能在登录 A 帐号的情况下才能恢复购买；在使用 A 帐号下载的 app 中，不能在登录 B 帐号时进行内购和订阅的付费。</li>
 <li>对于只在中区或者只在某一个地区上架的应用需要更新时，可以通过这个<a href="http://switchr.imagility.io">小工具</a>快速切换当前设备 Apple 媒体服务到对应的地区，检查 app 更新并完成下载更新。注意该工具仅是通过一个链接跳转到了其他区的 Apple 媒体服务，并没有修改 Apple ID 的地区，你也不能购买/播放其他地区的应用/音乐。你也可以利用这个工具查看任一地区的 Apple Music、App Store、iTunes Store 内容。若不能正常跳转可尝试通过代理访问。</li>
 </ul>
 
