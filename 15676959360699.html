@@ -160,74 +160,107 @@ Sign In with Apple 提供了反欺骗的特性，它可以通过机器学习和�
 <a href="#toc_0">目录</a>
 </li>
 <li>
-<a href="#toc_1">设计帐户注册和登录流程</a>
+<a href="#toc_1">What&#39;s New</a>
 </li>
 <li>
-<a href="#toc_2">Sign In with Apple 按钮</a>
+<a href="#toc_2">设计帐户注册和登录流程</a>
+</li>
+<li>
+<a href="#toc_3">Sign In with Apple 按钮</a>
 <ul>
 <li>
-<a href="#toc_3">白色</a>
+<a href="#toc_4">使用系统提供的按钮</a>
+<ul>
+<li>
+<a href="#toc_5">白色</a>
 </li>
 <li>
-<a href="#toc_4">带描边的白色</a>
+<a href="#toc_6">带描边的白色</a>
 </li>
 <li>
-<a href="#toc_5">黑色</a>
-</li>
-<li>
-<a href="#toc_6">按钮尺寸和位置</a>
+<a href="#toc_7">黑色</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_7">实现 Sign In with Apple</a>
+<a href="#toc_8">按钮尺寸和位置</a>
+</li>
+<li>
+<a href="#toc_9">创建一个自定义的 Sign in with Apple 按钮</a>
 <ul>
 <li>
-<a href="#toc_8">纵览</a>
+<a href="#toc_10">左对齐 logo 样式的按钮</a>
 </li>
 <li>
-<a href="#toc_9">让 Sign In with Apple 与你的 app 结合</a>
-<ul>
-<li>
-<a href="#toc_10">Button 按钮</a>
+<a href="#toc_11">只有 logo 样式的按钮</a>
 </li>
-<li>
-<a href="#toc_11">Authorization 授权</a>
-</li>
-<li>
-<a href="#toc_12">Verification 鉴权</a>
-</li>
-<li>
-<a href="#toc_13">Handling Changes 处理变动</a>
+</ul>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_14">跨平台</a>
-</li>
-<li>
-<a href="#toc_15">Best Practices</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_16">Sign in with Apple 新的审核规范</a>
+<a href="#toc_12">实现 Sign In with Apple</a>
 <ul>
 <li>
-<a href="#toc_17">App Store 审核规范</a>
+<a href="#toc_13">纵览</a>
 </li>
 <li>
-<a href="#toc_18">网站和其他平台上的使用规范</a>
+<a href="#toc_14">让 Sign In with Apple 与你的 app 结合</a>
+<ul>
+<li>
+<a href="#toc_15">Button 按钮</a>
+</li>
+<li>
+<a href="#toc_16">Authorization 授权</a>
+</li>
+<li>
+<a href="#toc_17">Verification 鉴权</a>
+</li>
+<li>
+<a href="#toc_18">Handling Changes 处理变动</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_19">参考链接</a>
+<a href="#toc_19">跨平台</a>
+</li>
+<li>
+<a href="#toc_20">Best Practices</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_21">Sign in with Apple 新的审核规范</a>
+<ul>
+<li>
+<a href="#toc_22">App Store 审核规范</a>
+</li>
+<li>
+<a href="#toc_23">网站和其他平台上的使用规范</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_24">参考链接</a>
 </li>
 </ul>
 
 
-<h2 id="toc_1">设计帐户注册和登录流程</h2>
+<hr/>
+
+<h2 id="toc_1">What&#39;s New</h2>
+
+<ul>
+<li>2020-03：
+<ul>
+<li>进一步明确了 Sign In with Apple 按钮在 iOS、macOS、tvOS、watchOS 和 Web 端不同平台上的样式区别；</li>
+<li>增加了对创建一个自定义的 Sign in with Apple 按钮（左对齐 logo 样式、只有 logo 样式）的描述。</li>
+</ul></li>
+</ul>
+
+<hr/>
+
+<h2 id="toc_2">设计帐户注册和登录流程</h2>
 
 <ul>
 <li>让用户登录只为了交互有价值的信息：例如，人们可能需要创建一个账户来让 app 可以提供个性化的体验、在 app 中访问额外的功能或者同步数据，如果你的 app 不需要基于账户的功能，那就不需要让用户登录。</li>
@@ -238,59 +271,136 @@ Sign In with Apple 提供了反欺骗的特性，它可以通过机器学习和�
 <li>注册账户时只收集必要的信息：如果只是为了创建一个独一无二的用户标识符，那就不需要收集用户的名字和电子邮箱信息。</li>
 </ul>
 
-<h2 id="toc_2">Sign In with Apple 按钮</h2>
+<h2 id="toc_3">Sign In with Apple 按钮</h2>
 
-<p>为了帮助人们注册一个账户和登录账户，最好使用 Apple 为 Sign In with Apple 功能提供的熟悉的按钮。当你使用系统 API 创建 Sign In with Apple 按钮时，你可以获得下面这些好处：</p>
+<p>Apple 提供了几种「Sign in with Apple」按钮，你可以使用它们以让用户注册或者登录账户。如果有需要，你可以创建一个自定义的按钮以提供 Sign in with Apple 功能。</p>
+
+<ul>
+<li>突出展示「Sign in with Apple」按钮：确保 Sign in with Apple 按钮不比其他的登录按钮小，避免出现滚动才能看到按钮的情况。</li>
+</ul>
+
+<h3 id="toc_4">使用系统提供的按钮</h3>
+
+<p>当你使用系统提供的 API 创建一个 Sign in with Apple 按钮时，你可以获得下面这些好处：</p>
 
 <ul>
 <li>一个确保使用了 Apple 提供的标题、字体、颜色、样式的按钮；</li>
-<li>确保了当你改变按钮样式时，按钮的内容可以保持合适的比例；</li>
-<li>自动翻译按钮上的标题到用户设备设置的语言；</li>
-<li>为了与你的 UI 样式匹配，对按钮圆角半径的调整的功能支持。</li>
+<li>当你改变按钮样式时，按钮的内容可以保证保持一个理想的比例；</li>
+<li>自动翻译按钮上的文字为设备指定的语言；</li>
+<li>支持配置按钮的圆角半径以匹配你的 UI 样式（在 iOS、macOS、Web 不同环境下）；</li>
+<li>一个系统提供的替代文本标签，可以让「旁白/VoiceOver」描述出按钮。</li>
 </ul>
 
-<p>Sign In with Apple 提供了两种按钮样式变种：「Sign In with Apple」 和 「Continue with Apple」。根据需要，选择最适合你的服务的登录场景的那种样式。</p>
+<p>系统提供了按钮标题的几种变种样式。根据你的内容运行的平台，选择适合你的登录体验的术语样式，并在你的所有界面中一致地使用。<br/>
+下面的几种按钮标题在 iOS、macOS、tvOS 中都可用，「Sign In with Apple」和「Continue with Apple」在 Web 端中可用：</p>
 
-<p><img src="media/15676959360699/1DE720CE-AB70-420C-821A-6854256DF6B2.png" alt=""/></p>
+<p><img src="media/15676959360699/26579F8A-7287-4AC8-92D5-71FDE19454C8.png" alt="26579F8A-7287-4AC8-92D5-71FDE19454"/></p>
 
-<p>对于 Sign In with Apple 按钮有三种外观：白色（White）、带描边的白色（White with Outline Rule）、黑色（Black）。根据你要展示按钮处的 UI 背景选择最适合的外观。</p>
+<p>对于 watchOS，系统提供了一种按钮标题： Sign in</p>
 
-<h3 id="toc_3">白色</h3>
+<p><img src="media/15676959360699/apple-id-watch-44mm-no-background.png" alt="apple-id-watch-44mm-no-background"/></p>
 
-<p>在可以提供足够对比度的深色或者彩色背景上使用白色外观。</p>
+<p>取决于不同的平台，系统最多提供三种 Sign In with Apple 按钮的外观样式：白色（White）、带描边的白色（White with Outline Rule）、黑色（Black）。根据你要展示按钮处的 UI 背景选择最适合的外观。</p>
 
-<p><img src="media/15676959360699/EDA18A96-D998-47A8-9813-3B599C3F32E5.png" alt=""/></p>
+<h4 id="toc_5">白色</h4>
 
-<h3 id="toc_4">带描边的白色</h3>
+<p>白色外观样式在所有平台和 Web 端可用。在可以提供足够对比度的深色或者彩色背景上使用白色外观样式。</p>
 
-<p>在白色或者不能提供足够对比度的浅色背景上使用带描边的白色外观。不要在黑色或者太饱和颜色的背景上使用。</p>
+<p><img src="media/15676959360699/EDA18A96-D998-47A8-9813-3B599C3F32E5.png" alt="EDA18A96-D998-47A8-9813-3B599C3F32E5"/></p>
 
-<p><img src="media/15676959360699/9C16E913-90B5-40C0-8890-C91679BE5341.png" alt=""/></p>
+<h4 id="toc_6">带描边的白色</h4>
 
-<h3 id="toc_5">黑色</h3>
+<p>带描边的白色外观样式在 iOS、macOS 和 Web 端可用。在白色或者不能与白色按钮填充形成足够对比度的浅色背景上使用带描边的白色外观样式。不要在深色或者太饱和颜色的背景上使用，因为黑色描边会让视觉上变杂乱，可以使用白色外观样式与深色背景形成对比。</p>
 
-<p>在白色或者可以提供足够对比度的浅色背景上使用黑色外观。不要在黑色或者深色的背景上使用。</p>
+<p><img src="media/15676959360699/9C16E913-90B5-40C0-8890-C91679BE5341.png" alt="9C16E913-90B5-40C0-8890-C91679BE5341"/></p>
 
-<p><img src="media/15676959360699/15676962891072.jpg" alt=""/></p>
+<h4 id="toc_7">黑色</h4>
 
-<h3 id="toc_6">按钮尺寸和位置</h3>
+<p>黑色外观样式在所有平台和 Web 端上可用。在白色或者可以提供足够对比度的浅色背景上使用黑色外观样式。不要在黑色或者深色的背景上使用。</p>
+
+<p><img src="media/15676959360699/11230F79-4793-4365-8A05-34C9CE13E0E9.png" alt="11230F79-4793-4365-8A05-34C9CE13E0E9"/></p>
+
+<p>与其他平台上的黑色 Sign In with Apple 按钮不同的是，watchOS 平台上的按钮使用的填充颜色并不是完全的黑色。为了与 Apple Watch 的纯黑色背景形成对比，watchOS 的按钮使用了系统定义的深灰色外观样式。</p>
+
+<p><img src="media/15676959360699/apple-id-watch-44mm.png" alt="apple-id-watch-44mm"/></p>
+
+<h3 id="toc_8">按钮尺寸和位置</h3>
 
 <ul>
-<li>让 Sign In with Apple 按钮展示的显眼一些：让 Sign In with Apple 按钮和其他登录按钮具有相同的尺寸，避免人们需要滚动屏幕才能看到按钮的情况。</li>
-<li>调整圆角半径以与 app 中的其他登录按钮样式相匹配：默认情况下，Sign In with Apple 有一个圆角半径。你可通过改变这个半径值让按钮变成矩形或者药丸形状的按钮。</li>
+<li>调整圆角半径以与 app 中的其他登录按钮样式相匹配：默认情况下，Sign In with Apple 有一个圆角半径。在 iOS、macOS 和 Web 端，你可通过改变这个半径值让按钮变成圆角矩形或者药丸形状。</li>
 </ul>
 
-<p><img src="media/15676959360699/FC92B3C7-DF00-48A7-8945-22ADEBFD921E.png" alt=""/></p>
+<p><img src="media/15676959360699/FC92B3C7-DF00-48A7-8945-22ADEBFD921E.png" alt="FC92B3C7-DF00-48A7-8945-22ADEBFD921E"/></p>
 
 <ul>
-<li>保证最小按钮尺寸和按钮周围的边距：取决于不同的地区，按钮的标题长度可能会发生变化。使用下面推荐的指导值。</li>
+<li>在 iOS、macOS 和 Web 端，保证最小按钮尺寸和按钮周围的边距：取决于不同的地区，按钮的标题长度可能会发生变化。使用下面推荐的指导值。</li>
 </ul>
 
-<p><img src="media/15676959360699/0E89E6BB-771B-4BA0-8E9D-87E545211E43.png" alt=""/></p>
+<p><img src="media/15676959360699/0E89E6BB-771B-4BA0-8E9D-87E545211E43.png" alt="0E89E6BB-771B-4BA0-8E9D-87E545211E43"/></p>
 
-<h2 id="toc_7">实现 Sign In with Apple</h2>
+<h3 id="toc_9">创建一个自定义的 Sign in with Apple 按钮</h3>
 
-<h3 id="toc_8">纵览</h3>
+<p>如果你的布局需要，你可以为 iOS、macOS 或者 Web 端创建一个自定义的 Sign in with Apple 按钮。例如，如果你支持多种登录方法，你可能需要展示一些使用了左对齐 logo 的按钮或者只展示一个 logo 的按钮。</p>
+
+<p><img src="media/15676959360699/6B307781-A9ED-4DF6-801F-D77EFDA9C02C.png" alt="6B307781-A9ED-4DF6-801F-D77EFDA9C02C"/></p>
+
+<p><a href="https://developer.apple.com/design/resources/">Apple 的设计资源</a>提供了可下载的 Apple logo 资源文件，你可以使用它们创建自定义的左对齐 logo 的 Sign in with Apple 按钮或者只展示一个 logo 的 Sign in with Apple 按钮。Logo 文件包含 PNG、SVG 和 PDF 格式，对于两种类型的按钮资源文件都提供了两种外观样式。下面是黑色和白色的只展示一个 logo 的按钮资源文件示例，为了保持可见，每一个都添加了一个背景：</p>
+
+<p><img src="media/15676959360699/6B595169-B650-49A7-B1E5-101E1B7E4DEA.png" alt="6B595169-B650-49A7-B1E5-101E1B7E4DEA"/></p>
+
+<p>所以可下载的 logo 文件都包括了为了在按钮容易放置 logo 的边界间距：</p>
+
+<ul>
+<li>左对齐 logo 资源文件包括了竖直边界间距，以确保 logo 和 按钮之间有正确的比例；水平边界间距，以在 logo 和按钮的左边界以及标题间提供一个最小边界。</li>
+<li>只有 logo 的资源文件包括了竖直和水平边界间距，以确保 logo 和按钮之间有正确的比例。</li>
+</ul>
+
+<p>只使用从  <a href="https://developer.apple.com/design/resources/">Apple 设计资源</a>下载的 logo 资源文件。遵循下面的指导准则创建和放置可下载的 logo 资源文件：</p>
+
+<ul>
+<li>不要使用 Apple logo 本身作为一个按钮；</li>
+<li>logo 资源文件的高度要和按钮的高度相匹配；</li>
+<li>不要切割 logo 资源文件；</li>
+<li>不要增加竖直边界间距；</li>
+<li>不要在 logo 资源文件中使用自定义的颜色。</li>
+</ul>
+
+<h4 id="toc_10">左对齐 logo 样式的按钮</h4>
+
+<ul>
+<li>基于按钮的高度选择 logo 资源文件的格式：因为 SVG 和 PDF 是矢量图形格式，你可以使用这些文件创建任何高度的按钮。只在按钮高度是 44pt（iOS 中默认和推荐的按钮高度） 时使用 PNG 格式。左对齐 logo 资源文件包含小、中、大不同尺寸，你可以根据你展示的所有注册按钮匹配不同的 logo 尺寸。</li>
+<li>对于按钮标题（ Sign in with Apple、Sign up with Apple、Continue with Apple）使用系统字体：为了看上去正确无误，你自定义按钮的标题和按钮高度应该和系统提供的按钮使用相同的比例。特别的，标题的字体尺寸应该是按钮高度的 43%，换句话说，按钮的高度应该是标题字体尺寸的 233%，取最接近的整数。下面是两个例子：</li>
+</ul>
+
+<p><img src="media/15676959360699/8ECC8351-DAA5-43E9-879C-F545FD53F50A.png" alt="8ECC8351-DAA5-43E9-879C-F545FD53F50A"/></p>
+
+<ul>
+<li>保持按钮标题的大小写样式不变：按钮标题的所有样式第一个单词（即 <em>Sign</em> 和 <em>Continue</em>）和 <em>Apple</em> 要大写，其他字母要小写。不要改变这种样式，如在标题中把每一个字母都大写。</li>
+<li>让标题和 logo 在按钮内保持垂直对齐：为了做到这样，让标题和按钮的中间保持垂直对齐，然后添加 logo 图片，确保它的高度与按钮高度相匹配。因为 logo 图片包括顶部和底部的边界间距，在按钮中垂直对齐标题可确保标题、logo 和按钮保持正确对齐。</li>
+<li>如有必要，插入 logo：如果你需要让 Apple logo 与其他 logo 水平对齐，你可以在 logo 的左边插入。</li>
+<li>在按钮标题和按钮的右侧边界间保持一个最小的边界值：边界值最小应该为按钮宽度的 8%。</li>
+<li>保持最小按钮尺寸和按钮四周的边界值：取决于不同的地区，按钮的标题长度可能会发生变化。使用下面推荐的指导值。</li>
+</ul>
+
+<p><img src="media/15676959360699/0E89E6BB-771B-4BA0-8E9D-87E545211E43.png" alt="0E89E6BB-771B-4BA0-8E9D-87E545211E43"/></p>
+
+<h4 id="toc_11">只有 logo 样式的按钮</h4>
+
+<ul>
+<li>基于按钮的尺寸选择 logo 资源文件的格式：像左对齐 logo 样式的按钮的资源文件一样，只有 logo 样式的按钮的可下载的资源文件也有 SVG、PDF、PNG 三种格式。对于任何尺寸的按钮，使用基于矢量的 SVG 和 PDF 格式；对于 44pt × 44pt 大小的按钮，使用 PNG 格式。</li>
+<li>不要在只有 logo 的图片中增加水平边界间距：只要 logo 样式的 Sign in with Apple 按钮总是 1:1 比例，资源文件已经在四周包括了正确的边界间距。</li>
+<li>使用一个遮罩去改变默认的只有 logo 的图片的矩形形状：例如，你可能想要使用一个圆形或者圆角矩形去展示所有的只有 logo 样式的登录按钮。不要为了减少内建的边界间距切割 Apple 提供的资源文件或者只使用 logo 本身，避免包括额外的边界间距。</li>
+</ul>
+
+<p><img src="media/15676959360699/7E1F8395-EE6D-424F-838A-1D37E8FE413C.png" alt="7E1F8395-EE6D-424F-838A-1D37E8FE413C"/></p>
+
+<ul>
+<li>在按钮四周保持一个最小边界值：边界值最小应该为按钮高度的 1/10。</li>
+</ul>
+
+<h2 id="toc_12">实现 Sign In with Apple</h2>
+
+<h3 id="toc_13">纵览</h3>
 
 <p>当用户点击 Sign In with Apple 按钮后，用户会看到一个根据你 app 要求提供的信息而填好了信息的表单显示在屏幕上，像是名字和电子邮箱。用户可以在提供原始电子邮箱或者一个新的由 Apple 提供的邮箱之间做出选择。当用户点击继续按钮后，就完成了登录。你的 app 也会获得一个独一无二、固定 ID、用户的名字以及一个可以让用户收到邮件的电子邮件地址，不再需要用户做收取验证邮件、点击验证链接这样的事。</p>
 
@@ -312,13 +422,13 @@ Sign In with Apple 提供了反欺骗的特性，它可以通过机器学习和�
 
 <p><img src="media/15676959360699/AC333E4F-9AEB-4AFE-A3BB-FBBB376EC0D9.png" alt=""/></p>
 
-<h3 id="toc_9">让 Sign In with Apple 与你的 app 结合</h3>
+<h3 id="toc_14">让 Sign In with Apple 与你的 app 结合</h3>
 
 <p>分成下图的四个部分：按钮、授权、鉴权、处理变动。先展示 Sign In with Apple 按钮，接着配置和执行授权的请求，在用户看到 Sign In with Apple 按钮并通过 Face ID/Touch ID 完成确认后，授权的结果会返回给 app。这时你需要与 Apple ID 服务器确认结果并在你的 app 中创建一个新用户。最后，凭据状态可能会发生变化，你的 app 需要处理处理好这些变化状态。</p>
 
 <p><img src="media/15676959360699/28AD43B3-2C45-47AA-BCB9-5D98DE69EC5C.png" alt=""/></p>
 
-<h4 id="toc_10">Button 按钮</h4>
+<h4 id="toc_15">Button 按钮</h4>
 
 <p>只需要几行代码，你就可以把 <code>AuthorizationAppleIDButton</code>  添加到你的 app 中。具体代码如下：</p>
 
@@ -331,7 +441,7 @@ func setUpProviderLoginView() {
 }
 </code></pre>
 
-<h4 id="toc_11">Authorization 授权</h4>
+<h4 id="toc_16">Authorization 授权</h4>
 
 <p>利用几行代码，你就可以初始化一个 Apple ID 授权请求。具体的代码如下：</p>
 
@@ -350,7 +460,7 @@ func setUpProviderLoginView() {
 }
 </code></pre>
 
-<h4 id="toc_12">Verification 鉴权</h4>
+<h4 id="toc_17">Verification 鉴权</h4>
 
 <p>在授权后，app 如果鉴权成功会从凭据中获得一系列信息，如果用户中断了过程或者发生了错误需要有错误处理的逻辑。具体的代码如下：</p>
 
@@ -374,7 +484,7 @@ func authorizationController(_: ASAuthorizationController, didCompleteWithError 
 
 <p><img src="media/15676959360699/59379B20-8BF4-4099-9581-36EC3EBA55F2.png" alt=""/></p>
 
-<h4 id="toc_13">Handling Changes 处理变动</h4>
+<h4 id="toc_18">Handling Changes 处理变动</h4>
 
 <p>你的用户可能会在你的 app 中停止使用 Apple ID 登录，可能会在设备中登出。授权服务框架提供了一个快速 API 供开发者获取相关状态。具体的代码如下：</p>
 
@@ -441,7 +551,7 @@ case let credential as ASPasswordCredential:
 }
 </code></pre>
 
-<h3 id="toc_14">跨平台</h3>
+<h3 id="toc_19">跨平台</h3>
 
 <p>在浏览器中，你也可以通过 JS SDK 实现用户熟悉的登录窗口，通过输入 Apple ID 和密码完成登录。其 API 与原生的相似。</p>
 
@@ -451,15 +561,15 @@ case let credential as ASPasswordCredential:
 
 <p><img src="media/15676959360699/C7FB9A8F-6382-4E42-9DB5-6609B56DF3B3.png" alt=""/></p>
 
-<h3 id="toc_15">Best Practices</h3>
+<h3 id="toc_20">Best Practices</h3>
 
 <p><img src="media/15676959360699/751B01C9-1E19-4A80-B841-B9332F298918.png" alt=""/></p>
 
-<h2 id="toc_16">Sign in with Apple 新的审核规范</h2>
+<h2 id="toc_21">Sign in with Apple 新的审核规范</h2>
 
 <p>2019 年 9 月 12 日 Apple 针对 Sign in with Apple 发出<a href="https://developer.apple.com/news/?id=09122019b">通知</a>，更新了 App Store 审核规范，提供了 app 什么时候该使用 Sign in with Apple 的标准。从现在开始，所有的新 app 必须遵守这个规范，对于已经存在的 app 和 app 更新的最后期限是 2020 年 4 月。对于在 web 上和其他平台上使用，Apple 也提供了相应规范。</p>
 
-<h3 id="toc_17">App Store 审核规范</h3>
+<h3 id="toc_22">App Store 审核规范</h3>
 
 <p>对于仅使用了第三方登录或者社交登录服务（例如 Facebook 登录、Google 登录、Twitter 登录、LinkedIn 登录、Amazon 登录、微信登录）设置或者授权用户的主要账户的 app，必须也提供「Sign in with Apple」作为一个同等的选项。用户的主要账户是指他们在 app 中建立的用来识别他们自己、登录、访问某些功能和相关服务的账户。</p>
 
@@ -472,7 +582,7 @@ case let credential as ASPasswordCredential:
 <li>你的 app 是特定的第三方服务的客户，用户被要求登录他们的电子邮件、社交媒体或其他第三方账户才能访问他们的内容。</li>
 </ul>
 
-<h3 id="toc_18">网站和其他平台上的使用规范</h3>
+<h3 id="toc_23">网站和其他平台上的使用规范</h3>
 
 <p>如果在你的已上架 App Store 的 app 中使用了 Sign in with Apple，我们推荐在任何相关的网站或者其他平台的 app 上通过调用 Apple JS 来提供 Sign in with Apple 功能。</p>
 
@@ -499,7 +609,7 @@ case let credential as ASPasswordCredential:
 
 <p>除了允许用户自愿地设置一个账户和登录你的 app 或服务，不得通过 Apple API 为了其他目的使用 Sign in with Apple。</p>
 
-<h2 id="toc_19">参考链接</h2>
+<h2 id="toc_24">参考链接</h2>
 
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/">Sign In with Apple - Sign In with Apple - Human Interface Guidelines - Apple Developer</a></li>

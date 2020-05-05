@@ -4,7 +4,7 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2020-03-20T12:58:32+08:00</updated>
+  <updated>2020-05-05T02:42:19+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -34,83 +34,105 @@
 <a href="#toc_0">目录</a>
 </li>
 <li>
-<a href="#toc_1">在线曲库</a>
+<a href="#toc_1">What&#39;s New</a>
+</li>
+<li>
+<a href="#toc_2">在线曲库</a>
 <ul>
 <li>
-<a href="#toc_2">版权分割</a>
+<a href="#toc_3">版权分割</a>
 </li>
 <li>
-<a href="#toc_3">儿童不宜内容？</a>
+<a href="#toc_4">儿童不宜内容？</a>
 </li>
 <li>
-<a href="#toc_4">法律法规影响</a>
+<a href="#toc_5">法律法规影响</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_5">功能差异</a>
+<a href="#toc_6">功能差异</a>
 <ul>
 <li>
-<a href="#toc_6">电台</a>
+<a href="#toc_7">电台</a>
 </li>
 <li>
-<a href="#toc_7">朋友</a>
+<a href="#toc_8">朋友</a>
 </li>
 <li>
-<a href="#toc_8">全球 Top 100 歌单</a>
+<a href="#toc_9">全球 Top 100 歌单</a>
 </li>
 <li>
-<a href="#toc_9">电视与影片</a>
+<a href="#toc_10">电视与影片</a>
 </li>
 <li>
-<a href="#toc_10">iTunes Store &amp; iTunes Match</a>
+<a href="#toc_11">iTunes Store &amp; iTunes Match</a>
 </li>
 <li>
-<a href="#toc_11">类似艺人</a>
+<a href="#toc_12">类似艺人</a>
 </li>
 <li>
-<a href="#toc_12">音乐向导</a>
+<a href="#toc_13">音乐向导</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_13">内容展示</a>
+<a href="#toc_14">内容展示</a>
 <ul>
 <li>
-<a href="#toc_14">曲库语言逻辑</a>
+<a href="#toc_15">曲库语言逻辑</a>
 </li>
 <li>
-<a href="#toc_15">内容推荐</a>
+<a href="#toc_16">内容推荐</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_16">多平台使用</a>
+<a href="#toc_17">多平台使用</a>
 </li>
 <li>
-<a href="#toc_17">多 Apple ID 使用</a>
+<a href="#toc_18">多 Apple ID 使用</a>
 </li>
 <li>
-<a href="#toc_18">订阅付费</a>
+<a href="#toc_19">订阅付费</a>
 <ul>
 <li>
-<a href="#toc_19">价格对比</a>
+<a href="#toc_20">价格对比</a>
 </li>
 <li>
-<a href="#toc_20">付款方式</a>
+<a href="#toc_21">付款方式</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_21">顺畅使用</a>
+<a href="#toc_22">顺畅使用</a>
 </li>
 <li>
-<a href="#toc_22">总结</a>
+<a href="#toc_23">总结</a>
 </li>
 </ul>
 
 
-<h2 id="toc_1">在线曲库</h2>
+<hr/>
+
+<h2 id="toc_1">What&#39;s New</h2>
+
+<ul>
+<li><p>2020-03：</p>
+<ul>
+<li>增加了一个在国区使用 iTunes Match 遇到问题的案例；</li>
+<li>修正了多 Apple ID 使用时有关 app 内购/订阅的描述；</li>
+</ul></li>
+<li><p>2020-04：</p>
+<ul>
+<li>增加了 Apple Music 网页版正式上线的相关信息；</li>
+<li>增加了 Apple Music 首次在第三方电视端——三星电视上上线的相关信息。</li>
+</ul></li>
+</ul>
+
+<hr/>
+
+<h2 id="toc_2">在线曲库</h2>
 
 <ul>
 <li>相信选择非中国大陆区的朋友，最大的原因就是曲库。在 Apple 官网上的 Apple Music 介绍中，<a href="https://www.apple.com.cn/apple-music/">中国大陆地区</a>的描述是「上千万首歌曲」，<a href="https://www.apple.com/apple-music/">美区</a>的描述是「60 million songs」，即「六千万歌曲」，差距不言自明。</li>
@@ -127,7 +149,7 @@
 
 <p>一个上千万，一个六千万，大到六倍的差别，到底具体差在哪呢，中国大陆的曲库到底少了什么？通过几个例子来看下：</p>
 
-<h3 id="toc_2">版权分割</h3>
+<h3 id="toc_3">版权分割</h3>
 
 <p>曲库差异最基本的原因就是版权，在中国大陆地区尤其明显。众所周知，中国大陆地区的主流音乐播放软件是 QQ 音乐、网易云音乐、虾米音乐……Apple Music 并不是主流，某些歌曲的版权自然争不过主流平台，特别是腾讯这个龙头老大。</p>
 
@@ -141,7 +163,7 @@
 <li>除了版权分割导致的数量差异，还存在不同区上线时间不一致的情况。歌手「Eminem」于 2020 年 1 月 17 日推出全新专辑《<a href="https://music.apple.com/us/album/music-to-be-murdered-by/1495267282">Music To Be Murdered By</a>》。当时美区正常上架，中区不见其踪影，一段时间后才姗姗来迟。</li>
 </ul>
 
-<h3 id="toc_3">儿童不宜内容？</h3>
+<h3 id="toc_4">儿童不宜内容？</h3>
 
 <p>含有性描述、暴力、脏话、毒品等这些儿童不宜内容的歌曲在 Apple Music 会被打上 E 标（E 在此指英文单词「EXPLICIT」），也俗称「脏标」。这类歌曲在中区会被进一步处理，处理的方式五花八门。</p>
 
@@ -169,17 +191,17 @@
 
 <p><img src="media/15844652241485/9FDF0295-4C06-486B-898D-1D3D2029037F.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<h3 id="toc_4">法律法规影响</h3>
+<h3 id="toc_5">法律法规影响</h3>
 
 <p>根据不同地区的法律法规，部分歌手的歌曲不能在某些地区上架或上架一段时间后被下架，例如<a href="https://music.apple.com/us/artist/li-zhi/855182890">下图中的歌手 Li Zhi</a>。</p>
 
 <p><img src="media/15844652241485/877B8BE3-076F-4C7D-87F3-6FB90568B276.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<h2 id="toc_5">功能差异</h2>
+<h2 id="toc_6">功能差异</h2>
 
 <p>相比于曲库的差异，不同地区 Apple Music 功能上的差异似乎讨论的不多。实际情况是，根据不同地区对音乐内容的政策不同，相关功能也就会不同，而且差异还不小。</p>
 
-<h3 id="toc_6">电台</h3>
+<h3 id="toc_7">电台</h3>
 
 <p>电台功能应该是功能差异中最容易发现的，如果你进入 Apple Music 「广播/Radio」栏目，相比非中区，中区的内容十分单薄，只有根据歌曲类型由机器自动生成的一些电台。</p>
 
@@ -205,7 +227,7 @@
 <li>值得注意的是，即使你没有订阅 Apple Music，你也可以收听 Beats 1 直播电台和其他直播电台。</li>
 </ul>
 
-<h3 id="toc_7">朋友</h3>
+<h3 id="toc_8">朋友</h3>
 
 <p>朋友功能算是 Apple Music 在音乐轻度社交上的一些探索，随着 2017 年的 iOS 11 开始推出，其主要目的是可以与朋友更好地分享正在收听的内容。以下所有功能均未在中国大陆区上线。</p>
 
@@ -227,7 +249,7 @@
 
 <p><img src="media/15844652241485/85F9A28B-FD59-4173-B97A-78A08E8633B0.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<h3 id="toc_8">全球 Top 100 歌单</h3>
+<h3 id="toc_9">全球 Top 100 歌单</h3>
 
 <ul>
 <li>2018 年 Apple Music 推出了每日更新的全球及各个地区的 Top 100 歌单，例如<a href="https://music.apple.com/us/playlist/top-100-usa/pl.606afcbb70264d2eb2b51d8dbcfa6a12">「Top 100: USA」歌单</a>，一般固定在「浏览/Browse」模块下展示。该功能在美区、新加坡区、日区已上线，港区、中区未上线。</li>
@@ -241,7 +263,7 @@
 
 <p><img src="media/15844652241485/423CED4B-4849-4605-86FE-99984C80C4DF.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<h3 id="toc_9">电视与影片</h3>
+<h3 id="toc_10">电视与影片</h3>
 
 <ul>
 <li>Apple Music 中的「电视与影片」大部分是自制的与音乐有关的电视节目，如 Apple Music 曾经主推的《<a href="https://itunes.apple.com/sg/show/carpool-karaoke/1219046821">Carpool Karaoke</a>》、《<a href="https://itunes.apple.com/us/show/planet-of-the-apps/1235839922">Planets of the Apps</a>》、「Up Next 系列」（如《<a href="https://itunes.apple.com/sg/show/up-next-billie-eilish/1271486673">Up Next: Billie Eilish</a>》，最近上线的音乐纪录片《<a href="https://itunes.apple.com/sg/music-movie/changes-%E4%B8%93%E8%BE%91%E4%B8%93%E8%AE%BF/1498657123">The Changes Interview</a>》，一般均自带中文字幕。电视与影片可以和歌手、歌曲、专辑、播放列表，甚至是 App Store 中的内容、iTunes Store 中的内容打包到一起做内容推荐。该功能未在中国大陆区上线。</li>
@@ -253,7 +275,7 @@
 <li>在 Apple Music 中，曾经有专门的入口进入「电视与影片/TV&amp;Movies」模块，目前该入口在几次改版后下线，该模块被弱化，但未停止更新。电视与影片目前可以通过搜索、链接或者编辑内容推荐访问。</li>
 </ul>
 
-<h3 id="toc_10">iTunes Store &amp; iTunes Match</h3>
+<h3 id="toc_11">iTunes Store &amp; iTunes Match</h3>
 
 <ul>
 <li>在 Apple Music 音乐流媒体推出之前，全球许多个国家或地区（不包括中国大陆地区）一直可以通过 iTunes Store 付费购买歌曲或专辑。Apple Music 中的歌曲会随着版权的变化发生变化，一首歌现在可以听，并不代表你永远可以听，它属于音乐流媒体；iTunes Store 中的歌曲只要你购买了，那就属于你自己，它属于电子音乐购买。</li>
@@ -274,21 +296,21 @@
 <li>由于早期中国大陆地区没有 iTunes Store 功能，也就没有推出过 iTunes Match，现在的 Apple Music 也就不包括 iTunes Match，以上是<a href="https://support.apple.com/zh-cn/HT204956">官方描述</a>。但在实际情况中，中国大陆地区的 Apple Music 在使用 iCloud 音乐资料库上传歌曲后，某些歌曲可以呈现「已匹配」状态。2019 年 1 月<a href="https://www.v2ex.com/t/526383">有网友在 V2EX 发帖</a>称，原来上传后状态为「已匹配」的无压缩、无 DRM 保护的歌曲变成了「已匹配」的有压缩、有 DRM 保护的歌曲，而非中区不存在这种情况。2019 年 2 月<a href="https://www.v2ex.com/t/532944">又有网友在 V2EX 发帖</a>称，自己上传的歌曲不仅存在上述问题，歌曲还出现了不明杂音，不知此情况是否为个别现象或是 bug。故此功能在中国大陆区的具体规则十分模糊。</li>
 </ul>
 
-<h3 id="toc_11">类似艺人</h3>
+<h3 id="toc_12">类似艺人</h3>
 
 <p>「类似艺人」是指在 Apple Music 的歌手页面的最底部，会推荐其他相似的艺人/歌手。非中区都包含此功能，中区没有显示此模块，不显示原因未知，很迷惑。例如，下图中歌手「<a href="https://music.apple.com/sg/artist/%E5%91%A8%E6%9D%B0%E4%BC%A6/300117743">周杰伦</a>」的页面：</p>
 
 <p><img src="media/15844652241485/EAC586D3-61A9-49FA-8E4C-68CB5BDB5ADE.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<h3 id="toc_12">音乐向导</h3>
+<h3 id="toc_13">音乐向导</h3>
 
 <p>「音乐向导」可以理解为 Apple Music 中某些官方机构、组织创建的播放列表合集，这个功能随着 Apple Music 改版被弱化，从之前的专门入口演变到现在只能通过搜索或链接访问，但并没有停止更新。非中区的音乐向导基本一致，但中区只包含部分，其他即使通过链接也无法访问，如音乐向导「<a href="https://music.apple.com/sg/curator/disney-music/1111371904">Disney Music</a>」。例如，以「music」为搜索关键字搜索音乐向导：</p>
 
 <p><img src="media/15844652241485/8CEA454A-09C1-42D2-B8AA-E788D05D415E.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<h2 id="toc_13">内容展示</h2>
+<h2 id="toc_14">内容展示</h2>
 
-<h3 id="toc_14">曲库语言逻辑</h3>
+<h3 id="toc_15">曲库语言逻辑</h3>
 
 <ul>
 <li>Apple Music 的曲库显示语言是指除歌曲本身之外的文字的显示语言，如专辑介绍、歌单推荐语、歌单封面、歌手名字等。一般情况下，专辑和歌曲的名字在各个地区都是一样的，但根据专辑在全球的发行情况的不同，也存在专辑和歌曲名字被翻译成当地语言的情况，比如部分中文歌曲在美区是以英文名呈现的。</li>
@@ -306,7 +328,7 @@
 
 <p><img src="media/15844652241485/08FF3B74-47D1-410F-9DE4-3F7FC00EAD0B.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<h3 id="toc_15">内容推荐</h3>
+<h3 id="toc_16">内容推荐</h3>
 
 <ul>
 <li>除了自己搜索发现或者通过外部链接访问以及机器智能推荐，在音乐软件中发现音乐的另一种途径是人工内容推荐，这一部分也是 Apple Music 在推出时强调的亮点之一。人工内容推荐在 Apple Music 中占据了较大的篇幅，整个「浏览/Browse」模块几乎都是人工内容推荐，比如带有推荐语的最新专辑推荐、根据时间/节日/时事等编排的歌单列表推荐、本地特别发行专辑推荐、近期本地热门影视原声歌曲推荐、热门艺人 MV 推荐、即将发布专辑推荐等。</li>
@@ -316,9 +338,9 @@
 
 <p><img src="media/15844652241485/Apple%20Music-Browse.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<h2 id="toc_16">多平台使用</h2>
+<h2 id="toc_17">多平台使用</h2>
 
-<p>Apple Music 是支持多平台的音乐流媒体服务，除了 iPhone、Android 手机，你还可以在 iPad、Mac、Windows、网页端、Apple TV、Apple Watch、HomePod、第三方智能音箱、CarPlay 、第三方网页端和 app 上使用。</p>
+<p>Apple Music 是支持多平台的音乐流媒体服务，除了 iPhone、Android 手机，你还可以在 iPad、Mac、Windows、网页端、Apple TV、Apple Watch、HomePod、第三方电视端、第三方智能音箱、CarPlay 、第三方网页端和 app 上使用。</p>
 
 <ul>
 <li><strong>iPhone、iPad、Apple Watch、HomePod、Mac</strong>：苹果常见的自家产品系列自然不用多说，系统原生支持，所有地区帐号均可在上述设备正常使用。2019 年从 macOS Catalina 开始，Apple Music 和 iTunes Music Store 从 iTunes app 中分拆成了独立的「音乐/Music」app；即使在 HomePod 上登录未发售地区的 Apple ID，也可以正常使用 Apple Music。</li>
@@ -333,7 +355,8 @@
 <p><img src="media/15844652241485/D8D2D54C-8F4A-41EE-BFCC-9E86F0D862EC.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
 <ul>
-<li><strong>网页端</strong>：2019 年 9 月 Apple 上线了<a href="https://beta.music.apple.com/">网页端的 beta 版 Apple Music</a>，用户可以在浏览器中使用 Apple Music，其访问地址是：<a href="https://beta.music.apple.com/%E3%80%82%E7%94%B1%E4%BA%8E%E6%98%AF">https://beta.music.apple.com/。由于是</a> beta 版，部分功能暂时不可用，例如 Beats 1 直播电台、Apple 原创音乐视频、智能播放列表，并且你不能在网站中开启 Apple Music 的订阅。值得注意的是，在笔者的上海电信网络环境下，直接访问网页端 Apple Music 会自动跳转至 <a href="https://www.apple.com.cn/apple-music/">Apple Music 苹果官网</a>，<strong>导致网页端 Apple Music 服务无法正常使用</strong>，若使用非大陆地区网络访问则是正常的，其他地区和运营商网络访问情况未知，导致这个问题的原因未知。</li>
+<li><p><strong>网页端</strong>：2019 年 9 月 Apple 上线了<a href="https://beta.music.apple.com/">网页端的 beta 版 Apple Music</a>，用户可以在浏览器中使用 Apple Music，其访问地址是：<a href="https://beta.music.apple.com/%E3%80%82%E7%94%B1%E4%BA%8E%E6%98%AF">https://beta.music.apple.com/。由于是</a> beta 版，部分功能暂时不可用，例如 Beats 1 直播电台、Apple 原创音乐视频、智能播放列表，并且你不能在网站中开启 Apple Music 的订阅。值得注意的是，在笔者的上海电信网络环境下，直接访问网页端 Apple Music 会自动跳转至 <a href="https://www.apple.com.cn/apple-music/">Apple Music 苹果官网</a>，<strong>导致网页端 Apple Music 服务无法正常使用</strong>，若使用非大陆地区网络访问则是正常的，其他地区和运营商网络访问情况未知，导致这个问题的原因未知。</p>
+<p>2020 年 4 月，Apple Music 网页版正式上线，其访问地址是： <a href="https://music.apple.com/">https://music.apple.com/</a> ，Apple Music 包含的大部分功能都可在网页版中使用。</p></li>
 </ul>
 
 <p><img src="media/15844652241485/applemusicweb.0.png.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
@@ -347,7 +370,15 @@
 <p><img src="media/15844652241485/2927A469-1CA6-4472-BE9C-51EC73F75D39.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
 <ul>
-<li><strong>CarPlay</strong>：你可以将 iPhone 与你的 Apple CarPlay 车载连接，从而在汽车的中控界面中使用 Apple Music。支持 CarPlay 的车型可<a href="https://www.apple.com.cn/ios/carplay/available-models/">前往 Apple 官网查看</a>，所有地区的 Apple ID 都可以在 CarPlay 中使用 Apple Music。</li>
+<li><p><strong>第三方电视端：</strong>2020 年 4 月， <a href="https://news.samsung.com/us/apple-music-samsung-smart-tvs/">Apple Music 以独立 app 的形式在三星智能电视上上线</a> ，这是 Apple 的媒体服务在第三方设备上的又一次扩张。可以预见，支持 Apple TV app 的智能电视/盒子（如 LG、Amazon Fire TV、Sony）在未来应该也会上线 Apple Music app。</p>
+<p><img src="media/15844652241485/Apple-Music_Announcement.2020-04-23-01_18_35.gif" alt="Apple-Music_Announcement.2020-04-23-01_18_35"/></p>
+<p>关于第三方电视端的 Apple Music 值得注意的几点：</p>
+<ul>
+<li>和 Apple TV app 以及 AirPlay 2 功能一样，Apple Music app 目前不支持国行设备，LG、三星国行设备可以通过换区解决（ <a href="https://sspai.com/post/59549">换区指南↗︎</a> ），其它国行设备暂时无法解决；</li>
+<li>同一设备上，Apple Music app 和 Apple TV app 的帐户登录是独立的，也就是说你可以在同一设备上使用不同的 Apple ID 同时登录两个 app，这在 Apple 自己的设备上是无法实现的；</li>
+<li>你可以在第三方电视端的 Apple Music app 中登录并正常使用国区 Apple Music，这在 Apple TV 上也是无法实现的。</li>
+</ul></li>
+<li><p><strong>CarPlay</strong>：你可以将 iPhone 与你的 Apple CarPlay 车载连接，从而在汽车的中控界面中使用 Apple Music。支持 CarPlay 的车型可<a href="https://www.apple.com.cn/ios/carplay/available-models/">前往 Apple 官网查看</a>，所有地区的 Apple ID 都可以在 CarPlay 中使用 Apple Music。</p></li>
 </ul>
 
 <p><img src="media/15844652241485/carplay__c83mgc2l01aq_large_2x.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
@@ -370,7 +401,7 @@
 
 <p><img src="media/15844652241485/hero-lockup-large.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<h2 id="toc_17">多 Apple ID 使用</h2>
+<h2 id="toc_18">多 Apple ID 使用</h2>
 
 <p>该部分主要适应于 Apple 设备，非 Apple 设备一般不存在多 Apple ID 使用的情况。</p>
 
@@ -426,9 +457,9 @@
 <li><p>真心期望 Apple 能在未来的版本中将各个媒体服务的 Apple ID 独立，不过希望渺茫🙃。</p></li>
 </ul>
 
-<h2 id="toc_18">订阅付费</h2>
+<h2 id="toc_19">订阅付费</h2>
 
-<h3 id="toc_19">价格对比</h3>
+<h3 id="toc_20">价格对比</h3>
 
 <ul>
 <li>Apple Music 包括个人订阅、学生订阅（需定期验证学生身份）、家庭订阅（可与其他同一地区的五个人组成家庭组）三种，在不同地区的价格也不一样。五大地区的具体订阅价格如下：</li>
@@ -440,7 +471,7 @@
 <li>从上表中可以看出，中区比其他地区便宜数倍，美区最高，其次是日区，港区和新加坡区价格相当。</li>
 </ul>
 
-<h3 id="toc_20">付款方式</h3>
+<h3 id="toc_21">付款方式</h3>
 
 <ul>
 <li>付款方式可能是使用非中区 Apple ID 除注册过程之外的另一个重大障碍。根据 <a href="https://support.apple.com/zh-cn/HT202631">Apple 官方的描述</a>，五个地区的 Apple ID 支持的付款方式如下表：</li>
@@ -467,13 +498,13 @@
 <li><p>所以即使价格低廉、曲库丰富、功能齐全也并不推荐印度区，除非你搞定付款方式以及不在乎咖喱味的内容推荐。</p></li>
 </ul>
 
-<h2 id="toc_21">顺畅使用</h2>
+<h2 id="toc_22">顺畅使用</h2>
 
 <p>Apple Music 作为一项全球音乐流媒体服务，在全球都有布置服务器，但在中国大陆地区使用 Apple Music，因为地域、运营商网络等因素，可能在访问某些服务/功能时加载速度过慢或无法加载。下表列出了 Apple Music 各个功能模块的<strong>主要访问域名</strong>，其他非主要访问域名（如图片加载、服务器判断等）未列出，若相应服务加载存在问题（特别是播放缓冲问题）可考虑通过代理访问（可能有遗漏）：</p>
 
 <p><img src="media/15844652241485/15845107551150.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
 
-<h2 id="toc_22">总结</h2>
+<h2 id="toc_23">总结</h2>
 
 <p>综上，文章从在线曲库、包含功能（电台、朋友、Top 100 歌单、电视与影片、iTunes Store、类似艺人、音乐向导）、曲库语言、内容推荐、多平台使用、多 Apple ID 使用、订阅价格、付款方式多个方面对五个常见地区的 Apple Music 及其相关功能进行了对比阐述，来看下面这张总结性表格：</p>
 
@@ -2787,74 +2818,107 @@ Sign In with Apple 提供了反欺骗的特性，它可以通过机器学习和�
 <a href="#toc_0">目录</a>
 </li>
 <li>
-<a href="#toc_1">设计帐户注册和登录流程</a>
+<a href="#toc_1">What&#39;s New</a>
 </li>
 <li>
-<a href="#toc_2">Sign In with Apple 按钮</a>
+<a href="#toc_2">设计帐户注册和登录流程</a>
+</li>
+<li>
+<a href="#toc_3">Sign In with Apple 按钮</a>
 <ul>
 <li>
-<a href="#toc_3">白色</a>
+<a href="#toc_4">使用系统提供的按钮</a>
+<ul>
+<li>
+<a href="#toc_5">白色</a>
 </li>
 <li>
-<a href="#toc_4">带描边的白色</a>
+<a href="#toc_6">带描边的白色</a>
 </li>
 <li>
-<a href="#toc_5">黑色</a>
-</li>
-<li>
-<a href="#toc_6">按钮尺寸和位置</a>
+<a href="#toc_7">黑色</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_7">实现 Sign In with Apple</a>
+<a href="#toc_8">按钮尺寸和位置</a>
+</li>
+<li>
+<a href="#toc_9">创建一个自定义的 Sign in with Apple 按钮</a>
 <ul>
 <li>
-<a href="#toc_8">纵览</a>
+<a href="#toc_10">左对齐 logo 样式的按钮</a>
 </li>
 <li>
-<a href="#toc_9">让 Sign In with Apple 与你的 app 结合</a>
-<ul>
-<li>
-<a href="#toc_10">Button 按钮</a>
+<a href="#toc_11">只有 logo 样式的按钮</a>
 </li>
-<li>
-<a href="#toc_11">Authorization 授权</a>
-</li>
-<li>
-<a href="#toc_12">Verification 鉴权</a>
-</li>
-<li>
-<a href="#toc_13">Handling Changes 处理变动</a>
+</ul>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_14">跨平台</a>
-</li>
-<li>
-<a href="#toc_15">Best Practices</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_16">Sign in with Apple 新的审核规范</a>
+<a href="#toc_12">实现 Sign In with Apple</a>
 <ul>
 <li>
-<a href="#toc_17">App Store 审核规范</a>
+<a href="#toc_13">纵览</a>
 </li>
 <li>
-<a href="#toc_18">网站和其他平台上的使用规范</a>
+<a href="#toc_14">让 Sign In with Apple 与你的 app 结合</a>
+<ul>
+<li>
+<a href="#toc_15">Button 按钮</a>
+</li>
+<li>
+<a href="#toc_16">Authorization 授权</a>
+</li>
+<li>
+<a href="#toc_17">Verification 鉴权</a>
+</li>
+<li>
+<a href="#toc_18">Handling Changes 处理变动</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#toc_19">参考链接</a>
+<a href="#toc_19">跨平台</a>
+</li>
+<li>
+<a href="#toc_20">Best Practices</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_21">Sign in with Apple 新的审核规范</a>
+<ul>
+<li>
+<a href="#toc_22">App Store 审核规范</a>
+</li>
+<li>
+<a href="#toc_23">网站和其他平台上的使用规范</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_24">参考链接</a>
 </li>
 </ul>
 
 
-<h2 id="toc_1">设计帐户注册和登录流程</h2>
+<hr/>
+
+<h2 id="toc_1">What&#39;s New</h2>
+
+<ul>
+<li>2020-03：
+<ul>
+<li>进一步明确了 Sign In with Apple 按钮在 iOS、macOS、tvOS、watchOS 和 Web 端不同平台上的样式区别；</li>
+<li>增加了对创建一个自定义的 Sign in with Apple 按钮（左对齐 logo 样式、只有 logo 样式）的描述。</li>
+</ul></li>
+</ul>
+
+<hr/>
+
+<h2 id="toc_2">设计帐户注册和登录流程</h2>
 
 <ul>
 <li>让用户登录只为了交互有价值的信息：例如，人们可能需要创建一个账户来让 app 可以提供个性化的体验、在 app 中访问额外的功能或者同步数据，如果你的 app 不需要基于账户的功能，那就不需要让用户登录。</li>
@@ -2865,59 +2929,136 @@ Sign In with Apple 提供了反欺骗的特性，它可以通过机器学习和�
 <li>注册账户时只收集必要的信息：如果只是为了创建一个独一无二的用户标识符，那就不需要收集用户的名字和电子邮箱信息。</li>
 </ul>
 
-<h2 id="toc_2">Sign In with Apple 按钮</h2>
+<h2 id="toc_3">Sign In with Apple 按钮</h2>
 
-<p>为了帮助人们注册一个账户和登录账户，最好使用 Apple 为 Sign In with Apple 功能提供的熟悉的按钮。当你使用系统 API 创建 Sign In with Apple 按钮时，你可以获得下面这些好处：</p>
+<p>Apple 提供了几种「Sign in with Apple」按钮，你可以使用它们以让用户注册或者登录账户。如果有需要，你可以创建一个自定义的按钮以提供 Sign in with Apple 功能。</p>
+
+<ul>
+<li>突出展示「Sign in with Apple」按钮：确保 Sign in with Apple 按钮不比其他的登录按钮小，避免出现滚动才能看到按钮的情况。</li>
+</ul>
+
+<h3 id="toc_4">使用系统提供的按钮</h3>
+
+<p>当你使用系统提供的 API 创建一个 Sign in with Apple 按钮时，你可以获得下面这些好处：</p>
 
 <ul>
 <li>一个确保使用了 Apple 提供的标题、字体、颜色、样式的按钮；</li>
-<li>确保了当你改变按钮样式时，按钮的内容可以保持合适的比例；</li>
-<li>自动翻译按钮上的标题到用户设备设置的语言；</li>
-<li>为了与你的 UI 样式匹配，对按钮圆角半径的调整的功能支持。</li>
+<li>当你改变按钮样式时，按钮的内容可以保证保持一个理想的比例；</li>
+<li>自动翻译按钮上的文字为设备指定的语言；</li>
+<li>支持配置按钮的圆角半径以匹配你的 UI 样式（在 iOS、macOS、Web 不同环境下）；</li>
+<li>一个系统提供的替代文本标签，可以让「旁白/VoiceOver」描述出按钮。</li>
 </ul>
 
-<p>Sign In with Apple 提供了两种按钮样式变种：「Sign In with Apple」 和 「Continue with Apple」。根据需要，选择最适合你的服务的登录场景的那种样式。</p>
+<p>系统提供了按钮标题的几种变种样式。根据你的内容运行的平台，选择适合你的登录体验的术语样式，并在你的所有界面中一致地使用。<br/>
+下面的几种按钮标题在 iOS、macOS、tvOS 中都可用，「Sign In with Apple」和「Continue with Apple」在 Web 端中可用：</p>
 
-<p><img src="media/15676959360699/1DE720CE-AB70-420C-821A-6854256DF6B2.png" alt=""/></p>
+<p><img src="media/15676959360699/26579F8A-7287-4AC8-92D5-71FDE19454C8.png" alt="26579F8A-7287-4AC8-92D5-71FDE19454"/></p>
 
-<p>对于 Sign In with Apple 按钮有三种外观：白色（White）、带描边的白色（White with Outline Rule）、黑色（Black）。根据你要展示按钮处的 UI 背景选择最适合的外观。</p>
+<p>对于 watchOS，系统提供了一种按钮标题： Sign in</p>
 
-<h3 id="toc_3">白色</h3>
+<p><img src="media/15676959360699/apple-id-watch-44mm-no-background.png" alt="apple-id-watch-44mm-no-background"/></p>
 
-<p>在可以提供足够对比度的深色或者彩色背景上使用白色外观。</p>
+<p>取决于不同的平台，系统最多提供三种 Sign In with Apple 按钮的外观样式：白色（White）、带描边的白色（White with Outline Rule）、黑色（Black）。根据你要展示按钮处的 UI 背景选择最适合的外观。</p>
 
-<p><img src="media/15676959360699/EDA18A96-D998-47A8-9813-3B599C3F32E5.png" alt=""/></p>
+<h4 id="toc_5">白色</h4>
 
-<h3 id="toc_4">带描边的白色</h3>
+<p>白色外观样式在所有平台和 Web 端可用。在可以提供足够对比度的深色或者彩色背景上使用白色外观样式。</p>
 
-<p>在白色或者不能提供足够对比度的浅色背景上使用带描边的白色外观。不要在黑色或者太饱和颜色的背景上使用。</p>
+<p><img src="media/15676959360699/EDA18A96-D998-47A8-9813-3B599C3F32E5.png" alt="EDA18A96-D998-47A8-9813-3B599C3F32E5"/></p>
 
-<p><img src="media/15676959360699/9C16E913-90B5-40C0-8890-C91679BE5341.png" alt=""/></p>
+<h4 id="toc_6">带描边的白色</h4>
 
-<h3 id="toc_5">黑色</h3>
+<p>带描边的白色外观样式在 iOS、macOS 和 Web 端可用。在白色或者不能与白色按钮填充形成足够对比度的浅色背景上使用带描边的白色外观样式。不要在深色或者太饱和颜色的背景上使用，因为黑色描边会让视觉上变杂乱，可以使用白色外观样式与深色背景形成对比。</p>
 
-<p>在白色或者可以提供足够对比度的浅色背景上使用黑色外观。不要在黑色或者深色的背景上使用。</p>
+<p><img src="media/15676959360699/9C16E913-90B5-40C0-8890-C91679BE5341.png" alt="9C16E913-90B5-40C0-8890-C91679BE5341"/></p>
 
-<p><img src="media/15676959360699/15676962891072.jpg" alt=""/></p>
+<h4 id="toc_7">黑色</h4>
 
-<h3 id="toc_6">按钮尺寸和位置</h3>
+<p>黑色外观样式在所有平台和 Web 端上可用。在白色或者可以提供足够对比度的浅色背景上使用黑色外观样式。不要在黑色或者深色的背景上使用。</p>
+
+<p><img src="media/15676959360699/11230F79-4793-4365-8A05-34C9CE13E0E9.png" alt="11230F79-4793-4365-8A05-34C9CE13E0E9"/></p>
+
+<p>与其他平台上的黑色 Sign In with Apple 按钮不同的是，watchOS 平台上的按钮使用的填充颜色并不是完全的黑色。为了与 Apple Watch 的纯黑色背景形成对比，watchOS 的按钮使用了系统定义的深灰色外观样式。</p>
+
+<p><img src="media/15676959360699/apple-id-watch-44mm.png" alt="apple-id-watch-44mm"/></p>
+
+<h3 id="toc_8">按钮尺寸和位置</h3>
 
 <ul>
-<li>让 Sign In with Apple 按钮展示的显眼一些：让 Sign In with Apple 按钮和其他登录按钮具有相同的尺寸，避免人们需要滚动屏幕才能看到按钮的情况。</li>
-<li>调整圆角半径以与 app 中的其他登录按钮样式相匹配：默认情况下，Sign In with Apple 有一个圆角半径。你可通过改变这个半径值让按钮变成矩形或者药丸形状的按钮。</li>
+<li>调整圆角半径以与 app 中的其他登录按钮样式相匹配：默认情况下，Sign In with Apple 有一个圆角半径。在 iOS、macOS 和 Web 端，你可通过改变这个半径值让按钮变成圆角矩形或者药丸形状。</li>
 </ul>
 
-<p><img src="media/15676959360699/FC92B3C7-DF00-48A7-8945-22ADEBFD921E.png" alt=""/></p>
+<p><img src="media/15676959360699/FC92B3C7-DF00-48A7-8945-22ADEBFD921E.png" alt="FC92B3C7-DF00-48A7-8945-22ADEBFD921E"/></p>
 
 <ul>
-<li>保证最小按钮尺寸和按钮周围的边距：取决于不同的地区，按钮的标题长度可能会发生变化。使用下面推荐的指导值。</li>
+<li>在 iOS、macOS 和 Web 端，保证最小按钮尺寸和按钮周围的边距：取决于不同的地区，按钮的标题长度可能会发生变化。使用下面推荐的指导值。</li>
 </ul>
 
-<p><img src="media/15676959360699/0E89E6BB-771B-4BA0-8E9D-87E545211E43.png" alt=""/></p>
+<p><img src="media/15676959360699/0E89E6BB-771B-4BA0-8E9D-87E545211E43.png" alt="0E89E6BB-771B-4BA0-8E9D-87E545211E43"/></p>
 
-<h2 id="toc_7">实现 Sign In with Apple</h2>
+<h3 id="toc_9">创建一个自定义的 Sign in with Apple 按钮</h3>
 
-<h3 id="toc_8">纵览</h3>
+<p>如果你的布局需要，你可以为 iOS、macOS 或者 Web 端创建一个自定义的 Sign in with Apple 按钮。例如，如果你支持多种登录方法，你可能需要展示一些使用了左对齐 logo 的按钮或者只展示一个 logo 的按钮。</p>
+
+<p><img src="media/15676959360699/6B307781-A9ED-4DF6-801F-D77EFDA9C02C.png" alt="6B307781-A9ED-4DF6-801F-D77EFDA9C02C"/></p>
+
+<p><a href="https://developer.apple.com/design/resources/">Apple 的设计资源</a>提供了可下载的 Apple logo 资源文件，你可以使用它们创建自定义的左对齐 logo 的 Sign in with Apple 按钮或者只展示一个 logo 的 Sign in with Apple 按钮。Logo 文件包含 PNG、SVG 和 PDF 格式，对于两种类型的按钮资源文件都提供了两种外观样式。下面是黑色和白色的只展示一个 logo 的按钮资源文件示例，为了保持可见，每一个都添加了一个背景：</p>
+
+<p><img src="media/15676959360699/6B595169-B650-49A7-B1E5-101E1B7E4DEA.png" alt="6B595169-B650-49A7-B1E5-101E1B7E4DEA"/></p>
+
+<p>所以可下载的 logo 文件都包括了为了在按钮容易放置 logo 的边界间距：</p>
+
+<ul>
+<li>左对齐 logo 资源文件包括了竖直边界间距，以确保 logo 和 按钮之间有正确的比例；水平边界间距，以在 logo 和按钮的左边界以及标题间提供一个最小边界。</li>
+<li>只有 logo 的资源文件包括了竖直和水平边界间距，以确保 logo 和按钮之间有正确的比例。</li>
+</ul>
+
+<p>只使用从  <a href="https://developer.apple.com/design/resources/">Apple 设计资源</a>下载的 logo 资源文件。遵循下面的指导准则创建和放置可下载的 logo 资源文件：</p>
+
+<ul>
+<li>不要使用 Apple logo 本身作为一个按钮；</li>
+<li>logo 资源文件的高度要和按钮的高度相匹配；</li>
+<li>不要切割 logo 资源文件；</li>
+<li>不要增加竖直边界间距；</li>
+<li>不要在 logo 资源文件中使用自定义的颜色。</li>
+</ul>
+
+<h4 id="toc_10">左对齐 logo 样式的按钮</h4>
+
+<ul>
+<li>基于按钮的高度选择 logo 资源文件的格式：因为 SVG 和 PDF 是矢量图形格式，你可以使用这些文件创建任何高度的按钮。只在按钮高度是 44pt（iOS 中默认和推荐的按钮高度） 时使用 PNG 格式。左对齐 logo 资源文件包含小、中、大不同尺寸，你可以根据你展示的所有注册按钮匹配不同的 logo 尺寸。</li>
+<li>对于按钮标题（ Sign in with Apple、Sign up with Apple、Continue with Apple）使用系统字体：为了看上去正确无误，你自定义按钮的标题和按钮高度应该和系统提供的按钮使用相同的比例。特别的，标题的字体尺寸应该是按钮高度的 43%，换句话说，按钮的高度应该是标题字体尺寸的 233%，取最接近的整数。下面是两个例子：</li>
+</ul>
+
+<p><img src="media/15676959360699/8ECC8351-DAA5-43E9-879C-F545FD53F50A.png" alt="8ECC8351-DAA5-43E9-879C-F545FD53F50A"/></p>
+
+<ul>
+<li>保持按钮标题的大小写样式不变：按钮标题的所有样式第一个单词（即 <em>Sign</em> 和 <em>Continue</em>）和 <em>Apple</em> 要大写，其他字母要小写。不要改变这种样式，如在标题中把每一个字母都大写。</li>
+<li>让标题和 logo 在按钮内保持垂直对齐：为了做到这样，让标题和按钮的中间保持垂直对齐，然后添加 logo 图片，确保它的高度与按钮高度相匹配。因为 logo 图片包括顶部和底部的边界间距，在按钮中垂直对齐标题可确保标题、logo 和按钮保持正确对齐。</li>
+<li>如有必要，插入 logo：如果你需要让 Apple logo 与其他 logo 水平对齐，你可以在 logo 的左边插入。</li>
+<li>在按钮标题和按钮的右侧边界间保持一个最小的边界值：边界值最小应该为按钮宽度的 8%。</li>
+<li>保持最小按钮尺寸和按钮四周的边界值：取决于不同的地区，按钮的标题长度可能会发生变化。使用下面推荐的指导值。</li>
+</ul>
+
+<p><img src="media/15676959360699/0E89E6BB-771B-4BA0-8E9D-87E545211E43.png" alt="0E89E6BB-771B-4BA0-8E9D-87E545211E43"/></p>
+
+<h4 id="toc_11">只有 logo 样式的按钮</h4>
+
+<ul>
+<li>基于按钮的尺寸选择 logo 资源文件的格式：像左对齐 logo 样式的按钮的资源文件一样，只有 logo 样式的按钮的可下载的资源文件也有 SVG、PDF、PNG 三种格式。对于任何尺寸的按钮，使用基于矢量的 SVG 和 PDF 格式；对于 44pt × 44pt 大小的按钮，使用 PNG 格式。</li>
+<li>不要在只有 logo 的图片中增加水平边界间距：只要 logo 样式的 Sign in with Apple 按钮总是 1:1 比例，资源文件已经在四周包括了正确的边界间距。</li>
+<li>使用一个遮罩去改变默认的只有 logo 的图片的矩形形状：例如，你可能想要使用一个圆形或者圆角矩形去展示所有的只有 logo 样式的登录按钮。不要为了减少内建的边界间距切割 Apple 提供的资源文件或者只使用 logo 本身，避免包括额外的边界间距。</li>
+</ul>
+
+<p><img src="media/15676959360699/7E1F8395-EE6D-424F-838A-1D37E8FE413C.png" alt="7E1F8395-EE6D-424F-838A-1D37E8FE413C"/></p>
+
+<ul>
+<li>在按钮四周保持一个最小边界值：边界值最小应该为按钮高度的 1/10。</li>
+</ul>
+
+<h2 id="toc_12">实现 Sign In with Apple</h2>
+
+<h3 id="toc_13">纵览</h3>
 
 <p>当用户点击 Sign In with Apple 按钮后，用户会看到一个根据你 app 要求提供的信息而填好了信息的表单显示在屏幕上，像是名字和电子邮箱。用户可以在提供原始电子邮箱或者一个新的由 Apple 提供的邮箱之间做出选择。当用户点击继续按钮后，就完成了登录。你的 app 也会获得一个独一无二、固定 ID、用户的名字以及一个可以让用户收到邮件的电子邮件地址，不再需要用户做收取验证邮件、点击验证链接这样的事。</p>
 
@@ -2939,13 +3080,13 @@ Sign In with Apple 提供了反欺骗的特性，它可以通过机器学习和�
 
 <p><img src="media/15676959360699/AC333E4F-9AEB-4AFE-A3BB-FBBB376EC0D9.png" alt=""/></p>
 
-<h3 id="toc_9">让 Sign In with Apple 与你的 app 结合</h3>
+<h3 id="toc_14">让 Sign In with Apple 与你的 app 结合</h3>
 
 <p>分成下图的四个部分：按钮、授权、鉴权、处理变动。先展示 Sign In with Apple 按钮，接着配置和执行授权的请求，在用户看到 Sign In with Apple 按钮并通过 Face ID/Touch ID 完成确认后，授权的结果会返回给 app。这时你需要与 Apple ID 服务器确认结果并在你的 app 中创建一个新用户。最后，凭据状态可能会发生变化，你的 app 需要处理处理好这些变化状态。</p>
 
 <p><img src="media/15676959360699/28AD43B3-2C45-47AA-BCB9-5D98DE69EC5C.png" alt=""/></p>
 
-<h4 id="toc_10">Button 按钮</h4>
+<h4 id="toc_15">Button 按钮</h4>
 
 <p>只需要几行代码，你就可以把 <code>AuthorizationAppleIDButton</code>  添加到你的 app 中。具体代码如下：</p>
 
@@ -2958,7 +3099,7 @@ func setUpProviderLoginView() {
 }
 </code></pre>
 
-<h4 id="toc_11">Authorization 授权</h4>
+<h4 id="toc_16">Authorization 授权</h4>
 
 <p>利用几行代码，你就可以初始化一个 Apple ID 授权请求。具体的代码如下：</p>
 
@@ -2977,7 +3118,7 @@ func setUpProviderLoginView() {
 }
 </code></pre>
 
-<h4 id="toc_12">Verification 鉴权</h4>
+<h4 id="toc_17">Verification 鉴权</h4>
 
 <p>在授权后，app 如果鉴权成功会从凭据中获得一系列信息，如果用户中断了过程或者发生了错误需要有错误处理的逻辑。具体的代码如下：</p>
 
@@ -3001,7 +3142,7 @@ func authorizationController(_: ASAuthorizationController, didCompleteWithError 
 
 <p><img src="media/15676959360699/59379B20-8BF4-4099-9581-36EC3EBA55F2.png" alt=""/></p>
 
-<h4 id="toc_13">Handling Changes 处理变动</h4>
+<h4 id="toc_18">Handling Changes 处理变动</h4>
 
 <p>你的用户可能会在你的 app 中停止使用 Apple ID 登录，可能会在设备中登出。授权服务框架提供了一个快速 API 供开发者获取相关状态。具体的代码如下：</p>
 
@@ -3068,7 +3209,7 @@ case let credential as ASPasswordCredential:
 }
 </code></pre>
 
-<h3 id="toc_14">跨平台</h3>
+<h3 id="toc_19">跨平台</h3>
 
 <p>在浏览器中，你也可以通过 JS SDK 实现用户熟悉的登录窗口，通过输入 Apple ID 和密码完成登录。其 API 与原生的相似。</p>
 
@@ -3078,15 +3219,15 @@ case let credential as ASPasswordCredential:
 
 <p><img src="media/15676959360699/C7FB9A8F-6382-4E42-9DB5-6609B56DF3B3.png" alt=""/></p>
 
-<h3 id="toc_15">Best Practices</h3>
+<h3 id="toc_20">Best Practices</h3>
 
 <p><img src="media/15676959360699/751B01C9-1E19-4A80-B841-B9332F298918.png" alt=""/></p>
 
-<h2 id="toc_16">Sign in with Apple 新的审核规范</h2>
+<h2 id="toc_21">Sign in with Apple 新的审核规范</h2>
 
 <p>2019 年 9 月 12 日 Apple 针对 Sign in with Apple 发出<a href="https://developer.apple.com/news/?id=09122019b">通知</a>，更新了 App Store 审核规范，提供了 app 什么时候该使用 Sign in with Apple 的标准。从现在开始，所有的新 app 必须遵守这个规范，对于已经存在的 app 和 app 更新的最后期限是 2020 年 4 月。对于在 web 上和其他平台上使用，Apple 也提供了相应规范。</p>
 
-<h3 id="toc_17">App Store 审核规范</h3>
+<h3 id="toc_22">App Store 审核规范</h3>
 
 <p>对于仅使用了第三方登录或者社交登录服务（例如 Facebook 登录、Google 登录、Twitter 登录、LinkedIn 登录、Amazon 登录、微信登录）设置或者授权用户的主要账户的 app，必须也提供「Sign in with Apple」作为一个同等的选项。用户的主要账户是指他们在 app 中建立的用来识别他们自己、登录、访问某些功能和相关服务的账户。</p>
 
@@ -3099,7 +3240,7 @@ case let credential as ASPasswordCredential:
 <li>你的 app 是特定的第三方服务的客户，用户被要求登录他们的电子邮件、社交媒体或其他第三方账户才能访问他们的内容。</li>
 </ul>
 
-<h3 id="toc_18">网站和其他平台上的使用规范</h3>
+<h3 id="toc_23">网站和其他平台上的使用规范</h3>
 
 <p>如果在你的已上架 App Store 的 app 中使用了 Sign in with Apple，我们推荐在任何相关的网站或者其他平台的 app 上通过调用 Apple JS 来提供 Sign in with Apple 功能。</p>
 
@@ -3126,7 +3267,7 @@ case let credential as ASPasswordCredential:
 
 <p>除了允许用户自愿地设置一个账户和登录你的 app 或服务，不得通过 Apple API 为了其他目的使用 Sign in with Apple。</p>
 
-<h2 id="toc_19">参考链接</h2>
+<h2 id="toc_24">参考链接</h2>
 
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/">Sign In with Apple - Sign In with Apple - Human Interface Guidelines - Apple Developer</a></li>
