@@ -4,13 +4,367 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2020-05-08T18:38:21+08:00</updated>
+  <updated>2020-05-25T18:59:30+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[在 App 中提供出色的无障碍使用体验]]></title>
+    <link href="https://steppark.net/15904037034817.html"/>
+    <updated>2020-05-25T18:48:23+08:00</updated>
+    <id>https://steppark.net/15904037034817.html</id>
+    <content type="html"><![CDATA[
+<p>2020 年 5 月 21 日是第 9 个全球无障碍宣传日。无障碍使用也是 Apple 产品设计时的目标之一，我们倾向于认为无障碍功能的意义就是让每个人都能使用科技，正如 <a href="https://www.apple.com.cn/accessibility/">Apple 所说</a>「让每一个人受益的科技，才是真正强大的科技。」</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15904037034817/8788F523-0DE3-4C82-879D-026B4F34D888.png" alt=""/></p>
+
+<p>在 Apple，无障碍技术分成值得关注的四个部分：认知、动作、视觉、听觉。Apple 提供了一系列的功能去解决所有这些部分的问题，但总而言之，是你所做的工作和 Apple 提供的辅助功能技术让我们为残障人士建立的平台变得出色。</p>
+
+<p><img src="media/15904037034817/FF9070EC-8832-48EF-9B4E-49A7A4C2ABC0.png" alt=""/></p>
+
+<p>让你为之工作的所有好内容对于每个人都是可用的，这为我们创造了一个更好、更包容的社区，改善了全世界成千上万用户们的生活。</p>
+
+<p>这篇文章会跳过无障碍功能的一些基本介绍，可以查看其它有关辅助功能的文章：</p>
+
+<ul>
+<li><a href="15713081795025.html">设计能让每一个人都用上的 app</a></li>
+<li><a href="15904030044639.html">Apple 辅助功能设计规范</a></li>
+</ul>
+
+<p>首先来看一个词「可用」，「可用」很好，确保让你的 app 的所有内容对于辅助功能技术都是可见的，这是关键的第一步。但是我们不只是想让我们的 app 可用，没有人会到处吹嘘自己的 app 是可用的，我们想让我们的 app 是出色的，我们想让使用 app 的人感到愉悦。那么当谈到「出色」时，这对于无障碍功能又具体意味着什么呢？这就是这篇文章想要讲的，希望能提供给你一些有帮助的指导建议。</p>
+
+<p><img src="media/15904037034817/0EC7D1DB-741A-4E39-801C-52BB06A649F4.png" alt=""/></p>
+
+<p><img src="media/15904037034817/9E8F0839-B631-455F-9E3C-0AC7FC7AAC4F.png" alt=""/></p>
+
+<p>文章聚焦于两个部分，一部分是视觉设计，另一部分是辅助功能技术使用体验，针对于这两个部分讲一讲你需要具体考虑些什么。</p>
+
+<p><img src="media/15904037034817/ACB34F0B-F7AF-4EA4-9F68-1D66727F2545.png" alt=""/></p>
+
+<h2 id="toc_0">视觉设计</h2>
+
+<h3 id="toc_1">透明和模糊</h3>
+
+<p>我们在 iOS 系统的许多地方使用透明和模糊效果，它可以为我们的操作系统创造一种鲜活的、独特的感觉。 <br/>
+但是对于一些人来说，特别是那些视力不好的人，模糊和透明效果可能会在可读性上造成不好的结果，甚至是造成一定的眼部压力。</p>
+
+<p><img src="media/15904037034817/84A0172F-6694-4BA3-9F91-7AC8CA12B067.png" alt=""/> </p>
+
+<p><img src="media/15904037034817/17413254-2F64-4D1A-A1CC-F0A7ACF6C85D.png" alt=""/></p>
+
+<p><img src="media/15904037034817/5A8F9E0F-536F-46BD-8138-C930146F17D6.png" alt=""/></p>
+
+<p>所以我们提供了一个辅助功能设置用来减少透明和模糊效果。像下图这样，不是去模糊背景，而是使其变暗，这样你仍然知道你处在系统的什么场景中，但是视觉噪声却减少了。而对于控件，以前是会有背景颜色透进来，而现在是固定的背景色，可读性更高了。</p>
+
+<p><img src="media/15904037034817/B56864D5-6CC9-4171-BEDA-B7BC52D65B1F.png" alt=""/></p>
+
+<p>对于主屏幕 app 文件夹和聚焦页面也是一样的处理方式。这是一个好的示例，因为我们从用户的壁纸中取得一个样本然后给背景上色，用户仍然能感受到设备的个性化和情景化，但同时通过固定背景增强了对比度和可读性。</p>
+
+<p><img src="media/15904037034817/D0E35AFF-9F81-4A64-A60E-06BA95C33E8B.png" alt=""/></p>
+
+<p><img src="media/15904037034817/939A8B4B-DEF0-496C-A7EA-9F4F039F5EF5.png" alt=""/></p>
+
+<p>作为一名开发者，你可以通过检查减少透明度设置是否开启来控制透明和模糊效果的使用、调整你的 UI。在 iOS 和 macOS 上你可以通过下面的代码来作判断：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Transparency and Blurring 
+
+// iOS 
+extension UIAccessibility { 
+    public static var isReduceTransparencyEnabled: Bool { get } 
+} 
+
+// macOS 
+extension NSWorkspace { 
+    open var accessibilityDisplayShouldReduceTransparency: Bool { get } 
+} 
+</code></pre>
+
+<h3 id="toc_2">对比度</h3>
+
+<p>当谈到感知能力时，内容和内容背景的对比度十分重要。一个颜色越接近另一个颜色，它们就越难辨认。</p>
+
+<p><img src="media/15904037034817/28222B88-5F7F-4964-AB24-A731832B2C88.png" alt=""/></p>
+
+<p><img src="media/15904037034817/E9BD65C5-FB45-4501-A079-1EAEA7277581.png" alt=""/></p>
+
+<p>某种颜色在较大尺寸时是可读的，但当内容变小时就不行了。例如对于文本来说，字号越小字母看起来越容易混在一起。</p>
+
+<p><img src="media/15904037034817/1B9BD79C-3BD9-4AC5-9B96-4A4E3BC0B3A0.png" alt=""/></p>
+
+<p>我们推荐你遵从网页内容无障碍规范中所说的最小对比度 4.5:1 的要求。</p>
+
+<p><img src="media/15904037034817/372AD7AB-154E-445F-8A81-10012E11C2B6.png" alt=""/></p>
+
+<p>当然，你能够获得的最高对比度就是黑色和白色之间，大约是 21:1，这对于所有的文本尺寸都是合适的。</p>
+
+<p><img src="media/15904037034817/D34483E3-08FE-4F27-984F-EA5251C12E71.png" alt=""/></p>
+
+<p>再来看一些灰色与黑色的对比度情况。下图中的灰色在文本较大时是合适的，但在文本比较小时就不合适了，因为你的眼睛无法辨别出字母的形状，4.5:1 的对比度对于看得清来说算是刚刚及格。</p>
+
+<p><img src="media/15904037034817/F003A6F7-D13A-4D71-8737-F01F18DF553B.png" alt=""/></p>
+
+<p>下图中的灰色与背景黑色的对比度只有 2.9:1，在一个小屏设备上，即使字体尺寸很大，你也会遇到看不清的情况，这个对比度太低了。</p>
+
+<p><img src="media/15904037034817/52E5A896-876D-4F6A-BBEE-7AB15F9AA345.png" alt=""/></p>
+
+<p>你可以使用 Xcode 中在辅助功能查看器（accessibility inspector）里内置的工具去查看颜色组合之间的对比度以及特定的文本尺寸下这个对比度是否合适。使用的规范就是上面提到的。</p>
+
+<p>然而，即使对比度大于 4.5:1，对于那些视力条件不好的人来说，当颜色出现在各种 bar 上时，可读性对他们来说仍然存在问题。所以我们提供了一个全局的「增强对比度」设置选项。在以前版本的 iOS 中，这个设置项被称为「加深颜色」。在 iOS 和 macOS 上你可以通过下面的代码来作判断：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Increase Contrast (Darken Colors) 
+
+// iOS 
+extension UIAccessibility { 
+    public static var isDarkerSystemColorsEnabled: Bool { get } 
+} 
+
+// macOS 
+extension NSWorkspace { 
+    open var accessibilityDisplayShouldIncreaseContrast: Bool { get } 
+} 
+</code></pre>
+
+<p>如果你使用了标准的 UIKit 控件并开启了 tint color，这些配置就可以自动完成。</p>
+
+<h3 id="toc_3">尺寸</h3>
+
+<p>改变设备上的内容尺寸会对内容展示和被感知的方式产生巨大的影响。对于低视力用户来说，这是很有帮助的。<br/>
+下面以「日历」app 说明。下图中左边的是默认字体尺寸，右边的是某一种更大的辅助功能尺寸。</p>
+
+<p><img src="media/15904037034817/5EAA3478-8D8E-40B0-86DE-DB7505FCA829.png" alt=""/></p>
+
+<p>如果我们模拟下一个低视力的人实际看到的情况，增大尺寸所能获得的好处就可以立马显现出来，右边的文本仍然是可读的。</p>
+
+<p><img src="media/15904037034817/3125F110-ED86-452D-A60B-51F0E1A51212.png" alt=""/></p>
+
+<p>在 iOS 中，你可以检查确认用户设定的设备字体尺寸是什么，这里有七种标准的字体尺寸，默认为「大 large」。你还可以开启「更大的辅助功能字体」，再获得五种更大的字体尺寸。</p>
+
+<p><img src="media/15904037034817/FA2DEF2D-D9EE-4FF3-A23E-5A35D4B9E0CC.png" alt=""/></p>
+
+<p>字体大小问题解决了，但是有可能默认的字体字重和图形粗度也会造成阅读困难。所以在 iOS 中，你可以开启「粗体文本」设置选项。</p>
+
+<p><img src="media/15904037034817/68EC50CD-8253-4BA1-AD49-12EFA027B2A9.png" alt=""/></p>
+
+<p>如果你使用了标准的 UIKit 控件和系统字体，你不需要做什么就可以获得这项特性的支持，但如果你使用了你自己的文本解决方案或者自定义字体，亦或是你只是想在系统的粗体文本设置选项开启时让 app 中的分隔线更粗一点，你可以检查确认这个设置项是否被开启，从而进行必要的调整。</p>
+
+<pre class="line-numbers"><code class="language-swift">// Bold Text 
+
+extension UIAccessibility { 
+    public static var isBoldTextEnabled: Bool { get }
+}
+</code></pre>
+
+<h3 id="toc_4">动效</h3>
+
+<p>动画是有趣的，它总是可以让内容变得生动活泼，它可以在用户的交互和他们动作带来的效果之间提供一个直接的关联。然而，某些条件下，特别是那些会影响大脑中枢平衡的耳内条件可能会使运动和动画产生问题，会造成诸如眩晕或者不平衡甚至恶心这样的问题。</p>
+
+<p><em>注：由于动效的示例需要动态动画展示，目前暂以静态画面代替，可根据文字描述在手机上操作查看示例展示的情况。</em></p>
+
+<p>下面是几个动画的示例。第一个是缩放和放大动画。在下图中的左边，默认情况下，在打开一个时钟 app 时，我们会放大 app icon，时钟 app 的 UI 同时放大；在右边，当开启「减弱动态效果」时，打开 app 的动效就会变成简单的交叉淡入淡出效果。</p>
+
+<p><img src="media/15904037034817/B87E071A-3B54-4CE1-9E88-2E0378EFD845.png" alt=""/></p>
+
+<p>第二个是快速转动和旋转效果。来看一下信息 app 发送信息时的全屏回声效果，可以看到内容是沿着 Z 轴转动同时改变大小，这些类型的动效组合在一起可能就会造成问题。如果开启了「减弱动态效果」，就会给用户提供一个提示以让用户主动选择去播放这些信息效果，而不是自动播放。</p>
+
+<p><img src="media/15904037034817/AB5E5EFD-8B67-4F31-B4A2-778F11C50233.png" alt=""/></p>
+
+<p>第三个是平面转换动画。当在 Safari 中点击显示所有标签页按钮时，你可以看到网页卡片的平面转换成了一个模拟的 3D 空间。而当减弱动态效果开启时，这个动画就会变成一个简单的淡入淡出动画，并且会闪烁一下你的当前页面的那个卡片，以让你知道你是从哪里来的。</p>
+
+<p><img src="media/15904037034817/E3BF3480-7486-4FDB-9947-029D3DA7F57B.png" alt=""/></p>
+
+<p>第四个是不同方向和不同速度的动画。在信息中，当滚动信息列表时，每一个信息气泡之间会有弹性，如果开启了「减弱动态效果」，上面说的这个效果就没有了，会变成普通的滚动。</p>
+
+<p><img src="media/15904037034817/9BD35DF7-911A-4600-8CAA-43F15AB1EC3B.png" alt=""/></p>
+
+<p>最后一个是外围移动效果。iOS 中的天气 app 在背景中会有微弱的动效以表明当前的天气条件。在下图的左边，你可以看到云彩在慢慢的移动，日光闪闪。但是如果你滚动到下面的天气详细信息，这些动画就会变成外围动画，这在某些情况下是有问题的，例如开车时查看天气预报，你会感到恶心。你的聚焦区域的上方如果出现水平运动会触发大脑的一些反应。当开启「减弱动态效果」时，我们会把背景动画效果关闭。</p>
+
+<p><img src="media/15904037034817/BA5C8F45-1EC9-4176-9B8B-355D9FB6952F.png" alt=""/></p>
+
+<p>通常情况下，我们不想要你只是简单地移除所有的动画，简单地移除一个动画并不总是一个很好的体验，你不想让用户体验打折扣，你可以只是采用一些虽然不同但同样有趣或者吸引人的适合用户的方案。我们也有一个设置让你去检查确认动画是否应该被减少并根据需要做出调整。在 iOS 和 macOS 上你可以通过下面的代码来作判断：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Motion
+
+// iOS 
+extension UIAccessibility { 
+    public static var isReduceMotionEnabled: Bool { get } 
+} 
+
+// macOS 
+extension NSWorkspace { 
+    open var accessibilityDisplayShouldReduceMotion: Bool { get } 
+} 
+</code></pre>
+
+<h3 id="toc_5">复杂度</h3>
+
+<p>App 在我们的生活中扮演着重要角色，科技是简单的和容易使用的，科技应该增强了我们的生活而不是增加额外的不必要的负担，这对我们十分重要。只在美国，每六个孩子就有一个发育障碍，从言语障碍到更严重的像是自闭症这样的发育障碍。</p>
+
+<p><img src="media/15904037034817/08C8E1DD-11F7-4B63-8098-3CE04A83D211.png" alt=""/></p>
+
+<p>对于有认知障碍甚至是有慢性疾病的人来说，使用一个 app 需要比正常人花费更多的精力，所以我们如何确保我们的 app 是简单的、最小负担的呢？</p>
+
+<ul>
+<li>App 应该是容易导航的，它们具有相似的结构和清晰的、有逻辑的因果关系。</li>
+<li>我们应该能够在没有遇到任何障碍的前提下，快速开始使用我们的 app，完成最普遍的任务。</li>
+<li>我们的 app 应该有一致的行为，这样当我在一个地方学习到了什么时，就可以运用到其他地方。</li>
+</ul>
+
+<p>使用标准的 UIKit 界面就很好，因为人们熟悉这些系统界面和控件的工作方式，UIKit 也是 iOS 的设计语言。所以如果你设计了一些自定义的东西，与 UIKit 中的类似控件的行为保持一致将会帮助人们从直觉上知道如何使用你的 app。</p>
+
+<p>这些都可以归结为人们体验你的 app 的方式，它们对于使用辅助技术（如旁白或者切换控制）的人们同样重要。</p>
+
+<h2 id="toc_6">辅助功能技术使用体验</h2>
+
+<p>使用辅助技术的体验会和普通用户的使用体验有很大不同。旁白使用非常多的手势（如滑动、多指点击），切换控制扫描不同的项目，提供合理的、快速的操作。</p>
+
+<p><img src="media/15904037034817/AF598798-CA2D-41D1-9653-21CC0A274272.png" alt=""/></p>
+
+<p>对于这两者都有与任何标准手势或者交互相等价的内建操作，但是怎样让使用这些技术的 app 的用户体验变得出色？我们想让基础的工作变得出色，尽管这些辅助技术的用户体验你的 app 的方式是完全不同的，但是给非辅助功能用户创造好的体验的相同的设计原则也可以应用在这里。你需要简单的导航、可预测的行为、行动优先、一致性，还要特别注意那些分开的元素是通过情景化来传达的，那么相同的情景也应该传达给辅助功能用户。</p>
+
+<p><img src="media/15904037034817/323A044F-7296-4DBC-B7A4-7E779F6C7544.png" alt=""/></p>
+
+<h3 id="toc_7">实例</h3>
+
+<p>下面将通过一个实例来说明如何审查一个 app 的辅助功能使用体验。</p>
+
+<p>这个 app 的名字是「Exceptional Dogs」，其目标是通过让用户浏览一系列需要找寻新家庭的小狗的信息来让这些小狗的收养过程更简单。下图就是这个 app 的界面：</p>
+
+<p><img src="media/15904037034817/8CFBB39E-0885-4D0C-9F5A-FCA53142F229.png" alt=""/></p>
+
+<ul>
+<li>在顶部，有一个小狗的轮播 UI，展示了我可以浏览的不同小狗的图片。在左下角有一个「收藏」按钮，我可以点击它收藏特定的某只小狗；在右下角有一个图册按钮，点击后可以以一个模态视图查看更多的小狗图片。并不是所有的小狗都有一个图册按钮，当从一个有图册的小狗滑向一个没有图册的小狗时，图册按钮会淡出。</li>
+<li>在图片的下面，是每只小狗的具体信息，包括名字、品种、年龄、体重、性别、性格等等，最后还包括小狗现在所在的救助站的位置信息，提供了两个按钮：一个是在地图上显示具体的位置，另一个是拨打电话。</li>
+</ul>
+
+<p>现在在这个 app 中开启旁白功能，来看看一个盲人用户或者视障用户是如何消化这个 app 的复杂度的。会发现下面的这些问题：</p>
+
+<ul>
+<li>旁白可以正确地在轮播 UI 中滚动，但是直到最后一个轮播图片之后才能读出收藏按钮和图册按钮，以及下面的小狗的具体信息。</li>
+<li>在图册的模态窗口中，当滑动到最后一张图片后再继续滑动，旁白会继续播放模态窗口下面或者说背后的内容，这会让用户困惑或者分心。</li>
+<li>在每只小狗的具体信息部分，所有的文字是从左到右、从上到下朗读的，但我们在听到「名字」这个词语之后，下一步想听到的应该位于「名字」词语下面的小狗的名字，而现在听到的是「品种」这个词语。视觉上结构没有问题，但对于旁白来说，它的结构顺序就是错乱的，这会减少旁白用户的情景化创建，造成不必要的认知负担。</li>
+<li>对于救助站信息上的两个按钮，对于旁白来说目前也是缺乏情景化的。当我听到「打电话按钮」时，我不清楚这个操作是和什么相关，即使视觉上很清楚。</li>
+</ul>
+
+<p>以上发现的这些问题不会让我们的 app 不可用，但它们给用户造成了不必要的认知负担，而我们的目标是创造一个杰出的无障碍用户体验。<br/>
+审查之后，来看解决方案：</p>
+
+<ul>
+<li>我们需要每一只小狗的操作和数据可以快速可访问，可以定义收藏按钮和图册按钮是每一只小狗的次级操作（sub elements），这样你就可以通过左右滑动访问小狗的收藏按钮、图册按钮、具体信息；</li>
+</ul>
+
+<p><img src="media/15904037034817/3C3E449C-A8C0-4AF6-8C70-D311AE7B2D36.png" alt=""/></p>
+
+<pre class="line-numbers"><code class="language-swift">// Custom Accessibility Elements 
+
+public class UIAccessibilityElement : NSObject { 
+    public init(accessibilityContainer container: Any) 
+} 
+
+extension NSObject { 
+    open var accessibilityElements: [Any]? 
+} 
+</code></pre>
+
+<ul>
+<li>通过 <code>accessibilityIncrement</code>  和 <code>accessibilityDecrement</code> 来在不同的小狗之间进行导航，这样你就可以通过上下滑动来切换不同的小狗；</li>
+</ul>
+
+<p><img src="media/15904037034817/580ECFC9-1B72-4973-9006-44C4C2B90370.png" alt=""/></p>
+
+<pre class="line-numbers"><code class="language-swift">// Increment and Decrement 
+
+extension NSObject { 
+    // Must have UIAccessibilityTraits.adjustable 
+    open func accessibilityIncrement() 
+    open func accessibilityDecrement() 
+} 
+</code></pre>
+
+<ul>
+<li>对于小狗信息中的文本标签和其对应值进行分组，减少了信息组的数量，提高了导航速度，还让用户更清楚旁白讲的是什么，这样旁白就可以一次性读出小狗信息中的文本标签和其对应值；</li>
+</ul>
+
+<p><img src="media/15904037034817/9AD455C5-B1A6-413F-A659-9E056D051716.png" alt=""/></p>
+
+<ul>
+<li>对于小狗信息中救助站部分，在之前是被分为了三个部分，同样缺乏场景化，我们也是将他们组合在一起。同时我们考虑这个部分的关键信息，就是小狗所在的救助站的信息，所以我们可以把另外两个按钮作为救助站信息的额外两个动作，这样在旁白读到救助站信息时就会同时告诉用户这里有额外的操作可用，可通过上下滑动听取具体的操作；</li>
+</ul>
+
+<p><img src="media/15904037034817/E50508C8-8DE4-4402-B539-AC01F4170CC1.png" alt=""/></p>
+
+<pre class="line-numbers"><code class="language-swift">// Custom Actions 
+
+extension NSObject { 
+    open var accessibilityCustomActions: [UIAccessibilityCustomAction]? 
+} 
+
+class UIAccessibilityCustomAction : NSObject { 
+    open var name: String 
+    open var target: AnyObject? 
+    open var selector: Selector 
+    
+    public init(name: String, target: Any?, selector: Selector) 
+} 
+</code></pre>
+
+<ul>
+<li>最后一部分是图册部分，让旁白排除掉模态界面之外的元素，同时屏幕上的元素发生改变时需要让辅助功能技术知道，以让其尝试重新聚焦。</li>
+</ul>
+
+<p><img src="media/15904037034817/ACC45DBA-8861-415E-A4A9-C069415D2BD9.png" alt=""/></p>
+
+<pre class="line-numbers"><code class="language-swift">// Modality 
+
+extension UIView { 
+    open var accessibilityViewIsModal: Bool 
+} 
+</code></pre>
+
+<pre class="line-numbers"><code class="language-swift">// Screen Change 
+
+extension UIAccessibility { 
+    public static func post(notification: UIAccessibility.Notification, argument: Any?) 
+} 
+
+extension UIAccessibility.Notification { 
+    public static var screenChanged: UIAccessibility.Notification 
+} 
+</code></pre>
+
+<h2 id="toc_8">总结</h2>
+
+<p>值得注意的是，为你的 app 的辅助功能创造自定义的界面有时候并不是一个好的解决方案，有时简单的调整就是最好的调整，但是当你在让你的 app 变得无障碍时你真正应该做的是不仅仅是在表面思考，更应该深入思考对于那些通过辅助科技使用 app 的用户来说意味着什么。</p>
+
+<p>可用是让 app 无障碍使用的第一步，但我们还可以做得更好，我们可以我们也应该为用户提供出色的、愉快的使用体验以满足他们的独特需求。</p>
+
+<ul>
+<li>从一开始就考虑 app 的无障碍使用特性的设计将会赢在起跑线上；</li>
+<li>让你的 app 的设计可以根据用户的系统设置做出修改；</li>
+<li>带着目标去创造无障碍使用体验，内容保持优先，导航简单直观。</li>
+</ul>
+
+<p><img src="media/15904037034817/B36DE907-EB4A-454D-A94F-273FA761C3AC.png" alt=""/></p>
+
+<h2 id="toc_9">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2018/230/">Deliver an Exceptional Accessibility Experience - WWDC 2018 - Videos - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iPadOS 指针系统的设计规范 iPadOS Pointing System Design Guideline]]></title>
@@ -124,7 +478,7 @@ iPadOS 定义了三种内容效果，让焦点集中在你 app 中不同的交�
 
 <p><em>注：目前文章大部分文字来源于对 HIG 中指针系统的翻译，后续可能会补充一些实际应用案例以及开发实例。</em></p>
 
-<h2 id="toc_5">参考资料</h2>
+<h2 id="toc_5">参考链接</h2>
 
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/pointers/">Pointers (iPadOS) - User Interaction - iOS - Human Interface Guidelines - Apple Developer</a></li>
@@ -254,6 +608,10 @@ iPadOS 定义了三种内容效果，让焦点集中在你 app 中不同的交�
 <ul>
 <li>增加了 Apple Music 网页版正式上线的相关信息；</li>
 <li>增加了 Apple Music 首次在第三方电视端——三星电视上上线的相关信息。</li>
+</ul></li>
+<li><p>2020-05：</p>
+<ul>
+<li>修正了「Apple Store」app 的帐号机制描述，不再跟随系统的 App Store 帐号，而改为跟随 iCloud 帐号。</li>
 </ul></li>
 </ul>
 
@@ -536,7 +894,7 @@ iPadOS 定义了三种内容效果，让焦点集中在你 app 中不同的交�
 <li>以 iPhone 为例，系统中的 Apple ID 帐号分为「<strong>iCloud 帐号</strong>」和「<strong>iTunes Store 与 App Store 帐号</strong>」：
 <ul>
 <li>iCloud 帐号负责管控与云同步相关的功能，例如同步照片、通讯录、日历、备忘录、Safari 收藏夹、钥匙串以及 iCloud 云盘功能；</li>
-<li>iTunes Store 与 App Store 帐号可简称为 Apple 媒体帐号，负责管控系统中所有与内容媒体相关的功能，例如 App Store、Apple Music、iTunes Store、Apple TV、Podcast、Books、TestFlight、Apple Store。</li>
+<li>iTunes Store 与 App Store 帐号可简称为 Apple 媒体帐号，负责管控系统中所有与内容媒体相关的功能，例如 App Store、Apple Music、iTunes Store、Apple TV、Podcast、Books、TestFlight。</li>
 </ul></li>
 <li>同一台设备上登录的 iCloud 帐号和 Apple 媒体帐号可以相同，也可以不同，默认相同。</li>
 <li>其他 Apple 设备的逻辑大体相似。</li>
@@ -648,6 +1006,385 @@ iPadOS 定义了三种内容效果，让焦点集中在你 app 中不同的交�
 </ul>
 
 <p>看到这里的你，根据自己的需求心里有做出选择了吗？</p>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+</blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Apple 无障碍功能设计规范]]></title>
+    <link href="https://steppark.net/15904030044639.html"/>
+    <updated>2020-05-25T18:36:44+08:00</updated>
+    <id>https://steppark.net/15904030044639.html</id>
+    <content type="html"><![CDATA[
+<p>人们会使用 Apple 的无障碍功能/辅助功能（Accessibility）（例如减少透明度、旁白、增加字体尺寸）以适合他们的方式去个性化他们如何与设备交互。一个可用的 app 通过设计支持这些个性化，无论人的能力和人们如何使用他们的设备，让每一个人都能享受绝佳的使用体验。</p>
+
+<span id="more"></span><!-- more -->
+
+<ul>
+<li>减少透明度示例：<a href="https://developer.apple.com/design/human-interface-guidelines/ios/images/Reduce_Transparency.mp4">点此查看示例视频↗︎</a></li>
+<li>旁白示例：<a href="https://developer.apple.com/design/human-interface-guidelines/ios/images/Voice_Over.mp4">点此查看示例视频↗︎</a></li>
+<li>按钮形状示例：<a href="https://developer.apple.com/design/human-interface-guidelines/ios/images/Button_Shapes.mp4">点此查看示例视频↗︎</a></li>
+</ul>
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">障碍和解决方案 Impairments and Accommodations</a>
+<ul>
+<li>
+<a href="#toc_2">视觉</a>
+</li>
+<li>
+<a href="#toc_3">听觉</a>
+</li>
+<li>
+<a href="#toc_4">肢体和运动</a>
+</li>
+<li>
+<a href="#toc_5">读写能力和学习能力</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6">包容型设计的最佳实践</a>
+<ul>
+<li>
+<a href="#toc_7">在脑子里记住让辅助功能融进你的设计中</a>
+</li>
+<li>
+<a href="#toc_8">支持个性化</a>
+</li>
+<li>
+<a href="#toc_9">审查和测试你的 App 的辅助功能</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_10">用户交互</a>
+<ul>
+<li>
+<a href="#toc_11">手势</a>
+</li>
+<li>
+<a href="#toc_12">触感</a>
+</li>
+<li>
+<a href="#toc_13">按钮和控件</a>
+</li>
+<li>
+<a href="#toc_14">用户输入</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_15">导航</a>
+<ul>
+<li>
+<a href="#toc_16">使用旁白进行导航</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_17">文本尺寸和字重</a>
+</li>
+<li>
+<a href="#toc_18">颜色和对比度</a>
+</li>
+<li>
+<a href="#toc_19">外观效果和动效</a>
+<ul>
+<li>
+<a href="#toc_20">透明度和模糊效果</a>
+</li>
+<li>
+<a href="#toc_21">动效</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_22">内容</a>
+<ul>
+<li>
+<a href="#toc_23">稿件和图片</a>
+</li>
+<li>
+<a href="#toc_24">音频和视频</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_25">参考链接</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">障碍和解决方案 Impairments and Accommodations</h2>
+
+<p>全世界大约每七个人中就有一个人有影响他们与世界、与设备进行交互的身体残疾或障碍。人们经历身体障碍可能在任何年纪、持续时间不定、严重程度不一。某个状况下的障碍（如开车、在晴朗的天气远足或者在一个安静的图书馆学习这些临时条件）可能会在不同时间影响几乎每个人与设备进行交互的方式。</p>
+
+<p><img src="media/15904030044639/accessibility-icon_2x.png" alt="accessibility-icon_2x"/></p>
+
+<p>设计 app 一开始就应该考虑包容性，让每一个人都能使用你的 app。审视下面四个主要的障碍分类以及对应解决它们的辅助功能。</p>
+
+<h3 id="toc_2">视觉</h3>
+
+<p>视觉障碍包括失明、色盲、各种形式的视力丧失以及各种看屏幕不舒服或者困难的情况。对于有障碍的用户来说，Apple 在每个平台上都提供了旁白（Voice Over）功能，并支持显示调节功能例如颜色反转、大文本、缩放和放大器。</p>
+
+<h3 id="toc_3">听觉</h3>
+
+<p>除了各种类型的听力丧失，听力障碍还包括人们不想他们的设备发出大的声响时的情况，例如当他们在剧院中时。Apple 提供了与功能进行听觉交互的替代方式，例如隐藏式字幕、视觉和触感通知、键入以使用 Siri 模式。</p>
+
+<h3 id="toc_4">肢体和运动</h3>
+
+<p>有肢体和运动障碍的人可能在握持或操作设备上有困难。Apple 提供了几种解决方案无需精确的运动控制，就可以去帮助人们使用他们的设备：</p>
+
+<ul>
+<li>切换控制（Switch Control）将自适应设备与 iPhone、iPad、Mac 和 Apple TV 集成在一起；</li>
+<li>Siri 帮助人们使用声音控制 app 和设备；</li>
+<li>辅助触控（Assitant Touch）让标准手势容易执行。</li>
+</ul>
+
+<h3 id="toc_5">读写能力和学习能力</h3>
+
+<p>读写能力和学习能力的障碍包括口语和阅读上有困难、管理复杂性以及保持专注上有困难。为了减少认知负担，为有读写能力和学习能力障碍的人提供帮助，Apple 提供了一些功能，例如朗读屏幕内容（Speak Screen）、打字反馈（Typing Feedback）以及 Safari 阅读器（Safari Reader）。</p>
+
+<h2 id="toc_6">包容型设计的最佳实践</h2>
+
+<p>每个人都能用上和理解的 app 的包容性设计让越来越多的人有机会享受你的 app。下面这三个最佳实践可以帮助你创造一个包容的 app。</p>
+
+<h3 id="toc_7">在脑子里记住让辅助功能融进你的设计中</h3>
+
+<p>辅助功能不只是让那些有残疾的用户能够获取信息，而是让所有人能够获取信息，不论他们的能力或所处环境。时刻记住让辅助功能融进你的设计中意味着优先考虑简洁和感知能力，测试每一个设计决策以确保它没有把有不同能力或者使用不同方式与 app 进行交互的用户排除在外。</p>
+
+<ul>
+<li>简洁（Simplicity）：创造熟悉的、一致的交互可以让复杂的任务变简单、易于执行。</li>
+<li>感知能力（Perceivability）：无论人们通过视觉、听觉或是触觉。确保所有的内容可以被感知到。</li>
+</ul>
+
+<h3 id="toc_8">支持个性化</h3>
+
+<p>你早已在设计 app 时考虑了环境的变化（如设备的方向、屏幕尺寸、分辨率、颜色范围、分屏浏览），因为你想要人们在任何情景、任何支持的设备中都能尽情使用你的 app。只要再付出一小点努力，你就可以让你的 app 支持辅助功能，人们使用这些辅助功能可以个性化他们与设备交互的方式。</p>
+
+<p>当你使用了标准控件去实现你的 app 的 UI，文本和界面元素会自动适配几个辅助功能设置，例如加粗文本、大文本、反转颜色和增强对比度。</p>
+
+<h3 id="toc_9">审查和测试你的 App 的辅助功能</h3>
+
+<p>审查可以检查你的 app 中的每一个元素，给你一个全面的问题列表以待修复。测试帮助你确保所有的用户都可以在你的 app 中完成最重要的任务，不论他们与设备是如何交互的。<br/>
+当你将辅助功能打开，测试了重要的用户路径，你将会理解使用不同方式与设备进行交互时所遇到的挑战。你也会发现你的 app 中用户体验不好的地方。</p>
+
+<p>例如，在一个社交 app 中一个常见的用户路径是回复一个评论。这个任务可能会包括：</p>
+
+<ul>
+<li>读发出的评论；</li>
+<li>选择一个评论去回复；</li>
+<li>打开回复页面；</li>
+<li>编辑回复；</li>
+<li>发布回复。</li>
+</ul>
+
+<p>对于你的 app 的每一个关键用户路径，打开一个辅助功能，例如旁白、减少动态效果、大文本，确保你可以在用户路径中完成每一个任务而没有遇到困难。在你修复你没有考虑到的所有问题之后，打开另一个不同的辅助功能，再测试一遍用户路径。</p>
+
+<p>在 Xcode 中的辅助功能查看器可以帮助你审查、测试、修复你的 app。</p>
+
+<h2 id="toc_10">用户交互</h2>
+
+<p>像旁白这样的辅助使用技术和像显示调整这样的辅助功能扩展了人们与他们设备的交互方式。因为这些技术和功能与系统提供的交互结合在了一起，在你的 app 中正确地支持系统交互的辅助功能是十分重要的。</p>
+
+<h3 id="toc_11">手势</h3>
+
+<ul>
+<li>让所有的控件和交互元素都有一个点击目标，尺寸上至少达到 44pt x 44pt：行动不便的人需要更大的点击目标去帮助他们与 app 进行交互。太小的控件可能会让所有的用户很难去点击。</li>
+<li>不要覆盖平台的自有手势：不管在使用什么 app，人们期待系统手势（如下滑显示通知中心、系统偏好设置中定义的触控板手势）可以正常工作。</li>
+<li>在交互上使用简单手势：复杂的手势（例如多指手势、长按或者需要重复按钮）可能对某些人来说是有挑战的。使用最简单的手势可能改善每一个与你的 app 进行交互的人的使用体验。</li>
+<li>对给予手势的操作提供可替代方案：给可能不能执行某个特定手势的人提供一个其他选择。例如，如果需要在一个表单中滑动删除某一行，你应该给人们一个可以通过编辑模式或者某个条目详情页面上提供一个删除按钮来完成删除条目的可替代方案。</li>
+</ul>
+
+<p><img src="media/15904030044639/image.png" alt=""/></p>
+
+<ul>
+<li>在你的 iOS app 中让拖放功能可用：当你在你的 app 中使用辅助功能 API 去识别拖拽来源和放置目标时，辅助功能技术可以帮助人们拖拽屏幕上的条目。</li>
+<li>不要通过 iOS 上的 3D Touch 功能或者 Apple Watch 上的 Force Touch 功能访问你的 app 的核心功能：并不是每一个人都可以按压屏幕获得由 3D Touch 或者 Force Touch 提供的额外功能。即使人们的设备不能使用 3D Touch 或者 Force Touch，也要确保所有的用户都可以在你的 app 中执行重要的操作。</li>
+</ul>
+
+<h3 id="toc_12">触感</h3>
+
+<ul>
+<li>支持系统定义的触感：许多人依赖于触感功能，这可以在人们不能看到屏幕时，帮助人们与 app 进行交互。例如，系统 app 在一个任务成功或失败时或者一个事件要发生时通过触感通知人们。在你的 app 中保持一致地使用系统定义的触感，这样就不会让人们感到困惑。</li>
+</ul>
+
+<h3 id="toc_13">按钮和控件</h3>
+
+<ul>
+<li>刻画自定义元素的辅助功能：你可以使用辅助功能特性（UIKit）和辅助功能属性（AppKit）去告知辅助功能技术一个元素是如何表现的。例如，使用一个「button」或者「NSAccessibilityButton」去刻画一个 view 作为一个按钮，那意味着旁白会在「按钮」词语之后读出 view 的描述，这可以告诉人们这个 view 的行为和按钮是相似的。</li>
+<li>使用一个一致的样式层级去表达按钮的相对重要性：人们可以开启按钮形状，以从周围的内容中更好地辨认出活跃的按钮。当你使用一个一致的按钮样式的层级时，人们可以基于按钮的外观掌握按钮的重要性。例如，最重要的按钮是圆角矩形，并有颜色填充；二级按钮没有颜色填充，但可能使用核心颜色展示一个文本或图形；最不重要的按钮使用了一个下划线样式的文本。</li>
+<li>优先使用系统提供的开关样式：UIKit 提供了一个开关，它通过开关把手的位置和填充颜色表明了开关的状态。然而对于某些人来说，额外的文字标签使它更容易意识到一个开关现在是开还是关。当你使用提供提供的开关样式时，如果用户开启了开/关标签，iOS 会自动展示开/关图形。</li>
+</ul>
+
+<p><img src="media/15904030044639/switches-without-labels_2x.png" alt=""/></p>
+
+<p><img src="media/15904030044639/switches-with-labels_2x.png" alt=""/></p>
+
+<ul>
+<li>考虑给链接一个视觉上的指示，例如一个下划线：使用颜色表明一个链接是可以的，但如果把它作为唯一的链接指示，色盲人群可能就不能意识到这个区别。</li>
+</ul>
+
+<h3 id="toc_14">用户输入</h3>
+
+<ul>
+<li>可以让人们通过说话输入信息而不仅是打字：在文本输入区域添加一个听写按钮，可以让人们选择说话作为他们的首选输入方式。如果你创造了一个自定义的键盘，确保为听写功能添加一个麦克风按键。</li>
+<li>支持使用 Siri 或者 Siri Shortcuts 仅通过声音执行重要的任务。</li>
+<li>不要阻止用户选择纯文本：许多用户依赖于通过选择文本作为文本转对话（TTS）的输入或者作为查找文本翻译的输入。</li>
+</ul>
+
+<h2 id="toc_15">导航</h2>
+
+<ul>
+<li>设计可预测的、有逻辑的、与平台标准保持一致的导航：当人们可以掌握在系统和其他 app 中的导航体验，人们就会更容易学习如何在你的 app 中导航。</li>
+</ul>
+
+<h3 id="toc_16">使用旁白进行导航</h3>
+
+<ul>
+<li>确保旁白用户可以导航到每一个元素：旁白从屏幕的元素中获取辅助功能信息以帮助人们理解每个元素的位置以及人们可以做什么。系统提供的 UI 元素默认包括这些辅助功能信息，但是旁白不能帮助人们发现和使用自定义元素，除非你的 app 提供这些信息。</li>
+<li>通过指定元素之间是如何成组、排序和连接的来改善旁白体验：靠近、对齐和其他情景线索可以帮助正常视力用户感知到屏幕上元素之间的关系，但是这些线索对于需要使用旁白的用户来说并不友好。检查你 app 中元素之间的关系只能被正常视力用户所感知到的地方，并向旁白描述这些关系。</li>
+</ul>
+
+<p>例如，下图中的布局依赖于靠近和居中来表明每个词语是上面的图片的一个标题。然而，如果你不告诉旁白每张图片应该与对应词语成组，旁白就会这样读出来：&quot;A large container holding a variety of mangoes. A large container holding many green artichokes. Mangoes come from trees that belong to the genus Mangifera. Artichokes come from a variety of a species of thistle.&quot;因为旁白默认情况下会从左到右读出元素。</p>
+
+<p><img src="media/15904030044639/image%202.png" alt=""/></p>
+
+<p>使用静态文本介绍一个控件是另一种用于正常视力用户的视觉线索。在下面列举的例子中，系统偏好设置告诉旁白文本&quot;Default web browser:&quot;，因为这是弹出按钮的文字标签，所以使用旁白的用户可以搞清楚这个控件的含义。</p>
+
+<p><img src="media/15904030044639/safari-default_2x.png" alt=""/></p>
+
+<ul>
+<li>当屏幕上的内容或者布局改变时注意旁白的变化：内容或者布局的突然变化对于旁白使用者将会非常困惑，因为那意味着他们对于当前屏幕的思维脑图不再准确。报告屏幕上的变化十分重要，这样旁白和其他辅助功能技术才可以帮助人们更新对屏幕的理解。</li>
+<li>在激活会打开一个不同网页或 app 的控件前警告人们：没有警告就改变当前情景会给人们造成困惑，突然强迫人们重建对屏幕上环境的思维模型。</li>
+<li>对于所有重要的界面元素提供可替代的文本标签：可替代的文本标签在屏幕上是不可见的，但是这些文本标签让旁白用声音描述出了屏幕上的元素，让有视觉障碍的人导航内容更简单。系统提供的控件默认情况下都会包含这个有用的文字标签，但是对于自定义的元素，你需要自己创造自定义标签。例如，如果你创造了一个表示可以自定义评分的按钮，对于这个辅助功能元素，你可能要提供文字标签「评分」。</li>
+<li>支持旁白转子：使用旁白的用户可以使用屏幕上的一个控件叫做「转子/rotor」，用来通过标题、链接或其他部分的类型来在文档和网页中导航。转子也可以让盲文键盘显示出来。你可以通过让转子识别相关条目，以帮助旁白用户在你的 app 中的相关条目之间导航。</li>
+<li>在一个 macOS app 中，让人们使用键盘去导航和与屏幕上的所有元素进行交互：理想情况下，人们可以打开全键盘访问，并在你的 macOS app 中只使用键盘执行所有任务。除了<a href="https://support.apple.com/en-us/HT204434">辅助功能键盘快捷方式</a>，macOS 还定义许多其他的<a href="https://support.apple.com/en-us/HT201236">键盘快捷方式</a>，许多用户会经常用到。为了支持所有的用户，避免在你的 app 中覆盖任何系统定义的键盘快捷方式十分重要。</li>
+</ul>
+
+<h2 id="toc_17">文本尺寸和字重</h2>
+
+<p>当设计一个包容的 app 时，要记住保持文本尺寸、字重和布局的清晰和可读性。</p>
+
+<ul>
+<li>使用动态类型，测试你 app 的布局可以适应所有的辅助功能尺寸：动态类型可以让人们选择适合他们工作的尺寸。确认你的设计可以缩放，对于文本和图形在所有的辅助功能字体尺寸下都是可读的。</li>
+</ul>
+
+<p><img src="media/15904030044639/image%203.png" alt=""/></p>
+
+<ul>
+<li>当字体尺寸增加时，避免切割文本：人们可以通过简单滚动就能看到和默认字体尺寸同样数量的文本的情况是最好的。不要切割文本，除非人们可以打开一个单独的页面去阅读余下的内容。</li>
+<li>当字体尺寸增加时，同时增加有意义的图形的尺寸：如果你使用图形去表达重要的信息，确保图形在大字体尺寸时也是容易看到的。</li>
+</ul>
+
+<p><img src="media/15904030044639/image%204.png" alt=""/></p>
+
+<ul>
+<li>不论用户的字体尺寸选择是什么，保持一个一致的信息层级：例如，当字体尺寸非常大时保持主要的元素顶部对齐，这样人们不会失去对这些元素的跟踪。</li>
+<li>在你的 app 中使用 regular 到 heavy 级别的字体字重：使用 regular、medium、semi-bold 或者 bold 字体字重，因为它们都是容易被辨认的。避免使用 ultraLight、thin 和 light 字体字重，这些很难看清。</li>
+<li>当用户开启粗体文本时，确保你的 app 正确响应，看起来没有问题：人们会在设置中打开粗体文本以让文本和图形容易看清。作为回应，你的 app 应该让所有的文本更粗，让所有图形的描边更粗。</li>
+</ul>
+
+<p><img src="media/15904030044639/image%205.png" alt=""/></p>
+
+<ul>
+<li>确保自定义的字体是清晰可读的：自定义的字形有时很难阅读。除非你的 app 对于自定义字体有一个迫切的需求，例如品牌目的或者为了创造一个沉浸的游戏体验，否则最好是使用系统默认字体。如果你使用了自定义字体，确保它是容易阅读的，特别是在小尺寸下。</li>
+<li>避免全文两端完全对齐：两端完全对齐的文本创造的留白会让很多人很难阅读和聚焦在文本上。左对齐（对于从右向左的文本就是右对齐）为有学习和读写障碍的人（如诵读困难症）提供了一个框架参考。</li>
+<li>对于较长段落的文本，避免使用斜体或者全部大写的样式：斜体和全部大写用于某些情景下的强调是可以的，但是过度使用这些样式会让文本很难阅读。</li>
+</ul>
+
+<h2 id="toc_18">颜色和对比度</h2>
+
+<ul>
+<li>不要仅靠颜色去区分对象或者传达重要信息：如果你的 app 使用颜色去传达信息，确保同时提供文本标签或者图形，这样色盲用户也可以同样理解它。</li>
+<li>对于文本，倾向于使用系统颜色：当你的文本颜色使用由 <a href="https://developer.apple.com/documentation/uikit/uicolor">UIColor</a> 或者 <a href="https://developer.apple.com/documentation/appkit/nscolor">NSColor</a> 定义的颜色时，文本可以对辅助功能（如反转颜色、增加对比度）设置正确响应。</li>
+<li>注意色盲用户：许多色盲用户很难从橘色中分辨蓝色或者从绿色中分辨红色（还有一部分很难从灰色中分辨绿色或红色）。避免使用这些颜色组合作为区分两种状态或者值的唯一方式。例如，不要仅使用红色和绿色圆圈去表明离线和在线状态，你可以使用一个红色方形和一个绿色圆形来表示。一些图片编辑软件会包括帮助验证色盲用户的工具。</li>
+</ul>
+
+<p><img src="media/15904030044639/image%206.png" alt=""/></p>
+
+<ul>
+<li>对「反转颜色」设置正确响应：当人们在一个较暗的背景下查看内容时可能会打开反转颜色。在反转颜色的智能反转模式中，图片、视频和全色图标（例如 app 图标和非模板型图片）不会反转，深色的 UI 会依旧保持深色。</li>
+<li>使用强烈对比的颜色来改善可读性：许多特征会影响对颜色的感知，包括字体尺寸和字重、颜色亮度、屏幕分辨率和光照条件。当你增加视觉元素（如文本、图形和控件）的颜色对比度，你可以帮助更多人在更多的情景下使用 app。为了发现在你的 UI 中相邻的颜色对比度是否满足最小可接受的水平，使用一个基于 WCAG 颜色对比度准则的在线颜色对比度计算器。</li>
+<li>使用文本尺寸来帮助决定对比度：通常情况下，更小或者更轻字重的文本需要更大的对比度才能保持可读。利用下面提供的值作为指导：</li>
+</ul>
+
+<p><img src="media/15904030044639/image%207.png" alt=""/></p>
+
+<h2 id="toc_19">外观效果和动效</h2>
+
+<p>虽然像模糊、透明、移动这样的效果时传达信息的有用的方式，但一些人会因此被分散注意力或者感到不舒服，还有一些人完全不会感知到这些效果。避免使用外观效果作为传达重要信息的唯一方式，这样不管人们如何与你的设备进行交互，他们都可以享受你的 app。</p>
+
+<h3 id="toc_20">透明度和模糊效果</h3>
+
+<ul>
+<li>当用户打开「减少透明度」辅助功能设置时，改变模糊效果和透明度：例如，模糊内容和透明效果的区域应该变得大部分不透明。最好的结果是，在不透明区域使用一个不同于该区域时模糊或透明时的颜色值。</li>
+</ul>
+
+<p><img src="media/15904030044639/image%208.png" alt=""/></p>
+
+<h3 id="toc_21">动效</h3>
+
+<ul>
+<li>除非对于你的 app 目的时必不可少的，否则不要必须使用动效：通常情况下，人们应该能够不依赖于任何动效就使用你的 app。</li>
+<li>当「减弱动态效果」辅助功能设置开启时，收紧动效：如果人们会被分散注意力或者在浏览动效（例如放大、缩小、快速转动或者周围的动态）时感到头晕或者恶心，他们就可以打开「减弱动态效果」。为了响应这个设置，考虑收紧你的动态的物理特性，这样它们还可以保持丰富和吸引人，但是可以减弱动态效果。例如：
+<ul>
+<li>收紧弹簧以减少跳跃效果或者跟着用户的手指轨迹进行 1:1 的运动。</li>
+<li>避免对在 Z 轴层级的深度变化添加动效；</li>
+<li>避免对模糊效果添加动效；</li>
+<li>用淡入淡出替代滑入滑出以避免动效。</li>
+</ul></li>
+<li>让人们可以控制视频和其他动效效果：避免在没有提供一个控制按钮或者其他可以控制的控件时自动播放视频或者效果。</li>
+<li>当展示移动或者闪烁的元素时保持谨慎：虽然微弱的移动和闪烁可以抓住用户的注意力，但这些效果也会让人分心，对于有视力障碍的人这些效果没有用。更糟的是，一些闪烁元素可能会造成癫痫病的发作。在所有的情况中，避免使用移动和闪烁作为传达信息的唯一方式。</li>
+</ul>
+
+<h2 id="toc_22">内容</h2>
+
+<p>稿件、图片、音频和视频提供给人们想从你的 app 中获得的信息。你可以通过努力让表达简单、提供信息的可替代版本来让你的内容对每个人都是可用的。</p>
+
+<h3 id="toc_23">稿件和图片</h3>
+
+<ul>
+<li>编辑稿件，使其简单明了：当稿件是直接的、不复杂的、没有错误的时，所有的用户都可以从中受益。</li>
+<li>对传达信息的所有图片提供可替代的描述：如果你没有描述你的内容中有含义的图片，你就会阻止使用旁白的用户完整体验你的 app。为了创造一个有用的描述，可以通过向能看到这个图片的人讲述一目了然的内容开始。因为旁白会朗读出图片周围的文本和任何说明文字，将焦点聚焦在描述图片本身想要传达的信息上。</li>
+</ul>
+
+<p><img src="media/15904030044639/4ADDED2B-048E-4C12-9E6F-260380621229.png" alt=""/></p>
+
+<ul>
+<li>让信息图表完全可用：提供一个对信息图表的简洁的描述以解释它在传达什么信息。如果人们可以与信息图表进行交互以获得更多或不同的信息，你需要让这些交互对使用旁白的用户也可用。辅助功能 API 提供了表示自定义交互元素的方式，这样辅助功能技术就可以帮助人们使用它。</li>
+<li>针对于辅助功能技术隐藏仅仅是装饰功能的图片：让旁白功能描述一张仅仅是装饰性的图片可能会浪费用户的时间，增加他们的认知负担，没有任何好处。</li>
+<li>给每一个屏幕一个单独的标题，提供可以在你的信息层级中识别是哪一部分的标题：当人们打开一个界面时，标题是他们从辅助功能技术中获取到的第一部分信息。为了帮助人们理解你的 app 的结构，为每个屏幕创造一个可以简要地描述它的内容和目的的单独的标题。相似地，人们需要精确的章节标题以帮助他们建立一个每个屏幕的信息层级的思维脑图。</li>
+</ul>
+
+<h3 id="toc_24">音频和视频</h3>
+
+<ul>
+<li>提供可隐藏字幕：可隐藏字幕给人们一个视频中音频消息的文字信息的等价物。使用可隐藏字幕可以让你提供同一个内容的多种翻译，允许系统选择匹配用户设置的那个版本。因为可隐藏字幕并不总是可用的，提供普通字幕也很重要。</li>
+<li>提供声音描述：使用声音描述提供那些只以视觉形式呈现的重要信息的口头描述。</li>
+<li>考虑提供视频的文本记录：提供一个包含音频和视频信息的完整的视频的文本描述是一个好主意，这样人们可以用不同的方式享受视频。</li>
+</ul>
+
+<p><em>注：目前文章大部分文字来源于对 HIG 中无障碍功能/辅助功能的翻译，后续可能会补充一些实际应用案例以及开发实例。</em></p>
+
+<h2 id="toc_25">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/accessibility/overview/introduction/">Introduction - Accessibility - Human Interface Guidelines - Apple Developer</a></li>
+</ul>
 
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
@@ -6468,462 +7205,6 @@ Apple TV 可以与一台高清显示器/电视完美工作，让内容栩栩如�
 <ul>
 <li><a href="https://developer.apple.com/videos/play/wwdc2017/806/">Design For Everyone - WWDC 2017 - Videos - Apple Developer</a></li>
 <li><a href="https://www.apple.com/accessibility/">Accessibility - Apple</a></li>
-</ul>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?]]></title>
-    <link href="https://steppark.net/15416976044741.html"/>
-    <updated>2018-11-09T01:20:04+08:00</updated>
-    <id>https://steppark.net/15416976044741.html</id>
-    <content type="html"><![CDATA[
-<p>Apple 在 10 月 30 日发布了全新的 iPad Pro 11 寸版本和 12.9 寸版本，它们去除了 Home 键、配备了 Face ID，从而使得边框变得极窄，iPad Pro 也步入了无 Home 键的时代。但与之前发布的 iPhone Xs、iPhone Xs Max 不同，全新的 iPad Pro 并没有刘海。同时，Apple 发布了第二代 Apple Pencil，在这支笔上配备了双击手势功能。那在设计与开发适配全新的具备 Split View、Slide Over 功能、搭配第二代 Apple Pencil 的 iPad Pro 时，有什么要注意的呢？</p>
-
-<span id="more"></span><!-- more -->
-
-<blockquote>
-<p>全新 iPad Pro 亮相：</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LjaKHqDbzSA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</blockquote>
-
-<ul>
-<li><strong>Note:</strong></li>
-</ul>
-
-<blockquote>
-<p>在进一步阅读此文章前，推荐阅读这篇文章的姊妹篇，有利于更好地理解 Apple 最新 iPhone、iPad 的适配原则：  </p>
-
-<ol>
-<li><a href="15086036845015.html">Designing For iPhone X —— iPhone 上有了刘海，设计和开发到底该咋整?</a><br/></li>
-<li><a href="15433010141111.html">Designing For iPhone Xs、iPhone Xs Max、iPhone Xʀ — 比大还大，更大的刘海屏 iPhone 来了</a></li>
-</ol>
-</blockquote>
-
-<h2 id="toc_0">目录</h2>
-
-<ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">屏幕尺寸的变化</a>
-</li>
-<li>
-<a href="#toc_2">App 的适配与设计原则</a>
-</li>
-<li>
-<a href="#toc_3">Compatibility Mode—App 没有适配会如何显示？</a>
-<ul>
-<li>
-<a href="#toc_4">全屏显示</a>
-</li>
-<li>
-<a href="#toc_5">Split View</a>
-</li>
-<li>
-<a href="#toc_6">Slide Over</a>
-</li>
-<li>
-<a href="#toc_7">只为 iPhone 而设计的 app</a>
-</li>
-<li>
-<a href="#toc_8">总结</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_9">适配常见问题</a>
-<ul>
-<li>
-<a href="#toc_10">示例一：由自定义 Tab Bar 引出的问题</a>
-</li>
-<li>
-<a href="#toc_11">示例二：完全自定义 UI 的全屏游戏</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_12">Apple Pencil 新功能的设计原则</a>
-</li>
-<li>
-<a href="#toc_13">Read More</a>
-<ul>
-<li>
-<a href="#toc_14">Apple 官方</a>
-</li>
-<li>
-<a href="#toc_15">非官方</a>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<h2 id="toc_1">屏幕尺寸的变化</h2>
-
-<ul>
-<li><p>全新的 iPad Pro 11″ 与 iPad Pro 10.5″ 相比，在去除了 Home 键之后，将上下边框（竖屏模式下）缩小，而机身尺寸几乎变化不大，故屏幕由原来的 10.5 寸增大为 11 寸。因此 iPad Pro 11″ 在横屏模式下的屏幕高度与 iPad Pro 10.5″ 是相同的，但在横屏模式下的屏幕宽度比  iPad Pro 10.5″ 多出了 82pt @2x，即横屏模式下 iPad Pro 11″ 为 1194 × 834pt @2x，iPad Pro 10.5″ 为 1112 × 834pt @2x。</p></li>
-<li><p>全新的 iPad Pro 12.9″ 与第二代 iPad Pro 12.9″ 相比，在去除了 Home 键并缩小了上下边框（竖屏模式下）后，整体机身尺寸变小一圈，使得屏幕仍保持 12.9 寸不变。因此第三代 iPad Pro 12.9″ 和前两代的 iPad Pro 12.9″ 的屏幕显示宽度、高度完全一致，即横屏模式下 1366 × 1024pt @2x。</p></li>
-</ul>
-
-<p><img src="media/15416976044741/67162CE4-3789-4CBE-B020-67DE1F8FA5A8.png" alt="67162CE4-3789-4CBE-B020-67DE1F8FA5A8"/></p>
-
-<ul>
-<li>有人可能会产生疑惑：同是新一代的 iPad Pro，为什么 11 寸的和 12.9 寸的相比上一代的变化方式不同？一个增大屏幕、保持机身尺寸几乎不变；一个保持屏幕尺寸不变、减小机身尺寸。如果新的小尺寸的 iPad Pro 仍然保持 10.5 寸屏幕、减小机身尺寸，iPad 分辨率的变种不就更少、适配不就更简单？一个个人感觉靠谱的说法：iPad Pro 的定位是注重生产力的个人电脑，Smart Keyboard 是其重要的一个配件，不可或缺，如果机身尺寸在上一代的基础上进一步缩小，那就会导致全尺寸的 Smart Keyboard 的按键设计出现问题。所以基于此，Apple 不会再减小 iPad Pro 的机身尺寸，自然只能扩大屏幕尺寸。</li>
-</ul>
-
-<h2 id="toc_2">App 的适配与设计原则</h2>
-
-<p>全新的 iPad Pro 的屏幕与 iPhone Xs 一样是四个圆角，所以在设计 app 时，应该避免重要的信息或控件出现在四个角落，以免被圆角遮挡或切割。像 Status Bar、Navigation Bar、Tab Bar、Tool Bar 这些会覆盖到边角的标准控件，应该被自动且正确地放置。</p>
-
-<p><img src="media/15416976044741/ED039BBE-40FF-438D-A43F-9BAAC784EF3A.png" alt="ED039BBE-40FF-438D-A43F-9BAAC784EF3A"/></p>
-
-<p>为了让你的 app 在全新的 iPad Pro 上完美地呈现，你需要在设计 app 时遵守下面三个原则：</p>
-
-<ul>
-<li><p><strong>使用安全区域布局规范（Safe Area Layout Guides）阻止界面元素被屏幕圆角切割或者被 Home Indicator 遮挡。</strong></p>
-<ul>
-<li><p>在屏幕上没有其他控件时，安全区域几乎覆盖整个屏幕，在横屏和竖屏模式下，需要在底部留出 20pt 高度的区域给 Home Indicator，以防内容被 Home Indicator 遮挡。</p>
-<p><img src="media/15416976044741/AA38670A-D8C0-4759-A5FB-FFAE16FB66F8.png" alt="AA38670A-D8C0-4759-A5FB-FFAE16FB66F8"/></p></li>
-<li><p>不要尝试在 Home Indicator 周围放置控件、元素，虽然在全屏模式下，Home Indicator 是位于屏幕底部中央位置的，但在 Split View 中，Home Indicator 的位置会跟随 app 发生变化。如果有内容放置在 Home Indicator 两边就可能会被遮挡。</p>
-<p><img src="media/15416976044741/52F6C707-BEDA-4663-9EFC-68573F451383.png" alt="52F6C707-BEDA-4663-9EFC-68573F451383"/></p></li>
-<li><p>当界面中显示 Status Bar 时，Status Bar 的高度是 24pt，而不是 iPhone 或者前几代 iPad 上的 20pt。</p>
-<p><img src="media/15416976044741/73F8EA5A-E64A-41B3-98C1-7BE2AB92DB05.png" alt="73F8EA5A-E64A-41B3-98C1-7BE2AB92DB05"/></p></li>
-<li><p>特别提示，在 Slide Over 模式中，app 的安全区域完全充满 app 的可显示区域，安全区域到顶部和底部的距离均为 0pt。 </p>
-<p><img src="media/15416976044741/FE0AAB89-583B-46CA-AAD0-363DD002F92C.png" alt="FE0AAB89-583B-46CA-AAD0-363DD002F92"/></p></li>
-<li><p>在界面中有 Navigation Bar、Tab Bar 或者 Tool Bar 时，不管屏幕方向是横向还是纵向，安全区域到左右两侧的距离均为 0pt。这不同于 iPhone Xs，在横向屏幕时，因为刘海的缘故，需要在左右两侧留出对称相等的安全距离。</p>
-<p><img src="media/15416976044741/71D19712-586A-40B0-BA80-293F2C31BFF3.png" alt="71D19712-586A-40B0-BA80-293F2C31BFF3"/></p></li>
-</ul></li>
-<li><p><strong>使用布局边界（Layout Margins）从屏幕左端到屏幕右端插入内容。</strong></p>
-<ul>
-<li><p>布局边界在内容之间、屏幕的左右边缘提供了可以呼吸的空间，也有利于内容与 Status Bar、Navigation Bar、Tab Bar、Status Bar 上的内容相对齐。同时布局边界也使得内容不会滚动到屏幕边缘的圆角中去。</p>
-<p><img src="media/15416976044741/87E608E5-598A-44F5-98A5-631F7A8CF886.png" alt="87E608E5-598A-44F5-98A5-631F7A8CF886"/></p></li>
-<li><p>布局边界的宽度是由设备的 Size Class 来决定的。在 Regular 普通模式（如iPad Pro 11″ 横屏模式）下，布局边界的宽度是 20pt；在 Compact 紧凑模式（如 iPhone Xs 竖屏模式）下，布局边界的宽度是 16pt。有关于 Size Class 的更多细节可以阅读我的另一篇文章：<a href="15171487371271.html">尺寸级别和核心要素 Size Classes and Core Components - WWDC 2017 Session 812</a></p>
-<p><img src="media/15416976044741/CD25F2B3-A2CD-40DC-A63A-D23796C9202B.png" alt="CD25F2B3-A2CD-40DC-A63A-D23796C9202B"/></p></li>
-</ul></li>
-<li><p><strong>要考虑到多种不同的屏幕比率。</strong></p>
-<ul>
-<li><p>所有之前的 iPad 的屏幕比率是 4:3，iPad Pro 11″ 有着更宽的屏幕比率。</p>
-<p><img src="media/15416976044741/ABF2E500-6E6E-4985-BDCB-BC9B44AF9B6E.png" alt="ABF2E500-6E6E-4985-BDCB-BC9B44AF9B6E"/></p></li>
-<li><p>例如，一个游戏只为 4:3 比率而设计，那么在横屏模式下的 iPad Pro 11″ 上显示时，左右两侧就会出现黑条，或者当 app 充满屏幕显示时，上下两侧的内容就会被切掉。所以要特别注意那些独立的界面元素的位置和大小。</p>
-<p><img src="media/15416976044741/3C2337B8-C3B5-423C-B863-6497ABB8CA3E.png" alt="3C2337B8-C3B5-423C-B863-6497ABB8CA3E"/></p></li>
-</ul></li>
-</ul>
-
-<h2 id="toc_3">Compatibility Mode—App 没有适配会如何显示？</h2>
-
-<p>不同于 iPhone Xs、iPhone Xs Max 在屏幕尺寸发生变化时基本上只需要考虑竖屏和横屏两种情况，iPad Pro 在屏幕尺寸发生变化时不仅需要考虑 app 全屏时在竖屏和横屏的适配显示方式，还需要考虑 app 在 Slide Over、Spit View 模式下的适配显示方式。<br/>
-以下主要以 iPad Pro 11″ 为例说明在各种不同的情况下，未适配的 app 会如何在新款 iPad Pro 上显示。请注意，探究 app 最后的显示结果是次要的，重要的是为什么 app 会那样显示，以此来深入了解、思考当硬件屏幕尺寸发生变化时，原有的 app 如何兼容、新的 app 如何与旧的 app 共存？进一步可展望未来新硬件设备尺寸的可能性和兼容旧 app 的大原则、大方向。</p>
-
-<p><strong>图例说明</strong></p>
-
-<ul>
-<li>蓝色表示已经适配了新 iPad Pro 的应用的实际显示区域，红色表示已经适配了新 iPad Pro 的另一个应用的实际显示区域（如有）。</li>
-<li>黄色表示未适配新 iPad Pro 的应用的实际显示区域，绿色表示未适配新 iPad Pro 的另一个应用的实际显示区域（如有）。</li>
-<li>黑色表示 app 运行时不能被利用的区域，通常会显示状态栏 Status Bar、Home Indicator 或黑边等。</li>
-<li>为了更好地区分屏幕边框和屏幕显示区域，特将示意图中的 iPad 黑色边框修改为了白色。</li>
-<li>以下示意图中的尺寸、比例虽与实际情况接近，但不足够精确，仅供参考。</li>
-</ul>
-
-<p>在分不同的情况观察未适配的 app 如何显示之前，需要先将 iPad 上的 app 分为三类。发布在 App Store 中的 app 有的是专门为 iPad 设计的，有的并没有，只为 iPhone 进行了设计，但可以下载运行在 iPad 上。而专门为 iPad 设计的这类应用中，一部分应用支持 Split View、Slide Over 功能，常见的如「微信」、「微博」，这类 app 因为支持这种功能所以其布局会根据屏幕分配的显示区域大小动态变化；另一部分应用则不支持 Split View、Slide Over 功能（这类 app 在 <code>Info.plist</code> 文件中将 <code>UIRequiresFullScreen</code> 属性设置为了 <code>YES</code>），常见的如「腾讯视频」、「淘宝」、大部分游戏，它们不支持这种功能因此 app 的布局是固定的。因此分出的三类分别是：</p>
-
-<ol>
-<li>专门为 iPad 而设计但不支持 Split View、Slide Over 功能的 app；</li>
-<li>专门为 iPad 而设计且支持 Split View、Slide Over 功能的 app；</li>
-<li>只为 iPhone 而设计但可以运行在 iPad 上的 app。</li>
-</ol>
-
-<p>这三类重点来关注前两类。</p>
-
-<h3 id="toc_4">全屏显示</h3>
-
-<p>已经适配全新 iPad Pro 的 app 的显示区域自然可以完全充满屏幕。在屏幕的顶端一般会显示状态栏 Status Bar，底部一般会显示 Home Indicator。<br/>
-对于一个未适配的 app来说，其在开发时，圆角屏幕和 Home Indicator 是不存在的。所以当显示在全新的 iPad Pro 上时，必须要留出空间。在横屏模式下的 iPad Pro 11″ 上，一个未适配且不支持 Split View 功能的 app 由于其布局尺寸是固定的，所以其必须保持 4:3 的显示比例，又需要在顶部为 Status Bar 和在底部为 Home Indicator 留出空间，综上其显示时上、下、左、右都是有黑边的。而对于一个未适配但支持 Split View 功能的 app 由于可以自动调整布局尺寸，所以其显示比例是灵活的。只需要为 Status Bar 和 Home Indicator 留出空间，即只有上、下有黑边。</p>
-
-<p><img src="media/15416976044741/5F195401-FC52-4719-9103-B8198DED3DB9.png" alt="5F195401-FC52-4719-9103-B8198DED3DB9"/></p>
-
-<p>同理，在竖屏模式下的 iPad Pro 11″ 上，一个未适配且不支持 Split View 功能的 app 显示比例仍旧保持 4:3，其实际显示区域和 iPad Pro 10.5″ 是一样的，但在上、下留有黑边。而对于一个未适配但支持 Split View 功能的 app 由于比例灵活，其实际显示区域大于 iPad Pro 10.5″，上、下的黑边比前述情况更小一些。</p>
-
-<p><img src="media/15416976044741/EE824C4F-2218-457D-8D0B-AAF7F2563308.png" alt="EE824C4F-2218-457D-8D0B-AAF7F2563308"/></p>
-
-<p>iPad Pro 12.9″ 与前两代屏幕分辨率完全相同，于是很多人想当然的认为 app 就有什么需要适配的。然而由于圆角屏幕和 Home Indicator 的引入，app 仍然需要做一些适配工作。<br/>
-在横屏模式下的 iPad Pro 12.9″ 上，一个未适配且不支持 Split View 功能的 app，显示时保持比例 4:3，其上、下、左、右均有黑边，但相比同情况下的 iPad Pro 11″，左右两侧的黑边宽度看上去更小一些。在竖屏模式下的 iPad Pro 12.9″ 上，一个未适配且不支持 Split View 功能的 app 由于要保持 4:3 的显示比例且上、下需要留出空间，所以其左、右两侧会空出，即其上、下、左、右均有黑边。</p>
-
-<p><img src="media/15416976044741/63894588-8DC1-406F-B2F9-D5B114C2C307.png" alt="63894588-8DC1-406F-B2F9-D5B114C2C307"/></p>
-
-<p>虽然现在已经是 iPad Pro 11″ 和 iPad Pro 12.9″（第三代）的时代了，iPad Pro 10.5″ 已经成为了历史。但仍旧有许多 app 没有适配 iPad Pro 10.5″ 和 iPad Pro 12.9″，只适配了 iPad 9.7″。这种应用在 iPad Pro 11″ 和 iPad Pro 12.9″ 上显示时不仅会出现上述的黑边情况，还会在 iPad 9.7″ 基础上直接放大到对应尺寸，由此造成的结果就是 app 显示看上去有点糊或者说字号看上去都很大或者说 app 显示的内容比正常情况少。</p>
-
-<h3 id="toc_5">Split View</h3>
-
-<p>在 Split View 显示模式下，两个 app 可以以 1:1 或者 2:1 的方式并排显示，实现多任务处理。两个已经适配全新 iPad Pro 的 app 进行 Split View 时，app 均能充满其分配的显示区域。在屏幕的顶端一般会显示状态栏 Status Bar，底部一般会显示 Home Indicator，两个 app 之间会显示控制 app 显示方式的控制条。<br/>
-在此指出 iOS 12 和新设备引入的两个小变化：</p>
-
-<ul>
-<li>自 iOS 12 开始，Apple 取消了在竖屏模式下的 1/2 Split View 这种显示模式，猜测可能是因为在此模式下两个 app 的显示宽度比较窄，功能使用比较受限，所以被取消。当处于横屏下 1/2 Split View 显示模式时，此时将设备竖屏会自动切换到 1/3 Split View 显示模式。</li>
-<li>由于 iPad Pro 11″ 的宽度（横屏模式下）比上一代进一步增加，所以在横屏下的 1/3 Split View 显示模式时，较窄的 app 的宽度由 320pt（iPhone SE、iPhone 4s 相同宽度） 增加到了 375pt（iPhone 8、iPhone Xs 相同宽度），与 iPad Pro 12.9″ 同样情况下的宽度相等。</li>
-</ul>
-
-<p>不管是横屏还是竖屏，未适配的 app 在显示时需要为 Status Bar 和 Home Indicator 留出空间，所以在 1/2 Split View 和 1/3 Split View 时上、下均有黑边。<br/>
-特别注意的是，若一个已适配的 app 和另一个没有适配的 app 进行 Split View 时，两个 app 都会被当做没有适配，即上、下有黑边，以此作兼容性处理。</p>
-
-<p><img src="media/15416976044741/97419587-D98C-45C6-A9C3-A6ED7516A5FC.png" alt="97419587-D98C-45C6-A9C3-A6ED7516A5F"/></p>
-
-<h3 id="toc_6">Slide Over</h3>
-
-<p>在 Slide Over 显示模式下，一个全屏显示的 app 或者两个进行 Split View 的 app 之外，可以打开另一个 app 附在其他 app 之上进行操作，不需要时可以滑出屏幕隐藏，继续在之前的 app 上操作。这个功能对于需要临时查看、参考的 app 很有用。已经适配全新 iPad Pro 的 app 进行 Slide Over 时，app 可以充满其分配的显示区域，并浮在其他 app 之上，上、下、右都会留出一个 Status Bar 的高度/宽度（24pt）。<br/>
-同样的，由于 iPad Pro 11″ 的宽度（横屏模式下）的增加，横屏下进行 Slide Over 的 app 的宽度也由 320pt（iPhone SE、iPhone 4s 相同宽度） 增加到了 375pt（iPhone 8、iPhone Xs 相同宽度），与 iPad Pro 12.9″ 同样情况下的宽度相等。</p>
-
-<p>不管是横屏还是竖屏，未适配的 app 在进行 Slide Over 时，app 均可以充满被分配的显示区域。但在实际情况下，与已适配的 app 对比，还是可能会有一些细节上的不同。例如，Tab Bar/Tool Bar 的高度在未适配的 app 中是 50pt，而在已适配的 app 中是 70pt，增加的 20pt 即是 Home Indicator 的高度。</p>
-
-<p><img src="media/15416976044741/FC793C5B-154B-42D1-B4B1-25CE03E965AE.png" alt="FC793C5B-154B-42D1-B4B1-25CE03E965AE"/></p>
-
-<h3 id="toc_7">只为 iPhone 而设计的 app</h3>
-
-<p>在 iOS 12 之前，那些只为 iPhone 而设计的 app 运行在 iPad 上时，会以 iPhone 4s 的屏幕尺寸 320pt × 480pt 显示，可以等比例放大显示。可想而知，在如今这个大屏时代，其显示效果真是又窄又矮。<br/>
-在 iOS 12 中，Apple 终于更改了这个显示尺寸，这样的 app 会以 iPhone 8 的屏幕尺寸 375pt × 667pt 显示，可以等比例放大显示。自然的，无论放大与否，app 的四周均有黑边，毕竟这些 app 不是为 iPad 而设计的。</p>
-
-<p><img src="media/15416976044741/3AC1E889-075C-4F65-9C53-9079CEEFD0FD.png" alt="3AC1E889-075C-4F65-9C53-9079CEEFD0FD"/></p>
-
-<h3 id="toc_8">总结</h3>
-
-<p>从各种情况的不适配 app 的显示结果来看，全新 iPad Pro 对原有 app 的兼容显示原则并不像从 iPhone 7 → iPhone X 时那样简单明了，app 的显示尺寸也不一定是与老设备的显示尺寸完全一致，需要考虑 iPad 特有的多种不同的显示模式、屏幕方向、app 显示比例的变化、新的屏幕元素（圆角和 Home Indicator ）的引入、已适配 app 和未适配 app 的共存等诸多因素，综合这些来确定一个合适的最终方案。</p>
-
-<p>从发布 iPhone Xs Max 之后来看，由于 iPhone Xs Max 上的 app 显示时会直接放大 iPhone X 版本的 app 到全屏，不存在黑边，看上去问题没有那么严重，因此 app 的开发者/开发厂商对于适配 iPhone Xs Max 的积极性并不高或者说推进速度并不块，例如「微信」在 iPhone Xs Max 发布今近两月后仍没有适配。而对于全新的 iPad Pro 来说，iPad 的 app 市场远小于 iPhone app 市场，许多厂商在考虑缩减成本的情况下，将 iPad 版本直接做成了 iPhone 版本的放大版甚至完全停止更新或取消 iPad 版本。这是一个不好的信号，可想而知，全新 iPad Pro 的 app 的适配推进速度也不会很快。<br/>
-Apple 肯定也意识到了 iPad app 生态的这些问题，这两年更加坚定和清晰地将 iPad 分为了高低端两档产品，低端维持原有的娱乐属性，高端大幅向提高生产力、创造力方向改进，并从近期和远期推出两项改进计划：</p>
-
-<ol>
-<li>近期：Apple 已经发出<a href="https://developer.apple.com/ios/submit/">通知</a>，自 2019 年 3 月开始，所有更新提交的 app 或新上架的 app 都需要使用 Xcode 10.1/iOS 12.1 SDK 或以上版本来编译，即需要更新适配最新的 iPhone、iPad 机型。</li>
-<li>远期：Apple 在 WWDC 2018 上宣布，从 2019 年晚些时候开始，iOS 平台上的 app 可以通过 UIKit 等底层框架的适配和调整直接借鉴到 macOS app 中去，以减少分别开发两个平台 app 的成本。macOS 10.14 中的「Stocks 股市」、「News 新闻」、「Voice Memos 语音备忘录」、「Home 家庭」app 即是这项技术的一个示例。</li>
-</ol>
-
-<p>希望随着 Apple 对 iPad 的定位更加清晰，可以吸引更多的生产力、创造力 app 开发者入场，使得 iPad app 市场死灰复燃，真正可以说出「用 iPad Pro 取代电脑」这句话。那时的 iPad Pro 和电脑市场到底会是怎样的呢？值得期待。</p>
-
-<h2 id="toc_9">适配常见问题</h2>
-
-<h3 id="toc_10">示例一：由自定义 Tab Bar 引出的问题</h3>
-
-<ul>
-<li>下面这个 app 在 iPad Pro 10.5″ 上运行时没有任何问题，但在 iPad Pro 11″ 上运行时，底部的 Tab Bar 会和 Home Indicator 重叠在一起。</li>
-<li>造成这个问题的一个原因是底部的 Tab Bar 看上去是标准的 Tab Bar，但实际上是自定义的 Tab Bar，并没有服从 Safe Area 的布局规范；另一个可能的原因是 app 在开发时并没有使用 Storyboard 而是通过 API 去定义了屏幕边界。</li>
-<li>解决这个问题的方法很简单：在开发时使用 Storyboard 以及符合 Safe Area 的布局规范，以及尽可能地使用原生的 UI 控件。</li>
-</ul>
-
-<p><img src="media/15416976044741/8974FE24-E0EA-4F45-B685-4119F4FF985C.png" alt="8974FE24-E0EA-4F45-B685-4119F4FF985"/></p>
-
-<h3 id="toc_11">示例二：完全自定义 UI 的全屏游戏</h3>
-
-<ul>
-<li>下面这个 app 是完全自定义 UI 元素的一个全屏游戏，在 iPad Pro 10.5″ 上运行也没有任何问题，但运行在 iPad Pro 11″ 上会发现，上部和顶部的元素被切掉了，而且四个角落里的按钮离屏幕圆角太近了以致于不能完全显示出来。</li>
-<li>造成这个问题的一个原因是游戏 app 在开发时假设了屏幕的比率固定为 4:3，然而这对于 iPad Pro 11″ 来说并不再符合。</li>
-<li> 需要在设计时就考虑到可变的屏幕比率，特别注意新的 iPad 的四个圆角。并且在开发时使用 Safe Area 布局规范，不要让按钮和控件超出安全区域。特别在游戏中，要注意游戏的手势或控件要远离 Home Indicator。</li>
-</ul>
-
-<p><img src="media/15416976044741/5B22AD48-B1A2-4A09-B75D-03FC2E2ABF11.png" alt="5B22AD48-B1A2-4A09-B75D-03FC2E2ABF11"/></p>
-
-<h2 id="toc_12">Apple Pencil 新功能的设计原则</h2>
-
-<p><img src="media/15416976044741/A33D261C-522D-4423-B4BD-50851B7744FE.png" alt="A33D261C-522D-4423-B4BD-50851B7744FE"/></p>
-
-<ul>
-<li>第二代 Apple Pencil 在笔身上增加了一个双击手势。用户可以在系统设置中为双击手势选定一个固定操作，这也给用户在使用各个 app 时提供了连贯一致的、可预测的使用体验。用户可以在以下几种选项中选择双击手势的操作：
-<ul>
-<li>在当前选择的工具和橡皮擦之间切换；</li>
-<li>在当前选择的工具和上次使用的工具之间切换；</li>
-<li>展示一个调色板；</li>
-<li>关闭双击手势功能。</li>
-</ul></li>
-</ul>
-
-<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.41.04.png" alt="屏幕快照 2018-11-06 上午12.41.04"/></p>
-
-<ul>
-<li><p>为了在 app 中提供不同功能的 Apple Pencil 双击操作手势，你需要遵守下面几个原则：</p>
-<ul>
-<li><p>如果在系统设置中用户关闭了双击操作手势，app 就不应该响应用户在 Apple Pencil 上的双击操作手势。</p>
-<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.41.27.png" alt="屏幕快照 2018-11-06 上午12.41.27"/></p></li>
-<li><p>在任何可能的时候，都要遵守系统的设置。在你的 app 中如果存在多种不同的笔功能、橡皮擦功能、调色板功能，但却并没有遵守双击操作手势对应功能的系统设置，这种不一致、不连贯的操作会让你的 app 变得不直观，特别是在配合其他支持 Apple Pencil 的 app 进行多任务操作时尤为明显。</p>
-<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.41.45.png" alt="屏幕快照 2018-11-06 上午12.41.45"/></p></li>
-<li><p>如果在你的 app 中，需要针对双击手势提供不同于系统设置中的功能，确保让这个自定义的行为默认保持关闭。在用户明确需要的时候，由用户主动开启，以让 app 中的自定义功能覆盖系统层级中设定的功能。这样也防止了用户在使用你的 app 时发现其行为与其他 app 不一致。</p>
-<p><img src="media/15416976044741/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-06%20%E4%B8%8A%E5%8D%8812.42.27.png" alt="屏幕快照 2018-11-06 上午12.42.27"/></p></li>
-<li><p>如果你的 app 支持 Apple Pencil，但并不支持或不完全支持在系统设置中提到的几个双击手势功能，你可以尽可能地将相似含义的功能映射到 Apple Pencil 的双击手势上，以保持连贯一致。例如在一个照片类 app 中，Apple Pencil 的双击手势可以在两种不同的滤镜模式中切换。不要让 Apple Pencil 的双击手势执行直接修改内容的操作以防止出现严重的操作失误，因为双击手势这个操作很容易误操作。</p></li>
-<li><p>不管 Apple Pencil 的双击手势在你的 app 中对应什么操作，确保总是给用户提供有关于 Apple Pencil 双击后发生了什么的清晰、及时的视觉反馈，这样用户可以及时感知到 app 的行为发生了变化，如果是误操作可以及时恢复。</p></li>
-<li><p>要向第一代、第二代 Apple Pencil 的用户都提供一份绝佳的使用体验。Apple Pencil 双击手势所提供的功能应该是用户在 app 中某个功能的快捷方式，而不是在 app 的界面中找不到的功能。</p></li>
-</ul></li>
-</ul>
-
-<h2 id="toc_13">Read More</h2>
-
-<h3 id="toc_14">Apple 官方</h3>
-
-<ul>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/#auto-layout">Adaptivity and Layout - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/">Image Size and Resolution - Icons and Images - iOS - Human Interface Guidelines - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/">Launch Screen - Icons and Images - iOS - Human Interface Guidelines - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/multitasking/">Multitasking - System Capabilities - iOS - Human Interface Guidelines - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/ipad/">Developing iPad Apps - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/videos/play/tech-talks/804/">Designing for iPad Pro and Apple Pencil - Tech Talks - Videos - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/videos/play/tech-talks/209/">Bringing Your Apps to the New iPad Pro - Tech Talks - Videos - Apple Developer</a></li>
-</ul>
-
-<h3 id="toc_15">非官方</h3>
-
-<ul>
-<li> <a href="https://medium.com/@hacknicity/how-ipad-apps-adapt-to-the-new-11-and-12-9-ipads-pro-cabd1c0e5f20">How iPad Apps Adapt to the New 11” and 12.9” iPads Pro</a></li>
-</ul>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Designing For iPhone Xs、iPhone Xs Max、iPhone Xʀ — 比大还大，更大的刘海屏 iPhone app 如何适配]]></title>
-    <link href="https://steppark.net/15433010141111.html"/>
-    <updated>2018-11-27T14:43:34+08:00</updated>
-    <id>https://steppark.net/15433010141111.html</id>
-    <content type="html"><![CDATA[
-<p>在人民群众的热切期盼下，比 iPhone X 更大、刘海屏版的 iPhone 8 Plus —— iPhone Xs Max 终于在 2018 年 9 月苹果秋季发布上发布，一同发布的还有升级版的 iPhone X —— iPhone Xs 和看似低配实则仍然很贵的 iPhone Xʀ。正如<a href="15086036845015.html#toc_16">去年文章中推测</a>的一样，iPhone Xs Max 的分辨率是在 iPhone 8 Plus 的基础上保持宽不变高拉长的规律且保持与 iPhone X 一致的屏幕比例，即为 1242px × 2689px。那设计、适配运行在 iPhone Xs Max 上以及 iPhone Xʀ 上的 app 又有什么需要注意的呢？这就是本篇文章想要探讨的主题。</p>
-
-<span id="more"></span><!-- more -->
-
-<blockquote>
-<p>iPhone Xs Max、iPhone Xs 广告：</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uJkOP1-v9B4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>iPhone Xʀ 广告：</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tG7vx7-3sl0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</blockquote>
-
-<ul>
-<li><strong>Note:</strong></li>
-</ul>
-
-<blockquote>
-<p>在进一步阅读此文章前，推荐先阅读这篇文章的姊妹篇，看看初代刘海屏手机上 app 的那些设计和开发问题，再来更好地理解全新 iPhone 的变化：  </p>
-
-<ul>
-<li><a href="https://steppark.net/15086036845015.html">Designing For iPhone X —— iPhone 上有了刘海，设计和开发到底该咋整?</a><br/></li>
-</ul>
-
-<p>2018 年 10 月苹果秋季发布会上，iPad 也与 Home 实体键说再见了，想了解全新 iPad Pro 的更多设计和适配细节，推荐阅读下面这篇文章：  </p>
-
-<ul>
-<li><a href="https://steppark.net/15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a><br/></li>
-</ul>
-</blockquote>
-
-<h2 id="toc_0">屏幕尺寸的变化</h2>
-
-<ul>
-<li>iPhone Xs 的屏幕尺寸以及屏幕分辨率与上一代的 iPhone X 没有任何区别，仍然是 375 × 812pt @2x。</li>
-<li>iPhone Xs Max 的屏幕尺寸是 6.5 寸，其屏幕分辨率是在 iPhone 8 Plus 的基础上保持宽不变高拉长，即 414 × 896pt @3x。其比例因子与 iPhone 8 Plus 一样，同是 @3x。</li>
-<li>对于 6.1 寸的 iPhone Xʀ，其屏幕分辨率是 414 × 896pt @2x，和 iPhone Xs Max 不同的是其比例因子为 @2x，但它们以 pt 为单位的屏幕分辨率是完全一样的，这就意味着在这两款设备上运行相同的 app，看到的内容是完全一致的。</li>
-<li>新发布的三款 iPhone 设备的屏幕比例都大约为 9:19.5。</li>
-</ul>
-
-<p><img src="media/15433010141111/5AA815C9-BF65-408C-BE39-6C1363922A04.png" alt="5AA815C9-BF65-408C-BE39-6C1363922A04"/><br/>
-<em>注：iPhone 8 Plus 物理设备的屏幕在渲染时是在上述屏幕分辨率基础上进一步进行了缩放，实际屏幕物理分辨率为 1080px × 1920px。</em></p>
-
-<ul>
-<li>Size Class 方面，由于 iPhone Xs Max 和 iPhone Xʀ 是由 iPhone 8 Plus 衍化而来，所以其在横屏和竖屏时的 Size Class 与 iPhone 8 Plus 保持一致，具体可以参见下表。</li>
-<li>特别的，在横屏条件下，iPhone Xs Max 和 iPhone Xʀ 的 Size Class 均为「Regular width，Compact height」，与 iPhone Xs 横屏的 Size Class「Compact width，Compact height」相比，更宽的宽度可以显示更多的内容，例如 Split View 可以同时显示 Master View 与 Detail View。</li>
-<li>有关于 Size Class 的更多细节可以阅读我的另一篇文章：<a href="15171487371271.html">Size Classes and Core Components - WWDC 2017 Session 812</a></li>
-</ul>
-
-<p><img src="media/15433010141111/D92ABA2D-810A-4DF5-B386-F38C9F37B85E.png" alt="D92ABA2D-810A-4DF5-B386-F38C9F37B85E"/></p>
-
-<h2 id="toc_1">未适配 app 在新 iPhone 上的显示</h2>
-
-<ul>
-<li>由于 iPhone Xs 与 iPhone X 的屏幕分辨率、屏幕尺寸完全一致，那如果已经适配了 iPhone X 的 app 自然可以在 iPhone Xs 上正常显示。</li>
-<li><p>对于相同屏幕分辨率（以 pt 为单位）的 iPhone Xs Max 与 iPhone Xʀ 来说，由于它们与 iPhone X 的屏幕比例一样，所以运行在这两款新 iPhone 上的未适配 app 会直接通过放大拉伸 iPhone X 版本的 app 到全屏幕的方式来显示。这时，与 iPhone X 上显示的内容是完全一致的，但由于是整体放大显示，与 iPhone X 屏幕上的 app 显示相比仔细看会有些模糊。</p>
-<p><img src="media/15433010141111/FE5B0516-B29C-4DFF-810B-AB58145C6EC9.png" alt="FE5B0516-B29C-4DFF-810B-AB58145C6E"/><br/>
-图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone%20X%CA%80-screen-sizes-f4c1f2d4eec2">How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes</a></p></li>
-</ul>
-
-<h2 id="toc_2">改进和改变</h2>
-
-<h3 id="toc_3">自动布局 Auto Layout 性能的改善</h3>
-
-<ul>
-<li><p>Auto Layout 在 iOS 12 中的性能得到了大幅提升，推荐在开发 app 甚至设计 app 时就通过 Auto Layout 的方法进行思考，这将十分有利于以后新机型的适配，更加直观的同时减少适配工作量。下图中灰色表示 Auto Layout 在 iOS 11 中的表现，蓝色表示在 iOS 12 中的表现。</p>
-<p><img src="media/15433010141111/40E38F4A-9429-48A9-9681-6DE2A666B06A.png" alt="40E38F4A-9429-48A9-9681-6DE2A666B06A"/></p></li>
-</ul>
-
-<h3 id="toc_4">Split View Controller 在 iPhone Xs Max 和 iPhone Xʀ 上的行为变化</h3>
-
-<ul>
-<li><p>由于屏幕宽度（横屏下）的进一步拉长，在横屏时，iPhone Xs Max、iPhone Xʀ 默认情况下显示的 Split View 与 iPhone 8 Plus 有稍许的不同。</p>
-<ul>
-<li>虽然这几款设备在横屏时的 Size Class 都为「Regular width，Compact height」，但在默认情况下显示 Split View 时，iPhone 8 Plus 会默认左右并排显示 Master View 和 Detail View，用户若有需要可以手动放大 Detail View 到全屏，其 Master View 的 Size Class 为「Compact width，Compact height」，Detail View 的 Size Class 为「Regular width，Compact height」。</li>
-<li>而在 iPhone Xs Max 和 iPhone Xʀ 上，会像「邮件」应用在竖屏 iPad 上一样，默认全屏显示 Detail View，需要显示 Master View 时可以通过导航栏上的按钮或在屏幕左侧右滑呼出，Master View 的显示方式是直接覆盖住 Detail View 的一部分显示，而不是左右并排显示。此时 Master View 的 Size Class 为「Regular width，Compact height」，Detail View 的「Regular width，Compact height」也为「Regular width，Compact height」。</li>
-<li>当然，开发者可以在开发时不选择这种默认显示模式，而选择与 iPhone 8 Plus 上一样的左右并排显示模式。</li>
-</ul>
-<p><img src="media/15433010141111/F6BB8A5B-5ED1-424C-8C99-75DCD1A871B8.png" alt="F6BB8A5B-5ED1-424C-8C99-75DCD1A871B8"/><br/>
-图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone%20X%CA%80-screen-sizes-f4c1f2d4eec2">How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes</a></p></li>
-<li><p>代码中的实现一瞥</p>
-<ul>
-<li><p>默认全屏显示 Detail View，通过点击导航栏上左侧按钮或屏幕左侧右滑呼出 Master View：</p>
-<p><img src="media/15433010141111/4EFB45A9-843D-4CDC-97F7-17BDBA2150DB.png" alt="4EFB45A9-843D-4CDC-97F7-17BDBA2150DB"/></p></li>
-<li><p>Detail View 和 Master View 并排显示：</p>
-<p><img src="media/15433010141111/D7F88015-8235-41C1-9AF6-E81B10204126.png" alt="D7F88015-8235-41C1-9AF6-E81B10204126"/></p></li>
-</ul></li>
-</ul>
-
-<h2 id="toc_5">适配常见问题</h2>
-
-<h3 id="toc_6">避免写死屏幕分辨率或根据设备机型执行指令</h3>
-
-<ul>
-<li>为某一个分辨率或某一个机型设置特例，虽然看上去很有针对性，但这反而占用了开发其他新特性的时间，后期还需要维护成本，这很大程度上是冗余的工作。</li>
-<li>当代码在新的机型上运行时，可能会造成不可预知的问题，而你又不能在第一时间让用户用上新版本，这会影响用户体验。</li>
-<li>你为一个分辨率、一个机型设置里特例，那之后有了新的机型、新的分辨率，还需要再做一遍这个工作，耗时耗力，无穷无尽。</li>
-<li>要把这部分工作交给 UIKit 和 Auto Layout 来处理。</li>
-</ul>
-
-<h3 id="toc_7">确定某个特性在设备上的可用性的方法</h3>
-
-<ul>
-<li><p>新发布的 iPhone Xʀ 并不支持 3D Touch 功能，以「家庭 Home」app 为例，当在支持 3D Touch 功能的设备开启了 3D Touch 功能时，可以通过 3D Touch 查看智能硬件的更多选项；当在不支持 3D Touch 功能的设备上或者支持此功能但没有开启此功能时，可以通过长按来查看智能硬件的更多选项。具体代码实现方式示例如下：</p>
-<ul>
-<li><p>在 app 启动时检查设备是否支持某个特性，以作出相对应的处理：</p>
-<p><img src="media/15433010141111/50D640F1-94EB-41FD-8EDE-2519618F9732.png" alt="50D640F1-94EB-41FD-8EDE-2519618F9732"/></p></li>
-<li><p>用户可能在运行时关闭了 3D Touch，需要在运行时也检查设备某个特性的状态，以做出改变：</p>
-<p><img src="media/15433010141111/06CBD00D-AD43-428D-8BCF-6FD41DAA2DF8.png" alt="06CBD00D-AD43-428D-8BCF-6FD41DAA2DF8"/></p></li>
-<li><p>可以考虑使用长按手势来替代 3D Touch 的功能。</p></li>
-</ul></li>
-</ul>
-
-<h2 id="toc_8">Read More</h2>
-
-<h3 id="toc_9">Apple 官方</h3>
-
-<ul>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/#auto-layout">Adaptivity and Layout - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/iphone/">iPhone - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/videos/play/tech-talks/207">Building Apps for iPhone Xs, iPhone Xs Max, and iPhone Xʀ - Tech Talks - Videos - Apple Developer</a></li>
-</ul>
-
-<h3 id="toc_10">非官方</h3>
-
-<ul>
-<li><a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">The Ultimate Guide To iPhone Resolutions</a></li>
-<li><a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone%20X%CA%80-screen-sizes-f4c1f2d4eec2">How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes</a></li>
 </ul>
 
 <blockquote>
