@@ -1,0 +1,884 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  为 iOS 14 设计全新的小组件 - 向远公园 | Step Park
+  
+  </title>
+  <meta name="keywords" content="为 iOS 14 设计全新的小组件" />
+  <meta name="description" content="在 iOS 14 中，主屏幕的使用体验焕然一新，通过引入「小组件」主屏幕变得更加动态化和个性化。新的小组件设计得更加大胆、一目了然，不仅可以显示在 iPhone 的主屏幕上，还能显示在 iPhone 和 iPad 的全新的「今天视图」中以及 macOS Big Sur 中的新的通知中心中。本文将以最核心的 iOS 14 的小组件为例，聊一聊 iOS 14 小组件的变化和如何为 iOS 14 设计小组件。" />
+  <link href="atom.xml" rel="alternate" title="向远公园 | Step Park" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:steppark.net ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+</script>
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">Home</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="music.html">Music</a></li>
+        
+        <li id=""><a target="_self" href="about.html">About</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 向远公园 | Step Park</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="music.html">Music</a></li>
+        
+        <li><a target="_self" href="about.html">About</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="Design.html">Design</a></li>
+        
+            <li><a href="Develop.html">Develop</a></li>
+        
+            <li><a href="Teconology.html">Teconology</a></li>
+        
+            <li><a href="Tools.html">Tools</a></li>
+        
+            <li><a href="Life.html">Life</a></li>
+        
+            <li><a href="Talk.html">Talk</a></li>
+        
+            <li><a href="Others.html">Others</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+              <div class="f-img"><img src="media/15966402833938/EF33250C-80C5-43A5-B047-88A9C5CFE2CF.png" /></div>
+          
+          <h1>为 iOS 14 设计全新的小组件</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/7/25</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='Design.html'>Design</a></span>
+           
+         
+          <span class="comments">
+            
+              <a href="https://steppark.net/15966402833938.html#disqus_thread">comments</a>
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p>在 iOS 14 中，主屏幕的使用体验焕然一新，通过引入「小组件」主屏幕变得更加动态化和个性化。新的小组件设计得更加大胆、一目了然，不仅可以显示在 iPhone 的主屏幕上，还能显示在 iPhone 和 iPad 的全新的「今天视图」中以及 macOS Big Sur 中的新的通知中心中。<br/>
+本文将以最核心的 iOS 14 的小组件为例，聊一聊 iOS 14 小组件的变化和如何为 iOS 14 设计小组件。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">小组件新的变化</a>
+</li>
+<li>
+<a href="#toc_2">小组件的基本特性</a>
+<ul>
+<li>
+<a href="#toc_3">一目了然</a>
+</li>
+<li>
+<a href="#toc_4">高相关性</a>
+</li>
+<li>
+<a href="#toc_5">个性化</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6">设计小组件</a>
+<ul>
+<li>
+<a href="#toc_7">小组件的构想</a>
+<ul>
+<li>
+<a href="#toc_8">设计准则</a>
+</li>
+<li>
+<a href="#toc_9">支持编辑</a>
+</li>
+<li>
+<a href="#toc_10">多种样式</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_11">小组件的创造</a>
+<ul>
+<li>
+<a href="#toc_12">尺寸和交互</a>
+</li>
+<li>
+<a href="#toc_13">内容和个性化</a>
+</li>
+<li>
+<a href="#toc_14">模式</a>
+</li>
+<li>
+<a href="#toc_15">小建议</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_16">小组件的展望</a>
+</li>
+<li>
+<a href="#toc_17">参考链接</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">小组件新的变化</h2>
+
+<p>在 iOS 14 中，整个小组件的体验被完全重新设计，它有着完全不同的新的视觉外观，并有着强大的新的能力。你的 app 的小组件要展示的信息可以比以前更及时更情景化，通过拖放、编辑可以让人们用一种直观、灵活的方式直接控制他们的小组件。</p>
+
+<p><img src="media/15966402833938/CFEE9BA9-E59D-4899-BFC4-5A4EC17EEFB8.png" alt=""/></p>
+
+<p>特别要提到的一点就是人们现在可以把这些小组件直接添加到他们的主屏幕页面上，这为用户创造了一种全新的体验小组件的方式，所以在设计时，你需要考虑一整套新的设计考量因素。</p>
+
+<p><img src="media/15966402833938/CCC549DF-BCDC-406E-9D73-7D9C92620DAB.png" alt=""/></p>
+
+<p>另一个需要提到的亮点是「智能堆叠」（Smart Stacks），这个功能可以让你在一个位置添加多个不同的小组件，并可以在多个不同的小组件之间轻扫快速切换。但智能堆叠最强大的一点在于它可以根据你的使用习惯动态改变。在基于你的行为和使用场景的基础上，智能堆叠可以在某个特定的时间自动轮换展示与你最相关的那个小组件。这样在你自己操作之前，你想要寻找的信息就会早已出现你的面前。</p>
+
+<p><img src="media/15966402833938/3B401B10-B292-4CAD-B050-0FEF8F1EF1A9.png" alt=""/></p>
+
+<p>例如，当我醒来时我可能想要知道今天的天气状况：</p>
+
+<p><img src="media/15966402833938/FBF9D7C4-C7A5-41D2-89C1-6567CFAA443C.png" alt=""/></p>
+
+<p>当我在上班路上时，我总是播放最近喜欢的音乐：</p>
+
+<p><img src="media/15966402833938/2D08BCA5-AF7A-4275-8460-966792BC2E70.png" alt=""/></p>
+
+<p>而在下午，我总是会查看交通状况如何以及回家需要多长时间：</p>
+
+<p><img src="media/15966402833938/78FC5E30-D4A9-47C8-A360-AFED6B1378E3.png" alt=""/></p>
+
+<p>到了晚上，我会查看并阅读一些当天的新闻头条：</p>
+
+<p><img src="media/15966402833938/2F63F8B7-E1E2-4567-932C-E26EA1C26AB7.png" alt=""/></p>
+
+<p>这是一个基于我的行为习惯的智能堆叠小组件的示例，但是智能堆叠的小组件及其行为对于每个人都是不同的，它会根据人们使用设备的方式以及对人们最重要的信息作出判断和选择。</p>
+
+<p>新的小组件是支持在 iOS、iPadOS、macOS 多个平台上跨平台使用的，所以通过 WidgetKit 创建的小组件用户界面是完全用 SwiftUI 构建的，这也是 Apple 平台中第一个只支持 SwiftUI 的功能。SwiftUI 也使得对动态类型、深色模式功能的支持变得更简单。</p>
+
+<p><img src="media/15966402833938/A89DA071-2868-4B56-A925-BB7BB1402129.png" alt=""/></p>
+
+<p>以上是关于小组件新功能的一个快速浏览，记得人们与小组件发生交互的方式，在接下来的文章中还会深入了解这些功能。</p>
+
+<h2 id="toc_2">小组件的基本特性</h2>
+
+<p>小组件的设计有三个主要的特性：一目了然、高相关性、个性化。</p>
+
+<p><img src="media/15966402833938/4B565150-C5E2-4C79-80FA-522D3131D3E4.png" alt=""/></p>
+
+<h3 id="toc_3">一目了然</h3>
+
+<p>后面的文章会讲到，小组件可以提供多种尺寸，最小的小组件尺寸只有主屏幕上四个图标的空间大小，所以你需要好好利用好这个空间。人们每天在主屏幕上停留的时间是有限的，平均每个人每天要前往主屏幕 90 次，但只会在主屏幕上停留一小会儿。他们不应该需要与小组件发生交互才能获取更多信息，应该只需要轻轻一瞥就能发挥小组件的最大价值，内容本身就是焦点。</p>
+
+<p><img src="media/15966402833938/9FACAEDD-B31C-42CC-9D94-F6E60DB60A59.png" alt=""/></p>
+
+<p>有一点非常重要：<strong>小组件不是一个迷你 app</strong>。把小组件看作是你的 app 的更多内容被放置在了主屏幕上，而不是把一个具备完整功能的迷你 app 放置在了主屏幕上。</p>
+
+<h3 id="toc_4">高相关性</h3>
+
+<p>高相关性是小组件的第二个特性。例如，早上的时候我更关心天气状况，但在白天工作时我会更关心提醒事项中的内容，在一天结束时我想要听听音乐。特别是在手机这个平台上，我们希望充分利用好每一处空间，通过一种方式确保你想要的小组件可以及时出现在你的面前，这就是智能堆叠，它可以帮助你始终在堆叠的最上面显示你最想看到的小组件，你可以通过 WidgetKit API 帮助系统判断什么时候你的小组件是高度相关的，什么时候不是。</p>
+
+<p><img src="media/15966402833938/E38A4026-A040-4D24-9D66-656AEAF85117.png" alt=""/></p>
+
+<h3 id="toc_5">个性化</h3>
+
+<p>一个好的小组件也应该是个性化的。就像天气 app 的小组件一样，你可以根据自己的需要选择不同尺寸的小组件，还可以选择小组件中要展示的天气位置信息。</p>
+
+<p><img src="media/15966402833938/839CB3FE-F77F-4F86-94E0-6D32CC306861.png" alt=""/></p>
+
+<h2 id="toc_6">设计小组件</h2>
+
+<p>当设计一个小组件时，这里有两个主要的设计过程需要特别注意：构想和创造。</p>
+
+<p><img src="media/15966402833938/0B8FD971-C341-4FAA-825D-AB45783F384B.png" alt=""/></p>
+
+<h3 id="toc_7">小组件的构想</h3>
+
+<h4 id="toc_8">设计准则</h4>
+
+<p>在第一部分，文章会谈到一些设计准则以帮助指导你的想法，并去深入了解一些你需要在这一步考虑的重要的新功能。<br/>
+新的小组件系统完全围绕内容而创造，为了创造一个好的小组件，你需要理解用户如果回到你的 app 中需要查看的最有用的信息或者体验是什么。</p>
+
+<p>在考虑小组件的想法和目标时，我们需要聚焦于三个设计目标方向：个性化 personal、信息性 informationnal、情景化 contextual。</p>
+
+<p><img src="media/15966402833938/3ED761D7-4720-41E6-A34F-FE397870F884.png" alt=""/></p>
+
+<p>我们想要寻找那些个人的东西，因为它们可以与你的 app 的一部分或者与个人相关的体验之间创建更深的情感连接。<br/>
+小组件提供了一个好的方式从人们的设备的众多信息源中筛选出一部分重要的信息来展示。展示正确的信息可以节省人们在你的 app 中做重复性操作的时间。<br/>
+人们一整天都会和自己的设备在一起，有很多信号可以推测一个人所处的情景环境。情景可以帮助在正确的时刻展示正确的信息，创建一个似乎可以预测人们的需求和下一步动作的更好的体验。</p>
+
+<p><img src="media/15966402833938/5D47A466-88E9-4F81-8449-D6500527EDEC.png" alt=""/></p>
+
+<p>来看下在设计一些小组件时，这三个目标方向是怎样让我们确定想法，做出决定的。<br/>
+「日历」app 的小组件，就像 app 图标一样它展示了一周的一天和现在的日期，还展示了你的下个会议或者日程。像是日程开始时间和日程位置这些可以一瞥而见的细节可以让人们不用打开 app 就可以找到这些信息。</p>
+
+<p><img src="media/15966402833938/FE097D15-1CAF-4DEA-B92A-C0BC4DAC55C2.png" alt=""/></p>
+
+<p>如果你的时间表很忙、日程很多，小组件会收起一些低相关的信息，优先展示众多日程中最重要的部分。</p>
+
+<p><img src="media/15966402833938/1B883A20-26E1-40E1-966A-D1F11420AF2A.png" alt=""/></p>
+
+<p>当一天即将结束时，不要展示一个空白的小组件，而是展示明天的日程。这是一个超越当前情景时刻思考、拓宽情景相关的时间范围的好例子。</p>
+
+<p><img src="media/15966402833938/9681BB95-EDA1-4B8B-8056-E905C4B3D124.png" alt=""/></p>
+
+<p>一个更突出个性化的细节是小组件会根据你居住的地区显示假期日历，并在一些特别的节日添加了提醒。</p>
+
+<p><img src="media/15966402833938/A317BAA7-5F6D-4113-ACCF-2F43CB82E75E.png" alt=""/></p>
+
+<p>当某个联系人的生日到来时，会显示一个礼物图形，并把这条信息放在最前面，这样从主屏幕上你可以感受到与小组件的更个性化的情感连接。</p>
+
+<p><img src="media/15966402833938/C63175EF-FC00-4B2C-B69E-551B29F47C93.png" alt=""/></p>
+
+<p>「照片」app 的小组件是个性化小组件体验是什么样的一个好例子。在这个小组件中，最令人愉悦的体验是展示最佳照片而不是展示最近拍摄的照片。</p>
+
+<p><img src="media/15966402833938/CE7FB28A-C76B-421B-AA16-C5F98438A3A1.png" alt=""/></p>
+
+<p>除了回忆照片，还会展示为你推荐照片。利用情景化的优势，这个小件还会展示过去的今天的照片回忆。</p>
+
+<p><img src="media/15966402833938/DBF5BBF1-3599-446A-A0F3-C7ADC1406388.png" alt=""/></p>
+
+<p>「天气」app 的小组件展示了当前位置的城市名字、包含最高和最低温度的当前温度信息以及接下来几个小时的天气信息。这个小组件是情景化小组件是什么样的一个好例子。</p>
+
+<p><img src="media/15966402833938/C598FCDD-D79B-4864-AEB8-6677F3BEDC3A.png" alt=""/></p>
+
+<p>小组件中展示独一无二的天气信息，如大风、雷电、是否下雨、什么时候开始下雨，并可以根据情景增加接下来几个小时的天气预报信息。</p>
+
+<p><img src="media/15966402833938/27FBBC52-0D48-45F0-AC5F-3DA9787928E1.png" alt=""/></p>
+
+<p>地图常用于确认你的地理位置，查看周围有什么。</p>
+
+<p><img src="media/15966402833938/8A30A04D-C643-457E-A0BD-FD90A9C9BDE6.png" alt=""/></p>
+
+<p>「地图」app 的小组件建立在这种空间意识上，当你不在家或者开车去了其他地方，小组件会显示你停车的地方。</p>
+
+<p><img src="media/15966402833938/21B73FD3-900D-419E-891C-7428B097D5F0.png" alt=""/></p>
+
+<p>如果你接下来有一个日程，小组件会显示到那里有多远，根据情景展示去那里的路线。当你不在家时，小组件会展示你回家需要花费的大致时间。</p>
+
+<p><img src="media/15966402833938/8797DD8F-4AEC-4673-BC62-3BC20F49A4CC.png" alt=""/></p>
+
+<p>你可以在这些所有的例子中看到小组件是动态变化的，是为用户提供有用信息的，情景化细节让小组件的使用体验变得更加个性化、更加适应一个人的需求。</p>
+
+<h4 id="toc_9">支持编辑</h4>
+
+<p>小组件的一个新的能力是人们可以编辑小组件。在构想小组件时，你需要仔细思考这个。因为它可以改变你要在一个小组件上所展示信息的多少。<br/>
+来看一下天气 app 的小组件的编辑功能是如何工作的。在 iOS 14 中的编辑状态下，你的小组件会像 app 的编辑模式时那样晃动，你可以点击一个小组件以查看它可以允许你编辑什么信息。在这里，天气小组件可以让你改变它展示的天气信息的具体位置。</p>
+
+<p><img src="media/15966402833938/1B009E5A-4A0F-49B0-A1C3-18354D31FE6D.png" alt=""/></p>
+
+<p>默认情况下它会展示你当前位置的天气信息，所以当一个人添加一个小组件，他不需要做什么额外的工作。如果我点击位置区域，我就可以获得一个我喜爱的天气城市的列表供我选择，或者可以通过搜索选择其他位置。</p>
+
+<p><img src="media/15966402833938/3D57A5ED-58D5-416C-92B3-EF108FC2C02A.png" alt=""/></p>
+
+<p>在 iOS 14 中，你可以添加尽可能多的天气小组件，针对于每一个天气小组件编辑调整成你想要的位置。这个功能最好的一点是它避免了那种把各种信息组合在一起的十分复杂的单个小组件，这样可以让用户根据自己对信息的需求选择添加多个小组件，通过编辑功能让每个小组件显示自己想要的信息。现在我可以让多个位置的天气信息同时摆放在一起。</p>
+
+<p><img src="media/15966402833938/19E2B31E-12A9-4F62-9F72-08D01D99E592.png" alt=""/></p>
+
+<p>在 iOS 中的大多数小组件支持编辑功能，像是下图中的时钟小组件一样，你可以选择不同的提醒列表、股票、备忘录或者世界时钟来展示在桌面上。</p>
+
+<p><img src="media/15966402833938/A143621C-6ACD-42FF-AD6F-9E4D68D65645.png" alt=""/></p>
+
+<p>这些都是支持编辑功能的小组件的主要使用场景，也可以有其他使用场景。思考一下你可以给用户提供哪些选项以最大化人们使用小组件时的实用性和灵活性。</p>
+
+<h4 id="toc_10">多种样式</h4>
+
+<p>在构想过程中还需要考虑的一点是决定是否要提供小组件的多种样式。对于「股票」app，有两种不同的想法：一种是提供一个小组件展示你的关注列表的概括信息，一瞥就能看见；另一种是每一支股票作为一个小组件，以跟踪它的具体信息，就像前面提到的天气小组件一样。</p>
+
+<p><img src="media/15966402833938/1F6F0F02-B9AE-489B-B060-8DD3C0341AB7.png" alt=""/></p>
+
+<p>在 iOS 14 中的某些 app 提供了多种样式的小组件，像是「新闻」app 可以让你跟踪某个话题下的新闻热点，「备忘录」app 让你展示最喜欢的备忘录或者添加一个共享的备忘录文件夹。</p>
+
+<p>综上，文章讲了在构想小组件时一些重要的设计准则和考量，下一部分会讲到怎样把这些想法落地成具体的小组件。</p>
+
+<h3 id="toc_11">小组件的创造</h3>
+
+<p>在小组件的创造这一部分有三点需要讲。</p>
+
+<h4 id="toc_12">尺寸和交互</h4>
+
+<p>第一点是尺寸和交互，新的系统支持三种尺寸供你设计：小、中、大，让小尺寸的小组件显示 app 中最有用的内容。</p>
+
+<p><img src="media/15966402833938/2C8A506F-F902-46FC-BF98-4A5EF89AC606.png" alt=""/></p>
+
+<p>小尺寸的小组件支持一个点击目标，点击后可以跳转到小组件上对应的内容中，跳转到的地方取决于你的 app 结构是怎样的。<br/>
+来看几个具体的例子，小尺寸的日历小组件总是显示接下来的日程，点击它会跳转到 app 中「天」视图中的最新日程，同时可以让对这一天的其他日程有一个大概浏览。</p>
+
+<p><img src="media/15966402833938/7A3E576B-DE93-4B03-AA37-21E2E9E6D27F.png" alt=""/></p>
+
+<p><img src="media/15966402833938/A88FE3B4-7E07-470D-BC5C-ABED1CF44521.png" alt=""/></p>
+
+<p>小尺寸的新闻小组件可以预览一个你可能感兴趣的新闻故事，点击它会跳转到 app 中那个新闻故事中。</p>
+
+<p><img src="media/15966402833938/2C4C7381-F0AA-4A02-9D4E-282617CA4B23.png" alt=""/></p>
+
+<p><img src="media/15966402833938/12577146-8E90-4679-85FF-037D60DC18F4.png" alt=""/></p>
+
+<p>中尺寸和大尺寸的小组件有着类似的熟悉的形状，这两种尺寸可以承载更多内容，支持多个点击目标。在这两种小组件中点击一部分内容也会跳转到 app 中对应内容的位置。</p>
+
+<p>例如在新闻的小组件中，点击任何一篇文章会跳转到 app 中你点击的那个新闻故事中。</p>
+
+<p><img src="media/15966402833938/D236A1E2-3C7A-4B76-861C-376415E8A343.png" alt=""/></p>
+
+<p><img src="media/15966402833938/DE2023AD-ECF5-4BB8-A9DD-CEAB5C18393A.png" alt=""/></p>
+
+<p>在小组件系统中有三个不同的点击样式：</p>
+
+<ul>
+<li>Fill Style：这种适合于当这部分需要深入链接到 app 中的某一部分内容，小尺寸的小组件都用的这种样式，因为它只支持一个点击目标；</li>
+</ul>
+
+<p><img src="media/15966402833938/F67F4986-3DC8-4879-B1CA-6F3AE5154A3B.png" alt=""/></p>
+
+<ul>
+<li>Cell Style：这种适合于让小组件中被选中的部分保持它本身的形状，例如文件 app 的小组件；</li>
+</ul>
+
+<p><img src="media/15966402833938/D6DB0D0C-F5CE-4F64-A74F-1E7C092DCEF8.png" alt=""/></p>
+
+<ul>
+<li>Content Style：这种适合于在小组件中选中一部分内容本身时使用，例如日历 app 的小组件。</li>
+</ul>
+
+<p><img src="media/15966402833938/0E0CAA90-2C94-48F6-9A74-2073E5AAEB43.png" alt=""/></p>
+
+<h4 id="toc_13">内容和个性化</h4>
+
+<p>第二点是内容和个性化。让你的小组件落地的最重要的一部分是其中的内容是什么，在设计小组件时你应该把内容和个性化一起思考。问问你自己：当用户打开你的 app 时在寻找什么？在你的 app 中搜寻那些对用户有用的独特信息。</p>
+
+<p>来看几个思考内容和个性化的例子。在设计小组件时，我们通过思考 app 本身的样子来考虑个性化。对于天气小组件，我们使用熟悉的天气条件背景样式，还有来自于 app 中的图形样式。</p>
+
+<p><img src="media/15966402833938/BAB04F6B-A6D0-4C1B-A8D8-D42E24FB867C.png" alt=""/></p>
+
+<p>对于新闻小组件，我们从你看到的新闻故事的丰富的故事图表中汲取灵感。</p>
+
+<p><img src="media/15966402833938/AC5FD996-E46F-4E24-9272-868EA8D43F8B.png" alt=""/></p>
+
+<p>对于日历小组件，我们从它的极简外观和熟悉的红色配色来汲取灵感，将目光全部聚焦于接下来的日程。</p>
+
+<p><img src="media/15966402833938/E7228C3A-F5FC-4B53-81CD-2298BADF3418.png" alt=""/></p>
+
+<p>另一个寻找个性化的方法是从你的 app 的图标中汲取灵感。像是备忘录的小组件，我们从备忘录样式的图标中汲取灵感：</p>
+
+<p><img src="media/15966402833938/381668B6-64BB-4573-9150-D61896EC0CF4.png" alt=""/></p>
+
+<p>播客的小组件，我们从紫色渐变样式的图标中汲取灵感：</p>
+
+<p><img src="media/15966402833938/470AB458-E526-4841-BCFC-A4E4B8F54FB6.png" alt=""/></p>
+
+<p>同样的提示 app 的小组件使用了 app 图标中的黄色渐变：</p>
+
+<p><img src="media/15966402833938/DD10DD29-B0AF-4308-83DB-60CC413F2113.png" alt=""/></p>
+
+<p>当说到在你的小组件中放置内容时，有两种设计模式。第一种是在所有三种尺寸上扩展的布局，像是天气 app 的小组件，在每种尺寸上添加额外的信息；</p>
+
+<p><img src="media/15966402833938/6B0D22BE-CDC5-4784-936F-28709FA04276.png" alt=""/></p>
+
+<p><img src="media/15966402833938/02716124-8A69-4FF1-980B-D57C9D56B9BD.png" alt=""/></p>
+
+<p><img src="media/15966402833938/BE890170-987E-4E0E-A673-BACA107000FA.png" alt=""/></p>
+
+<p>第二种是不同的尺寸的内容是完全不一样的，像是新闻 app 的小组件，小尺寸的包含新闻故事的丰富内容，中尺寸的聚焦于展示更多新闻故事。</p>
+
+<p><img src="media/15966402833938/5A0C3F25-64E5-4074-9F26-41201CABFBC3.png" alt=""/></p>
+
+<p><img src="media/15966402833938/8C89311C-5841-49B8-B805-5F6EFCF697C1.png" alt=""/></p>
+
+<p>当你为每种尺寸进行设计时，确保不要把小尺寸的内容放大到更大尺寸上。</p>
+
+<p><img src="media/15966402833938/83FBBEC7-F54C-4944-8987-3491D7B9431C.png" alt=""/></p>
+
+<p>仔细考虑每种尺寸上要展示的信息，选择每种尺寸最合适的信息来展示。例如屏幕时间的大尺寸小组件，因为有了更多的空间可以展示更多有用的信息，我们在小组件上增加了表格的尺寸，同时包含了分类和 app 细节。</p>
+
+<p><img src="media/15966402833938/3D28C720-6798-4DD5-8D8A-34F1E7F7E4F8.png" alt=""/></p>
+
+<p>如果你的 app 没有更多信息在大尺寸的小组件上展示，你可以只支持特定的尺寸，不需要在所有尺寸的小组件上都应用同一个想法。</p>
+
+<p>像下面这个例子一样，你可能想要在小尺寸的小组件上展示一些概括性的信息，我们只推荐在小组件上展示最多四条信息。</p>
+
+<p><img src="media/15966402833938/A2F3FD91-01B7-497E-863E-5CB001A47BEA.png" alt=""/></p>
+
+<h4 id="toc_14">模式</h4>
+
+<p>再来讲一讲更多关于小组件模式的细节。当我们设计小组件时，有一些常见的布局模式可以应用于不同的尺寸，这些模式可以帮助你在一开始的时候将你的想法逐渐落地。</p>
+
+<p><img src="media/15966402833938/158354DA-D243-40D4-AAB9-144F0939B694.png" alt=""/></p>
+
+<p><img src="media/15966402833938/C66E4650-5F91-459A-AB1F-74EDBE8BABB1.png" alt=""/></p>
+
+<p><img src="media/15966402833938/AD5C7A68-B5AB-4702-BF3C-6FCE66470828.png" alt=""/></p>
+
+<p>当你自己设计自定义的布局样式时，在所有尺寸上都要遵守 16pt 的布局边界以确保在与其他小部件摆放在一起时，小部件上的内容是一致的。</p>
+
+<p><img src="media/15966402833938/4DFAD4D5-A41B-4047-BFF1-1A1E07A93E9B.png" alt=""/></p>
+
+<p>对于有形状的布局，像是圆形或者其他嵌入图形，可以在所有尺寸上使用更紧凑的 8pt 布局边界。</p>
+
+<p><img src="media/15966402833938/F8A6C523-2BD9-4E78-B210-FB1A861F26FB.png" alt=""/></p>
+
+<p>这些形状的边角如果靠近小组件的边缘，那它们应该和小组件的圆角半径有着相同圆心。</p>
+
+<p><img src="media/15966402833938/F1A9763B-74D7-4015-96BB-B1F123FDB3CE.png" alt=""/></p>
+
+<p>因为小组件的圆角半径在不同尺寸上是不一样的，我们提供了一个 SwiftUI 容器以让你的小组件的形状可以自动与小组件的圆角半径保持相同圆心，而不需要手动指定具体的圆角半径值。</p>
+
+<p>对于字形，你应该使用 SF Pro 或者 SF 的其他变形（比如 SF Mono、SF Pro Rounded）。如果使用一个自定义字体对于你的小组件表达品牌和个性化十分重要，确保它和其他小组件放在一起时可以保持和谐。</p>
+
+<p>小组件应该在浅色外观和深色外观模式下都保持显示良好。例如日历 app 的小组件，整个小组件会像 app 本身一样在浅色和深色外观之间变化。</p>
+
+<p><img src="media/15966402833938/847B0AC3-5553-4BD4-AAFA-855D8BAE2595.png" alt=""/></p>
+
+<p><img src="media/15966402833938/6686189E-4884-4720-BA27-10A8784054C0.png" alt=""/></p>
+
+<p>播客 app 的小组件，因为整个背景是渐变的，在两种外观下都可以显示良好。</p>
+
+<p><img src="media/15966402833938/21F984BC-80EA-4C17-BD47-B2B8AE6D9360.png" alt=""/></p>
+
+<p>备忘录小组件因为有着顶部的标志性颜色和下半部分的白色，在深色外观下就只对下半部分进行调整，这样就和 app 内部保持一致了。</p>
+
+<p><img src="media/15966402833938/ECE47590-50C8-4F04-8466-11B0B5FB2CB3.png" alt=""/></p>
+
+<p><img src="media/15966402833938/E66CFD01-E3CF-46DA-AB1F-356ADDA2A807.png" alt=""/></p>
+
+<p>每一个小组件必须提供一个占位符用于系统无法展示小组件的真实数据的时候。你应该在这个状态展示基本的图形元素，在信息展示的文本区域显示区块。</p>
+
+<p><img src="media/15966402833938/CB0DC715-F054-4114-A387-375F23B2B8EF.png" alt=""/></p>
+
+<p>当系统从占位符状态变成可以读取到真实数据时，实际的内容就可以直接替换掉固定的元素，不需要让布局或者颜色发生较大的变化。</p>
+
+<p><img src="media/15966402833938/6527D688-E529-42A4-974D-DD1E48BFE4B7.png" alt=""/></p>
+
+<p>在添加小组件时的预览界面，展示的就应该是真实数据，这可以让用户在预览时就能直观地感受到在真正使用时的体验。</p>
+
+<p><img src="media/15966402833938/92FA46F8-2614-408E-8D01-EC6BC014CF74.png" alt=""/></p>
+
+<h4 id="toc_15">小建议</h4>
+
+<p>最后一件要讲的事是在设计小组件时要记住的一些小建议。</p>
+
+<ul>
+<li>如果你的 app 汇集了不同来源的内容，你应该在小组件中只使用一个 logo，像下面这个例子。为了在不同尺寸的小组件上保持一致性，你的 logo 应该总是位于右上角，不要再添加额外的文字标记。</li>
+</ul>
+
+<p><img src="media/15966402833938/2D7C3B3A-9387-427B-8C61-288BB144154D.png" alt=""/></p>
+
+<p><img src="media/15966402833938/FFC19542-0C21-4DF0-B32D-4C1240FEC1FE.png" alt=""/></p>
+
+<ul>
+<li>不要在小组件上放置你的 app 图标；</li>
+</ul>
+
+<p><img src="media/15966402833938/80EC2159-40C6-4D5F-A77B-98A861A12D29.png" alt=""/></p>
+
+<ul>
+<li>不要在小组件上放置你的 app 名字，因为在小组件的下面系统会显示你的 app 名称；</li>
+</ul>
+
+<p><img src="media/15966402833938/86716664-BF97-43F2-89E8-55208688DBBD.png" alt=""/></p>
+
+<ul>
+<li>不要把指导用户使用或告知用户的文字放置在小组件上，如果有什么重要的事情需要传达给用户，使用一种图形方式来表达；</li>
+</ul>
+
+<p><img src="media/15966402833938/5AAC191C-7AE9-4E04-8A76-3C71BAF4346C.png" alt=""/></p>
+
+<ul>
+<li>当在一个小组件上展示时间先后顺序的内容时，不要使用「最近更新」这样的话语。</li>
+</ul>
+
+<p><img src="media/15966402833938/3AD503F1-7352-43D6-B6B9-895A7DE4FF60.png" alt=""/></p>
+
+<h2 id="toc_16">小组件的展望</h2>
+
+<p>iOS 14 的小组件焕然一新，它的核心目标是将 app 中的重要的、用户需要经常查看的核心内容提取出来，方便用户在需要的时候可以在主屏幕等地方一目了然地看到。但相比 iOS 13 的小组件，其极大地弱化了甚至可以说剔除了在小组件内进行简单交互的功能，比如在小组件内控制智能家居、在小组件内管理剪贴板、在小组件内进行简单的数据计算等，iOS 14 的小组件更强调内容的静态展示，用户需要查看更多内容、进行更多操作，与小组件发生交互后会直接进入 app 内对应的模块。</p>
+
+<p>信息静态展示、不允许内部交互、跨平台通用、SwiftUI Only 这些对小组件大刀阔斧的改变在一段时间内对开发者、对用户或许会是痛苦的，但这也许只揭开了小组件的冰山一角，传闻中的 Apple Glasses 说不定才是小组件真正崭露头角的地方？</p>
+
+<h2 id="toc_17">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2020/10103">Design great widgets - WWDC 2020 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/widgets/">Widgets - System Capabilities - iOS - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2020/10028/">Meet WidgetKit - WWDC 2020 - Videos - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+</blockquote>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15966406956355.html" 
+          title="Next Post: iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_douban"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          
+            <div id="disqus_thread"></div>
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <div class="site-a-logo"><img src="media/14625521742746/Step%20Park%20LOGO-White+Circle-.png" /></div>
+            
+                <h1>向远公园 | Step Park</h1>
+                <div class="site-des">搞懂逻辑 | 理清思路 | 沉淀想法 | 纪录生活</div>
+                <div class="social">
+
+
+
+
+
+
+
+<a target="_blank" class="weibo" href="https://weibo.com/chuxiangyuan1104/" title="Weibo">Weibo</a>
+<a target="_blank" class="twitter" target="_blank" href="https://twitter.com/chuxiangyuan/" title="Twitter">Twitter</a>
+<a target="_blank" class="github" target="_blank" href="https://github.com/ChuXiangyuan/" title="GitHub">GitHub</a>
+<a target="_blank" class="email" href="mailto:chuxiangyuan1104@gmail.com" title="Email">Email</a>
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+               
+             <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Featured</h2>
+                </div>
+                <div class="side-content">
+                  
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15844652241485.html">1️⃣ 订阅 Apple Music 该选哪个区？</a>
+
+                  </div>
+                  
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15676959360699.html">2️⃣ Sign in with Apple 的设计准则和功能实现</a>
+
+                  </div>
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15706056024784.html">3️⃣ 跨平台设计时的思考路径</a>
+
+                  </div>
+                  
+                </div>
+            </div>
+            
+    
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="Design.html"><strong>Design</strong></a>
+        
+            <a href="Develop.html"><strong>Develop</strong></a>
+        
+            <a href="Teconology.html"><strong>Teconology</strong></a>
+        
+            <a href="Tools.html"><strong>Tools</strong></a>
+        
+            <a href="Life.html"><strong>Life</strong></a>
+        
+            <a href="Talk.html"><strong>Talk</strong></a>
+        
+            <a href="Others.html"><strong>Others</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15966402833938.html">为 iOS 14 设计全新的小组件</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15966406956355.html">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15942969497015.html">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15904037034817.html">在 App 中提供出色的无障碍使用体验</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15889327298988.html">iPadOS 指针系统的设计规范 iPadOS Pointing System Design Guideline</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              
+
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'chuxiangyuan'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script type="text/javascript">
+var disqus_shortname = 'chuxiangyuan'; 
+
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_SVG-full"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109532424-1');
+  gtag('set', {'user_id': 'USER_ID'}); // 使用已登录的 user_id 来设置用户 ID。
+</script>
+
+  </body>
+</html>

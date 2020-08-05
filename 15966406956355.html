@@ -1,0 +1,663 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器 - 向远公园 | Step Park
+  
+  </title>
+  <meta name="keywords" content="iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器" />
+  <meta name="description" content="纵观 iOS 系统的发展和 iOS 设备的变化，iPhone 的屏幕变得越来越大，纵向上越来越长，iPad 上需要展示更多紧凑的内容；iOS 设备支持各种输入方式；Mac Catalyst 技术让越来越多的 app 从 iPad 转移到 Mac 上去，所以在以前的 iOS 系统中的很多组件样式不能继续适用现在的需求，这篇文章就来讲一讲在 iOS 14 和 iPadOS 14 中新增的三个组件：菜单、日期和时间选择器、颜色选择器。" />
+  <link href="atom.xml" rel="alternate" title="向远公园 | Step Park" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:steppark.net ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+</script>
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">Home</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="music.html">Music</a></li>
+        
+        <li id=""><a target="_self" href="about.html">About</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 向远公园 | Step Park</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="music.html">Music</a></li>
+        
+        <li><a target="_self" href="about.html">About</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="Design.html">Design</a></li>
+        
+            <li><a href="Develop.html">Develop</a></li>
+        
+            <li><a href="Teconology.html">Teconology</a></li>
+        
+            <li><a href="Tools.html">Tools</a></li>
+        
+            <li><a href="Life.html">Life</a></li>
+        
+            <li><a href="Talk.html">Talk</a></li>
+        
+            <li><a href="Others.html">Others</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/7/16</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='Design.html'>Design</a></span>
+           
+         
+          <span class="comments">
+            
+              <a href="https://steppark.net/15966406956355.html#disqus_thread">comments</a>
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p>纵观 iOS 系统的发展和 iOS 设备的变化，iPhone 的屏幕变得越来越大，纵向上越来越长，iPad 上需要展示更多紧凑的内容；iOS 设备支持各种输入方式；Mac Catalyst 技术让越来越多的 app 从 iPad 转移到 Mac 上去，所以在以前的 iOS 系统中的很多组件样式不能继续适用现在的需求，这篇文章就来讲一讲在 iOS 14 和 iPadOS 14 中新增的三个组件：菜单、日期和时间选择器、颜色选择器。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15966406956355/C80951C5-D1AE-4D31-BD10-66F2530F2ED6.png" alt="C80951C5-D1AE-4D31-BD10-66F2530F2ED6"/></p>
+
+<h2 id="toc_0">菜单</h2>
+
+<h3 id="toc_1">新的菜单样式</h3>
+
+<p>在 iOS 14 及其之后的版本中，通过点击一个按钮可以显示一个人们可以从中选择的列有条目或操作的下拉菜单。你可以用一个下拉菜单（简称为菜单）提供与按钮操作直接相关的条目，或者提供一个在当前情景下有用的操作列表。例如像下左图这样，在照片 app 中点击导航栏上的添加按钮就会显示一个菜单。这个样式可能会让你联想到 iOS 13 的 context menus 情景化菜单（下右图）。</p>
+
+<p><img src="media/15966406956355/9BBB79D3-A964-436C-AA0B-481BCAD7D25F.png" alt=""/></p>
+
+<p>为什么要从 iOS 14 开始添加这个新的菜单样式呢？在 iOS 13 中，一般情况下菜单在 iPhone 上会以 action sheet 形式呈现，在 iPad 上会以 popover 形式呈现。这些组件从很早期的 iOS 版本就开始一直伴随我们，它们为许多功能提供了帮助。</p>
+
+<p><img src="media/15966406956355/AFD05588-F279-46CA-81AE-AEFF591E6EBC.png" alt=""/></p>
+
+<p>但是随着 iPhone 的屏幕变得越来越长越大，iPad app 的内容变得越来越丰富和紧凑，以前的 action sheet 和 popover 开始显现出一些劣势，在显示时他们会在背景内容上生成一层遮罩，这是一个很重的过渡效果，特别是在像 iPad 这样的更大的屏幕上。即使 action sheet 中每一个操作的文本标签很短，但每一个操作却占据了较大的空间。Action sheet 中提供的操作功能也是有限的，例如不能用于导航目的。 特别是在 iPhone 上，我总是需要大幅度的移动我的手指到屏幕的另一边去选择一个操作或者取消这个操作。</p>
+
+<p>iOS 14 中新的菜单样式解决了许多问题。一开始，菜单会直接显示在你点击的按钮旁边，你在选择某个操作时就不需要大幅度地移动手指，而且人们可以马上理解菜单条目和他们执行的操作之间的关系。点击按钮、出现菜单的这个过渡十分快速和轻量化，简短顺滑，不需要让背景内容变暗。在菜单中的条目也变得更小、更精确，但仍然保持可点击，而且还对比较长的文本支持多行显示。</p>
+
+<p><img src="media/15966406956355/227A04D4-5881-4CCD-9D0C-CFEC7FC232CD.png" alt=""/></p>
+
+<p>iOS 13 中的菜单只能被用在执行某些操作时，而 iOS 14 的新的菜单也可以用在选择和导航上。在菜单中显示的内容与情景化菜单中的操作是相似的，每个操作在左侧有一个文字标签 label，在右侧有一个可选的图标 icon，可以是 SF Symbol 或者一个自定义的图片。菜单可以添加一个标题以帮助用户理解需要做出什么选择，还可以通过添加分隔线来增加层级关系。</p>
+
+<p><img src="media/15966406956355/DAD7DB68-89C5-4E1B-9BDF-F030CDFAA4F9.png" alt=""/></p>
+
+<p>菜单可以从任何形式的按钮中弹出。例如，在音乐 app 中的排序按钮，点击后在弹出的菜单上保持手指不放直接移动到想要选择的操作上然后释放就可以了。或者，简单地点击按钮，再点击一个想要的操作即可完成选择。</p>
+
+<p><img src="media/15966406956355/73C0772C-C789-41E8-86D8-D27037E8935A.png" alt=""/></p>
+
+<p>在任何时候，我可以点击菜单外面的区域以关闭菜单，这会使菜单直接隐藏并回到之前的情景中，因此没有必要再在你的菜单中添加一个取消操作，让整个菜单只聚焦于具体想要进行的操作就好。</p>
+
+<p><img src="media/15966406956355/566E1D33-3DB3-40AC-A991-48D9646783B6.png" alt=""/></p>
+
+<p>新的菜单样式遵从 iOS 和 iPadOS  的系统辅助功能设置，例如旁白、增强对比度、减弱动态效果、更大字体。</p>
+
+<p><img src="media/15966406956355/1FB28B20-EC0B-4414-B15F-BAB90582D100.png" alt=""/></p>
+
+<h3 id="toc_2">菜单的应用场景</h3>
+
+<p>菜单可以通过各种不同的方式被使用，在 iOS 14 中有几种最普遍的应用场景：消除歧义、导航、选择和展示次级操作。</p>
+
+<h4 id="toc_3">消除歧义</h4>
+
+<p>菜单可以帮助你消除选择的歧义、明确用户操作的目的。用户带着一个目的出发，选择了一个操作，这个操作会展示一个菜单用来消除歧义，向用户进一步询问操作的目的。<br/>
+例如，在照片 app 的左上角有一个添加按钮，点击按钮会展示一个菜单问你具体想要添加什么。</p>
+
+<p><img src="media/15966406956355/C184CAC6-A0B5-4B5E-87BB-FA448CFB2AAB.png" alt=""/></p>
+
+<p>在备忘录 app 中，有一个操作可以在备忘录中添加一张图片，点击它会问你想要通过哪种方式添加图片。</p>
+
+<p><img src="media/15966406956355/ED5B5DE1-82BE-416E-B358-79A7578D3E21.png" alt=""/></p>
+
+<p>再来看照片 app，当我编辑完成一个视频时，右下角有一个完成按钮可以保存我编辑好的视频，点击它会问我想要怎样保存它。</p>
+
+<p><img src="media/15966406956355/B7E4E514-168F-420D-9F38-84CFE50AF5EB.png" alt=""/></p>
+
+<h4 id="toc_4">导航</h4>
+
+<p>菜单也可以被用于导航目的中。例如，在 Safari 浏览器中，我可以点击并按住后退按钮以展示一个我之前访问过的网站列表。</p>
+
+<p><img src="media/15966406956355/6D8B5491-2F5D-4BA0-A177-18D19932AE99.png" alt=""/></p>
+
+<p>类似地，在系统的导航栏上，点击并按住后退按钮都可以展示一个相似的用于导航目的的菜单，用户可以直接跳转到想要去的页面。</p>
+
+<h4 id="toc_5">选择</h4>
+
+<p>菜单还可被用于选择目的。例如在播客 app 中，点击右上角的排序按钮，菜单被用来做出选择，系统会根据你的选择调整内容的排序方式。</p>
+
+<p><img src="media/15966406956355/82C3A863-9EC0-4963-87C5-4871D7260883.png" alt=""/></p>
+
+<h4 id="toc_6">展示次要操作</h4>
+
+<p>菜单还可被用于展示一些次要操作。在界面中的一个简单的查看更多按钮就是展示一个包含一系列操作的菜单的好方式。这些操作通常没有那么重要，所以不需要突出显示在主界面上，但是它们仍然需要简单地被访问到。将二级操作放进菜单中可以让你的设计更加整洁，帮助你将注意力放在真正重要的地方。</p>
+
+<p>例如在文件 app 中，界面完全聚焦于你的内容。作为比较，iOS 13 的文件 app 中有许多操作散落在界面上，这会把人们的注意力从内容上吸引走。所以通过把这些二级操作简单地整理收集到一个菜单中，整个 app 就会变得更易于使用。</p>
+
+<p><img src="media/15966406956355/F35AB7AA-9B67-4159-A822-B9959BEDEE67.png" alt=""/></p>
+
+<p>又例如在信息 app 中，像下面这样把一些二级操作放进一个菜单可以让整个界面变整洁。</p>
+
+<p><img src="media/15966406956355/31330EB0-A85E-4B1C-88FD-7BF896028521.png" alt=""/></p>
+
+<p>但你可能会问最终结果为什么是这样，而不是把导航栏上的所有操作都收入一个菜单中呢？请注意，把所有的操作都收进一个菜单中绝不是一个值得鼓励的方法，额外的一次点击会让那些重要的操作被隐藏起来，不能让用户理解在这个界面中可以做些什么。所以要在首要操作和次要操作之间找到一个平衡，决定哪些操作可以放进一个菜单，哪些操作需要突出展示。在信息 app 中，发信息这个操作是非常重要的且操作频繁的，所以不应该被收入菜单之中。</p>
+
+<p><img src="media/15966406956355/AC700A5D-7438-498F-9681-601688A83244.png" alt=""/></p>
+
+<p>一些额外的操作并不总是需要被收入到一个查看更多的按钮中，它们也可以通过不同的手势来让菜单展现。例如在 Safari 浏览器中，点击右上角的标签按钮会让你管理你的标签页，但是当点击并按住标签按钮时，就会显示一系列与标签相关的操作。</p>
+
+<p><img src="media/15966406956355/FCA5B637-0092-4BFE-B151-CED53C1F51E1.png" alt=""/></p>
+
+<p><img src="media/15966406956355/22F04A9A-DA05-4C14-88DF-8F8D9AA69BB6.png" alt=""/></p>
+
+<h3 id="toc_7">其他使用规范</h3>
+
+<p>当二级操作是破坏性操作时的处理方式：如前文所提到的，新的菜单样式不再需要你大幅度移动手指到屏幕顶部选择一个操作，但是有时你会误触，而破坏性的操作会造成你输入的信息丢失。我们需要确保在执行破坏性操作之前有足够的缓冲空间，在不同的操作系统中，我们总是通过向用户二次确认来实现这个目标。为了避免不小心删掉什么东西，确认操作不能和删除操作放在同一个位置。</p>
+
+<p><img src="media/15966406956355/A8A7D4CE-5C88-4BB4-9C14-08617BD57E0C.png" alt=""/></p>
+
+<p>例如，在提醒事项 app 中，在删除一个列表时，当我点击删除操作时，一个 action sheet 会出现在屏幕底部让我二次确认是否真的要删除，我必须移动我的手指到屏幕下面以确认删除或者取消。这个操作所花费的时间和努力是值得的。</p>
+
+<p><img src="media/15966406956355/8A37491C-2F27-463A-829A-CBC7901E0F9D.png" alt=""/></p>
+
+<p>对于在菜单以外的破坏性操作，仍然推荐在 iPhone 上使用 action sheet，在 iPad 上使用 popover 来完成二次确认。比如在邮件 app 中，当你在写邮件的页面上点击左上角的取消按钮时，它就会问你是想要保存草稿还是删除草稿。在这里没有使用菜单样式，因为菜单样式会更容易误删掉草稿，而 action sheet 和 popover 可以让你的手指移动幅度更大，以防止误删草稿。所以 action sheet 这种样式并不是不再使用、可以废弃了。</p>
+
+<p><img src="media/15966406956355/1A6AE04F-97CD-4A28-A12E-C56B8EC6F6B6.png" alt=""/></p>
+
+<p>所有在菜单上的这些改进都基于一直以来菜单是如何在 Mac 上如何工作的进行设计的，你可以看到你能够在相似的场景中使用这些菜单。例如消除歧义、导航。这会让你的 app 更容易从 iPad 平台转换到 Mac 平台上去。</p>
+
+<p><img src="media/15966406956355/193D48A9-45B3-47D8-84DC-5A8313C4414F.png" alt=""/></p>
+
+<p><img src="media/15966406956355/ED1B1525-28E0-4AF8-8D6E-115204874BCA.png" alt=""/></p>
+
+<h3 id="toc_8">小结</h3>
+
+<p>小结一下新的菜单样式：</p>
+
+<ul>
+<li>它一部分代替了 iPhone 的 action sheet 和 iPad 的 popover；</li>
+<li>菜单的使用场景：
+<ul>
+<li>消除歧义：通过菜单进一步向用户确认操作目的以消除歧义；</li>
+<li>导航：通过菜单给出一个可以前往的页面列表来完成导航；</li>
+<li>选择：通过菜单给出一个选择列表来完成选择；</li>
+<li>显示次要操作：通过一个显示更多按钮或者点击并按住的操作来显示一个包含了一些二级操作的菜单；</li>
+</ul></li>
+<li>破坏性操作需要二次确认，可以通过 action sheet 或者 popover 实现；</li>
+<li>新的菜单样式会让你更容易把你的 app 从 iPad 带到 Mac 上去。</li>
+</ul>
+
+<p><img src="media/15966406956355/438629B2-5325-4EA6-A7B2-4D9796C02E32.png" alt=""/></p>
+
+<h2 id="toc_9">日期和时间选择器</h2>
+
+<p>以前的日期和时间选择器是下图这样的，它由多个拨轮组成，你可以调整每个拨轮以选择一个日期或者一个时间。</p>
+
+<p><img src="media/15966406956355/FF10AE59-DE34-4253-B0DE-08F71FE0B867.png" alt=""/></p>
+
+<p>从 iOS 14 开始，新的日期和时间选择器变成了下图这样，包括单独的日期选择器、单独的时间选择器、日期和时间组合在一起的选择器。</p>
+
+<p><img src="media/15966406956355/568EECBD-4F54-4A2B-9CC5-DFA23557DDD4.png" alt=""/></p>
+
+<p>让我们来具体看看它们是如何工作的。提醒事项是一个可以告诉你如何使用新的日期和时间选择器的好例子。例如，我为某个提醒事项添加一个提醒日期，你就可以看到新的日期选择器会显示出来。每一天、每一周、每一月的展示更加清晰，你可以通过左划或者右划在不同的月份之间切换，也可以通过点击某个月份/年份来更快速地选择月份和年份。</p>
+
+<p><img src="media/15966406956355/9BBD5D99-8591-4213-BDEB-FCFA815F85DC.png" alt=""/></p>
+
+<p><img src="media/15966406956355/6C637616-CF8A-4955-8BD2-94E16E4BB80E.png" alt=""/></p>
+
+<p>提醒事项也可以让你选择一个特定的提醒时间，在需要填写时间时，你可以看到新的时间选择器会显示出来。不再是使用拨轮，现在可以通过直接键盘输入确定时间。</p>
+
+<p><img src="media/15966406956355/AB9BC821-209E-4C04-9B88-21FFB9E93B04.png" alt=""/></p>
+
+<p>不论是使用什么输入方式：触摸、Apple Pencil、键盘或者光标，新的设计让人们更容易选择日期和时间。</p>
+
+<p>新的日期和时间选择器可以直接插入到界面之中，就像是上面的提醒事项所展示的一样。但有时候会有一些特殊情况，在 iOS 14 中你可以通过一种更紧凑的方式展示日期和时间选择器。当你在紧凑模式下向 UIKit 请求显示一个日期选择器时，你可以获得下面这样一个按钮，它会用 app 的主颜色和一个面板效果显示一个日期，点击按钮会以模态形式展示一个新的日期选择器。</p>
+
+<p><img src="media/15966406956355/A3991D31-FBE5-4CD7-A279-493D9C74BC6C.png" alt=""/></p>
+
+<p><img src="media/15966406956355/8AC517B9-C60D-4780-875D-60DD0F62C371.png" alt=""/></p>
+
+<p>单独的时间选择器或者日期和时间混合在一起的时间选择器也是类似这样。</p>
+
+<p><img src="media/15966406956355/C02DED49-5BB7-4DAA-AD97-DED51A6BFF33.png" alt=""/> <br/>
+<img src="media/15966406956355/FAB278A0-715E-4F0D-BA42-DA247BF3EAD9.png" alt=""/></p>
+
+<p><img src="media/15966406956355/2AECA10C-155D-4A42-B0B7-48F62878D838.png" alt=""/></p>
+
+<p><img src="media/15966406956355/1C8ED09B-0808-4D4C-BC42-AB7B0C84C650.png" alt=""/></p>
+
+<p>这种模式通常更适合不能直接在视图内显示日期和时间选择器的情况。例如，当我在通讯录中添加某个联系人的生日时，点击按钮会展示新的日期选择器，我可以根据自己的需要自由修改日期，选择好后点击外部区域以完成确认。</p>
+
+<p><img src="media/15966406956355/FF27BC40-991A-4D19-8B54-13F603AB5F87.png" alt=""/></p>
+
+<p><img src="media/15966406956355/3979D18B-331E-4976-982E-57D0A1D93658.png" alt=""/></p>
+
+<p>新的日期和时间选择器同样遵从系统的辅助功能设置。例如下图中的更大字体示例。</p>
+
+<p><img src="media/15966406956355/07A34555-0E51-407B-A707-97E5C1C1F909.png" alt=""/></p>
+
+<p>新的设计也统一了 iPad 和 Mac 上日期和时间选择器的样式，它们有着相同的信息，可以让 iPad app 更好地转换到 Mac 上。</p>
+
+<p><img src="media/15966406956355/B59AFF58-FE90-461E-A767-08688E5927D5.png" alt=""/></p>
+
+<p><img src="media/15966406956355/70358310-BAA6-40F2-BA3E-1106BBA528D4.png" alt=""/></p>
+
+<p>小结一下：</p>
+
+<ul>
+<li>改善了日期和时间选择器，有了更好地展示方法；</li>
+<li>可以在视图之内使用，也可以使用新的紧凑模式；</li>
+<li>因为在两个平台上具备相同的信息，所以可以更好地从 iPad 转换到 Mac 上去。</li>
+</ul>
+
+<h2 id="toc_10">颜色选择器</h2>
+
+<p>iOS 14 提供了一个新的颜色选择器供你使用。你可以使用四种不同的方式选择一个颜色：网格、光谱、直接输入 RGB 色值或者从屏幕中取色。</p>
+
+<p><img src="media/15966406956355/DE73F4FD-B327-437E-8291-65EF53F77637.png" alt=""/></p>
+
+<p><img src="media/15966406956355/9EE7F93E-E452-4624-993F-0682C393528A.png" alt=""/></p>
+
+<p>你从屏幕中吸取的颜色总会是会显示在左下角，你可以把颜色保存到色盘上，这样就可以在其他 app 中使用了。</p>
+
+<p><img src="media/15966406956355/1A013A1F-D11E-442F-9560-37309E130393.png" alt=""/></p>
+
+<p>新的颜色选择器是让你选择你想要使用的颜色的好方式。例如，当我在 iPad 上使用 Apple Pencil 时，通过颜色选择器我就可以方便地选择我想要的颜色。</p>
+
+<p><img src="media/15966406956355/8941161E-E600-41E4-BEA7-B4472BB249CA.png" alt=""/></p>
+
+<p>新的设计也将 iPad 和 Mac 选择颜色的样式统一，你可以更方便地把 app 从 iPad 转换到 Mac 上去。</p>
+
+<p><img src="media/15966406956355/50AB3775-373D-4C3C-B83B-744CD76E1EBB.png" alt=""/></p>
+
+<p>小结一下：</p>
+
+<ul>
+<li>颜色选择器是 iOS 14 开始出现的新的组件；</li>
+<li>你可以通过四种方式选择你想要使用的颜色；</li>
+<li>色盘中的颜色可以跨 app 使用；</li>
+<li>新的颜色选择器可以帮助你的 app 从 iPad 转换到 Mac 上去。</li>
+</ul>
+
+<h2 id="toc_11">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2020/10205/">Design with iOS pickers, menus and actions - WWDC 2020 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/controls/pull-down-menus/">Pull-Down Menus - Controls - iOS - Human Interface Guidelines - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+</blockquote>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15966402833938.html" 
+          title="Previous Post: 为 iOS 14 设计全新的小组件">&laquo; 为 iOS 14 设计全新的小组件</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15942969497015.html" 
+          title="Next Post: 利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？ &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_douban"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_fb"></a>
+	<a class="jiathis_button_twitter"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          
+            <div id="disqus_thread"></div>
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <div class="site-a-logo"><img src="media/14625521742746/Step%20Park%20LOGO-White+Circle-.png" /></div>
+            
+                <h1>向远公园 | Step Park</h1>
+                <div class="site-des">搞懂逻辑 | 理清思路 | 沉淀想法 | 纪录生活</div>
+                <div class="social">
+
+
+
+
+
+
+
+<a target="_blank" class="weibo" href="https://weibo.com/chuxiangyuan1104/" title="Weibo">Weibo</a>
+<a target="_blank" class="twitter" target="_blank" href="https://twitter.com/chuxiangyuan/" title="Twitter">Twitter</a>
+<a target="_blank" class="github" target="_blank" href="https://github.com/ChuXiangyuan/" title="GitHub">GitHub</a>
+<a target="_blank" class="email" href="mailto:chuxiangyuan1104@gmail.com" title="Email">Email</a>
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+               
+             <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Featured</h2>
+                </div>
+                <div class="side-content">
+                  
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15844652241485.html">1️⃣ 订阅 Apple Music 该选哪个区？</a>
+
+                  </div>
+                  
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15676959360699.html">2️⃣ Sign in with Apple 的设计准则和功能实现</a>
+
+                  </div>
+
+                  <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15706056024784.html">3️⃣ 跨平台设计时的思考路径</a>
+
+                  </div>
+                  
+                </div>
+            </div>
+            
+    
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="Design.html"><strong>Design</strong></a>
+        
+            <a href="Develop.html"><strong>Develop</strong></a>
+        
+            <a href="Teconology.html"><strong>Teconology</strong></a>
+        
+            <a href="Tools.html"><strong>Tools</strong></a>
+        
+            <a href="Life.html"><strong>Life</strong></a>
+        
+            <a href="Talk.html"><strong>Talk</strong></a>
+        
+            <a href="Others.html"><strong>Others</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15966402833938.html">为 iOS 14 设计全新的小组件</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15966406956355.html">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15942969497015.html">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15904037034817.html">在 App 中提供出色的无障碍使用体验</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15889327298988.html">iPadOS 指针系统的设计规范 iPadOS Pointing System Design Guideline</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              
+
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'chuxiangyuan'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script type="text/javascript">
+var disqus_shortname = 'chuxiangyuan'; 
+
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_SVG-full"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109532424-1');
+  gtag('set', {'user_id': 'USER_ID'}); // 使用已登录的 user_id 来设置用户 ID。
+</script>
+
+  </body>
+</html>
