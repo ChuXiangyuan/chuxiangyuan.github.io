@@ -4,7 +4,7 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2020-08-05T23:23:31+08:00</updated>
+  <updated>2020-08-19T12:17:05+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -492,9 +492,58 @@
 
 <p><img src="media/15966406956355/C80951C5-D1AE-4D31-BD10-66F2530F2ED6.png" alt="C80951C5-D1AE-4D31-BD10-66F2530F2ED6"/></p>
 
-<h2 id="toc_0">菜单</h2>
+<h2 id="toc_0">目录</h2>
 
-<h3 id="toc_1">新的菜单样式</h3>
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">菜单</a>
+<ul>
+<li>
+<a href="#toc_2">新的菜单样式</a>
+</li>
+<li>
+<a href="#toc_3">菜单的应用场景</a>
+<ul>
+<li>
+<a href="#toc_4">消除歧义</a>
+</li>
+<li>
+<a href="#toc_5">导航</a>
+</li>
+<li>
+<a href="#toc_6">选择</a>
+</li>
+<li>
+<a href="#toc_7">展示次要操作</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_8">其他使用规范</a>
+</li>
+<li>
+<a href="#toc_9">小结</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_10">日期和时间选择器</a>
+</li>
+<li>
+<a href="#toc_11">颜色选择器</a>
+</li>
+<li>
+<a href="#toc_12">参考链接</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">菜单</h2>
+
+<h3 id="toc_2">新的菜单样式</h3>
 
 <p>在 iOS 14 及其之后的版本中，通过点击一个按钮可以显示一个人们可以从中选择的列有条目或操作的下拉菜单。你可以用一个下拉菜单（简称为菜单）提供与按钮操作直接相关的条目，或者提供一个在当前情景下有用的操作列表。例如像下左图这样，在照片 app 中点击导航栏上的添加按钮就会显示一个菜单。这个样式可能会让你联想到 iOS 13 的 context menus 情景化菜单（下右图）。</p>
 
@@ -526,11 +575,11 @@
 
 <p><img src="media/15966406956355/1FB28B20-EC0B-4414-B15F-BAB90582D100.png" alt=""/></p>
 
-<h3 id="toc_2">菜单的应用场景</h3>
+<h3 id="toc_3">菜单的应用场景</h3>
 
 <p>菜单可以通过各种不同的方式被使用，在 iOS 14 中有几种最普遍的应用场景：消除歧义、导航、选择和展示次级操作。</p>
 
-<h4 id="toc_3">消除歧义</h4>
+<h4 id="toc_4">消除歧义</h4>
 
 <p>菜单可以帮助你消除选择的歧义、明确用户操作的目的。用户带着一个目的出发，选择了一个操作，这个操作会展示一个菜单用来消除歧义，向用户进一步询问操作的目的。<br/>
 例如，在照片 app 的左上角有一个添加按钮，点击按钮会展示一个菜单问你具体想要添加什么。</p>
@@ -545,7 +594,7 @@
 
 <p><img src="media/15966406956355/B7E4E514-168F-420D-9F38-84CFE50AF5EB.png" alt=""/></p>
 
-<h4 id="toc_4">导航</h4>
+<h4 id="toc_5">导航</h4>
 
 <p>菜单也可以被用于导航目的中。例如，在 Safari 浏览器中，我可以点击并按住后退按钮以展示一个我之前访问过的网站列表。</p>
 
@@ -553,13 +602,13 @@
 
 <p>类似地，在系统的导航栏上，点击并按住后退按钮都可以展示一个相似的用于导航目的的菜单，用户可以直接跳转到想要去的页面。</p>
 
-<h4 id="toc_5">选择</h4>
+<h4 id="toc_6">选择</h4>
 
 <p>菜单还可被用于选择目的。例如在播客 app 中，点击右上角的排序按钮，菜单被用来做出选择，系统会根据你的选择调整内容的排序方式。</p>
 
 <p><img src="media/15966406956355/82C3A863-9EC0-4963-87C5-4871D7260883.png" alt=""/></p>
 
-<h4 id="toc_6">展示次要操作</h4>
+<h4 id="toc_7">展示次要操作</h4>
 
 <p>菜单还可被用于展示一些次要操作。在界面中的一个简单的查看更多按钮就是展示一个包含一系列操作的菜单的好方式。这些操作通常没有那么重要，所以不需要突出显示在主界面上，但是它们仍然需要简单地被访问到。将二级操作放进菜单中可以让你的设计更加整洁，帮助你将注意力放在真正重要的地方。</p>
 
@@ -581,7 +630,7 @@
 
 <p><img src="media/15966406956355/22F04A9A-DA05-4C14-88DF-8F8D9AA69BB6.png" alt=""/></p>
 
-<h3 id="toc_7">其他使用规范</h3>
+<h3 id="toc_8">其他使用规范</h3>
 
 <p>当二级操作是破坏性操作时的处理方式：如前文所提到的，新的菜单样式不再需要你大幅度移动手指到屏幕顶部选择一个操作，但是有时你会误触，而破坏性的操作会造成你输入的信息丢失。我们需要确保在执行破坏性操作之前有足够的缓冲空间，在不同的操作系统中，我们总是通过向用户二次确认来实现这个目标。为了避免不小心删掉什么东西，确认操作不能和删除操作放在同一个位置。</p>
 
@@ -601,7 +650,7 @@
 
 <p><img src="media/15966406956355/ED1B1525-28E0-4AF8-8D6E-115204874BCA.png" alt=""/></p>
 
-<h3 id="toc_8">小结</h3>
+<h3 id="toc_9">小结</h3>
 
 <p>小结一下新的菜单样式：</p>
 
@@ -620,7 +669,7 @@
 
 <p><img src="media/15966406956355/438629B2-5325-4EA6-A7B2-4D9796C02E32.png" alt=""/></p>
 
-<h2 id="toc_9">日期和时间选择器</h2>
+<h2 id="toc_10">日期和时间选择器</h2>
 
 <p>以前的日期和时间选择器是下图这样的，它由多个拨轮组成，你可以调整每个拨轮以选择一个日期或者一个时间。</p>
 
@@ -641,6 +690,19 @@
 <p><img src="media/15966406956355/AB9BC821-209E-4C04-9B88-21FFB9E93B04.png" alt=""/></p>
 
 <p>不论是使用什么输入方式：触摸、Apple Pencil、键盘或者光标，新的设计让人们更容易选择日期和时间。</p>
+
+<hr/>
+
+<p>在 iOS 14 Beta 版本中使用了新的日期和时间选择器之后，许多用户对此发出了反对的声音，特别是对于用户经常用到的闹钟中的时间选择器，虽然键盘输入时间看似更加直观方便，但相比以前的拨轮效率提升并不大，反而失去了触控、声音、触感三者结合在一起的操作愉悦感。<br/>
+在 iOS 14 Beta 5 版本中，Apple 似乎做出了「妥协」，在现有键盘输入时间的操作方式上增加了以拨轮的形式滚动选择时间的操作方式，用户可以根据自己的使用习惯选择不同的交互方式。</p>
+
+<p><img src="media/15966406956355/640.gif" alt="640"/></p>
+
+<p>但新的拨轮可交互区域仅仅只有时间显示的一小块区域，操作十分受限，准确度因此也不高，或许 Apple 还是倾向于让用户使用新的键盘输入交互方式。虽然这种方式改变了用户多年以来的使用习惯，但功能上并没有打折扣，而且在使用鼠标、触控板时也更加友好，同时还与 macOS 中的时间输入交互保持基本一致，更有利于 app 转换到 Mac 平台上。</p>
+
+<p>期待一下 iOS 14 正式版本中这个小小交互的最终模样。</p>
+
+<hr/>
 
 <p>新的日期和时间选择器可以直接插入到界面之中，就像是上面的提醒事项所展示的一样。但有时候会有一些特殊情况，在 iOS 14 中你可以通过一种更紧凑的方式展示日期和时间选择器。当你在紧凑模式下向 UIKit 请求显示一个日期选择器时，你可以获得下面这样一个按钮，它会用 app 的主颜色和一个面板效果显示一个日期，点击按钮会以模态形式展示一个新的日期选择器。</p>
 
@@ -681,7 +743,7 @@
 <li>因为在两个平台上具备相同的信息，所以可以更好地从 iPad 转换到 Mac 上去。</li>
 </ul>
 
-<h2 id="toc_10">颜色选择器</h2>
+<h2 id="toc_11">颜色选择器</h2>
 
 <p>iOS 14 提供了一个新的颜色选择器供你使用。你可以使用四种不同的方式选择一个颜色：网格、光谱、直接输入 RGB 色值或者从屏幕中取色。</p>
 
@@ -710,7 +772,7 @@
 <li>新的颜色选择器可以帮助你的 app 从 iPad 转换到 Mac 上去。</li>
 </ul>
 
-<h2 id="toc_11">参考链接</h2>
+<h2 id="toc_12">参考链接</h2>
 
 <ul>
 <li><a href="https://developer.apple.com/videos/play/wwdc2020/10205/">Design with iOS pickers, menus and actions - WWDC 2020 - Videos - Apple Developer</a></li>
@@ -1698,6 +1760,11 @@ iPadOS 定义了三种内容效果，让焦点集中在你 app 中不同的交�
 <ul>
 <li>因台湾地区开售 App Store 礼品卡，增加了对 Apple Music 台湾区的简单介绍<a href="15844652241485.html#toc_21">⤴︎</a>。</li>
 </ul></li>
+<li><p>2020-08:</p>
+<ul>
+<li> Apple Music Web Beta 版再次上线，测试 iOS 14/iPadOS 14 新样式、新功能<a href="15844652241485.html#toc_17">⤴︎</a>；</li>
+<li> Beats 1 电台升级为「Apple Music 1」，新增「Apple Music Hits」和「Apple Music Country」两个电台<a href="15844652241485.html#toc_7">⤴︎</a>。</li>
+</ul></li>
 </ul>
 
 <hr/>
@@ -1780,6 +1847,12 @@ iPadOS 定义了三种内容效果，让焦点集中在你 app 中不同的交�
 </ul>
 
 <p><img src="media/15844652241485/42650981-F413-45B6-8655-81C381E41658.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+
+<ul>
+<li>2020 年 8 月 19 日 <a href="https://www.apple.com/newsroom/2020/08/apple-announces-apple-music-radio/">Apple 发出新闻稿</a>，Beats 1 电台升级为「Apple Music 1」，新增「Apple Music Hits」和「Apple Music Country」两个电台。这三个电台均可在非中区的 Apple Music 中收听。</li>
+</ul>
+
+<p><img src="media/15844652241485/109F15FC-F63A-4954-9BC0-1A093AE0CC1E.png" alt="109F15FC-F63A-4954-9BC0-1A093AE0CC1E"/></p>
 
 <ul>
 <li>除了 Beats 1 电台，非中区的 Apple Music 还包括本地或其他地区与音乐有关的实时直播电台。</li>
@@ -1926,13 +1999,11 @@ iPadOS 定义了三种内容效果，让焦点集中在你 app 中不同的交�
 
 <ul>
 <li><p><strong>网页端</strong>：2019 年 9 月 Apple 上线了<a href="https://beta.music.apple.com/">网页端的 beta 版 Apple Music</a>，用户可以在浏览器中使用 Apple Music，其访问地址是：<a href="https://beta.music.apple.com/%E3%80%82%E7%94%B1%E4%BA%8E%E6%98%AF">https://beta.music.apple.com/。由于是</a> beta 版，部分功能暂时不可用，例如 Beats 1 直播电台、Apple 原创音乐视频、智能播放列表，并且你不能在网站中开启 Apple Music 的订阅。值得注意的是，在笔者的上海电信网络环境下，直接访问网页端 Apple Music 会自动跳转至 <a href="https://www.apple.com.cn/apple-music/">Apple Music 苹果官网</a>，<strong>导致网页端 Apple Music 服务无法正常使用</strong>，若使用非大陆地区网络访问则是正常的，其他地区和运营商网络访问情况未知，导致这个问题的原因未知。</p>
-<p>2020 年 4 月，Apple Music 网页版正式上线，其访问地址是： <a href="https://music.apple.com/">https://music.apple.com/</a> ，Apple Music 包含的大部分功能都可在网页版中使用。</p></li>
-</ul>
-
+<p>2020 年 4 月，Apple Music 网页版正式上线，其访问地址是： <a href="https://music.apple.com/">https://music.apple.com/</a> ，Apple Music 包含的大部分功能都可在网页版中使用。</p>
 <p><img src="media/15844652241485/applemusicweb.0.png.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-
-<ul>
-<li><strong>Apple TV</strong>:Apple Music 同样在 Apple TV 上提供服务。由于 Apple TV 未在中国大陆地区发售，使用国区 Apple ID 登录 Apple TV，没有「音乐/Music」服务，无法正常使用 Apple Music，其他四个地区的 Apple ID 可正常使用。</li>
+<p>2020 年 8 月，<a href="https://beta.music.apple.com/">Apple Music Web Beta 版</a>开始测试与 iOS 14、iPadOS 14 对应的新样式、新模块，「为你推荐」调整为「现在收听」，搜索更加突出了按类别搜索，整体个性化内容推荐更加丰富。</p>
+<p><img src="media/15844652241485/15978104479971.jpg" alt=""/></p></li>
+<li><p><strong>Apple TV</strong>:Apple Music 同样在 Apple TV 上提供服务。由于 Apple TV 未在中国大陆地区发售，使用国区 Apple ID 登录 Apple TV，没有「音乐/Music」服务，无法正常使用 Apple Music，其他四个地区的 Apple ID 可正常使用。</p></li>
 </ul>
 
 <p><img src="media/15844652241485/AE374604-7DA7-4549-9977-E8774472B345.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
