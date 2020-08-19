@@ -4,13 +4,631 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2020-08-19T12:17:05+08:00</updated>
+  <updated>2020-08-19T15:24:34+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[从第一代 iPhone 细数到 iPhone 12，iPhone 屏幕尺寸进化历程背后的 app 设计哲学]]></title>
+    <link href="https://steppark.net/15978209110755.html"/>
+    <updated>2020-08-19T15:08:31+08:00</updated>
+    <id>https://steppark.net/15978209110755.html</id>
+    <content type="html"><![CDATA[
+<p>从 2007 年发布的第一代 iPhone 到 2019 年发布的 iPhone 11 系列，iPhone 的屏幕尺寸已涵盖 3.5 寸、4 寸、4.7 寸、5.5 寸、5.8 寸、6.1 寸、6.5 寸七种，传闻将于今年秋季发布的 iPhone 12 还会增加 5.4 寸、6.7 寸两种尺寸。随着时间轴的推移，iPhone 的屏幕尺寸已经变得越来越多，越来越复杂，一个 app 要适配所有的这些屏幕尺寸，在从设计、开发到推广的整个过程中都需要考虑诸多因素。</p>
+
+<p>在 iOS 14 Beta 3 版本中，<a href="https://9to5mac.com/2020/07/22/ios-14-beta-gives-us-a-glimpse-of-the-system-interface-on-the-5-4-inch-iphone-12/">有用户发现 5.8 寸的 iPhone X/Xs/11 Pro 机型新增了「放大显示」功能，进而发现 iOS 14 可以以 960 x 2079 像素这个新的分辨率正常运行</a>。而在之前的版本中，5.8 寸的 iPhone 机型上一直没有放大显示功能，结合新发现的运行分辨率，我们有理由推测 Apple 正在为一款小屏幕手机做准备，而这个分辨率很可能就是传闻中即将发布的 5.4 寸 iPhone 12 的准确分辨率 。</p>
+
+<p>在这 13 年间 iPhone 的屏幕尺寸是怎样一步步进化到此的？基于软硬一体的设计，屏幕物理尺寸的变化背后包含着怎样的进化规律？这些变化对我们朝夕相处的手机 app 又产生了什么影响？根据已有的进化规律，我们是否可以展望未来的 iPhone 还会走向何方？基于 iOS 14 Beta 中发现的新线索，我们又可以推断出 iPhone 12 的哪些更多信息呢？本文就来说道说道。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">iPhone 起源：从 3.5 寸的小屏幕开始</a>
+<ul>
+<li>
+<a href="#toc_2">从第一代 iPhone 到 iPhone 4s</a>
+</li>
+<li>
+<a href="#toc_3">脱离像素密度：Point 点的诞生</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_4">iPhone 非全面屏时代：屏幕尺寸渐大渐多</a>
+<ul>
+<li>
+<a href="#toc_5">4 寸、4.7 寸、5.5 寸全面开花</a>
+</li>
+<li>
+<a href="#toc_6">屏幕不断被放大的产物：放大显示功能</a>
+</li>
+<li>
+<a href="#toc_7">适配不同尺寸屏幕的布局工具：Auto Layout</a>
+</li>
+<li>
+<a href="#toc_8">iOS 、iPadOS 生态下的重要武器：Size Class</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_9">iPhone 转向全面屏时代：不规则屏幕的出现</a>
+<ul>
+<li>
+<a href="#toc_10">全面屏的 5.8 寸、6.1 寸、6.5 寸</a>
+</li>
+<li>
+<a href="#toc_11">适应屏幕新变化：Safe Area</a>
+</li>
+<li>
+<a href="#toc_12">OLED 屏的影响：支持深色模式</a>
+</li>
+<li>
+<a href="#toc_13">更长更大的屏幕下的交互变化</a>
+<ul>
+<li>
+<a href="#toc_14">新的大标题导航栏</a>
+</li>
+<li>
+<a href="#toc_15">新的菜单样式</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_16">全面屏的放大显示</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_17">展望未来 iPhone</a>
+<ul>
+<li>
+<a href="#toc_18">旗舰 iPhone 12 会是什么样？</a>
+<ul>
+<li>
+<a href="#toc_19">5.4 寸 iPhone 12 由 4 寸 iPhone SE 第一代进化而来</a>
+</li>
+<li>
+<a href="#toc_20">屏幕显示的内容数量较少</a>
+</li>
+<li>
+<a href="#toc_21">刘海变窄变小？</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_22">超旗舰 iPhone 12 Pro 又会是什么样？</a>
+</li>
+<li>
+<a href="#toc_23">iPhone 屏幕还会怎么变？</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_24">总结</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">iPhone 起源：从 3.5 寸的小屏幕开始</h2>
+
+<h3 id="toc_2">从第一代 iPhone 到 iPhone 4s</h3>
+
+<p>第一代 iPhone 于 2007 年发布，配备 320 × 480 像素（pixel，可简写为 px）的 3.5 寸屏幕，PPI （表示每英寸所具有的像素数，数字越大清晰度越好）为 163，这块支持多点触控的小屏幕开创了 iPhone 历史的先河。</p>
+
+<p><img src="media/15978209110755/211B3D7A-3E47-441A-9653-F2920F0FD69D.png" alt=""/></p>
+
+<p>2008 年 iPhone 3G 发布，其搭载的 iPhone OS 2.0 系统首次支持了 App Store 功能，自此第三方 app 开始逐渐在 iPhone 上大放异彩；2009 年 iPhone 3GS 发布，相比前一代，其屏幕从 18 位色升级到了 24 位色，屏幕表现更加丰富。iPhone 3G 和 iPhone 3GS 这两代的屏幕尺寸和分辨率与初代 iPhone 完全相同，即 320px × 480px 的 3.5 寸屏幕，PPI 为 163。</p>
+
+<p><img src="media/15978209110755/F15A21D0-AF14-485F-82C2-2F41C872A2AD.png" alt=""/></p>
+
+<p>2010 年具有全新硬件设计的 iPhone 4 发布，其屏幕分辨率升级为 640px × 960px，是前几代 iPhone 的两倍，屏幕尺寸仍然保持 3.5 英寸，PPI 达到了 326。在如此高的像素密度下，人眼已经几乎看不到屏幕上的像素点，因此 Apple 称之为「Retina/视网膜屏幕」。2011 年发布的 iPhone 4s 与前一代的屏幕分辨率和尺寸保持相同。</p>
+
+<p><img src="media/15978209110755/DE3F0532-2C6B-4F85-8D1A-F839A7C88B1C.png" alt=""/></p>
+
+<p>至此 iPhone 的屏幕分辨率由一种变化到两种，在同样大小的 3.5 寸手机屏幕上，<strong>更高的分辨率不是为了显示更多的内容，而是为了让屏幕上的内容更加清晰</strong>。Retina 屏幕在渲染图像时，每四个像素成为一组，输出原来屏幕的一个像素显示的大小区域内的图像，以此提供了更高的图像精细度，下面的对比图可以直观地看出这种变化，右边的图片明显比左边的图片更加清晰锐利。</p>
+
+<p><img src="media/15978209110755/CCE0E19E-E1FC-4618-A4E1-209869048E2D.png" alt=""/></p>
+
+<p>如果一个 app 还没有适配新的 Retina 屏幕分辨率，在 Retina 屏幕上显示就会显得很模糊。</p>
+
+<p>既然存在两种不同的分辨率，在 app 设计上就需要针对它们提供不同尺寸的设计图，比如下面的这个照相机的图片，在非 Retina 屏幕上它的高度是 44 像素，而在 Retina 屏幕上的高度就变成了88 像素，是非 Retina 屏幕上的两倍。</p>
+
+<p><img src="media/15978209110755/6F0C7FC9-B258-49FF-BD0A-32A48B190661.png" alt=""/></p>
+
+<p>但我们知道，无论是不是 Retina 屏幕，这个照相机的图片在 3.5 寸屏幕上的实际显示大小是相同的，而如果用像素去表示的话，它们的数字却是不同的，这会带来很多沟通和操作成本，需要一种更好的方法去表示这个照相机图片的尺寸，「Point 点」的概念应运而生。</p>
+
+<h3 id="toc_3">脱离像素密度：Point 点的诞生</h3>
+
+<p>Point 点（可简写为 pt）是专门为 Apple 操作系统设计的一个单位，<strong>它与屏幕上的像素密度无关，只与屏幕上的内容多少有关</strong>。<br/>
+在第一代 iPhone 到 iPhone 3GS 的非 Retina 屏幕上，一个点就等于一像素，可以表示为 @1x；而在 iPhone 4 到 iPhone 4s 的 Retina 屏幕上，一个点等于两个像素，可以表示为 @2x。而日后发布的一些设备（如 iPhone 6 Plus、iPhone X）还会出现一个点等于三个像素的情况，可以表示为 @3x，这种 @1x、@2x、@3x 可以称之为「<strong>比例因子</strong>」。</p>
+
+<p>从下面的图示可以看出，在物理尺寸相同时，从 @1x 到 @3x 图像清晰度依次递增。</p>
+
+<p><img src="media/15978209110755/DA7A0102-5B01-4DDA-89E2-5867CDC78689.png" alt=""/></p>
+
+<p>回到上一部分提到的照相机的图片，它的高度就可以直接统一表示成 44pt，不再需要提及是什么设备、什么样的屏幕，这样极大地减少了沟通成本，剔除了设计时无关的干扰因素。设计师在进行设计时可以直接按照 44pt 的高度进行设计，设计好的图像对应导出「<a href="mailto:camera@1x.png">camera@1x.png</a>」和「<a href="mailto:camera@2x.png">camera@2x.png</a>」两张图片，非 Retina 屏幕的 iPhone 在显示时会自动调用第一张图片，Retina 屏幕的 iPhone 在显示时会自动调用第二张图片。<br/>
+用与像素密度无关的单位「point 点」来表示设计内容的尺寸的优势在日后 iPhone 的屏幕尺寸变得更加复杂之后会更加凸显。</p>
+
+<p><img src="media/15978209110755/DE626782-7D2E-452B-ABE5-B4A5BB1AB238.png" alt=""/></p>
+
+<p>进一步，第一代 iPhone 到 iPhone 3GS 的屏幕分辨率可以表示为 320pt × 480pt @1x，iPhone 4、iPhone 4s 的屏幕分辨率可以表示为 320pt × 480pt @2x。而使用「point 点」这个单位表示的分辨率我们可以称之为「<strong>逻辑分辨率</strong>」，而使用「px 像素」这个单位表示的分辨率我们可以称之为「<strong>渲染分辨率</strong>」。</p>
+
+<p><img src="media/15978209110755/AE75F799-5E74-464F-A0A2-DD852750A507.png" alt=""/></p>
+
+<p>通过「逻辑分辨率」我们可以比较屏幕上显示内容的多少，前五代 iPhone 的逻辑分辨率相同，所以显示内容的数量没有差别；通过「渲染分辨率」以及屏幕尺寸我们可以计算出 PPI，进一步比较屏幕的清晰度，iPhone 4、iPhone 4s 相比前几代 iPhone 的屏幕尺寸相同，但渲染分辨率更高，PPI 更高，所以屏幕更加清晰锐利。</p>
+
+<p>不只 Apple 的操作系统中有 point 这样的与像素密度无关的单位，在其他平台上为了设计和开发方便，也同样存在类似的表示方法，比如 Android 平台上的单位「dp」，想要了解更多可以查看 <a href="https://material.io/design/layout/pixel-density.html">Android 设计规范</a>。</p>
+
+<h2 id="toc_4">iPhone 非全面屏时代：屏幕尺寸渐大渐多</h2>
+
+<h3 id="toc_5">4 寸、4.7 寸、5.5 寸全面开花</h3>
+
+<p>2012 年 Apple 发布了配备 4 寸屏幕的 iPhone 5，这是历史上 iPhone 屏幕尺寸的第一次改变，屏幕的分辨率为 640px x 1136 px，PPI 仍然为 326，也即相比 iPhone 4s 屏幕清晰度没有变化，其比例因子仍然为 @2x，其逻辑分辨率为 320pt × 568pt 。iPhone 5 搭载的 iOS 6 系统是 iOS 系统拟物化设计的最后一个版本，也是最成熟的一个版本。</p>
+
+<p><img src="media/15978209110755/FD065C54-83F9-4E7B-977F-4716F6F143FB.png" alt=""/></p>
+
+<p>仔细观察上面的数字我们可以发现，相比 iPhone 4s，iPhone 5 在横向上的内容宽度与前一代保持一致，但纵向上增多了 88pt，也即在纵向上可以显示更多的内容了。<br/>
+如果一个 app 没有适配新的 iPhone 5，它将会在 iPhone 5 上以 iPhone 4s 的大小样式显示，也即上下会各留出 44pt 的黑边。</p>
+
+<p><img src="media/15978209110755/8DD3EE66-59EB-4F8F-8C6D-EE12B21638E4.png" alt=""/></p>
+
+<p>这种通过屏幕逻辑分辨率「<strong>横向不变、纵向变长</strong>」来增长屏幕尺寸的方式是 iPhone 屏幕进化的重要方式之一，在日后还会多次看到，<br/>
+同时由于这种变化导致的 app 上下存在黑边的适配问题也同样会多次出现。</p>
+
+<p>2013 年 Apple 发布了相比 iPhone 5 屏幕没有发生变化的 iPhone 5s 和 iPhone 5c，它们的屏幕逻辑分辨率仍然为 320pt × 568pt @2x。同年 Apple 推出了 iOS 7，从此设计风格由拟物化风格转向扁平化风格。</p>
+
+<p><img src="media/15978209110755/22DCD0D1-BED2-45FE-BA23-48E3A820E4A7.png" alt=""/></p>
+
+<p>由于屏幕的逻辑分辨率没有发生变化，app 就不需要为新机型的屏幕进行适配。凡是可以运行在 iPhone 5 上的 app 都可以在 iPhone 5s、iPhone 5c 上正常显示。</p>
+
+<p>2014 年 iPhone 6 和 iPhone 6 Plus 同时发布，iPhone 的屏幕尺寸再次发生重大变化，根据不同人群的使用需求和偏好，由之前的一种主流尺寸衍变成了一大一小两种尺寸。<br/>
+小屏旗舰 iPhone 6 采用 4.7 寸屏幕，屏幕逻辑分辨率为 375pt × 667pt，比例因子为 @2x，PPI 为 326；大屏旗舰 iPhone 6 Plus 采用 5.5 寸屏幕，屏幕逻辑分辨率为 414pt × 736pt，比例因子首次采用 @3x，PPI 为 401。</p>
+
+<p><img src="media/15978209110755/3E9184F5-D24B-4897-AAD6-DCD90814ABBC.png" alt=""/></p>
+
+<p>这次的 iPhone 6 Plus 有一点比较特殊的地方，其渲染分辨率为 1242px × 2208px，但其设备真实的屏幕物理分辨率只有 1080px × 1920px，也即处理器渲染的图像分辨率比屏幕自身物理分辨率更高，在实际显示时相当于将渲染的图像缩小了 1.15 倍。图像在屏幕上显示时如果能做到像素一对一显示效果才能最完美，但 Apple 在此机型上作出了妥协，究其原因可能是因为当时 1080p 的屏幕的广泛使用可以削减手机成本、加快出货日期，同时也可以有更好的续航能力。</p>
+
+<p><img src="media/15978209110755/5B9528EB-C243-4031-A2E8-B40DA749DE64.png" alt=""/></p>
+
+<p>这是历史上 iPhone 屏幕尺寸的第二次重大变化，但与之前的 4 寸 iPhone 5s 仔细对比观察，你会发现新的 4.7 寸和 5.5 寸的屏幕与以前的 4 寸屏幕宽高比例是相同的，所以可以理解成 4 寸的屏幕分别「<strong>等比放大</strong>」了约 1.17 倍和 1.29 倍，变成了现在的 4.7 寸和 5.5 寸屏幕。屏幕逻辑分辨率在宽度和高度上的增加，可以让屏幕上一次性展示更多内容，减少用户滚动屏幕的频率。<br/>
+至此，从屏幕逻辑分辨率的宽度来看，分化出了三种：<strong>320pt、375pt、414pt</strong>。在 app 设计时一般以 375pt 宽度为基准，其他宽度 app 的设计进行针对性处理。实际上，这三种宽度的逻辑分辨率一直到 2019 年都没有再发生变化。</p>
+
+<p><img src="media/15978209110755/2349A85A-ADAE-4842-B4A5-B7F65A0C34D8.png" alt=""/></p>
+
+<p>如果没有适配新机型的 app 在显示时，由于和上代 iPhone 具有相同的屏幕比例，所以会直接将 iPhone 5s 的 app 放大显示到屏幕上。用户的直观感受就是虽然屏幕变大了，但仅仅是将原有的内容放大了，而不是在屏幕上可以一次性展示更多内容。而且因为不是像素一对一显示，屏幕上的内容看上去会不够清晰锐利。</p>
+
+<p>这种通过将屏幕逻辑分辨率「<strong>等比放大</strong>」来增长屏幕尺寸的方式也同样是 iPhone 屏幕进化的重要方式之一，在日后也会多次看到，同时由于这种变化导致的 app 被整体放大显示的适配问题也同样会多次出现。</p>
+
+<p>2015 年到 2017 年 Apple 相继发布了 iPhone 6s 和 iPhone 6s Plus、iPhone 7 和 iPhone 7 Plus、iPhone 8 和 iPhone 8 Plus，它们的屏幕参数与 iPhone 6、iPhone 6 Plus 保持了一致。4.7 寸和 5.5 寸屏幕的 iPhone 也在四年间迅速普及。</p>
+
+<p><img src="media/15978209110755/0B9AE9F1-C1A6-4E81-842C-013B8B50E1DA.png" alt=""/></p>
+
+<p>至此，iPhone 非全面屏时代可以基本宣告结束了。</p>
+
+<h3 id="toc_6">屏幕不断被放大的产物：放大显示功能</h3>
+
+<p>如前文所讲，iPhone 5s 的 4 寸屏幕、iPhone 6 的 4.7 寸屏幕、iPhone 6 Plus 的 5.5 寸屏幕的宽高比例是相同的，它们是依次放大的。于是从 iPhone 6、iPhone 6 Plus 开始，iOS 新增了一个这些机型独有的功能——「放大显示」，简单来看它将屏幕上的内容放大显示以便于存在视力障碍的用户更轻松使用 iPhone，当然你也可以根据自己的偏好选择使用放大显示模式。</p>
+
+<p>将屏幕上的内容，特别是包含了众多第三方 app 的内容进行整体放大而不让布局错乱并不是一件简单的事，为了减少不必要的设计和开发成本，放大显示功能巧妙地利用了已有的屏幕逻辑分辨率。具体来说，放大显示的实质是将高一级的逻辑分辨率<strong>降级</strong>到<strong>同一比例</strong>的低一级的逻辑分辨率，比如当放大显示模式开启时， 5.5 寸屏幕可以使用 4.7 寸屏幕的逻辑分辨率来显示内容，4.7 寸屏幕可以使用 4 寸屏幕的逻辑分辨率来显示内容。将低一级的逻辑分辨率放到更大的屏幕上展示，自然会有放大效果，适配了大屏幕 iPhone 的 app 自然也适配了更小屏幕的 iPhone，这样就可以完全没有额外的设计和开发成本。</p>
+
+<p><img src="media/15978209110755/EF98E53F-B83F-4BE0-AA2B-41A2D8239FCA.png" alt=""/></p>
+
+<h3 id="toc_7">适配不同尺寸屏幕的布局工具：Auto Layout</h3>
+
+<p>随着 iPhone 机型越来越多，屏幕尺寸越来越多，屏幕的逻辑分辨率也越来越多。设计师和开发者在设计和开发 app 时需要对多种屏幕布局进行适配调整，才能让 app 在每一台 iPhone 上完美运行。</p>
+
+<p>iPhone 上的 app 中的内容包含文字、图片、按钮、输入框、导航栏等各种各样的形式，我们可以把这些不同形式的元素统称为「View 视图」。要确定 iPhone app 中每一个 view 在屏幕上的布局，可以想到的最直观的方式就是确定这每一个 view 的摆放<strong>位置</strong>和<strong>尺寸</strong>，摆放位置可以通过在屏幕上建立坐标系后利用横纵坐标（x, y）来表示，尺寸可以通过描述一个 view 的宽度和高度来表示。这种确定了每一个 view 的位置和尺寸的布局方式不会受内部或者外部因素所影响，可以称之为「绝对布局」。</p>
+
+<p>例如下图中的这个例子，在 iPhone 8 上有一个 app，app 的界面中展示有四个不同颜色的方块。按照绝对布局的方法来确定四个方块的位置和尺寸：</p>
+
+<ul>
+<li>红色方块的位置坐标是（138，32），宽度为 100，高度为 100；</li>
+<li>黄色方块的位置坐标是（138，156），宽度为 100，高度为 100；</li>
+<li>绿色方块的位置坐标是（138，280），宽度为 100，高度为 100；</li>
+<li>蓝色方块的位置坐标是（138，404），宽度为 100，高度为 100。</li>
+</ul>
+
+<p><img src="media/15978209110755/95D66174-317B-448A-87C3-5141BCCD3003.png" alt=""/></p>
+
+<p>当把上面确定的每个方块的绝对布局参数放到 iPhone 8 Plus 的屏幕上显示时，我们就会发现四个方块在屏幕上显示的位置有些奇怪。仔细思考下，在 iPhone 8 的屏幕上四个方块的位置坐标之所以可以确定下来，是因为我们想要这四个方块在屏幕水平方向上是居中对齐的。当移动到 iPhone 8 Plus 的屏幕上，屏幕的逻辑分辨率发生了变化，屏幕变宽了，如果还是按照之前的位置参数放置四个方块，其自然不会在屏幕水平方向上处于居中对齐的位置了。</p>
+
+<p>要想要 iPhone 8 Plus 屏幕上的四个方块在水平方向上也能居中对齐显示，那四个方块的位置坐标就需要相对应发生变化。这种「分而治之」的处理方式固然可以面面俱到，但其耗费的成本也是巨大的，在屏幕尺寸不断变复杂的时间点上，需要一套方法去整合不同屏幕上的 app 布局，这套方法就是诞生于 iOS 6 并逐渐发展成熟的「<strong>Auto Layout 自动布局</strong>」方案。</p>
+
+<p>Auto Layout 是一种相对布局的方案，它不要求直接给出每一个 view 的位置和尺寸信息，而是通过建立 view 之间的约束关系（constraint），动态计算出在不同情景时每个 view 的具体位置和尺寸。</p>
+
+<p>来看下图中的这个例子，蓝色方块命名为「BlueView」，红色方块命名为「RedView」，它们之间的距离是 8，通过图中所示的等式就可以表示出这两个 view 之间的约束关系，用自然语言来描述就是：</p>
+
+<ul>
+<li>红色方块的左端 = 1.0 × 蓝色方块的右端 + 8</li>
+</ul>
+
+<p>这里特别提及的一点是，在描述蓝色方块右端和红色方块的左端之所以不直接使用「right 右」和「left 左」这两个单词，而是使用了「trailing 尾」和「leading 头」这两个单词，是因为这样的描述可以更好地兼顾从右向左书写的语言（如阿拉伯语）的 app 的适配，利于 app 实现国际化。</p>
+
+<p>通过两个方块之间相对的约束关系，不论在任何尺寸的屏幕上，这两个方块之间的距离都是 8，不会因为两个方块各自的位置和尺寸而变动。</p>
+
+<p><img src="media/15978209110755/EA6DE0E4-474B-42CC-A888-52FC7D3AD6B0.png" alt=""/></p>
+
+<p>回到上面绝对布局中所举的例子，现在用相对布局的方法来思考下四个不同颜色的方块该如何布局，按照 Auto Layout 的思想，可以确定界面上 view 的几个约束关系：</p>
+
+<ul>
+<li>红色方块的宽和高 = 黄色方块的宽和高 = 绿色方块的宽和高 = 蓝色方块的宽和高 = 100；</li>
+<li>红色方块的顶部 = 屏幕顶部 + 32；</li>
+<li>纵向上不同颜色方块之间的距离 = 24</li>
+<li>红色方块的 X 轴中心位置 = 黄色方块的 X 轴中心位置 = 绿色方块的 X 轴中心位置 = 蓝色方块的 X 轴中心位置 = 屏幕的 X 轴中心位置。</li>
+</ul>
+
+<p>通过上面确定的四个约束关系，四个方块的尺寸固定了下来，但在屏幕上的位置并没有完全固定，会相对于屏幕尺寸发生动态变化。这样当整个界面显示在 iPhone 8 Plus 或者其他尺寸的屏幕上时，四个方块就能始终在屏幕水平方向上居中对齐。</p>
+
+<p><img src="media/15978209110755/8E27D276-ACB4-4088-BAFA-53FB3ED21E8D.png" alt=""/></p>
+
+<p>通过 Auto Layout 这个武器，利用相对布局的思想，设计师和开发者确定好不同 view 之间的约束关系，就能让整个界面在不同尺寸的设备上都能正确地显示，不再需要一个设备一套设计方案，这样的设计也被称为「适应性布局设计」。</p>
+
+<p>以上示例只是 Auto Layout 的一个简单示意，在实际情况中，app 界面上包含各种 view，约束关系自然更加复杂，Auto Layout 的作用也会更加明显。且从更大范围来看，不只屏幕尺寸变化，Auto Layout 的这种适应性布局设计方案还可以适应各种外部和内部变化：</p>
+
+<ul>
+<li>外部变化：
+<ul>
+<li>不同屏幕尺寸；</li>
+<li>不同 Size Class（下一部分会讲到）；</li>
+<li>旋转设备改变使用方向；</li>
+<li>iPad 上进入或退出 Slide Over、Split View 模式；</li>
+<li>来电和录音时状态栏变高。</li>
+</ul></li>
+<li>内部变化：
+<ul>
+<li>App 自身改变导致的内容变化；</li>
+<li>App 支持国际化；</li>
+<li>App 支持「Dynamic Type 动态类型」。</li>
+</ul></li>
+</ul>
+
+<p>想要了解更多可参考 Apple 提供给开发者的「<a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/">Auto Layout Guide</a>」。</p>
+
+<h3 id="toc_8">iOS 、iPadOS 生态下的重要武器：Size Class</h3>
+
+<p>通过 Auto Layout，不同屏幕尺寸的设备都可以用一套设计方案来布局内容，但这并不代表不同尺寸的屏幕上显示的内容布局都应该是一样的，比如同一个 app 在 iPhone 和 iPad 上的布局一般是不一样的，更何况屏幕在使用时还需要区分横竖和竖屏的使用场景，app 横屏和竖屏显示的内容布局也会不一样。从 iOS 8 开始推出的「<strong>Size Class 尺寸级别</strong>」就是为了解决这个问题。</p>
+
+<p>Size Class 根据 app 的实际使用场景定义了不同尺寸的屏幕、不同方向的屏幕在「width 宽度」和「height 高度」上的尺寸级别，较短的宽度/高度定义其级别为「compact」，意为紧凑，可放置较少的内容；较长的宽度/高度定义其级别为「regular」，意为普通，可放置较多的内容。宽度和高度与这两个级别相互组合就形成了四种尺寸级别。特别注意的是，同一个尺寸的设备，横屏和竖屏的尺寸级别并不一定是完全相反的。</p>
+
+<p>如下图，iPhone 8 在竖屏时的 Size Class 是「compact width，regular height」，在横屏时是「compact width，compact height」；iPhone 8 Plus 在竖屏时是「compact width，regular height」，在横屏时是「regular width，compact height」，与 iPhone 8 并不相同，因为 iPhone 8 Plus 屏幕尺寸更大。</p>
+
+<p><img src="media/15978209110755/777A2B00-F8E6-4452-9AB8-40669D7C8DC7.png" alt=""/></p>
+
+<p>不同屏幕尺寸、不同屏幕方向的 iPad 也同样有 Size Class 的定义，如 iPad Pro 11 寸在竖屏时是「regular width，regular height」，在横屏时也是「regular width，regular height」。特别的，从 iOS 9 开始，iPad 上的 app 支持以 Slide Over 侧拉或者 Split View 分屏浏览的形式显示，在这些使用场景中，它们也被定义了 Size Class。</p>
+
+<p><img src="media/15978209110755/523F96BE-16A0-4D38-83F2-B5FFE71D1844.png" alt=""/></p>
+
+<p>想要了解每个 iPhone 和 iPad 的 Size Class 以及 Size Class 的更多内容可参考 <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/#size-classes">iOS Human Interface Guidelines 中的相关章节</a>以及我的文章：</p>
+
+<ul>
+<li><a href="https://steppark.net/15171487371271.html">在不同尺寸的设备上让 app 都大放异彩：尺寸级别和核心要素 Size Classes and Core Components - 向远公园 | Step Park</a></li>
+</ul>
+
+<p>有了 Size Class，设计师和开发者在设计和开发 app 时就不需要根据繁多的屏幕尺寸和屏幕使用方向等多个内外因素来确定 app 内容布局，新的屏幕尺寸出现时也无需再单独适配。来看几个具体的 Size Class 应用实例。</p>
+
+<p>第一个例子，2018 年 6.5 寸屏幕的 iPhone iPhone Xs Max 发布前，<a href="https://9to5mac.com/2018/07/31/iphone-x-plus-landscape-mode/">有人在 iOS 12 的 Beta 版本中发现</a>当让 iPhone 模拟器运行在传闻中的 iPhone iPhone Xs Max 分辨率之下时，部分系统自带 app 在横屏时的内容布局与 5.8 寸的 iPhone X 不一样，比如「信息」app 横屏时，5.8 寸屏幕只能显示某个联系人的短信内容，但 6.5 寸屏幕就可以分左右两边显示短信列表和具体的短信内容。据此进一步印证了 6.5 寸的 iPhone iPhone Xs Max 的存在。<br/>
+同一个 app 在不同屏幕尺寸的屏幕上显示的内容布局不同，究其原因，如下图所示，在屏幕宽度上 5.8 寸屏幕的 Size Class 是「compact width」，6.5 寸屏幕的 Size Class 是「regular width」，Size Class 不同，所以它们的 app 内容显示布局不一样。</p>
+
+<p><img src="media/15978209110755/1925B380-BA4C-4202-9098-EA991183E913.png" alt=""/></p>
+
+<p>第二个例子，再次回到在 Auto Layout 中提到的 app，基于已经确定的四个方块的约束关系，当在 iPhone 横屏使用时，我们会发现由于四个方块是竖直排列的，所以不能在横屏时的屏幕上显示完全，左右两侧还有较大的空间被浪费掉了。</p>
+
+<p><img src="media/15978209110755/2E772B77-35FB-45E1-8CCC-9661F06CE63C.png" alt=""/></p>
+
+<p>当利用 Size Class 对不同情况下的内容进行布局，iPhone 竖屏也即 Size Class 为「compact width，regular height」时，四个方块在屏幕上水平居中对齐，纵向排列；iPhone 横屏也即 Size Class 为「any width，compact height」（any 包括 compact 和 regular 两种情况）时，四个方块在屏幕上竖直居中对齐，横向排列，这时的布局约束关系为：</p>
+
+<ul>
+<li>红色方块的宽和高 = 黄色方块的宽和高 = 绿色方块的宽和高 = 蓝色方块的宽和高 = 100；</li>
+<li>红色方块的左侧 = 屏幕左侧 + 110；</li>
+<li>横向上不同颜色方块之间的距离 = 24</li>
+<li>红色方块的 Y 轴中心位置 = 黄色方块的 Y 轴中心位置 = 绿色方块的 Y 轴中心位置 = 蓝色方块的 Y 轴中心位置 = 屏幕的 Y 轴中心位置。</li>
+</ul>
+
+<p>进一步，当 app 运行在 iPad 上，也即 Size Class 为「regular width，regular height」时，四个组成一个方块组，分两行排列，整个方块组在屏幕上竖直居中对齐，这时的布局约束关系为：</p>
+
+<ul>
+<li>红色方块的宽和高 = 黄色方块的宽和高 = 绿色方块的宽和高 = 蓝色方块的宽和高 = 100；</li>
+<li>整个方块组的左侧 = 屏幕左侧 + 485；</li>
+<li>纵向、横向上不同颜色方块之间的距离 = 24</li>
+<li>整个方块组的 Y 轴中心位置 = 屏幕的 Y 轴中心位置。</li>
+</ul>
+
+<p><img src="media/15978209110755/E31F730E-FED0-4654-A7D8-45E84FC8A3B6.png" alt=""/></p>
+
+<p>这样同样的内容在 iPhone 横屏、竖屏和 iPad 的不同设备和使用场景上布局不同，把上面三种情况的内容布局的约束关系总结概括一下：</p>
+
+<ul>
+<li><p>共用约束关系：</p>
+<ul>
+<li>红色方块的宽和高 = 黄色方块的宽和高 = 绿色方块的宽和高 = 蓝色方块的宽和高 = 100。</li>
+</ul></li>
+<li><p>Size Class 为「compact width，regular height」，也即 iPhone 竖屏时：</p>
+<ul>
+<li>红色方块的顶部 = 屏幕顶部 + 32；</li>
+<li>不同颜色方块之间的距离 = 24</li>
+<li>红色方块的 X 轴中心位置 = 黄色方块的 X 轴中心位置 = 绿色方块的 X 轴中心位置 = 蓝色方块的 X 轴中心位置 = 屏幕的 X 轴中心位置。</li>
+</ul></li>
+<li><p>Size Class 为「any width，compact height」，也即 iPhone 横屏时：</p>
+<ul>
+<li>红色方块的左侧 = 屏幕左侧 + 110；</li>
+<li>横向上不同颜色方块之间的距离 = 24</li>
+<li>红色方块的 Y 轴中心位置 = 黄色方块的 Y 轴中心位置 = 绿色方块的 Y 轴中心位置 = 蓝色方块的 Y 轴中心位置 = 屏幕的 Y 轴中心位置。</li>
+</ul></li>
+<li><p>Size Class 为「regular width，regular height」，也即 iPad 横竖屏时：</p>
+<ul>
+<li>整个方块组的左侧 = 屏幕左侧 + 485；</li>
+<li>纵向、横向上不同颜色方块之间的距离 = 24</li>
+<li>整个方块组的 Y 轴中心位置 = 屏幕的 Y 轴中心位置。</li>
+</ul></li>
+</ul>
+
+<p>第三个例子，随着 iPad 的定位在逐渐向电脑靠拢，人们对 iPad 上的 app 生产力要求越来越高，需要利用好 iPad 这块大屏幕的空间、更容易地在 app 内进行导航，所以在 iPadOS 14 中，iPad app 增加了侧边栏这个导航样式，用户可以在侧边栏上更容易找到 app 不同层级的内容入口。但由于侧边栏占据了较大的显示面积，所以侧边栏不适合内容显示区域较小的情景。<br/>
+例如下图中的「音乐」app，在 iPad Pro 11 寸上全屏展示时，此时 Size Class 为「regular width，regular height」，app 使用侧边栏作为导航方式；当「音乐」app 以 Slide Over 形式运行时，此时 Size Class 为「compact width，regular height」，横向上显示空间有限，所以 app 改用以前的标签栏作为导航方式。</p>
+
+<p><img src="media/15978209110755/55A27D7A-331F-48B8-9F7F-8F5161AE2A46.png" alt=""/></p>
+
+<p>想要了解更多有关于 iPadOS 14 侧边栏以及针对 iPad 如何设计 app 的内容，可参考我的文章：</p>
+
+<ul>
+<li><a href="https://steppark.net/15942969497015.html">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？ - 向远公园 | Step Park</a> </li>
+</ul>
+
+<p>有了 Size Class 这个武器，在 iPhone 和 iPad 上进行 app 的自适应布局设计变得更加方便统一。但目前的 Size Class 并不是完美的，因为 iPad 横屏和竖屏时的 Size Class 在最初设计时都被定义为了「regular width，regular height」，所以当想要针对 iPad 横屏和竖屏有不同的内容布局方案时，Size Class 并不能满足，还需要依靠其他判断条件。随着 iPad app 的地位的提高，也许以后的 Size Class 会进化出更多的级别以应对上述情况。</p>
+
+<h2 id="toc_9">iPhone 转向全面屏时代：不规则屏幕的出现</h2>
+
+<h3 id="toc_10">全面屏的 5.8 寸、6.1 寸、6.5 寸</h3>
+
+<p>2017 年 iPhone 转向全面屏时代，搭载 iOS 11、配有 5.8 寸屏幕的 iPhone X 发布，屏幕分辨率为 1125px × 2436px，PPI 达到 458，屏幕尺寸和屏幕分辨率都发生了重大变化，而且屏幕由以前的 LED 屏改为了 OLED 屏。由于从非全面屏到全面屏的进化，iPhone 去除了 Home 键，由软件层面的 Home Indicator 代替；去除了 Touch ID，由刘海内的Face ID 代替，屏幕的四角也变成了圆角，整块屏幕不再是规则的矩形。</p>
+
+<p><img src="media/15978209110755/BF7ED6A0-46BD-4D6A-9C40-7AA9D8B08C22.png" alt=""/></p>
+
+<p>5.8 寸的 iPhone X 的逻辑分辨率为 375pt × 812pt，比例因子为 @3x。逻辑分辨率在横向上是与 4.7 寸的 iPhone 8 的屏幕相同的，在纵向上比 iPhone 8 多了 145 pt，纵向上可以显示更多内容了。所以 iPhone X 的逻辑分辨率实际上是对 iPhone 8 的逻辑分辨率「<strong>横向不变，纵向变长</strong>」得来的，这与从 iPhone 4s 到 iPhone 5 的屏幕进化方式相同。</p>
+
+<p><img src="media/15978209110755/52137946-80E9-4E15-8DCF-FF55A9DEF31D.png" alt=""/></p>
+
+<p>屏幕变长，未适配新机型的 app 将会在 iPhone X 上以 iPhone 8 的大小显示，上下留有黑边。同时，由于刘海和 Home Indicator 的加入、屏幕四角改为圆角，在全面屏 iPhone 上设计开发 app 还需要综合考虑这些改变，具体可参考我的文章：</p>
+
+<ul>
+<li><a href="https://steppark.net/15086036845015.html">Designing For iPhone X —— iPhone 上有了刘海，设计和开发到底该咋整? - 向远公园 | Step Park</a></li>
+</ul>
+
+<p>2018 年 5.8 寸的 iPhone iPhone Xs 发布，与 iPhone X 的屏幕保持一致，同时全面屏 iPhone 家族新增了 6.5 寸的 iPhone iPhone Xs Max，屏幕分辨率为 1242px × 2688px，PPI 为 458。2019 年 5.8 寸的 iPhone 11 Pro 和 6.5 寸的 iPhone 11 Pro Max 发布，与上一代的屏幕保持一致。</p>
+
+<p><img src="media/15978209110755/EA7FC8B6-0F3E-4F5D-B0C8-2B99D9220478.png" alt=""/></p>
+
+<p>2018 年 Apple 还同时发布了 6.1 寸屏幕的 iPhone Xʀ，屏幕分辨率为 828px × 1792px，PPI 为 326；2019 年 iPhone Xʀ 的继承者 iPhone 11 发布，与上一代的屏幕保持一致。</p>
+
+<p><img src="media/15978209110755/BFFF1D40-8D36-448F-9EC3-2FFD8DF60AAC.png" alt=""/></p>
+
+<p>2018 年和 2019 年全面屏 iPhone 家族新增的 6.1 寸屏幕和 6.5 寸屏幕，它们虽然屏幕尺寸相同，但逻辑分辨率相同，都为 414pt × 896pt，不同的是 6.1 寸的比例因子为 @2x，6.5 寸的比例因子为 @3x，所以它们显示的内容数量是相同的，但 6.5 寸的屏幕清晰度更高。<br/>
+这两个机型的逻辑分辨率在横向上是与 5.5 寸的 iPhone 8 Plus 相同的，都为 414pt，在纵向上比 iPhone 8 Plus 多了 160pt，所以也是采用「<strong>横向不变，纵向变长</strong>」的逻辑进化而来。5.8 寸的全面屏 iPhone 是由 4.7 寸的非全面屏 iPhone 进化而来，6.1 寸/6.5 寸的全面屏 iPhone 是由 5.5 寸的非全面屏 iPhone 进化而来，同时 4 寸、4.7 寸、5.5 寸的非全面屏 iPhone 的宽高比例是相同的，5.8 寸、6.1 寸、6.5 寸的全面屏 iPhone 的宽高比例也是相同的，6.1 寸、6.5 寸也可以看做是由 5.8 寸屏幕「<strong>等比放大</strong>」而来。</p>
+
+<p><img src="media/15978209110755/21FD519B-50DD-4C43-84CA-0A3CBE296E22.png" alt=""/></p>
+
+<p>如果 app 没有适配新的机型，将会在 6.1 寸和 6.5 寸的屏幕上把 iPhone X 的 app放大到全屏显示，清晰度不如已经适配的 app；如果 app 连 iPhone X 都没有适配，则会以 iPhone 8 Plus 的大小显示，上下留有黑边。有关于更大屏幕的全面屏 iPhone 适配和设计，可参考我的文章：</p>
+
+<ul>
+<li><a href="https://steppark.net/15433010141111.html">Designing For iPhone Xs、iPhone Xs Max、iPhone Xʀ — 比大还大，更大的刘海屏 iPhone app 如何适配 - 向远公园 | Step Park</a> </li>
+</ul>
+
+<p>不止是 iPhone，iPad Pro 系列也在 2018 年的产品迭代中提高了屏占比例，引入了 Face ID 和 Home Indicator，使软件层面的操作逻辑与 iPhone 保持一致，iPad Pro 的屏幕进化也发生了与 iPhone 屏幕进化类似的过程，并且由于 iPad app 支持 Slide Over、Split View 显示模式，对 app 的适配和设计提出了更高的要求，有关于这一部分可参考我的文章：</p>
+
+<ul>
+<li><a href="https://steppark.net/15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同? - 向远公园 | Step Park</a></li>
+</ul>
+
+<p>为了推动 app 生态的进化，<a href="https://developer.apple.com/news/?id=03262020b">Apple 在之前也向开发者发出通知</a>，2020 年 6 月 30 之后，所有要更新或新上架的 iPhone app 必须支持所有的 iPhone 屏幕尺寸，iPad app 必须支持所有的 iPad 屏幕尺寸。同时<a href="https://developer.apple.com/ios/submit/">强烈鼓励开发者对 iPad app 支持多窗口、多任务功能</a>（侧拉、分屏浏览、画中画）。</p>
+
+<h3 id="toc_11">适应屏幕新变化：Safe Area</h3>
+
+<p>在非全面屏 iPhone 的时代，从 iOS 7 开始，为了让 app 在设计和开发时更容易、更正确地进行布局，Apple 引入了「<strong>Layout Guide 布局指导</strong>」的概念。简单来说，显示在 iPhone 上的 app 中不仅包括 app 本身要显示的内容，如文字、图片等，还包括一些让 app 更易用、更统一的系统控件，如状态栏、导航栏、标签栏、搜索栏、工具栏等。这些系统控件一般会在屏幕顶部或底部占据一定的区域，而除去这部分才是 app 真正显示内容的区域。</p>
+
+<p>如下图所示，在 iPhone 8 上，屏幕顶部的状态栏、导航栏、搜索栏的区域称为「Top Layout Guide」，屏幕底部的标签栏的区域称为「Bottom Layout Guide」，app 内真正显示的内容应该在这两者之间进行布局。<br/>
+由于屏幕是一个规则的矩形，无论是竖屏还是横屏，系统控件只会出现在屏幕顶部和底部，屏幕左右两侧是不受约束的。</p>
+
+<p><img src="media/15978209110755/B9B4FE54-59FA-42E2-AF00-3C06DF1D570D.png" alt=""/></p>
+
+<p>进入全面屏时代，刘海的加入，屏幕四角由直角改为圆角使得屏幕不再是一块规则的矩形，同时软件层面 Home Indicator 变成了常驻系统控件，原先的 Top Layout Guide 和 Bottom Layout Guide 已经不能再适应新需求，从 iOS 11 开始进化成了「<strong>Safe Area 安全区域</strong>」。</p>
+
+<p>如下图所示，Safe Area 是一块可供自定义内容展示的规则矩形。在竖屏时，由于顶部刘海和底部 Home Indicator 的存在，需要空出这两块区域；在横屏时，由于一侧有刘海，一侧没有，但为保证内容对称，所以左右两侧需空出等宽的区域，而屏幕底部也需要为 Home Indicator 空出一定的区域。进一步，当放置了系统控件之后，Safe Area 会在上面的基础上进一步缩小。</p>
+
+<p><img src="media/15978209110755/80D7642F-3606-4DEA-91DE-4BFE9B01B25C.png" alt=""/></p>
+
+<p>有了 Safe Area 的定义，app 在设计和布局自定义内容时应该处于 Safe Area 之内，避免与屏幕的圆角、刘海、Home Indicator 发生重叠或裁切，但对于可滚动的内容以及控件/页面的背景颜色，可以让其延伸到屏幕边缘，以形成连续显示的效果。</p>
+
+<p><img src="media/15978209110755/8536C193-1935-4D10-9086-F66B90378ED6.png" alt=""/></p>
+
+<p>可以说全面屏 iPhone 的诞生催生了 Safe Area，让 Layout Guide 更加完善，为众多第三方 app 在设计和开发时提供了内容布局指导，以让它们在整个 iOS 系统中保持一致性。</p>
+
+<h3 id="toc_12">OLED 屏的影响：支持深色模式</h3>
+
+<p>iPhone 从非全面屏向全面屏进化的过程中，部分型号的屏幕也从 LED 屏幕进化到了 OLED 屏幕，同时伴随 iPhone 的屏幕尺寸越来越大，耗电自然也会增多，续航变成了用户日常使用手机的重要关注点。</p>
+
+<p>基于 OLED 材质屏幕的显示特点，当屏幕显示黑色的面积越大越省电，这也是从 iOS 13 开始 app 在系统级别上支持了深色模式的一个原因。适配了深色模式的 app 可以让用户根据需要和偏好选择使用浅色模式还是深色模式，深色模式可以让用户更加聚焦于内容本身，更加适合在灯光条件较暗的环境下使用手机。但有一点特别注意的是，深色模式不等于低对比度，因为开启了深色模式而使得 app 上的内容识别度和可读性下降，这不是一种正确的做法。</p>
+
+<p><img src="media/15978209110755/31C7492A-61FD-498E-95FF-77D18F5D08F8.png" alt=""/></p>
+
+<p>想要了解更多关于 iPhone 上的深色模式，可参考我的文章：</p>
+
+<ul>
+<li><a href="https://steppark.net/15674389801268.html">iOS 13 的设计有什么新变化？ - 向远公园 | Step Park</a></li>
+<li><a href="https://steppark.net/15681308995404.html">再说 iOS 和 macOS 深色模式 - 向远公园 | Step Park</a></li>
+</ul>
+
+<h3 id="toc_13">更长更大的屏幕下的交互变化</h3>
+
+<p>随着 iPhone 的屏幕尺寸变得越来越多，屏幕变得更长更大，iOS 系统的许多交互也在不断发生进化，在此举两个例子。</p>
+
+<h4 id="toc_14">新的大标题导航栏</h4>
+
+<p>从 iOS 11 开始，为了让用户更加明确自己处于 app 的哪个位置，让 app 突出自己的核心模块，系统引入了一种新的导航栏样式：大标题导航栏，它比以前的导航栏样式更加醒目，在纵向上占据了更多的屏幕空间，这增强了刚进入这个页面的用户的空间感，而当用户滚动 app 的内容时，用户已经知道所处的位置，大标题导航栏又可以自动地缩小，以让此时的用户把注意力放在内容本身上。</p>
+
+<p><img src="media/15978209110755/13BDD322-1299-4E85-883B-357BFBEAD6EF.png" alt=""/></p>
+
+<p>想要了解更多关于大标题导航栏，可参考我的文章：</p>
+
+<ul>
+<li><a href="https://steppark.net/15028131788266.html">iOS 11 的设计有什么新变化？ - 向远公园 | Step Park</a></li>
+</ul>
+
+<h4 id="toc_15">新的菜单样式</h4>
+
+<p>在 iOS 14/iPadOS 14 中新增了一种菜单样式，当用户点击按钮时，新的菜单会直接显示在菜单旁边，而不再是使用以前的 Action Sheet（从屏幕底部弹出的菜单选项）样式，例如下图中的「提醒事项」app 。新的菜单样式可以让用户在较大的屏幕上更好地理解菜单选项和按钮之间的关系，同时可以不需要大幅度移动手指就可以完成操作。</p>
+
+<p>值得注意的是，以前的 Action Sheet 样式也并不是不再使用，当执行破坏性操作（比如删除操作）时，仍然建议使用 Action Sheet 来让用户完成操作的二次确认，因为 Action Sheet 会吸引用户的注意力，只有将手指移动到屏幕才能做出选择，避免了误触的情况发生。</p>
+
+<p><img src="media/15978209110755/D8B7813E-BC02-4579-B2D1-EA1A08DDE186.png" alt=""/></p>
+
+<p>iPadOS 14 中也同样增加了这种菜单样式，这也与 macOS 中的弹出菜单交互逻辑保持一致，更有利于 iPad app 通过 Mac Catalyst 技术向 Mac 平台转移。</p>
+
+<p>想要了解更多关于 iOS 14/iPadOS 14 新的菜单样式，可参考我的文章：</p>
+
+<ul>
+<li><a href="https://steppark.net/15966406956355.html">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器 - 向远公园 | Step Park</a></li>
+</ul>
+
+<h3 id="toc_16">全面屏的放大显示</h3>
+
+<p>前文提到，从 iPhone 6 开始，iOS 在部分机型中新增了「放大显示」功能，放大显示的实质是将高一级的逻辑分辨率<strong>降级</strong>到<strong>同一比例</strong>的低一级的逻辑分辨率。在全面屏 iPhone 中，6.1 寸、6.5 寸的 iPhone 具备放大显示的这个条件，所以这两种尺寸的 iPhone 在系统中同样可以开启放大显示模式；但 5.8 寸的 iPhone 不存在比它还要低一级的同一比例的逻辑分辨率，所以 5.8 寸的 iPhone X、iPhone Xs、iPhone 11 Pro 一直没有放大显示功能。</p>
+
+<p><img src="media/15978209110755/99810C59-1A07-4FF7-97F4-B45580B0293D.png" alt=""/></p>
+
+<h2 id="toc_17">展望未来 iPhone</h2>
+
+<p>根据目前媒体获得的消息，2020 年秋季将会有四款 iPhone 发布，旗舰系列包括 5.4 寸的 iPhone 12（非最终命名，下同）和 6.1 寸的 iPhone 12 Plus，超旗舰系列包括 6.1 寸的 iPhone 12 Pro 和 6.7 寸的 iPhone 12 Pro Max。</p>
+
+<h3 id="toc_18">旗舰 iPhone 12 会是什么样？</h3>
+
+<p>本文开头提到，在 iOS 14 Beta 3 版本中有用户发现 5.8 寸的 iPhone 也有了放大显示这个功能，根据前文所讲的放大显示的存在条件，我们可以推测存在一款 iPhone 与 5.8 寸 iPhone 的屏幕是同一比例，且逻辑分辨率比 5.8 寸 iPhone 低一级。<br/>
+同时还发现 Xcode 中的模拟器可以正常运行在 960px × 2079px 分辨率下，假设比例因子为 @3x，其屏幕逻辑分辨率就为 320pt × 693pt。<br/>
+综上两个发现，传闻中的 5.4 寸 iPhone 的屏幕参数似乎已浮出水面。</p>
+
+<p><img src="media/15978209110755/B0C3C63B-AB86-471D-9CB3-52B1316DE100.png" alt=""/></p>
+
+<h4 id="toc_19">5.4 寸 iPhone 12 由 4 寸 iPhone SE 第一代进化而来</h4>
+
+<p>小屏旗舰 iPhone 12 配备 5.4 寸屏幕，屏幕渲染分辨率为 960px × 2079px，PPI 约为 424，逻辑分辨率为 320pt × 693pt @3x；而大尺寸的 iPhone 12 Plus 仍然保持 6.1 寸屏幕，分辨率等与之前的 iPhone Xʀ、iPhone 11 保持一致。</p>
+
+<p><img src="media/15978209110755/D8A38B49-0981-4C9A-905F-469AB2FF891B.png" alt=""/></p>
+
+<p>可以看出 5.4 寸 iPhone 12 的逻辑分辨率的宽度与 4 寸的 iPhone SE 第一代是相同的，都是 320pt。5.4 寸的 iPhone 12 的屏幕变化实质也是「<strong>横向不变，纵向变长</strong>」，相比 iPhone SE 第一代，纵向上多了 125pt，当 app 没有适配新尺寸的 iPhone 时，上下会出现黑边。这样来看，5.4 寸的 iPhone 12 就是之前大家翘首以待的全面屏 iPhone SE。</p>
+
+<p><img src="media/15978209110755/180A0A59-D5F2-486A-8154-F4AF6CDB7A16.png" alt=""/></p>
+
+<h4 id="toc_20">屏幕显示的内容数量较少</h4>
+
+<p>屏幕的逻辑分辨率影响着屏幕上内容的数量，下图列举对比了目前三种宽度逻辑分辨率的 iPhone 显示同一内容时的实际情况，可以很明显地看出：</p>
+
+<ul>
+<li>宽度 414pt 的 6.1 寸、6.5 iPhone 显示的内容最多，375pt 的 5.8 寸 iPhone 次之，320pt 的 5.4 寸 iPhone 最少；</li>
+<li>图片显示区域，414pt 宽度的 iPhone 上可以看到第三张图片的 1/4，375pt 宽度的 iPhone 上几乎看不到第三张图片。320pt 宽度的 iPhone 上第二张图片都不能显示完全；</li>
+<li>文字显示区域，屏幕宽度和高度会共同影响屏幕上能显示文字的数量；</li>
+<li>特别地，320pt 宽度的 5.4 寸 iPhone 上，导航栏的按钮已经显得有些拥挤了。</li>
+</ul>
+
+<p><img src="media/15978209110755/7891A388-524E-4362-B36E-A77EE78FA3C3.png" alt=""/></p>
+
+<p>非全面屏 4 寸第一代 iPhone SE 仍然支持 iOS 14、全面屏 5.4 寸 iPhone 再次引入 320pt 宽度，在屏幕日趋变大的今天，设计师和开发者仍然需要为 320pt 这样较窄宽度的 iPhone 进行 app 设计、适配和开发。</p>
+
+<h4 id="toc_21">刘海变窄变小？</h4>
+
+<p>全面屏 iPhone 的刘海中包含的物理元器件并不随 iPhone 的屏幕尺寸所变化，根据网上找到的资料，刘海的宽度大概为 209pt。在目前放出的 iOS 14 Beta 版本中，刘海附近的状态栏显示区域（包含基本的时间、信号、网络和电量信息）并没有发生设计上的改变，而当把现有的状态栏放到 320pt 宽度的 iPhone 上时，我们会发现其无法承载现有的状态栏信息，那这是否可以推测 5.4 寸的 iPhone 12 抑或是整个 iPhone 12 系列的刘海会变得更窄更小呢？</p>
+
+<p><img src="media/15978209110755/968D85F3-8616-4398-AE8D-E2568D0E6A08.png" alt=""/></p>
+
+<h3 id="toc_22">超旗舰 iPhone 12 Pro 又会是什么样？</h3>
+
+<p>超旗舰 6.1 寸的 iPhone 12 Pro 和 6.7 寸 的 iPhone 12 Pro Max，相比于上一代屏幕尺寸都有一定程度的小幅增大。根据之前 iPhone 屏幕逻辑分辨率的进化规律，我认为 Apple 对于逻辑分辨率的改变是比较谨慎的，因为新的逻辑分辨率对设计师和开发者就意味着新的设计、适配和开发工作，iPhone 的屏幕尺寸就会更加碎片化，所以如果 iPhone 12 Pro 的尺寸真的是 6.1 寸和 6.7 寸，猜测屏幕尺寸的整体变大可能是由于屏幕边框变窄导致，iPhone 12 Pro 系列的屏幕逻辑分辨率和渲染分辨率应该与上一代保持一致，PPI 稍有降低。</p>
+
+<p><img src="media/15978209110755/D72B9C2B-9777-45E4-9587-937F003369CE.png" alt=""/></p>
+
+<h3 id="toc_23">iPhone 屏幕还会怎么变？</h3>
+
+<p>目前 iPhone 的最大尺寸是 6.5 寸，这个尺寸的手机对于用户日常使用来说已经基本到达极限，如果按照之前的屏幕进化规律通过「<strong>横向不变，纵向变长</strong>」或者「<strong>等比放大</strong>」的方法继续变大已经没有必要，但不可否认的是，更大的显示屏幕更有利于内容的显示和多任务的操作，对于手机来说，体积尽量小，但屏幕尽量大的折叠屏手机可能会成为未来的发展方向。<br/>
+隔壁 Android 阵营已经有多家厂商发布了折叠屏手机，比如三星 Galaxy Fold、华为 Mate X，折叠屏也很可能成为 iPhone 未来发展的一个方向，iPhone 的屏幕很有可能出现第三个进化方法——<strong>横向放大，纵向不变</strong>。</p>
+
+<p><img src="media/15978209110755/4EF7F75E-C55F-4E2E-BCFD-5F251088E1F8.png" alt=""/></p>
+
+<p>畅想一下，在折叠屏 iPhone 上，你可以让 app 按照以前接近两倍的显示面积来显示；也可以让一个 app 全屏显示，另一个 app 以小窗口的形式悬浮在另一个 app 之上，类似 iPadOS 上的 Slide Over；更可以让两个 app 并排显示，类似 iPadOS 上的 Split View。</p>
+
+<p><img src="media/15978209110755/B2B9BBE7-CAC0-4621-854B-0FBA567B5E21.png" alt=""/></p>
+
+<p>一方面，app 在设计内容布局时使用了 Auto Layout、Size Class、Safe Area 这些武器，app 的布局适应性更高；另一方面更多的 iPad app 已经可以以任何尺寸自适应布局灵活显示，固定尺寸大小的 app 设计思想正在被弱化，同时 app 多任务、多窗口的功能已在 iPadOS 中进化得逐步完善。基于这两方面，到折叠屏 iPhone 推出时，iOS 和 iPadOS 上的 app 适配的阵痛期就会更短。</p>
+
+<p>总的来看，iPhone 屏幕逐渐变大，甚至翻倍，尺寸接近 iPad，iPad 部分功能下放到 iPhone 上，iPhone 与 iPad 的边界会变得逐渐模糊；同时，iPad 的 app 通过 Mac Catalyst 技术向 Mac 平台转移，Mac 逐步放弃 Intel 芯片，逐渐采用 Apple Silicon，iPad 和 Mac 的边界也同样在变得模糊。或许在未来的某一天，iPhone、iPad、Mac 的 app 生态会逐渐融合，合为一体。</p>
+
+<h2 id="toc_24">总结</h2>
+
+<p>从第一代 iPhone 到 iPhone 12，每一次屏幕尺寸的变化不仅仅是硬件上物理参数的变化，背后还有着缜密的 app 设计逻辑牵制着硬件参数的变化：</p>
+
+<ul>
+<li><strong>横向不变，纵向变长：</strong>从 iPhone 4s 到 iPhone 5，从 iPhone 8 到 iPhone X，从 iPhone 8 Plus 到 iPhone Xʀ、iPhone iPhone Xs Max，从 iPhone SE 第一代到 iPhone 12 采用了这个变化规律，纵向上比以前可以看到更多内容；</li>
+<li><strong>等比放大：</strong>从 iPhone 5s 到 iPhone6、iPhone 6 Plus，从 iPhone X 到 iPhone iPhone Xs Max、iPhone Xʀ、iPhone 12 采用了这个变化规律，横纵向上都比以前可以看到更多内容；</li>
+<li>屏幕尺寸不断增多，但屏幕逻辑分辨率宽度现在只有 <strong>320pt</strong>、<strong>375pt</strong>、<strong>414pt</strong> 三种。</li>
+</ul>
+
+<p><img src="media/15978209110755/56B9E42E-800C-4470-B4F1-39DD6377F56C.png" alt=""/></p>
+
+<p>为了让 app 能在各种屏幕尺寸的 iPhone 上都能完美显示，下面的武器必不可少，它们隐藏在 app 背后，默默发挥着作用：</p>
+
+<ul>
+<li>Point 点：抛开像素密度的干扰，专注于内容数量的对比；</li>
+<li>Auto Layout 自动布局：不对每一台设备进行绝对布局，通过确定 view 之间的约束关系针对所有设备进行相对布局；</li>
+<li>Size Class 尺寸级别：竖屏、横屏，小屏、大屏，不同使用情景采取不同内容布局方案；</li>
+<li>Safe Area 安全区域：非规则屏幕下的内容布局规范。</li>
+</ul>
+
+<p><img src="media/15978209110755/37FB85BF-7AC6-47C2-9795-995EE781B214.png" alt=""/></p>
+
+<p>屏幕尺寸的不断进化也带来了 iPhone 上功能和交互的变化：</p>
+
+<ul>
+<li>放大显示功能：使用低一级的同比例的逻辑分辨率在更大屏幕上显示内容；</li>
+<li>深色模式功能：让 OLED 屏幕更省电；</li>
+<li>新的大标题导航栏：利用更长的屏幕展示更醒目的标题，增强用户在 app 内的空间感；</li>
+<li>新的菜单样式：缩短用户操作路径，让按钮与操作之间关系更紧密，与 Mac 上的菜单样式保持一致。</li>
+</ul>
+
+<p><img src="media/15978209110755/BC9E148E-8581-43F2-9255-8B6ED1C0F526.png" alt=""/></p>
+
+<p>对于即将到来的 5.4 寸 iPhone 12，基于 iOS 14 Beta 版本中发现的线索，可以猜想：</p>
+
+<ul>
+<li>从逻辑分辨率上来看，5.4 寸 iPhone 12 基于第一代 iPhone SE 横向不变，纵向变长进化而来；</li>
+<li>小屏便利的同时，内容显示数量作出了牺牲，320pt 的屏幕宽度相比于更大尺寸显示的内容数量偏少；</li>
+<li>刘海可能会变窄变小以承载完整的状态栏信息。</li>
+</ul>
+
+<p>在 iPhone 屏幕尺寸发展走到极限的今天，未来的 iPhone 可能会朝着折叠屏的方向发展，出现第三种变化方式——<strong>横向放大，纵向不变</strong>，而在这之前已有了许多铺垫：</p>
+
+<ul>
+<li>iPad 上的 app 支持 Slide Over 侧拉、Split View 分屏浏览等多任务功能，支持一个 app 的多窗口功能；</li>
+<li>App 的内容布局可以自适应多种不同尺寸、不同比例的屏幕，在 Auto Layout、Size Class、Safe Area 的帮助下，固定尺寸的 app 设计思想被弱化，Apple 生态圈的 app 自由变换显示尺寸指日可待；</li>
+<li>Apple 自身也在强力推进开发者的 app 适配所有的屏幕尺寸。</li>
+</ul>
+
+<p>纵观 iPhone 的屏幕进化历程可以看出 iPhone 的屏幕进化不仅仅是硬件上物理参数的改变，还伴随着软件上设计和开发逻辑的不断完善，前期硬件和软件的进化或许早已为以后的软硬件埋下了种子，这种软硬一体，硬件和软件相互影响、相互牵制的设计思想可能正是解释很多人会问到的「为什么总感觉 iPhone 比 Android 好用一点，但又说不出具体哪里好？」这种问题的一个答案。<br/>
+「罗马不是一日建成的」，智能手机的生态走到今天，各家手机厂商的产品已是大差不差，但可能就是在那些微不足道的地方的细细耕耘、日积月累默默地抓住了用户的心。</p>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[为 iOS 14 设计全新的小组件]]></title>
@@ -6802,411 +7420,6 @@ let redHeartImage = heartImage.withTintColor(.redColor, renderingMode: .alwaysOr
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/">SF Symbols - SF Symbols - Human Interface Guidelines - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2019/206/">Introducing SF Symbols - WWDC 2019 - Videos - Apple Developer</a></li>
-</ul>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SiriKit 知一二 - Siri 捷径从设计到构建（上）]]></title>
-    <link href="https://steppark.net/15707294010250.html"/>
-    <updated>2019-10-11T01:43:21+08:00</updated>
-    <id>https://steppark.net/15707294010250.html</id>
-    <content type="html"><![CDATA[
-<p>SiriKit 包含了 iOS 和 watchOS 上的 app 可以调用 Siri 的领域以及可能的用户意图，并进一步将用户经常使用的功能扩展为 Siri 捷径。这篇文章将通过 HIG 来深入了解 SiriKit 的基本功能和各方面的设计规范与细节。</p>
-
-<span id="more"></span><!-- more -->
-
-<h2 id="toc_0">目录</h2>
-
-<ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">领域和意图</a>
-<ul>
-<li>
-<a href="#toc_2">增加准确度</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_3">Siri 捷径</a>
-<ul>
-<li>
-<a href="#toc_4">捷径的类型</a>
-<ul>
-<li>
-<a href="#toc_5">Donated Shortcuts 贡献型捷径</a>
-</li>
-<li>
-<a href="#toc_6">Suggested Shortcuts 建议型捷径</a>
-</li>
-<li>
-<a href="#toc_7">Relevant Shortcuts 相关型捷径</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_8">设计捷径的最佳实践</a>
-</li>
-<li>
-<a href="#toc_9">贡献捷径</a>
-</li>
-<li>
-<a href="#toc_10">创造捷径的标题和副标题</a>
-</li>
-<li>
-<a href="#toc_11">Siri 捷径的建议短语</a>
-</li>
-<li>
-<a href="#toc_12">包含捷径图片</a>
-</li>
-<li>
-<a href="#toc_13">提供一步步的问题</a>
-</li>
-<li>
-<a href="#toc_14">让人们添加和编辑捷径</a>
-</li>
-<li>
-<a href="#toc_15">添加到 Siri 按钮样式</a>
-</li>
-<li>
-<a href="#toc_16">提供多个 Siri 捷径</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_17">答复</a>
-<ul>
-<li>
-<a href="#toc_18">设计一个自定义的 Siri 界面</a>
-</li>
-<li>
-<a href="#toc_19">写下口头答复</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_20">编辑规范</a>
-<ul>
-<li>
-<a href="#toc_21">提到 Siri 和使用 Hey Siri</a>
-</li>
-<li>
-<a href="#toc_22">提到 Siri 捷径</a>
-</li>
-<li>
-<a href="#toc_23">提到 Apple 产品</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_24">继续阅读</a>
-</li>
-<li>
-<a href="#toc_25">参考链接</a>
-</li>
-</ul>
-
-
-<h2 id="toc_1">领域和意图</h2>
-
-<p>如果你的 app 提供了特定目录的服务（称之为领域），如健康、信息、支付或者订车，它就可以与 Siri 结合响应口头的命令和问题以让用户执行某些动作（称之为意图）。Siri 负责处理需要把这些口头语言转化为你 app 可以处理的指令的所有的语言处理和语义分析过程。你的 app 定义它支持的人物，确认它接收到的信息，给 Siri 提供信息以显示并执行动作。</p>
-
-<p><img src="media/15707294010250/4B84B7B8-872D-46B4-8FE4-C19694F45500.png" alt=""/></p>
-
-<p>iOS 和 watchOS 的 app 可以适配 SiriKit 框架以让人们使用 Siri 和捷径在 Apple Watch、HomePod、iPad、iPhone 甚至是通过 CarPlay 去执行 app 指定的动作。SiriKit 支持 iOS 和 watchOS 的下面这些领域和动作：</p>
-
-<p><img src="media/15707294010250/BFC25B3C-C705-4EC3-BC81-5134C7D1FA8C.png" alt=""/></p>
-
-<h3 id="toc_2">增加准确度</h3>
-
-<ul>
-<li>定义人们会在 app 内使用的自定义词汇：通过定义人们可能会在请求中使用的特定术语，如账户名字、联系人名字、照片标签、照片专辑名字、搭车选项和锻炼名字，帮助 Siri 学习跟过关于你 app 可以执行的动作。这些术语应该是不普遍的，对于你的 app 是独一无二的。不要包含其他 app 的名字、明显与其他 app 有关的术语、不合适的语言或者预留短语，如「Hey Siri」。记住任何你定义的术语会被 Siri 用来帮助分析请求，但不保证它们被识别。</li>
-<li>考虑定义其他的 app 名字：如果人们对于你的 app 的名字有不同的发音，你可以提供一个替代名字的清单以增加在让 Siri 将目标对准你的 app 时的灵活度。例如，一个叫「UnicornChat」的 app 可能会定义术语「Unicorn」作为一个替代的 app 名字。不要使用其他 app 的名字作为你的 app 的替代名字从而去冒充它们。</li>
-<li>提供请求样例：给 Siri 提供样例短语以在 Siri 界面中点击帮助按钮会显示的引导中展示。使用这些短语教人们最容易和最有效的方式通过你的 app 使用 Siri。</li>
-</ul>
-
-<h2 id="toc_3">Siri 捷径</h2>
-
-<p>任何 app 都可以提供捷径以马上执行有用的动作，或者打开 app 跳转到特定的屏幕，用户可以快速开始任务。</p>
-
-<p><img src="media/15707294010250/AA276659-CD66-4626-A57F-90D61EA880A8.png" alt=""/></p>
-
-<h3 id="toc_4">捷径的类型</h3>
-
-<p>SiriKit 支持几种捷径的类型。</p>
-
-<h4 id="toc_5">Donated Shortcuts 贡献型捷径</h4>
-
-<p>贡献型捷径是用户会有规律执行并可能会再次执行的 app 的特定的动作。例如，一个用户可能会使用一个订购汤品 app 在每周五的中午订购蛤蜊杂烩汤。这个 app 可以把这个动作当做一个可预测的用户行为，向系统贡献一个「订购我最喜欢的汤品」的捷径。使用像是位置、一天中的时间和动作类型（如在走、在跑、在开车）这些信号，系统可以智能地预测捷径正确的时间和位置。系统可以通过一个 iOS 锁屏通知、搜索结果、锁屏上的媒体播放控制（针对于媒体播放型捷径）或者是 Apple Watch 上的 Siri 表盘提供捷径给用户。</p>
-
-<h4 id="toc_6">Suggested Shortcuts 建议型捷径</h4>
-
-<p>建议型捷径是用户没有执行过但可能仍有用的 app 特定的动作。例如，如果一个订购汤品 app 的用户从来没定过汤品，app 可能想要通过一个「订购汤品」的捷径给用户一个方式做到这一点。在这个例子中，app 在 iOS 捷径 app 中提供了一个建议型捷径。一个 app 也可以展示一个添加到 Siri 按钮以直接在 app 中启动一个建议型捷径。</p>
-
-<h4 id="toc_7">Relevant Shortcuts 相关型捷径</h4>
-
-<p>相关型捷径是用户从来没有执行过，但包含像是位置、一天中的时间这样的信息的 app 特定的动作。这些捷径会在 Apple Watch 的 Siri 表盘上被智能地展示在合适的时间和地点。</p>
-
-<h3 id="toc_8">设计捷径的最佳实践</h3>
-
-<ul>
-<li>提供可以加速普遍的、有用的活动的捷径：利用好人们对 app 的熟悉，为那些人们会经常做的动作创造捷径，不要为人们只可能做一次的动作创造捷径。</li>
-<li>通常情况下，为那些不是太复杂的人物创造捷径：人们会从可以减少复杂任务的多个步骤的捷径中受益最多。不要要求人们参与一个 app 中的长时间对话，这会毁掉捷径带来的益处。你可以通过让捷径清晰地定义任务来减少用户错误的可能性。</li>
-<li>设计寿命长的捷径：避免提供特定日期或者与临时数据相关的捷径。例如，一个旅行 app 可能不应该为每个特定的旅行行程都提供一个捷径。更好的解决是让人们通过一个个的问题从所有接下来的旅行中做出选择。</li>
-<li>提供不被情景所限的捷径：人们可以通过不同的方式、在不同的时间、使用不同的设备来运行捷径。无论什么方法、何时何地都能成功运行的捷径才能创造好的体验。例如，一个锻炼 app不应该贡献一个「结束锻炼」的捷径，因为当用户没有在锻炼时捷径被建议会是一个糟糕的体验。</li>
-<li>在你的 app 中不要在提供 Siri 捷径前就请求用户使用 Siri 的许可：如果你的 app 只支持 Siri 捷径，在让用户创造和使用捷径前你不需要获得使用 Siri 的许可。获取许可会给用户造成分歧，会打击用户使用捷径的信心。</li>
-<li>可用时使用系统意图：如果内建的 SiriKit 意图代表了你的捷径的目的，适配那个意图而不是定义你自己的自定义意图。例如，如果你想提供一个发送信心的解决，适配「INSendMessageIntent」意图就好。如果你想提供一个播放媒体的捷径，适配「INPlayIntent」意图。</li>
-<li>提供后台操作：最好的捷径可以快速运行，不会让人们从当前的情景中脱离。努力支持可以在后台运行而不需要把 app 带到前台的捷径。这样做也确保人们可以在不用手、不用看的情景中完成捷径的任务。</li>
-<li>选择一个最匹配你的捷径任务的意图分类：一个分类告知系统一个捷径的通用功能，比如创造、订购、分享或者搜索。当系统提供了一个捷径或者使用 Siri 调起捷径时，这会影响呈现给用户的文本、图标、口语对话。</li>
-</ul>
-
-<h3 id="toc_9">贡献捷径</h3>
-
-<ul>
-<li>针对普遍的用户动作做出贡献：用户每次执行一个动作时都应该进行贡献，不只是第一次，这可以帮助系统更准确地预测提供捷径的最好时间和地点。</li>
-<li>如果你的 app 需要处理预订，考虑贡献给系统：像是订票事件或者预订餐馆、航班、电影和其他旅行日程的项目会自动作为建议出现在日历和地图 app 中。例如，贡献预订可以出现在锁屏上，比如建议通过你的 app check in 或者作为一个提醒基于当前的交通状况告诉用户什么时候该离开。确定只在人们活跃地查看特定预订的详细信息时贡献预订信息。在其他时候贡献预订（例如人们搜索或者查看所有预订清单时）会让人惊讶，因为当系统在你的 app 中探测到一个新的事件时会展示一个通知横幅。</li>
-<li>只为那些用户实际执行的动作贡献捷径：不要贡献用户从来没做过的捷径。例如，如果用户从来没有订购过汤品，一个汤品订购 app 不应该贡献订购汤品捷径。</li>
-<li>使用相符的数据移除贡献：如果一个贡献型捷径要求的信息不再存在，你的 app 应该删除贡献，捷径就不会再被建议。例如，如果一个用户在一个信息 app 中删除了一个联系人，任何给那个联系人发送信息的捷径也应该被删除。一个用户必须手动移除他们自己添加到 Siri 的捷径。</li>
-</ul>
-
-<h3 id="toc_10">创造捷径的标题和副标题</h3>
-
-<p>当捷径被系统建议、添加到 Siri 或者用户编辑的时候，捷径的标题和副标题会出现。</p>
-
-<ul>
-<li>保持简洁，但是是描述性的：一个标题应该清晰地传达当捷径运行时会发生什么。一个副标题可以提供补充标题但不是重复标题的额外细节。</li>
-<li>标题使用首字母大写的句子样式，不需要使用末尾标点符号，用一个动词开头：把捷径的标题看做是一种指导。</li>
-</ul>
-
-<p><img src="media/15707294010250/2551256F-6B36-44CD-AF65-8EEDF303D69B.png" alt=""/></p>
-
-<ul>
-<li>重要的信息放在前面：取决于设备的屏幕尺寸，过长的标题和副标题在某些情景中可能会被缩短。</li>
-<li>排除 app 的名字：系统已经通过捷径的关联识别到了是哪个 app。</li>
-<li>只在提到捷径使用的特定短语时使用引号：例如下图这些例子。</li>
-</ul>
-
-<p><img src="media/15707294010250/B1D19386-3350-4EDB-8901-AF4BF2F0231C.png" alt=""/></p>
-
-<ul>
-<li>本地化标题和副标题：使用多种语言提供内容可以确保全世界的人们都获得一样的好的体验。</li>
-</ul>
-
-<h3 id="toc_11">Siri 捷径的建议短语</h3>
-
-<p>你的 app 可以为 Siri 捷径提供设置期间的默认短语。当添加建议的捷径到 Siri 中时，人们可以设置个性化的短语。</p>
-
-<ul>
-<li>让建议短语保持简短和容易记住：记住人们必须要说出你的短语，所以太长或让人困惑的短语可能会导致错误和失望。理想情况下，短语应该包含两到三个词。再多的词语人们就很能记住，太长的短语会被删节。</li>
-<li>确保你建议的短语是准确特定的：像是「再订一次咖啡」或者「订我的日常咖啡」这样的短语清晰地描述了捷径是做什么的，这会让人们更容易在之后更容易记住短语。也确保你的建议短语对于每个捷径范围是特定的，例如，「看棒球比赛」比「看比赛」更清晰、更容易被记住。然而，建议短语不应该暗示自然语言理解。例如，一个像是「订购一份大的蛤蜊杂烩汤」的短语可能会导致某些人认为他们可以使用一个像是「订购一份小的龙虾浓汤」变种。</li>
-<li>不要征用关键的 Siri 命令：例如，你的 app 不应该建议一个像是「拨打 110」这样的短语，或者是包含文本「Hey Siri」。</li>
-</ul>
-
-<h3 id="toc_12">包含捷径图片</h3>
-
-<p>呈现给用户的捷径包含一张图片可以给出额外的视觉情景。默认情况下，图片是你 app 的图标。</p>
-
-<ul>
-<li>为了达到更吸引人的体验，使用自定义的图片：例如，「订购我喜欢的汤」这个捷径可能会展示用户最喜欢的汤的碗。当人们在捷径 app 中搜索时，提供特定动作的图片和定义核心参数可以让人们更容易发现你的捷径。</li>
-<li>提供正确尺寸的相关的捷径图片：在 44mm Apple Watch Siri 表盘上出现的图片应该是 68px × 68px（34pt × 34pt @2x）。对于更小的手表，系统会自动缩放。</li>
-</ul>
-
-<h3 id="toc_13">提供一步步的问题</h3>
-
-<p>捷径可以提供一步步的问题，即时优化结果，让人们通过一个捷径做到更多。例如，如果你提供了一个「订购我的日常咖啡」捷径，你可以通过问人们问题，像是什么尺寸、哪个位置或者你日常订哪一个，来帮助他们得到他们想要的。</p>
-
-<ul>
-<li>设计要求尽可能少的一步步问题的捷径：一个捷径可以不用一步步的问问题就可以完成一个请求。虽然一步步的问题让捷径更灵活，但是你并不想强制人们进入一个很长的交互。在大多数的例子中，最好是提供一两个一步步问题就好。</li>
-<li>确保每一个一步步的问题都是有意义的：理想情况下，每一个一步步问题都帮助人们做出一个重要的选择。如果你呈现的选项或者是问题本身太粗糙或者太相似，对话就会变得重复，人们使用你的捷径会感到有太多工作要做。</li>
-<li>当可以说清楚时支持链式的一步步问题：例如，一个帮助人们订餐的 app 可能提供了自取或者送货上门的选项，但只在用户选择送货上门时询问用户的特定位置。</li>
-<li>预定义有用的默认选项：当人们添加捷径到 Siri 时，他们可以改变一步步问题的参数。你可以让人们基于用户的当前使用场景通过设置默认值更容易做到这些。你可以提供一个「再次订购汤品」的捷径，其带有询问人们特定订单的一步步问题。当人们从订单的详情页面添加这个捷径到 Siri 时，你可以预配置这个捷径以博涵那个特定的订单。</li>
-<li>考虑提供动态的选项：例如，如果你的捷径依赖于位置，你可以通过提供离用户最近的选项帮助确保准确最新的结果。你也可以在人们第一次添加捷径到 Siri 时提供动态选项。</li>
-<li>帮助人们理解错误和失败：例如，如果你询问了让人们选择味道的一步步问题，若用户的选择卖光了你需要提供一个有用的答复。系统可以为像是达到了最大值或最小值这样的情况提供默认错误提示，但你应该根据你解决的任务为错误量身定制。例如，如果鸡肉面条汤卖完了，可以回复用户一个错误提示「对不起，鸡肉面条汤卖完了」，而不是「对不起，我们不能完成你的订单」。</li>
-<li>确保你的捷径在每一个情景中都可以运行良好：让人们容易运行你的捷径，不管他们是如何启动的。例如，你应该为在设备上没有屏幕，只使用他们声音运行捷径的人做好准备，也为从锁屏或者 Apple Watch Siri 表盘建议或者从搜索结果或者在一个多步骤捷径中运行做好准备。</li>
-</ul>
-
-<h3 id="toc_14">让人们添加和编辑捷径</h3>
-
-<p>人们可以在捷径 app 中添加、编辑、删除捷径，但是你也可以在你的 app 中呈现这些功能。</p>
-
-<p><img src="media/15707294010250/9D5BE4E5-E178-4E0C-BA93-A965A627EBA0.png" alt=""/></p>
-
-<ul>
-<li>提供一个添加到 Siri 按钮让人们可以为一个普遍的动作添加捷径：当用户点击按钮时，标准捷径页面会出现，允许用户录制一个自定义的声音命令并添加捷径。在捷径被添加后，按钮的文本会自动改变成已添加到 Siri，录制的触发短语也会显示在上面。这些改变告诉人们成功添加了捷径，更重要的是提供他们当让 Siri 运行捷径时该说什么。如果你让人们在你的 app 中为几个动作创造了捷径，你可以使用一步步问题整合这些动作或者在一个屏幕上展示多个捷径。</li>
-<li>适用添加到 Siri 按钮的可变宽度：在不同位置和更新到展示用户的调起短语时，按钮的宽度会发生变化。</li>
-<li>在添加到 Siri 按钮周围保证清晰的空间：在按钮四周，最小留出按钮高度的 1/10 间距。</li>
-</ul>
-
-<p><img src="media/15707294010250/AddToSiri-ClearSpace_2x.png" alt=""/></p>
-
-<ul>
-<li>如果你创造一个自定义的添加捷径按钮，提供和系统按钮一样的体验：你的自定义按钮应该展示短语「添加到 Siri」。不要展示像是「添加声音命令」、「创造声音捷径」、「创造声音提示」这样的短语，不要在你的自定义按钮上展示 Siri 图标。也不要使用 Siri 图标作为按钮，或者在你界面的其他地方展示它。在人们使用你的自定义按钮添加捷径之后，展示录制的调起短语对于帮助人们记住它很重要。对自定义按钮，你可以跟随系统提供的体验，更新按钮显示已添加到 Siri 和短语。</li>
-</ul>
-
-<p><img src="media/15707294010250/add-to-siri-button-added_2x.png" alt=""/></p>
-
-<ul>
-<li>让人们编辑和移除已添加的解决：在添加一个捷径之后，当用户点击显示在你 app 中的调起短语，再次显示标准的捷径界面，这样用户就可以重新录制短语或者删除捷径。</li>
-<li>让 app 中显示的任何捷径保持最新：人们可以在设置-Siri 和搜索中添加、删除、更新你 app 的捷径。然而，当发生改变时设置不会通知你的 app。让界面与最近的捷径改变保持最新是你 app 的责任。</li>
-</ul>
-
-<h3 id="toc_15">添加到 Siri 按钮样式</h3>
-
-<p>添加到 Siri 按钮有几种视觉样式可用。你也可以自定义按钮的圆角半径以搭配你的 app 的界面。</p>
-
-<p><img src="media/15707294010250/AddToSiri-Black_2x.png" alt=""/></p>
-
-<ul>
-<li>Black 黑色：在白色或者提供充足对比度的浅色背景上使用。不要再黑色和深色背景上使用。</li>
-</ul>
-
-<p><img src="media/15707294010250/AddToSiri-Black-Outlined_2x.png" alt=""/></p>
-
-<ul>
-<li>Black with outline 有轮廓的黑色：在深色或者提供充足对比度的带色背景上使用。不要在白色或浅色背景上使用。</li>
-</ul>
-
-<p><img src="media/15707294010250/AddToSiri-White_2x.png" alt=""/></p>
-
-<ul>
-<li>White 白色：在深色和提供充足对比度的带色背景上使用。</li>
-</ul>
-
-<p><img src="media/15707294010250/AddToSiri-White-Outlined_2x.png" alt=""/></p>
-
-<ul>
-<li>Whit with outline 有轮廓的白色：在白色或者不能提供足够对比度的浅色背景上使用。不要在深色或饱和背景上使用。</li>
-</ul>
-
-<h3 id="toc_16">提供多个 Siri 捷径</h3>
-
-<p>如果你的 app 包含好几个 Siri 捷径，考虑一块 app 的专用区域展示它们。一块专用的区域可以让人们容易一眼看到你 app 所有的捷径，并添加他们想使用的捷径。另外，考虑提供一步步问题以支持一个捷径的一系列额外选项。</p>
-
-<ul>
-<li>对你的捷径列表使用一个不模糊的标题：例如在导航栏上使用标题「Siri 捷径」可以清晰地表达这一个界面的目的。</li>
-<li>考虑创造一个自定义的添加按钮用于捷径列表：当在一个界面中被用到多次时，系统提供的添加到 Siri 按钮会添加太多的视觉比重。如果一个界面上的列表里全是 Siri 捷径，你可以为列表中的每一个捷径显示一个简单的添加按钮。</li>
-</ul>
-
-<p><img src="media/15707294010250/A644A957-CA96-4A35-BB14-25B00F622274.png" alt=""/></p>
-
-<ul>
-<li>当一个捷径被添加时提供反馈：通过替换添加按钮为编辑按钮、展示他们录制的短语，告诉人们他们已经成功地添加了捷径。或者，你可以移除添加按钮，让人们点击他们录制的短语以打开一个编辑界面。</li>
-</ul>
-
-<h2 id="toc_17">答复</h2>
-
-<p>当某个人使用 Siri 去执行你 app 中的一个动作时，你的 app 可以在 Siri 中提供一个自定义的界面展示可以执行的选项。在动作被执行后，你的 app 可以响应那个信息或者表明确认、成功或失败。你的 app 也可以通过可以被 Siri 读出的自定义的对话的形式提供答复。</p>
-
-<p><img src="media/15707294010250/2021A55B-5F42-44A5-BA3E-A1C6C4587EA1.png" alt=""/></p>
-
-<ul>
-<li>让 Siri 交互更中立：你可以在整个捷径体验中自定义 Siri 会讲什么，包括一步步问题的控制。尝试写一个脚本并与其他人演绎来看看你的对话在实践中的感受是如何。用这种方式体验自定义对话可以帮助你找到交互不中立的地方。</li>
-<li>保持相关、准确：让你的 app 的答复与用户的当前请求和期望相关。例如，如果用户请求 Siri 用你的 app 发送一条消息，那就发送一条消息，不要执行不同的动作。</li>
-<li>在 Apple Watch 上，设计一个要求最小交互的流线化的工作流：你的 app 不能为 Siri 提供一个可以在 Apple Watch 上显示的自定义的用户界面。作为结果，你的 app 的 Siri 体验应该是流线化的、最小化的。任何可能的时候，使用智能默认选项而不是请求输入。例如，交通分享 app 可能自动默认上次请求的交通方式，或者一个健康 app 可能默认为一个最喜欢的锻炼。如果你要给用户呈现选项，提供有效的、聚焦的可以减少额外提示可能性的选择。任何可能的时候，自动完成任务。例如，watchOS 的信息 app 可以自动发送信息，除非不要发送的按钮被点击。</li>
-<li>快速响应：人们为了便利使用 Siri，期望回复越快越好。</li>
-<li>任何可能的时候，完成请求时不要离开 Siri：如果一个请求必须在你的 app 中完成，把用户直接带到期望的地方。不要展示一个中间屏幕或者信息，这会拖慢整个体验。</li>
-<li>当一个请求会对财产有影响时，默认选择最安全和最便宜的选项：不要欺骗用户或者是歪曲信息。对于有多个价格等级的购买，不要默认选最贵的。在用户付款时，不要在没通知用户时付掉额外的费用。</li>
-<li>让选项列表尽可能简短，把这些条目通过一种讲得通的方式排序：虽然一步步问题让捷径更灵活，但给人们太多选项会让复杂的任务变得很繁重。当你决定是否要包含一个条目时，考虑它的复杂度和实用度。例如，在一个订餐 app 中，独立的菜单条目比每个条目包含好几种食物的菜单能让人们更容易从句法上分析。在你识别出一部分有用条目之后，考虑按照时间、频繁度或者流行度来排序它们。</li>
-<li>只在讲得通时请求确认：一个捷径可以在完成任务之前或停止回答一步步问题时请求用户确认。有财产影响的 app 应该在完成订单之前请求确认。另一方面，你应该避免请求用户确认一个一步步问题的回答，除非提供的答案有疑问或者很难懂。在这两种情况下，避免请求确认超过一次。</li>
-<li>考虑让人们在 app 中查看更多选项：如果选项列表不包括用户所需要的，你可能需要包括一个选项让用户打开你的 app 查看更多。在列表中，你可以使用像是「在 XX app 中查看更多」这样的话，在口语对话中，你可以顾里用户直接说「更多选项」。</li>
-</ul>
-
-<h3 id="toc_18">设计一个自定义的 Siri 界面</h3>
-
-<ul>
-<li>确保你的界面与 Siri 完美融合：使用你 app 的颜色、图片和其他设计元素去表达你的品牌是可以的，但任何界面元素应该感觉像是属于 Siri 的。除非你的 app 需要一个完全的自定义界面，否则把你的内容与 Siri 提供的默认界面结合在一起就好。</li>
-<li>提供充足的边界和间距：避免让内容跑出界面的边界，除非内容看上去像是自然跑出屏幕的，像是地图。通常情况下，在界面和内容之间提供至少几个像素的边界。使用在界面顶部的 app 图标作为对齐规范。当内容与图标的中线对齐时，内容一般都会表现得很好。</li>
-<li>最小化你界面的高度：理想情况下，你的界面应该不高于屏幕的高度，这样用户能够不需要滚动就可以看到所有的内容。</li>
-<li>不要创造看上去可以交互的界面：当你的界面在 Siri 中显示时，它不能响应事件或者手势（除了可以打开你 app 的点击动作）。因为这个原因，避免展示多个图片、形状或者看上去可交互的元素很重要。你可以最多展示一个按钮打开你的 app 跳转到人们可以执行额外动作的界面。例如，一个自定义的订单确认界面可以展示一个编辑按钮以打开 app 并让人们改变订单的一些选项。</li>
-<li>不要在界面中包括 app 名字或者图标：系统会自动展示这些信息。</li>
-</ul>
-
-<h3 id="toc_19">写下口头答复</h3>
-
-<ul>
-<li>争取让声音答复可以像自定义 Siri 界面一样吸引人：记住人们可能会不看屏幕从他们的 HomePod 上、在 AirPods 上使用「Hey Siri」或者通过 CarPlay 执行 app 的动作。在这些情况下，无论人们怎么与 Siri 进行交互，声音答复应该传达与视觉元素展示相同的核心信息，以确保人们可以获得他们所需要的。</li>
-<li>创造简洁、可描述、在声音驱动场景中运行良好的声音答复：通过一个捷径标题，一个自定义的口头答复应该清晰地传达捷径运行时发生了什么。如果你问了一步步的问题，确保自定义的默认对话是清晰的。例如，「哪一个汤？」会比「哪一个」更清晰。</li>
-<li>避免没必要的重复：人们倾向于频繁地运行捷径，所以当回答一步步问题或者处理错误时，他们可能会听到相同的提示多次。使用当前对话的场景移除掉尽可能多的提示细节。避免包括没必要的连篇累牍或者幽默的尝试，因为这两者随着时间都会让用户恼怒。</li>
-<li>帮助 Siri 中立：人们总是会通过不同的方式与 Siri 交互，例如选择一个列表条目时会说「第二个」或者「大的」、「小的」，而不说词语碗。当你通过给系统提供替代的术语和短语来支持 app 特定的同义词，你可以让人们的 Siri 交互更加自然。考虑通过提供 Siri 可以说的替代的对话选项增强清晰度。例如，汤品订购 app 可能会展示一个菜单列表像是「一份蛤蜊杂烩汤」、「一份蛤蜊杂烩汤和一份番茄汤」，讲出这些选项时可以说「哪一个选项？那个只有蛤蜊杂烩汤的还是那个包括番茄汤的？」</li>
-<li>排除你的 app 名字：当相应用户时，系统会在口头上和视觉上提供你 app 的属性。在口头答复中包括你的 app 的名字是多余的，可能会让与 Siri 的交互体验感到没那么中立。当人们使用一个捷径好几次时，Siri 就不会那么频繁地说出 app 的名字，因为提醒人们哪个 app 在响应已经没必要了。</li>
-<li>不要尝试模仿或者操纵 Siri：你的 app 不应该冒充 Siri，不应该尝试重造 Siri 提供的功能或者提供一个像是来自于 Apple 的答复。</li>
-<li>保持合适，遵照父母控制。不要展示无礼或降低身份的内容。记住许多家庭使用父母控制以限制露骨的内容或者基于特定分级的内容。</li>
-<li>不要使用个人代词：内容应该是包括所有人。</li>
-<li>保持相应与设备无关：人们可能使用 Siri 与 Apple Watch、HomePod、iPad、iPhone或者 CarPlay 上的 app 进行交互。如果你必须提供特定设备的功能，确保它清晰反映了用户的当前设备。</li>
-<li>通过 Sir 和捷径强调你的 app：提及 Siri 和捷径应该比你的 app 名字和身份更不重要。</li>
-<li>不要做广告：内容不应该包含广告、市场营销或者 app 内购买促销。</li>
-</ul>
-
-<h2 id="toc_20">编辑规范</h2>
-
-<h3 id="toc_21">提到 Siri 和使用 Hey Siri</h3>
-
-<ul>
-<li>不要使用像是她、他这样的词语提及 Siri：理想情况下，只使用词语 Siri。例如，「在添加一个捷径到 Siri 之后，你可以在任何时候通过请求 Siri 运行捷径」。</li>
-<li>当使用术语「Hey Siri」时使用正确的大小写和标点符号：「Hey Siri」是两个单词，斜体或者使用引号，H 和 S 大小。不要省略这个术语。</li>
-</ul>
-
-<p><img src="media/15707294010250/0B41F5D6-A91A-43CD-9889-77819D1030FA.png" alt=""/></p>
-
-<ul>
-<li>在一个本地化情景中，只翻译词语「Hey Siri」中的单词「Hey」：作为一个苹果商标，Siri 不需要被翻译。下面是一份可以被接受的「Hey Siri」的翻译列表。</li>
-</ul>
-
-<p><img src="media/15707294010250/4217ABDB-F891-4319-88C1-8F0EE0CD0CC1.png" alt=""/></p>
-
-<h3 id="toc_22">提到 Siri 捷径</h3>
-
-<ul>
-<li>当提到 Siri Shortcuts 时，两个单词的 S 都要大写，并确保捷径这个单词是复数：例如「<em>Siri Shortcuts provide a quick way to get things done in your app with just a tap or by asking Siri</em>.」</li>
-<li>当提及单独的捷径时（不是指功能本身或者捷径 app），使用小写：例如「<em>Run a shortcut by asking Siri or tapping a suggestion on the lock screen</em>.」</li>
-<li>当描述人们是如何在你的 app 中使用 Siri 捷径时使用正确的术语：用户通过请求 Siri 运行捷径，所以你的用词应该与像是「<em>Run a shortcut by asking Siri</em>」或者「<em>Run the shortcut by asking Siri with your personalized phrase</em>」这样的词语相似。为了鼓励用户创造并使用捷径，避免使用像是「添加声音捷径」、「创造声音命令」、「创造声音提示」或其他变种这样的短语。你可以使用下面短语中的一个：
-<ul>
-<li>Add to Siri</li>
-<li>Add a shortcut to Siri to run with your voice</li>
-<li>Add a shortcut to Siri to run anytime by asking Siri</li>
-</ul></li>
-<li>在本地化情景中提到它们时，使用你 app 名字和单词捷径的翻译，但不要翻译 Siri：例如，当在设置-Siri 和搜索-我的捷径中提及特定捷径时，使用捷径的翻译版本。</li>
-</ul>
-
-<h3 id="toc_23">提到 Apple 产品</h3>
-
-<ul>
-<li>遵守 Apple 商标规范：Apple 商标不应该出现在你 app 的名字和图片中。在文本中，像 <a href="https://www.apple.com/legal/intellectual-property/trademark/appletmlist.html">Apple 商标列表</a>中展示的那样使用 Apple 产品名字。
-<ul>
-<li>只使用单数形式的 Apple 商标名字，不要使用 Apple 商标名字的所有格；</li>
-<li>不要翻译 Apple、Siri 或其他的 Apple 商标；</li>
-<li>不要使用分类描述词，例如要说 iPad，而不是平板电脑。</li>
-<li>不要表明任何形式的来自 Apple 的赞助、合作、支持。</li>
-<li>任何你 app 中法律信息出现的地方，都要把 Apple、Siri 和其他 Apple 商标放在正确的地位上。</li>
-<li>只在技术规格或者兼容描述中提到 Apple 设备和操作系统。</li>
-</ul></li>
-</ul>
-
-<p>更多的请参阅<a href="https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html">使用 Apple 商标的规范</a>。</p>
-
-<h2 id="toc_24">继续阅读</h2>
-
-<p>通过 SiriKit 了解了 app 可以发挥的领域，了解了这么多设计规范和细节之后，<a href="15707295333245.html">继续阅读 Siri 捷径从设计到捷径第二篇 - 设计绝佳的 Siri 捷径</a>，通过一个实际例子一步步地从细节上去设计 app 的 Siri 捷径。</p>
-
-<h2 id="toc_25">参考链接</h2>
-
-<ul>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/sirikit/overview/domains-and-intents/">Domains and Intents - SiriKit - Human Interface Guidelines - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/sirikit/overview/siri-shortcuts/">Siri Shortcuts - SiriKit - Human Interface Guidelines - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/sirikit/overview/responses/">Responses - SiriKit - Human Interface Guidelines - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/sirikit/overview/editorial-guidelines/">Editorial - SiriKit - Human Interface Guidelines - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/videos/play/wwdc2019/806">Designing Great Shortcuts - WWDC 2019 - Videos - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/videos/play/wwdc2019/805/">Building Great Shortcuts - WWDC 2019 - Videos - Apple Developer</a></li>
 </ul>
 
 <blockquote>
