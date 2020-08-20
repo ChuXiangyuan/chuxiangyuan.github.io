@@ -4,7 +4,7 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2020-08-19T15:24:34+08:00</updated>
+  <updated>2020-08-19T15:25:20+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -20,7 +20,7 @@
     <content type="html"><![CDATA[
 <p>从 2007 年发布的第一代 iPhone 到 2019 年发布的 iPhone 11 系列，iPhone 的屏幕尺寸已涵盖 3.5 寸、4 寸、4.7 寸、5.5 寸、5.8 寸、6.1 寸、6.5 寸七种，传闻将于今年秋季发布的 iPhone 12 还会增加 5.4 寸、6.7 寸两种尺寸。随着时间轴的推移，iPhone 的屏幕尺寸已经变得越来越多，越来越复杂，一个 app 要适配所有的这些屏幕尺寸，在从设计、开发到推广的整个过程中都需要考虑诸多因素。</p>
 
-<p>在 iOS 14 Beta 3 版本中，<a href="https://9to5mac.com/2020/07/22/ios-14-beta-gives-us-a-glimpse-of-the-system-interface-on-the-5-4-inch-iphone-12/">有用户发现 5.8 寸的 iPhone X/Xs/11 Pro 机型新增了「放大显示」功能，进而发现 iOS 14 可以以 960 x 2079 像素这个新的分辨率正常运行</a>。而在之前的版本中，5.8 寸的 iPhone 机型上一直没有放大显示功能，结合新发现的运行分辨率，我们有理由推测 Apple 正在为一款小屏幕手机做准备，而这个分辨率很可能就是传闻中即将发布的 5.4 寸 iPhone 12 的准确分辨率 。</p>
+<p>在 iOS 14 Beta 3 版本中，有<a href="https://9to5mac.com/2020/07/22/ios-14-beta-gives-us-a-glimpse-of-the-system-interface-on-the-5-4-inch-iphone-12/">用户发现</a> 5.8 寸的 iPhone X/Xs/11 Pro 机型新增了「放大显示」功能，进而发现 iOS 14 可以以 960 x 2079 像素这个新的分辨率正常运行。而在之前的版本中，5.8 寸的 iPhone 机型上一直没有放大显示功能，结合新发现的运行分辨率，我们有理由推测 Apple 正在为一款小屏幕手机做准备，而这个分辨率很可能就是传闻中即将发布的 5.4 寸 iPhone 12 的准确分辨率 。</p>
 
 <p>在这 13 年间 iPhone 的屏幕尺寸是怎样一步步进化到此的？基于软硬一体的设计，屏幕物理尺寸的变化背后包含着怎样的进化规律？这些变化对我们朝夕相处的手机 app 又产生了什么影响？根据已有的进化规律，我们是否可以展望未来的 iPhone 还会走向何方？基于 iOS 14 Beta 中发现的新线索，我们又可以推断出 iPhone 12 的哪些更多信息呢？本文就来说道说道。</p>
 
@@ -316,7 +316,7 @@
 
 <p>有了 Size Class，设计师和开发者在设计和开发 app 时就不需要根据繁多的屏幕尺寸和屏幕使用方向等多个内外因素来确定 app 内容布局，新的屏幕尺寸出现时也无需再单独适配。来看几个具体的 Size Class 应用实例。</p>
 
-<p>第一个例子，2018 年 6.5 寸屏幕的 iPhone iPhone Xs Max 发布前，<a href="https://9to5mac.com/2018/07/31/iphone-x-plus-landscape-mode/">有人在 iOS 12 的 Beta 版本中发现</a>当让 iPhone 模拟器运行在传闻中的 iPhone iPhone Xs Max 分辨率之下时，部分系统自带 app 在横屏时的内容布局与 5.8 寸的 iPhone X 不一样，比如「信息」app 横屏时，5.8 寸屏幕只能显示某个联系人的短信内容，但 6.5 寸屏幕就可以分左右两边显示短信列表和具体的短信内容。据此进一步印证了 6.5 寸的 iPhone iPhone Xs Max 的存在。<br/>
+<p>第一个例子，2018 年 6.5 寸屏幕的 iPhone Xs Max 发布前，<a href="https://9to5mac.com/2018/07/31/iphone-x-plus-landscape-mode/">有人在 iOS 12 的 Beta 版本中发现</a>当让 iPhone 模拟器运行在传闻中的 iPhone Xs Max 分辨率之下时，部分系统自带 app 在横屏时的内容布局与 5.8 寸的 iPhone X 不一样，比如「信息」app 横屏时，5.8 寸屏幕只能显示某个联系人的短信内容，但 6.5 寸屏幕就可以分左右两边显示短信列表和具体的短信内容。据此进一步印证了 6.5 寸的 iPhone Xs Max 的存在。<br/>
 同一个 app 在不同屏幕尺寸的屏幕上显示的内容布局不同，究其原因，如下图所示，在屏幕宽度上 5.8 寸屏幕的 Size Class 是「compact width」，6.5 寸屏幕的 Size Class 是「regular width」，Size Class 不同，所以它们的 app 内容显示布局不一样。</p>
 
 <p><img src="media/15978209110755/1925B380-BA4C-4202-9098-EA991183E913.png" alt=""/></p>
@@ -389,7 +389,7 @@
 
 <h3 id="toc_10">全面屏的 5.8 寸、6.1 寸、6.5 寸</h3>
 
-<p>2017 年 iPhone 转向全面屏时代，搭载 iOS 11、配有 5.8 寸屏幕的 iPhone X 发布，屏幕分辨率为 1125px × 2436px，PPI 达到 458，屏幕尺寸和屏幕分辨率都发生了重大变化，而且屏幕由以前的 LED 屏改为了 OLED 屏。由于从非全面屏到全面屏的进化，iPhone 去除了 Home 键，由软件层面的 Home Indicator 代替；去除了 Touch ID，由刘海内的Face ID 代替，屏幕的四角也变成了圆角，整块屏幕不再是规则的矩形。</p>
+<p>2017 年 iPhone 转向全面屏时代，搭载 iOS 11、配有 5.8 寸屏幕的 iPhone X 发布，屏幕分辨率为 1125px × 2436px，PPI 达到 458，屏幕尺寸和屏幕分辨率都发生了重大变化，而且屏幕由以前的 LED 屏改为了 OLED 屏。由于从非全面屏到全面屏的进化，iPhone 去除了 Home 键，由软件层面的 Home Indicator 代替；去除了 Touch ID，由刘海内的Face ID 代替；屏幕的四角也变成了圆角，整块屏幕不再是规则的矩形。</p>
 
 <p><img src="media/15978209110755/BF7ED6A0-46BD-4D6A-9C40-7AA9D8B08C22.png" alt=""/></p>
 
@@ -403,7 +403,7 @@
 <li><a href="https://steppark.net/15086036845015.html">Designing For iPhone X —— iPhone 上有了刘海，设计和开发到底该咋整? - 向远公园 | Step Park</a></li>
 </ul>
 
-<p>2018 年 5.8 寸的 iPhone iPhone Xs 发布，与 iPhone X 的屏幕保持一致，同时全面屏 iPhone 家族新增了 6.5 寸的 iPhone iPhone Xs Max，屏幕分辨率为 1242px × 2688px，PPI 为 458。2019 年 5.8 寸的 iPhone 11 Pro 和 6.5 寸的 iPhone 11 Pro Max 发布，与上一代的屏幕保持一致。</p>
+<p>2018 年 5.8 寸的 iPhone Xs 发布，与 iPhone X 的屏幕保持一致，同时全面屏 iPhone 家族新增了 6.5 寸的 iPhone Xs Max，屏幕分辨率为 1242px × 2688px，PPI 为 458。2019 年 5.8 寸的 iPhone 11 Pro 和 6.5 寸的 iPhone 11 Pro Max 发布，与上一代的屏幕保持一致。</p>
 
 <p><img src="media/15978209110755/EA7FC8B6-0F3E-4F5D-B0C8-2B99D9220478.png" alt=""/></p>
 
@@ -411,7 +411,7 @@
 
 <p><img src="media/15978209110755/BFFF1D40-8D36-448F-9EC3-2FFD8DF60AAC.png" alt=""/></p>
 
-<p>2018 年和 2019 年全面屏 iPhone 家族新增的 6.1 寸屏幕和 6.5 寸屏幕，它们虽然屏幕尺寸相同，但逻辑分辨率相同，都为 414pt × 896pt，不同的是 6.1 寸的比例因子为 @2x，6.5 寸的比例因子为 @3x，所以它们显示的内容数量是相同的，但 6.5 寸的屏幕清晰度更高。<br/>
+<p>2018 年和 2019 年全面屏 iPhone 家族新增的 6.1 寸屏幕和 6.5 寸屏幕，它们虽然屏幕尺寸不同，但逻辑分辨率相同，都为 414pt × 896pt，不同的是 6.1 寸的比例因子为 @2x，6.5 寸的比例因子为 @3x，所以它们显示的内容数量是相同的，但 6.5 寸的屏幕清晰度更高。<br/>
 这两个机型的逻辑分辨率在横向上是与 5.5 寸的 iPhone 8 Plus 相同的，都为 414pt，在纵向上比 iPhone 8 Plus 多了 160pt，所以也是采用「<strong>横向不变，纵向变长</strong>」的逻辑进化而来。5.8 寸的全面屏 iPhone 是由 4.7 寸的非全面屏 iPhone 进化而来，6.1 寸/6.5 寸的全面屏 iPhone 是由 5.5 寸的非全面屏 iPhone 进化而来，同时 4 寸、4.7 寸、5.5 寸的非全面屏 iPhone 的宽高比例是相同的，5.8 寸、6.1 寸、6.5 寸的全面屏 iPhone 的宽高比例也是相同的，6.1 寸、6.5 寸也可以看做是由 5.8 寸屏幕「<strong>等比放大</strong>」而来。</p>
 
 <p><img src="media/15978209110755/21FD519B-50DD-4C43-84CA-0A3CBE296E22.png" alt=""/></p>
@@ -428,7 +428,7 @@
 <li><a href="https://steppark.net/15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同? - 向远公园 | Step Park</a></li>
 </ul>
 
-<p>为了推动 app 生态的进化，<a href="https://developer.apple.com/news/?id=03262020b">Apple 在之前也向开发者发出通知</a>，2020 年 6 月 30 之后，所有要更新或新上架的 iPhone app 必须支持所有的 iPhone 屏幕尺寸，iPad app 必须支持所有的 iPad 屏幕尺寸。同时<a href="https://developer.apple.com/ios/submit/">强烈鼓励开发者对 iPad app 支持多窗口、多任务功能</a>（侧拉、分屏浏览、画中画）。</p>
+<p>为了推动 app 生态的进化，<a href="https://developer.apple.com/news/?id=03262020b">Apple 在之前也向开发者发出通知</a>，2020 年 6 月 30 日之后，所有要更新或新上架的 iPhone app 必须支持所有的 iPhone 屏幕尺寸，iPad app 必须支持所有的 iPad 屏幕尺寸。同时<a href="https://developer.apple.com/ios/submit/">强烈鼓励开发者对 iPad app 支持多窗口、多任务功能</a>（侧拉、分屏浏览、画中画）。</p>
 
 <h3 id="toc_11">适应屏幕新变化：Safe Area</h3>
 
@@ -539,7 +539,7 @@
 
 <p><img src="media/15978209110755/7891A388-524E-4362-B36E-A77EE78FA3C3.png" alt=""/></p>
 
-<p>非全面屏 4 寸第一代 iPhone SE 仍然支持 iOS 14、全面屏 5.4 寸 iPhone 再次引入 320pt 宽度，在屏幕日趋变大的今天，设计师和开发者仍然需要为 320pt 这样较窄宽度的 iPhone 进行 app 设计、适配和开发。</p>
+<p>非全面屏 4 寸的第一代 iPhone SE 仍然支持 iOS 14、全面屏 5.4 寸 iPhone 再次引入 320pt 宽度，在屏幕日趋变大的今天，设计师和开发者仍然需要为 320pt 这样较窄宽度的 iPhone 进行 app 设计、适配和开发。</p>
 
 <h4 id="toc_21">刘海变窄变小？</h4>
 
@@ -573,8 +573,8 @@
 <p>从第一代 iPhone 到 iPhone 12，每一次屏幕尺寸的变化不仅仅是硬件上物理参数的变化，背后还有着缜密的 app 设计逻辑牵制着硬件参数的变化：</p>
 
 <ul>
-<li><strong>横向不变，纵向变长：</strong>从 iPhone 4s 到 iPhone 5，从 iPhone 8 到 iPhone X，从 iPhone 8 Plus 到 iPhone Xʀ、iPhone iPhone Xs Max，从 iPhone SE 第一代到 iPhone 12 采用了这个变化规律，纵向上比以前可以看到更多内容；</li>
-<li><strong>等比放大：</strong>从 iPhone 5s 到 iPhone6、iPhone 6 Plus，从 iPhone X 到 iPhone iPhone Xs Max、iPhone Xʀ、iPhone 12 采用了这个变化规律，横纵向上都比以前可以看到更多内容；</li>
+<li><strong>横向不变，纵向变长：</strong>从 iPhone 4s 到 iPhone 5，从 iPhone 8 到 iPhone X，从 iPhone 8 Plus 到 iPhone Xʀ、iPhone Xs Max，从 iPhone SE 第一代到 iPhone 12 采用了这个变化规律，纵向上比以前可以看到更多内容；</li>
+<li><strong>等比放大：</strong>从 iPhone 5s 到 iPhone6、iPhone 6 Plus，从 iPhone X 到 iPhone Xs Max、iPhone Xʀ、iPhone 12 采用了这个变化规律，横纵向上都比以前可以看到更多内容；</li>
 <li>屏幕尺寸不断增多，但屏幕逻辑分辨率宽度现在只有 <strong>320pt</strong>、<strong>375pt</strong>、<strong>414pt</strong> 三种。</li>
 </ul>
 
