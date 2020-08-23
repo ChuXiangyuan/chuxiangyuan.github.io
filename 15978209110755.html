@@ -157,6 +157,10 @@
 
 <span id="more"></span><!-- more -->
 
+<blockquote>
+<p>本篇文章亦在少数派发布并获得首页推荐，<a href="https://sspai.com/post/62198">点此访问↗︎</a>，亦在「Newlearnerの自留地」Telegram 频道获得推荐，<a href="https://t.me/NewlearnerChannel/5307">点此访问↗︎</a></p>
+</blockquote>
+
 <h2 id="toc_0">目录</h2>
 
 <ul>
@@ -520,7 +524,7 @@
 
 <h3 id="toc_10">全面屏的 5.8 寸、6.1 寸、6.5 寸</h3>
 
-<p>2017 年 iPhone 转向全面屏时代，搭载 iOS 11、配有 5.8 寸屏幕的 iPhone X 发布，屏幕分辨率为 1125px × 2436px，PPI 达到 458，屏幕尺寸和屏幕分辨率都发生了重大变化，而且屏幕由以前的 LED 屏改为了 OLED 屏。由于从非全面屏到全面屏的进化，iPhone 去除了 Home 键，由软件层面的 Home Indicator 代替；去除了 Touch ID，由刘海内的Face ID 代替；屏幕的四角也变成了圆角，整块屏幕不再是规则的矩形。</p>
+<p>2017 年 iPhone 转向全面屏时代，搭载 iOS 11、配有 5.8 寸屏幕的 iPhone X 发布，屏幕分辨率为 1125px × 2436px，PPI 达到 458，屏幕尺寸和屏幕分辨率都发生了重大变化，而且屏幕由以前的 LCD 屏改为了 OLED 屏。由于从非全面屏到全面屏的进化，iPhone 去除了 Home 键，由软件层面的 Home Indicator 代替；去除了 Touch ID，由刘海内的Face ID 代替；屏幕的四角也变成了圆角，整块屏幕不再是规则的矩形。</p>
 
 <p><img src="media/15978209110755/BF7ED6A0-46BD-4D6A-9C40-7AA9D8B08C22.png" alt=""/></p>
 
@@ -576,7 +580,24 @@
 
 <p><img src="media/15978209110755/80D7642F-3606-4DEA-91DE-4BFE9B01B25C.png" alt=""/></p>
 
-<p>有了 Safe Area 的定义，app 在设计和布局自定义内容时应该处于 Safe Area 之内，避免与屏幕的圆角、刘海、Home Indicator 发生重叠或裁切，但对于可滚动的内容以及控件/页面的背景颜色，可以让其延伸到屏幕边缘，以形成连续显示的效果。</p>
+<p>在使用 Auto Layout 对界面上的 View 确定布局约束时，就可以直接利用上 Safe Area 以适应不同的使用场景。举一个简单的例子，下图中红色方块的其中一条布局约束就可以定义为：</p>
+
+<ul>
+<li>Size Class 为「compact width，regular height」，也即 iPhone 竖屏时：
+<ul>
+<li>红色方块的顶部 = Safe Area 的顶部 + 32；</li>
+</ul></li>
+<li>Size Class 为「any width，compact height」，也即 iPhone 横屏时：
+<ul>
+<li>红色方块的头部 = Safe Area 的头部 + 110。</li>
+</ul></li>
+</ul>
+
+<p>这样利用 Safe Area 确定的布局方案会根据不同机型的 Safe Area 的不同进行自动调整，不再需要为每个机型单独适配，界面上的元素也就不会出现被遮挡的情况。</p>
+
+<p><img src="media/15978209110755/15A208ED-9EF2-43F9-890C-80FCE022A6DB.png" alt="15A208ED-9EF2-43F9-890C-80FCE022A6DB"/></p>
+
+<p>总的来看，有了 Safe Area 的定义，app 在设计和布局自定义内容时应该处于 Safe Area 之内，避免与屏幕的圆角、刘海、Home Indicator 发生重叠或裁切，但对于可滚动的内容以及控件/页面的背景颜色，可以让其延伸到屏幕边缘，以形成连续显示的效果。</p>
 
 <p><img src="media/15978209110755/8536C193-1935-4D10-9086-F66B90378ED6.png" alt=""/></p>
 
@@ -584,7 +605,7 @@
 
 <h3 id="toc_12">OLED 屏的影响：支持深色模式</h3>
 
-<p>iPhone 从非全面屏向全面屏进化的过程中，部分型号的屏幕也从 LED 屏幕进化到了 OLED 屏幕，同时伴随 iPhone 的屏幕尺寸越来越大，耗电自然也会增多，续航变成了用户日常使用手机的重要关注点。</p>
+<p>iPhone 从非全面屏向全面屏进化的过程中，部分型号的屏幕也从 LCD 屏幕进化到了 OLED 屏幕，同时伴随 iPhone 的屏幕尺寸越来越大，耗电自然也会增多，续航变成了用户日常使用手机的重要关注点。</p>
 
 <p>基于 OLED 材质屏幕的显示特点，当屏幕显示黑色的面积越大越省电，这也是从 iOS 13 开始 app 在系统级别上支持了深色模式的一个原因。适配了深色模式的 app 可以让用户根据需要和偏好选择使用浅色模式还是深色模式，深色模式可以让用户更加聚焦于内容本身，更加适合在灯光条件较暗的环境下使用手机。但有一点特别注意的是，深色模式不等于低对比度，因为开启了深色模式而使得 app 上的内容识别度和可读性下降，这不是一种正确的做法。</p>
 
@@ -649,11 +670,19 @@
 
 <h4 id="toc_19">5.4 寸 iPhone 12 由 4 寸 iPhone SE 第一代进化而来</h4>
 
-<p>小屏旗舰 iPhone 12 配备 5.4 寸屏幕，屏幕渲染分辨率为 960px × 2079px，PPI 约为 424，逻辑分辨率为 320pt × 693pt @3x；而大尺寸的 iPhone 12 Plus 仍然保持 6.1 寸屏幕，分辨率等与之前的 iPhone Xʀ、iPhone 11 保持一致。</p>
+<p>小屏旗舰 iPhone 12 配备 5.4 寸屏幕，屏幕渲染分辨率为 960px × 2079px，PPI 约为 424，逻辑分辨率为 320pt × 693pt @3x。</p>
 
-<p><img src="media/15978209110755/D8A38B49-0981-4C9A-905F-469AB2FF891B.png" alt=""/></p>
+<p><img src="media/15978209110755/716DE29B-27BC-4AEA-BE95-7D986DA4618F.png" alt="716DE29B-27BC-4AEA-BE95-7D986DA4618F"/></p>
 
-<p>可以看出 5.4 寸 iPhone 12 的逻辑分辨率的宽度与 4 寸的 iPhone SE 第一代是相同的，都是 320pt。5.4 寸的 iPhone 12 的屏幕变化实质也是「<strong>横向不变，纵向变长</strong>」，相比 iPhone SE 第一代，纵向上多了 125pt，当 app 没有适配新尺寸的 iPhone 时，上下会出现黑边。这样来看，5.4 寸的 iPhone 12 就是之前大家翘首以待的全面屏 iPhone SE。</p>
+<p>在本文最初成文时，我没有太多考虑 6.1 寸 iPhone 12 Plus 会是什么样，本以为相比上一代不会发生什么变化，毕竟它和 iPhone Xʀ、iPhone 11 具有相同的屏幕尺寸，但与读者讨论后我发现我忽略了一个细节—— iPhone 12 Plus 会改用 OLED 屏幕，而同样分辨率的 LCD 屏和 OLED 屏的清晰度观感是不一样的。</p>
+
+<p>如下图，左边 LCD 屏幕的像素排列方式是 RGB，三个子像素点不论是大小还是个数都是相同的；右边 OLED 屏幕的像素排列方式是 Pentile，绿色像素点是红蓝像素点的 2 倍，而且单个红蓝像素点面积要比绿色像素点大。正是因为 OLED 屏幕上像素排列方式的特殊，在相同尺寸相同分辨率的条件下，LCD 屏幕会比 OLED 屏幕更清晰，特别是在红色和蓝色较多的情况下。所以为了达到与 LCD 屏幕相同的屏幕清晰度观感，只能提高 OLED 屏幕的分辨率。若 OLED 屏的 iPhone 12 Plus 保持与上一代一样的屏幕分辨率这肯定就说不过去了。</p>
+
+<p><img src="media/15978209110755/d5bf827f-e76c-4eb8-8648-42a70e908bfe.jpg" alt="d5bf827f-e76c-4eb8-8648-42a70e908bfe"/></p>
+
+<p>所以猜测大屏旗舰 6.1 寸屏幕的 iPhone 12 Plus 会改用 375pt × 812pt @3x 的逻辑分辨率。</p>
+
+<p>回到小屏旗舰 iPhone 12 上，可以看出 5.4 寸 iPhone 12 的逻辑分辨率的宽度与 4 寸的 iPhone SE 第一代是相同的，都是 320pt。5.4 寸的 iPhone 12 的屏幕变化实质也是「<strong>横向不变，纵向变长</strong>」，相比 iPhone SE 第一代，纵向上多了 125pt，当 app 没有适配新尺寸的 iPhone 时，上下会出现黑边。这样来看，5.4 寸的 iPhone 12 就是之前大家翘首以待的全面屏 iPhone SE。</p>
 
 <p><img src="media/15978209110755/180A0A59-D5F2-486A-8154-F4AF6CDB7A16.png" alt=""/></p>
 
