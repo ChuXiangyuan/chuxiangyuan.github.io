@@ -4,204 +4,13 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2020-10-19T03:27:21+08:00</updated>
+  <updated>2020-09-09T12:48:38+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
-  
-  <entry>
-    <title type="html"><![CDATA[全新 iPhone 12 发布，再谈 iPhone 屏幕尺寸]]></title>
-    <link href="https://steppark.net/16030487843973.html"/>
-    <updated>2020-10-19T03:19:44+08:00</updated>
-    <id>https://steppark.net/16030487843973.html</id>
-    <content type="html"><![CDATA[
-<p>之前写的文章《<a href="https://steppark.net/15978209110755.html">从第一代 iPhone 细数到 iPhone 12，iPhone 屏幕尺寸进化历程背后的 app 设计哲学</a>》吸引了众多对 iPhone 屏幕尺寸或者 对 app 适配感兴趣的读者，在文章发布的各个渠道，特别是在<a href="https://sspai.com/post/62198">少数派</a>引起了一番热烈的讨论。文章从设计、开发等多个角度讲述了 iPhone 屏幕尺寸进化历程背后的 app 设计哲学，希望读者能够从我梳理的历史脉络和总结的进化逻辑中获得启发。同时文章也顺势推测了未来 iPhone 特别是 iPhone 12 系列会出现的一些变化，这部分虽不是文章重点，但当时处于在 iPhone 12 即将发布的时间点，自然也引起了众多读者的兴趣。</p>
-
-<p>如今，iPhone 12 、iPhone 12 Pro 系列正式发布，屏幕参数尘埃落定。对比之前文章对 iPhone 12 屏幕参数较为保守的推测，真正的 iPhone 12 屏幕参数变化可谓十分激进。本文就作为之前文章的后续，基于之前文章所讲的 iPhone 屏幕尺寸的进化逻辑，来复盘一下 iPhone 12 的屏幕参数到底是如何变化的，对于普通用户在 iPhone 12 上使用 app 又有什么影响。</p>
-
-<span id="more"></span><!-- more -->
-
-<p>如果你还没有阅读过之前的<a href="https://steppark.net/15978209110755.html">文章</a>，强烈推荐你先阅读，否则本文中的提到到的一些概念你可能会云里雾里😜</p>
-
-<p><img src="media/16030487843973/16030492224324.jpg" alt=""/></p>
-
-<h2 id="toc_0">目录</h2>
-
-<ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">iPhone 12 系列屏幕的变化</a>
-<ul>
-<li>
-<a href="#toc_2">6.1 寸 iPhone 12</a>
-</li>
-<li>
-<a href="#toc_3">5.4 寸 iPhone 12 mini</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_4">iPhone 12 Pro 系列屏幕的变化</a>
-<ul>
-<li>
-<a href="#toc_5">6.1 寸 iPhone 12 Pro</a>
-</li>
-<li>
-<a href="#toc_6">6.7 寸 iPhone 12 Pro Max</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#toc_7">放大显示功能</a>
-</li>
-<li>
-<a href="#toc_8">内容显示数量</a>
-</li>
-<li>
-<a href="#toc_9">Size Class</a>
-</li>
-<li>
-<a href="#toc_10">总结</a>
-</li>
-<li>
-<a href="#toc_11">参考文章</a>
-</li>
-</ul>
-
-
-<h2 id="toc_1">iPhone 12 系列屏幕的变化</h2>
-
-<p>iPhone 12 系列包括 6.1 寸 iPhone 12 机型和 5.4 寸 iPhone 12 mini 机型，全部配备 OLED 屏幕。</p>
-
-<p><img src="media/16030487843973/19AE8DF6-0B94-4C60-B1A9-F1E4D4E92461.png" alt=""/></p>
-
-<h3 id="toc_2">6.1 寸 iPhone 12</h3>
-
-<p>6.1 寸 iPhone 12 的屏幕分辨率为 1170px × 2532px，PPI 为 460，与 6.1 寸 iPhone 11 的屏幕分辨率（828px × 1792px）并不相同。在之前文章也有讲到过，虽然是相同尺寸，但屏幕由 LCD 材质换为 OLED 材质，由于成像原理的不同，要想保持同样的清晰度观感，分辨率必须提升。<br/>
-6.1 寸 iPhone 12 的逻辑分辨率为 390pt × 844pt，比例因子为 @3x。Apple 为了保证在屏幕尺寸稍有变大的情况下，PPI 不降低，没有妥协继续使用 375pt 的逻辑分辨率宽度，而是启用了全新的逻辑分辨率宽度「<strong>390pt</strong>」，仅仅增加了 15pt。由逻辑分辨率宽度为 375pt × 812pt  的 5.8 寸 iPhone 11 Pro 进化到逻辑分辨率宽度为 390pt × 844pt  的 6.1 寸 iPhone 12，两者的宽高比例仍然保持相同，所以其变化逻辑仍然采用了之前文章总结的「<strong>等比放大</strong>」方法。</p>
-
-<p><img src="media/16030487843973/ACDD3D17-5002-4E45-A23B-EEC7F83AEF89.png" alt=""/></p>
-
-<p>既然出现了全新的逻辑分辨率宽度，那 app 要完美运行在新的机型中就需要进行适配。没有适配新机型的 app 将以 375pt × 812pt@3x（同 5.8 寸 iPhone 11 Pro）的样式放大显示在 iPhone 12 上，相当于把图像放大了 1.04 倍，相比已经适配的 app 看上去会有些模糊（具体观感真机上手后再来补充）。App 要想适配新机型，至少需要通过 Xcode 12.1 及以上版本编译 app，并根据实际情况调整适配 app 布局。</p>
-
-<p>适配的速度就要看各位开发者了，比如下图中的「<a href="https://apps.apple.com/cn/app/%E6%88%91%E7%9A%84%E5%A4%A9%E6%B0%94-myweather-%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F/id1003715695">我的天气</a>」app 在 iPhone 12 发售前就已经完成了对 iPhone 12 系列的适配显示。</p>
-
-<p><img src="media/16030487843973/D6CA121B-ED64-425F-876D-A025EFA0FC8D.png" alt=""/></p>
-
-<h3 id="toc_3">5.4 寸 iPhone 12 mini</h3>
-
-<p>5.4 寸 iPhone 12 mini 的屏幕分辨率为 1080px × 2340px，PPI 为 476，清晰度位列 iPhone 12 系列第一名。<br/>
-由 iPhone 12 mini 的屏幕分辨率除以比例因子 @3x 得到逻辑分辨率 360pt × 780pt，很多人自然而然地就会以为这就是 iPhone 12 mini 的逻辑分辨率。然而通过已经发布的 Xcode 12.1 GM 版本的模拟器可以查到 iPhone 12 mini 的渲染分辨率（截图的大小）实际为「1125px × 2436px」，比物理分辨率（屏幕的物理参数）放大了 1.04 倍。同当年的 iPhone 6 Plus 一样，Apple 再次使用了一样的变化手法。<br/>
-1125px × 2436px 的渲染分辨率对应的逻辑分辨率为 375pt × 812pt@3x，正是之前 5.8 寸 iPhone 11 Pro 的逻辑分辨率，这样 app 想完美运行在 iPhone 12 mini 上就无需再进行额外的适配工作。但由于像素不是点对点显示的，显示图像可能会有不锐利的问题，但由于其高 PPI 的存在，这个感知不会明显。</p>
-
-<p><img src="media/16030487843973/FA250B2B-E553-4A46-B958-BEDE4767CAAC.png" alt=""/></p>
-
-<h2 id="toc_4">iPhone 12 Pro 系列屏幕的变化</h2>
-
-<p>iPhone 12 Pro 系列包括 6.1 寸 iPhone 12 Pro 机型和 6.5 寸 iPhone 12 Pro Max 机型。</p>
-
-<p><img src="media/16030487843973/AC0CFDAE-939C-4D9B-90BB-5411C3410864.png" alt=""/></p>
-
-<h3 id="toc_5">6.1 寸 iPhone 12 Pro</h3>
-
-<p>6.1 寸 iPhone 12 Pro 与 6.1 寸 iPhone 12 的屏幕参数完全相同，屏幕分辨率为 1170px × 2532px，PPI 为 460，逻辑分辨率为 390pt × 844pt，比例因子为 @3x。<br/>
-对于 app 适配 iPhone 12 Pro 的逻辑也与 iPhone 12 完全相同，在此不再赘述。</p>
-
-<p><img src="media/16030487843973/EDD81DCC-982E-4C05-A68A-6A1197990367.png" alt=""/></p>
-
-<h3 id="toc_6">6.7 寸 iPhone 12 Pro Max</h3>
-
-<p>6.7 寸 iPhone 12 Pro Max 的屏幕分辨率为 1284px × 2778px，PPI 为 458。<br/>
-6.7 寸 iPhone 12 Pro Max 的逻辑分辨率为 428pt × 926pt，比例因子为 @3x。同样地，Apple 为了保证在屏幕尺寸稍有变大的情况下，PPI 不降低，没有妥协继续使用 414pt 的逻辑分辨率宽度，而是启用了全新的逻辑分辨率宽度「<strong>428pt</strong>」，仅仅增加了 14pt。由逻辑分辨率宽度为 414pt × 896pt  的 6.5 寸 iPhone 11 Pro Max 进化到逻辑分辨率宽度为 428pt × 926pt  的 6.7 寸 iPhone 12 Pro Max，两者的宽高比例仍然保持相同，所以其变化逻辑仍然采用了之前文章总结的「<strong>等比放大</strong>」方法。</p>
-
-<p><img src="media/16030487843973/FAA043AC-AE41-498C-BA39-65FEAB5BA3EC.png" alt=""/></p>
-
-<p>对于 app 适配也是一样，app 要完美运行在新的机型中就需要进行适配。没有适配新机型的 app 将以 414pt × 896pt@3x（同 6.5 寸 iPhone 11 Pro Max）的样式放大显示在 iPhone 12 Pro Max 上，相当于把图像放大了 1.03 倍，相比已经适配的 app 看上去会有些模糊（具体观感真机上手后再来补充）。App 要想适配新机型，至少需要通过 Xcode 12.1 及以上版本编译 app，并根据实际情况调整适配 app 布局。</p>
-
-<h2 id="toc_7">放大显示功能</h2>
-
-<p>在之前文章中有讲到目前大部分的 iPhone 机型都配备了放大显示功能，关于放大显示最重要的一点就是，其实质是将高一级的逻辑分辨率<strong>降级</strong>到<strong>同一比例</strong>的低一级的逻辑分辨率。<br/>
-在 iOS 14 Beta 版本中开始出现了 5.8 寸 iPhone 11 Pro（ 375pt × 812pt@3x）的放大显示功能，其逻辑分辨率为 320pt × 693pt@3x，当时的推测是这很可能是 5.4 寸 iPhone 12 mini 的真正分辨率。然而现实情况是这只是 Apple 虚构的一个机型分辨率，至少在现在这个时间点，这个机型是不存在的，当我确定这个结论时也是十分诧异。</p>
-
-<p>那这个虚构的逻辑分辨率又用在了哪些地方呢？具体来看：<br/>
-在有了这个虚构的逻辑分辨率 320pt × 693pt 之后，5.8 寸的 iPhone 11 Pro、iPhone iPhone Xs、iPhone X 机型自然就支持了放大显示功能。</p>
-
-<p><img src="media/16030487843973/5F7D4281-B335-4359-8158-C0BFB13170D0.png" alt=""/></p>
-
-<p>但由于这个 320pt 的全面屏逻辑分辨率宽度不存在于任何一个现有的机型，要想 app 正常运行在这个逻辑分辨率之下，也得需要进行适配。如果不进行适配，将会以 iPhone 5s 的大小显示，也即上下有黑边。</p>
-
-<p><img src="media/16030487843973/886D222C-7348-414F-BA99-5F44CD705ED0.png" alt=""/></p>
-
-<p>再来看全新的 iPhone 12 系列的放大显示，6.7 寸的 iPhone 12 Pro Max 开启放大显示后，会降级到 375pt 宽度，也即 iPhone 11 Pro 大小；6.1 寸 iPhone 12/iPhone 12 Pro 、5.4 寸 iPhone 12 mini 开启放大显示后，都会降级到 320pt 宽度，也即前面提到的虚构机型的大小，如果 app 没有适配全面屏的 320pt 逻辑分辨率宽度，同样会出现上下有黑边的情况。</p>
-
-<p><img src="media/16030487843973/7B36F7E2-6993-4749-89AB-229E6EA2E605.png" alt=""/></p>
-
-<p>320pt（全面屏）这个新增的逻辑分辨率宽度隐藏在放大显示功能背后，可能更不会引起 app 开发者的注意，适配的进度可能会更慢。</p>
-
-<h2 id="toc_8">内容显示数量</h2>
-
-<p>至此，iPhone 12 系列在标准显示模式下新增了 390pt（iPhone 12/iPhone 12 Pro）、428pt（iPhone 12 Pro Max）两种新的逻辑分辨率宽度，在放大显示模式下新增了 320pt（iPhone 12/iPhone 12 Pro、iPhone 12 mini） 一种新的逻辑分辨率宽度。总共增加了 <strong>390pt、428pt、320pt（全面屏）</strong> 三种逻辑分辨率宽度。</p>
-
-<p>逻辑分辨率的大小会决定屏幕上内容显示数量的多少。针对于不同逻辑分辨率的屏幕，下图对比了其内容显示数量。几个值得特别注意的点：</p>
-
-<ul>
-<li>之前的 6.1 寸 iPhone 11 是 414pt 宽度，同 6.5 寸 iPhone 11 Pro Max 一样，而 6.1 寸的 iPhone 12/iPhone 12 Pro 减少到了 390pt 宽度，相比于以前，<strong>横纵向显示数量变少了</strong>，但比例因子由 @2x 变为 @3x，总体上 PPI 也即清晰度大幅提升了。对于从 iPhone Xʀ、iPhone 11 更新到 iPhone 12、iPhone 12 Pro 的用户在初期可能会不适应。</li>
-<li>从 375pt 增加到 390pt，从 414pt 增加到 428pt，虽然横纵向的确可以显示更多的内容，但对比发现后，其实差异不会很明显。</li>
-<li>iPhone 12/iPhone 12 Pro、iPhone 12 mini 的放大显示都是 320pt，很多 app 可能都没有适配，而且整体承载内容数量较少较挤，并不适合作为日常使用。</li>
-</ul>
-
-<p><img src="media/16030487843973/81179D3B-4D22-42CD-BC27-01D908D926E6.png" alt=""/></p>
-
-<p>再附一张<a href="https://twitter.com/ethanhuang13/status/1316376515269980163?s=20">台湾 iOS 开发者 @ethanhuang13 在 Xcode 模拟器使用不同机型显示同一个网站上的内容对比情况。</a></p>
-
-<p><img src="media/16030487843973/EkSvSRnVkAMpmlQ.jpg" alt=""/></p>
-
-<h2 id="toc_9">Size Class</h2>
-
-<p>Size Class 尺寸等级同样是之前文章中所提到的 iPhone 尺寸变化过程中的一个重要概念。</p>
-
-<p>全新的 iPhone 12 系列在竖屏下，毫无悬念，依然同其他 iPhone 一样是「compact width，regular height」。但在横屏下，有几个需要注意的点：</p>
-
-<ul>
-<li>6.1 寸的 iPhone 12/iPhone 12 Pro 系列由于其逻辑分辨率比 6.1 寸 iPhone 11 小一些，所以其横屏的 Size Class 是 「compact width，compact height」，与 iPhone 12 mini、iPhone 11 一样。因此在如「信息」这样支持左右分栏布局样式的 app 上显示时就只能显示某个联系人的短信内容，如下图；</li>
-<li>6.7 寸的 iPhone 12 Pro Max 其横屏的 Size Class 自然是 「regular width，compact height」，与 iPhone 11、iPhone 11 Pro Max 一样，在「信息」app 中可以分左右两边显示短信列表和具体的短信内容，如下图。</li>
-</ul>
-
-<p><img src="media/16030487843973/CD717D06-5F63-42ED-93C1-37F0A3EEB449.png" alt=""/></p>
-
-<h2 id="toc_10">总结</h2>
-
-<p>纵观 iPhone 12 全系列的屏幕分辨率变化，Apple 为了保持 PPI 也即屏幕清晰度只增不减，不得不在之前已有的逻辑分辨率宽度上同样利用「<strong>等比放大</strong>」的方法小幅放大了一点形成了两个新的逻辑分辨率宽度：390pt、428pt，同时为了让 iPhone X、iPhone iPhone Xs、iPhone 11 Pro、iPhone 12、iPhone 12 Pro、iPhone 12 mini 这些机型都具备「放大显示」功能，暗暗增加了 320pt（全面屏）这个新的逻辑分辨率宽度。整体上可谓十分激进的进化，虽然显示效果达到了最佳，但对于众多开发者和第一批尝鲜的用户来说，不得不有一段时间的阵痛期。这或许也在某些层面体现了 Apple 的偏执吧。</p>
-
-<p>而 iPhone 12 mini 再次使用了渲染分辨率与物理分辨率不同的操作方法，也有些许延续传统的感觉。</p>
-
-<p>至此到 2020 年的现在这个时间点，iPhone 的逻辑分辨率宽度进化到了 <strong>320pt（非全面屏、全面屏）、375pt（非全面屏、全面屏）、414pt（非全面屏、全面屏）、390pt（全面屏）、428pt（全面屏）</strong>八小种、五大种。下图用图示的方式展示了从 2007 年到 2020 年 iPhone 屏幕尺寸进化的历程，包括尺寸、物理分辨率、渲染分辨率、逻辑分辨率、PPI、放大显示功能、进化逻辑等，具体可点击查看大图。</p>
-
-<p><img src="media/16030487843973/B9A7DFF7-6A7D-4FD1-BE2E-C898E7D14345.png" alt=""/></p>
-
-<p>iPhone 屏幕逻辑分辨率激进变化的背景下，或许 Apple 已释放出了足够的信号：未来的屏幕大小不再是一成不变的，app 的显示区域也是可大可小的，针对于不同设备尺寸适配 app 的方法已经过时，循着 Apple 给出的方法和工具，让 app 自由地在屏幕上呈现，或许才能找到未来的路。</p>
-
-<h2 id="toc_11">参考文章</h2>
-
-<ul>
-<li><a href="https://hacknicity.medium.com/how-ios-apps-adapt-to-the-various-iphone-12-screen-sizes-e45c021e1b8b">How iOS Apps Adapt to the various iPhone 12 Screen Sizes | by Geoff Hackworth</a></li>
-<li><a href="https://mjtsai.com/blog/2020/10/13/iphone-12-and-iphone-12-pro/">Michael Tsai - Blog  -  iPhone 12 and iPhone 12 Pro</a></li>
-<li><a href="https://twitter.com/ethanhuang13/status/1316376515269980163?s=20">台湾 iOS 开发者 @ethanhuang13 的推文</a></li>
-</ul>
-
-<blockquote>
-<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
-</blockquote>
-
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[从第一代 iPhone 细数到 iPhone 12，iPhone 屏幕尺寸进化历程背后的 app 设计哲学]]></title>
@@ -224,7 +33,6 @@
 <li>少数派官网，<a href="https://sspai.com/post/62198">点此访问↗︎</a></li>
 <li>「Newlearnerの自留地」Telegram 频道，<a href="https://t.me/NewlearnerChannel/5307">点此访问↗︎</a></li>
 <li>虎嗅官网，<a href="https://www.huxiu.com/article/381246.html">点此访问↗︎</a></li>
-<li>老司机技术周报微信公众号，<a href="https://mp.weixin.qq.com/s/fRXCTfl_Ewt-XuOk0lSz9g">点此访问↗︎</a></li>
 <li>少数派微信公众号，<a href="https://mp.weixin.qq.com/s/YONW3zIlBD0HoyVzqM1HqQ">点此访问↗︎</a></li>
 <li>前端早读课微信公众号，<a href="https://mp.weixin.qq.com/s/a_oa8K17npsOM34O7Nq3Fw">点此访问↗︎</a></li>
 </ul>
@@ -7166,6 +6974,489 @@ Top Shelf 的内容进入全屏时，通过轻点遥控器就可以让内容元�
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/tvos/icons-and-images/top-shelf-content/">Top Shelf Content - Icons and Images - tvOS - Human Interface Guidelines - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/tvos/interface-elements/tab-bars/">Tab Bars - Interface Elements - tvOS - Human Interface Guidelines - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2019/211/">Mastering the Living Room With tvOS - WWDC 2019 - Videos - Apple Developer</a></li>
+</ul>
+
+<blockquote>
+<p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
+
+<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在设计和开发时使用 SF Symbols]]></title>
+    <link href="https://steppark.net/15675148872165.html"/>
+    <updated>2019-09-03T20:48:07+08:00</updated>
+    <id>https://steppark.net/15675148872165.html</id>
+    <content type="html"><![CDATA[
+<p>标志（symbol）在界面中扮演一个非常重要的角色，它们在表达某些含义时非常有效，它们可以表明哪个条目被你选中了，它们被用来在视觉上区分不同的内容类型。标志出现在系统的不同情景中。它们给用户在整个用户界面中创造了一种熟悉的感觉。</p>
+
+<span id="more"></span><!-- more -->
+
+<p><img src="media/15675148872165/BF89717D-7443-4872-B640-BA3E33A0C9EB.png" alt=""/></p>
+
+<p><img src="media/15675148872165/93E43829-F84A-47AC-B8D4-A27124993FB5.png" alt=""/></p>
+
+<p>标志可以在不同的方式中被使用，设计标志也是一个内在的挑战。这些标志要设计得与其他 UI 元素完美得匹配在一起，比如文本。在 UI 中文本会有不同的尺寸，标志也是这样。</p>
+
+<p><img src="media/15675148872165/2D210958-0871-42DC-A0B4-1579BB663A55.png" alt=""/></p>
+
+<p><img src="media/15675148872165/AA300161-C710-4255-8920-6C28183BA193.png" alt=""/></p>
+
+<p>所以为了让这项工作变得更为简单，在 iOS 13 中我们重新设计了所有的标志。你会知道这些标志怎样有一个圆形套在外面，怎样在字重上更粗一点。他们可以完美地与文字相搭配。除了重新设计所有已有的标志，我们还扩展了这个列表，设计了更多的标志。它们统称为「SF Symbols」。它们在整个平台具有高度一致性，可以高质量地应用在你的所有 app 中。它们采用矢量形式，这意味着它们可以放大缩小，无论大尺寸还是小尺寸都能被渲染地很好。</p>
+
+<p><img src="media/15675148872165/D0078F5B-ED9B-49E0-80D9-A7B9BB4D2CF1.png" alt=""/></p>
+
+<p>针对于系统字体 San Francisco 的不同字重，SF Symbols 也有着不同的字重与之搭配。<br/>
+这里有超过 1000 个标志可供选择使用。如果这里的标志仍然不够，你甚至可以自动以他们，并创建自己的标志。</p>
+
+<p><img src="media/15675148872165/9B6C4A51-C215-4EB6-811D-2FF8EEFC9136.png" alt=""/></p>
+
+<h2 id="toc_0">目录</h2>
+
+<ul>
+<li>
+<a href="#toc_0">目录</a>
+</li>
+<li>
+<a href="#toc_1">在设计时使用 SF Symbols</a>
+<ul>
+<li>
+<a href="#toc_2">字号、对齐</a>
+</li>
+<li>
+<a href="#toc_3">字重、缩放</a>
+</li>
+<li>
+<a href="#toc_4">综合使用</a>
+</li>
+<li>
+<a href="#toc_5">设计小结</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6">在开发中使用 SF Symbols</a>
+<ul>
+<li>
+<a href="#toc_7">使用系统提供的 SF Symbols</a>
+</li>
+<li>
+<a href="#toc_8">使用自定义 symbols</a>
+</li>
+<li>
+<a href="#toc_9">配置 SF Symbols 的参数</a>
+</li>
+<li>
+<a href="#toc_10">使用 SF Symbols 进行布局</a>
+</li>
+<li>
+<a href="#toc_11">在按钮中使用 SF Symbols</a>
+</li>
+<li>
+<a href="#toc_12">SF Symbols 的渲染模式（render mode）</a>
+</li>
+<li>
+<a href="#toc_13">几个注意点</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_14">参考链接</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">在设计时使用 SF Symbols</h2>
+
+<h3 id="toc_2">字号、对齐</h3>
+
+<p>SF Symbols 可以像文本一样指定字号。当标志和文本并排在一起时，它们拥有相同的基线。</p>
+
+<p><img src="media/15675148872165/BB1D7CAE-6116-4CC2-83F4-C08949C8A071.png" alt=""/></p>
+
+<p>当标志和文本竖直放在一起时，这里通常会有两种情况：文本支撑标志或者标志支撑文本。</p>
+
+<p><img src="media/15675148872165/8F0D8AA5-82AB-4615-B7E8-4CC93CDFA525.png" alt=""/></p>
+
+<p><img src="media/15675148872165/944E11DC-EDA2-403D-AE58-1D064DCE2A30.png" alt=""/></p>
+
+<p>水平对齐可以确保每一项都看起来没问题，这得益于标志的边界。每一个标志的边界并不一定相同。边界是不可见的，但当在屏幕上布局元素时会需要用到边界。</p>
+
+<p><img src="media/15675148872165/74F33F12-B4C4-4061-A855-3CE5131ECC58.png" alt=""/></p>
+
+<h3 id="toc_3">字重、缩放</h3>
+
+<p>每一个标志都有着九种不同的字重，从超细到超粗，对应系统字体的不同字重。每一个字重都被手动绘制出来，特别考虑了每种不同的设计。更细的字重有着可区分的、优雅的外表，而更粗的字重会尽力保持细节和可见性。</p>
+
+<p><img src="media/15675148872165/4AB3E729-C976-4142-B5A2-F2634809714B.png" alt=""/></p>
+
+<p><img src="media/15675148872165/C2F6D939-1C0F-4C3C-A6A5-62ABFD6FE877.png" alt=""/></p>
+
+<p>当与文本搭配使用，即使文本字号没有变化，可能也需要不同大小的标志。这就是之前我们设计标志时要考虑的问题，取决于我们要多强调标志，取决于有多大的展示空间。在 iOS 13 里，我们把这些变成了系统功能。我们称这一个特性为「scales 缩放」——分为三种，小、中等、大。</p>
+
+<p><img src="media/15675148872165/E2D443BD-1DA0-4ED5-924F-35E9D7F11C76.png" alt=""/></p>
+
+<p><img src="media/15675148872165/D253DF8B-9B35-4A68-9D9A-9D927DAD7709.png" alt=""/></p>
+
+<p>这里注意下，在调整标志的缩放大小时，其字号大小（point size）是始终不变的。调整标志的缩放，会有与文本相匹配的字重，并且会与文本的大写字母高度始终竖直中心对齐。</p>
+
+<p><img src="media/15675148872165/EEA6A64A-E342-47BD-A0A3-96D97FB9668E.png" alt=""/></p>
+
+<p><img src="media/15675148872165/67709481-39F7-4D32-8FE8-DF1F0D7C4666.png" alt=""/></p>
+
+<p>对于该在哪里使用不同的缩放，什么时候该用哪一个具体的 缩放，这里有三个具体的示例。它们都包括了字号为 17 的文本，但每个标志的容器有着不同的高度。文字和标志的字号是相同的，但通过改变标志的缩放来更好地适配不同情况的空间。在像工具栏这样的地方，UIKit 可以自动对控件使用合适的缩放。</p>
+
+<p><img src="media/15675148872165/342151F3-DFA1-4103-8C0B-BF5AA0AA283C.png" alt=""/></p>
+
+<h3 id="toc_4">综合使用</h3>
+
+<p>我们把字号大小、字重、缩放三者放在一起看，这意味着你可以在动态类型中使用它们，每一项都会很完美。</p>
+
+<p><img src="media/15675148872165/912A3D57-82BA-4D5F-9698-B497C274E413.png" alt=""/></p>
+
+<p>当然，标志也可以被本地化。这里有一个语音备忘录应用的例子，在英语和阿拉伯语的不同运行情况下，同一个标志有着不同的样式。</p>
+
+<p><img src="media/15675148872165/5F149E76-1585-4FBD-81F6-8A68D54705D5.png" alt=""/></p>
+
+<p>如果你想搞清楚这些标志的话，每一个标志都提供了一个名字。大多数的标志还会有描边和填充两种样式。</p>
+
+<p><img src="media/15675148872165/3A280B27-7DEE-45B4-979A-A8371362928C.png" alt=""/></p>
+
+<p>它们还可以被包在一个圆圈或者一个方形中，还可以带有一个标准的系统角标。</p>
+
+<p><img src="media/15675148872165/6D8F70DE-FD8D-4FF7-A2DE-803542CDD577.png" alt=""/></p>
+
+<p>使用这些标志也很方便。它们属于 SF 字体家族的一部分，可供下载，你可以在你的设计中使用。缩放功能可以通过 open Type 功能开启。默认缩放是中等，你可以在字体面板中选择小或大的缩放，抑或其他指定 UI 形状。</p>
+
+<p><img src="media/15675148872165/26C1A051-CA9E-4241-AED6-389D191409E3.png" alt=""/></p>
+
+<p>为了更方便使用，我们创建一个名为「SF Symbols」的应用。可以在里面通过平铺方式或者列表方式浏览所有的标志。可以通过名字搜索标志，预览不同的字重。</p>
+
+<p><img src="media/15675148872165/40777400-657E-4E97-B470-8FA68D43F44C.png" alt=""/></p>
+
+<p>我们来看一个实际的例子。在下面的设计中，按以前的操作，你需要定义图片的边界，确定图片的大小、四周边界值。</p>
+
+<p><img src="media/15675148872165/84196755-080A-4CEC-8DE2-46ABD7E314EA.png" alt=""/></p>
+
+<p>但有了 SF Symbols，你只需要确定标志的名字和字号大小以及对齐方式就可以了，如果有需要可以再定义字重和缩放。</p>
+
+<p><img src="media/15675148872165/B84773FC-5D52-43E7-A3B0-FF8E6EDB0B91.png" alt=""/></p>
+
+<p>第二行的图片有些普通，我们可以自己绘制一个茶杯的形状。因为 SF Symbol 里没有这个图形，我们可以自定义一个。</p>
+
+<p><img src="media/15675148872165/2B574EDD-C6A9-4702-A401-550BB42AE0AC.png" alt=""/></p>
+
+<p>你可以从已有的标志中选取一个相似的，导出并作为模板。导出的模板包括所有的字重和缩放大小，并且是 SVG 格式，可以使用自己熟悉的设计工具进行编辑。</p>
+
+<p><img src="media/15675148872165/976421CB-0043-4199-B9F7-05EC781C1F38.png" alt=""/></p>
+
+<p>这个文件可以直接被用于开发时的 Xcode 中，不再需要许多个文件。<br/>
+在所有的字重和缩放中，你至少需要提供 regular 字重的中等规模标志样式。</p>
+
+<p><img src="media/15675148872165/D2F965D3-84EE-455C-99DD-C9BD03164F01.png" alt=""/></p>
+
+<p>进一步可提供其他两种缩放的样式，进一步可提供 medium 和 bold 两种字重。当然，也需要根据你 app 的排版样式有针对性的考虑。</p>
+
+<p><img src="media/15675148872165/49D1B752-0FAA-4C2D-BF17-4B12203F211E.png" alt=""/></p>
+
+<p><img src="media/15675148872165/668B2F3C-4AF7-4656-9B51-E018A0F37113.png" alt=""/></p>
+
+<p>制作好的自定义标志可以在「SF Symbols」app 中浏览。</p>
+
+<h3 id="toc_5">设计小结</h3>
+
+<p><img src="media/15675148872165/BA4F526B-0925-425E-9423-9719EBE9BF18.png" alt=""/></p>
+
+<h2 id="toc_6">在开发中使用 SF Symbols</h2>
+
+<h3 id="toc_7">使用系统提供的 SF Symbols</h3>
+
+<p>下面这个 app 提供了滑块的相关功能，可以通过控制滑块或者两边的按钮来调节速度，但是目前的加减图片不太好，我尝试用 SF Symbols 来替换这两张图片。</p>
+
+<p><img src="media/15675148872165/05470A32-D8E1-446E-BF94-F0A1794DF75D.png" alt=""/></p>
+
+<p>在 SF Symbols app 中可以找到「乌龟」和「野兔」两个标志，分别代表更慢和更快。</p>
+
+<p><img src="media/15675148872165/4BB0A6FC-13E4-4776-AD45-7B5802820B65.png" alt=""/></p>
+
+<p><img src="media/15675148872165/59D963FB-581D-4259-85E7-A0BADB3D07F5.png" alt=""/></p>
+
+<p>可以利用新的 API：<code>UIImage(systemName:)</code>  来替换相应的图片，具体的代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// You’re eager to use one of these 1500+ new system symbols
+// It’s easy!
+
+slowerImageView.image = UIImage(systemName: &quot;tortoise&quot;)
+fasterImageView.image = UIImage(systemName: &quot;hare&quot;)
+</code></pre>
+
+<p><img src="media/15675148872165/3ACCCF42-A8E5-4FB9-91CF-E06711FEA672.png" alt=""/></p>
+
+<h3 id="toc_8">使用自定义 symbols</h3>
+
+<p><img src="media/15675148872165/97A3D814-AEA8-4769-8425-D7D18DFD1E76.png" alt=""/></p>
+
+<p>在开发中要使用上图的自定义标志，需要将设计师提供的「teacup.svg」文件导入 Xcode 中，在代码中使用 API  <code>UIImage(named:)</code>  即可调用这个自定义标志，具体代码如下：</p>
+
+<p><img src="media/15675148872165/58FA9B53-A6B3-4641-A257-508559BBA9A8.png" alt=""/></p>
+
+<pre class="line-numbers"><code class="language-swift">// And you want to use the image your designer made?
+// It&#39;s just like it was:
+
+cupView.image = UIImage(named: &quot;teacup&quot;) 
+</code></pre>
+
+<p><img src="media/15675148872165/6B2B2613-A01B-4179-943B-D8AAF5CD4B4C.png" alt=""/></p>
+
+<p>不止你有没有注意到在资源目录中同时存在两个名称为「teacup」的资源文件，它们都是图片，都不是相同的类型，一个是普通 png 格式图片，一个是 svg 格式的标志。</p>
+
+<p><img src="media/15675148872165/75D6ABC3-6229-436A-B919-A67F770C90EF.png" alt=""/></p>
+
+<p>以前的时候你通过 UIImage(named:)  这个 API 调用图片文件名非常直接和方便，当有了 SF Symbols 时，事情会变得稍微有些复杂。以文件名「envelope」为例，解释下这里。同一个文件名的图片，这里可能有三个版本：一个是系统标志，一个是自定义标志，还有一个是非标志的普通图片。<br/>
+对于系统标志没有什么问题，因为它是通过 API  <code>UIImage(systemName:)</code>  单独的命名空间来调用的，不会与其他的产生冲突。</p>
+
+<p><img src="media/15675148872165/B9BDE0CD-DE63-4EEA-94C3-7FCA5142547B.png" alt=""/></p>
+
+<p>而对于自定义标志和普通图片来说，它们都是通过 API <code>UIImage(named:)</code> 来调用的。系统会优先调用自定义标志文件，如果没有再调用普通类型的图片文件。这样做的好处是，不需要多余的代码，不需要版本检查代码，在 iOS 12 或更早版本可以显示普通类型的图片，而在 iOS 13 或之后版本中可以利用 SF Symbols 的功能显示自定义标志。</p>
+
+<p><img src="media/15675148872165/DFDCD360-3C44-47EF-9F0F-4047DF0391A1.png" alt=""/></p>
+
+<h3 id="toc_9">配置 SF Symbols 的参数</h3>
+
+<p><img src="media/15675148872165/905D12FC-859A-4EAB-BFBD-DC783DDEC99D.png" alt=""/></p>
+
+<p>我们需要对「teacup」这个标志进行配置，其缩放是「large」,可以利用新的 API <code>UIImage.SymbolConfiguration()</code> ，具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Our designer specified to use a large configuration:
+
+let configuration = UIImage.SymbolConfiguration(scale: .large)
+imageView.preferredSymbolConfiguration = configuration
+</code></pre>
+
+<p><img src="media/15675148872165/F8C0C1AD-E96E-40DF-8CF9-194A745341ED.png" alt=""/></p>
+
+<p>想改变标志的更多参数，比如字号、字重，具体的代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Symbols are typographic in nature, and it reflects
+// in how you configure them
+
+// typographic points, not screen points
+let headlineConfig = UIImage.SymbolConfiguration(pointSize: 23.0f, weight: .medium)
+
+// you can always add a scale
+let annotationConfig = UIImage.SymbolConfiguration(pointSize: 17.0f, scale: .small)
+</code></pre>
+
+<p>在这里注意，标志的「pointSize」指的是字体字号大小，而不是屏幕尺寸大小。</p>
+
+<p><img src="media/15675148872165/93C0A958-957B-43E9-876E-D5560A715350.png" alt=""/></p>
+
+<p>如下图所示，下面这个标志其字号尺寸是 28 pt，但其物理尺寸是 33pt × 32pt。你应该把标志看作是文本的一部分。</p>
+
+<p><img src="media/15675148872165/378AB0A3-37A1-4F02-944B-D256B9BDF725.png" alt=""/></p>
+
+<p>正因为标志就像文本一样，所有标志可以配置它的文本类型（text style），以支持系统的动态类型功能。具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Symbols are typographic in nature, and it reflects
+// in how you configure them
+
+// dynamic type text styles
+let footnoteConfig = UIImage.SymbolConfiguration(textStyle: .footnote)
+
+// … you can always add a scale
+let introConfig = UIImage.SymbolConfiguration(textStyle: .body, scale: .large) 
+</code></pre>
+
+<p><img src="media/15675148872165/3D2A54FF-758F-4021-A02A-D37E45311B04.png" alt=""/></p>
+
+<p>如果 app 使用了非系统字体，标志的参数也可以根据自定义字体进行变化。当你已经有了一段配置好属性的文本，你就不需要一个个属性地去调整标志。具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Symbols are typographic in nature,
+// and it reflects in how you configure them
+
+titleLabel.font = style.titleFont()
+
+let configuration = UIImage.SymbolConfiguration(font: titleLabel.font, scale: .large)
+titleImage.preferredSymbolConfiguration = configuration
+</code></pre>
+
+<p>关于标志的属性它是一个常量，它是不可变的。如果你想利用已有的属性值，你可以通过方法 <code>applying</code> 去创建了一个新的属性，从而间接修改已有的属性，并应用在你需要的地方。具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// It’s also possible to combine configurations、
+let boldLargeConfig = UIImage.SymbolConfiguration(weight: .bold, scale: .large)
+let smallConfig = UIImage.SymbolConfiguration(scale: .small)
+
+let config = boldLargeConfig.applying(smallConfig)
+
+// config will be .bold, .small
+</code></pre>
+
+<h3 id="toc_10">使用 SF Symbols 进行布局</h3>
+
+<p><img src="media/15675148872165/6D8FD6EC-70A7-4B9E-B545-DABD5784525A.png" alt=""/></p>
+
+<p>上图这个 app，每一行都有一个头像、一条文字评论和一个箭头。对于头像可以使用 SF Symbols，一般情况下头像与右边的文字是竖直中心对齐的，即使右边的文字大于一行，也是可以的。</p>
+
+<p><img src="media/15675148872165/A2211C0B-3E93-4918-AC91-8F7E0F75CB8A.png" alt=""/></p>
+
+<p>要想让头像与第一行文字对齐，有两种方法，一种是让头像和文字的边缘对齐，还有一种方法是让头像的基线与第一行文字的基线对齐。对于第二种方法，在 iOS 13 中，对于图片新增了一个 <code>baselineOffsetFromBottom</code> 属性，正如名字所示，它表示从底部到基线的偏移值，它是一个可选的 CGFloat 类型。对于 SF Symbols 来说，它默认具有这个属性，而对于普通图片来说，它默认不具有这个属性。查看图片的这个属性的具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// You can inspect the baseline values on images
+// Expressed in screen points from the bottom of the image
+
+let chevron = UIImage(systemName: “person.square”)
+
+// Not all images have baselines!
+if let offset = chevron.baselineOffsetFromBottom {
+    // …
+}
+</code></pre>
+
+<p>下图中的两个标志和文字的基线相同，可以看到下箭头标志的偏移值是「-3.5」，而云朵标志的偏移值是「+4.5」，所以说基线可能不在图片的边界之内。如果偏移值为 0，并不是说没有基线，而是基线与图片的底部是重合的。</p>
+
+<p><img src="media/15675148872165/9486BA51-3194-4ACD-BE6D-23AB135A2467.png" alt=""/></p>
+
+<p>对于默认没有基线的普通图片，我们可以通过 API <code>withBaselineOffsetFromBottom</code> 来为其添加基线。具体的代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// You can add baselines to any image
+// Important: baseline offsets are in screen points.
+
+let avatarImage: UIImage?
+
+if let loadedImage = AvatarCache.load(forUser: user.id) {
+    // give the avatar a baseline
+    avatarImage = loadedImage.withBaselineOffsetFromBottom(3.5f)
+}
+else {
+    avatarImage = UIImage(systemName: “person.square”)
+}
+</code></pre>
+
+<p>通过以上代码，为普通图片添加了基线，这样普通图片和标志可以用同一逻辑进行统一的布局。</p>
+
+<p><img src="media/15675148872165/83EF3DF8-E3EA-44F7-8218-2283628F7D8B.png" alt=""/></p>
+
+<h3 id="toc_11">在按钮中使用 SF Symbols</h3>
+
+<p>为了区分不同的情况，在这里把按钮可以分为三种，第一种是系统按钮，第一种是普通按钮，第三种是栏上的按钮（bar buttons)。先来看系统按钮。</p>
+
+<p><img src="media/15675148872165/F9940190-1D9B-4F65-A937-78B56B6BAB01.png" alt=""/></p>
+
+<p>在 UIKit  中的所有「系统按钮」都有一个预置的配置参数，他是「body」文本类型，「large」缩放大小。在系统按钮中使用 SF Symbols 的具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// System buttons have a default configuration of: .body, .large
+
+let watchImage = UIImage(systemName: “stopwatch”)
+
+let startButton = UIButton.system(image: watchImage,
+                                     target: self,
+                                     action: #selector(startTimer)) 
+</code></pre>
+
+<p>再来看普通按钮。在下图的这个例子中，有一个 pop-over 弹窗，在其中有两个动作按钮。在普通按钮上使用 SF Symbols，默认缩放大小是「medium」。</p>
+
+<p><img src="media/15675148872165/4A0CDA48-C850-4355-B6E2-8FE4CF5C6229.png" alt=""/></p>
+
+<p>在普通按钮上使用 SF Symbols 并改变其属性值的具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Buttons have a default configuration of .medium
+// use setPreferredSymbolConfiguration() to change
+
+let checkButton = UIButton(type: .custom)
+checkButton.setImage(UIImage(systemName: &quot;check&quot;), forState: .normal)
+
+let config = UIImage.SymbolConfiguration(textStyle: .caption, scale: .small)
+button.setPreferredSymbolConfiguration(config, forState: .normal)
+</code></pre>
+
+<p>对于下图中左右两个按钮，左边按钮是一个标志，右边按钮是文字，虽然它们没有紧挨在一起，但它们应该有同样的参数。它们应该有着同一条基线值，有着同样的属性（字体、字号、字重、文本样式等）。这样来看，可以让布局的思考更加简单。</p>
+
+<p><img src="media/15675148872165/4BA54907-B7A2-43BC-8F56-A6EA0F2244F3.png" alt=""/></p>
+
+<p>最后来看栏上的按钮（bar buttons）。在 iOS 13 中，所有 bar buttons 的图片资源也已经使用 SF Symbols 更新过了。</p>
+
+<p><img src="media/15675148872165/ACA71914-7234-414E-BB3A-52B04341431C.png" alt=""/></p>
+
+<p>对于 bar buttons，也有预置的属性。栏上按钮在像 iPhone 竖屏高度上是 regular 这种尺寸等级（size class）的屏幕上是「large」缩放大小，而在高度上是 compact 这种尺寸等级的屏幕上是「medium」缩放大小。这也意味着你不需要针对高度不同的栏提供两套不同的栏上按钮资源文件。</p>
+
+<p><img src="media/15675148872165/4FE6E169-46A4-4B05-A7A6-AE41C59DADFA.png" alt=""/></p>
+
+<p><img src="media/15675148872165/B8DCF7C7-82C8-4634-8942-3F9073D4A667.png" alt=""/></p>
+
+<h3 id="toc_12">SF Symbols 的渲染模式（render mode）</h3>
+
+<p>对于普通图片来说都有颜色数据，而对于 SF Symbols 来说其没有固定的颜色。我们可以通过描边颜色（tint color）来渲染标志。如果没有描边颜色，会使用黑色。但黑色并不总是合适，比如在深色模式中。</p>
+
+<p><img src="media/15675148872165/62511826-436F-4D03-9F28-758C809FA357.png" alt=""/></p>
+
+<p>以前图片的渲染模式都是自动的，都是原始颜色。而现在来说对于非标志类型的图片仍然是这样，对于标志类型的图片将会是根据描边颜色来显示。</p>
+
+<p><img src="media/15675148872165/9A9B0D1B-899F-44A2-9801-113ED8B4649D.png" alt=""/></p>
+
+<p>绘制一个标志的具体代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Drawing symbols
+
+let cupImage = UIImage(named: &quot;teacup&quot;)
+let receipt = UIGraphicsImageRenderer(size: receiptSize).image {
+    // …
+
+    cupImage.draw(at: .zero) // use natural size of the image
+
+    // …
+}
+</code></pre>
+
+<p>如果觉得绘制的标志太小，可以通过下面的代码创建一个新的属性，并创建一张新的标志图片。</p>
+
+<pre class="line-numbers"><code class="language-swift">let cupImage = UIImage(named: &quot;teacup&quot;)
+
+let configuration = UIImage.SymbolConfiguration(pointSize: 34.0f, weight: .bold)
+let largeTeacupImage = cupImage.withConfiguration(configuration)
+</code></pre>
+
+<p>回到之前的 pop-over 页面，我们想要让其中的某些文字用标志替代。</p>
+
+<p><img src="media/15675148872165/4F754298-E167-47EB-9D07-8A49307DF25B.png" alt=""/></p>
+
+<p>因为标志是图片，我们要把标志通过一些方法转换为字符串，具体的代码如下：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Symbols in strings
+// — use attachments
+
+let string = NSMutableAttributedString(string: &quot;I just symbol images!&quot;,
+                                          attributes: [.foregroundColor: UIColor.label])
+
+let heartImage = UIImage(systemName: &quot;heart.fill&quot;)
+let heartAttachment = NSTextAttachment(image: heartImage)
+let heartString = NSAttributedString(attachment: heartAttachment)
+
+string.insert(heartString, at: 7)
+</code></pre>
+
+<p>转换后的标志会根据匹配的文字来自动确定属性值，比如颜色、大小等。进一步，要想改变插入文字中的这些标志的颜色，可以通过下面的代码实现，其中可以选择是否改变渲染模式：</p>
+
+<pre class="line-numbers"><code class="language-swift">// Tinting images
+// — apply a color to the whole image
+
+let heartImage = UIImage(systemName: &quot;heart.fill&quot;)
+let redHeartImage = heartImage.withTintColor(.redColor, renderingMode: .alwaysOriginal) 
+</code></pre>
+
+<p><img src="media/15675148872165/758AF029-8C10-4E6E-AB41-E6A11A915BD9.png" alt=""/></p>
+
+<h3 id="toc_13">几个注意点</h3>
+
+<p><img src="media/15675148872165/097FDF53-4ED4-41D8-BE08-3C09EA2A0458.png" alt=""/></p>
+
+<h2 id="toc_14">参考链接</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/">SF Symbols - SF Symbols - Human Interface Guidelines - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/206/">Introducing SF Symbols - WWDC 2019 - Videos - Apple Developer</a></li>
 </ul>
 
 <blockquote>
