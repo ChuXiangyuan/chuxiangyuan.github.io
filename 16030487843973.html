@@ -154,6 +154,22 @@
 
 <p>如果你还没有阅读过之前的<a href="https://steppark.net/15978209110755.html">文章</a>，强烈推荐你先阅读，否则本文中的提到到的一些概念你可能会云里雾里😜</p>
 
+<blockquote>
+<p><strong>本篇文章亦在下面的各渠道授权发布或推荐：</strong></p>
+
+<ul>
+<li>少数派官网，<a href="https://sspai.com/post/63214">点此访问↗︎</a></li>
+<li>「Newlearnerの自留地」Telegram 频道，<a href="https://t.me/NewlearnerChannel/5780">点此访问↗︎</a></li>
+<li>Mac 玩儿法官网，<a href="https://www.waerfa.com/the-discussion-about-iphone-12-screen-pixel">点此访问↗︎</a></li>
+</ul>
+</blockquote>
+
+<p><strong>Update：</strong></p>
+
+<ul>
+<li>2020/10/26：更新了「iPhone 12/iPhone 12 Pro 上的 App 适配实例」部分</li>
+</ul>
+
 <h2 id="toc_0">目录</h2>
 
 <ul>
@@ -192,10 +208,13 @@
 <a href="#toc_9">Size Class</a>
 </li>
 <li>
-<a href="#toc_10">总结</a>
+<a href="#toc_10">iPhone 12/iPhone 12 Pro 上的 App 适配实例</a>
 </li>
 <li>
-<a href="#toc_11">参考文章</a>
+<a href="#toc_11">总结</a>
+</li>
+<li>
+<a href="#toc_12">参考文章</a>
 </li>
 </ul>
 
@@ -213,7 +232,7 @@
 
 <p><img src="media/16030487843973/ACDD3D17-5002-4E45-A23B-EEC7F83AEF89.png" alt=""/></p>
 
-<p>既然出现了全新的逻辑分辨率宽度，那 app 要完美运行在新的机型中就需要进行适配。没有适配新机型的 app 将以 375pt × 812pt@3x（同 5.8 寸 iPhone 11 Pro）的样式放大显示在 iPhone 12 上，相当于把图像放大了 1.04 倍，相比已经适配的 app 看上去会有些模糊（具体观感真机上手后再来补充）。App 要想适配新机型，至少需要通过 Xcode 12.1 及以上版本编译 app，并根据实际情况调整适配 app 布局。</p>
+<p>既然出现了全新的逻辑分辨率宽度，那 app 要完美运行在新的机型中就需要进行适配。没有适配新机型的 app 将以 375pt × 812pt@3x（同 5.8 寸 iPhone 11 Pro）的样式放大显示在 iPhone 12 上，相当于把图像放大了 1.04 倍，相比已经适配的 app 看上去会有些模糊。App 要想适配新机型，至少需要通过 Xcode 12.1 及以上版本编译 app，并根据实际情况调整适配 app 布局。</p>
 
 <p>适配的速度就要看各位开发者了，比如下图中的「<a href="https://apps.apple.com/cn/app/%E6%88%91%E7%9A%84%E5%A4%A9%E6%B0%94-myweather-%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F/id1003715695">我的天气</a>」app 在 iPhone 12 发售前就已经完成了对 iPhone 12 系列的适配显示。</p>
 
@@ -229,7 +248,7 @@
 
 <h2 id="toc_4">iPhone 12 Pro 系列屏幕的变化</h2>
 
-<p>iPhone 12 Pro 系列包括 6.1 寸 iPhone 12 Pro 机型和 6.5 寸 iPhone 12 Pro Max 机型。</p>
+<p>iPhone 12 Pro 系列包括 6.1 寸 iPhone 12 Pro 机型和 6.7 寸 iPhone 12 Pro Max 机型。</p>
 
 <p><img src="media/16030487843973/AC0CFDAE-939C-4D9B-90BB-5411C3410864.png" alt=""/></p>
 
@@ -300,7 +319,30 @@
 
 <p><img src="media/16030487843973/CD717D06-5F63-42ED-93C1-37F0A3EEB449.png" alt=""/></p>
 
-<h2 id="toc_10">总结</h2>
+<h2 id="toc_10">iPhone 12/iPhone 12 Pro 上的 App 适配实例</h2>
+
+<p>10 月 23 日，6.1 寸的 iPhone 12 和 iPhone 12 Pro 正式发售，我也在真机上对 app 适配的情况进行了测试。<br/>
+在标准显示模式下，如前文所讲，未适配的 app（未通过 Xcode 12.1 及以上版本编译）会直接等比放大 iPhone 11 Pro 的大小以充满全屏，由于不是点对点显示，屏幕多少会有些发虚的感觉，整体文字显示稍微偏大，但 app 布局一般不存在什么问题，如下图中的「微信」、「微博」，从键盘高度更高就可以看出它们是被等比放大了。</p>
+
+<p><img src="media/16030487843973/7D88FA85-76E8-452D-9255-EC902516CD93.png" alt="7D88FA85-76E8-452D-9255-EC902516CD93"/></p>
+
+<p>被网友吐槽最多的是 app「哔哩哔哩」，其状态栏（显示时间、网络、电量的顶部区域）与下部的内容发生了重叠，导致搜索栏及其旁边的按钮很难被按到。虽然并不知道「哔哩哔哩」的代码具体是如何写的，但猜测很可能是没有使用 Apple 提供的 Safe Area 定义（之前文章有讲），而是根据机型判断了状态栏下部内容与屏幕顶部的距离，对于之前的全面屏机型统一写死为 44pt，对于其他机型统一写死为 20pt。而在代码未更新前，iPhone 12、iPhone 12 Pro 就属于未知的其他机型，状态栏下部内容自然就与状态栏重叠了。这种判断方法是十分傻瓜的。</p>
+
+<p>iOS 设备的状态栏 Status Bar 高度也是在不断变化的，在非全面屏时代，状态栏的高度一直都是 20pt，所以在当时很多 app 采用了和现在 B 站同样的代码编写逻辑，写死状态栏高度，因为所有非全面屏机型都一样，所以一直没有出过什么问题。但直到 iPhone X 的出现，状态栏高度变成了 44pt（因为刘海区域的存在），增加了 24pt，这让很多写死状态栏高度的 app 原形毕露。不过随着对 iPhone X 的适配，这种问题后面就很少出现了。<br/>
+从 iPhone X 一直到 iPhone 11 Pro、iPhone 11 Pro Max，状态栏的高度一致都维持 44pt 没变。但从 iPhone 12 系列开始，状态栏的高度又发生了新的变化。通过 Xcode 模拟器可以发现，iPhone 12 mini 的状态栏高度是 50pt，iPhone 12/iPhone 12 Pro、iPhone 12 Pro Max 的状态栏高度是 47pt，和之前完全不一样。而在放大显示模式下，不同机型的状态栏高度还会更加复杂。</p>
+
+<p><img src="media/16030487843973/F07C38D4-D7A3-41A2-BA7A-3E99C686000C.png" alt="F07C38D4-D7A3-41A2-BA7A-3E99C686000C"/></p>
+
+<p>Apple 调整全面屏的状态栏高度的原因还不好下定论，但这么多变的状态栏高度就是在时刻提醒开发者不要根据机型判断状态栏高度，应该使用 Apple 提供的 Safe Area 工具进行内容布局。</p>
+
+<p>来到放大显示模式下，iPhone 12 、iPhone 12 Pro 的显示效果可谓是惨不忍睹。如前文所讲，在放大模式下，iPhone 12 、iPhone 12 Pro 的逻辑分辨率宽度是 320pt（全面屏），这是一个完全虚构的机型，如果开发者不够细心，将会完全忽视对它的适配。对于未适配但已经以 Xcode 12 及以上版本编译的 app，可以全屏，但可能布局错乱，例如下图中的「YouTube」、「微博」，底部的标签栏 Tab Bar 很明显出现了错位问题。</p>
+
+<p><img src="media/16030487843973/9E8858C3-E28A-45B0-984F-89CC57CFD7C7.png" alt="9E8858C3-E28A-45B0-984F-89CC57CFD7"/></p>
+
+<p>而对于未适配也未能以 Xcode 12 及以上版本编译的 app，不能全屏，只能以 iPhone SE（第一代）的大小显示，上下有大黑边，例如上图中的「微信」、「支付宝」。<br/>
+对于已经适配了的 app，由于其逻辑分辨率宽度只有 320pt，这么窄的宽度上布局非常拥挤，文本也显得很大，真的是老人机的感觉。总的来说，iPhone 12、iPhone 12 Pro 的放大显示模式在当面这个时间点体验很差，几乎是不可用状态。</p>
+
+<h2 id="toc_11">总结</h2>
 
 <p>纵观 iPhone 12 全系列的屏幕分辨率变化，Apple 为了保持 PPI 也即屏幕清晰度只增不减，不得不在之前已有的逻辑分辨率宽度上同样利用「<strong>等比放大</strong>」的方法小幅放大了一点形成了两个新的逻辑分辨率宽度：390pt、428pt，同时为了让 iPhone X、iPhone iPhone Xs、iPhone 11 Pro、iPhone 12、iPhone 12 Pro、iPhone 12 mini 这些机型都具备「放大显示」功能，暗暗增加了 320pt（全面屏）这个新的逻辑分辨率宽度。整体上可谓十分激进的进化，虽然显示效果达到了最佳，但对于众多开发者和第一批尝鲜的用户来说，不得不有一段时间的阵痛期。这或许也在某些层面体现了 Apple 的偏执吧。</p>
 
@@ -312,7 +354,7 @@
 
 <p>iPhone 屏幕逻辑分辨率激进变化的背景下，或许 Apple 已释放出了足够的信号：未来的屏幕大小不再是一成不变的，app 的显示区域也是可大可小的，针对于不同设备尺寸适配 app 的方法已经过时，循着 Apple 给出的方法和工具，让 app 自由地在屏幕上呈现，或许才能找到未来的路。</p>
 
-<h2 id="toc_11">参考文章</h2>
+<h2 id="toc_12">参考文章</h2>
 
 <ul>
 <li><a href="https://hacknicity.medium.com/how-ios-apps-adapt-to-the-various-iphone-12-screen-sizes-e45c021e1b8b">How iOS Apps Adapt to the various iPhone 12 Screen Sizes | by Geoff Hackworth</a></li>
