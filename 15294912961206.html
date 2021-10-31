@@ -145,29 +145,20 @@
 
       <div class="article-content">
       <p>iPhone 可以利用 GPS 来精确定位所处的位置，借助得到的位置结果可以应用在众多地图类、社交类等 app 中。为了 app 的开发和测试或者一些其他目的，有时需要改变当前的定位位置来测试一些结果。本文的主题就是在不需要越狱的前提下，使用 iOS 开发最常用的 Xcode 工具来临时修改 iPhone 的当前定位位置。</p>
-
 <span id="more"></span><!-- more -->
-
-<h2 id="toc_0">背景</h2>
-
+<h2><a id="%E8%83%8C%E6%99%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>背景</h2>
 <p>地图中的每一个点都有一个坐标，可以用经度（表东西方向）和纬度（表南北方向）来表示。针对于这个坐标，我们常见的有三种坐标系标准：</p>
-
 <ul>
 <li><a href="https://zh.wikipedia.org/wiki/%E4%B8%96%E7%95%8C%E5%A4%A7%E5%9C%B0%E6%B5%8B%E9%87%8F%E7%B3%BB%E7%BB%9F">WGS-84</a>：即在 1984 年定义的世界大地测量系统（World Geodetic System, WGS），也是被广泛采用的坐标系标准；</li>
 <li><a href="https://zh.wikipedia.org/wiki/GCJ-02">GCJ-02</a>：一种基于 WGS-84 制定的大地测量系统 ，由中国国测局制定。此坐标系所采用的混淆算法会在经纬度中加入看似随机的偏移，号称可以促进国家安全🙃。目前该算法已经通过多种语言形式实现了向 WGS-84 坐标的转换。高德地图、Google Map 中国内地部分的坐标采用了此标准。</li>
 <li><a href="https://zh.wikipedia.org/wiki/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE#%E5%9D%90%E6%A0%87%E7%B3%BB">BD-09</a>：百度在 GCJ-02 的基础上多增加了一次变换，号称“有助保护用户隐私”🙃🙃。目前也已被反向转换。百度地图采用了此标准。</li>
 </ul>
-
 <p>要想把定位位置改成我们想要的位置，首先要找到那个位置的经度+维度坐标，确定其使用的坐标标准，利用工具将其转换为 WGS-84 标准，获取到在 WGS-84 标准下的准确坐标。</p>
-
-<h2 id="toc_1">准备</h2>
-
+<h2><a id="%E5%87%86%E5%A4%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>准备</h2>
 <p>以下以「上海中心」这个地理位置坐标作为最终目标为例说明：</p>
-
 <ul>
-<li><strong>1.获取 GCJ-02 标准的地理位置坐标：</strong>在<a href="http://lbs.amap.com/console/show/picker">高德地图</a>或者 <a href="http://map.google.com">Google 地图</a>中找到上海中心的经纬度坐标（GCJ-02 标准）为<code>121.505385,31.233526</code>，如下图：</li>
+<li>**1.获取 GCJ-02 标准的地理位置坐标：**在<a href="http://lbs.amap.com/console/show/picker">高德地图</a>或者 <a href="http://map.google.com">Google 地图</a>中找到上海中心的经纬度坐标（GCJ-02 标准）为<code>121.505385,31.233526</code>，如下图：</li>
 </ul>
-
 <ul class="example-orbit" data-orbit>
       <li>
         <img src="media/15294912961206/15294961375135.jpg" alt="" />
@@ -178,18 +169,14 @@
         <div class="orbit-caption">Google Map</div>
       </li>
     </ul>
-
 <ul>
-<li><strong>2.获取 WGS-84 标准的地理位置坐标：</strong>利用<a href="http://www.dituwa.com/tool/gpxaxes">转换工具</a>将获取到的 GCJ-02 标准的坐标转换成 WGS-84 标准的坐标，如下图，最终获取到的 WGS-84 坐标为<code>121.50097295,31.23555959</code>。</li>
+<li>**2.获取 WGS-84 标准的地理位置坐标：**利用<a href="http://www.dituwa.com/tool/gpxaxes">转换工具</a>将获取到的 GCJ-02 标准的坐标转换成 WGS-84 标准的坐标，如下图，最终获取到的 WGS-84 坐标为<code>121.50097295,31.23555959</code>。</li>
 </ul>
-
-<p><img src="media/15294912961206/15294938764536.jpg" alt=""/></p>
-
+<p><img src="media/15294912961206/15294938764536.jpg" alt="" /></p>
 <ul>
-<li><strong>3.配置一个 GPX 格式的文件：</strong>这个文件稍后会导入到 Xcode 项目中使用，文件内容如下，注意将其中的 <code>lat</code> 和 <code>lon</code> 改成刚刚你获取到的 WGS-84 坐标。</li>
+<li>**3.配置一个 GPX 格式的文件：**这个文件稍后会导入到 Xcode 项目中使用，文件内容如下，注意将其中的 <code>lat</code> 和 <code>lon</code> 改成刚刚你获取到的 WGS-84 坐标。</li>
 </ul>
-
-<pre class="line-numbers"><code class="language-text">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+<pre class="line-numbers"><code class="language-plain_text">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
 &lt;gpx version=&quot;1.1&quot;
     creator=&quot;GMapToGPX 6.4j - http://www.elsewhere.org/GMapToGPX/&quot;
     xmlns=&quot;http://www.topografix.com/GPX/1/1&quot;
@@ -199,27 +186,19 @@
     &lt;/wpt&gt;
 &lt;/gpx&gt;
 </code></pre>
-
-<h2 id="toc_2">操作</h2>
-
+<h2><a id="%E6%93%8D%E4%BD%9C" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>操作</h2>
 <ul>
 <li>1.在 Xcode 中新建一个项目，并将刚刚创建的 gpx 格式文件拖入到项目中，如下图：</li>
 </ul>
-
-<p><img src="media/15294912961206/15294943878773.jpg" alt=""/></p>
-
+<p><img src="media/15294912961206/15294943878773.jpg" alt="" /></p>
 <ul>
 <li>2.打开 Xcode 项目的「Edit Scheme…」设置窗口，在「Run-Option-Core Location」中选中「Allow Location Simulation」，并在「Default Location」选择刚刚添加的 gpx 文件（Default Location 中默认包含了一些全世界各个国家和地区的位置，这些位置的周围一般都有一家 Apple Store），如下图：</li>
 </ul>
-
-<p><img src="media/15294912961206/15294945642294.jpg" alt=""/></p>
-
+<p><img src="media/15294912961206/15294945642294.jpg" alt="" /></p>
 <ul>
 <li>3.在 iPhone 真机上编译并运行此 app，此时手机的定位位置就已经变成了「上海中心」，可以在地图 app 或者社交 app 中查看确认。</li>
 </ul>
-
-<p><img src="media/15294912961206/15294951958551.jpg" alt=""/></p>
-
+<p><img src="media/15294912961206/15294951958551.jpg" alt="" /></p>
 <ul>
 <li>4.只要不在 Xcode 中停止运行 app，这个模拟的地理位置就可以保持一段时间，在 Xcode 中停止运行 app 或者重启手机都会恢复成真实的地理位置。</li>
 </ul>
@@ -317,7 +296,7 @@
                   
 
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15844652241485.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="16357088669226.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
 
                   </div>
 
@@ -368,6 +347,12 @@
 	      
 		      
 			      <li class="post">
+			        <a href="16357088669226.html">订阅 Apple Music 该选哪个区？——中美坡港台日六大地区全对比（第二版）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="16030487843973.html">全新 iPhone 12 发布，再谈 iPhone 屏幕尺寸</a>
 			      </li>
 		     
@@ -387,12 +372,6 @@
 		      
 			      <li class="post">
 			        <a href="15966406956355.html">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15942969497015.html">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？</a>
 			      </li>
 		     
 		  
@@ -492,7 +471,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
     </script>
 
     
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_SVG-full"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
 <script>

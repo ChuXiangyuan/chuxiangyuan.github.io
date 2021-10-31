@@ -143,61 +143,39 @@
 
       <div class="article-content">
       <p>使用Swift进行iOS编程知识点总结第四篇。</p>
-
 <span id="more"></span><!-- more -->
-
 <blockquote>
-<p>关联阅读：<br/>
-<a href="http://chuxiangyuan.github.io/14709182567699.html">Study iOS 9 Programming with Swift（1）</a><br/>
-<a href="http://chuxiangyuan.github.io/14710858606215.html">Study iOS 9 Programming with Swift（2）</a><br/>
+<p>关联阅读：<br />
+<a href="http://chuxiangyuan.github.io/14709182567699.html">Study iOS 9 Programming with Swift（1）</a><br />
+<a href="http://chuxiangyuan.github.io/14710858606215.html">Study iOS 9 Programming with Swift（2）</a><br />
 <a href="http://chuxiangyuan.github.io/14725650174400.html">Study iOS 9 Programming with Swift（3）</a></p>
 </blockquote>
-
-<h2 id="toc_0">目录</h2>
-
+<h2><a id="%E7%9B%AE%E5%BD%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>目录</h2>
 <ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">更新记录</a>
-</li>
-<li>
-<a href="#toc_2">Self Sizing Cells</a>
-</li>
-<li>
-<a href="#toc_3">Unwind Segue</a>
-</li>
-<li>
-<a href="#toc_4">实例：多个button触发一个action方法</a>
-</li>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95">更新记录</a></li>
+<li><a href="#self-sizing-cells">Self Sizing Cells</a></li>
+<li><a href="#unwind-segue">Unwind Segue</a></li>
+<li><a href="#%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%A4%9A%E4%B8%AAbutton%E8%A7%A6%E5%8F%91%E4%B8%80%E4%B8%AAaction%E6%96%B9%E6%B3%95">实例：多个button触发一个action方法</a></li>
 </ul>
 
-
-<h2 id="toc_1">更新记录</h2>
-
+<h2><a id="%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>更新记录</h2>
 <ul>
 <li>2016/09/01 第一次发布</li>
 </ul>
-
-<h2 id="toc_2">Self Sizing Cells</h2>
-
+<h2><a id="self-sizing-cells" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Self Sizing Cells</h2>
 <ul>
 <li>设置好cell的Constraints后，并且要把Cell的number of lines的值设置为0，在viewDidLoad方法中添加以下代码：</li>
 </ul>
-
-<pre class="line-numbers"><code class="language-text">tableView.estimatedRowHeight = 36.0 
+<pre class="line-numbers"><code class="language-plain_text">tableView.estimatedRowHeight = 36.0 
 tableView.rowHeight = UITableViewAutomaticDimension
 </code></pre>
-
-<h2 id="toc_3">Unwind Segue</h2>
-
+<h2><a id="unwind-segue" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unwind Segue</h2>
 <ul>
 <li>要点击一个button关闭一个view返回上一级view，可以在destination view controller中添加如下代码，并且将button与exit连接。</li>
 <li>代码片段：</li>
 </ul>
-
-<pre class="line-numbers"><code class="language-text">// 从review view跳转回detail view，并且带回rating的值改变detail view
+<pre class="line-numbers"><code class="language-plain_text">// 从review view跳转回detail view，并且带回rating的值改变detail view
 @IBAction func close(segue:UIStoryboardSegue) {
     
   if let reviewViewController = segue.sourceViewController as? ReviewViewController {
@@ -208,16 +186,13 @@ tableView.rowHeight = UITableViewAutomaticDimension
     
 }
 </code></pre>
-
-<h2 id="toc_4">实例：多个button触发一个action方法</h2>
-
+<h2><a id="%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%A4%9A%E4%B8%AAbutton%E8%A7%A6%E5%8F%91%E4%B8%80%E4%B8%AAaction%E6%96%B9%E6%B3%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>实例：多个button触发一个action方法</h2>
 <ul>
 <li>对于多个button想要触发一个action方法，可以通过为不同的button定义不同的tag，之后coding时通过switch来区分不同tag，从而执行不同的动作。</li>
-<li>代码片段：<br/>
+<li>代码片段：<br />
 // 对电影进行评价，根据点击button的不同给rating赋值并关闭modal view</li>
 </ul>
-
-<pre class="line-numbers"><code class="language-text">@IBAction func ratingSelected(sender: UIButton) {
+<pre class="line-numbers"><code class="language-plain_text">@IBAction func ratingSelected(sender: UIButton) {
   
     switch (sender.tag) {
     case 100: rating = &quot;dislike&quot;
@@ -231,7 +206,6 @@ tableView.rowHeight = UITableViewAutomaticDimension
     
 }
 </code></pre>
-
 <p>未完待续</p>
 
 
@@ -327,7 +301,7 @@ tableView.rowHeight = UITableViewAutomaticDimension
                   
 
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15844652241485.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="16357088669226.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
 
                   </div>
 
@@ -378,6 +352,12 @@ tableView.rowHeight = UITableViewAutomaticDimension
 	      
 		      
 			      <li class="post">
+			        <a href="16357088669226.html">订阅 Apple Music 该选哪个区？——中美坡港台日六大地区全对比（第二版）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="16030487843973.html">全新 iPhone 12 发布，再谈 iPhone 屏幕尺寸</a>
 			      </li>
 		     
@@ -397,12 +377,6 @@ tableView.rowHeight = UITableViewAutomaticDimension
 		      
 			      <li class="post">
 			        <a href="15966406956355.html">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15942969497015.html">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？</a>
 			      </li>
 		     
 		  
@@ -502,7 +476,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
     </script>
 
     
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_SVG-full"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
 <script>

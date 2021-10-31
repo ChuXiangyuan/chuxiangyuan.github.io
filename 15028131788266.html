@@ -145,120 +145,126 @@
 
       <div class="article-content">
       <p>从导向、排版层级、对比度三个方面介绍 iOS 11 设计上的一些变化，从而帮助你设计一个具有丰富的视觉层级、清晰的导航、易于使用和简单的交互的 app。</p>
-
 <span id="more"></span><!-- more -->
-
-<h2 id="toc_0">概述</h2>
-
+<h2><a id="%E6%A6%82%E8%BF%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>概述</h2>
 <ul>
-<li><strong>Wayfinding：</strong>在 iOS 11 中提供更加清晰的导航、贯彻整个系统的导向；</li>
-<li><strong>Typographic Hierarchy：</strong>通过排版的调整，聚焦整体的层级；</li>
-<li><strong>Contrast：</strong>对于有用的信息，在 UI 上增加对比度。</li>
+<li>**Wayfinding：**在 iOS 11 中提供更加清晰的导航、贯彻整个系统的导向；</li>
+<li>**Typographic Hierarchy：**通过排版的调整，聚焦整体的层级；</li>
+<li>**Contrast：**对于有用的信息，在 UI 上增加对比度。</li>
 </ul>
-
-<h2 id="toc_1">Wayfinding 导向</h2>
-
+<h2><a id="wayfinding%E5%AF%BC%E5%90%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wayfinding 导向</h2>
 <ul>
-<li>通常意义下，导向就是指导人们通过某个环境、在物理空间自我定位；</li>
-<li><p>生活中常见的标识和信息系统：街道标识、机场、停车场。</p></li>
-<li><p>在 UI 中导向，可以增强使用体验，理解你所处的空间：</p>
+<li>
+<p>通常意义下，导向就是指导人们通过某个环境、在物理空间自我定位；</p>
+</li>
+<li>
+<p>生活中常见的标识和信息系统：街道标识、机场、停车场。</p>
+</li>
+<li>
+<p>在 UI 中导向，可以增强使用体验，理解你所处的空间：</p>
 <ul>
 <li>首要目标：高亮/强调内容；</li>
 <li>app 需要清晰的视觉层级；</li>
 <li>UI 元素不应该与内容发生竞争，而应该帮助你更好的理解潜在的功能和交互。</li>
-</ul></li>
-<li><p>大标题导航栏：一种可选的方案，并没有替换掉标准的导航栏样式，页面往下滚动时可以切换为标准的导航栏样式；</p></li>
-<li><p>在哪里应该使用大标题导航栏：</p>
+</ul>
+</li>
+<li>
+<p>大标题导航栏：一种可选的方案，并没有替换掉标准的导航栏样式，页面往下滚动时可以切换为标准的导航栏样式；</p>
+</li>
+<li>
+<p>在哪里应该使用大标题导航栏：</p>
 <ul>
 <li>app 每个 tab 的第一层级：让你理解你在 tab 的第一层级、你已经滚动到了页面顶部；</li>
 <li>如果内容和层级众多，在某些二级页面也可以使用大标题导航栏，例如「音乐」app 中「浏览」tab 中的「最新音乐」、「歌单」、「排行榜」；</li>
 </ul>
-<p><img src="media/15028131788266/1.jpg" alt="1"/></p>
+<p><img src="media/15028131788266/1.jpg" alt="1" /></p>
 <ul>
 <li>在布局相似的页面里也可使用大标题导航栏，例如「电话」app，每个 tab （个人收藏、最近通话、语音信箱）都是行式的文本内容，使用大标题导航栏可以让用户立即知道自己在哪里；</li>
 </ul>
-<p><img src="media/15028131788266/2.jpg" alt="2"/></p>
+<p><img src="media/15028131788266/2.jpg" alt="2" /></p>
 <ul>
 <li>非常重要：在导航栏中使用大标题并不总是必要的，在某些场景下会阻碍其可用性，例如「时钟」app，虽然它有多个 tab，但是它没有复杂多样的内容，每一个 tab 的布局也十分容易区分，如果使用大标题导航栏，反而会使其与内容发生竞争。</li>
 </ul>
-<p><img src="media/15028131788266/3.jpg" alt="3"/></p></li>
+<p><img src="media/15028131788266/3.jpg" alt="3" /></p>
+</li>
 </ul>
-
-<h2 id="toc_2">Typographic Hierarchy 排版层级</h2>
-
+<h2><a id="typographic-hierarchy%E6%8E%92%E7%89%88%E5%B1%82%E7%BA%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Typographic Hierarchy 排版层级</h2>
 <ul>
 <li>通过排版上的层级变化，可以强调更加重要的内容，帮助内容成组；</li>
 <li>减少认知负担，减少在寻找某些东西时所付出的精神努力。</li>
 <li>建立排版层级的几个基本的方法：
 <ul>
-<li><strong>Position 位置：</strong>上面的会比下面的重要一些；</li>
-<li><strong>Size 尺寸/字号：</strong>大尺寸的会比小尺寸的重要一些；</li>
-<li><strong>Weight 字重：</strong>粗字重可以强调效果，细字重可以减弱效果；</li>
-<li><strong>Color 颜色：</strong>如白色对比灰色，白色会有强调效果。</li>
+<li>**Position 位置：**上面的会比下面的重要一些；</li>
+<li>**Size 尺寸/字号：**大尺寸的会比小尺寸的重要一些；</li>
+<li>**Weight 字重：**粗字重可以强调效果，细字重可以减弱效果；</li>
+<li>**Color 颜色：**如白色对比灰色，白色会有强调效果。</li>
 <li>一次可能会用到多种方法。</li>
-</ul></li>
 </ul>
-
-<p><img src="media/15028131788266/3EEAB629-094D-4391-9677-DC2CCC4C35A9.png" alt="3EEAB629-094D-4391-9677-DC2CCC4C35A9"/></p>
-
-<ul>
-<li><p>iOS 11 中的几个实例：</p>
-<ul>
-<li><strong>「照片」app：</strong>内容——你的照片是这个 app 中最重要的。导航照片的每部分的标题，在 iOS 10 中采用了两种字号来区分两种信息，但仍然显得有点小、有点轻，而在 iOS 11 中，让每部分的标题字号更大，地点信息增加了字重，日期信息采用了灰色文本。这些改变可以使你分离内容中的重点更简单了，让你更快地找到某张特别的照片。</li>
+</li>
 </ul>
-<p><img src="media/15028131788266/1%201.jpg" alt="1 1"/></p>
+<p><img src="media/15028131788266/3EEAB629-094D-4391-9677-DC2CCC4C35A9.png" alt="3EEAB629-094D-4391-9677-DC2CCC4C35A9" /></p>
 <ul>
-<li><strong>「日历」app：</strong>在 iOS 11 中为了强调增加了字重，有意地使用颜色指示当前的年月日。</li>
-</ul>
-<p><img src="media/15028131788266/2%201.jpg" alt="2 1"/></p>
+<li>
+<p>iOS 11 中的几个实例：</p>
 <ul>
-<li><strong>「天气」app：</strong>在 iOS 11 中，增加了文本字重，整体上增大了字号，使得内容更加容易阅读。</li>
+<li>**「照片」app：**内容——你的照片是这个 app 中最重要的。导航照片的每部分的标题，在 iOS 10 中采用了两种字号来区分两种信息，但仍然显得有点小、有点轻，而在 iOS 11 中，让每部分的标题字号更大，地点信息增加了字重，日期信息采用了灰色文本。这些改变可以使你分离内容中的重点更简单了，让你更快地找到某张特别的照片。</li>
 </ul>
-<p><img src="media/15028131788266/3%201.jpg" alt="3 1"/></p></li>
-</ul>
-
-<h2 id="toc_3">Contrast 对比度</h2>
-
+<p><img src="media/15028131788266/1%201.jpg" alt="1 1" /></p>
 <ul>
-<li>在 UI 中，为了与更大、更粗的文本样式保持平衡，需要更新其他 UI 元素，增强其对比度，同时还要保持其功能性，保证最小化粒度的改变。</li>
-<li><p>在 iOS 11 中由此带来的一些改变：</p>
+<li>**「日历」app：**在 iOS 11 中为了强调增加了字重，有意地使用颜色指示当前的年月日。</li>
+</ul>
+<p><img src="media/15028131788266/2%201.jpg" alt="2 1" /></p>
+<ul>
+<li>**「天气」app：**在 iOS 11 中，增加了文本字重，整体上增大了字号，使得内容更加容易阅读。</li>
+</ul>
+<p><img src="media/15028131788266/3%201.jpg" alt="3 1" /></p>
+</li>
+</ul>
+<h2><a id="contrast%E5%AF%B9%E6%AF%94%E5%BA%A6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contrast 对比度</h2>
+<ul>
+<li>
+<p>在 UI 中，为了与更大、更粗的文本样式保持平衡，需要更新其他 UI 元素，增强其对比度，同时还要保持其功能性，保证最小化粒度的改变。</p>
+</li>
+<li>
+<p>在 iOS 11 中由此带来的一些改变：</p>
 <ul>
 <li>填充按钮的形状，如数字键盘；</li>
 </ul>
-<p><img src="media/15028131788266/1%202.jpg" alt="1 2"/></p>
+<p><img src="media/15028131788266/1%202.jpg" alt="1 2" /></p>
 <ul>
 <li>增加形状的尺寸，如搜索输入框；</li>
 </ul>
-<p><img src="media/15028131788266/A4F66E32-2ECC-49B6-873F-476C6599D916.png" alt="A4F66E32-2ECC-49B6-873F-476C6599D916"/></p>
+<p><img src="media/15028131788266/A4F66E32-2ECC-49B6-873F-476C6599D916.png" alt="A4F66E32-2ECC-49B6-873F-476C6599D916" /></p>
 <ul>
 <li>Tab Bar：增加文本标签的字重（从 regular 到 medium），填充 icon 的形状、增加笔画的权重；</li>
 </ul>
-<p><img src="media/15028131788266/F913F827-1261-49A1-9990-864B983EC401.png" alt="F913F827-1261-49A1-9990-864B983EC401"/></p>
+<p><img src="media/15028131788266/F913F827-1261-49A1-9990-864B983EC401.png" alt="F913F827-1261-49A1-9990-864B983EC401" /></p>
 <ul>
 <li>IPhone 横屏下的 Tab Bar：第一点，为了对空间更好地利用，把文本标签放在了 icon 的右边（iOS 10 中是一上一下），这样使得横屏下的 Tab Bar 更矮了，从而与导航栏、工具栏高度一致。第二点，相对于竖屏，横屏下的 icon 会稍小一些，文本会稍大一些，设计自己的 app 时需要考虑这些因素。</li>
 </ul>
-<p><img src="media/15028131788266/iPhone%20Tab%20Bar.png" alt="iPhone Tab Ba"/></p>
+<p><img src="media/15028131788266/iPhone%20Tab%20Bar.png" alt="iPhone Tab Ba" /></p>
 <ul>
 <li>iPad 横屏下的 Tab Bar：更大的文本尺寸、icon 与竖屏时的大小一致。</li>
 </ul>
-<p><img src="media/15028131788266/6280686D-473F-41F3-AE7A-C9AD96D0EBF8.png" alt="6280686D-473F-41F3-AE7A-C9AD96D0EBF8"/></p>
+<p><img src="media/15028131788266/6280686D-473F-41F3-AE7A-C9AD96D0EBF8.png" alt="6280686D-473F-41F3-AE7A-C9AD96D0EBF8" /></p>
 <ul>
 <li>Wallet app：在 iOS 10 中使用了模糊效果，似乎想要表明其位于底下的页面之上，但这个并不符合逻辑，也没有起到指示所处空间的作用，所以在 iOS 11 中移除了这种模糊效果。</li>
 </ul>
-<p><img src="media/15028131788266/4.jpg" alt="4"/></p></li>
-<li><p>移除多余的、不必要的 UI 元素，减少复杂度以改善整个 app 的对比度。</p></li>
+<p><img src="media/15028131788266/4.jpg" alt="4" /></p>
+</li>
+<li>
+<p>移除多余的、不必要的 UI 元素，减少复杂度以改善整个 app 的对比度。</p>
+</li>
 </ul>
-
-<h2 id="toc_4">参考链接</h2>
-
+<h2><a id="%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>参考链接</h2>
 <ul>
-<li><a href="https://developer.apple.com/videos/play/wwdc2017/810/">What’s New in iOS 11 - WWDC 2017 - Videos - Apple Developer</a><br/></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/810/">What’s New in iOS 11 - WWDC 2017 - Videos - Apple Developer</a></li>
 </ul>
-
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+<blockquote>
+<p><img src="media/14625521742746/15088240400740.jpg" alt="" /></p>
 </blockquote>
 
 
@@ -354,7 +360,7 @@
                   
 
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15844652241485.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="16357088669226.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
 
                   </div>
 
@@ -405,6 +411,12 @@
 	      
 		      
 			      <li class="post">
+			        <a href="16357088669226.html">订阅 Apple Music 该选哪个区？——中美坡港台日六大地区全对比（第二版）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="16030487843973.html">全新 iPhone 12 发布，再谈 iPhone 屏幕尺寸</a>
 			      </li>
 		     
@@ -424,12 +436,6 @@
 		      
 			      <li class="post">
 			        <a href="15966406956355.html">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15942969497015.html">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？</a>
 			      </li>
 		     
 		  
@@ -529,7 +535,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
     </script>
 
     
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_SVG-full"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
 <script>

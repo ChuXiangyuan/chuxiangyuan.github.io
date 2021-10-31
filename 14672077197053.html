@@ -145,31 +145,33 @@
 
       <div class="article-content">
       <p>最近在了解Swift语言的语法，学着用Swift编写iOS程序，挖掘一下一直埋藏在心底coding的潜能，也锻炼下自己的逻辑思维能力。</p>
-
 <span id="more"></span><!-- more -->
-
-<h2 id="toc_0">学习时使用的资料汇总</h2>
-
+<h2><a id="%E5%AD%A6%E4%B9%A0%E6%97%B6%E4%BD%BF%E7%94%A8%E7%9A%84%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>学习时使用的资料汇总</h2>
 <ul>
-<li><p><a href="https://itunes.apple.com/cn/course/developing-ios-9-apps-swift/id1104579961">Developing iOS 9 Apps with Swift</a> —— Stanford大学一位有名的白胡子老头讲的公开课，年年根据苹果Swift版本迭代和iOS版本迭代的节奏不断更新，苹果官方推荐。iTunes U中有英文字幕，<a href="https://github.com/CS193P-Translation-Group/Developing-iOS-9-Apps-with-Swift">Github</a>上有中文字幕翻译项目，目前翻译的比较慢。着急的话可考虑去年的<a href="https://github.com/CS193P-Translation-Group/Developing_iOS_8_Apps_With_Swift">iOS 8版本</a>,翻译已全部完成。讲的很不错，但是自我感觉语速很快。</p></li>
-<li><p><a href="https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0">The Swift Programming Language</a> —— 苹果官方Swift语言指导手册，iOS 9在用的是<a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0">Swift 2.2版本</a>，2016年WWDC刚刚发布<a href="https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0">Swift 3版本</a>。</p></li>
-<li><p><a href="https://www.appcoda.com/swift/">Beginning iOS 9 Programming with Swift</a> —— 国外作者写的一本针对于初学者的电子书，图文并茂，讲解的很详细，例子也很丰富。感觉每一章，作者都在害怕读者因为讲的东西太困难而放弃学习，在书中强调多次😂。</p></li>
+<li>
+<p><a href="https://itunes.apple.com/cn/course/developing-ios-9-apps-swift/id1104579961">Developing iOS 9 Apps with Swift</a> —— Stanford大学一位有名的白胡子老头讲的公开课，年年根据苹果Swift版本迭代和iOS版本迭代的节奏不断更新，苹果官方推荐。iTunes U中有英文字幕，<a href="https://github.com/CS193P-Translation-Group/Developing-iOS-9-Apps-with-Swift">Github</a>上有中文字幕翻译项目，目前翻译的比较慢。着急的话可考虑去年的<a href="https://github.com/CS193P-Translation-Group/Developing_iOS_8_Apps_With_Swift">iOS 8版本</a>,翻译已全部完成。讲的很不错，但是自我感觉语速很快。</p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0">The Swift Programming Language</a> —— 苹果官方Swift语言指导手册，iOS 9在用的是<a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0">Swift 2.2版本</a>，2016年WWDC刚刚发布<a href="https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0">Swift 3版本</a>。</p>
+</li>
+<li>
+<p><a href="https://www.appcoda.com/swift/">Beginning iOS 9 Programming with Swift</a> —— 国外作者写的一本针对于初学者的电子书，图文并茂，讲解的很详细，例子也很丰富。感觉每一章，作者都在害怕读者因为讲的东西太困难而放弃学习，在书中强调多次😂。</p>
+</li>
 </ul>
-
-<h2 id="toc_1">有意思的iOS小程序记录</h2>
-
+<h2><a id="%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84ios%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AE%B0%E5%BD%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>有意思的iOS小程序记录</h2>
 <p>从开始学习到不断深入，不管是视频中还是书中或是网络中，总会有很多有意思、启发性的iOS小程序，它们可能很简单，但是却带我走进了iOS开发的大门，让我兴趣越来越浓厚。感觉学习coding还是得以实例来引路，如果一直闷头学习语法，学很长时间也不知道学的到底用来干什么，真的会有强烈的挫败感，最后就像背单词永远停留在字母A序列中一样，了解了语法的皮毛就放弃了。</p>
-
 <p>以下iOS小程序的完整代码可在<a href="https://github.com/ChuXiangyuan/Beginning-iOS-Programming-with-Swift">我的Github</a>中获取到。</p>
-
 <ul>
-<li><p>Hello World - 很简单，界面上有个button，点击后弹出一条消息。同时界面上的button和label元素实现Auto Layout。通过这个小程序，初步了解在Xcode中创建项目的方法，了解简单的View和Controler的创建方法和关系，了解了Auto Layout的基本方法。<br/>
-<img src="media/14672077197053/1.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
-<li><p>StackViewDemo - 学习利用Stack View进行Auto Layout，进一步了解Auto Layout的方法，了解在不同设备上响应式布局的方法。<br/>
-<img src="media/14672077197053/2.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p></li>
+<li>
+<p>Hello World - 很简单，界面上有个button，点击后弹出一条消息。同时界面上的button和label元素实现Auto Layout。通过这个小程序，初步了解在Xcode中创建项目的方法，了解简单的View和Controler的创建方法和关系，了解了Auto Layout的基本方法。<br />
+<img src="media/14672077197053/1.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;" /></p>
+</li>
+<li>
+<p>StackViewDemo - 学习利用Stack View进行Auto Layout，进一步了解Auto Layout的方法，了解在不同设备上响应式布局的方法。<br />
+<img src="media/14672077197053/2.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;" /></p>
+</li>
 </ul>
-
-<p><img src="media/14672077197053/3.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;"/></p>
+<p><img src="media/14672077197053/3.png" alt="" class="mw_img_center" style="display: block; clear:both; margin: 0 auto;" /></p>
 
 
     
@@ -264,7 +266,7 @@
                   
 
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15844652241485.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="16357088669226.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
 
                   </div>
 
@@ -315,6 +317,12 @@
 	      
 		      
 			      <li class="post">
+			        <a href="16357088669226.html">订阅 Apple Music 该选哪个区？——中美坡港台日六大地区全对比（第二版）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="16030487843973.html">全新 iPhone 12 发布，再谈 iPhone 屏幕尺寸</a>
 			      </li>
 		     
@@ -334,12 +342,6 @@
 		      
 			      <li class="post">
 			        <a href="15966406956355.html">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15942969497015.html">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？</a>
 			      </li>
 		     
 		  
@@ -439,7 +441,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
     </script>
 
     
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_SVG-full"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
 <script>

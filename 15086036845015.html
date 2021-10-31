@@ -147,435 +147,520 @@
 
       <div class="article-content">
       <p>Apple 在 2017 年 9 月的秋季发布会上正式发布了 iPhone X。iPhone X 与之前的 iPhone 不同，为了达到全面屏的效果，实体 Home 键被屏幕底部的 Home Indicator 取代，屏幕的四个角由直角变为了圆角，屏幕比例也不再是常见的 16:9，更引人注意的是屏幕顶部还有一个特殊的 Sensor Housing，也即人们俗称的刘海。这些变化对 iOS app 甚至网站的适配都提出了挑战，或多或少会影响你正在使用的 app 的功能与交互。</p>
-
 <span id="more"></span><!-- more -->
-
 <blockquote>
-<p>iPhone X 首次亮相： </p>
-
+<p>iPhone X 首次亮相：</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/apGuVR3iJqk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </blockquote>
-
 <ul>
-<li><p><strong>Note：</strong></p></li>
+<li><strong>Note：</strong></li>
 </ul>
-
 <ol>
 <li>文章从与 iPhone X 有关的交互设计和视觉设计出发，略有提及一些开发相关问题✍️</li>
 <li>由于仅是略懂一些开发的皮毛，文章中开发相关的问题的描述大部分是根据已有资料的自己理解，难免有不准确或错误的地方。如有发现，欢迎指出🖐</li>
-<li><p>文章中大部分图片资源引用自 Apple 官方，一部分引用自一些其他文章。这部分均已标注出处，如果您是这些文章的作者且觉得这些引用不合适，请尽管告诉我，我会尽快删除🤝</p></li>
+<li>文章中大部分图片资源引用自 Apple 官方，一部分引用自一些其他文章。这部分均已标注出处，如果您是这些文章的作者且觉得这些引用不合适，请尽管告诉我，我会尽快删除🤝</li>
 </ol>
-
 <ul>
-<li><p><strong>更新记录：</strong></p>
+<li>
+<p><strong>更新记录：</strong></p>
 <ul>
 <li>11 月 13 日：增加了有关于 iPhone X 上播放视频的「<a href="15086036845015.html#toc_10">视频</a>」部分。</li>
-</ul></li>
-<li><p><strong>扩展阅读：</strong></p></li>
 </ul>
-
+</li>
+<li>
+<p><strong>扩展阅读：</strong></p>
+</li>
+</ul>
 <blockquote>
 <p>2018 年 Apple 发布了新款 iPhone — iPhone Xs、iPhone Xs Max、iPhone Xʀ 和新款 iPad Pro — iPad Pro 11″、iPad Pro 12.9″（第三代），想了解新设备的设计与适配故事，推荐阅读下面两篇文章：</p>
-
 <ol>
 <li><a href="15433010141111.html">Designing For iPhone Xs、iPhone Xs Max、iPhone Xʀ — 比大还大，更大的刘海屏 iPhone 来了</a></li>
-<li><a href="https://steppark.net/15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a><br/></li>
+<li><a href="https://steppark.net/15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a></li>
 </ol>
 </blockquote>
-
-<h2 id="toc_0">目录</h2>
-
+<h2><a id="%E7%9B%AE%E5%BD%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>目录</h2>
 <ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">前言</a>
-</li>
-<li>
-<a href="#toc_2">屏幕尺寸</a>
-</li>
-<li>
-<a href="#toc_3">Safe Area</a>
-</li>
-<li>
-<a href="#toc_4">布局</a>
-</li>
-<li>
-<a href="#toc_5">图片</a>
-</li>
-<li>
-<a href="#toc_6">控件</a>
-</li>
-<li>
-<a href="#toc_7">Status Bar</a>
-</li>
-<li>
-<a href="#toc_8">Home Indicator</a>
-</li>
-<li>
-<a href="#toc_9">颜色</a>
-</li>
-<li>
-<a href="#toc_10">视频</a>
-</li>
-<li>
-<a href="#toc_11">手势</a>
-</li>
-<li>
-<a href="#toc_12">按键</a>
-</li>
-<li>
-<a href="#toc_13">Face ID</a>
-</li>
-<li>
-<a href="#toc_14">键盘</a>
-</li>
-<li>
-<a href="#toc_15">适配</a>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E5%B1%8F%E5%B9%95%E5%B0%BA%E5%AF%B8">屏幕尺寸</a></li>
+<li><a href="#safe-area">Safe Area</a></li>
+<li><a href="#%E5%B8%83%E5%B1%80">布局</a></li>
+<li><a href="#%E5%9B%BE%E7%89%87">图片</a></li>
+<li><a href="#%E6%8E%A7%E4%BB%B6">控件</a></li>
+<li><a href="#status-bar">Status Bar</a></li>
+<li><a href="#home-indicator">Home Indicator</a></li>
+<li><a href="#%E9%A2%9C%E8%89%B2">颜色</a></li>
+<li><a href="#%E8%A7%86%E9%A2%91">视频</a></li>
+<li><a href="#%E6%89%8B%E5%8A%BF">手势</a></li>
+<li><a href="#%E6%8C%89%E9%94%AE">按键</a></li>
+<li><a href="#face-id">Face ID</a></li>
+<li><a href="#%E9%94%AE%E7%9B%98">键盘</a></li>
+<li><a href="#%E9%80%82%E9%85%8D">适配</a>
 <ul>
-<li>
-<a href="#toc_16">App 的适配</a>
-</li>
-<li>
-<a href="#toc_17">App 适配实例</a>
-</li>
-<li>
-<a href="#toc_18">网页的适配</a>
-</li>
-<li>
-<a href="#toc_19">网页适配实例</a>
-</li>
+<li><a href="#app%E7%9A%84%E9%80%82%E9%85%8D">App 的适配</a></li>
+<li><a href="#app%E9%80%82%E9%85%8D%E5%AE%9E%E4%BE%8B">App 适配实例</a></li>
+<li><a href="#%E7%BD%91%E9%A1%B5%E7%9A%84%E9%80%82%E9%85%8D">网页的适配</a></li>
+<li><a href="#%E7%BD%91%E9%A1%B5%E9%80%82%E9%85%8D%E5%AE%9E%E4%BE%8B">网页适配实例</a></li>
 </ul>
 </li>
-<li>
-<a href="#toc_20">iOS 11 常用 UI 标准控件的尺寸对照</a>
+<li><a href="#ios-11%E5%B8%B8%E7%94%A8-ui%E6%A0%87%E5%87%86%E6%8E%A7%E4%BB%B6%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%AF%B9%E7%85%A7">iOS 11 常用 UI 标准控件的尺寸对照</a>
 <ul>
-<li>
-<a href="#toc_21">iPhone 8</a>
-</li>
-<li>
-<a href="#toc_22">iPhone 8 Plus</a>
-</li>
-<li>
-<a href="#toc_23">iPhone X</a>
-</li>
+<li><a href="#iphone-8">iPhone 8</a></li>
+<li><a href="#iphone-8-plus">iPhone 8 Plus</a></li>
+<li><a href="#iphone-x">iPhone X</a></li>
 </ul>
 </li>
-<li>
-<a href="#toc_24">Read More</a>
+<li><a href="#read-more">Read More</a>
 <ul>
-<li>
-<a href="#toc_25">Apple 官方</a>
-</li>
-<li>
-<a href="#toc_26">非官方</a>
-</li>
+<li><a href="#apple%E5%AE%98%E6%96%B9">Apple 官方</a></li>
+<li><a href="#%E9%9D%9E%E5%AE%98%E6%96%B9">非官方</a></li>
 </ul>
 </li>
 </ul>
 
-
-<h2 id="toc_1">前言</h2>
-
+<h2><a id="%E5%89%8D%E8%A8%80" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>前言</h2>
 <p>针对 iPhone X 这些独特的新特性，有些人在网上提出了一些有趣的「解决方案」，比如：</p>
-
 <ul>
-<li><p>横屏时，列表滚动时文字优雅地略过刘海：</p>
-<p><img src="media/15086036845015/1.gif" alt="1"/><br/>
-（图片来源：<a href="https://twitter.com/vojtastavik/status/907911237983449088">Vojta Stavik 的 Twitter: “I think I’ve fixed the notch issue in landscape 🍾 ”</a>）</p></li>
-<li><p>横屏时，列表滚动时滚动条的怪异移动路径：</p>
-<p><img src="media/15086036845015/2.gif" alt="2"/><br/>
-（图片来源：<a href="https://twitter.com/ZevEisenberg/status/908148886363103232">Zev Eisenberg 的 Twitter: “Here’s what the notch would look like on the other side 🍷&quot;</a>）</p></li>
-<li><p>将刘海作为 UI 的一部分，从刘海里拉出工具菜单：</p>
-<p><img src="media/15086036845015/72157b63ly1fjols2bjgig20ij0ij7wj.gif" alt="72157b63ly1fjols2bjgig20ij0ij7wj"/><br/>
-（图片来源：<a href="https://twitter.com/0therPlanet/status/909788913702785026">Luboš Volkov⚡️ 的 Twitter: “I was working on this idea of blending app design with the #iPhoneX notch. 📲🤗&quot;</a>）</p></li>
-<li><p>有人假设设置里可以控制刘海的「开与关」🙃：</p>
-<p><img src="media/15086036845015/ear.gif" alt="ea"/><br/>
-（图片来源：<a href="https://dribbble.com/shots/3807679-Earsbar">Earsbar by Grisha Uglanov - Dribbble</a>）</p></li>
-<li><p>据说 iPhone X 发布后，天猫成为了最大赢家😅：</p>
-<p><img src="media/15086036845015/4667830F-8599-443B-AF55-A0D97F3F62A4.png" alt="4667830F-8599-443B-AF55-A0D97F3F62A4"/><br/>
-（图片来源：<a href="https://twitter.com/LON1ST/status/908221915453464576">朗仙森 的 Twitter: “天猫应该这样适配一下iPhone X！&quot;</a>）</p></li>
-<li><p>甚至有人做出了一个快速适配方法，直接将你的 app 放置在 iPhone X 屏幕中间算完😶：</p>
-<p><img src="media/15086036845015/6fe2f976ly4fjntfpkfa3j20kk0ddq3n.jpg" alt="6fe2f976ly4fjntfpkfa3j20kk0ddq3n"/><br/>
-（暂时没找到原始来源）</p></li>
+<li>
+<p>横屏时，列表滚动时文字优雅地略过刘海：</p>
+<p><img src="media/15086036845015/1.gif" alt="1" /><br />
+（图片来源：<a href="https://twitter.com/vojtastavik/status/907911237983449088">Vojta Stavik 的 Twitter: “I think I’ve fixed the notch issue in landscape 🍾 ”</a>）</p>
+</li>
+<li>
+<p>横屏时，列表滚动时滚动条的怪异移动路径：</p>
+<p><img src="media/15086036845015/2.gif" alt="2" /><br />
+（图片来源：<a href="https://twitter.com/ZevEisenberg/status/908148886363103232">Zev Eisenberg 的 Twitter: “Here’s what the notch would look like on the other side 🍷&quot;</a>）</p>
+</li>
+<li>
+<p>将刘海作为 UI 的一部分，从刘海里拉出工具菜单：</p>
+<p><img src="media/15086036845015/72157b63ly1fjols2bjgig20ij0ij7wj.gif" alt="72157b63ly1fjols2bjgig20ij0ij7wj" /><br />
+（图片来源：<a href="https://twitter.com/0therPlanet/status/909788913702785026">Luboš Volkov⚡️ 的 Twitter: “I was working on this idea of blending app design with the #iPhoneX notch. 📲🤗&quot;</a>）</p>
+</li>
+<li>
+<p>有人假设设置里可以控制刘海的「开与关」🙃：</p>
+<p><img src="media/15086036845015/ear.gif" alt="ea" /><br />
+（图片来源：<a href="https://dribbble.com/shots/3807679-Earsbar">Earsbar by Grisha Uglanov - Dribbble</a>）</p>
+</li>
+<li>
+<p>据说 iPhone X 发布后，天猫成为了最大赢家😅：</p>
+<p><img src="media/15086036845015/4667830F-8599-443B-AF55-A0D97F3F62A4.png" alt="4667830F-8599-443B-AF55-A0D97F3F62A4" /><br />
+（图片来源：<a href="https://twitter.com/LON1ST/status/908221915453464576">朗仙森 的 Twitter: “天猫应该这样适配一下iPhone X！&quot;</a>）</p>
+</li>
+<li>
+<p>甚至有人做出了一个快速适配方法，直接将你的 app 放置在 iPhone X 屏幕中间算完😶：</p>
+<p><img src="media/15086036845015/6fe2f976ly4fjntfpkfa3j20kk0ddq3n.jpg" alt="6fe2f976ly4fjntfpkfa3j20kk0ddq3n" /><br />
+（暂时没找到原始来源）</p>
+</li>
 </ul>
-
 <p>上面这些方法真的好吗？关于 iPhone X 的适配到底应该怎么做？这篇文章的目的就是结合 Apple 提供的一些官方资料加上网上大家对 iPhone X 的一些探索，系统地梳理下 iPhone X 在 UI 上的变化和应对方法。</p>
-
-<h2 id="toc_2">屏幕尺寸</h2>
-
+<h2><a id="%E5%B1%8F%E5%B9%95%E5%B0%BA%E5%AF%B8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>屏幕尺寸</h2>
 <ul>
-<li><p>在纵向时，iPhone X 的宽度同 4.7 寸的 iPhone 6、iPhone 7、iPhone 8（也包括放大模式下的 iPhone Plus）一样，故在宽度上，这几个设备显示的内容应该是一样的；而 iPhone X 的高度上比 4.7 寸屏幕高了 145pt，这使得 iPhone X 增加了 20% 的垂直空间来显示内容。</p>
-<p><img src="media/15086036845015/22FEEDE4-DAF5-48D3-86D9-EA6AB6CC3CC5.png" alt="22FEEDE4-DAF5-48D3-86D9-EA6AB6CC3C"/></p>
+<li>
+<p>在纵向时，iPhone X 的宽度同 4.7 寸的 iPhone 6、iPhone 7、iPhone 8（也包括放大模式下的 iPhone Plus）一样，故在宽度上，这几个设备显示的内容应该是一样的；而 iPhone X 的高度上比 4.7 寸屏幕高了 145pt，这使得 iPhone X 增加了 20% 的垂直空间来显示内容。</p>
+<p><img src="media/15086036845015/22FEEDE4-DAF5-48D3-86D9-EA6AB6CC3CC5.png" alt="22FEEDE4-DAF5-48D3-86D9-EA6AB6CC3C" /></p>
 <ul>
-<li>iPhone 6, 6s, 7, 8（4.7 寸屏幕，9:16，326ppi）：375pt × 667 pt @2x → 750px × 1334px；</li>
-<li>iPhone 6 Plus, 6s Plus, 7 Plus, 8 Plus（5.5 寸屏幕，9:16，401ppi）：414pt × 736 pt @3x → 1242px × 2208px （设备显示时的物理像素为 1080px × 1920px）；</li>
-<li>iPhone Plus 的放大显示模式：375pt × 667 pt @3x → 1125px × 2001px（设备显示时的物理像素为 1080px × 1920px）；</li>
-<li><p>iPhone X（5.8 寸屏幕，约 9:19.5，458ppi）：375pt × 812 pt @3x → 1125px × 2436px；</p>
-<p><img src="media/15086036845015/66E1E0C6-B327-445E-9734-F9C148B06ADC.png" alt="66E1E0C6-B327-445E-9734-F9C148B06AD"/><br/>
-（图片来源：<a href="https://www.paintcodeapp.com/news/iphone-x-screen-demystified">iPhone X Screen Demystified</a>）</p></li>
-</ul></li>
-<li><p>iPhone X 外壳的一些参考尺寸标注：</p>
-<p><img src="media/15086036845015/1BF24051-EEA8-4266-8C6B-400D2B16798A.png" alt="1BF24051-EEA8-4266-8C6B-400D2B16798A"/><br/>
-（图片来源：<a href="https://www.paintcodeapp.com/news/iphone-x-screen-demystified">iPhone X Screen Demystified</a>）</p></li>
-<li><p>iPhone 6, 7, 8, X 横屏时在 Size Class 中都属于 Compact Width，这意味着在这些设备上的横屏布局应该是一致的。</p>
-<p><img src="media/15086036845015/E50C571F-85B9-4990-A124-C36D97C7BCB1.png" alt="E50C571F-85B9-4990-A124-C36D97C7BCB1"/></p>
+<li>
+<p>iPhone 6, 6s, 7, 8（4.7 寸屏幕，9:16，326ppi）：375pt × 667 pt @2x → 750px × 1334px；</p>
+</li>
+<li>
+<p>iPhone 6 Plus, 6s Plus, 7 Plus, 8 Plus（5.5 寸屏幕，9:16，401ppi）：414pt × 736 pt @3x → 1242px × 2208px （设备显示时的物理像素为 1080px × 1920px）；</p>
+</li>
+<li>
+<p>iPhone Plus 的放大显示模式：375pt × 667 pt @3x → 1125px × 2001px（设备显示时的物理像素为 1080px × 1920px）；</p>
+</li>
+<li>
+<p>iPhone X（5.8 寸屏幕，约 9:19.5，458ppi）：375pt × 812 pt @3x → 1125px × 2436px；</p>
+<p><img src="media/15086036845015/66E1E0C6-B327-445E-9734-F9C148B06ADC.png" alt="66E1E0C6-B327-445E-9734-F9C148B06AD" /><br />
+（图片来源：<a href="https://www.paintcodeapp.com/news/iphone-x-screen-demystified">iPhone X Screen Demystified</a>）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>iPhone X 外壳的一些参考尺寸标注：</p>
+<p><img src="media/15086036845015/1BF24051-EEA8-4266-8C6B-400D2B16798A.png" alt="1BF24051-EEA8-4266-8C6B-400D2B16798A" /><br />
+（图片来源：<a href="https://www.paintcodeapp.com/news/iphone-x-screen-demystified">iPhone X Screen Demystified</a>）</p>
+</li>
+<li>
+<p>iPhone 6, 7, 8, X 横屏时在 Size Class 中都属于 Compact Width，这意味着在这些设备上的横屏布局应该是一致的。</p>
+<p><img src="media/15086036845015/E50C571F-85B9-4990-A124-C36D97C7BCB1.png" alt="E50C571F-85B9-4990-A124-C36D97C7BCB1" /></p>
 <ul>
 <li><a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/adaptivity-and-layout/#size-classes">进一步了解 Size Class</a></li>
 <li><a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">有关 iPhone 各个设备分辨率的参考说明</a></li>
 </ul>
-<p><img src="media/15086036845015/Design-iPhone.jpg" alt="Design-iPhone"/><br/>
-（图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>）</p></li>
-<li><p>需要为 iPhone X 提供 @3x 的高分辨率的图片素材，对于一些单色的图形（Apple 称之为 Glyph，如用于 tab bar、tool bar 上的 icon）推荐使用不依赖分辨率的 pdf 格式。</p>
-<p><img src="media/15086036845015/2F836253-AF4A-44A8-882D-A7122378238A.png" alt="2F836253-AF4A-44A8-882D-A7122378238A"/></p></li>
+<p><img src="media/15086036845015/Design-iPhone.jpg" alt="Design-iPhone" /><br />
+（图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>）</p>
+</li>
+<li>
+<p>需要为 iPhone X 提供 @3x 的高分辨率的图片素材，对于一些单色的图形（Apple 称之为 Glyph，如用于 tab bar、tool bar 上的 icon）推荐使用不依赖分辨率的 pdf 格式。</p>
+<p><img src="media/15086036845015/2F836253-AF4A-44A8-882D-A7122378238A.png" alt="2F836253-AF4A-44A8-882D-A7122378238A" /></p>
+</li>
 </ul>
-
-<h2 id="toc_3">Safe Area</h2>
-
+<h2><a id="safe-area" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Safe Area</h2>
 <ul>
-<li>从 iOS 11 开始，Auto Layout 中增加了一个新的布局指南：Safe Area Layout Guide，废弃了在 iOS 11 之前的 Top Layout Guide 和 Bottom Layout Guide。</li>
-<li><p>在 iPhone 8 中，Safe Area 的区域即除去各种 bar 之后的区域，如果没有任何 bar，Safe Area 就是整个屏幕。iPhone 8  竖屏下的 Safe Area 大小：375pt × 667pt。</p>
-<p><img src="media/15086036845015/B7550342-1D3C-4228-A6DF-3D903EFF7EEE.png" alt="B7550342-1D3C-4228-A6DF-3D903EFF7EEE"/></p></li>
-<li><p>在 iPhone X 中，竖屏下的 Safe Area 顶部距屏幕顶端 44pt，底部距屏幕底端 34 pt，左右两边与屏幕左右两端对齐。这样竖屏下的 Safe Area 大小：375pt × 734pt，相比 iPhone 8 增加了 67pt。横屏下的 Safe Area 左右两边距屏幕左右两端均为 44pt（对称），底部距屏幕底端 21pt，顶部与屏幕顶端对齐。Safe Area 避免了内容与屏幕的圆角、Sensor Housing、Home Indicator 发生重叠或裁切。</p>
-<p><img src="media/15086036845015/3746252E-F817-4BF9-A02C-7A7270ACA7B3.png" alt="3746252E-F817-4BF9-A02C-7A7270ACA7B3"/></p></li>
-<li><p>例如，在 iPhone X 的横向视图中，table view 将会横跨整个屏幕，而 table cell 中的 content view 是嵌入其中的，即在 Safe Area 中，以避免内容被 Sensor Housing 覆盖或被屏幕圆角裁切。</p>
-<p><img src="media/15086036845015/F2DC0E2A-B215-492C-9A76-124FCE328F15.png" alt="F2DC0E2A-B215-492C-9A76-124FCE328F15"/></p></li>
-<li><p>Table view cell 中的 content view 会被限制在 Safe Area 中，而文本内容和控件又进一步被 Layout Margin 限制，这使得在整个 app 中的内容边距能够保持一致，并且内容能够与其他控件（如 navigation bar 上的按钮）对齐。即使你的 app 中没有使用 Auto Layout，UIView 也提供了 Safe Area 嵌入和 Layout Margin 属性的值。</p>
-<p><img src="media/15086036845015/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-11%20%E4%B8%8A%E5%8D%8811.22.59.png" alt="屏幕快照 2017-10-11 上午11.22.59"/></p></li>
+<li>
+<p>从 iOS 11 开始，Auto Layout 中增加了一个新的布局指南：Safe Area Layout Guide，废弃了在 iOS 11 之前的 Top Layout Guide 和 Bottom Layout Guide。</p>
+</li>
+<li>
+<p>在 iPhone 8 中，Safe Area 的区域即除去各种 bar 之后的区域，如果没有任何 bar，Safe Area 就是整个屏幕。iPhone 8  竖屏下的 Safe Area 大小：375pt × 667pt。</p>
+<p><img src="media/15086036845015/B7550342-1D3C-4228-A6DF-3D903EFF7EEE.png" alt="B7550342-1D3C-4228-A6DF-3D903EFF7EEE" /></p>
+</li>
+<li>
+<p>在 iPhone X 中，竖屏下的 Safe Area 顶部距屏幕顶端 44pt，底部距屏幕底端 34 pt，左右两边与屏幕左右两端对齐。这样竖屏下的 Safe Area 大小：375pt × 734pt，相比 iPhone 8 增加了 67pt。横屏下的 Safe Area 左右两边距屏幕左右两端均为 44pt（对称），底部距屏幕底端 21pt，顶部与屏幕顶端对齐。Safe Area 避免了内容与屏幕的圆角、Sensor Housing、Home Indicator 发生重叠或裁切。</p>
+<p><img src="media/15086036845015/3746252E-F817-4BF9-A02C-7A7270ACA7B3.png" alt="3746252E-F817-4BF9-A02C-7A7270ACA7B3" /></p>
+</li>
+<li>
+<p>例如，在 iPhone X 的横向视图中，table view 将会横跨整个屏幕，而 table cell 中的 content view 是嵌入其中的，即在 Safe Area 中，以避免内容被 Sensor Housing 覆盖或被屏幕圆角裁切。</p>
+<p><img src="media/15086036845015/F2DC0E2A-B215-492C-9A76-124FCE328F15.png" alt="F2DC0E2A-B215-492C-9A76-124FCE328F15" /></p>
+</li>
+<li>
+<p>Table view cell 中的 content view 会被限制在 Safe Area 中，而文本内容和控件又进一步被 Layout Margin 限制，这使得在整个 app 中的内容边距能够保持一致，并且内容能够与其他控件（如 navigation bar 上的按钮）对齐。即使你的 app 中没有使用 Auto Layout，UIView 也提供了 Safe Area 嵌入和 Layout Margin 属性的值。</p>
+<p><img src="media/15086036845015/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-10-11%20%E4%B8%8A%E5%8D%8811.22.59.png" alt="屏幕快照 2017-10-11 上午11.22.59" /></p>
+</li>
 </ul>
-
-<h2 id="toc_4">布局</h2>
-
+<h2><a id="%E5%B8%83%E5%B1%80" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>布局</h2>
 <ul>
-<li><p>确保内容充满整个 iPhone X 屏幕，确保内容不要被设备的圆角、传感器模块（Sensor Housing，也即刘海）、主屏幕指示器（Home Indicator）遮盖。</p>
-<p><img src="media/15086036845015/9DBF4979-BBD6-4551-827A-40C231BA006A.png" alt="9DBF4979-BBD6-4551-827A-40C231BA006A"/></p></li>
-<li><p>例如「Carrot Weather」针对 iPhone X 的适配，让天气的背景延伸到屏幕边缘：</p>
-<p><img src="media/15086036845015/DJn4H8YWsAYgMRQ.jpg-large.jpeg" alt="DJn4H8YWsAYgMRQ.jpg-large"/><br/>
-(图片来源：<a href="https://twitter.com/carrot_app/status/908029622243209223">CARROT 的 Twitter: “If this doesn’t make you want to spend $1,000 in November, I don’t know what will.”</a>)</p></li>
-<li><p>可以使用 Xcode 中的模拟器提前预览 app 在 iPhone X 上的效果，检查被裁切或者其他布局问题。而对于一些特别的功能特征，像广色域图像，最好就是在 iPhone X 真机上进行测试。</p>
-<p><img src="media/15086036845015/AA0A093E-8874-4CA8-ADEB-873CC6929BE8.png" alt="AA0A093E-8874-4CA8-ADEB-873CC6929BE8"/></p></li>
-<li><p>提供一个全屏的使用体验：确保背景延伸到了屏幕的边界，像 tables、collections 这种竖直滚动的布局要一直延续到屏幕底部，不应被限制在 Safe Area 中。不管 table view 中的 cell 是否在 Home Indicator 的后面，轻点屏幕底部的 cell 依然可以正常操作。</p>
-<p><img src="media/15086036845015/PNG%20%E5%9B%BE%E5%83%8F-9478BC4F869E-1.png" alt="PNG 图像-9478BC4F869E-1"/></p></li>
+<li>
+<p>确保内容充满整个 iPhone X 屏幕，确保内容不要被设备的圆角、传感器模块（Sensor Housing，也即刘海）、主屏幕指示器（Home Indicator）遮盖。</p>
+<p><img src="media/15086036845015/9DBF4979-BBD6-4551-827A-40C231BA006A.png" alt="9DBF4979-BBD6-4551-827A-40C231BA006A" /></p>
+</li>
+<li>
+<p>例如「Carrot Weather」针对 iPhone X 的适配，让天气的背景延伸到屏幕边缘：</p>
+<p><img src="media/15086036845015/DJn4H8YWsAYgMRQ.jpg-large.jpeg" alt="DJn4H8YWsAYgMRQ.jpg-large" /><br />
+(图片来源：<a href="https://twitter.com/carrot_app/status/908029622243209223">CARROT 的 Twitter: “If this doesn’t make you want to spend $1,000 in November, I don’t know what will.”</a>)</p>
+</li>
+<li>
+<p>可以使用 Xcode 中的模拟器提前预览 app 在 iPhone X 上的效果，检查被裁切或者其他布局问题。而对于一些特别的功能特征，像广色域图像，最好就是在 iPhone X 真机上进行测试。</p>
+<p><img src="media/15086036845015/AA0A093E-8874-4CA8-ADEB-873CC6929BE8.png" alt="AA0A093E-8874-4CA8-ADEB-873CC6929BE8" /></p>
+</li>
+<li>
+<p>提供一个全屏的使用体验：确保背景延伸到了屏幕的边界，像 tables、collections 这种竖直滚动的布局要一直延续到屏幕底部，不应被限制在 Safe Area 中。不管 table view 中的 cell 是否在 Home Indicator 的后面，轻点屏幕底部的 cell 依然可以正常操作。</p>
+<p><img src="media/15086036845015/PNG%20%E5%9B%BE%E5%83%8F-9478BC4F869E-1.png" alt="PNG 图像-9478BC4F869E-1" /></p>
+</li>
 </ul>
-
-<h2 id="toc_5">图片</h2>
-
+<h2><a id="%E5%9B%BE%E7%89%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>图片</h2>
 <ul>
-<li><p>当复用已有的图片资源时，注意长宽比率的不同：iPhone X 有一个特殊的长宽比率，因此，在 4.7 寸屏幕上的图片资源全屏展示在 iPhone X 上时，可能会被左右裁切或者出现信箱 letterboxing 模式（即上下有黑条）。与之相反，如果一个可以全屏显示在 iPhone X 上的图片资源拿到 4.7 寸 iPhone 上去，图片就会被上下裁切或者出现邮筒 pillarboxing 模式（即左右有黑条）。最好是采用兼容性的图片，以确保在所有的屏幕尺寸中，重要的视觉内容都能被看到。</p>
-<p><img src="media/15086036845015/DAA49612-4210-4D53-84F4-8F4EE6994B7B.png" alt="DAA49612-4210-4D53-84F4-8F4EE6994B7B"/></p>
+<li>
+<p>当复用已有的图片资源时，注意长宽比率的不同：iPhone X 有一个特殊的长宽比率，因此，在 4.7 寸屏幕上的图片资源全屏展示在 iPhone X 上时，可能会被左右裁切或者出现信箱 letterboxing 模式（即上下有黑条）。与之相反，如果一个可以全屏显示在 iPhone X 上的图片资源拿到 4.7 寸 iPhone 上去，图片就会被上下裁切或者出现邮筒 pillarboxing 模式（即左右有黑条）。最好是采用兼容性的图片，以确保在所有的屏幕尺寸中，重要的视觉内容都能被看到。</p>
+<p><img src="media/15086036845015/DAA49612-4210-4D53-84F4-8F4EE6994B7B.png" alt="DAA49612-4210-4D53-84F4-8F4EE6994B7B" /></p>
 <ul>
 <li><a href="https://support.apple.com/zh-cn/HT204429">有关信箱模式（Letterboxing）、邮筒模式（Pillarboxing）、窗口模式（Windowboxing）的参考说明</a></li>
-</ul></li>
 </ul>
-
-<h2 id="toc_6">控件</h2>
-
-<ul>
-<li><p>不要对屏幕的几个新特征进行掩盖或者吸引用户特别注意：不要尝试通过在屏幕顶部或底部使用黑色的 bar 来隐藏设备的圆角、Sensor Housing、Home Indicator，这会使得你的 app 看上去很狭小拥挤，与其他在 iPhone X 上的 app 不一致。不要使用一些视觉装饰物（如括弧、边框、形状或指导性文字）使用户对这些区域特别注意。</p>
-<p><img src="media/15086036845015/9A361EFA-8FD8-4650-9DA2-5162B122094B.png" alt="9A361EFA-8FD8-4650-9DA2-5162B122094B"/></p></li>
-<li><p>避免内容被裁切：使用标准的、系统提供的交互元素，使用 Auto Layout 构建 app 的交互。App 应该遵守由 UIKit 定义的 Safe Area 和 Layout Margin，这确保内容可以根据设备和情景合适的嵌入。 Safe Area 也会阻止内容被 status bar、navigation bar、toolbar、tab bar 覆盖。</p>
-<p><img src="media/15086036845015/FC998171-5121-485F-8DAE-0E2A24444DD3.png" alt="FC998171-5121-485F-8DAE-0E2A24444DD3"/></p></li>
-<li><p>避免把一些交互控制元素恰好放置在屏幕的底部或者角落：用户在使用 iPhone X 时，会在屏幕底部使用滑动手势来访问主屏幕或者切换 app，这个手势会影响你在屏幕底部自定义的手势。屏幕的几个角落放置的内容可能会被屏幕的圆角、Sensor Housing、Home Indicator 遮挡覆盖，并且对于用户来说也是难以轻松地触碰到的。可以通过 Safe Area 和 Layout Margin 来确定合适的嵌入值。</p>
-<p><img src="media/15086036845015/896AAFBA-DAF0-4B30-9AE6-A76352A103E2.png" alt="896AAFBA-DAF0-4B30-9AE6-A76352A103E2"/></p></li>
-<li><p>大多数情况下，在横屏视图时，内容、控件能够居中对称显示是最好的。在设备旋转方式不同的情况下，如果是不对称的布局，控件会左右发生漂移，这将会造成不连贯的用户体验，潜移默化地破坏用户建立肌肉记忆的能力。</p>
-<p><img src="media/15086036845015/CF6C33B7-F5A9-4D18-AC61-2DD8CF78F702.png" alt="CF6C33B7-F5A9-4D18-AC61-2DD8CF78F702"/></p></li>
+</li>
 </ul>
-
-<h2 id="toc_7">Status Bar</h2>
-
+<h2><a id="%E6%8E%A7%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>控件</h2>
 <ul>
-<li><p>注意 status bar 的高度：在 iPhone X 中，相比其他 iPhone status bar 更高（iPhone X 的 status bar 高度为 44pt，其他设备为 20pt）。如果你的 app 假定了一个固定的 status bar 高度，以此来在 status bar 下面放置内容，你必须更新你的 app 以基于用户设备动态放置内容。</p>
-<p><img src="media/15086036845015/8F514EB8-0A7B-4B39-A16B-3DA4EA1CC0EF.png" alt="8F514EB8-0A7B-4B39-A16B-3DA4EA1CC0EF"/></p></li>
-<li><p>特别注意，在 iPhone X 中，当某些后台任务（如通话中、录音中、位置记录中）进行时、status bar 不会像其他 iPhone 一样改变高度。这为提供连贯的用户体验提供了帮助。</p>
-<p><img src="media/15086036845015/CCD66544-DE3F-4BEF-9101-7967D164A542.png" alt="CCD66544-DE3F-4BEF-9101-7967D164A542"/></p></li>
-<li><p>如果你的 app 现在是隐藏 status bar 的，你需要在 iPhone X 上重新考虑这个：iPhone X 在垂直方向上比 4.7 寸 iPhone 提供了更多空间来显示内容。Status bar 中也展示了用户觉得很有用的信息。Status bar 应该只在真正有价值的时候被隐藏。</p></li>
+<li>
+<p>不要对屏幕的几个新特征进行掩盖或者吸引用户特别注意：不要尝试通过在屏幕顶部或底部使用黑色的 bar 来隐藏设备的圆角、Sensor Housing、Home Indicator，这会使得你的 app 看上去很狭小拥挤，与其他在 iPhone X 上的 app 不一致。不要使用一些视觉装饰物（如括弧、边框、形状或指导性文字）使用户对这些区域特别注意。</p>
+<p><img src="media/15086036845015/9A361EFA-8FD8-4650-9DA2-5162B122094B.png" alt="9A361EFA-8FD8-4650-9DA2-5162B122094B" /></p>
+</li>
+<li>
+<p>避免内容被裁切：使用标准的、系统提供的交互元素，使用 Auto Layout 构建 app 的交互。App 应该遵守由 UIKit 定义的 Safe Area 和 Layout Margin，这确保内容可以根据设备和情景合适的嵌入。 Safe Area 也会阻止内容被 status bar、navigation bar、toolbar、tab bar 覆盖。</p>
+<p><img src="media/15086036845015/FC998171-5121-485F-8DAE-0E2A24444DD3.png" alt="FC998171-5121-485F-8DAE-0E2A24444DD3" /></p>
+</li>
+<li>
+<p>避免把一些交互控制元素恰好放置在屏幕的底部或者角落：用户在使用 iPhone X 时，会在屏幕底部使用滑动手势来访问主屏幕或者切换 app，这个手势会影响你在屏幕底部自定义的手势。屏幕的几个角落放置的内容可能会被屏幕的圆角、Sensor Housing、Home Indicator 遮挡覆盖，并且对于用户来说也是难以轻松地触碰到的。可以通过 Safe Area 和 Layout Margin 来确定合适的嵌入值。</p>
+<p><img src="media/15086036845015/896AAFBA-DAF0-4B30-9AE6-A76352A103E2.png" alt="896AAFBA-DAF0-4B30-9AE6-A76352A103E2" /></p>
+</li>
+<li>
+<p>大多数情况下，在横屏视图时，内容、控件能够居中对称显示是最好的。在设备旋转方式不同的情况下，如果是不对称的布局，控件会左右发生漂移，这将会造成不连贯的用户体验，潜移默化地破坏用户建立肌肉记忆的能力。</p>
+<p><img src="media/15086036845015/CF6C33B7-F5A9-4D18-AC61-2DD8CF78F702.png" alt="CF6C33B7-F5A9-4D18-AC61-2DD8CF78F702" /></p>
+</li>
 </ul>
-
-<h2 id="toc_8">Home Indicator</h2>
-
+<h2><a id="status-bar" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Status Bar</h2>
 <ul>
-<li><p>Home Indicator（134pt × 5pt）可以提示用户从屏幕底部向上轻扫可以访问主屏幕或者切换 app，这是 iOS 设备的一个核心交互，因此 Home Indicator 应该总是被清晰可见的。iOS 会根据当前的背景颜色，动态地调整 Home Indicator 显示为白色或黑色，以保证与背景有足够的对比度。确保不要把一些交互元素放的离 Home Indicator 很近。</p>
-<p><img src="media/15086036845015/5CA9DA5A-25B7-4FFC-AA3D-167A0F767940.png" alt="5CA9DA5A-25B7-4FFC-AA3D-167A0F767940"/></p></li>
-<li><p>谨慎地允许 Home Indicator 可以自动隐藏：当自动隐藏功能被打开时，如果用户在几秒钟没有触碰屏幕，Home Indicator 就会自动隐藏，用户再次触碰屏幕时，Home Indicator 就会再次出现。这个行为只应该在像播放视频、图片幻灯片时被启用。</p></li>
-<li><p>避免与系统全局的屏幕边缘手势冲突：在各个 app 中，人们依赖于这些手势。只在很少的一些情况下，一些沉浸式的 app 如游戏类 app 可能需要一些比系统手势优先级更高的自定义的屏幕边缘手势，第一次滑动响应 app 指定的手势（同时正常的 Home Indicator 会被拉起并进入可用状态），第二次滑动才响应系统的手势。这个行为被称为 edge protection，一旦开启，Home Indicator 将会有一个更加细致的外观，对于用户来说就很难访问系统级别的动作，导致不连贯的用户体验，所以它只应该在确实需要的情况下被启用。</p>
-<p><img src="media/15086036845015/3F9A6BCC-0971-4E35-BCBF-56CF287E902A.png" alt="3F9A6BCC-0971-4E35-BCBF-56CF287E902A"/></p></li>
+<li>
+<p>注意 status bar 的高度：在 iPhone X 中，相比其他 iPhone status bar 更高（iPhone X 的 status bar 高度为 44pt，其他设备为 20pt）。如果你的 app 假定了一个固定的 status bar 高度，以此来在 status bar 下面放置内容，你必须更新你的 app 以基于用户设备动态放置内容。</p>
+<p><img src="media/15086036845015/8F514EB8-0A7B-4B39-A16B-3DA4EA1CC0EF.png" alt="8F514EB8-0A7B-4B39-A16B-3DA4EA1CC0EF" /></p>
+</li>
+<li>
+<p>特别注意，在 iPhone X 中，当某些后台任务（如通话中、录音中、位置记录中）进行时、status bar 不会像其他 iPhone 一样改变高度。这为提供连贯的用户体验提供了帮助。</p>
+<p><img src="media/15086036845015/CCD66544-DE3F-4BEF-9101-7967D164A542.png" alt="CCD66544-DE3F-4BEF-9101-7967D164A542" /></p>
+</li>
+<li>
+<p>如果你的 app 现在是隐藏 status bar 的，你需要在 iPhone X 上重新考虑这个：iPhone X 在垂直方向上比 4.7 寸 iPhone 提供了更多空间来显示内容。Status bar 中也展示了用户觉得很有用的信息。Status bar 应该只在真正有价值的时候被隐藏。</p>
+</li>
 </ul>
-
-<h2 id="toc_9">颜色</h2>
-
+<h2><a id="home-indicator" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Home Indicator</h2>
 <ul>
-<li><p>iPhone X 的屏幕支持 Display P3 色域，相比 sRGB 可以显示更加多样、沉浸的颜色。</p>
-<p><img src="media/15086036845015/D7C6D362-EA41-4140-846E-7B180517FF56.png" alt="D7C6D362-EA41-4140-846E-7B180517FF56"/></p></li>
-<li><p>使用广色域来增强视觉体验：使用了广色域的图片和视频会看上去更加生动，视觉数据和状态指示器会更加有冲击力。</p></li>
+<li>
+<p>Home Indicator（134pt × 5pt）可以提示用户从屏幕底部向上轻扫可以访问主屏幕或者切换 app，这是 iOS 设备的一个核心交互，因此 Home Indicator 应该总是被清晰可见的。iOS 会根据当前的背景颜色，动态地调整 Home Indicator 显示为白色或黑色，以保证与背景有足够的对比度。确保不要把一些交互元素放的离 Home Indicator 很近。</p>
+<p><img src="media/15086036845015/5CA9DA5A-25B7-4FFC-AA3D-167A0F767940.png" alt="5CA9DA5A-25B7-4FFC-AA3D-167A0F767940" /></p>
+</li>
+<li>
+<p>谨慎地允许 Home Indicator 可以自动隐藏：当自动隐藏功能被打开时，如果用户在几秒钟没有触碰屏幕，Home Indicator 就会自动隐藏，用户再次触碰屏幕时，Home Indicator 就会再次出现。这个行为只应该在像播放视频、图片幻灯片时被启用。</p>
+</li>
+<li>
+<p>避免与系统全局的屏幕边缘手势冲突：在各个 app 中，人们依赖于这些手势。只在很少的一些情况下，一些沉浸式的 app 如游戏类 app 可能需要一些比系统手势优先级更高的自定义的屏幕边缘手势，第一次滑动响应 app 指定的手势（同时正常的 Home Indicator 会被拉起并进入可用状态），第二次滑动才响应系统的手势。这个行为被称为 edge protection，一旦开启，Home Indicator 将会有一个更加细致的外观，对于用户来说就很难访问系统级别的动作，导致不连贯的用户体验，所以它只应该在确实需要的情况下被启用。</p>
+<p><img src="media/15086036845015/3F9A6BCC-0971-4E35-BCBF-56CF287E902A.png" alt="3F9A6BCC-0971-4E35-BCBF-56CF287E902A" /></p>
+</li>
 </ul>
-
-<h2 id="toc_10">视频</h2>
-
+<h2><a id="%E9%A2%9C%E8%89%B2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>颜色</h2>
 <ul>
-<li><p>系统提供的视频播放器提供了两种视频播放模式：全屏播放模式 full-screen (aspect fill) 和适应屏幕播放模式 fit-to-screen (aspect)。默认情况下，系统会基于视频的纵横比选择一种视频播放模式，在播放过程中，用户可以在这两种模式之间自由切换。</p>
-<ul>
-<li><p>全屏播放模式 Full-screen (aspect-fill) viewing mode：视频会按照视频比例进行放大以铺满整个屏幕。一些边缘切割会出现。对于宽幅视频（纵横比在 2：1 到 2.40：1 之间），全屏播放模式是系统的默认选择。</p>
-<p><img src="media/15086036845015/15105074890096.jpg" alt=""/></p>
-<p><img src="media/15086036845015/15105075047735.jpg" alt=""/></p></li>
-<li><p>适应屏幕播放模式 Fit-to-screen (aspect) viewing mode：屏幕里可以完全显示完整的视频。信箱模式或邮筒模式会出现。对于标准的视频（纵横比 4：3、16：9、低于 2：1的）和超宽幅视频（纵横比大于 2.40：1），适应屏幕模式是系统的默认选择。</p>
-<p><img src="media/15086036845015/15105075243173.jpg" alt=""/></p>
-<p><img src="media/15086036845015/15105075301705.jpg" alt=""/></p></li>
-</ul></li>
-<li><p>确保自定义的视频播放器的表现符合预期：在 iPhone X 中，默认铺满屏幕的全屏播放模式的视频，如果铺满全屏导致太多的内容被裁切，那视频就应该调整显示尺寸以适应屏幕的模式播放。你也应该允许用户基于他们的个人偏好在两种播放模式间自由切换。</p></li>
-<li><p>视频播放时总是保证其原始纵横比：如果你的视频内容为了服从某个特定的纵横比，自行插入了一个信箱或邮筒边距，iOS 将不能够基于用户对视频播放模式的选择正确的调整视频显示尺寸。在视频框架中插入的边距会造成视频在全屏播放模式下和适应屏幕播放模式下变得更小。它也使得视频不能被正确地以边到边的方式显示，也会影响非全屏情景（如 iPad 上的画中画模式）下的视频显示。</p>
-<p><img src="media/15086036845015/15105075474870.jpg" alt=""/></p>
-<p><img src="media/15086036845015/15105075538340.jpg" alt=""/></p></li>
+<li>
+<p>iPhone X 的屏幕支持 Display P3 色域，相比 sRGB 可以显示更加多样、沉浸的颜色。</p>
+<p><img src="media/15086036845015/D7C6D362-EA41-4140-846E-7B180517FF56.png" alt="D7C6D362-EA41-4140-846E-7B180517FF56" /></p>
+</li>
+<li>
+<p>使用广色域来增强视觉体验：使用了广色域的图片和视频会看上去更加生动，视觉数据和状态指示器会更加有冲击力。</p>
+</li>
 </ul>
-
-<h2 id="toc_11">手势</h2>
-
+<h2><a id="%E8%A7%86%E9%A2%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>视频</h2>
 <ul>
-<li>在 iPhone X 中使用屏幕边缘来触发访问主屏幕、app 切换、打开通知中心、打开控制中心的动作。</li>
-<li><p>Home Indicator 相关手势：</p>
+<li>
+<p>系统提供的视频播放器提供了两种视频播放模式：全屏播放模式 full-screen (aspect fill) 和适应屏幕播放模式 fit-to-screen (aspect)。默认情况下，系统会基于视频的纵横比选择一种视频播放模式，在播放过程中，用户可以在这两种模式之间自由切换。</p>
 <ul>
-<li><p>访问主屏幕：向上轻扫 Home Indicator</p>
-<p><img src="media/15086036845015/large.mp4.gif" alt="large.mp4"/></p></li>
-<li><p>访问多任务处理：向上轻扫 Home Indicator 并停顿一下</p>
-<p><img src="media/15086036845015/large-3.mp4.gif" alt="large-3.mp4"/></p></li>
-<li><p>切换到上一个使用的 app：向上轻扫 Home Indicator 并顺势向右滑动</p>
-<p><img src="media/15086036845015/%E5%88%87%E6%8D%A2%E5%88%B0%E4%B8%8A%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8.gif" alt="切换到上一个应用"/><br/>
-(图片来源：iMore)</p></li>
-<li><p>左右快速切换 app：左右轻扫 Home Indicator</p>
-<p><img src="media/15086036845015/%E5%B7%A6%E5%8F%B3%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E5%BA%94%E7%94%A8.gif" alt="左右快速切换应用"/></p></li>
-<li><p>便捷访问 Reachability：也即在 iPhone 8 上通过轻点两下 Home 键界面下移悬停的功能。在 iPhone X 使用此功能，需要到「设置」-「通用」-「辅助功能」中打开「便捷访问」开关，使用时，向下轻扫 Home Indicator 即可。</p></li>
-</ul></li>
-<li><p>刘海相关手势：</p>
-<ul>
-<li><p>访问通知中心：从「刘海」处或左侧向下轻扫</p>
-<p><img src="media/15086036845015/%E9%80%9A%E7%9F%A5%E4%B8%AD%E5%BF%83.gif" alt="通知中心"/><br/>
-(图片来源：The Verge)</p></li>
-<li><p>访问控制中心：从「刘海」右侧向下轻扫</p>
-<p><img src="media/15086036845015/large-4.mp4.gif" alt="large-4.mp4"/></p></li>
-</ul></li>
+<li>
+<p>全屏播放模式 Full-screen (aspect-fill) viewing mode：视频会按照视频比例进行放大以铺满整个屏幕。一些边缘切割会出现。对于宽幅视频（纵横比在 2：1 到 2.40：1 之间），全屏播放模式是系统的默认选择。</p>
+<p><img src="media/15086036845015/15105074890096.jpg" alt="" /></p>
+<p><img src="media/15086036845015/15105075047735.jpg" alt="" /></p>
+</li>
+<li>
+<p>适应屏幕播放模式 Fit-to-screen (aspect) viewing mode：屏幕里可以完全显示完整的视频。信箱模式或邮筒模式会出现。对于标准的视频（纵横比 4：3、16：9、低于 2：1的）和超宽幅视频（纵横比大于 2.40：1），适应屏幕模式是系统的默认选择。</p>
+<p><img src="media/15086036845015/15105075243173.jpg" alt="" /></p>
+<p><img src="media/15086036845015/15105075301705.jpg" alt="" /></p>
+</li>
 </ul>
-
-<h2 id="toc_12">按键</h2>
-
-<ul>
-<li><p>由于 iPhone X 取消了实体 Home 键，引入了 Home Indicator，原来的电源键现在称之为「侧边按钮」，这使得原有的一些功能的操作方法发生了变化。</p>
-<ul>
-<li><p>使用 Siri：按住侧边按钮。</p>
-<p><img src="media/15086036845015/large-5.mp4.gif" alt="large-5.mp4"/></p></li>
-<li><p>使用 Apple Pay：连按两下侧边按钮。</p>
-<p><img src="media/15086036845015/large-6.mp4.gif" alt="large-6.mp4"/></p></li>
-<li><p>截屏：按住侧边按钮加音量增按钮。</p></li>
-<li><p>进入 SOS 紧急联络：按住侧边按钮和任一音量按键、快速点按侧边按钮五次（需在设置中开启），SOS 紧急联络中包括「滑动来关机」、「医疗急救卡」、「SOS 紧急联络」三个功能。</p></li>
-<li><p>关机：先进入「SOS 紧急联络」再滑动来关机、设置-通用-关机</p></li>
-<li><p>强制重启：按下再快速松开调高音量按钮，然后按下再快速松开调低音量按钮，最后，按住侧边按钮 10 秒。</p></li>
-<li><p>进入恢复模式：将设备连接到电脑，打开 iTunes，按下再快速松开调高音量按钮然后按下再快速松开调低音量按钮，最后按住侧边按钮，直到看到恢复模式屏幕（连接 iTunes 的图示）。</p></li>
-</ul></li>
+</li>
+<li>
+<p>确保自定义的视频播放器的表现符合预期：在 iPhone X 中，默认铺满屏幕的全屏播放模式的视频，如果铺满全屏导致太多的内容被裁切，那视频就应该调整显示尺寸以适应屏幕的模式播放。你也应该允许用户基于他们的个人偏好在两种播放模式间自由切换。</p>
+</li>
+<li>
+<p>视频播放时总是保证其原始纵横比：如果你的视频内容为了服从某个特定的纵横比，自行插入了一个信箱或邮筒边距，iOS 将不能够基于用户对视频播放模式的选择正确的调整视频显示尺寸。在视频框架中插入的边距会造成视频在全屏播放模式下和适应屏幕播放模式下变得更小。它也使得视频不能被正确地以边到边的方式显示，也会影响非全屏情景（如 iPad 上的画中画模式）下的视频显示。</p>
+<p><img src="media/15086036845015/15105075474870.jpg" alt="" /></p>
+<p><img src="media/15086036845015/15105075538340.jpg" alt="" /></p>
+</li>
 </ul>
-
-<h2 id="toc_13">Face ID</h2>
-
+<h2><a id="%E6%89%8B%E5%8A%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>手势</h2>
 <ul>
-<li><p>在 iPhone X 中，Face ID 替代了 Touch ID，这使得某些操作和体验有了变化：</p>
+<li>
+<p>在 iPhone X 中使用屏幕边缘来触发访问主屏幕、app 切换、打开通知中心、打开控制中心的动作。</p>
+</li>
+<li>
+<p>Home Indicator 相关手势：</p>
 <ul>
-<li><p>指纹的识别变成了面容的识别：</p>
-<p><img src="media/15086036845015/large%20-2-.mp4.gif" alt="large -2-.mp4"/></p></li>
-<li><p>拿起手机唤醒屏幕，Face ID 完成面容识别，同时从屏幕底部向上轻扫进入系统：</p>
-<p><img src="media/15086036845015/large%20-1-.mp4.gif" alt="large -1-.mp4"/></p></li>
-<li><p>拿起手机唤醒屏幕，同时 Face ID 完成识别，系统显示通知的具体内容（需要配合 iOS 11 中「设置」-「通知」-「信息」-「显示预览」选项-「解锁时」）：</p>
-<p><img src="media/15086036845015/large.mp4%201.gif" alt="large.mp4 1"/></p></li>
-<li><p>识别 Face ID 后，使用 Apple Pay 付款：</p>
-<p><img src="media/15086036845015/00FE1B9D-0D34-4B46-AD64-85CFF0792880.png" alt="00FE1B9D-0D34-4B46-AD64-85CFF0792880"/></p></li>
-</ul></li>
-<li><p>准确的定义授权方法：iPhone X 只支持 Face ID 授权，如果你的 app 使用了 Apple Pay 或者其他系统授权功能，不要在 iPhone X 上提及 Touch ID。与此相反，在只支持 Touch ID 的设备上不要提及 Face ID。</p></li>
+<li>
+<p>访问主屏幕：向上轻扫 Home Indicator</p>
+<p><img src="media/15086036845015/large.mp4.gif" alt="large.mp4" /></p>
+</li>
+<li>
+<p>访问多任务处理：向上轻扫 Home Indicator 并停顿一下</p>
+<p><img src="media/15086036845015/large-3.mp4.gif" alt="large-3.mp4" /></p>
+</li>
+<li>
+<p>切换到上一个使用的 app：向上轻扫 Home Indicator 并顺势向右滑动</p>
+<p><img src="media/15086036845015/%E5%88%87%E6%8D%A2%E5%88%B0%E4%B8%8A%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8.gif" alt="切换到上一个应用" /><br />
+(图片来源：iMore)</p>
+</li>
+<li>
+<p>左右快速切换 app：左右轻扫 Home Indicator</p>
+<p><img src="media/15086036845015/%E5%B7%A6%E5%8F%B3%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E5%BA%94%E7%94%A8.gif" alt="左右快速切换应用" /></p>
+</li>
+<li>
+<p>便捷访问 Reachability：也即在 iPhone 8 上通过轻点两下 Home 键界面下移悬停的功能。在 iPhone X 使用此功能，需要到「设置」-「通用」-「辅助功能」中打开「便捷访问」开关，使用时，向下轻扫 Home Indicator 即可。</p>
+</li>
 </ul>
-
+</li>
+<li>
+<p>刘海相关手势：</p>
+<ul>
+<li>
+<p>访问通知中心：从「刘海」处或左侧向下轻扫</p>
+<p><img src="media/15086036845015/%E9%80%9A%E7%9F%A5%E4%B8%AD%E5%BF%83.gif" alt="通知中心" /><br />
+(图片来源：The Verge)</p>
+</li>
+<li>
+<p>访问控制中心：从「刘海」右侧向下轻扫</p>
+<p><img src="media/15086036845015/large-4.mp4.gif" alt="large-4.mp4" /></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2><a id="%E6%8C%89%E9%94%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>按键</h2>
+<ul>
+<li>由于 iPhone X 取消了实体 Home 键，引入了 Home Indicator，原来的电源键现在称之为「侧边按钮」，这使得原有的一些功能的操作方法发生了变化。
+<ul>
+<li>
+<p>使用 Siri：按住侧边按钮。</p>
+<p><img src="media/15086036845015/large-5.mp4.gif" alt="large-5.mp4" /></p>
+</li>
+<li>
+<p>使用 Apple Pay：连按两下侧边按钮。</p>
+<p><img src="media/15086036845015/large-6.mp4.gif" alt="large-6.mp4" /></p>
+</li>
+<li>
+<p>截屏：按住侧边按钮加音量增按钮。</p>
+</li>
+<li>
+<p>进入 SOS 紧急联络：按住侧边按钮和任一音量按键、快速点按侧边按钮五次（需在设置中开启），SOS 紧急联络中包括「滑动来关机」、「医疗急救卡」、「SOS 紧急联络」三个功能。</p>
+</li>
+<li>
+<p>关机：先进入「SOS 紧急联络」再滑动来关机、设置-通用-关机</p>
+</li>
+<li>
+<p>强制重启：按下再快速松开调高音量按钮，然后按下再快速松开调低音量按钮，最后，按住侧边按钮 10 秒。</p>
+</li>
+<li>
+<p>进入恢复模式：将设备连接到电脑，打开 iTunes，按下再快速松开调高音量按钮然后按下再快速松开调低音量按钮，最后按住侧边按钮，直到看到恢复模式屏幕（连接 iTunes 的图示）。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2><a id="face-id" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Face ID</h2>
+<ul>
+<li>
+<p>在 iPhone X 中，Face ID 替代了 Touch ID，这使得某些操作和体验有了变化：</p>
+<ul>
+<li>
+<p>指纹的识别变成了面容的识别：</p>
+<p><img src="media/15086036845015/large%20-2-.mp4.gif" alt="large -2-.mp4" /></p>
+</li>
+<li>
+<p>拿起手机唤醒屏幕，Face ID 完成面容识别，同时从屏幕底部向上轻扫进入系统：</p>
+<p><img src="media/15086036845015/large%20-1-.mp4.gif" alt="large -1-.mp4" /></p>
+</li>
+<li>
+<p>拿起手机唤醒屏幕，同时 Face ID 完成识别，系统显示通知的具体内容（需要配合 iOS 11 中「设置」-「通知」-「信息」-「显示预览」选项-「解锁时」）：</p>
+<p><img src="media/15086036845015/large.mp4%201.gif" alt="large.mp4 1" /></p>
+</li>
+<li>
+<p>识别 Face ID 后，使用 Apple Pay 付款：</p>
+<p><img src="media/15086036845015/00FE1B9D-0D34-4B46-AD64-85CFF0792880.png" alt="00FE1B9D-0D34-4B46-AD64-85CFF0792880" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>准确的定义授权方法：iPhone X 只支持 Face ID 授权，如果你的 app 使用了 Apple Pay 或者其他系统授权功能，不要在 iPhone X 上提及 Touch ID。与此相反，在只支持 Touch ID 的设备上不要提及 Face ID。</p>
+</li>
+</ul>
 <blockquote>
 <p>Apple 关于 iPhone X 的基本使用的指导视频：</p>
-
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/cJZoTqtwGzY?rel=0" frameborder="0" allowfullscreen></iframe>
 </blockquote>
-
-<h2 id="toc_14">键盘</h2>
-
+<h2><a id="%E9%94%AE%E7%9B%98" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>键盘</h2>
 <ul>
-<li><p>不要重复系统提供的键盘功能：在 iPhone X 上，Emoji 和 Globe 按钮以及 Dictation 按钮会在键盘的下方自动出现，即使用户使用的是自定义键盘。你的 app 不能影响这些按钮，也要避免在你的 app 的键盘中重复这些而造成困惑。</p>
-<p><img src="media/15086036845015/IMG_0242.png" alt="IMG_0242"/></p></li>
-<li><p>在 iPhone X 中，全字母键盘的高度由 216pt 增加到了 291pt，在设计文字输入区域时要注意。</p>
-<p><img src="media/15086036845015/BDE24521-5587-48B2-B827-562A0FF00DBE.png" alt="BDE24521-5587-48B2-B827-562A0FF00DBE"/><br/>
-(图片来源：<a href="https://medium.com/uxabc/iphone-x-ui-design-specs-696fd4f262b6">UI 設計師需要知道的 iPhone X 細節 – UXabc – Medium</a>)</p></li>
+<li>
+<p>不要重复系统提供的键盘功能：在 iPhone X 上，Emoji 和 Globe 按钮以及 Dictation 按钮会在键盘的下方自动出现，即使用户使用的是自定义键盘。你的 app 不能影响这些按钮，也要避免在你的 app 的键盘中重复这些而造成困惑。</p>
+<p><img src="media/15086036845015/IMG_0242.png" alt="IMG_0242" /></p>
+</li>
+<li>
+<p>在 iPhone X 中，全字母键盘的高度由 216pt 增加到了 291pt，在设计文字输入区域时要注意。</p>
+<p><img src="media/15086036845015/BDE24521-5587-48B2-B827-562A0FF00DBE.png" alt="BDE24521-5587-48B2-B827-562A0FF00DBE" /><br />
+(图片来源：<a href="https://medium.com/uxabc/iphone-x-ui-design-specs-696fd4f262b6">UI 設計師需要知道的 iPhone X 細節 – UXabc – Medium</a>)</p>
+</li>
 </ul>
-
-<h2 id="toc_15">适配</h2>
-
-<h3 id="toc_16">App 的适配</h3>
-
+<h2><a id="%E9%80%82%E9%85%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>适配</h2>
+<h3><a id="app%E7%9A%84%E9%80%82%E9%85%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>App 的适配</h3>
 <ul>
-<li><p>大多数使用标准的、系统提供的 UI 元素（如 navigation bars、tables、collections）将会自动适配 iPhone X。背景将会延伸到屏幕的边界，UI 元素将会被合适的插入和放置。比如 navigation bar 的背景色会自动延伸到 status bar 中，tab bar 、tool bar 会被合适的放置在 Home Indicator 上面，其背景色也会延伸到屏幕底端。</p>
-<p><img src="media/15086036845015/93CE9E1E-6D21-48AB-A58D-8B987D9171AC.png" alt="93CE9E1E-6D21-48AB-A58D-8B987D9171A"/></p></li>
-<li><p>如果你的 app 使用了 Auto Layout，并且遵守了 Safe Area 和边界的布局规范，即使是使用了自定义布局，适配 iPhone X 也很简单。</p></li>
-<li><p>要特别注意测试横屏下的界面：大多数的适配问题可能都来自于横屏界面。</p></li>
-<li><p>对于没有适配 iPhone X 的 app 在 iPhone X 中可能不能全屏显示。在竖屏的情况下，顶部是 status bar，底部是 Home Indicator，中间部分以信箱 letterboxing 模式（即上下有黑条）显示未适配的 app，显示区域同 4.7 寸的 iPhone 8 一样大小。</p>
-<p><img src="media/15086036845015/88A6CAC6-3B18-42D8-BC19-2C02CFC3691B.png" alt="88A6CAC6-3B18-42D8-BC19-2C02CFC3691B"/><br/>
-(图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-x-screen-size-a00bd109bbb9">How iOS Apps Adapt to the iPhone X Screen Size – Geoff Hackworth – Medium</a>)</p></li>
-<li><p>在横屏的情况下，会以邮筒 pillarboxing 模式（即左右有黑条）显示未适配的 app，同时屏幕底部会为 Home Indicator 留有一定的空间，整体上比 iPhone 8 的横屏模式还稍微小一点。</p>
-<p><img src="media/15086036845015/15FB515C-9965-4A1C-9014-8F47DCDA3D4D.png" alt="15FB515C-9965-4A1C-9014-8F47DCDA3D4D"/><br/>
-（图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-x-screen-size-a00bd109bbb9">How iOS Apps Adapt to the iPhone X Screen Size – Geoff Hackworth – Medium</a>）</p></li>
-<li><p>从未适配的 app 在 iPhone X 上的显示可以很明显的看出，iPhone X 就是 4.7 寸的 iPhone 8 的拉长版，但是由于 iPhone X 使用的是 @3x 图片资源，再加上 OLED 屏幕的加成，未适配的 app 看上去的视觉效果可能更像是在一部屏幕高配版 iPhone 8 上看。</p></li>
-<li><p>从 iPhone 8 到 iPhone X 的过渡就如同当年从 iPhone 4s 到 iPhone 5 的过渡，可以预见在 iPhone X 上市初期会有众多 app 还没有来得及或还没有找到合适的解决办法适配 iPhone X，抑或正在适配的路上苦苦摸索，最先使用 iPhone X 的用户在尝鲜的同时也会有一段混合使用已适配 app 和未适配 app 的痛苦期。从 app 市场的现状来看，对于一些紧密跟随 iOS 新技术、由独立开发者/小团队开发、有一定用户规模的 app （这类 app 反而会较多使用系统标准控件，响应用户、跟进新特性也比较及时😎）会较快适配 iPhone X，而对于一些逻辑复杂、牵一发而动全身、只追求能用不追求好用的 app（这类 app 使用系统标准控件较少，经常出现一些自以为很炫酷但实际很反人类的交互，而且修改 bug、适配新特性还不积极🙄，如银行 app、12306等），我们能做的只有慢慢等了。</p>
-<p><img src="media/15086036845015/F3F09540-55D2-42BA-89A0-111F28078172.png" alt="F3F09540-55D2-42BA-89A0-111F28078172"/><br/>
-注：<a href="http://t.cn/ROe0Uti">点此查看 iDaily App 适配 iPhone X 后的效果图</a>（由于目前 iPhone X 还没正式发售，Apple 暂不允许在 AppStore 中的 app 介绍中存在有关 iPhone X 的文字、图片、视频资源，已经上架的纯属巧合，其实就是看 Apple 的心情😴）</p></li>
-<li><p>虽然前期痛苦，但是随着 iPhone X 用户数的上升，市场和 Apple 都会推着开发者去适配 iPhone X。待适配大潮逐渐稳定之后，那时候我们或许就能见到拉长版的 iPhone 8 Plus 了—— 名字该叫 iPhone X Plus 还是 iPhone XI Plus🤔？在这里大胆猜测下，拉长版的 iPhone 8 Plus 应该与 iPhone X 同一个屏幕比例，按照相对于 iPhone 8 Plus 宽不变高拉长的规律渲染分辨率应该是 1242px × 2688px，如果物理分辨率也是同样的话，再加上传闻的 6.4 寸屏幕，PPI 差不多是 463。等明年看看咯。</p>
-<p><img src="media/15086036845015/52141B2B-366D-4945-8728-34F2DF4DFC4B.png" alt="52141B2B-366D-4945-8728-34F2DF4DFC4B"/><br/>
-(图片来源：<a href="https://www.idropnews.com/rumors/iphone-x-plus/51494/">iPhone X Plus to Be Released in 2018 Reports Suggest</a>)</p></li>
-<li><p><strong>Update：</strong>10 月 27 日，Apple 发布<a href="https://developer.apple.com/news/?id=10272017a">公告</a>提醒开发者现在可以开始在 iTunes Connect 中提交适配了 iPhone X 的 app、更新 app 的元数据信息了。有关于个人使用的一些 app 适配 iPhone X 的时间记录可以<a href="15091947537272.html">查看我的另一篇文章</a>。</p></li>
+<li>
+<p>大多数使用标准的、系统提供的 UI 元素（如 navigation bars、tables、collections）将会自动适配 iPhone X。背景将会延伸到屏幕的边界，UI 元素将会被合适的插入和放置。比如 navigation bar 的背景色会自动延伸到 status bar 中，tab bar 、tool bar 会被合适的放置在 Home Indicator 上面，其背景色也会延伸到屏幕底端。</p>
+<p><img src="media/15086036845015/93CE9E1E-6D21-48AB-A58D-8B987D9171AC.png" alt="93CE9E1E-6D21-48AB-A58D-8B987D9171A" /></p>
+</li>
+<li>
+<p>如果你的 app 使用了 Auto Layout，并且遵守了 Safe Area 和边界的布局规范，即使是使用了自定义布局，适配 iPhone X 也很简单。</p>
+</li>
+<li>
+<p>要特别注意测试横屏下的界面：大多数的适配问题可能都来自于横屏界面。</p>
+</li>
+<li>
+<p>对于没有适配 iPhone X 的 app 在 iPhone X 中可能不能全屏显示。在竖屏的情况下，顶部是 status bar，底部是 Home Indicator，中间部分以信箱 letterboxing 模式（即上下有黑条）显示未适配的 app，显示区域同 4.7 寸的 iPhone 8 一样大小。</p>
+<p><img src="media/15086036845015/88A6CAC6-3B18-42D8-BC19-2C02CFC3691B.png" alt="88A6CAC6-3B18-42D8-BC19-2C02CFC3691B" /><br />
+(图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-x-screen-size-a00bd109bbb9">How iOS Apps Adapt to the iPhone X Screen Size – Geoff Hackworth – Medium</a>)</p>
+</li>
+<li>
+<p>在横屏的情况下，会以邮筒 pillarboxing 模式（即左右有黑条）显示未适配的 app，同时屏幕底部会为 Home Indicator 留有一定的空间，整体上比 iPhone 8 的横屏模式还稍微小一点。</p>
+<p><img src="media/15086036845015/15FB515C-9965-4A1C-9014-8F47DCDA3D4D.png" alt="15FB515C-9965-4A1C-9014-8F47DCDA3D4D" /><br />
+（图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-x-screen-size-a00bd109bbb9">How iOS Apps Adapt to the iPhone X Screen Size – Geoff Hackworth – Medium</a>）</p>
+</li>
+<li>
+<p>从未适配的 app 在 iPhone X 上的显示可以很明显的看出，iPhone X 就是 4.7 寸的 iPhone 8 的拉长版，但是由于 iPhone X 使用的是 @3x 图片资源，再加上 OLED 屏幕的加成，未适配的 app 看上去的视觉效果可能更像是在一部屏幕高配版 iPhone 8 上看。</p>
+</li>
+<li>
+<p>从 iPhone 8 到 iPhone X 的过渡就如同当年从 iPhone 4s 到 iPhone 5 的过渡，可以预见在 iPhone X 上市初期会有众多 app 还没有来得及或还没有找到合适的解决办法适配 iPhone X，抑或正在适配的路上苦苦摸索，最先使用 iPhone X 的用户在尝鲜的同时也会有一段混合使用已适配 app 和未适配 app 的痛苦期。从 app 市场的现状来看，对于一些紧密跟随 iOS 新技术、由独立开发者/小团队开发、有一定用户规模的 app （这类 app 反而会较多使用系统标准控件，响应用户、跟进新特性也比较及时😎）会较快适配 iPhone X，而对于一些逻辑复杂、牵一发而动全身、只追求能用不追求好用的 app（这类 app 使用系统标准控件较少，经常出现一些自以为很炫酷但实际很反人类的交互，而且修改 bug、适配新特性还不积极🙄，如银行 app、12306等），我们能做的只有慢慢等了。</p>
+<p><img src="media/15086036845015/F3F09540-55D2-42BA-89A0-111F28078172.png" alt="F3F09540-55D2-42BA-89A0-111F28078172" /><br />
+注：<a href="http://t.cn/ROe0Uti">点此查看 iDaily App 适配 iPhone X 后的效果图</a>（由于目前 iPhone X 还没正式发售，Apple 暂不允许在 AppStore 中的 app 介绍中存在有关 iPhone X 的文字、图片、视频资源，已经上架的纯属巧合，其实就是看 Apple 的心情😴）</p>
+</li>
+<li>
+<p>虽然前期痛苦，但是随着 iPhone X 用户数的上升，市场和 Apple 都会推着开发者去适配 iPhone X。待适配大潮逐渐稳定之后，那时候我们或许就能见到拉长版的 iPhone 8 Plus 了—— 名字该叫 iPhone X Plus 还是 iPhone XI Plus🤔？在这里大胆猜测下，拉长版的 iPhone 8 Plus 应该与 iPhone X 同一个屏幕比例，按照相对于 iPhone 8 Plus 宽不变高拉长的规律渲染分辨率应该是 1242px × 2688px，如果物理分辨率也是同样的话，再加上传闻的 6.4 寸屏幕，PPI 差不多是 463。等明年看看咯。</p>
+<p><img src="media/15086036845015/52141B2B-366D-4945-8728-34F2DF4DFC4B.png" alt="52141B2B-366D-4945-8728-34F2DF4DFC4B" /><br />
+(图片来源：<a href="https://www.idropnews.com/rumors/iphone-x-plus/51494/">iPhone X Plus to Be Released in 2018 Reports Suggest</a>)</p>
+</li>
+<li>
+<p>**Update：**10 月 27 日，Apple 发布<a href="https://developer.apple.com/news/?id=10272017a">公告</a>提醒开发者现在可以开始在 iTunes Connect 中提交适配了 iPhone X 的 app、更新 app 的元数据信息了。有关于个人使用的一些 app 适配 iPhone X 的时间记录可以<a href="15091947537272.html">查看我的另一篇文章</a>。</p>
+</li>
 </ul>
-
-<h3 id="toc_17">App 适配实例</h3>
-
+<h3><a id="app%E9%80%82%E9%85%8D%E5%AE%9E%E4%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>App 适配实例</h3>
 <p>以适配 WWDC app 为例，说明在适配过程中遇到的布局问题和如何修复它们。</p>
-
 <ul>
-<li><p>WWDC app 的历史已经很长，好多工程师曾经为它贡献过代码。在其中，它使用了许多标准控件和 Auto Layout，它也有很多自定义的 view，甚至更老的部分是完全手动布局的。</p>
-<p><img src="media/15086036845015/EAEA70A1-A84B-443D-BE1E-5C6607639F95.png" alt="EAEA70A1-A84B-443D-BE1E-5C6607639F95"/></p></li>
-<li><p>在 Xcode 9 中配置 WWDC app 的 Base SDK 为 iOS 11。如果你没有看到 app 在 iPhone X 的屏幕上全屏显示，请确保你配置了一个正确的 Launch Storyboard。</p>
-<p><img src="media/15086036845015/0C813B12-4846-4A44-B522-E437F6E71FF9.png" alt="0C813B12-4846-4A44-B522-E437F6E71FF9"/></p></li>
-<li><p>News tab：全屏的照片查看器中的 page control 离屏幕底部太近了，与 Home Indicator 跑到了一起。这是因为 page control 是根据其父视图（也即整个屏幕）限定的底部的布局约束，我们需要根据 Safe Area Layout Guide 对 page control 的底部做出布局上的约束。</p>
-<p><img src="media/15086036845015/1366529D-2C71-4077-9E49-6199495FBCD7.png" alt="1366529D-2C71-4077-9E49-6199495FBCD7"/></p>
+<li>
+<p>WWDC app 的历史已经很长，好多工程师曾经为它贡献过代码。在其中，它使用了许多标准控件和 Auto Layout，它也有很多自定义的 view，甚至更老的部分是完全手动布局的。</p>
+<p><img src="media/15086036845015/EAEA70A1-A84B-443D-BE1E-5C6607639F95.png" alt="EAEA70A1-A84B-443D-BE1E-5C6607639F95" /></p>
+</li>
+<li>
+<p>在 Xcode 9 中配置 WWDC app 的 Base SDK 为 iOS 11。如果你没有看到 app 在 iPhone X 的屏幕上全屏显示，请确保你配置了一个正确的 Launch Storyboard。</p>
+<p><img src="media/15086036845015/0C813B12-4846-4A44-B522-E437F6E71FF9.png" alt="0C813B12-4846-4A44-B522-E437F6E71FF9" /></p>
+</li>
+<li>
+<p>News tab：全屏的照片查看器中的 page control 离屏幕底部太近了，与 Home Indicator 跑到了一起。这是因为 page control 是根据其父视图（也即整个屏幕）限定的底部的布局约束，我们需要根据 Safe Area Layout Guide 对 page control 的底部做出布局上的约束。</p>
+<p><img src="media/15086036845015/1366529D-2C71-4077-9E49-6199495FBCD7.png" alt="1366529D-2C71-4077-9E49-6199495FBCD7" /></p>
 <ol>
-<li><p>在 xib 文件中打开 「Use Safe Area Layout Guides」（在 Xcode 9 之前创建的 xib 和 storyboard 不会自动打开此选项）。对于 iOS storyboard，打开这个选项后会自动把约束与屏幕的 top layout guide、bottom layout guide、leading edges、trailing edge 绑定，所以在开启后需要仔细检查确认 Auto Layout 的约束。</p>
-<p><img src="media/15086036845015/84AA7EE1-1284-4FFF-8084-164ECF3AAC7D.png" alt="84AA7EE1-1284-4FFF-8084-164ECF3AAC7D"/></p></li>
-<li><p>将 page control 的约束「Superview.Bottom = Page Control .Bottom」改为「Safe Area.Bottom = Page Control .Bottom」。</p>
-<p><img src="media/15086036845015/B6B768DD-E34E-49F5-8BA7-19973DCEE783.png" alt="B6B768DD-E34E-49F5-8BA7-19973DCEE783"/></p></li>
-<li><p>编译并运行，可以看到 page control 无论在竖屏还是横屏时均显示正常。</p>
-<p><img src="media/15086036845015/C9891FD0-8CB0-4D25-9639-4C78DB7E6471.png" alt="C9891FD0-8CB0-4D25-9639-4C78DB7E6471"/></p></li>
-</ol></li>
-<li><p>Videos tab：进入搜索功能，与「通讯录」app 对比后可以发现 search bar 的背景颜色不对，其尺寸也有些问题。</p>
-<p><img src="media/15086036845015/DED5E6C8-67F3-4088-931E-4D50C264C45B.png" alt="DED5E6C8-67F3-4088-931E-4D50C264C45B"/></p></li>
-<li><p>当进入横屏时，问题更加明显。search field 和取消按钮都被屏幕的圆角切割了。由此也看出 Safe Area 的重要性。</p>
-<p><img src="media/15086036845015/23A9C747-7024-4148-BA19-937E3B04D838.png" alt="23A9C747-7024-4148-BA19-937E3B04D838"/></p>
+<li>
+<p>在 xib 文件中打开 「Use Safe Area Layout Guides」（在 Xcode 9 之前创建的 xib 和 storyboard 不会自动打开此选项）。对于 iOS storyboard，打开这个选项后会自动把约束与屏幕的 top layout guide、bottom layout guide、leading edges、trailing edge 绑定，所以在开启后需要仔细检查确认 Auto Layout 的约束。</p>
+<p><img src="media/15086036845015/84AA7EE1-1284-4FFF-8084-164ECF3AAC7D.png" alt="84AA7EE1-1284-4FFF-8084-164ECF3AAC7D" /></p>
+</li>
+<li>
+<p>将 page control 的约束「Superview.Bottom = Page Control .Bottom」改为「Safe Area.Bottom = Page Control .Bottom」。</p>
+<p><img src="media/15086036845015/B6B768DD-E34E-49F5-8BA7-19973DCEE783.png" alt="B6B768DD-E34E-49F5-8BA7-19973DCEE783" /></p>
+</li>
+<li>
+<p>编译并运行，可以看到 page control 无论在竖屏还是横屏时均显示正常。</p>
+<p><img src="media/15086036845015/C9891FD0-8CB0-4D25-9639-4C78DB7E6471.png" alt="C9891FD0-8CB0-4D25-9639-4C78DB7E6471" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Videos tab：进入搜索功能，与「通讯录」app 对比后可以发现 search bar 的背景颜色不对，其尺寸也有些问题。</p>
+<p><img src="media/15086036845015/DED5E6C8-67F3-4088-931E-4D50C264C45B.png" alt="DED5E6C8-67F3-4088-931E-4D50C264C45B" /></p>
+</li>
+<li>
+<p>当进入横屏时，问题更加明显。search field 和取消按钮都被屏幕的圆角切割了。由此也看出 Safe Area 的重要性。</p>
+<p><img src="media/15086036845015/23A9C747-7024-4148-BA19-937E3B04D838.png" alt="23A9C747-7024-4148-BA19-937E3B04D838" /></p>
 <ol>
-<li><p>在 iOS 11 中，search bar 已经与 navigation bar 整合在了一起，而不再是一个单独的 UI search controller。在代码中做出如下变动：</p>
-<p><img src="media/15086036845015/2B02BC22-0424-49E6-B287-FEE92FD01995.png" alt="2B02BC22-0424-49E6-B287-FEE92FD01995"/></p></li>
-<li><p>在 navigation bar 接管 search bar 之后，剩下的工作就交给 Safe Area 就好了。编译并运行，可以看到 search bar 在竖屏与横屏下都显示正常了。</p></li>
-</ol></li>
+<li>
+<p>在 iOS 11 中，search bar 已经与 navigation bar 整合在了一起，而不再是一个单独的 UI search controller。在代码中做出如下变动：</p>
+<p><img src="media/15086036845015/2B02BC22-0424-49E6-B287-FEE92FD01995.png" alt="2B02BC22-0424-49E6-B287-FEE92FD01995" /></p>
+</li>
+<li>
+<p>在 navigation bar 接管 search bar 之后，剩下的工作就交给 Safe Area 就好了。编译并运行，可以看到 search bar 在竖屏与横屏下都显示正常了。</p>
+</li>
+</ol>
+</li>
 </ul>
-
-<p><img src="media/15086036845015/5C5D601E-4F1C-4260-8227-03DB07F2A63D.png" alt="5C5D601E-4F1C-4260-8227-03DB07F2A63D"/></p>
-
+<p><img src="media/15086036845015/5C5D601E-4F1C-4260-8227-03DB07F2A63D.png" alt="5C5D601E-4F1C-4260-8227-03DB07F2A63D" /></p>
 <ul>
-<li><p>Schedule tab：因为把 search bar 作为了 table view 的 header view，search bar 也有着与 Videos tab 同样的显示问题。只需像前面说的那样，把 search bar 交给 navigation bar 来处理就好了。在横屏时，如果仔细看会发现还有一个问题，table section 的背景颜色没有延伸到屏幕的左右边缘，这个颜色是我们设置的 header view 中的 <code>contenView</code> 的背景颜色。在除 iPhone X 以外的 iPhone 上这样配置都是没有问题的，那为什么会在 iPhone X 上出现问题呢？</p>
-<p><img src="media/15086036845015/28285582-BE4C-426C-B19C-E781B4283F6C.png" alt="28285582-BE4C-426C-B19C-E781B4283F6"/></p></li>
-<li><p>要想明白其中的原因，先来看下在 iPhone X 中 table view 的整体结构。从下图中可以看到 content view 是默认被嵌入 Safe Area 的，而 table cell 本身是从屏幕一端到另一端的，这就是问题所在。</p>
-<p><img src="media/15086036845015/EF0D06BA-EB4F-4668-8DB9-BB512CF39F7F.png" alt="EF0D06BA-EB4F-4668-8DB9-BB512CF39F7F"/></p>
+<li>
+<p>Schedule tab：因为把 search bar 作为了 table view 的 header view，search bar 也有着与 Videos tab 同样的显示问题。只需像前面说的那样，把 search bar 交给 navigation bar 来处理就好了。在横屏时，如果仔细看会发现还有一个问题，table section 的背景颜色没有延伸到屏幕的左右边缘，这个颜色是我们设置的 header view 中的 <code>contenView</code> 的背景颜色。在除 iPhone X 以外的 iPhone 上这样配置都是没有问题的，那为什么会在 iPhone X 上出现问题呢？</p>
+<p><img src="media/15086036845015/28285582-BE4C-426C-B19C-E781B4283F6C.png" alt="28285582-BE4C-426C-B19C-E781B4283F6" /></p>
+</li>
+<li>
+<p>要想明白其中的原因，先来看下在 iPhone X 中 table view 的整体结构。从下图中可以看到 content view 是默认被嵌入 Safe Area 的，而 table cell 本身是从屏幕一端到另一端的，这就是问题所在。</p>
+<p><img src="media/15086036845015/EF0D06BA-EB4F-4668-8DB9-BB512CF39F7F.png" alt="EF0D06BA-EB4F-4668-8DB9-BB512CF39F7F" /></p>
 <ol>
-<li><p>对于 content view 嵌入 Safe Area 这个行为是可以控制的，解除这个限制后 content view 就能从屏幕一端显示到屏幕另一端。有一点需要注意，不管 content view 如何布局，其 layout margin 都是默认与 Safe Area 相关的。所以解决问题的一个办法就是禁用 content view 嵌入 Safe Area 的行为，但这样一来就会影响 content view 中的其他内容，也没有办法再使用这项挺有用的默认行为。</p>
-<p><img src="media/15086036845015/FBA93213-08FE-4292-92FD-41D47FAD5368.png" alt="FBA93213-08FE-4292-92FD-41D47FAD5368"/></p></li>
-<li><p>最好的的解决办法就是设置 header 中 backgroundView 的 background color。</p>
-<p><img src="media/15086036845015/CCD83434-A36E-4363-A74E-E51944846681.png" alt="CCD83434-A36E-4363-A74E-E51944846681"/></p></li>
-<li><p>编译并运行，可以看到 table view 的 section 的背景颜色已经从屏幕的一边延伸到了另一边。</p>
-<p><img src="media/15086036845015/3F541200-E05D-46E5-99A2-1CA8C4EC8081.png" alt="3F541200-E05D-46E5-99A2-1CA8C4EC8081"/></p></li>
-</ol></li>
-<li><p>总结</p>
+<li>
+<p>对于 content view 嵌入 Safe Area 这个行为是可以控制的，解除这个限制后 content view 就能从屏幕一端显示到屏幕另一端。有一点需要注意，不管 content view 如何布局，其 layout margin 都是默认与 Safe Area 相关的。所以解决问题的一个办法就是禁用 content view 嵌入 Safe Area 的行为，但这样一来就会影响 content view 中的其他内容，也没有办法再使用这项挺有用的默认行为。</p>
+<p><img src="media/15086036845015/FBA93213-08FE-4292-92FD-41D47FAD5368.png" alt="FBA93213-08FE-4292-92FD-41D47FAD5368" /></p>
+</li>
+<li>
+<p>最好的的解决办法就是设置 header 中 backgroundView 的 background color。</p>
+<p><img src="media/15086036845015/CCD83434-A36E-4363-A74E-E51944846681.png" alt="CCD83434-A36E-4363-A74E-E51944846681" /></p>
+</li>
+<li>
+<p>编译并运行，可以看到 table view 的 section 的背景颜色已经从屏幕的一边延伸到了另一边。</p>
+<p><img src="media/15086036845015/3F541200-E05D-46E5-99A2-1CA8C4EC8081.png" alt="3F541200-E05D-46E5-99A2-1CA8C4EC8081" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>总结</p>
 <ul>
 <li>基于 iOS 11 SDK 进行编译，确保有正确的 Launch Storyboard；</li>
 <li>在两个屏幕方向都进行充足的测试，特别是横屏情况下；</li>
@@ -584,55 +669,73 @@
 <li>Auto Layout 时使用 <code>safeAreaLayoutGuide</code></li>
 <li>手动计算时使用 <code>safeAreaInsets</code></li>
 <li>避免 app 中的内容与控件与系统的 Home Indicator 发生冲突。</li>
-</ul></li>
 </ul>
-<p><img src="media/15086036845015/01D6DCD6-8765-4ACB-921C-30195350F292.png" alt="01D6DCD6-8765-4ACB-921C-30195350F292"/></p></li>
+</li>
 </ul>
-
-<h3 id="toc_18">网页的适配</h3>
-
-<ul>
-<li><p>因为 iPhone X 的显示屏的四个圆角、顶部的 Sensor Housing 特性，通过 Safari 打开的网页，iOS 也进行了自动的特殊处理。</p>
-<ul>
-<li><p>当设备处于竖屏情况下，网页的显示与其他设备没有什么差别，相比 iPhone 8 就是纵向上能看到更多内容。</p>
-<p><img src="media/15086036845015/WechatIMG8.png" alt="WechatIMG8"/></p></li>
-<li><p>当设备处于横屏情况下，为了确保网页上的内容不被屏幕圆角、Sensor Housing 遮挡，所有内容、控件会被限制在 Safe Area 中显示，而 Safe Area 左右两侧会被页面的 <code>background-color</code> (比如为 <code>&lt;body&gt;</code> 或 <code>&lt;html&gt;</code> 元素指定的背景颜色)填充。通常情况下我们看到的网页背景颜色都是白色，例如下图中在 iPhone X 的 Safari 中打开的 Medium 官网， 背景颜色是白色，整体上除了白色基本就是黑色的文字，这样看上去效果还不错。</p>
-<p><img src="media/15086036845015/WechatIMG11.png" alt="WechatIMG11"/></p></li>
-<li><p>再举一个例子，下图中在 iPhone X 的 Safari 中打开 Apple 官网，同样的页面背景色为白色，但由于横跨整个页面的灰色导航栏和非白色背景的近乎全屏的图片的存在，左右两边的白边看上去比较突兀，整体效果比较奇怪。（Update：Apple 官网首页目前已为 iPhone X 做了适配）</p>
-<p><img src="media/15086036845015/WechatIMG5.png" alt="WechatIMG5"/></p></li>
-</ul></li>
-<li><p>iPhone X 的屏幕比例约为 9:19.5，不再是之前常见的 9:16，这对于靠「等比缩放」完成适配的 HTML5 活动页面来说，需要针对 iPhone X 调整页面布局结构。</p>
-<p><img src="media/15086036845015/01ebae59b88fcea801212fb7faa9b0.jpg@800w_1l_2o_100sh.jpg" alt="01ebae59b88fcea801212fb7faa9b0.jpg@800w_1l_2o_100sh"/><br/>
-(图片来源：<a href="http://www.zcool.com.cn/article/ZNTU1MTUy.html">三分钟弄懂iPhone X 设计尺寸和适配|UI|教程|海边来的设计师 - 原创文章 - 站酷 (ZCOOL)</a>)</p></li>
+<p><img src="media/15086036845015/01D6DCD6-8765-4ACB-921C-30195350F292.png" alt="01D6DCD6-8765-4ACB-921C-30195350F292" /></p>
+</li>
 </ul>
-
-<h3 id="toc_19">网页适配实例</h3>
-
+<h3><a id="%E7%BD%91%E9%A1%B5%E7%9A%84%E9%80%82%E9%85%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>网页的适配</h3>
 <ul>
-<li><p>下面这个<a href="https://webkit.org/demos/safe-area-insets/1-default.html">网页</a>，网页的背景颜色不是白色，整个页面背景色延伸到了屏幕边缘，但横跨整个页面宽度的上下两个导航栏被限制在了 Safe Area 中，视觉上看上去很奇怪。底部的导航栏还与 Home Indicator 发生了重叠，这会导致按钮很难点击。这样的网页就需要针对 iPhone X 进行调整。</p>
-<p><img src="media/15086036845015/DEB0032B-BDCB-43AF-B018-ADE0C4FD6DDF.png" alt="DEB0032B-BDCB-43AF-B018-ADE0C4FD6DDF"/></p></li>
-<li><p>一些必要的调整（由于不熟悉前端网页开发的一些具体实现，只在此说一下大概的原理）</p>
+<li>
+<p>因为 iPhone X 的显示屏的四个圆角、顶部的 Sensor Housing 特性，通过 Safari 打开的网页，iOS 也进行了自动的特殊处理。</p>
 <ul>
-<li><p>横屏状态下，iPhone X 的 Safari 中默认没有让内容和控件充满整个屏幕。要想使用整个屏幕，需要在 iOS 11 中改变 <code>viewport-fit</code>的值以关闭自动嵌入行为。<a href="https://webkit.org/wp-content/uploads/viewport-fit-cover.png">改变后的网页</a>显示如下图，虽然导航栏可以从屏幕一个边缘延伸到了另一边缘，但是这时内容和控件会被屏幕的圆角以及 Sensor Housing 遮挡。</p>
-<p><img src="media/15086036845015/06BE16E7-5E89-4B42-8D93-E6D3033B5C7B.png" alt="06BE16E7-5E89-4B42-8D93-E6D3033B5C7B"/></p></li>
-<li><p>想要既要利用整个屏幕，又要服从 Safe Area，需要给不想被遮挡的重要内容加上一个 padding。iOS 11 的 Webkit 预定义了 <a href="https://webkit.org/demos/safe-area-insets/safe-areas.html">Safe Area 上下左右四个方向的边距常量</a>，利用此为页面上的元素添加 padding 后网页上的重要内容就可以正常显示，<a href="https://webkit.org/demos/safe-area-insets/3-safe-area-constants.html">更改后网页</a>横屏下的效果图如下。</p>
-<p><img src="media/15086036845015/319BE822-CC4A-4A9E-AA3C-2CC141C72776.png" alt="319BE822-CC4A-4A9E-AA3C-2CC141"/></p></li>
-<li><p>iPhone X 在横屏下的 Safe Area 左右两边的间距都是 44pt，但是在竖屏下 Safe Area 左右两边的间距是 0pt。故通过上面的 padding 设置后，在竖屏下，页面会出现一些问题，文字内容会紧贴屏幕的左边缘。竖屏时对于这里的期望是文字能与屏幕左边缘有一些间距（比如 12px），要实现此，可以将文字部分的 padding-left 设置为取 12px 和 Safa Area 左边间距两者中较大的那个值，这样在横屏时 padding-left 即为 Safa Area 的左边距，在竖屏时 padding-left 即为 12px。（取较大值的这个特性将在以后版本的 iOS 11 中发布，目前已出现在 iOS 11.2 Beta 中）</p>
-<p><img src="media/15086036845015/8952F200-830A-4EBA-973F-94F019E27CAC.png" alt="8952F200-830A-4EBA-973F-94F019E27CA"/></p></li>
-<li><p>最终通过一系列的调整，<a href="https://webkit.org/demos/safe-area-insets/4-min-max.html">竖屏下的页面</a>效果如下图。</p>
-<p><img src="media/15086036845015/396A96EA-48FA-469D-8D41-E3EE16FF3DE7.png" alt="396A96EA-48FA-469D-8D41-E3EE16FF3DE7"/></p></li>
-</ul></li>
-<li><p>前后整体框架对比：</p>
-<p><img src="media/15086036845015/iPhoneX-Website.png" alt="iPhoneX-Website"/><br/>
-(图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>)</p></li>
+<li>
+<p>当设备处于竖屏情况下，网页的显示与其他设备没有什么差别，相比 iPhone 8 就是纵向上能看到更多内容。</p>
+<p><img src="media/15086036845015/WechatIMG8.png" alt="WechatIMG8" /></p>
+</li>
+<li>
+<p>当设备处于横屏情况下，为了确保网页上的内容不被屏幕圆角、Sensor Housing 遮挡，所有内容、控件会被限制在 Safe Area 中显示，而 Safe Area 左右两侧会被页面的 <code>background-color</code> (比如为 <code>&lt;body&gt;</code> 或 <code>&lt;html&gt;</code> 元素指定的背景颜色)填充。通常情况下我们看到的网页背景颜色都是白色，例如下图中在 iPhone X 的 Safari 中打开的 Medium 官网， 背景颜色是白色，整体上除了白色基本就是黑色的文字，这样看上去效果还不错。</p>
+<p><img src="media/15086036845015/WechatIMG11.png" alt="WechatIMG11" /></p>
+</li>
+<li>
+<p>再举一个例子，下图中在 iPhone X 的 Safari 中打开 Apple 官网，同样的页面背景色为白色，但由于横跨整个页面的灰色导航栏和非白色背景的近乎全屏的图片的存在，左右两边的白边看上去比较突兀，整体效果比较奇怪。（Update：Apple 官网首页目前已为 iPhone X 做了适配）</p>
+<p><img src="media/15086036845015/WechatIMG5.png" alt="WechatIMG5" /></p>
+</li>
 </ul>
-
-<h2 id="toc_20">iOS 11 常用 UI 标准控件的尺寸对照</h2>
-
+</li>
+<li>
+<p>iPhone X 的屏幕比例约为 9:19.5，不再是之前常见的 9:16，这对于靠「等比缩放」完成适配的 HTML5 活动页面来说，需要针对 iPhone X 调整页面布局结构。</p>
+<p><img src="media/15086036845015/01ebae59b88fcea801212fb7faa9b0.jpg@800w_1l_2o_100sh.jpg" alt="01ebae59b88fcea801212fb7faa9b0.jpg@800w_1l_2o_100sh" /><br />
+(图片来源：<a href="http://www.zcool.com.cn/article/ZNTU1MTUy.html">三分钟弄懂iPhone X 设计尺寸和适配|UI|教程|海边来的设计师 - 原创文章 - 站酷 (ZCOOL)</a>)</p>
+</li>
+</ul>
+<h3><a id="%E7%BD%91%E9%A1%B5%E9%80%82%E9%85%8D%E5%AE%9E%E4%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>网页适配实例</h3>
+<ul>
+<li>
+<p>下面这个<a href="https://webkit.org/demos/safe-area-insets/1-default.html">网页</a>，网页的背景颜色不是白色，整个页面背景色延伸到了屏幕边缘，但横跨整个页面宽度的上下两个导航栏被限制在了 Safe Area 中，视觉上看上去很奇怪。底部的导航栏还与 Home Indicator 发生了重叠，这会导致按钮很难点击。这样的网页就需要针对 iPhone X 进行调整。</p>
+<p><img src="media/15086036845015/DEB0032B-BDCB-43AF-B018-ADE0C4FD6DDF.png" alt="DEB0032B-BDCB-43AF-B018-ADE0C4FD6DDF" /></p>
+</li>
+<li>
+<p>一些必要的调整（由于不熟悉前端网页开发的一些具体实现，只在此说一下大概的原理）</p>
+<ul>
+<li>
+<p>横屏状态下，iPhone X 的 Safari 中默认没有让内容和控件充满整个屏幕。要想使用整个屏幕，需要在 iOS 11 中改变 <code>viewport-fit</code>的值以关闭自动嵌入行为。<a href="https://webkit.org/wp-content/uploads/viewport-fit-cover.png">改变后的网页</a>显示如下图，虽然导航栏可以从屏幕一个边缘延伸到了另一边缘，但是这时内容和控件会被屏幕的圆角以及 Sensor Housing 遮挡。</p>
+<p><img src="media/15086036845015/06BE16E7-5E89-4B42-8D93-E6D3033B5C7B.png" alt="06BE16E7-5E89-4B42-8D93-E6D3033B5C7B" /></p>
+</li>
+<li>
+<p>想要既要利用整个屏幕，又要服从 Safe Area，需要给不想被遮挡的重要内容加上一个 padding。iOS 11 的 Webkit 预定义了 <a href="https://webkit.org/demos/safe-area-insets/safe-areas.html">Safe Area 上下左右四个方向的边距常量</a>，利用此为页面上的元素添加 padding 后网页上的重要内容就可以正常显示，<a href="https://webkit.org/demos/safe-area-insets/3-safe-area-constants.html">更改后网页</a>横屏下的效果图如下。</p>
+<p><img src="media/15086036845015/319BE822-CC4A-4A9E-AA3C-2CC141C72776.png" alt="319BE822-CC4A-4A9E-AA3C-2CC141" /></p>
+</li>
+<li>
+<p>iPhone X 在横屏下的 Safe Area 左右两边的间距都是 44pt，但是在竖屏下 Safe Area 左右两边的间距是 0pt。故通过上面的 padding 设置后，在竖屏下，页面会出现一些问题，文字内容会紧贴屏幕的左边缘。竖屏时对于这里的期望是文字能与屏幕左边缘有一些间距（比如 12px），要实现此，可以将文字部分的 padding-left 设置为取 12px 和 Safa Area 左边间距两者中较大的那个值，这样在横屏时 padding-left 即为 Safa Area 的左边距，在竖屏时 padding-left 即为 12px。（取较大值的这个特性将在以后版本的 iOS 11 中发布，目前已出现在 iOS 11.2 Beta 中）</p>
+<p><img src="media/15086036845015/8952F200-830A-4EBA-973F-94F019E27CAC.png" alt="8952F200-830A-4EBA-973F-94F019E27CA" /></p>
+</li>
+<li>
+<p>最终通过一系列的调整，<a href="https://webkit.org/demos/safe-area-insets/4-min-max.html">竖屏下的页面</a>效果如下图。</p>
+<p><img src="media/15086036845015/396A96EA-48FA-469D-8D41-E3EE16FF3DE7.png" alt="396A96EA-48FA-469D-8D41-E3EE16FF3DE7" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>前后整体框架对比：</p>
+<p><img src="media/15086036845015/iPhoneX-Website.png" alt="iPhoneX-Website" /><br />
+(图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>)</p>
+</li>
+</ul>
+<h2><a id="ios-11%E5%B8%B8%E7%94%A8-ui%E6%A0%87%E5%87%86%E6%8E%A7%E4%BB%B6%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%AF%B9%E7%85%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>iOS 11 常用 UI 标准控件的尺寸对照</h2>
 <p>对于不同设备，在横向和纵向时的 Size Class 是不同的。加之 iPhone X 引入 Sensor Housing 和 Home Indicator 造成的一些特殊性，这就使得在不同的 iPhone 上 UI 标准控件有着不同的尺寸。以下列出了三款典型 iPhone 的常见 iOS 11 UI 标准控件的尺寸。</p>
-
-<h3 id="toc_21">iPhone 8</h3>
-
+<h3><a id="iphone-8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>iPhone 8</h3>
 <ul>
 <li>iPhone 8 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Compact width, Compact height。
 <ul>
@@ -643,11 +746,10 @@
 <li>横屏 navigation bar、tool bar、tab bar：32pt</li>
 <li>Glyph：28pt × 28pt</li>
 <li>左右建议 Margin：竖屏时 16pt，横屏时 20pt</li>
-</ul></li>
 </ul>
-
-<h3 id="toc_22">iPhone 8 Plus</h3>
-
+</li>
+</ul>
+<h3><a id="iphone-8-plus" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>iPhone 8 Plus</h3>
 <ul>
 <li>iPhone 8 Plus 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Regular width, Compact height。
 <ul>
@@ -657,13 +759,13 @@
 <li>横竖屏 toolbar：44pt</li>
 <li>Glyph：28pt × 28pt</li>
 <li>左右建议 Margin：竖屏时 16pt，横屏时 20pt</li>
-</ul></li>
 </ul>
-
-<h3 id="toc_23">iPhone X</h3>
-
+</li>
+</ul>
+<h3><a id="iphone-x" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>iPhone X</h3>
 <ul>
-<li><p>iPhone X 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Compact width, Compact height。</p>
+<li>
+<p>iPhone X 的 Size Class：竖屏时——Compact width, Regular height，横屏时——Compact width, Compact height。</p>
 <ul>
 <li>Status bar：44pt（电话、录音、位置记录时不变）</li>
 <li>竖屏 navigation bar（包括 status bar）：88（44+44）pt，如果有 big title 就再加 52pt</li>
@@ -674,22 +776,18 @@
 <li>Home Indictor Area：竖屏时 34pt，横屏时 21pt</li>
 <li>左右建议 Margin：竖屏时到 Safe Area 左右两边 16pt，横屏时到 Safe Area 左右两边 20pt</li>
 </ul>
-<p><img src="media/15086036845015/iPhoneX-Portrait.jpg" alt="iPhoneX-Portrait"/><br/>
+<p><img src="media/15086036845015/iPhoneX-Portrait.jpg" alt="iPhoneX-Portrait" /><br />
 （图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>）</p>
-<p><img src="media/15086036845015/C5A278D3-B23F-48B6-9D58-7CF217975FD1.png" alt="C5A278D3-B23F-48B6-9D58-7CF217975FD1"/><br/>
-（图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>，图片有改动。关于 iPhone X 横屏下，tab bar 和 Home Indicator 区域经过查找资料我认为应该分别是 32pt 和 21pt，而不是原文中的 30pt 和 23pt。）</p></li>
+<p><img src="media/15086036845015/C5A278D3-B23F-48B6-9D58-7CF217975FD1.png" alt="C5A278D3-B23F-48B6-9D58-7CF217975FD1" /><br />
+（图片来源：<a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a>，图片有改动。关于 iPhone X 横屏下，tab bar 和 Home Indicator 区域经过查找资料我认为应该分别是 32pt 和 21pt，而不是原文中的 30pt 和 23pt。）</p>
+</li>
 </ul>
-
 <blockquote>
 <p>最后一起来欣赏下 Apple 为 iPhone X 制作的广告，十分精彩：</p>
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0S6pHex-KCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </blockquote>
-
-<h2 id="toc_24">Read More</h2>
-
-<h3 id="toc_25">Apple 官方</h3>
-
+<h2><a id="read-more" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Read More</h2>
+<h3><a id="apple%E5%AE%98%E6%96%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Apple 官方</h3>
 <ul>
 <li><a href="https://www.apple.com/cn/iphone-x">iPhone X 官方介绍页面</a></li>
 <li><a href="https://developer.apple.com/ios/update-apps-for-iphone-x/">iPhone X 设计与开发介绍页面：Update your apps for iPhone X</a></li>
@@ -700,29 +798,53 @@
 <li><a href="https://webkit.org/blog/7929/designing-websites-for-iphone-x/">Designing Websites for iPhone X</a></li>
 <li><a href="https://developer.apple.com/design/resources/">Apple UI Design Resources：iPhone X</a></li>
 </ul>
-
-<h3 id="toc_26">非官方</h3>
-
+<h3><a id="%E9%9D%9E%E5%AE%98%E6%96%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>非官方</h3>
 <ul>
-<li><a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">The Ultimate Guide To iPhone Resolutions</a></li>
-<li><p><a href="https://www.paintcodeapp.com/news/iphone-x-screen-demystified">iPhone X Screen Demystified</a></p></li>
-<li><p><a href="https://blog.prototypr.io/designing-for-the-iphone-x-4239d5ac736c">Design for iPhone X – prototypr</a></p></li>
-<li><p><a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a></p></li>
-<li><p><a href="https://medium.com/sketch-app-sources/things-to-keep-in-mind-when-designing-for-new-iphone-x-bfc19a7703ae">Things to keep in mind when designing for “new” iPhone X</a></p></li>
-<li><p><a href="https://medium.com/uxabc/iphone-x-ui-design-specs-696fd4f262b6">UI 設計師需要知道的 iPhone X 細節 – UXabc – Medium</a></p></li>
-<li><p><a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-x-screen-size-a00bd109bbb9">How iOS Apps Adapt to the iPhone X Screen Size – Geoff Hackworth – Medium</a></p></li>
-<li><p><a href="https://useyourloaf.com/blog/supporting-iphone-x/">Supporting iPhone X</a></p></li>
-<li><p><a href="http://blog.maxrudberg.com/post/165590234593/ui-design-for-iphone-x-bottom-elements">Max Rudberg - Visual &amp; User Interface Designer - UI Design for iPhone X: Bottom Elements</a></p></li>
-<li><p><a href="http://blog.maxrudberg.com/post/166045445103/ui-design-for-iphone-x-top-elements-and-the-notch">Max Rudberg - Visual &amp; User Interface Designer - UI Design for iPhone X: Top Elements and the Notch</a></p></li>
-<li><p><a href="https://medium.com/@bobtung/%E9%9D%A2%E5%B0%8Diphone-x-web%E8%A8%AD%E8%A8%88%E5%B8%AB%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E5%B9%BE%E5%80%8Bcss%E5%B1%AC%E6%80%A7-b7c03b314c6a">面對iPhone X，Web設計師需要知道的幾個CSS屬性 – Bobby Tung – Medium</a></p></li>
-<li><p><a href="http://stephenradford.me/removing-the-white-bars-in-safari-on-iphone-x/">Removing the White Bars in Safari on iPhone X</a></p></li>
-<li><p><a href="https://medium.com/peachstudio/designing-responsive-webpages-for-the-iphone-x-c3fc55732409">Designing Responsive Webpages for the iPhone X – Peach Studio – Medium</a></p></li>
+<li>
+<p><a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">The Ultimate Guide To iPhone Resolutions</a></p>
+</li>
+<li>
+<p><a href="https://www.paintcodeapp.com/news/iphone-x-screen-demystified">iPhone X Screen Demystified</a></p>
+</li>
+<li>
+<p><a href="https://blog.prototypr.io/designing-for-the-iphone-x-4239d5ac736c">Design for iPhone X – prototypr</a></p>
+</li>
+<li>
+<p><a href="https://designcode.io/ios11-iphone-x">Design+Code - Learn to design and code for iOS 11</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/sketch-app-sources/things-to-keep-in-mind-when-designing-for-new-iphone-x-bfc19a7703ae">Things to keep in mind when designing for “new” iPhone X</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/uxabc/iphone-x-ui-design-specs-696fd4f262b6">UI 設計師需要知道的 iPhone X 細節 – UXabc – Medium</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-x-screen-size-a00bd109bbb9">How iOS Apps Adapt to the iPhone X Screen Size – Geoff Hackworth – Medium</a></p>
+</li>
+<li>
+<p><a href="https://useyourloaf.com/blog/supporting-iphone-x/">Supporting iPhone X</a></p>
+</li>
+<li>
+<p><a href="http://blog.maxrudberg.com/post/165590234593/ui-design-for-iphone-x-bottom-elements">Max Rudberg - Visual &amp; User Interface Designer - UI Design for iPhone X: Bottom Elements</a></p>
+</li>
+<li>
+<p><a href="http://blog.maxrudberg.com/post/166045445103/ui-design-for-iphone-x-top-elements-and-the-notch">Max Rudberg - Visual &amp; User Interface Designer - UI Design for iPhone X: Top Elements and the Notch</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/@bobtung/%E9%9D%A2%E5%B0%8Diphone-x-web%E8%A8%AD%E8%A8%88%E5%B8%AB%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E5%B9%BE%E5%80%8Bcss%E5%B1%AC%E6%80%A7-b7c03b314c6a">面對iPhone X，Web設計師需要知道的幾個CSS屬性 – Bobby Tung – Medium</a></p>
+</li>
+<li>
+<p><a href="http://stephenradford.me/removing-the-white-bars-in-safari-on-iphone-x/">Removing the White Bars in Safari on iPhone X</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/peachstudio/designing-responsive-webpages-for-the-iphone-x-c3fc55732409">Designing Responsive Webpages for the iPhone X – Peach Studio – Medium</a></p>
+</li>
 </ul>
-
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+<blockquote>
+<p><img src="media/14625521742746/15088240400740.jpg" alt="" /></p>
 </blockquote>
 
 
@@ -818,7 +940,7 @@
                   
 
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15844652241485.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="16357088669226.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
 
                   </div>
 
@@ -869,6 +991,12 @@
 	      
 		      
 			      <li class="post">
+			        <a href="16357088669226.html">订阅 Apple Music 该选哪个区？——中美坡港台日六大地区全对比（第二版）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="16030487843973.html">全新 iPhone 12 发布，再谈 iPhone 屏幕尺寸</a>
 			      </li>
 		     
@@ -888,12 +1016,6 @@
 		      
 			      <li class="post">
 			        <a href="15966406956355.html">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15942969497015.html">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？</a>
 			      </li>
 		     
 		  
@@ -993,7 +1115,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
     </script>
 
     
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_SVG-full"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
 <script>

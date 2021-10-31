@@ -147,268 +147,167 @@
 
       <div class="article-content">
       <p>在 iOS 13 及之后的版本中，人们可以选择使用一种全局深色的外观，它就是深色模式（Dark Mode），这也是 <a href="15674389801268.html">iOS 13 设计最大的变化</a>。在深色模式中，系统对于所有的界面、菜单、控件都使用了深色色盘，也使用了更多的虚化效果（vibrancy）以使得与更暗的背景内容相比，前景内容能够更加显眼明亮。深色模式支持所有的辅助功能。</p>
-
 <span id="more"></span><!-- more -->
-
 <p>人们可以选择使用深色模式作为系统的默认界面样式，他们可以通过设置使设备在周围的灯光变暗时自动转换到深色模式。</p>
-
 <ul>
 <li>将焦点放在内容上：深色模式会把焦点放在你界面的内容区域，以让内容能够显眼，而周围的 UI 能够沉浸到背景中去。</li>
 <li>在浅色模式和深色模式下都测试你的设计：观察你的 app 的界面在两种模式下是什么样子，根据需要调整设计。在一个模式下表现良好的设计在另一个模式下可能就会有问题。</li>
 <li>当你调整对比度和透明度等辅助功能设置使，确保你 app 的内容可以在深色模式下保持舒服的可读性：在深色模式下，你应该测试在开启增强对比度和降低透明度功能时 app 的内容，包括单独开启时的测试和都开启时的测试。你可能会发现在一些深色背景上，深色的文本可读性会比较低。你也可能发现在深色模式下打开增强对比度会导致深色文本和深色背景之间的对比度。虽然具备正常视力的人们仍然能够阅读低对比度的文本，但这样的文本可能对于视力有损伤的人们就是不可读的。</li>
 </ul>
-
-<h2 id="toc_0">目录</h2>
-
+<h2><a id="%E7%9B%AE%E5%BD%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>目录</h2>
 <ul>
-<li>
-<a href="#toc_0">目录</a>
-</li>
-<li>
-<a href="#toc_1">颜色</a>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E9%A2%9C%E8%89%B2">颜色</a>
 <ul>
-<li>
-<a href="#toc_2">系统颜色</a>
-</li>
-<li>
-<a href="#toc_3">动态系统颜色</a>
-</li>
-<li>
-<a href="#toc_4">图片、图标、标志颜色</a>
-</li>
-<li>
-<a href="#toc_5">文本颜色</a>
-</li>
+<li><a href="#%E7%B3%BB%E7%BB%9F%E9%A2%9C%E8%89%B2">系统颜色</a></li>
+<li><a href="#%E5%8A%A8%E6%80%81%E7%B3%BB%E7%BB%9F%E9%A2%9C%E8%89%B2">动态系统颜色</a></li>
+<li><a href="#%E5%9B%BE%E7%89%87%E3%80%81%E5%9B%BE%E6%A0%87%E3%80%81%E6%A0%87%E5%BF%97%E9%A2%9C%E8%89%B2">图片、图标、标志颜色</a></li>
+<li><a href="#%E6%96%87%E6%9C%AC%E9%A2%9C%E8%89%B2">文本颜色</a></li>
 </ul>
 </li>
-<li>
-<a href="#toc_6">材料</a>
+<li><a href="#%E6%9D%90%E6%96%99">材料</a>
 <ul>
-<li>
-<a href="#toc_7">系统定义的材料和虚化效果</a>
-</li>
+<li><a href="#%E7%B3%BB%E7%BB%9F%E5%AE%9A%E4%B9%89%E7%9A%84%E6%9D%90%E6%96%99%E5%92%8C%E8%99%9A%E5%8C%96%E6%95%88%E6%9E%9C">系统定义的材料和虚化效果</a></li>
 </ul>
 </li>
-<li>
-<a href="#toc_8">在 iOS 上实现 Dark Mode</a>
+<li><a href="#%E5%9C%A8ios%E4%B8%8A%E5%AE%9E%E7%8E%B0-dark-mode">在 iOS 上实现 Dark Mode</a>
 <ul>
-<li>
-<a href="#toc_9">颜色</a>
-</li>
-<li>
-<a href="#toc_10">材料</a>
-</li>
+<li><a href="#%E9%A2%9C%E8%89%B2">颜色</a></li>
+<li><a href="#%E6%9D%90%E6%96%99">材料</a></li>
 </ul>
 </li>
-<li>
-<a href="#toc_11">iOS 的深色模式如何工作？</a>
+<li><a href="#ios%E7%9A%84%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%EF%BC%9F">iOS 的深色模式如何工作？</a>
 <ul>
-<li>
-<a href="#toc_12">颜色</a>
-</li>
-<li>
-<a href="#toc_13">图片</a>
-</li>
-<li>
-<a href="#toc_14">Trait Collection</a>
-</li>
-<li>
-<a href="#toc_15">深色模式 API 更新</a>
-</li>
+<li><a href="#%E9%A2%9C%E8%89%B2">颜色</a></li>
+<li><a href="#%E5%9B%BE%E7%89%87">图片</a></li>
+<li><a href="#trait-collection">Trait Collection</a></li>
+<li><a href="#%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8Fapi%E6%9B%B4%E6%96%B0">深色模式 API 更新</a></li>
 </ul>
 </li>
-<li>
-<a href="#toc_16">在 macOS 上实现 Dark Mode</a>
-</li>
-<li>
-<a href="#toc_17">参考链接</a>
-</li>
+<li><a href="#%E5%9C%A8macos%E4%B8%8A%E5%AE%9E%E7%8E%B0-dark-mode">在 macOS 上实现 Dark Mode</a></li>
+<li><a href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">参考链接</a></li>
 </ul>
 
-
-<h2 id="toc_1">颜色</h2>
-
+<h2><a id="%E9%A2%9C%E8%89%B2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>颜色</h2>
 <p>在深色模式的色盘中包括了更深的背景颜色和更浅的前景颜色，他们都经过了仔细的筛选，在保持两个模式下的一致性的前提下，也确保了良好的对比度。</p>
-
 <ul>
 <li>使用适配当前外观的颜色：语义化颜色，像是「背景颜色」，可以自动适配当前的外观。当你需要一个自定义颜色时，添加一个颜色集合（Color Set）资源到你 app 的资源目录中，指定浅色和深色模式下的颜色变种，这样就可以适配当前的外观模式。避免使用硬编码的颜色值或者不能适配的颜色。</li>
 <li>在所有的外观下确保充足的颜色对比度：使用系统定义的颜色确保前景和背景内容间有合适的对比度比值。对于自定义颜色，以达到 7:1 的对比度比值为目标，特别是对于小的文本。</li>
 <li>软化白色背景的颜色：如果你必须在深色模式中对于内容使用白色背景，选择一个稍微深一点的白色，以避免背景会打亮周围的深色内容。</li>
 </ul>
-
-<h3 id="toc_2">系统颜色</h3>
-
+<h3><a id="%E7%B3%BB%E7%BB%9F%E9%A2%9C%E8%89%B2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>系统颜色</h3>
 <p>iOS 根据深色模式或者浅色模式定义了以下系统颜色，这些颜色值可能随着不断的版本迭代发生变化，所以使用系统 API 去调用这些系统颜色。</p>
-
-<p><img src="media/15681308995404/8BFF358A-9711-4A7B-A28E-3D7E8DF4961D.png" alt=""/></p>
-
+<p><img src="media/15681308995404/8BFF358A-9711-4A7B-A28E-3D7E8DF4961D.png" alt="" /></p>
 <p>为增强可读性，系统颜色还有下面这些变种：</p>
-
-<p><img src="media/15681308995404/AD034246-06F9-4778-A8B2-3CD176AAF6A0.png" alt=""/></p>
-
+<p><img src="media/15681308995404/AD034246-06F9-4778-A8B2-3CD176AAF6A0.png" alt="" /></p>
 <p>iOS 13 还引入了六种不透明的灰色值，虽然会用到的地方很少，但可以方便你在半透明效果不好的地方使用。比如在元素相交或者重叠时，像是网格中的线或者 bar，这些地方使用不透明的颜色更好。通常情况下还是应该使用系统颜色。</p>
-
-<p><img src="media/15681308995404/DD3BD49D-6045-41EE-B028-DCAD45AE2525.png" alt=""/></p>
-
+<p><img src="media/15681308995404/DD3BD49D-6045-41EE-B028-DCAD45AE2525.png" alt="" /></p>
 <p>同样地，为增强可读性，有下列变种：</p>
-
-<p><img src="media/15681308995404/593D3082-2E51-48A2-B12E-B7809DAE3343.png" alt=""/></p>
-
-<h3 id="toc_3">动态系统颜色</h3>
-
-<p>除了描边颜色，iOS 也根据语义对背景区域和前景内容提供了定义好的系统颜色，比如文本标签、分隔线、填充。这些颜色可以自动适配深色模式和浅色模式。<br/>
+<p><img src="media/15681308995404/593D3082-2E51-48A2-B12E-B7809DAE3343.png" alt="" /></p>
+<h3><a id="%E5%8A%A8%E6%80%81%E7%B3%BB%E7%BB%9F%E9%A2%9C%E8%89%B2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>动态系统颜色</h3>
+<p>除了描边颜色，iOS 也根据语义对背景区域和前景内容提供了定义好的系统颜色，比如文本标签、分隔线、填充。这些颜色可以自动适配深色模式和浅色模式。<br />
 iOS 定义了两个系列的背景颜色：一个系列是「系统背景颜色」，另一个系列是「成组背景颜色」。每一个系列都包含了四个等级的变种以帮助传达信息的层级。通常情况下，在成组的 table view 上使用「成组背景颜色」，否则就使用「系统背景颜色」。</p>
-
 <p>使用这两个系列的背景颜色，你可以通过下面这些方式使用不同的等级变种表现层级：</p>
-
 <ul>
 <li>在总体视图使用一级；</li>
 <li>在位于总体视图上的成组的内容和元素上使用二级；</li>
 <li>在位于二级元素上的成组的内容和元素上使用三级。</li>
 </ul>
-
 <p>对于前景内容，iOS 系统定义了下面这些颜色：</p>
-
-<p><img src="media/15681308995404/6712CB33-87BD-47C8-8232-1F6BC110A11A.png" alt=""/></p>
-
+<p><img src="media/15681308995404/6712CB33-87BD-47C8-8232-1F6BC110A11A.png" alt="" /></p>
 <ul>
 <li>不要重新定义动态系统颜色的语义化定义：为了给人们创造一致化的体验，确保你的 app 的界面在不同的情景下都表现得没问题，应该倾向于使用动态系统颜色。</li>
 <li>不要尝试复制动态系统颜色：动态系统颜色可能基于不同的环境变量，随着版本的迭代发生波动。使用动态系统颜色去搭配系统颜色，而是创造自定义颜色去搭配系统颜色。</li>
 </ul>
-
-<h3 id="toc_4">图片、图标、标志颜色</h3>
-
+<h3><a id="%E5%9B%BE%E7%89%87%E3%80%81%E5%9B%BE%E6%A0%87%E3%80%81%E6%A0%87%E5%BF%97%E9%A2%9C%E8%89%B2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>图片、图标、标志颜色</h3>
 <p>iOS 13 的系统使用了 SF Symbols，它可以在深色模式下保持美观。系统也使用了经过对浅色模式和深色模式都优化了的全颜色图片。</p>
-
 <ul>
 <li>在任何可能的地方使用 SF Symbols：使用了 SF Symbols 后，当你使用了动态颜色去给标志着色或者是增加了一层虚化效果时，标志都可以在两种模式下保持美观。</li>
 <li>必要时，为浅色和深色模式分别设计独立的图形元素：在浅色模式中，图形使用中空的描边，而在深色模式中，图形使用实心填充的形状样式可能会更好。</li>
 <li>确保全颜色的图片和图标显示没问题：如果在两种模式下看起来都不错，那就可以使用相同的资源。如果一个资源只在某个模式中显示没问题，那就修改资源或者为两种模式创建分别的资源。使用资源目录把两个资源组合成一个，命名成一张图片。</li>
 </ul>
-
-<h3 id="toc_5">文本颜色</h3>
-
+<h3><a id="%E6%96%87%E6%9C%AC%E9%A2%9C%E8%89%B2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>文本颜色</h3>
 <p>虚化效果可以使得深色背景上的文本保持良好的对比度。</p>
-
 <ul>
 <li>对于文本使用系统提供的文本颜色：系统提供的一级、二级、三级、四级文本颜色可以自动适配浅色和深色模式。</li>
 <li>使用系统视图绘制文本输入框和文本视图：系统视图和控件可以使你 app 的文本在所有的背景下看起来都没问题，并且可以根据虚化效果的有无自动调整适配。当你可以使用系统提供的视图去展示文本时就不要自己单独绘制文本视图。</li>
 </ul>
-
-<h2 id="toc_6">材料</h2>
-
+<h2><a id="%E6%9D%90%E6%96%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>材料</h2>
 <p>iOS 提供了材料效果（materials，也可叫 blur effects）以通过一种半透明的效果在 app 中创造深度的感觉。材料效果可以让视图和控件既暗示了背景上的内容，又不分散前景内容的注意力。为了制造这种效果，材料允许背景颜色信息穿过前景的视图，同时也会模糊背景的情景以保持可读性。</p>
-
 <p>当你使用系统定义的材料效果时，你的 app 的元素会在各个情景中看起来都很好，因为这些效果可以自动适配系统的浅色模式和深色模式。</p>
-
 <ul>
 <li>以系统使用的材料效果为指导：在任何可能的时候，比较具备相似功能的你的 app 的自定义视图和系统提供的视图，对其使用相同的材料效果。</li>
 <li>利用好系统提供的文本、填充、图形、分隔线颜色：系统提供的颜色可以让这些元素在半透明的背景上看起来不错。</li>
 <li>在任何可能的时候，使用 SF Symbols：当你使用动态系统颜色去给一个标志着色或者应用一个虚化效果时，标志可以在任何情景中都看起来不错。与之相对比，全颜色的图片可能不能与背景形成足够的对比度，在用在一个半透明背景的视图上时也可能不合时宜。</li>
 </ul>
-
-<h3 id="toc_7">系统定义的材料和虚化效果</h3>
-
+<h3><a id="%E7%B3%BB%E7%BB%9F%E5%AE%9A%E4%B9%89%E7%9A%84%E6%9D%90%E6%96%99%E5%92%8C%E8%99%9A%E5%8C%96%E6%95%88%E6%9E%9C" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>系统定义的材料和虚化效果</h3>
 <p>iOS 定义了你可以在指定的区域使用的多种材料，以控制前景内容和背景的视觉分隔。系统提供的材料包括浅色和深色两种变种，可以很好地匹配大多数背景。</p>
-
 <p>为了让材料用在内容容器中，iOS 13 定义了四种不同透明度的材料：</p>
-
 <ul>
 <li>SystemUltraThinMaterial</li>
 <li>SystemThinMaterial</li>
 <li>SystemMaterial （默认）</li>
 <li>SystemThickMaterial</li>
 </ul>
-
 <p>注意以下几点：</p>
-
 <ul>
 <li>在选择材料时考虑对比度和视觉分隔：在选择使用哪种材料与虚化效果组合时，没有绝对的规则。在做出选择时考虑下面这些方面：
 <ul>
 <li>更厚的材料可以在文本和其他元素间提供更好的对比度；</li>
 <li>通过在背景中提供一个内容的可见提醒，不透明度可以帮助人们记住当前的场景。</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>iOS 13 也为文本、填充、分隔定义了虚化值，可以与每一种材料匹配良好。通过从背景颜色中抽样、修改饱和度，虚化使 UI 元素更亮或更暗。虚化的 UI 元素可以与材料融合得更好，并增强半透明效果。</p>
-
 <p>文本和填充都提供了几种等级的虚化效果，分隔线只有一个等级。等级的名字表明了元素和背景间的相对对比度，默认层级有着最高的对比度，第四等级有最低的对比度。</p>
-
 <p>除了第四等级，你可以在任何材料上对文本使用下面的虚化效果值。不推荐在薄和超薄材料上使用第四等级，因为对比度太低。</p>
-
 <ul>
 <li>label（默认）</li>
 <li>secondaryLabel</li>
 <li>tertiaryLabel</li>
 <li>quaternaryLabel</li>
 </ul>
-
 <p>你可以在任何材料上对填充使用下面的虚化效果值：</p>
-
 <ul>
 <li>fill（默认）</li>
 <li>secondaryFill</li>
 <li>tertiaryFill</li>
 </ul>
-
 <p>iOS 为分隔线定义了一个默认的虚化效果值，它可以与任何材料上都匹配地很好。</p>
-
 <ul>
 <li>基于语义化含义选择虚化效果：避免混用这些效果，例如，不要给分隔符使用文本的虚化效果。</li>
 </ul>
-
-<h2 id="toc_8">在 iOS 上实现 Dark Mode</h2>
-
+<h2><a id="%E5%9C%A8ios%E4%B8%8A%E5%AE%9E%E7%8E%B0-dark-mode" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>在 iOS 上实现 Dark Mode</h2>
 <ul>
 <li>使用 iOS 13 SDK 以实现对深色模式的支持；</li>
 <li>在系统提供的功能之外，自定义 app 的外表。</li>
 </ul>
-
-<h3 id="toc_9">颜色</h3>
-
+<h3><a id="%E9%A2%9C%E8%89%B2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>颜色</h3>
 <p>在过去，每一个 UI 颜色都只有一个值，现在 UI 颜色变成了动态的。当你在一个视图上使用动态颜色作为背景颜色或者文本颜色时，UIKit 会自动地使用正确的值，当模式发生变化时，会自动更新，所以你只需要设置颜色一次就好了。</p>
-
-<p><img src="media/15681308995404/6648FFDF-7939-41CF-81E8-D228B1C466E5.png" alt="6648FFDF-7939-41CF-81E8-D228B1C466E5"/></p>
-
-<h3 id="toc_10">材料</h3>
-
+<p><img src="media/15681308995404/6648FFDF-7939-41CF-81E8-D228B1C466E5.png" alt="6648FFDF-7939-41CF-81E8-D228B1C466E5" /></p>
+<h3><a id="%E6%9D%90%E6%96%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>材料</h3>
 <p>在下面的例子中，背景中有一张图片，我想在上面添加一些模糊效果。首先创建一个 <code>UIBlurEffect</code>，并且指定样式为系统材料。然后创建一个 <code>UIVisualEffectView</code> ，并在这个 view 中使用前面创建好的样式。进一步确定这个 view 的尺寸和位置，把它放到背景图片上。</p>
-
-<p><img src="media/15681308995404/F319C8FE-E980-4DA4-94E7-DA4344988C97.png" alt="F319C8FE-E980-4DA4-94E7-DA4344988"/></p>
-
+<p><img src="media/15681308995404/F319C8FE-E980-4DA4-94E7-DA4344988C97.png" alt="F319C8FE-E980-4DA4-94E7-DA4344988" /></p>
 <p>接下来可以在这个材料上添加一些虚化内容，虚化效果（vibrancy effect）可以让背景材料的一部分穿过。过去，这种效果只有一种样式，但现在有了多种样式：四种文本样式、三种填充区域样式、分隔线样式。我们创建一个 <code>UIVibrancyEffect</code> 并指定它的样式为「fill」，为了展示这个样式，我们创建另一个 <code>UIVisualEffectView</code> ，然后把它放进前面创建的 <code>UIVisualEffectView</code> 的「contenView」中。</p>
-
-<p><img src="media/15681308995404/8F145E74-4C23-44A5-BC53-007BF0280B0D.png" alt="8F145E74-4C23-44A5-BC53-007BF0280B0D"/></p>
-
-<h2 id="toc_11">iOS 的深色模式如何工作？</h2>
-
-<h3 id="toc_12">颜色</h3>
-
+<p><img src="media/15681308995404/8F145E74-4C23-44A5-BC53-007BF0280B0D.png" alt="8F145E74-4C23-44A5-BC53-007BF0280B0D" /></p>
+<h2><a id="ios%E7%9A%84%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%EF%BC%9F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>iOS 的深色模式如何工作？</h2>
+<h3><a id="%E9%A2%9C%E8%89%B2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>颜色</h3>
 <p>动态颜色可以在不同模式间自动切换，那颜色是怎么知道它是浅色还是深色的呢？这是通过「trait collections」来实现的。每一个 view 和 view controller 都有一个 trait collection，它可以帮助决定 view 的外观。</p>
-
-<p><img src="media/15681308995404/44254C8A-15B2-431A-A523-525804C0C0C9.png" alt="44254C8A-15B2-431A-A523-525804C0C0"/></p>
-
+<p><img src="media/15681308995404/44254C8A-15B2-431A-A523-525804C0C0C9.png" alt="44254C8A-15B2-431A-A523-525804C0C0" /></p>
 <p>如果我们想解析某个特定的颜色，可以通过下面的代码实现：</p>
-
 <pre class="line-numbers"><code class="language-swift">let dynamicColor = UIColor.systemBackground
 let traitCollection = view.traitCollection
 let resolvedColor = dynamicColor.resolvedColor(with: traitCollection)
 </code></pre>
-
 <p>当然你也可以通过代码创建自定义的动态颜色，具体代码如下：</p>
-
 <pre class="line-numbers"><code class="language-swift">let dynamicColor = UIColor { (traitCollection: UITraitCollection) -&gt; UIColor in if traitCollection.userInterfaceStyle == .dark {
 return .black } else {
 return .white }
 }
 </code></pre>
-
 <p>动态颜色可以直接像其他颜色一样被直接调用，它是怎样自动解析的？如果有一个动态颜色，我请求他的 RGB 值，它就会返回一个结果。这是通过 「UITrait Collection」 的「current」属性来实现的。</p>
-
-<p><img src="media/15681308995404/6BD138EB-41BD-49CA-8FC9-47F4324197F7.png" alt="6BD138EB-41BD-49CA-8FC9-47F4324197F7"/></p>
-
+<p><img src="media/15681308995404/6BD138EB-41BD-49CA-8FC9-47F4324197F7.png" alt="6BD138EB-41BD-49CA-8FC9-47F4324197F7" /></p>
 <p>注意在 UIKit 之外，「current trait collection」不会有一个特定值，你需要自己去解析颜色。例如在像「CA Layer」、「CG Color」这种低等级的类就无法直接理解动态颜色。下面是示例代码：</p>
-
 <pre class="line-numbers"><code class="language-swift"> let layer = CALayer()
  let traitCollection = view.traitCollection
 
@@ -417,20 +316,16 @@ return .white }
 let resolvedColor = UIColor.label.resolvedColor(with: traitCollection)
 layer.borderColor = resolvedColor.cgColor
 </code></pre>
-
 <p>当需要调用的颜色比较多时，可以使用下面这种代码写法：</p>
-
 <pre class="line-numbers"><code class="language-swift">let layer = CALayer()
 let traitCollection = view.traitCollection
 
 // Option 2
 traitCollection.performAsCurrent { 
-    layer.borderColor = UIColor.label.cgColor 
+	layer.borderColor = UIColor.label.cgColor 
 }
 </code></pre>
-
 <p>还有第三种写法，注意 trait 会发生变化的情况：</p>
-
 <pre class="line-numbers"><code class="language-swift">let layer = CALayer()
 let traitCollection = view.traitCollection
 
@@ -443,89 +338,56 @@ layer.borderColor = UIColor.label.cgColor
 UITraitCollection.current = savedTraitCollection 
 
 </code></pre>
-
-<p><img src="media/15681308995404/8ED899D8-DC37-4D03-98D3-9156BDE0B5A6.png" alt="8ED899D8-DC37-4D03-98D3-9156BDE0B5A6"/></p>
-
-<h3 id="toc_13">图片</h3>
-
+<p><img src="media/15681308995404/8ED899D8-DC37-4D03-98D3-9156BDE0B5A6.png" alt="8ED899D8-DC37-4D03-98D3-9156BDE0B5A6" /></p>
+<h3><a id="%E5%9B%BE%E7%89%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>图片</h3>
 <p>UIImageView 和 UIColor 一样会根据当前的 trait collection 决定显示哪一张图片。</p>
-
-<p><img src="media/15681308995404/FC6F50C9-76EE-4265-92F2-E313C37659B8.png" alt="FC6F50C9-76EE-4265-92F2-E313C37659B8"/></p>
-
+<p><img src="media/15681308995404/FC6F50C9-76EE-4265-92F2-E313C37659B8.png" alt="FC6F50C9-76EE-4265-92F2-E313C37659B8" /></p>
 <p>但 UIImage 不会关注当前的 trait collection。如果你想自己解析某张图片，你可以通过下面的代码实现：</p>
-
 <pre class="line-numbers"><code class="language-swift">let image = UIImage(named: “HeaderImage”)
 let asset = image?.imageAsset
 let resolvedImage = asset?.image(with: traitCollection)
 </code></pre>
-
-<h3 id="toc_14">Trait Collection</h3>
-
-<p>来总结一下 trait collection 是如何工作的？它在深色模式中扮演着核心的角色。记住最重要的一点，trait collection 在你的 app 中不止一个。<br/>
+<h3><a id="trait-collection" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trait Collection</h3>
+<p>来总结一下 trait collection 是如何工作的？它在深色模式中扮演着核心的角色。记住最重要的一点，trait collection 在你的 app 中不止一个。<br />
 Trait collection 贯穿了你的整个 app，从屏幕的根层级一直到窗口屏幕。当模式发生变化时，贯穿整个 app 的 trait collection 都会发生变化。</p>
-
-<p><img src="media/15681308995404/355BBA61-A06A-488A-867D-F9F9C9655744.png" alt="355BBA61-A06A-488A-867D-F9F9"/></p>
-
+<p><img src="media/15681308995404/355BBA61-A06A-488A-867D-F9F9C9655744.png" alt="355BBA61-A06A-488A-867D-F9F9" /></p>
 <p>当 app 处于浅色模式时，你只想让 app 的某部分 UIView 或 UIViewController 处于深色模式，你可以通过下面的代码实现。</p>
-
-<p><img src="media/15681308995404/4947BB9D-1BFB-4488-86BF-ED0D88173614.png" alt="4947BB9D-1BFB-4488-86BF-ED0D88173614"/></p>
-
+<p><img src="media/15681308995404/4947BB9D-1BFB-4488-86BF-ED0D88173614.png" alt="4947BB9D-1BFB-4488-86BF-ED0D88173614" /></p>
 <ul>
 <li>UIViewController：</li>
 </ul>
-
 <pre class="line-numbers"><code class="language-swift">class UIViewController {
 var overrideUserInterfaceStyle: UIUserInterfaceStyle
 }
 </code></pre>
-
 <ul>
 <li>UIView：</li>
 </ul>
-
 <pre class="line-numbers"><code class="language-swift">class UIView {
 var overrideUserInterfaceStyle: UIUserInterfaceStyle
 }
 </code></pre>
-
 <p>如果你想让整个 app 保持一种模式，你可以通过「Info.plist」的「UIUserInterfaceStyle 」去设置。</p>
-
-<h3 id="toc_15">深色模式 API 更新</h3>
-
+<h3><a id="%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8Fapi%E6%9B%B4%E6%96%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>深色模式 API 更新</h3>
 <p>在 iOS 13 之前的版本中，有两种样式的状态栏：「default」和「lightContent」；而在 iOS 13 中「default」样式会根据系统外观自动变化。同样的，「UIScroll」视图的「indicator」样式也发生了同样的变化。</p>
-
-<p><img src="media/15681308995404/35D4E68F-037B-48AE-B8FD-BFC73F8F5677.png" alt="35D4E68F-037B-48AE-B8FD-BFC73F8F5677"/></p>
-
+<p><img src="media/15681308995404/35D4E68F-037B-48AE-B8FD-BFC73F8F5677.png" alt="35D4E68F-037B-48AE-B8FD-BFC73F8F5677" /></p>
 <p>对于 「UIActivityIndicatorView」原有的几种样式都被废弃。现在它们根据尺寸分成两种样式，颜色默认是灰色，在两种模式下都可以显示的很好，当然你也可以自定义颜色。</p>
-
-<p><img src="media/15681308995404/01E17013-97BB-490A-BF71-359F9B37BEF2.png" alt="01E17013-97BB-490A-BF71-359F9B37BEF2"/></p>
-
-<p><img src="media/15681308995404/93EBB456-8674-4891-A586-7322EC0EE0F2.png" alt="93EBB456-8674-4891-A586-7322EC0EE0F2"/></p>
-
+<p><img src="media/15681308995404/01E17013-97BB-490A-BF71-359F9B37BEF2.png" alt="01E17013-97BB-490A-BF71-359F9B37BEF2" /></p>
+<p><img src="media/15681308995404/93EBB456-8674-4891-A586-7322EC0EE0F2.png" alt="93EBB456-8674-4891-A586-7322EC0EE0F2" /></p>
 <p>在绘制文本时，如果你是使用了「UILabel」、「UITextField」、「UITextView」，你只需要设置其中的文本颜色为「label color」就可以良好地适配不同外观。但如果你使用了属性字符串，那需要特别指定一个前景颜色。</p>
-
 <pre class="line-numbers"><code class="language-swift">let attributes: [NSAttributedString.Key: Any] = [ 
-    .font: UIFont.systemFont(ofSize: 36.0) 
-    .foregroundColor: UIColor.label
+	.font: UIFont.systemFont(ofSize: 36.0) 
+	.foregroundColor: UIColor.label
 ]
 </code></pre>
-
 <p>对于 app 中出现的 web 内容，同样可以适配不同外观模式。</p>
-
-<p><img src="media/15681308995404/C15FE592-0DA9-402B-A1E0-57A4B1962DA5.png" alt="C15FE592-0DA9-402B-A1E0-57A4B1962DA5"/></p>
-
+<p><img src="media/15681308995404/C15FE592-0DA9-402B-A1E0-57A4B1962DA5.png" alt="C15FE592-0DA9-402B-A1E0-57A4B1962DA5" /></p>
 <p>对于 tvOS 适配深色模式和将适配了深色模式的 iPad app 带到 Mac 上去：</p>
-
-<p><img src="media/15681308995404/00C5F632-98DD-4233-973A-2B45BA6099AD.png" alt="00C5F632-98DD-4233-973A-2B45BA6099AD"/></p>
-
-<p><img src="media/15681308995404/CB2740E2-9046-41DC-B866-02F7C42F3513.png" alt="CB2740E2-9046-41DC-B866-02F7C42F3513"/></p>
-
-<h2 id="toc_16">在 macOS 上实现 Dark Mode</h2>
-
+<p><img src="media/15681308995404/00C5F632-98DD-4233-973A-2B45BA6099AD.png" alt="00C5F632-98DD-4233-973A-2B45BA6099AD" /></p>
+<p><img src="media/15681308995404/CB2740E2-9046-41DC-B866-02F7C42F3513.png" alt="CB2740E2-9046-41DC-B866-02F7C42F3513" /></p>
+<h2><a id="%E5%9C%A8macos%E4%B8%8A%E5%AE%9E%E7%8E%B0-dark-mode" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>在 macOS 上实现 Dark Mode</h2>
 <p>待补充...</p>
-
-<h2 id="toc_17">参考链接</h2>
-
+<h2><a id="%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>参考链接</h2>
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/dark-mode/">Dark Mode - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/#dynamic-system-colors">Color - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
@@ -537,11 +399,11 @@ var overrideUserInterfaceStyle: UIUserInterfaceStyle
 <li><a href="https://developer.apple.com/documentation/uikit/appearance_customization/adopting_ios_dark_mode">Adopting iOS Dark Mode | Apple Developer Documentation</a></li>
 <li><a href="https://developer.apple.com/documentation/xcode/supporting_dark_mode_in_your_interface">Supporting Dark Mode in Your Interface | Apple Developer Documentation</a></li>
 </ul>
-
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+<blockquote>
+<p><img src="media/14625521742746/15088240400740.jpg" alt="" /></p>
 </blockquote>
 
 
@@ -637,7 +499,7 @@ var overrideUserInterfaceStyle: UIUserInterfaceStyle
                   
 
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15844652241485.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="16357088669226.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
 
                   </div>
 
@@ -688,6 +550,12 @@ var overrideUserInterfaceStyle: UIUserInterfaceStyle
 	      
 		      
 			      <li class="post">
+			        <a href="16357088669226.html">订阅 Apple Music 该选哪个区？——中美坡港台日六大地区全对比（第二版）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="16030487843973.html">全新 iPhone 12 发布，再谈 iPhone 屏幕尺寸</a>
 			      </li>
 		     
@@ -707,12 +575,6 @@ var overrideUserInterfaceStyle: UIUserInterfaceStyle
 		      
 			      <li class="post">
 			        <a href="15966406956355.html">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15942969497015.html">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？</a>
 			      </li>
 		     
 		  
@@ -812,7 +674,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
     </script>
 
     
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_SVG-full"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
 <script>

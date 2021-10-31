@@ -145,140 +145,137 @@
 
       <div class="article-content">
       <p>在人民群众的热切期盼下，比 iPhone X 更大、刘海屏版的 iPhone 8 Plus —— iPhone Xs Max 终于在 2018 年 9 月苹果秋季发布上发布，一同发布的还有升级版的 iPhone X —— iPhone Xs 和看似低配实则仍然很贵的 iPhone Xʀ。正如<a href="15086036845015.html#toc_16">去年文章中推测</a>的一样，iPhone Xs Max 的分辨率是在 iPhone 8 Plus 的基础上保持宽不变高拉长的规律且保持与 iPhone X 一致的屏幕比例，即为 1242px × 2689px。那设计、适配运行在 iPhone Xs Max 上以及 iPhone Xʀ 上的 app 又有什么需要注意的呢？这就是本篇文章想要探讨的主题。</p>
-
 <span id="more"></span><!-- more -->
-
 <blockquote>
 <p>iPhone Xs Max、iPhone Xs 广告：</p>
-
+</blockquote>
+<blockquote>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uJkOP1-v9B4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+</blockquote>
+<blockquote>
 <p>iPhone Xʀ 广告：</p>
-
+</blockquote>
+<blockquote>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tG7vx7-3sl0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </blockquote>
-
 <ul>
 <li><strong>Note:</strong></li>
 </ul>
-
 <blockquote>
-<p>在进一步阅读此文章前，推荐先阅读这篇文章的姊妹篇，看看初代刘海屏手机上 app 的那些设计和开发问题，再来更好地理解全新 iPhone 的变化：  </p>
-
+<p>在进一步阅读此文章前，推荐先阅读这篇文章的姊妹篇，看看初代刘海屏手机上 app 的那些设计和开发问题，再来更好地理解全新 iPhone 的变化：</p>
 <ul>
-<li><a href="https://steppark.net/15086036845015.html">Designing For iPhone X —— iPhone 上有了刘海，设计和开发到底该咋整?</a><br/></li>
-</ul>
-
-<p>2018 年 10 月苹果秋季发布会上，iPad 也与 Home 实体键说再见了，想了解全新 iPad Pro 的更多设计和适配细节，推荐阅读下面这篇文章：  </p>
-
-<ul>
-<li><a href="https://steppark.net/15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a><br/></li>
+<li><a href="https://steppark.net/15086036845015.html">Designing For iPhone X —— iPhone 上有了刘海，设计和开发到底该咋整?</a></li>
 </ul>
 </blockquote>
-
-<h2 id="toc_0">屏幕尺寸的变化</h2>
-
+<blockquote>
+<p>2018 年 10 月苹果秋季发布会上，iPad 也与 Home 实体键说再见了，想了解全新 iPad Pro 的更多设计和适配细节，推荐阅读下面这篇文章：</p>
+<ul>
+<li><a href="https://steppark.net/15416976044741.html">Designing For New iPad Pro and Apple Pencil — 适配没有刘海的 iPad Pro 与有刘海的 iPhone Xs 有什么不同?</a></li>
+</ul>
+</blockquote>
+<h2><a id="%E5%B1%8F%E5%B9%95%E5%B0%BA%E5%AF%B8%E7%9A%84%E5%8F%98%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>屏幕尺寸的变化</h2>
 <ul>
 <li>iPhone Xs 的屏幕尺寸以及屏幕分辨率与上一代的 iPhone X 没有任何区别，仍然是 375 × 812pt @2x。</li>
 <li>iPhone Xs Max 的屏幕尺寸是 6.5 寸，其屏幕分辨率是在 iPhone 8 Plus 的基础上保持宽不变高拉长，即 414 × 896pt @3x。其比例因子与 iPhone 8 Plus 一样，同是 @3x。</li>
 <li>对于 6.1 寸的 iPhone Xʀ，其屏幕分辨率是 414 × 896pt @2x，和 iPhone Xs Max 不同的是其比例因子为 @2x，但它们以 pt 为单位的屏幕分辨率是完全一样的，这就意味着在这两款设备上运行相同的 app，看到的内容是完全一致的。</li>
 <li>新发布的三款 iPhone 设备的屏幕比例都大约为 9:19.5。</li>
 </ul>
-
-<p><img src="media/15433010141111/5AA815C9-BF65-408C-BE39-6C1363922A04.png" alt="5AA815C9-BF65-408C-BE39-6C1363922A04"/><br/>
+<p><img src="media/15433010141111/5AA815C9-BF65-408C-BE39-6C1363922A04.png" alt="5AA815C9-BF65-408C-BE39-6C1363922A04" /><br />
 <em>注：iPhone 8 Plus 物理设备的屏幕在渲染时是在上述屏幕分辨率基础上进一步进行了缩放，实际屏幕物理分辨率为 1080px × 1920px。</em></p>
-
 <ul>
 <li>Size Class 方面，由于 iPhone Xs Max 和 iPhone Xʀ 是由 iPhone 8 Plus 衍化而来，所以其在横屏和竖屏时的 Size Class 与 iPhone 8 Plus 保持一致，具体可以参见下表。</li>
 <li>特别的，在横屏条件下，iPhone Xs Max 和 iPhone Xʀ 的 Size Class 均为「Regular width，Compact height」，与 iPhone Xs 横屏的 Size Class「Compact width，Compact height」相比，更宽的宽度可以显示更多的内容，例如 Split View 可以同时显示 Master View 与 Detail View。</li>
 <li>有关于 Size Class 的更多细节可以阅读我的另一篇文章：<a href="15171487371271.html">Size Classes and Core Components - WWDC 2017 Session 812</a></li>
 </ul>
-
-<p><img src="media/15433010141111/D92ABA2D-810A-4DF5-B386-F38C9F37B85E.png" alt="D92ABA2D-810A-4DF5-B386-F38C9F37B85E"/></p>
-
-<h2 id="toc_1">未适配 app 在新 iPhone 上的显示</h2>
-
+<p><img src="media/15433010141111/D92ABA2D-810A-4DF5-B386-F38C9F37B85E.png" alt="D92ABA2D-810A-4DF5-B386-F38C9F37B85E" /></p>
+<h2><a id="%E6%9C%AA%E9%80%82%E9%85%8Dapp%E5%9C%A8%E6%96%B0-iphone%E4%B8%8A%E7%9A%84%E6%98%BE%E7%A4%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>未适配 app 在新 iPhone 上的显示</h2>
 <ul>
-<li>由于 iPhone Xs 与 iPhone X 的屏幕分辨率、屏幕尺寸完全一致，那如果已经适配了 iPhone X 的 app 自然可以在 iPhone Xs 上正常显示。</li>
-<li><p>对于相同屏幕分辨率（以 pt 为单位）的 iPhone Xs Max 与 iPhone Xʀ 来说，由于它们与 iPhone X 的屏幕比例一样，所以运行在这两款新 iPhone 上的未适配 app 会直接通过放大拉伸 iPhone X 版本的 app 到全屏幕的方式来显示。这时，与 iPhone X 上显示的内容是完全一致的，但由于是整体放大显示，与 iPhone X 屏幕上的 app 显示相比仔细看会有些模糊。</p>
-<p><img src="media/15433010141111/FE5B0516-B29C-4DFF-810B-AB58145C6EC9.png" alt="FE5B0516-B29C-4DFF-810B-AB58145C6E"/><br/>
-图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone%20X%CA%80-screen-sizes-f4c1f2d4eec2">How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes</a></p></li>
+<li>
+<p>由于 iPhone Xs 与 iPhone X 的屏幕分辨率、屏幕尺寸完全一致，那如果已经适配了 iPhone X 的 app 自然可以在 iPhone Xs 上正常显示。</p>
+</li>
+<li>
+<p>对于相同屏幕分辨率（以 pt 为单位）的 iPhone Xs Max 与 iPhone Xʀ 来说，由于它们与 iPhone X 的屏幕比例一样，所以运行在这两款新 iPhone 上的未适配 app 会直接通过放大拉伸 iPhone X 版本的 app 到全屏幕的方式来显示。这时，与 iPhone X 上显示的内容是完全一致的，但由于是整体放大显示，与 iPhone X 屏幕上的 app 显示相比仔细看会有些模糊。</p>
+<p><img src="media/15433010141111/FE5B0516-B29C-4DFF-810B-AB58145C6EC9.png" alt="FE5B0516-B29C-4DFF-810B-AB58145C6E" /><br />
+图片来源：[How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes](<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone">https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone</a> Xʀ-screen-sizes-f4c1f2d4eec2)</p>
+</li>
 </ul>
-
-<h2 id="toc_2">改进和改变</h2>
-
-<h3 id="toc_3">自动布局 Auto Layout 性能的改善</h3>
-
+<h2><a id="%E6%94%B9%E8%BF%9B%E5%92%8C%E6%94%B9%E5%8F%98" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>改进和改变</h2>
+<h3><a id="%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80auto-layout%E6%80%A7%E8%83%BD%E7%9A%84%E6%94%B9%E5%96%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>自动布局 Auto Layout 性能的改善</h3>
 <ul>
-<li><p>Auto Layout 在 iOS 12 中的性能得到了大幅提升，推荐在开发 app 甚至设计 app 时就通过 Auto Layout 的方法进行思考，这将十分有利于以后新机型的适配，更加直观的同时减少适配工作量。下图中灰色表示 Auto Layout 在 iOS 11 中的表现，蓝色表示在 iOS 12 中的表现。</p>
-<p><img src="media/15433010141111/40E38F4A-9429-48A9-9681-6DE2A666B06A.png" alt="40E38F4A-9429-48A9-9681-6DE2A666B06A"/></p></li>
+<li>
+<p>Auto Layout 在 iOS 12 中的性能得到了大幅提升，推荐在开发 app 甚至设计 app 时就通过 Auto Layout 的方法进行思考，这将十分有利于以后新机型的适配，更加直观的同时减少适配工作量。下图中灰色表示 Auto Layout 在 iOS 11 中的表现，蓝色表示在 iOS 12 中的表现。</p>
+<p><img src="media/15433010141111/40E38F4A-9429-48A9-9681-6DE2A666B06A.png" alt="40E38F4A-9429-48A9-9681-6DE2A666B06A" /></p>
+</li>
 </ul>
-
-<h3 id="toc_4">Split View Controller 在 iPhone Xs Max 和 iPhone Xʀ 上的行为变化</h3>
-
+<h3><a id="split-view-controller%E5%9C%A8-iphone-xs-max%E5%92%8C-iphone-x%CA%80%E4%B8%8A%E7%9A%84%E8%A1%8C%E4%B8%BA%E5%8F%98%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Split View Controller 在 iPhone Xs Max 和 iPhone Xʀ 上的行为变化</h3>
 <ul>
-<li><p>由于屏幕宽度（横屏下）的进一步拉长，在横屏时，iPhone Xs Max、iPhone Xʀ 默认情况下显示的 Split View 与 iPhone 8 Plus 有稍许的不同。</p>
+<li>
+<p>由于屏幕宽度（横屏下）的进一步拉长，在横屏时，iPhone Xs Max、iPhone Xʀ 默认情况下显示的 Split View 与 iPhone 8 Plus 有稍许的不同。</p>
 <ul>
 <li>虽然这几款设备在横屏时的 Size Class 都为「Regular width，Compact height」，但在默认情况下显示 Split View 时，iPhone 8 Plus 会默认左右并排显示 Master View 和 Detail View，用户若有需要可以手动放大 Detail View 到全屏，其 Master View 的 Size Class 为「Compact width，Compact height」，Detail View 的 Size Class 为「Regular width，Compact height」。</li>
 <li>而在 iPhone Xs Max 和 iPhone Xʀ 上，会像「邮件」应用在竖屏 iPad 上一样，默认全屏显示 Detail View，需要显示 Master View 时可以通过导航栏上的按钮或在屏幕左侧右滑呼出，Master View 的显示方式是直接覆盖住 Detail View 的一部分显示，而不是左右并排显示。此时 Master View 的 Size Class 为「Regular width，Compact height」，Detail View 的「Regular width，Compact height」也为「Regular width，Compact height」。</li>
 <li>当然，开发者可以在开发时不选择这种默认显示模式，而选择与 iPhone 8 Plus 上一样的左右并排显示模式。</li>
 </ul>
-<p><img src="media/15433010141111/F6BB8A5B-5ED1-424C-8C99-75DCD1A871B8.png" alt="F6BB8A5B-5ED1-424C-8C99-75DCD1A871B8"/><br/>
-图片来源：<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone%20X%CA%80-screen-sizes-f4c1f2d4eec2">How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes</a></p></li>
-<li><p>代码中的实现一瞥</p>
+<p><img src="media/15433010141111/F6BB8A5B-5ED1-424C-8C99-75DCD1A871B8.png" alt="F6BB8A5B-5ED1-424C-8C99-75DCD1A871B8" /><br />
+图片来源：[How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes](<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone">https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone</a> Xʀ-screen-sizes-f4c1f2d4eec2)</p>
+</li>
+<li>
+<p>代码中的实现一瞥</p>
 <ul>
-<li><p>默认全屏显示 Detail View，通过点击导航栏上左侧按钮或屏幕左侧右滑呼出 Master View：</p>
-<p><img src="media/15433010141111/4EFB45A9-843D-4CDC-97F7-17BDBA2150DB.png" alt="4EFB45A9-843D-4CDC-97F7-17BDBA2150DB"/></p></li>
-<li><p>Detail View 和 Master View 并排显示：</p>
-<p><img src="media/15433010141111/D7F88015-8235-41C1-9AF6-E81B10204126.png" alt="D7F88015-8235-41C1-9AF6-E81B10204126"/></p></li>
-</ul></li>
+<li>
+<p>默认全屏显示 Detail View，通过点击导航栏上左侧按钮或屏幕左侧右滑呼出 Master View：</p>
+<p><img src="media/15433010141111/4EFB45A9-843D-4CDC-97F7-17BDBA2150DB.png" alt="4EFB45A9-843D-4CDC-97F7-17BDBA2150DB" /></p>
+</li>
+<li>
+<p>Detail View 和 Master View 并排显示：</p>
+<p><img src="media/15433010141111/D7F88015-8235-41C1-9AF6-E81B10204126.png" alt="D7F88015-8235-41C1-9AF6-E81B10204126" /></p>
+</li>
 </ul>
-
-<h2 id="toc_5">适配常见问题</h2>
-
-<h3 id="toc_6">避免写死屏幕分辨率或根据设备机型执行指令</h3>
-
+</li>
+</ul>
+<h2><a id="%E9%80%82%E9%85%8D%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>适配常见问题</h2>
+<h3><a id="%E9%81%BF%E5%85%8D%E5%86%99%E6%AD%BB%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E6%88%96%E6%A0%B9%E6%8D%AE%E8%AE%BE%E5%A4%87%E6%9C%BA%E5%9E%8B%E6%89%A7%E8%A1%8C%E6%8C%87%E4%BB%A4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>避免写死屏幕分辨率或根据设备机型执行指令</h3>
 <ul>
 <li>为某一个分辨率或某一个机型设置特例，虽然看上去很有针对性，但这反而占用了开发其他新特性的时间，后期还需要维护成本，这很大程度上是冗余的工作。</li>
 <li>当代码在新的机型上运行时，可能会造成不可预知的问题，而你又不能在第一时间让用户用上新版本，这会影响用户体验。</li>
 <li>你为一个分辨率、一个机型设置里特例，那之后有了新的机型、新的分辨率，还需要再做一遍这个工作，耗时耗力，无穷无尽。</li>
 <li>要把这部分工作交给 UIKit 和 Auto Layout 来处理。</li>
 </ul>
-
-<h3 id="toc_7">确定某个特性在设备上的可用性的方法</h3>
-
+<h3><a id="%E7%A1%AE%E5%AE%9A%E6%9F%90%E4%B8%AA%E7%89%B9%E6%80%A7%E5%9C%A8%E8%AE%BE%E5%A4%87%E4%B8%8A%E7%9A%84%E5%8F%AF%E7%94%A8%E6%80%A7%E7%9A%84%E6%96%B9%E6%B3%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>确定某个特性在设备上的可用性的方法</h3>
 <ul>
-<li><p>新发布的 iPhone Xʀ 并不支持 3D Touch 功能，以「家庭 Home」app 为例，当在支持 3D Touch 功能的设备开启了 3D Touch 功能时，可以通过 3D Touch 查看智能硬件的更多选项；当在不支持 3D Touch 功能的设备上或者支持此功能但没有开启此功能时，可以通过长按来查看智能硬件的更多选项。具体代码实现方式示例如下：</p>
+<li>新发布的 iPhone Xʀ 并不支持 3D Touch 功能，以「家庭 Home」app 为例，当在支持 3D Touch 功能的设备开启了 3D Touch 功能时，可以通过 3D Touch 查看智能硬件的更多选项；当在不支持 3D Touch 功能的设备上或者支持此功能但没有开启此功能时，可以通过长按来查看智能硬件的更多选项。具体代码实现方式示例如下：
 <ul>
-<li><p>在 app 启动时检查设备是否支持某个特性，以作出相对应的处理：</p>
-<p><img src="media/15433010141111/50D640F1-94EB-41FD-8EDE-2519618F9732.png" alt="50D640F1-94EB-41FD-8EDE-2519618F9732"/></p></li>
-<li><p>用户可能在运行时关闭了 3D Touch，需要在运行时也检查设备某个特性的状态，以做出改变：</p>
-<p><img src="media/15433010141111/06CBD00D-AD43-428D-8BCF-6FD41DAA2DF8.png" alt="06CBD00D-AD43-428D-8BCF-6FD41DAA2DF8"/></p></li>
-<li><p>可以考虑使用长按手势来替代 3D Touch 的功能。</p></li>
-</ul></li>
+<li>
+<p>在 app 启动时检查设备是否支持某个特性，以作出相对应的处理：</p>
+<p><img src="media/15433010141111/50D640F1-94EB-41FD-8EDE-2519618F9732.png" alt="50D640F1-94EB-41FD-8EDE-2519618F9732" /></p>
+</li>
+<li>
+<p>用户可能在运行时关闭了 3D Touch，需要在运行时也检查设备某个特性的状态，以做出改变：</p>
+<p><img src="media/15433010141111/06CBD00D-AD43-428D-8BCF-6FD41DAA2DF8.png" alt="06CBD00D-AD43-428D-8BCF-6FD41DAA2DF8" /></p>
+</li>
+<li>
+<p>可以考虑使用长按手势来替代 3D Touch 的功能。</p>
+</li>
 </ul>
-
-<h2 id="toc_8">Read More</h2>
-
-<h3 id="toc_9">Apple 官方</h3>
-
+</li>
+</ul>
+<h2><a id="read-more" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Read More</h2>
+<h3><a id="apple%E5%AE%98%E6%96%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Apple 官方</h3>
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/#auto-layout">Adaptivity and Layout - Visual Design - iOS - Human Interface Guidelines - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/iphone/">iPhone - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/videos/play/tech-talks/207">Building Apps for iPhone Xs, iPhone Xs Max, and iPhone Xʀ - Tech Talks - Videos - Apple Developer</a></li>
 </ul>
-
-<h3 id="toc_10">非官方</h3>
-
+<h3><a id="%E9%9D%9E%E5%AE%98%E6%96%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>非官方</h3>
 <ul>
 <li><a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">The Ultimate Guide To iPhone Resolutions</a></li>
-<li><a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone%20X%CA%80-screen-sizes-f4c1f2d4eec2">How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes</a></li>
+<li>[How iOS Apps Adapt to the iPhone Xs Max and iPhone Xʀ Screen Sizes](<a href="https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone">https://medium.com/@hacknicity/how-ios-apps-adapt-to-the-iphone-xs-max-and-iphone-iPhone</a> Xʀ-screen-sizes-f4c1f2d4eec2)</li>
 </ul>
-
 <blockquote>
 <p>如果你觉得这篇文章对你有所帮助，欢迎请我喝杯咖啡，感谢你的支持😁</p>
-
-<p><img src="media/14625521742746/15088240400740.jpg" alt=""/></p>
+</blockquote>
+<blockquote>
+<p><img src="media/14625521742746/15088240400740.jpg" alt="" /></p>
 </blockquote>
 
 
@@ -374,7 +371,7 @@
                   
 
                   <div style="color:#717171; text-align:left; padding:8px;" class="bg-info site_notice">
-                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="15844652241485.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
+                    <a style="color:#717171;"  onclick="ga('send','event','global_notice_click');" href="16357088669226.html">2️⃣ 订阅 Apple Music 该选哪个区？</a>
 
                   </div>
 
@@ -425,6 +422,12 @@
 	      
 		      
 			      <li class="post">
+			        <a href="16357088669226.html">订阅 Apple Music 该选哪个区？——中美坡港台日六大地区全对比（第二版）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="16030487843973.html">全新 iPhone 12 发布，再谈 iPhone 屏幕尺寸</a>
 			      </li>
 		     
@@ -444,12 +447,6 @@
 		      
 			      <li class="post">
 			        <a href="15966406956355.html">iOS 14/iPad OS 14 新组件：菜单、日期和时间选择器、颜色选择器</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15942969497015.html">利用好 iPad 的大屏幕 —— 如何为 iPadOS 14 设计 app？</a>
 			      </li>
 		     
 		  
@@ -549,7 +546,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
     </script>
 
     
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_SVG-full"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109532424-1"></script>
 <script>
