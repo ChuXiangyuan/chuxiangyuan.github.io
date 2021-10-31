@@ -4,7 +4,7 @@
   <title><![CDATA[向远公园 | Step Park]]></title>
   <link href="https://steppark.net/atom.xml" rel="self"/>
   <link href="https://steppark.net/"/>
-  <updated>2021-11-01T03:58:16+08:00</updated>
+  <updated>2021-11-01T04:05:51+08:00</updated>
   <id>https://steppark.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -113,13 +113,14 @@
 <li>更新：「iTunes Store &amp; iTunes Match」部分微调 iTunes Match 的部分文字描述；</li>
 <li>更新：「曲库语言逻辑」部分更新了由于美区 Apple 媒体服务支持简体中文本地化后变化的结果，完全更新对比表格；</li>
 <li>更新：「内容推荐」部分微调了部分文字描述，完全更新对于浏览 tab 六大地区的横向对比图；</li>
-<li>更新：「多平台使用」部分对于第三方电视端和游戏机、智能音箱的文字描述和图片进行了更新，对整个部分的文字描述进行了微调；</li>
+<li>更新：「多平台使用」部分对于第三方电视端和游戏机、智能音箱的文字描述和图片进行了更新，对于在 Apple TV 上使用 Apple Music 补充了更多描述，对整个部分的文字描述进行了微调；</li>
 <li>更新：「多 Apple ID 使用」部分补充对 Apple Store app、Apple News、Apple Fitness+、Apple One 服务的相关描述，并完全更新 Apple 媒体服务在六大地区的对比表格；</li>
 <li>更新：「总结」部分完全更新六大地区横向对比表格，并对总结文字进行了扩充描述。</li>
 </ul>
 <h3><a id="%E5%88%A0%E9%99%A4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>删除</h3>
 <ul>
-<li>删除：「在线曲库」部分提及中国大陆地区主流流媒体 app 时删除「虾米音乐」。</li>
+<li>删除：「在线曲库」部分提及中国大陆地区主流流媒体 app 时删除「虾米音乐」；</li>
+<li>删除：「多平台使用」部分中删除了目前已不可用的第三方网页端和 app 服务。</li>
 </ul>
 <h2><a id="%E6%AD%A3%E6%96%87%E5%BC%80%E5%A7%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>正文开始~</h2>
 <p>2015 年 6 月 30 日 Apple 正式推出「Apple Music」音乐流媒体服务。9 月 30 日，Apple Music 在中国大陆地区上线。相比于美国地区个人订阅每月 14.99 美元的价格，中国大陆地区的个人订阅价格为每月 10 人民币，可以说几乎是全球最低。但喜欢听音乐的人很多不愿意选择价格如此低廉的国区 Apple Music，反而在重重困难下选择订阅其他地区的 Apple Music，这是为什么呢？<br />
@@ -296,7 +297,7 @@
 </ul>
 <p><img src="media/16357088669226/D8D2D54C-8F4A-41EE-BFCC-9E86F0D862EC.png" alt="" /></p>
 <ul>
-<li><strong>网页端</strong>：2019 年 9 月 Apple 上线了<a href="https://beta.music.apple.com/">网页端的 beta 版 Apple Music</a>，用户可以在浏览器中使用 Apple Music，其访问地址是：<a href="https://beta.music.apple.com/%E3%80%822020">https://beta.music.apple.com/。2020</a> 年 4 月，Apple Music 网页版正式上线，其访问地址是： <a href="https://music.apple.com/">https://music.apple.com/</a>。值得注意的是，在笔者的电信网络环境下，当登录网页版的 Apple Music 时，输入完帐号和密码提交后，存在一直卡住无法登录的情况，通过非中国大陆地区的 IP 访问时，则可以正常登录，估计是由于登录时某个访问的域名访问不畅导致的。</li>
+<li><strong>网页端</strong>：2019 年 9 月 Apple 上线了<a href="https://beta.music.apple.com/">网页端的 beta 版 Apple Music</a>，用户可以在浏览器中使用 Apple Music。2020 年 4 月，Apple Music 网页版正式上线，其访问地址是： <a href="https://music.apple.com/">https://music.apple.com/</a>。值得注意的是，在笔者的电信网络环境下，当登录网页版的 Apple Music 时，输入完帐号和密码提交后，存在一直卡住无法登录的情况，通过非中国大陆地区的 IP 访问时，则可以正常登录，估计是由于登录时某个访问的域名访问不畅导致的。</li>
 </ul>
 <p><img src="media/16357088669226/applemusicweb.0.png.jpg" alt="" /></p>
 <p><a href="https://beta.music.apple.com/">Apple Music Web Beta 版</a>在之后被用来公开测试一些即将上线的功能 ，例如 2020 年 8 月，Apple Music Web Beta 版开始测试与 iOS 14、iPadOS 14 对应的新样式、新模块，「为你推荐」调整为「现在收听」，搜索更加突出了按类别搜索，整体个性化内容推荐更加丰富。</p>
@@ -307,7 +308,7 @@
 <p><img src="media/16357088669226/AE374604-7DA7-4549-9977-E8774472B345.png" alt="" /></p>
 <p><img src="media/16357088669226/2927A469-1CA6-4472-BE9C-51EC73F75D39.png" alt="" /></p>
 <ul>
-<li>**第三方电视端&amp;游戏机：**2020 年 4 月， <a href="https://news.samsung.com/us/apple-music-samsung-smart-tvs/">Apple Music 以独立 app 的形式在三星智能电视上上线</a> ，这是 Apple 的媒体服务在第三方设备上的又一次扩张。可以预见，支持 Apple TV app 的智能电视/盒子（如 LG、Amazon Fire TV、Sony）在未来应该也会上线 Apple Music app。2021 年 10 月，<a href="https://9to5mac.com/2021/10/27/apple-music-playstation-five/">Apple Music 同样以 app 的形式在 Sony PS5 游戏机上上线</a>，这是 Apple Music 首次在游戏机上上线。在第三方智能电视和游戏机上使用 Apple Music 可以具体见<a href="https://support.apple.com/en-us/HT211087">官方的支持说明文档</a>。</li>
+<li><strong>第三方电视端&amp;游戏机：</strong> 2020 年 4 月， <a href="https://news.samsung.com/us/apple-music-samsung-smart-tvs/">Apple Music 以独立 app 的形式在三星智能电视上上线</a> ，这是 Apple 的媒体服务在第三方设备上的又一次扩张。可以预见，支持 Apple TV app 的智能电视/盒子（如 LG、Amazon Fire TV、Sony）在未来应该也会上线 Apple Music app。2021 年 10 月，<a href="https://9to5mac.com/2021/10/27/apple-music-playstation-five/">Apple Music 同样以 app 的形式在 Sony PS5 游戏机上上线</a>，这是 Apple Music 首次在游戏机上上线。在第三方智能电视和游戏机上使用 Apple Music 可以具体见<a href="https://support.apple.com/en-us/HT211087">官方的支持说明文档</a>。</li>
 </ul>
 <p><img src="media/16357088669226/Apple-Music_Announcement.2020-04-23-01_18_35.gif" alt="" /></p>
 <p>关于第三方电视端的 Apple Music 值得注意的几点：</p>
@@ -334,9 +335,9 @@
 <ul>
 <li><strong>第三方网页端和 app</strong>：利用 <a href="https://developer.apple.com/musickit/">Apple 提供的 MusicKit</a>，开发者可以在自己的 iOS app、Android app、网页端接入 Apple Music 服务，可以是部分功能接入，可以是全功能接入，即作为一个第三方 Apple Music 客户端，iOS 端 app 通过请求「媒体与 Apple Music」权限访问 Apple Music 内容，Web 端 app 通过 Apple ID 授权第三方登录的方式登录使用。例如：
 <ul>
-<li>第三方网页端：<a href="https://musi.sh/browse">Musish</a>、<a href="https://naveedgol.github.io/music-web-player/browse">Apple Music Web Player From Naveed Golafshani</a>、<a href="https://www.fevertunes.com/home">feverTunes</a>、<a href="https://music.zacharyseguin.ca/">Zachary Seguin Music</a>、<a href="https://maevemusic.app/">Maeve</a>。</li>
+<li>第三方网页端：<a href="https://musi.sh/browse">Musish</a>、<a href="https://naveedgol.github.io/music-web-player/browse">Apple Music Web Player From Naveed Golafshani</a>、<a href="https://www.fevertunes.com/home">feverTunes</a>、<a href="https://music.zacharyseguin.ca/">Zachary Seguin Music</a>。</li>
 <li>网页中嵌入自定义 Apple Music 内容：<a href="https://steppark.net/music.html">我的个人博客的「Music」页面</a> - 未登录时歌曲只可以试听，登录订阅帐号后可完整播放。</li>
-<li>第三方 iOS app： <a href="https://apps.apple.com/us/app/marvis-pro/id1447768809">Marvis Pro</a>、<a href="https://apps.apple.com/us/app/soor/id1439731526">Soor ▹</a>、<a href="https://apps.apple.com/us/app/songowl/id1492630850">SongOwl</a>、<a href="https://apps.apple.com/us/app/soundshare/id437060737">SoundShare</a>。</li>
+<li>第三方 iOS app： <a href="https://apps.apple.com/us/app/marvis-pro/id1447768809">Marvis Pro</a>、<a href="https://apps.apple.com/us/app/soor/id1439731526">Soor ▹</a>、<a href="https://apps.apple.com/us/app/songowl/id1492630850">SongOwl</a>。</li>
 <li>接入 MusicKit 的工具型 iOS app：<a href="https://apps.apple.com/us/app/shazam/id284993459">Shazam</a>（歌曲识别）、<a href="https://apps.apple.com/us/app/musixmatch-lyrics-finder/id448278467">MusixMatch</a>（歌词）、<a href="https://apps.apple.com/us/app/songshift/id1097974566">SongShift</a>（歌曲迁移）、<a href="https://apps.apple.com/us/app/miximum/id1456153507">Mixmum</a>（自定义歌单）、<a href="https://apps.apple.com/us/app/musicharbor-track-new-music/id1440405750">MusicHarbor</a>（歌手关注）。</li>
 </ul>
 </li>
